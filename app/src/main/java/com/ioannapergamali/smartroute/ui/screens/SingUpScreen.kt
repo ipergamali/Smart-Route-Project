@@ -45,13 +45,13 @@ fun SignUpScreen(
                 modifier = Modifier
                         .fillMaxSize()
                         .padding(innerPadding)
-                        .padding(16.dp) ,
+                        .padding(32.dp) ,
                 horizontalAlignment = Alignment.CenterHorizontally
         ) {
             // Προσθήκη Animation Εικόνας
             AnimatedScaleImage()
 
-            Spacer(modifier = Modifier.height(32.dp))
+            Spacer(modifier = Modifier.height(64.dp))
 
             // Fields and Buttons
             TextField(

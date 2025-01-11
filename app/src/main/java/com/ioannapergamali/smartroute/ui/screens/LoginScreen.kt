@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.ioannapergamali.smartroute.ui.components.AnimatedScaleImage
+import com.ioannapergamali.smartroute.utils.UserSession
 import com.ioannapergamali.smartroute.viewmodel.AuthenticationViewModel
 
 
@@ -60,7 +61,7 @@ fun LoginScreen(
             // Προσθήκη Animation Εικόνας
             AnimatedScaleImage()
 
-            Spacer(modifier = Modifier.height(32.dp))
+            Spacer(modifier = Modifier.height(64.dp))
 
             // Fields and Buttons
             TextField(
@@ -93,7 +94,25 @@ fun LoginScreen(
                             email.value ,
                             password.value ,
                             onLoginSuccess = {
-                                onLoginSuccess()
+                                authenticationViewModel.getUserData(email.value) { user ->
+                                    if (user != null)
+                                    {
+
+                                        // Αποθήκευση του χρήστη στη συνεδρία
+                                        UserSession.setUser(
+                                                context = navController.context ,
+                                                user = user
+                                        )
+
+                                        // Επιτυχής σύνδεση
+                                        onLoginSuccess()
+                                    }
+                                    else
+                                    {
+                                        loginError.value = "User not found or error occurred."
+                                        onLoginFailure("User not found or error occurred.")
+                                    }
+                                }
                             } ,
                             onLoginFailure = { error ->
                                 loginError.value = error
@@ -108,6 +127,8 @@ fun LoginScreen(
             }) {
                 Text("Login")
             }
+
+
             Spacer(modifier = Modifier.height(16.dp))
             Button(onClick = onNavigateToSettings) {
                 Text("Go to Settings")

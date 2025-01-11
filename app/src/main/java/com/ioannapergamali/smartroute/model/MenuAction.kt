@@ -1,98 +1,67 @@
 package com.ioannapergamali.smartroute.model
 
 data class MenuAction(
-        private var _id : Int ,
-        private var _description : String ,
-        private var _action : () -> Unit
+        val id : Int ,
+        val description : String ,
+        val action : () -> Unit
 )
+
+class Menu(private val role : Role)
 {
-    var id : Int
-        get() = _id
-        set(value)
-        {
-            _id = value
-        }
 
-    var description : String
-        get() = _description
-        set(value)
-        {
-            _description = value
-        }
-
-    var action : () -> Unit
-        get() = _action
-        set(value)
-        {
-            _action = value
-        }
-}
-
-class Menu(private var _role : Role)
-{
-    private val _actions = mutableListOf<MenuAction>()
-
-    var role : Role
-        get() = _role
-        set(value)
-        {
-            _role = value
-            _actions.clear()
-            when (value)
-            {
-                Role.PASSENGER -> loadPassengerActions()
-                Role.DRIVER    -> loadDriverActions()
-                Role.ADMIN     -> loadAdminActions()
-            }
-        }
-
-    val actions : List<MenuAction>
-        get() = _actions
+    private val actions = mutableListOf<MenuAction>()
 
     init
     {
-        when (_role)
+        when (role)
         {
             Role.PASSENGER -> loadPassengerActions()
-            Role.DRIVER    -> loadDriverActions()
-            Role.ADMIN     -> loadAdminActions()
+            Role.DRIVER    ->
+            {
+                loadPassengerActions()
+                loadDriverActions()
+            }
+
+            Role.ADMIN     ->
+            {
+                loadPassengerActions()
+                loadDriverActions()
+                loadAdminActions()
+            }
         }
     }
 
     private fun loadPassengerActions()
     {
-        _actions.add(MenuAction(0 , "Sign out") { println("Signing out...") })
-        _actions.add(
+        actions.add(
+                MenuAction(
+                        0 ,
+                        "Manage Preferred Transport"
+                ) { println("Managing transport...") })
+        actions.add(
                 MenuAction(
                         1 ,
-                        "Manage Favorite Means of Transport"
-                ) { println("Managing Transport...") })
+                        "Search and Book Transport"
+                ) { println("Searching transport...") })
+        actions.add(MenuAction(2 , "View Travel History") { println("Viewing history...") })
+        actions.add(MenuAction(3 , "Rate Completed Travels") { println("Rating travels...") })
+        actions.add(MenuAction(4 , "Sign Out") { println("Signing out...") })
     }
 
     private fun loadDriverActions()
     {
-        _actions.add(
-                MenuAction(
-                        0 ,
-                        "Announce Availability"
-                ) { println("Announcing availability...") })
-        _actions.add(MenuAction(1 , "Register Vehicle") { println("Registering Vehicle...") })
+        actions.add(MenuAction(5 , "Declare Availability") { println("Declaring availability...") })
+        actions.add(MenuAction(6 , "Register Vehicle") { println("Registering vehicle...") })
     }
 
     private fun loadAdminActions()
     {
-        _actions.add(MenuAction(0 , "Initialize System") { println("Initializing System...") })
-        _actions.add(MenuAction(1 , "View Reports") { println("Viewing Reports...") })
+        actions.add(MenuAction(7 , "Initialize System") { println("Initializing system...") })
+        actions.add(MenuAction(8 , "Create User Account") { println("Creating account...") })
+        actions.add(MenuAction(9 , "Promote/Demote User") { println("Updating user role...") })
+        actions.add(MenuAction(10 , "Set Points of Interest") { println("Setting points...") })
+        actions.add(MenuAction(11 , "View Statistics") { println("Viewing statistics...") })
     }
 
-    fun displayMenu()
-    {
-        _actions.forEach { println("${it.id}. ${it.description}") }
-    }
-
-    fun executeAction(id : Int)
-    {
-        _actions.find { it.id == id }?.action?.invoke()
-        ?: println("Invalid Action Selected!")
-    }
+    fun getActions() : List<MenuAction> = actions
 }

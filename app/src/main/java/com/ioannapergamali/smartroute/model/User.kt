@@ -4,7 +4,8 @@ enum class Role
 {
     ADMIN ,
     DRIVER ,
-    PASSENGER
+    PASSENGER;
+
 }
 
 open class User(
@@ -16,7 +17,7 @@ open class User(
         private var phoneNum : String = "" ,
         private var username : String = "" ,
         private var password : String = "" ,
-        private var role : Role = Role.PASSENGER
+        private var role : Role = Role.ADMIN
 )
 {
     // Getters

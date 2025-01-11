@@ -13,60 +13,47 @@ object UserSession
 
     private val gson = Gson()
     var currentUser : User? = null
+        private set
     var isLoggedIn = false
+        private set
 
-    /**
-     * Sets the current user and saves the session in SharedPreferences.
-     */
     fun setUser(context : Context , user : User)
     {
         currentUser = user
         isLoggedIn = true
-
-        val sharedPreferences = getPreferences(context)
-        val editor = sharedPreferences.edit()
-        editor.putString(USER_KEY , gson.toJson(user))
-        editor.putBoolean(IS_LOGGED_IN_KEY , true)
-        editor.apply()
+        saveSession(context , user)
     }
 
-    /**
-     * Clears the user session and removes it from SharedPreferences.
-     */
     fun clearSession(context : Context)
     {
         currentUser = null
         isLoggedIn = false
-
-        val sharedPreferences = getPreferences(context)
-        val editor = sharedPreferences.edit()
-        editor.remove(USER_KEY)
-        editor.putBoolean(IS_LOGGED_IN_KEY , false)
-        editor.apply()
+        getPreferences(context).edit().clear().apply()
     }
 
-    /**
-     * Loads the user session from SharedPreferences.
-     */
+    private fun saveSession(context : Context , user : User)
+    {
+        val sharedPreferences = getPreferences(context)
+        sharedPreferences.edit().apply {
+            putString(USER_KEY , gson.toJson(user))
+            putBoolean(IS_LOGGED_IN_KEY , true)
+            apply()
+        }
+    }
+
     fun loadSession(context : Context)
     {
         val sharedPreferences = getPreferences(context)
         isLoggedIn = sharedPreferences.getBoolean(IS_LOGGED_IN_KEY , false)
-        val userJson = sharedPreferences.getString(USER_KEY , null)
-
-        if (isLoggedIn && userJson != null)
+        currentUser = if (isLoggedIn)
         {
-            currentUser = gson.fromJson(userJson , User::class.java)
+            sharedPreferences.getString(USER_KEY , null)?.let {
+                gson.fromJson(it , User::class.java)
+            }
         }
-        else
-        {
-            currentUser = null
-        }
+        else null
     }
 
-    /**
-     * Gets the SharedPreferences instance.
-     */
     private fun getPreferences(context : Context) : SharedPreferences
     {
         return context.getSharedPreferences(PREF_NAME , Context.MODE_PRIVATE)

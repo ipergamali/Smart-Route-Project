@@ -4,10 +4,23 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Button
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -18,6 +31,7 @@ import com.ioannapergamali.smartroute.model.MenuAction
 import com.ioannapergamali.smartroute.model.Role
 import com.ioannapergamali.smartroute.model.User
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MenuScreen(
         user : User? ,
@@ -26,61 +40,93 @@ fun MenuScreen(
         onNavigateToSettings : () -> Unit
 )
 {
-    // Δημιουργία μενού βάσει ρόλου
     val menu = Menu(userRole)
 
-    Column(
-            modifier = Modifier
-                    .fillMaxSize()
-                    .padding(16.dp) ,
-            verticalArrangement = Arrangement.Top ,
-            horizontalAlignment = Alignment.Start
-    ) {
-        // Καλωσόρισμα
-        Text(
-                text = "Welcome to the Menu" ,
-                style = androidx.compose.material3.MaterialTheme.typography.titleLarge
-        )
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // Εμφάνιση του ρόλου χρήστη
-        Text(
-                text = "Role: ${userRole.name}" ,
-                style = androidx.compose.material3.MaterialTheme.typography.bodyLarge
-        )
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // Εμφάνιση στοιχείων χρήστη
-        user?.let {
+    Scaffold(
+            topBar = {
+                TopAppBar(
+                        title = { Text(text = "SmartRoute Menu") } ,
+                        actions = {
+                            IconButton(onClick = { onNavigateToSettings() }) {
+                                Icon(
+                                        imageVector = Icons.Default.Settings ,
+                                        contentDescription = "Settings"
+                                )
+                            }
+                        } ,
+                        colors = TopAppBarDefaults.mediumTopAppBarColors(
+                                containerColor = MaterialTheme.colorScheme.primary ,
+                                titleContentColor = MaterialTheme.colorScheme.onPrimary
+                        )
+                )
+            }
+    ) { innerPadding ->
+        Column(
+                modifier = Modifier
+                        .fillMaxSize()
+                        .padding(innerPadding)
+                        .padding(16.dp) ,
+                verticalArrangement = Arrangement.Top ,
+                horizontalAlignment = Alignment.Start
+        ) {
+            // Welcome Message
             Text(
-                    text = "User Details:" ,
-                    style = androidx.compose.material3.MaterialTheme.typography.titleMedium
+                    text = "Welcome to SmartRoute!" ,
+                    style = MaterialTheme.typography.headlineMedium ,
+                    color = MaterialTheme.colorScheme.primary
             )
-            Text(text = "Name: ${it.getName()} ${it.getSurname()}")
-            Text(text = "Email: ${it.getEmail()}")
-        } ?: run {
-            Text(
-                    text = "No user information available" ,
-                    style = androidx.compose.material3.MaterialTheme.typography.bodySmall
-            )
-        }
 
-        Spacer(modifier = Modifier.height(24.dp))
-
-        // Ενέργειες βάσει μενού
-        Text(
-                text = "Available Actions:" ,
-                style = androidx.compose.material3.MaterialTheme.typography.titleMedium
-        )
-
-        menu.actions.forEach { action ->
             Spacer(modifier = Modifier.height(16.dp))
-            Button(onClick = {
-                handleMenuAction(action , navController , onNavigateToSettings)
-            }) {
-                Text(text = action.description)
+
+            // User Information
+            user?.let {
+                Card(
+                        modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(vertical = 8.dp) ,
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
+                ) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Text(
+                                text = "User Details" ,
+                                style = MaterialTheme.typography.titleMedium
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text("Name: ${it.getName()} ${it.getSurname()}")
+                        Text("Role: ${userRole.name}")
+                        Text("Email: ${it.getEmail()}")
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(24.dp))
+
+            // Menu Actions
+            Text(
+                    text = "Available Actions:" ,
+                    style = MaterialTheme.typography.titleMedium
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            LazyColumn {
+                items(menu.getActions().size) { index ->
+                    val action = menu.getActions()[index]
+                    Button(
+                            onClick = {
+                                handleMenuAction(
+                                        action ,
+                                        navController ,
+                                        onNavigateToSettings
+                                )
+                            } ,
+                            modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(vertical = 4.dp)
+                    ) {
+                        Text(text = action.description)
+                    }
+                }
             }
         }
     }
@@ -94,11 +140,13 @@ private fun handleMenuAction(
 {
     when (menuAction.description)
     {
-        "Sign out"                           -> navController.navigate("login")
+        "Sign out"             -> navController.navigate("login")
         "Manage Favorite Means of Transport" -> navController.navigate("favorite_transport")
-        "Register Vehicle"                   -> navController.navigate("register_vehicle")
-        "Initialize System"                  -> navController.navigate("initialize_system")
-        "Go to Settings"                     -> onNavigateToSettings()
-        else                                 -> menuAction.action.invoke() // Εκτέλεση custom δράσης
+        "View Routes"          -> navController.navigate("view_routes")
+        "Declare Availability" -> navController.navigate("declare_availability")
+        "View Reports"         -> navController.navigate("view_reports")
+        "Initialize System"    -> navController.navigate("initialize_system")
+        "Go to Settings"       -> onNavigateToSettings()
+        else                   -> menuAction.action.invoke()
     }
 }

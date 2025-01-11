@@ -14,11 +14,14 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.ioannapergamali.smartroute.model.Role
+import com.ioannapergamali.smartroute.ui.screens.DeclareAvailabilityScreen
 import com.ioannapergamali.smartroute.ui.screens.LoginScreen
 import com.ioannapergamali.smartroute.ui.screens.MenuScreen
 import com.ioannapergamali.smartroute.ui.screens.SettingsScreen
 import com.ioannapergamali.smartroute.ui.screens.SignUpScreen
 import com.ioannapergamali.smartroute.ui.screens.SplashScreen
+import com.ioannapergamali.smartroute.ui.screens.ViewReportsScreen
+import com.ioannapergamali.smartroute.ui.screens.ViewRoutesScreen
 import com.ioannapergamali.smartroute.utils.UserSession
 import com.ioannapergamali.smartroute.viewmodel.SettingsViewModel
 
@@ -57,6 +60,19 @@ fun SmartRouteNavHost(navController: NavHostController) {
                     onNavigateToSignUp = { navController.navigate("signup") }
             )
         }
+
+        composable("view_routes") {
+            ViewRoutesScreen(navController)
+        }
+
+        composable("declare_availability") {
+            DeclareAvailabilityScreen(navController)
+        }
+
+        composable("view_reports") {
+            ViewReportsScreen(navController)
+        }
+
 
         composable("login") {
             LoginScreen(
