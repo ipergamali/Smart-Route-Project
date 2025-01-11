@@ -1,7 +1,4 @@
 # Smart-Route-Project
-Project Description
-Smart Route is a modern navigation application designed to enhance travel experiences by providing user-friendly interfaces and efficient routing features. The app includes functionality for login, signup, navigation, and personalized user experiences based on roles such as drivers, passengers, or administrators.
-
 Features
 User Authentication:
 
