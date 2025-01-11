@@ -47,6 +47,9 @@ fun MenuScreen(
             Button(onClick = { navController.navigate("login") }) {
                 Text("Log Out")
             }
+            Button(onClick = onNavigateToSettings) {
+                Text("Settings")
+            }
         }
     }
 }

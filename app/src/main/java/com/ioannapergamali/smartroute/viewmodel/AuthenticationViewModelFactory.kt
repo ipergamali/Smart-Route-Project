@@ -1,4 +1,4 @@
-package com.ioannapergamali.movewise.viewmodel
+package com.ioannapergamali.smartroute.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.ViewModel

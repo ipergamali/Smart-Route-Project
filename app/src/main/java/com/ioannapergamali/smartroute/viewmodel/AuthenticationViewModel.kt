@@ -1,4 +1,4 @@
-package com.ioannapergamali.movewise.viewmodel
+package com.ioannapergamali.smartroute.viewmodel
 
 import android.app.Application
 import android.util.Log
@@ -7,11 +7,11 @@ import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
-import com.ioannapergamali.movewise.model.Admin
-import com.ioannapergamali.movewise.model.Driver
-import com.ioannapergamali.movewise.model.Passenger
-import com.ioannapergamali.movewise.model.User
-import com.ioannapergamali.movewise.utils.UserSession
+import com.ioannapergamali.smartroute.model.Admin
+import com.ioannapergamali.smartroute.model.Driver
+import com.ioannapergamali.smartroute.model.Passenger
+import com.ioannapergamali.smartroute.model.User
+import com.ioannapergamali.smartroute.utils.UserSession
 import kotlinx.coroutines.launch
 
 class AuthenticationViewModel(application : Application) : AndroidViewModel(application)
