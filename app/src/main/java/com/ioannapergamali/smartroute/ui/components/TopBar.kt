@@ -1,4 +1,4 @@
-package com.ioannapergamali.movewise.ui.components
+package com.ioannapergamali.smartroute.ui.components
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack

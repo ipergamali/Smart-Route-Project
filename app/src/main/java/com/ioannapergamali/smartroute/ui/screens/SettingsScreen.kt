@@ -1,4 +1,4 @@
-package com.ioannapergamali.movewise.ui.screens
+package com.ioannapergamali.smartroute.ui.screens
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.ioannapergamali.movewise.ui.components.DrawerScaffold
+import com.ioannapergamali.smartroute.ui.components.DrawerScaffold
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

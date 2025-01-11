@@ -1,4 +1,4 @@
-package com.ioannapergamali.movewise.ui.components
+package com.ioannapergamali.smartroute.ui.components
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer

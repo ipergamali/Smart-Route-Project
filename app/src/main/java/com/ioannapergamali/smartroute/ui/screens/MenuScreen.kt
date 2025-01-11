@@ -1,4 +1,4 @@
-package com.ioannapergamali.movewise.ui.screens
+package com.ioannapergamali.smartroute.ui.screens
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,7 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.ioannapergamali.movewise.model.User
+import com.ioannapergamali.smartroute.model.User
 
 @Composable
 fun MenuScreen(

@@ -1,4 +1,4 @@
-package com.ioannapergamali.movewise.model
+package com.ioannapergamali.smartroute.model
 
 data class UserAddress(
         private var city : String = "" ,

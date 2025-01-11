@@ -1,11 +1,12 @@
-package com.ioannapergamali.movewise
+package com.ioannapergamali.smartroute
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.navigation.compose.rememberNavController
-import com.ioannapergamali.movewise.navigation.MoveWiseNavHost
-import com.ioannapergamali.movewise.ui.theme.MoveWiseTheme
+import com.ioannapergamali.smartroute.navigation.SmartRouteNavHost
+
+import com.ioannapergamali.smartroute.ui.theme.MoveWiseTheme
 
 class MainActivity : ComponentActivity()
 {
@@ -15,7 +16,7 @@ class MainActivity : ComponentActivity()
         setContent {
             MoveWiseTheme {
                 val navController = rememberNavController()
-                MoveWiseNavHost(navController = navController)
+                SmartRouteNavHost(navController = navController)
             }
         }
     }
