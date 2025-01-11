@@ -1,5 +1,6 @@
 package com.ioannapergamali.smartroute.navigation
 
+import android.app.Activity
 import android.widget.Toast
 import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
@@ -27,7 +28,6 @@ fun SmartRouteNavHost(navController: NavHostController) {
     val lastBackPressTime = remember { mutableStateOf(0L) }
     val settingsViewModel : SettingsViewModel = viewModel()
 
-    // Handle the back press to exit the app
     BackHandler {
         val currentRoute = navController.currentBackStackEntry?.destination?.route
         if (currentRoute != "splash") {
@@ -36,7 +36,7 @@ fun SmartRouteNavHost(navController: NavHostController) {
             val currentTime = System.currentTimeMillis()
             if (currentTime - lastBackPressTime.value < 2000)
             {
-                // Exit app
+                (context as? Activity)?.finish()
             }
             else
             {
@@ -46,17 +46,15 @@ fun SmartRouteNavHost(navController: NavHostController) {
         }
     }
 
-    NavHost(navController = navController, startDestination = "splash") {
+    val startDestination = if (UserSession.isLoggedIn) "menu" else "splash"
+
+    NavHost(navController = navController , startDestination = startDestination) {
 
         composable("splash") {
             SplashScreen(
                     navController = navController,
-                    onNavigateToLogin = {
-                        navController.navigate("login")
-                    },
-                    onNavigateToSignUp = {
-                        navController.navigate("signup")
-                    }
+                    onNavigateToLogin = { navController.navigate("login") } ,
+                    onNavigateToSignUp = { navController.navigate("signup") }
             )
         }
 
@@ -77,20 +75,6 @@ fun SmartRouteNavHost(navController: NavHostController) {
             )
         }
 
-
-        composable("settings") {
-            val isDarkTheme by settingsViewModel.isDarkTheme.collectAsState()
-
-            SettingsScreen(
-                    navController = navController,
-                    isDarkTheme = isDarkTheme ,
-                    onThemeChange = { isDarkMode ->
-                        settingsViewModel.toggleTheme(isDarkMode)
-                    }
-            )
-        }
-
-
         composable("signup") {
             SignUpScreen(
                     navController = navController,
@@ -105,18 +89,39 @@ fun SmartRouteNavHost(navController: NavHostController) {
             )
         }
 
+        composable("settings/{email}") { backStackEntry ->
+            val email = backStackEntry.arguments?.getString("email") ?: "Unknown"
+            val isDarkTheme by settingsViewModel.isDarkTheme.collectAsState()
+
+            SettingsScreen(
+                    navController = navController ,
+                    email = email ,
+                    isDarkTheme = isDarkTheme ,
+                    onThemeChange = { settingsViewModel.toggleTheme(it) }
+            )
+        }
+
         composable("menu") {
             val user = UserSession.currentUser
             val userRole = user?.getRole() ?: Role.PASSENGER
 
-            MenuScreen(
-                    user = user,
-                    userRole = userRole,
-                    navController = navController,
-                    onNavigateToSettings = {
-                        navController.navigate("settings")
-                    }
-            )
+            if (user == null)
+            {
+                navController.navigate("login") {
+                    popUpTo("menu") { inclusive = true }
+                }
+            }
+            else
+            {
+                MenuScreen(
+                        user = user ,
+                        userRole = userRole ,
+                        navController = navController ,
+                        onNavigateToSettings = {
+                            navController.navigate("settings/${user.getEmail()}")
+                        }
+                )
+            }
         }
     }
 }

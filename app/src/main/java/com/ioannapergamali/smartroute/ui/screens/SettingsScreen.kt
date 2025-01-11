@@ -17,6 +17,7 @@ import com.ioannapergamali.smartroute.ui.components.DrawerScaffold
 @Composable
 fun SettingsScreen(
         navController : NavController ,
+        email : String ,
         isDarkTheme : Boolean , // Προσθήκη παραμέτρου για το τρέχον θέμα
         onThemeChange : (Boolean) -> Unit // Συνάρτηση για αλλαγή θέματος
 )

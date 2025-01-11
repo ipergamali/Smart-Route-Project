@@ -2,7 +2,6 @@ package com.ioannapergamali.smartroute.ui.screens
 
 import AuthenticationViewModelFactory
 import android.app.Application
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -51,79 +50,67 @@ fun LoginScreen(
                 )
             }
     ) { innerPadding ->
-        Box(
+        Column(
                 modifier = Modifier
                         .fillMaxSize()
-                        .padding(innerPadding) ,
-                contentAlignment = Alignment.Center
+                        .padding(innerPadding)
+                        .padding(16.dp) ,
+                horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Column(
-                    modifier = Modifier
-                            .fillMaxWidth(0.8f)
-                            .padding(16.dp) ,
-                    horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                // Προσθήκη Animation Εικόνας
-                AnimatedScaleImage()
+            // Προσθήκη Animation Εικόνας
+            AnimatedScaleImage()
 
-                Spacer(modifier = Modifier.height(32.dp))
+            Spacer(modifier = Modifier.height(32.dp))
 
-                // Text Fields for Email and Password
-                TextField(
-                        value = email.value ,
-                        onValueChange = { email.value = it } ,
-                        label = { Text("Email") } ,
-                        modifier = Modifier.fillMaxWidth()
+            // Fields and Buttons
+            TextField(
+                    value = email.value ,
+                    onValueChange = { email.value = it } ,
+                    label = { Text("Email") } ,
+                    modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+            TextField(
+                    value = password.value ,
+                    onValueChange = { password.value = it } ,
+                    label = { Text("Password") } ,
+                    modifier = Modifier.fillMaxWidth() ,
+                    visualTransformation = PasswordVisualTransformation()
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+            if (loginError.value.isNotEmpty())
+            {
+                Text(
+                        text = loginError.value ,
+                        color = MaterialTheme.colorScheme.error
                 )
-                Spacer(modifier = Modifier.height(16.dp))
-                TextField(
-                        value = password.value ,
-                        onValueChange = { password.value = it } ,
-                        label = { Text("Password") } ,
-                        modifier = Modifier.fillMaxWidth() ,
-                        visualTransformation = PasswordVisualTransformation()
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-
-                // Error Message
-                if (loginError.value.isNotEmpty())
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+            Button(onClick = {
+                if (email.value.isNotEmpty() && password.value.isNotEmpty())
                 {
-                    Text(
-                            text = loginError.value ,
-                            color = MaterialTheme.colorScheme.error
+                    authenticationViewModel.loginUser(
+                            email.value ,
+                            password.value ,
+                            onLoginSuccess = {
+                                onLoginSuccess()
+                            } ,
+                            onLoginFailure = { error ->
+                                loginError.value = error
+                                onLoginFailure(error)
+                            }
                     )
                 }
-                Spacer(modifier = Modifier.height(16.dp))
-
-                // Login Button
-                Button(onClick = {
-                    if (email.value.isNotEmpty() && password.value.isNotEmpty())
-                    {
-                        authenticationViewModel.loginUser(
-                                email.value ,
-                                password.value ,
-                                onLoginSuccess = {
-                                    onLoginSuccess()
-                                } ,
-                                onLoginFailure = { error ->
-                                    loginError.value = error
-                                    onLoginFailure(error)
-                                }
-                        )
-                    }
-                    else
-                    {
-                        loginError.value = "Please fill in all fields"
-                    }
-                }) {
-                    Text("Login")
+                else
+                {
+                    loginError.value = "Please fill in all fields"
                 }
-                Spacer(modifier = Modifier.height(16.dp))
-
-                // Navigate to Settings
-                Button(onClick = onNavigateToSettings) {
-                    Text("Go to Settings")
-                }
+            }) {
+                Text("Login")
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+            Button(onClick = onNavigateToSettings) {
+                Text("Go to Settings")
             }
         }
     }
