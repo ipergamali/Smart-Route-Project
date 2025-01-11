@@ -15,7 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.ioannapergamali.movewise.R
+import com.ioannapergamali.smartroute.R
 
 import com.ioannapergamali.smartroute.ui.components.DrawerScaffold
 
@@ -36,7 +36,7 @@ fun SplashScreen(
                         .fillMaxSize()
                         .padding(paddingValues)
                         .padding(16.dp) ,
-                verticalArrangement = Arrangement.Center ,
+                verticalArrangement = Arrangement.Top ,
                 horizontalAlignment = Alignment.CenterHorizontally
         ) {
             // Κείμενο καλωσορίσματος
