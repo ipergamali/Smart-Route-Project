@@ -18,9 +18,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
-import com.ioannapergamali.smartroute.viewmodel.AuthenticationViewModel
+import com.ioannapergamali.smartroute.ui.components.DrawerScaffold
 
 @Composable
 fun SignUpScreen(
@@ -29,73 +28,71 @@ fun SignUpScreen(
         onSignUpFailure : (String) -> Unit
 )
 {
-    val viewModel : AuthenticationViewModel = viewModel()
+    // Δημιουργία θυμικών καταστάσεων
+    val name = remember { mutableStateOf("") }
     val email = remember { mutableStateOf("") }
     val password = remember { mutableStateOf("") }
-    val name = remember { mutableStateOf("") }
-    val surname = remember { mutableStateOf("") }
-    val signupError = remember { mutableStateOf("") }
+    val signUpError = remember { mutableStateOf("") }
 
-    Box(
-            modifier = Modifier.fillMaxSize() ,
-            contentAlignment = Alignment.Center
-    ) {
-        Column(
+    DrawerScaffold(
+            title = "Sign Up" ,
+            onSettingsClick = { /* Προσθήκη λειτουργικότητας αν χρειαστεί */ } ,
+            onLogoutClick = { navController.navigate("login") }
+    ) { paddingValues ->
+        Box(
                 modifier = Modifier
-                        .fillMaxWidth(0.8f)
-                        .padding(16.dp)
+                        .fillMaxSize()
+                        .padding(paddingValues) ,
+                contentAlignment = Alignment.Center
         ) {
-            TextField(
-                    value = name.value ,
-                    onValueChange = { name.value = it } ,
-                    label = { Text("Name") } ,
-                    modifier = Modifier.fillMaxWidth()
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            TextField(
-                    value = surname.value ,
-                    onValueChange = { surname.value = it } ,
-                    label = { Text("Surname") } ,
-                    modifier = Modifier.fillMaxWidth()
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            TextField(
-                    value = email.value ,
-                    onValueChange = { email.value = it } ,
-                    label = { Text("Email") } ,
-                    modifier = Modifier.fillMaxWidth()
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            TextField(
-                    value = password.value ,
-                    onValueChange = { password.value = it } ,
-                    label = { Text("Password") } ,
-                    modifier = Modifier.fillMaxWidth() ,
-                    visualTransformation = PasswordVisualTransformation()
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            if (signupError.value.isNotEmpty())
-            {
-                Text(
-                        text = signupError.value ,
-                        color = MaterialTheme.colorScheme.error
+            Column(
+                    modifier = Modifier
+                            .fillMaxWidth(0.8f)
+                            .padding(16.dp)
+            ) {
+                TextField(
+                        value = name.value ,
+                        onValueChange = { name.value = it } ,
+                        label = { Text("Name") } ,
+                        modifier = Modifier.fillMaxWidth()
                 )
-            }
-            Spacer(modifier = Modifier.height(16.dp))
-            Button(onClick = {
-                if (email.value.isNotEmpty() && password.value.isNotEmpty())
+                Spacer(modifier = Modifier.height(16.dp))
+                TextField(
+                        value = email.value ,
+                        onValueChange = { email.value = it } ,
+                        label = { Text("Email") } ,
+                        modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+                TextField(
+                        value = password.value ,
+                        onValueChange = { password.value = it } ,
+                        label = { Text("Password") } ,
+                        modifier = Modifier.fillMaxWidth() ,
+                        visualTransformation = PasswordVisualTransformation()
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+                if (signUpError.value.isNotEmpty())
                 {
-                    // Logic for sign-up
-                    onSignUpSuccess()
-                    signupError.value = ""
+                    Text(
+                            text = signUpError.value ,
+                            color = MaterialTheme.colorScheme.error
+                    )
                 }
-                else
-                {
-                    signupError.value = "All fields are required"
-                    onSignUpFailure(signupError.value)
+                Spacer(modifier = Modifier.height(16.dp))
+                Button(onClick = {
+                    if (email.value.isNotEmpty() && password.value.isNotEmpty() && name.value.isNotEmpty())
+                    {
+                        // Λογική εγγραφής
+                        onSignUpSuccess()
+                    }
+                    else
+                    {
+                        signUpError.value = "Please fill in all fields"
+                    }
+                }) {
+                    Text("Sign Up")
                 }
-            }) {
-                Text("Sign Up")
             }
         }
     }

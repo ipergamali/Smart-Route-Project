@@ -18,9 +18,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
-import com.ioannapergamali.smartroute.viewmodel.AuthenticationViewModel
+import com.ioannapergamali.smartroute.ui.components.DrawerScaffold
 
 @Composable
 fun LoginScreen(
@@ -30,65 +29,63 @@ fun LoginScreen(
         onNavigateToSettings : () -> Unit
 )
 {
-    val viewModel : AuthenticationViewModel = viewModel()
+    // Δημιουργία θυμικών καταστάσεων για email και password
     val email = remember { mutableStateOf("") }
     val password = remember { mutableStateOf("") }
     val loginError = remember { mutableStateOf("") }
 
-    Box(
-            modifier = Modifier.fillMaxSize() ,
-            contentAlignment = Alignment.Center
-    ) {
-        Column(
+    DrawerScaffold(
+            title = "Login" ,
+            onSettingsClick = onNavigateToSettings ,
+            onLogoutClick = { navController.navigate("splash") }
+    ) { paddingValues ->
+        Box(
                 modifier = Modifier
-                        .fillMaxWidth(0.8f)
-                        .padding(16.dp)
+                        .fillMaxSize()
+                        .padding(paddingValues) ,
+                contentAlignment = Alignment.Center
         ) {
-            TextField(
-                    value = email.value ,
-                    onValueChange = { email.value = it } ,
-                    label = { Text("Email") } ,
-                    modifier = Modifier.fillMaxWidth()
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            TextField(
-                    value = password.value ,
-                    onValueChange = { password.value = it } ,
-                    label = { Text("Password") } ,
-                    modifier = Modifier.fillMaxWidth() ,
-                    visualTransformation = PasswordVisualTransformation()
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            if (loginError.value.isNotEmpty())
-            {
-                Text(
-                        text = loginError.value ,
-                        color = MaterialTheme.colorScheme.error
+            Column(
+                    modifier = Modifier
+                            .fillMaxWidth(0.8f)
+                            .padding(16.dp)
+            ) {
+                TextField(
+                        value = email.value ,
+                        onValueChange = { email.value = it } ,
+                        label = { Text("Email") } ,
+                        modifier = Modifier.fillMaxWidth()
                 )
-            }
-            Spacer(modifier = Modifier.height(16.dp))
-            Button(onClick = {
-                if (email.value.isNotEmpty() && password.value.isNotEmpty())
+                Spacer(modifier = Modifier.height(16.dp))
+                TextField(
+                        value = password.value ,
+                        onValueChange = { password.value = it } ,
+                        label = { Text("Password") } ,
+                        modifier = Modifier.fillMaxWidth() ,
+                        visualTransformation = PasswordVisualTransformation()
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+                if (loginError.value.isNotEmpty())
                 {
-                    viewModel.loginUser(
-                            email = email.value ,
-                            password = password.value ,
-                            onLoginSuccess = {
-                                loginError.value = ""
-                                onLoginSuccess()
-                            } ,
-                            onLoginFailure = {
-                                loginError.value = it
-                                onLoginFailure(it)
-                            }
+                    Text(
+                            text = loginError.value ,
+                            color = MaterialTheme.colorScheme.error
                     )
                 }
-                else
-                {
-                    loginError.value = "Please fill in all fields"
+                Spacer(modifier = Modifier.height(16.dp))
+                Button(onClick = {
+                    if (email.value.isNotEmpty() && password.value.isNotEmpty())
+                    {
+                        // Υποθετική λειτουργία σύνδεσης
+                        onLoginSuccess()
+                    }
+                    else
+                    {
+                        loginError.value = "Please fill in all fields"
+                    }
+                }) {
+                    Text("Login")
                 }
-            }) {
-                Text("Login")
             }
         }
     }
