@@ -23,6 +23,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.ioannapergamali.smartroute.ui.components.AnimatedScaleImage
 import com.ioannapergamali.smartroute.viewmodel.AuthenticationViewModel
 
 
@@ -59,8 +60,15 @@ fun LoginScreen(
             Column(
                     modifier = Modifier
                             .fillMaxWidth(0.8f)
-                            .padding(16.dp)
+                            .padding(16.dp) ,
+                    horizontalAlignment = Alignment.CenterHorizontally
             ) {
+                // Προσθήκη Animation Εικόνας
+                AnimatedScaleImage()
+
+                Spacer(modifier = Modifier.height(32.dp))
+
+                // Text Fields for Email and Password
                 TextField(
                         value = email.value ,
                         onValueChange = { email.value = it } ,
@@ -76,6 +84,8 @@ fun LoginScreen(
                         visualTransformation = PasswordVisualTransformation()
                 )
                 Spacer(modifier = Modifier.height(16.dp))
+
+                // Error Message
                 if (loginError.value.isNotEmpty())
                 {
                     Text(
@@ -84,6 +94,8 @@ fun LoginScreen(
                     )
                 }
                 Spacer(modifier = Modifier.height(16.dp))
+
+                // Login Button
                 Button(onClick = {
                     if (email.value.isNotEmpty() && password.value.isNotEmpty())
                     {
@@ -107,6 +119,8 @@ fun LoginScreen(
                     Text("Login")
                 }
                 Spacer(modifier = Modifier.height(16.dp))
+
+                // Navigate to Settings
                 Button(onClick = onNavigateToSettings) {
                     Text("Go to Settings")
                 }
