@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.ioannapergamali.movewise" />
-                  <option name="mobileSdkAppId" value="1:965681083258:android:8948b34156d397d96a9cc3" />
-                  <option name="projectId" value="movewise-40eae" />
-                  <option name="projectNumber" value="965681083258" />
+                  <option name="appId" value="PLACEHOLDER" />
+                  <option name="mobileSdkAppId" value="" />
+                  <option name="projectId" value="" />
+                  <option name="projectNumber" value="" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
