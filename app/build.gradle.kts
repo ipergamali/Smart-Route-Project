@@ -99,5 +99,7 @@ dependencies {
 
     implementation("androidx.navigation:navigation-compose:2.5.0")
     implementation("com.google.code.gson:gson:2.10")
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
 
 }

@@ -29,7 +29,7 @@ private val DarkColors = darkColorScheme(
 )
 
 @Composable
-fun MoveWiseTheme(
+fun SmartRouteTheme(
         darkTheme : Boolean = isSystemInDarkTheme() ,
         content : @Composable () -> Unit
 )

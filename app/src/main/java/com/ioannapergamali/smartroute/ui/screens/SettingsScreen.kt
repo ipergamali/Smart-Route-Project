@@ -17,12 +17,13 @@ import com.ioannapergamali.smartroute.ui.components.DrawerScaffold
 @Composable
 fun SettingsScreen(
         navController : NavController ,
-        onThemeChange : (Boolean) -> Unit
+        isDarkTheme : Boolean , // Προσθήκη παραμέτρου για το τρέχον θέμα
+        onThemeChange : (Boolean) -> Unit // Συνάρτηση για αλλαγή θέματος
 )
 {
     DrawerScaffold(
             title = "Settings" ,
-            onSettingsClick = { navController.navigate("settings") } ,
+            onSettingsClick = {} , // Δεν χρειάζεται πλοήγηση εδώ
             onLogoutClick = { navController.navigate("login") }
     ) { paddingValues ->
         Column(
@@ -31,10 +32,19 @@ fun SettingsScreen(
                         .padding(paddingValues)
                         .padding(16.dp)
         ) {
-            Text(text = "Theme Settings" , style = MaterialTheme.typography.headlineMedium)
+            Text(
+                    text = "Theme Settings" ,
+                    style = MaterialTheme.typography.headlineMedium
+            )
+
+            // Switch για αλλαγή θέματος
             Switch(
-                    checked = true , // Δείγμα λογικής
-                    onCheckedChange = { onThemeChange(it) }
+                    checked = isDarkTheme ,
+                    onCheckedChange = onThemeChange
+            )
+            Text(
+                    text = if (isDarkTheme) "Dark Theme Enabled" else "Light Theme Enabled" ,
+                    style = MaterialTheme.typography.bodyMedium
             )
         }
     }

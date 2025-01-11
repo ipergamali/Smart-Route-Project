@@ -3,7 +3,12 @@ package com.ioannapergamali.smartroute.navigation
 import android.widget.Toast
 import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -13,10 +18,13 @@ import com.ioannapergamali.smartroute.ui.screens.SettingsScreen
 import com.ioannapergamali.smartroute.ui.screens.SignUpScreen
 import com.ioannapergamali.smartroute.ui.screens.SplashScreen
 import com.ioannapergamali.smartroute.utils.UserSession
+import com.ioannapergamali.smartroute.viewmodel.SettingsViewModel
 
 @Composable
 fun SmartRouteNavHost(navController: NavHostController) {
     val context = LocalContext.current
+    val lastBackPressTime = remember { mutableStateOf(0L) }
+    val settingsViewModel : SettingsViewModel = viewModel()
 
     // Handle the back press to exit the app
     BackHandler {
@@ -24,11 +32,16 @@ fun SmartRouteNavHost(navController: NavHostController) {
         if (currentRoute != "splash") {
             navController.popBackStack()
         } else {
-            Toast.makeText(
-                    context,
-                    "Press again to exit",
-                    Toast.LENGTH_SHORT
-            ).show()
+            val currentTime = System.currentTimeMillis()
+            if (currentTime - lastBackPressTime.value < 2000)
+            {
+                // Exit app
+            }
+            else
+            {
+                lastBackPressTime.value = currentTime
+                Toast.makeText(context , "Press again to exit" , Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -45,7 +58,7 @@ fun SmartRouteNavHost(navController: NavHostController) {
                     }
             )
         }
-        // Login Screen
+
         composable("login") {
             LoginScreen(
                     navController = navController ,
@@ -57,24 +70,24 @@ fun SmartRouteNavHost(navController: NavHostController) {
                     onLoginFailure = { errorMessage ->
                         Toast.makeText(context, errorMessage, Toast.LENGTH_SHORT).show()
                     },
-                   onNavigateToSettings = {
+                    onNavigateToSettings = {
                         navController.navigate("settings")
                     }
-
-
-
             )
         }
 
-        // Settings Screen
         composable("settings") {
+            val isDarkTheme by settingsViewModel.isDarkTheme.collectAsState()
+
             SettingsScreen(
                     navController = navController,
+                    isDarkTheme = isDarkTheme ,
                     onThemeChange = { isDarkMode ->
-                        // Handle theme change logic here
+                        settingsViewModel.toggleTheme(isDarkMode)
                     }
             )
         }
+
 
         composable("signup") {
             SignUpScreen(
@@ -90,10 +103,9 @@ fun SmartRouteNavHost(navController: NavHostController) {
             )
         }
 
-        // Menu Screen (for authenticated users)
         composable("menu") {
-            val user = UserSession.currentUser // Get the user from the session
-            val userRole = user?.getRole() ?: "Passenger" // Default to "Passenger" if null
+            val user = UserSession.currentUser
+            val userRole = user?.getRole() ?: "Passenger"
 
             MenuScreen(
                     user = user,

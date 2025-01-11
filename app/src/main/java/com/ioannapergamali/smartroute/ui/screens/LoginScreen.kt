@@ -29,7 +29,6 @@ fun LoginScreen(
         onNavigateToSettings : () -> Unit
 )
 {
-    // Δημιουργία θυμικών καταστάσεων για email και password
     val email = remember { mutableStateOf("") }
     val password = remember { mutableStateOf("") }
     val loginError = remember { mutableStateOf("") }
@@ -76,8 +75,16 @@ fun LoginScreen(
                 Button(onClick = {
                     if (email.value.isNotEmpty() && password.value.isNotEmpty())
                     {
-                        // Υποθετική λειτουργία σύνδεσης
-                        onLoginSuccess()
+                        if (email.value == "user@example.com" && password.value == "password")
+                        {
+                            // Mock login logic
+                            onLoginSuccess()
+                        }
+                        else
+                        {
+                            loginError.value = "Invalid email or password"
+                            onLoginFailure(loginError.value)
+                        }
                     }
                     else
                     {
@@ -86,7 +93,14 @@ fun LoginScreen(
                 }) {
                     Text("Login")
                 }
+                Spacer(modifier = Modifier.height(16.dp))
+                Button(onClick = {
+                    navController.navigate("signup")
+                }) {
+                    Text("Create an Account")
+                }
             }
         }
     }
 }
+
