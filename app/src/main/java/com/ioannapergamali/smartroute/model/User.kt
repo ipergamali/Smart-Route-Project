@@ -1,5 +1,12 @@
 package com.ioannapergamali.smartroute.model
 
+enum class Role
+{
+    ADMIN ,
+    DRIVER ,
+    PASSENGER
+}
+
 open class User(
         private var id : String = "" ,
         private var name : String = "" ,
@@ -9,7 +16,7 @@ open class User(
         private var phoneNum : String = "" ,
         private var username : String = "" ,
         private var password : String = "" ,
-        private var role : String = ""
+        private var role : Role = Role.PASSENGER
 )
 {
     // Getters
@@ -64,18 +71,15 @@ open class User(
         password = value
     }
 
-    fun setRole(value : String)
+    fun setRole(value : Role)
     {
         role = value
     }
 
-    // Display user details
-    open fun display()
+    // Display details
+    open fun display() : String
     {
-        println(
-                "ID: $id, Name: $name, Surname: $surname, Email: $email, Role: $role, " +
-                "Address: ${address.getCity()} ${address.getStreetName()} ${address.getStreetNum()}, " +
-                "Phone: $phoneNum, Username: $username"
-        )
+        return "ID: $id, Name: $name $surname, Email: $email, Role: $role, " +
+               "Address: ${address.display()}, Phone: $phoneNum, Username: $username"
     }
 }

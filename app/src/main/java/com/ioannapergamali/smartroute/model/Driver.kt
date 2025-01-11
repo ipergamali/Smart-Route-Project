@@ -8,14 +8,12 @@ class Driver(
         address : UserAddress = UserAddress() ,
         phoneNum : String = "" ,
         username : String = "" ,
-        password : String = "" ,
-        role : String = "Driver"
-) : User(id , name , email , surname , address , phoneNum , username , password , role)
+        password : String = ""
+) : User(id , name , email , surname , address , phoneNum , username , password , Role.DRIVER)
 {
 
-    override fun display()
+    override fun display() : String
     {
-        println("Driver Info:")
-        super.display()
+        return "Driver Details: " + super.display()
     }
 }

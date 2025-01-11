@@ -8,14 +8,12 @@ class Passenger(
         address : UserAddress = UserAddress() ,
         phoneNum : String = "" ,
         username : String = "" ,
-        password : String = "" ,
-        role : String = "Passenger"
-) : User(id , name , email , surname , address , phoneNum , username , password , role)
+        password : String = ""
+) : User(id , name , email , surname , address , phoneNum , username , password , Role.PASSENGER)
 {
 
-    override fun display()
+    override fun display() : String
     {
-        println("Passenger Info:")
-        super.display()
+        return "Passenger Details: " + super.display()
     }
 }

@@ -8,14 +8,12 @@ class Admin(
         address : UserAddress = UserAddress() ,
         phoneNum : String = "" ,
         username : String = "" ,
-        password : String = "" ,
-        role : String = "Admin"
-) : User(id , name , email , surname , address , phoneNum , username , password , role)
+        password : String = ""
+) : User(id , name , email , surname , address , phoneNum , username , password , Role.ADMIN)
 {
 
-    override fun display()
+    override fun display() : String
     {
-        println("Admin Info:")
-        super.display()
+        return "Admin Details: " + super.display()
     }
 }
