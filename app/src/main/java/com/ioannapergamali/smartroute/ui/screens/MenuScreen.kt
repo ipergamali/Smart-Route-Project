@@ -1,55 +1,55 @@
 package com.ioannapergamali.smartroute.ui.screens
 
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.ioannapergamali.smartroute.model.Role
 import com.ioannapergamali.smartroute.model.User
 
 @Composable
 fun MenuScreen(
         user : User? ,
-        userRole : String ,
+        userRole : Role ,
         navController : NavController ,
         onNavigateToSettings : () -> Unit
 )
 {
-    Box(
-            modifier = Modifier.fillMaxSize() ,
-            contentAlignment = Alignment.Center
-    ) {
-        Column(
-                modifier = Modifier.fillMaxWidth(0.8f) ,
-                horizontalAlignment = Alignment.CenterHorizontally
-        ) {
+    Column(modifier = Modifier.padding(16.dp)) {
+        Text(
+                text = "Welcome to the Menu" ,
+                style = androidx.compose.material3.MaterialTheme.typography.titleLarge
+        )
+
+        // Εμφάνιση του ρόλου χρήστη
+        Text(
+                text = "Role: ${userRole.name}" ,
+                modifier = Modifier.padding(vertical = 8.dp) ,
+                style = androidx.compose.material3.MaterialTheme.typography.bodyLarge
+        )
+
+        // Εμφάνιση στοιχείων χρήστη αν υπάρχουν
+        user?.let {
             Text(
-                    text = "Welcome to the Menu" ,
-                    style = MaterialTheme.typography.headlineLarge ,
-                    modifier = Modifier.padding(bottom = 24.dp)
+                    text = "User Details:" ,
+                    style = androidx.compose.material3.MaterialTheme.typography.titleMedium
             )
-            Text(text = "Role: $userRole")
-            Spacer(modifier = Modifier.height(16.dp))
-            Button(onClick = onNavigateToSettings) {
-                Text("Settings")
-            }
-            Spacer(modifier = Modifier.height(16.dp))
-            Button(onClick = { navController.navigate("login") }) {
-                Text("Log Out")
-            }
-            Button(onClick = onNavigateToSettings) {
-                Text("Settings")
-            }
+            Text(text = "Name: ${it.getName()} ${it.getSurname()}")
+            Text(text = "Email: ${it.getEmail()}")
+        } ?: run {
+            Text(
+                    text = "No user information available" ,
+                    style = androidx.compose.material3.MaterialTheme.typography.bodySmall
+            )
+        }
+
+        // Κουμπί πλοήγησης στις ρυθμίσεις
+        Button(onClick = onNavigateToSettings) {
+            Text(text = "Go to Settings")
         }
     }
 }

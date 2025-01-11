@@ -1,5 +1,7 @@
 package com.ioannapergamali.smartroute.ui.screens
 
+import AuthenticationViewModelFactory
+import android.app.Application
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -9,6 +11,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
@@ -18,12 +21,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
-import com.ioannapergamali.smartroute.ui.components.DrawerScaffold
+import com.ioannapergamali.smartroute.viewmodel.AuthenticationViewModel
+
 
 @Composable
 fun LoginScreen(
         navController : NavController ,
+        authenticationViewModel : AuthenticationViewModel = viewModel(
+                factory = AuthenticationViewModelFactory(navController.context.applicationContext as Application)
+        ) ,
         onLoginSuccess : () -> Unit ,
         onLoginFailure : (String) -> Unit ,
         onNavigateToSettings : () -> Unit
@@ -33,15 +41,19 @@ fun LoginScreen(
     val password = remember { mutableStateOf("") }
     val loginError = remember { mutableStateOf("") }
 
-    DrawerScaffold(
-            title = "Login" ,
-            onSettingsClick = onNavigateToSettings ,
-            onLogoutClick = { navController.navigate("splash") }
-    ) { paddingValues ->
+    Scaffold(
+            topBar = {
+                TopBar(
+                        title = "Login" ,
+                        navController = navController ,
+                        showBackButton = false
+                )
+            }
+    ) { innerPadding ->
         Box(
                 modifier = Modifier
                         .fillMaxSize()
-                        .padding(paddingValues) ,
+                        .padding(innerPadding) ,
                 contentAlignment = Alignment.Center
         ) {
             Column(
@@ -75,16 +87,17 @@ fun LoginScreen(
                 Button(onClick = {
                     if (email.value.isNotEmpty() && password.value.isNotEmpty())
                     {
-                        if (email.value == "user@example.com" && password.value == "password")
-                        {
-                            // Mock login logic
-                            onLoginSuccess()
-                        }
-                        else
-                        {
-                            loginError.value = "Invalid email or password"
-                            onLoginFailure(loginError.value)
-                        }
+                        authenticationViewModel.loginUser(
+                                email.value ,
+                                password.value ,
+                                onLoginSuccess = {
+                                    onLoginSuccess()
+                                } ,
+                                onLoginFailure = { error ->
+                                    loginError.value = error
+                                    onLoginFailure(error)
+                                }
+                        )
                     }
                     else
                     {
@@ -94,13 +107,10 @@ fun LoginScreen(
                     Text("Login")
                 }
                 Spacer(modifier = Modifier.height(16.dp))
-                Button(onClick = {
-                    navController.navigate("signup")
-                }) {
-                    Text("Create an Account")
+                Button(onClick = onNavigateToSettings) {
+                    Text("Go to Settings")
                 }
             }
         }
     }
 }
-

@@ -12,6 +12,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.ioannapergamali.smartroute.model.Role
 import com.ioannapergamali.smartroute.ui.screens.LoginScreen
 import com.ioannapergamali.smartroute.ui.screens.MenuScreen
 import com.ioannapergamali.smartroute.ui.screens.SettingsScreen
@@ -76,6 +77,7 @@ fun SmartRouteNavHost(navController: NavHostController) {
             )
         }
 
+
         composable("settings") {
             val isDarkTheme by settingsViewModel.isDarkTheme.collectAsState()
 
@@ -105,7 +107,7 @@ fun SmartRouteNavHost(navController: NavHostController) {
 
         composable("menu") {
             val user = UserSession.currentUser
-            val userRole = user?.getRole() ?: "Passenger"
+            val userRole = user?.getRole() ?: Role.PASSENGER
 
             MenuScreen(
                     user = user,
