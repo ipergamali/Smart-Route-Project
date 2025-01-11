@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MoveWise"
+rootProject.name = "SmartRoute"
 include(":app")
  

@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ioannapergamali.movewise"
+    namespace = "com.ioannapergamali.smartroute"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.ioannapergamali.movewise"
+        applicationId = "com.ioannapergamali.smartroute"
         minSdk = 23
         //noinspection EditedTargetSdkVersion
         targetSdk = 35
