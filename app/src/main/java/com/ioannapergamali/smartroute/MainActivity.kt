@@ -10,6 +10,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.ioannapergamali.smartroute.navigation.SmartRouteNavHost
 import com.ioannapergamali.smartroute.ui.theme.SmartRouteTheme
+import com.ioannapergamali.smartroute.utils.initializeEmptyFirestore
 import com.ioannapergamali.smartroute.viewmodel.SettingsViewModel
 
 class MainActivity : ComponentActivity()
@@ -18,6 +19,7 @@ class MainActivity : ComponentActivity()
     {
         super.onCreate(savedInstanceState)
         setContent {
+            initializeEmptyFirestore()
             val navController : NavHostController = rememberNavController()
             val settingsViewModel : SettingsViewModel = viewModel()
 

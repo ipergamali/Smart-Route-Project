@@ -69,6 +69,7 @@ dependencies {
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.foundation.android)
     implementation(libs.androidx.material3.android)
+    implementation(libs.firebase.database.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -101,5 +102,11 @@ dependencies {
     implementation("com.google.code.gson:gson:2.10")
     implementation("androidx.datastore:datastore-preferences:1.0.0")
 
+    // Import the BoM for the Firebase platform
+    implementation("com.google.firebase:firebase-bom:33.7.0")
 
+    // Declare the dependencies for the desired Firebase products without specifying versions
+    // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
 }

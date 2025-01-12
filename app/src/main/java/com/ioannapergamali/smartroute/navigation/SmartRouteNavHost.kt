@@ -14,6 +14,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.ioannapergamali.smartroute.model.Role
+import com.ioannapergamali.smartroute.ui.screens.DebugScreen
 import com.ioannapergamali.smartroute.ui.screens.DeclareAvailabilityScreen
 import com.ioannapergamali.smartroute.ui.screens.LoginScreen
 import com.ioannapergamali.smartroute.ui.screens.MenuScreen
@@ -139,5 +140,11 @@ fun SmartRouteNavHost(navController: NavHostController) {
                 )
             }
         }
+        composable("debug") {
+            DebugScreen()
+        }
+
+
     }
+
 }

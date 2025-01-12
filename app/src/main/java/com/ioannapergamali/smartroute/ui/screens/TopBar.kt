@@ -2,6 +2,7 @@ package com.ioannapergamali.smartroute.ui.screens
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.BugReport
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -22,8 +23,8 @@ fun TopBar(
 {
     TopAppBar(
             title = { Text(title) } ,
-            navigationIcon = {
-                if (showBackButton)
+            navigationIcon = if (showBackButton)
+            {
                 {
                     IconButton(onClick = { navController.popBackStack() }) {
                         Icon(
@@ -31,6 +32,15 @@ fun TopBar(
                                 contentDescription = "Back"
                         )
                     }
+                }
+            }
+            else ({
+                // Άδειος Composable
+            }) ,
+            actions = {
+                // Debug Button in the Side Menu
+                IconButton(onClick = { navController.navigate("debug") }) {
+                    Icon(Icons.Default.BugReport , contentDescription = "Debug")
                 }
             } ,
             colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
