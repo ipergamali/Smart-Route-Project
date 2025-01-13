@@ -58,3 +58,15 @@ src/
 │   │   ├── layout/
 │   │   ├── values/
 │   │   └── ...
+
+Firebase description
+ Να φτιαξουμε μια collection  Users , Vehicles, Pois , Routes
+
+ Στην collection Users  θα εχει  τα εξης sub-collections roles, address , user , contact  .
+ To roles θα εχει τα εξης πεδια "uuid","role","permissions".
+ To address  θα εχει τα εξης πεδια  "uuid","city","street","number","postal_code".
+ To user θα εχει τα εξης πεδια "uuid","username","name","surname"
+ To contact  θα εχει τα εξης πεδια "uuid", "email", "phone_num"
+Για Authentication να χρησιμοποιήσει το Authentication της Firebase σαν κλειδι θα χρησιμοποιήται το "uuid"
+Δες τα αρχεία που σου έχω ανεβάση με την περιγραφη του προτζεκτ ώστε να φτιάξεις  Vehicles, Pois , Routes
+Επίσηςς δες να φτιάξεις κάτι για το session

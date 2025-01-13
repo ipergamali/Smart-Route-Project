@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.ioannapergamali.smartroute.ui.components.AnimatedScaleImage
+import com.ioannapergamali.smartroute.ui.components.TopBar
 import com.ioannapergamali.smartroute.utils.UserSession
 import com.ioannapergamali.smartroute.viewmodel.AuthenticationViewModel
 
@@ -47,7 +48,7 @@ fun LoginScreen(
                 TopBar(
                         title = "Login" ,
                         navController = navController ,
-                        showBackButton = false
+                        showBackButton = true
                 )
             }
     ) { innerPadding ->

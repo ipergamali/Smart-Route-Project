@@ -17,7 +17,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-
 @Composable
 fun DebugScreen()
 {
@@ -35,16 +34,15 @@ fun DebugScreen()
             // Κλήση κατά την εκκίνηση της εφαρμογής ή σε Debug Screen
             var i = 1
             CoroutineScope(Dispatchers.IO).launch {
-
-                RealtimeDatabaseInitializer.initializeEmptyRealtimeDatabase()
-
-                Toast.makeText(
-                        context ,
-                        "Firestore Initializing \n Coroutine:: " + i.toString() ,
-                        Toast.LENGTH_SHORT
-                ).show()
-                i++
-
+                val initializer = RealtimeDatabaseInitializer()
+                initializer.initializeCollections()
+                CoroutineScope(Dispatchers.Main).launch {
+                    Toast.makeText(
+                            context ,
+                            "Firestore Initialized. Roles and Addresses Added!" ,
+                            Toast.LENGTH_SHORT
+                    ).show()
+                }
             }
 
         }) {
