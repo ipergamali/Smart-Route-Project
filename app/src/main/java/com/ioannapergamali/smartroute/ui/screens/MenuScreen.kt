@@ -22,12 +22,14 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.ioannapergamali.smartroute.model.Menu
-import com.ioannapergamali.smartroute.model.MenuAction
+import com.google.firebase.firestore.FirebaseFirestore
 import com.ioannapergamali.smartroute.model.Role
 import com.ioannapergamali.smartroute.model.User
 
@@ -40,7 +42,17 @@ fun MenuScreen(
         onNavigateToSettings : () -> Unit
 )
 {
-    val menu = Menu(userRole)
+    val menuItems = remember { mutableStateOf<List<String>>(emptyList()) }
+    val errorMessage = remember { mutableStateOf<String?>(null) }
+    val db = FirebaseFirestore.getInstance()
+
+    LaunchedEffect(userRole) {
+        fetchMenuForRole(
+                role = userRole.name ,
+                onSuccess = { items -> menuItems.value = items } ,
+                onFailure = { error -> errorMessage.value = error }
+        )
+    }
 
     Scaffold(
             topBar = {
@@ -69,7 +81,6 @@ fun MenuScreen(
                 verticalArrangement = Arrangement.Top ,
                 horizontalAlignment = Alignment.Start
         ) {
-            // Welcome Message
             Text(
                     text = "Welcome to SmartRoute!" ,
                     style = MaterialTheme.typography.headlineMedium ,
@@ -78,7 +89,6 @@ fun MenuScreen(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // User Information
             user?.let {
                 Card(
                         modifier = Modifier
@@ -87,10 +97,7 @@ fun MenuScreen(
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
-                        Text(
-                                text = "User Details" ,
-                                style = MaterialTheme.typography.titleMedium
-                        )
+                        Text(text = "User Details" , style = MaterialTheme.typography.titleMedium)
                         Spacer(modifier = Modifier.height(8.dp))
                         Text("Name: ${it.getName()} ${it.getSurname()}")
                         Text("Role: ${userRole.name}")
@@ -101,30 +108,31 @@ fun MenuScreen(
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // Menu Actions
-            Text(
-                    text = "Available Actions:" ,
-                    style = MaterialTheme.typography.titleMedium
-            )
-
+            Text(text = "Available Actions:" , style = MaterialTheme.typography.titleMedium)
             Spacer(modifier = Modifier.height(16.dp))
 
-            LazyColumn {
-                items(menu.getActions().size) { index ->
-                    val action = menu.getActions()[index]
-                    Button(
-                            onClick = {
-                                handleMenuAction(
-                                        action ,
-                                        navController ,
-                                        onNavigateToSettings
-                                )
-                            } ,
-                            modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(vertical = 4.dp)
-                    ) {
-                        Text(text = action.description)
+            if (errorMessage.value != null)
+            {
+                Text(text = errorMessage.value!! , color = MaterialTheme.colorScheme.error)
+            }
+            else
+            {
+                LazyColumn {
+                    items(menuItems.value.size) { index ->
+                        Button(
+                                onClick = {
+                                    handleMenuAction(
+                                            menuItems.value[index] ,
+                                            navController ,
+                                            onNavigateToSettings
+                                    )
+                                } ,
+                                modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(vertical = 4.dp)
+                        ) {
+                            Text(text = menuItems.value[index])
+                        }
                     }
                 }
             }
@@ -133,20 +141,43 @@ fun MenuScreen(
 }
 
 private fun handleMenuAction(
-        menuAction : MenuAction ,
+        menuActionDescription : String ,
         navController : NavController ,
         onNavigateToSettings : () -> Unit
 )
 {
-    when (menuAction.description)
+    when (menuActionDescription)
     {
-        "Sign out"             -> navController.navigate("login")
-        "Manage Favorite Means of Transport" -> navController.navigate("favorite_transport")
-        "View Routes"          -> navController.navigate("view_routes")
-        "Declare Availability" -> navController.navigate("declare_availability")
-        "View Reports"         -> navController.navigate("view_reports")
-        "Initialize System"    -> navController.navigate("initialize_system")
-        "Go to Settings"       -> onNavigateToSettings()
-        else                   -> menuAction.action.invoke()
+        "Sign Out" -> navController.navigate("login")
+        "Manage Favorite Transport" -> navController.navigate("favorite_transport")
+        "View Routes" -> navController.navigate("view_routes")
+        "Initialize System" -> navController.navigate("initialize_system")
+        "Go to Settings" -> onNavigateToSettings()
+        else -> println("Unknown action: $menuActionDescription")
     }
+}
+
+private fun fetchMenuForRole(
+        role : String ,
+        onSuccess : (List<String>) -> Unit ,
+        onFailure : (String) -> Unit
+)
+{
+    val db = FirebaseFirestore.getInstance()
+    db.collection("menu").whereEqualTo("role" , role).get()
+            .addOnSuccessListener { documents ->
+                if (!documents.isEmpty)
+                {
+                    val menu = documents.first()
+                    val items = menu.get("items") as? List<String> ?: emptyList()
+                    onSuccess(items)
+                }
+                else
+                {
+                    onFailure("No menu found for role: $role")
+                }
+            }
+            .addOnFailureListener { e ->
+                onFailure("Error fetching menu: ${e.message}")
+            }
 }

@@ -29,10 +29,12 @@ class RealtimeDatabaseInitializer
     {
         // Clear all collections
         clearCollection("users")
-
         clearCollection("vehicles")
         clearCollection("pois")
         clearCollection("routes")
+        clearCollection("roles")
+        clearCollection("admin_logs")
+        clearCollection("menu")
 
         // Clear all users from Firebase Authentication
         clearAuthenticationUsers()
@@ -42,6 +44,9 @@ class RealtimeDatabaseInitializer
         createVehiclesCollection()
         createPOIsCollection()
         createRoutesCollection()
+        createRolesCollection()
+        createMenuCollection()
+        createAdminLogsCollection()
     }
 
     /**
@@ -233,6 +238,138 @@ class RealtimeDatabaseInitializer
                 }
                 .addOnFailureListener { e ->
                     Log.e("Firebase" , "Error creating Routes collection: ${e.message}")
+                }
+    }
+
+    private fun createRolesCollection()
+    {
+        val passengerRoles = hashMapOf(
+                "role" to "Passenger" ,
+                "permissions" to listOf("view_routes" , "book_ticket")
+        )
+        db.collection("roles").document("passenger-role").set(passengerRoles)
+                .addOnSuccessListener {
+                    Log.d("Firebase" , "Created Passenger role template.")
+                }
+                .addOnFailureListener { e ->
+                    Log.e("Firebase" , "Error creating Passenger role: ${e.message}")
+                }
+
+        val driverRoles = hashMapOf(
+                "role" to "Driver" ,
+                "permissions" to listOf("view_routes" , "book_ticket" , "add_route")
+        )
+        db.collection("roles").document("driver-role").set(driverRoles)
+                .addOnSuccessListener {
+                    Log.d("Firebase" , "Created Driver role template.")
+                }
+                .addOnFailureListener { e ->
+                    Log.e("Firebase" , "Error creating Driver role: ${e.message}")
+                }
+
+        val adminRoles = hashMapOf(
+                "role" to "Admin" ,
+                "permissions" to listOf(
+                        "view_routes" ,
+                        "book_ticket" ,
+                        "add_route" ,
+                        "manage_users"
+                )
+        )
+        db.collection("roles").document("admin-role").set(adminRoles)
+                .addOnSuccessListener {
+                    Log.d("Firebase" , "Created Admin role template.")
+                }
+                .addOnFailureListener { e ->
+                    Log.e("Firebase" , "Error creating Admin role: ${e.message}")
+                }
+    }
+
+    private fun createMenuCollection()
+    {
+        val pMenu = " \"Login to the system\",\n" +
+                    "                                \"Manage preferred transport\",\n" +
+                    "                                \"Declare interest in route\",\n" +
+                    "                                \"Declare interest in transportation\",\n" +
+                    "                                \"Search for transport\",\n" +
+                    "                                \"Book a seat\",\n" +
+                    "                                \"View routes\",\n" +
+                    "                                \"View trips\",\n" +
+                    "                                \"Print ticket\",\n" +
+                    "                                \"Cancel seat\",\n" +
+                    "                                \"Rate completed trips\",\n" +
+                    "                                \"Logout\""
+        val dmenu = " \"Declare vehicle ownership\",\n" +
+                    "                                \"Declare service for a trip\",\n" +
+                    "                                \"Search for passengers\",\n" +
+                    "                                 \"Print passenger list for a trip\",\n" +
+                    "                                \"Print passenger list for scheduled trips\",\n" +
+                    "                                \"Print passenger list for completed trips\""
+        val amenu = "\"Initialize system\",\n" +
+                    "       \"Create user account\",\n" +
+                    "       \"Promote/demote user\",\n" +
+                    "       \"Define point of interest\",\n" +
+                    "       \"Set walking route duration\",\n" +
+                    "       \"View unassigned routes\",\n" +
+                    "       \"Review point of interest names\",\n" +
+                    "       \"View top 10 drivers\",\n" +
+                    "       \"View top 10 passengers\",\n" +
+                    "       \"View all vehicles\",\n" +
+                    "       \"View all points of interest\",\n" +
+                    "       \"View all users\",\n" +
+                    "       \"Increment date\""
+        val menus = listOf(
+                hashMapOf(
+                        "menu_id" to "passenger-menu" ,
+                        "role" to "Passenger" ,
+                        "actions" to listOf(
+                                pMenu
+                        )
+                ) ,
+                hashMapOf(
+                        "menu_id" to "driver-menu" ,
+                        "role" to "Driver" ,
+                        "actions" to listOf(
+                                pMenu ,
+                                dmenu
+                        )
+                ) ,
+                hashMapOf(
+                        "menu_id" to "admin-menu" ,
+                        "role" to "Admin" ,
+                        "actions" to listOf(
+                                pMenu ,
+                                dmenu ,
+                                amenu
+
+                        )
+                )
+        )
+
+        menus.forEach { menu ->
+            db.collection("menu").document(menu["menu_id"] as String).set(menu)
+                    .addOnSuccessListener {
+                        Log.d("Firebase" , "Menu created: ${menu["menu_id"]}")
+                    }
+                    .addOnFailureListener { e ->
+                        Log.e("Firebase" , "Error creating menu: ${e.message}")
+                    }
+        }
+    }
+
+    private fun createAdminLogsCollection()
+    {
+        val log = hashMapOf(
+                "log_id" to "template-log-id" ,
+                "action" to "System initialized" ,
+                "timestamp" to System.currentTimeMillis()
+        )
+        db.collection("admin_logs").document("template-log-id").set(log)
+                .addOnSuccessListener {
+                    Log.d("Firebase" , "Created admin logs collection.")
+                }
+                .addOnFailureListener { e ->
+                    Log.e("Firebase" , "Error creating admin logs collection: ${e.message}")
                 }
     }
 }

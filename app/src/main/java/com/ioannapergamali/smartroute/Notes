@@ -70,3 +70,70 @@ Firebase description
 Για Authentication να χρησιμοποιήσει το Authentication της Firebase σαν κλειδι θα χρησιμοποιήται το "uuid"
 Δες τα αρχεία που σου έχω ανεβάση με την περιγραφη του προτζεκτ ώστε να φτιάξεις  Vehicles, Pois , Routes
 Επίσηςς δες να φτιάξεις κάτι για το session
+
+
+Οι επιλογές για τον Passenger
+
+Login to the system
+Manage preferred (or non-preferred) means of transport
+Declare interest in finding a means of transport for a specific route
+Declare interest in transportation
+Search for a way of transportation
+Book a seat (or announce co-passenger availability or buy a ticket)
+View routes of interest to the passenger
+View the passenger's trips
+Print the passenger's booked seat (e.g., ticket)
+Cancel the passenger's booked seat
+View, rate, and comment on completed trips
+Logout
+
+Οι επιλογές για τον Driver
+
+Declare ownership of a transport vehicle
+Declare service for a specific trip (with vehicle, date, cost, and duration)
+Search for passengers interested in transport
+Print passenger list for a specific trip
+Print passenger list for scheduled trips
+Print passenger list for completed trips
+
+Οι επιλογές για τον Admin
+
+Initialize the system from a file and save the current system state to a file
+Create a user account and assign roles (Passenger, Driver, or Admin)
+Promote or demote a user
+Define a meeting point or point of interest (PoI)
+Set the duration of a walking route
+View list of routes without assigned walking duration and set their duration
+Review user-defined point of interest names and group or update them
+View the top 10 highest/lowest-rated drivers
+View the top 10 happiest/least happy passengers
+View all available vehicles with details about their drivers or owners
+View all points of interest and their information
+View all users by category (Passenger, Driver, Admin)
+Increment the current date by one day
+
+Δομή στη Firestore
+Collection: users
+
+Document: {userId}
+Sub-collection: roles
+Document: role-id
+uuid: {userId}
+role: "Admin"
+permissions: ["passenger_menu", "driver_menu", "admin_menu"]
+menu_references: [
+/menu/passenger-menu,
+/menu/driver-menu,
+/menu/admin-menu
+]
+Collection: menu
+
+Document: passenger-menu
+role: "Passenger"
+actions: [...]
+Document: driver-menu
+role: "Driver"
+actions: [...]
+Document: admin-menu
+role: "Admin"
+actions: [...]

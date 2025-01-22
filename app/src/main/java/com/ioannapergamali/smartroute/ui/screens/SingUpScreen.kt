@@ -178,6 +178,7 @@ fun SignUpScreen(
                 }
             }
 
+
             Spacer(modifier = Modifier.height(16.dp))
             Button(onClick = {
                 if (email.value.isNotEmpty() && password.value.isNotEmpty() && selectedRole.value.isNotEmpty())
