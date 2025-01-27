@@ -4,7 +4,11 @@ plugins {
     id("com.google.gms.google-services") // Firebase plugin
     id("com.chaquo.python") // Chaquopy plugin
 }
-
+chaquopy {
+    defaultConfig {
+        buildPython("C:/Users/joann/AppData/Local/Programs/Python/Python38/python.exe")
+    }
+}
 android {
     namespace = "com.ioannapergamali.smartroute"
     compileSdk = 34
@@ -23,9 +27,7 @@ android {
         ndk {
             abiFilters += listOf("armeabi-v7a" , "arm64-v8a")
         }
-//        python {
-//            buildPython = "C:/Users/joann/AppData/Local/Programs/Python/Python38/python.exe"
-//        }
+
 
     }
 
@@ -110,4 +112,5 @@ dependencies {
     // Debugging Tools
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
 }
