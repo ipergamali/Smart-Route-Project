@@ -160,8 +160,9 @@ fun SignUpScreen(
                         } ,
                         modifier = Modifier
                                 .fillMaxWidth()
-                                .menuAnchor(type , enabled)
+                                .menuAnchor() // Απλή κλήση χωρίς παραμέτρους
                 )
+
                 ExposedDropdownMenu(
                         expanded = expanded.value ,
                         onDismissRequest = { expanded.value = false }

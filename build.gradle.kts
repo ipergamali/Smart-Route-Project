@@ -1,10 +1,18 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.jetbrains.kotlin.android) apply false
-    id("com.google.gms.google-services") version "4.4.2" apply false
+    id("com.android.application") version "8.1.1" apply false // Πρώτα το Android plugin
+    id("org.jetbrains.kotlin.android") version "1.9.0" apply false // Μετά το Kotlin plugin
 
-    //alias(libs.plugins.kotlin) apply false
-    //  alias(libs.plugins.kapt) apply false
-
+    id("com.google.gms.google-services") version "4.3.15" apply false // Firebase (αν χρειάζεται)
+    id("com.chaquo.python") version "16.0.0" apply false // Το Chaquopy εφαρμόζεται μετά
+}
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://chaquo.com/maven") } // Αποθετήριο Chaquopy
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.1.1") // Android Gradle Plugin
+        classpath("com.chaquo.python:gradle:16.0.0") // Chaquopy Plugin
+    }
 }

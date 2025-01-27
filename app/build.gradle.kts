@@ -1,28 +1,32 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
-    id("com.google.gms.google-services")
-
-    //alias(libs.plugins.kotlin)  // Χρησιμοποιούμε τον alias για το Kotlin
-    //  alias(libs.plugins.kapt)  // Χρησιμοποιούμε τον alias για το Kapt
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services") // Firebase plugin
+    id("com.chaquo.python") // Chaquopy plugin
 }
 
 android {
     namespace = "com.ioannapergamali.smartroute"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.ioannapergamali.smartroute"
-        minSdk = 23
-        //noinspection EditedTargetSdkVersion
-        targetSdk = 35
+        minSdk = 24
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
+        vectorDrawables.useSupportLibrary = true
+
+        // NDK Configuration (αν χρησιμοποιείς Native Libraries)
+        ndk {
+            abiFilters += listOf("armeabi-v7a" , "arm64-v8a")
         }
+//        python {
+//            buildPython = "C:/Users/joann/AppData/Local/Programs/Python/Python38/python.exe"
+//        }
+
     }
 
     buildTypes {
@@ -34,81 +38,76 @@ android {
             )
         }
     }
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
+
     buildFeatures {
         compose = true
     }
+
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.1" // Συμβατό με Kotlin 1.9.0
     }
+
     packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
+        resources.excludes += "/META-INF/{AL2.0,LGPL2.1}"
     }
 }
 
 dependencies {
+    // AndroidX Libraries
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
+    implementation("androidx.activity:activity-compose:1.7.2")
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation("androidx.compose.material3:material3:1.3.1")
+    // Jetpack Compose
+    implementation(platform("androidx.compose:compose-bom:2024.01.00")) // BOM για Compose
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    //implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.material3:material3:1.2.0")
+
+    implementation("androidx.compose.material:material-icons-extended:1.5.1")
 
 
-    implementation(libs.androidx.fragment.ktx)
-    implementation(libs.androidx.foundation.android)
-    implementation(libs.androidx.material3.android)
-    implementation(libs.firebase.database.ktx)
-    implementation(libs.androidx.games.activity)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
+    // Firebase
+    // Χρησιμοποίησε την BOM για να διαχειριστείς όλες τις Firebase εξαρτήσεις
+    implementation(platform("com.google.firebase:firebase-bom:32.0.0")) // Παράδειγμα τελευταίας έκδοσης
+
+    // Δήλωσε τις Firebase βιβλιοθήκες χωρίς έκδοση
+    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.firebase:firebase-firestore-ktx")
+    implementation("com.google.firebase:firebase-database-ktx")
+
+    // Navigation
+    implementation("androidx.navigation:navigation-compose:2.7.2")
+
+    // Glide
     implementation("com.github.bumptech.glide:glide:4.15.1")
-    // kapt('com.github.bumptech.glide:compiler:4.15.1')
-    implementation("androidx.navigation:navigation-compose:2.7.1")
-    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
-    implementation("com.google.firebase:firebase-analytics")
+    // Αν χρειάζεται το kapt για το Glide:
+    // kapt("com.github.bumptech.glide:compiler:4.15.1")
 
+    // Gson
+    implementation("com.google.code.gson:gson:2.9.0")
 
-    implementation("com.google.firebase:firebase-auth-ktx:21.0.1") // Βεβαιωθείτε ότι έχετε την πιο πρόσφατη έκδοση
-
-
-    implementation("com.google.firebase:firebase-firestore")
-
-    implementation("androidx.compose.material3:material3:1.0.0")
-    // other dependencies...
-    implementation("androidx.compose.material:material-icons-extended:1.0.0")
-
-    implementation("io.coil-kt:coil-compose:2.2.2")  // Προσθήκη της εξάρτησης Coil για Compose
-
-    implementation("androidx.compose.foundation:foundation:1.7.6")
-    implementation("androidx.compose.foundation:foundation-layout:1.7.6") // Ενημέρωσε την έκδοση
-
-    implementation("androidx.navigation:navigation-compose:2.5.0")
-    implementation("com.google.code.gson:gson:2.10")
+    // DataStore
     implementation("androidx.datastore:datastore-preferences:1.0.0")
 
-    // Import the BoM for the Firebase platform
-    implementation("com.google.firebase:firebase-bom:33.7.0")
+    // Testing Libraries
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation(platform("androidx.compose:compose-bom:2024.01.00"))
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
 
-    // Declare the dependencies for the desired Firebase products without specifying versions
-    // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
-    implementation("com.google.firebase:firebase-auth")
-    implementation("com.google.firebase:firebase-firestore")
-    implementation("com.google.firebase:firebase-analytics")
+    // Debugging Tools
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
