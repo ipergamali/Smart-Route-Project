@@ -1,4 +1,4 @@
-package com.ioannapergamali.smartroute.model
+package com.ioannapergamali.movewise.model
 
 class Driver(
         id : String = "" ,
@@ -8,12 +8,14 @@ class Driver(
         address : UserAddress = UserAddress() ,
         phoneNum : String = "" ,
         username : String = "" ,
-        password : String = ""
-) : User(id , name , email , surname , address , phoneNum , username , password , Role.DRIVER)
+        password: String = "",
+        role: String = "Driver"
+) : User(id, name, email, surname, address, phoneNum, username, password, role)
 {
 
-    override fun display() : String
+    override fun display()
     {
-        return "Driver Details: " + super.display()
+        println("Driver Info:")
+        super.display()
     }
 }

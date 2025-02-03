@@ -1,4 +1,4 @@
-package com.ioannapergamali.smartroute.ui.theme
+package com.ioannapergamali.movewise.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

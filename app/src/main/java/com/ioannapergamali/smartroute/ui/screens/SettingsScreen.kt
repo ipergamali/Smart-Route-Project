@@ -1,4 +1,4 @@
-package com.ioannapergamali.smartroute.ui.screens
+package com.ioannapergamali.movewise.ui.screens
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,20 +11,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.ioannapergamali.smartroute.ui.components.DrawerScaffold
+import com.ioannapergamali.movewise.ui.components.DrawerScaffold
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(
         navController : NavController ,
-        email : String ,
-        isDarkTheme : Boolean , // Προσθήκη παραμέτρου για το τρέχον θέμα
-        onThemeChange : (Boolean) -> Unit // Συνάρτηση για αλλαγή θέματος
+        onThemeChange: (Boolean) -> Unit
 )
 {
     DrawerScaffold(
             title = "Settings" ,
-            onSettingsClick = {} , // Δεν χρειάζεται πλοήγηση εδώ
+        onSettingsClick = { navController.navigate("settings") },
             onLogoutClick = { navController.navigate("login") }
     ) { paddingValues ->
         Column(
@@ -33,19 +31,10 @@ fun SettingsScreen(
                         .padding(paddingValues)
                         .padding(16.dp)
         ) {
-            Text(
-                    text = "Theme Settings" ,
-                    style = MaterialTheme.typography.headlineMedium
-            )
-
-            // Switch για αλλαγή θέματος
+            Text(text = "Theme Settings", style = MaterialTheme.typography.headlineMedium)
             Switch(
-                    checked = isDarkTheme ,
-                    onCheckedChange = onThemeChange
-            )
-            Text(
-                    text = if (isDarkTheme) "Dark Theme Enabled" else "Light Theme Enabled" ,
-                    style = MaterialTheme.typography.bodyMedium
+                checked = true, // Δείγμα λογικής
+                onCheckedChange = { onThemeChange(it) }
             )
         }
     }

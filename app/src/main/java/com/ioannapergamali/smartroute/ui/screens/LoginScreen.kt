@@ -1,7 +1,6 @@
-package com.ioannapergamali.smartroute.ui.screens
+package com.ioannapergamali.movewise.ui.screens
 
-import AuthenticationViewModelFactory
-import android.app.Application
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,7 +9,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
@@ -22,49 +20,30 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
-import com.ioannapergamali.smartroute.ui.components.AnimatedScaleImage
-import com.ioannapergamali.smartroute.ui.components.TopBar
-import com.ioannapergamali.smartroute.utils.UserSession
-import com.ioannapergamali.smartroute.viewmodel.AuthenticationViewModel
-
+import com.ioannapergamali.movewise.viewmodel.AuthenticationViewModel
 
 @Composable
 fun LoginScreen(
         navController : NavController ,
-        authenticationViewModel : AuthenticationViewModel = viewModel(
-                factory = AuthenticationViewModelFactory(navController.context.applicationContext as Application)
-        ) ,
         onLoginSuccess : () -> Unit ,
         onLoginFailure : (String) -> Unit ,
         onNavigateToSettings : () -> Unit
 )
 {
+    val viewModel: AuthenticationViewModel = viewModel()
     val email = remember { mutableStateOf("") }
     val password = remember { mutableStateOf("") }
     val loginError = remember { mutableStateOf("") }
 
-    Scaffold(
-            topBar = {
-                TopBar(
-                        title = "Login" ,
-                        navController = navController ,
-                        showBackButton = true
-                )
-            }
-    ) { innerPadding ->
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
         Column(
                 modifier = Modifier
-                        .fillMaxSize()
-                        .padding(innerPadding)
-                        .padding(16.dp) ,
-                horizontalAlignment = Alignment.CenterHorizontally
+                    .fillMaxWidth(0.8f)
+                    .padding(16.dp)
         ) {
-            // Προσθήκη Animation Εικόνας
-            AnimatedScaleImage()
-
-            Spacer(modifier = Modifier.height(64.dp))
-
-            // Fields and Buttons
             TextField(
                     value = email.value ,
                     onValueChange = { email.value = it } ,
@@ -91,33 +70,16 @@ fun LoginScreen(
             Button(onClick = {
                 if (email.value.isNotEmpty() && password.value.isNotEmpty())
                 {
-                    authenticationViewModel.loginUser(
-                            email.value ,
-                            password.value ,
+                    viewModel.loginUser(
+                        email = email.value,
+                        password = password.value,
                             onLoginSuccess = {
-                                authenticationViewModel.getUserData(email.value) { user ->
-                                    if (user != null)
-                                    {
-
-                                        // Αποθήκευση του χρήστη στη συνεδρία
-                                        UserSession.setUser(
-                                                context = navController.context ,
-                                                user = user
-                                        )
-
-                                        // Επιτυχής σύνδεση
-                                        onLoginSuccess()
-                                    }
-                                    else
-                                    {
-                                        loginError.value = "User not found or error occurred."
-                                        onLoginFailure("User not found or error occurred.")
-                                    }
-                                }
+                                loginError.value = ""
+                                onLoginSuccess()
                             } ,
-                            onLoginFailure = { error ->
-                                loginError.value = error
-                                onLoginFailure(error)
+                        onLoginFailure = {
+                            loginError.value = it
+                            onLoginFailure(it)
                             }
                     )
                 }
@@ -127,12 +89,6 @@ fun LoginScreen(
                 }
             }) {
                 Text("Login")
-            }
-
-
-            Spacer(modifier = Modifier.height(16.dp))
-            Button(onClick = onNavigateToSettings) {
-                Text("Go to Settings")
             }
         }
     }

@@ -1,4 +1,4 @@
-package com.ioannapergamali.smartroute.data
+package com.ioannapergamali.movewise.data
 
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await

@@ -1,4 +1,4 @@
-package com.ioannapergamali.smartroute.ui.screens
+package com.ioannapergamali.movewise.ui.screens
 
 import android.widget.ImageView
 import androidx.compose.foundation.layout.Box

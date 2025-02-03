@@ -1,12 +1,4 @@
-package com.ioannapergamali.smartroute.model
-
-enum class Role
-{
-    ADMIN ,
-    DRIVER ,
-    PASSENGER;
-
-}
+package com.ioannapergamali.movewise.model
 
 open class User(
         private var id : String = "" ,
@@ -17,7 +9,7 @@ open class User(
         private var phoneNum : String = "" ,
         private var username : String = "" ,
         private var password : String = "" ,
-        private var role : Role = Role.ADMIN
+        private var role: String = ""
 )
 {
     // Getters
@@ -72,15 +64,18 @@ open class User(
         password = value
     }
 
-    fun setRole(value : Role)
+    fun setRole(value: String)
     {
         role = value
     }
 
-    // Display details
-    open fun display() : String
+    // Display user details
+    open fun display()
     {
-        return "ID: $id, Name: $name $surname, Email: $email, Role: $role, " +
-               "Address: ${address.display()}, Phone: $phoneNum, Username: $username"
+        println(
+            "ID: $id, Name: $name, Surname: $surname, Email: $email, Role: $role, " +
+                    "Address: ${address.getCity()} ${address.getStreetName()} ${address.getStreetNum()}, " +
+                    "Phone: $phoneNum, Username: $username"
+        )
     }
 }

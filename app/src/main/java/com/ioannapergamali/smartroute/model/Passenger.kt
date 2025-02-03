@@ -1,4 +1,4 @@
-package com.ioannapergamali.smartroute.model
+package com.ioannapergamali.movewise.model
 
 class Passenger(
         id : String = "" ,
@@ -8,12 +8,14 @@ class Passenger(
         address : UserAddress = UserAddress() ,
         phoneNum : String = "" ,
         username : String = "" ,
-        password : String = ""
-) : User(id , name , email , surname , address , phoneNum , username , password , Role.PASSENGER)
+        password: String = "",
+        role: String = "Passenger"
+) : User(id, name, email, surname, address, phoneNum, username, password, role)
 {
 
-    override fun display() : String
+    override fun display()
     {
-        return "Passenger Details: " + super.display()
+        println("Passenger Info:")
+        super.display()
     }
 }

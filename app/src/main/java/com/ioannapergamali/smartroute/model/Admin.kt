@@ -1,4 +1,4 @@
-package com.ioannapergamali.smartroute.model
+package com.ioannapergamali.movewise.model
 
 class Admin(
         id : String = "" ,
@@ -8,12 +8,14 @@ class Admin(
         address : UserAddress = UserAddress() ,
         phoneNum : String = "" ,
         username : String = "" ,
-        password : String = ""
-) : User(id , name , email , surname , address , phoneNum , username , password , Role.ADMIN)
+        password: String = "",
+        role: String = "Admin"
+) : User(id, name, email, surname, address, phoneNum, username, password, role)
 {
 
-    override fun display() : String
+    override fun display()
     {
-        return "Admin Details: " + super.display()
+        println("Admin Info:")
+        super.display()
     }
 }
