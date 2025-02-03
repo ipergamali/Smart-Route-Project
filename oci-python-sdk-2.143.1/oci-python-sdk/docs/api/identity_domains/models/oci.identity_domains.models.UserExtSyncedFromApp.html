@@ -1,0 +1,1100 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>UserExtSyncedFromApp &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="UserExtTermsOfUseConsents" href="oci.identity_domains.models.UserExtTermsOfUseConsents.html" />
+    <link rel="prev" title="UserExtSupportAccounts" href="oci.identity_domains.models.UserExtSupportAccounts.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.identity_domains.IdentityDomainsClient.html">IdentityDomainsClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.identity_domains.IdentityDomainsClientCompositeOperations.html">IdentityDomainsClientCompositeOperations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../identity_domains.html#models">Models</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AccountMgmtInfo.html">AccountMgmtInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AccountMgmtInfoApp.html">AccountMgmtInfoApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AccountMgmtInfoMatchingOwners.html">AccountMgmtInfoMatchingOwners</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AccountMgmtInfoObjectClass.html">AccountMgmtInfoObjectClass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AccountMgmtInfoOwner.html">AccountMgmtInfoOwner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AccountMgmtInfoResourceType.html">AccountMgmtInfoResourceType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AccountMgmtInfoSearchRequest.html">AccountMgmtInfoSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AccountMgmtInfoUserWalletArtifact.html">AccountMgmtInfoUserWalletArtifact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AccountMgmtInfos.html">AccountMgmtInfos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AccountRecoverySetting.html">AccountRecoverySetting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AccountRecoverySettings.html">AccountRecoverySettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Addresses.html">Addresses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ApiKey.html">ApiKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ApiKeySearchRequest.html">ApiKeySearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ApiKeyUser.html">ApiKeyUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ApiKeys.html">ApiKeys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.App.html">App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppAccounts.html">AppAccounts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppAdminRoles.html">AppAdminRoles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppAliasApps.html">AppAliasApps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppAllowAuthzPolicy.html">AppAllowAuthzPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppAllowedScopes.html">AppAllowedScopes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppAllowedTags.html">AppAllowedTags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppAppResources.html">AppAppResources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppAppSignonPolicy.html">AppAppSignonPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppAppsNetworkPerimeters.html">AppAppsNetworkPerimeters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppAsOPCService.html">AppAsOPCService</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppAttrRenderingMetadata.html">AppAttrRenderingMetadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppBasedOnTemplate.html">AppBasedOnTemplate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppBundleConfigurationProperties.html">AppBundleConfigurationProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppBundlePoolConfiguration.html">AppBundlePoolConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppCertificates.html">AppCertificates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppCloudControlProperties.html">AppCloudControlProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppConnectorBundle.html">AppConnectorBundle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppDenyAuthzPolicy.html">AppDenyAuthzPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppDomainApp.html">AppDomainApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppEditableAttributes.html">AppEditableAttributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppExtensionDbcsApp.html">AppExtensionDbcsApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppExtensionEnterpriseAppApp.html">AppExtensionEnterpriseAppApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppExtensionFormFillAppApp.html">AppExtensionFormFillAppApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppExtensionFormFillAppTemplateAppTemplate.html">AppExtensionFormFillAppTemplateAppTemplate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppExtensionKerberosRealmApp.html">AppExtensionKerberosRealmApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppExtensionManagedappApp.html">AppExtensionManagedappApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppExtensionMulticloudServiceAppApp.html">AppExtensionMulticloudServiceAppApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppExtensionOpcServiceApp.html">AppExtensionOpcServiceApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppExtensionRadiusAppApp.html">AppExtensionRadiusAppApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppExtensionRequestableApp.html">AppExtensionRequestableApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppExtensionSamlServiceProviderApp.html">AppExtensionSamlServiceProviderApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppExtensionWebTierPolicyApp.html">AppExtensionWebTierPolicyApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppFlatFileBundleConfigurationProperties.html">AppFlatFileBundleConfigurationProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppFlatFileConnectorBundle.html">AppFlatFileConnectorBundle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppFormFillUrlMatch.html">AppFormFillUrlMatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppGrantedAppRoles.html">AppGrantedAppRoles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppGrants.html">AppGrants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppGroupAssertionAttributes.html">AppGroupAssertionAttributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppGroupMembershipToReturn.html">AppGroupMembershipToReturn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppIdentityBridges.html">AppIdentityBridges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppIdentityProviders.html">AppIdentityProviders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppIdpPolicy.html">AppIdpPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppObjectClasses.html">AppObjectClasses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppOutboundAssertionAttributes.html">AppOutboundAssertionAttributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppProtectableSecondaryAudiences.html">AppProtectableSecondaryAudiences</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppRadiusPolicy.html">AppRadiusPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppRole.html">AppRole</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppRoleApp.html">AppRoleApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppRoleMembers.html">AppRoleMembers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppRoleSearchRequest.html">AppRoleSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppRoles.html">AppRoles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppSamlServiceProvider.html">AppSamlServiceProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppScopes.html">AppScopes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppSearchRequest.html">AppSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppServiceParams.html">AppServiceParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppSignonPolicy.html">AppSignonPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppStatusChanger.html">AppStatusChanger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppTermsOfUse.html">AppTermsOfUse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppThreeLeggedOAuthCredential.html">AppThreeLeggedOAuthCredential</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppTrustPolicies.html">AppTrustPolicies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppUserAssertionAttributes.html">AppUserAssertionAttributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AppUserRoles.html">AppUserRoles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ApprovalWorkflow.html">ApprovalWorkflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ApprovalWorkflowApprovalWorkflowSteps.html">ApprovalWorkflowApprovalWorkflowSteps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ApprovalWorkflowAssignment.html">ApprovalWorkflowAssignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ApprovalWorkflowAssignmentApprovalWorkflow.html">ApprovalWorkflowAssignmentApprovalWorkflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ApprovalWorkflowAssignmentAssignedTo.html">ApprovalWorkflowAssignmentAssignedTo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ApprovalWorkflowAssignments.html">ApprovalWorkflowAssignments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ApprovalWorkflowMaxDuration.html">ApprovalWorkflowMaxDuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ApprovalWorkflowStep.html">ApprovalWorkflowStep</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ApprovalWorkflowStepApprovers.html">ApprovalWorkflowStepApprovers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ApprovalWorkflowSteps.html">ApprovalWorkflowSteps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ApprovalWorkflows.html">ApprovalWorkflows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Apps.html">Apps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthToken.html">AuthToken</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthTokenSearchRequest.html">AuthTokenSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthTokenUser.html">AuthTokenUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthTokens.html">AuthTokens</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthenticationFactorSetting.html">AuthenticationFactorSetting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthenticationFactorSettings.html">AuthenticationFactorSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthenticationFactorSettingsBypassCodeSettings.html">AuthenticationFactorSettingsBypassCodeSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthenticationFactorSettingsClientAppSettings.html">AuthenticationFactorSettingsClientAppSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthenticationFactorSettingsCompliancePolicy.html">AuthenticationFactorSettingsCompliancePolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthenticationFactorSettingsDuoSecuritySettings.html">AuthenticationFactorSettingsDuoSecuritySettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthenticationFactorSettingsEmailSettings.html">AuthenticationFactorSettingsEmailSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthenticationFactorSettingsEndpointRestrictions.html">AuthenticationFactorSettingsEndpointRestrictions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthenticationFactorSettingsIdentityStoreSettings.html">AuthenticationFactorSettingsIdentityStoreSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthenticationFactorSettingsNotificationSettings.html">AuthenticationFactorSettingsNotificationSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthenticationFactorSettingsSearchRequest.html">AuthenticationFactorSettingsSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthenticationFactorSettingsThirdPartyFactor.html">AuthenticationFactorSettingsThirdPartyFactor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthenticationFactorSettingsTotpSettings.html">AuthenticationFactorSettingsTotpSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthenticationFactorsRemover.html">AuthenticationFactorsRemover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.AuthenticationFactorsRemoverUser.html">AuthenticationFactorsRemoverUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.BrandingSetting.html">BrandingSetting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.BrandingSettings.html">BrandingSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.BrandingSettingsCompanyNames.html">BrandingSettingsCompanyNames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.BrandingSettingsDefaultCompanyNames.html">BrandingSettingsDefaultCompanyNames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.BrandingSettingsDefaultImages.html">BrandingSettingsDefaultImages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.BrandingSettingsDefaultLoginTexts.html">BrandingSettingsDefaultLoginTexts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.BrandingSettingsImages.html">BrandingSettingsImages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.BrandingSettingsLoginTexts.html">BrandingSettingsLoginTexts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGate.html">CloudGate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateExtMappings.html">CloudGateExtMappings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateExtServers.html">CloudGateExtServers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateExtUpstreamServerGroups.html">CloudGateExtUpstreamServerGroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateExtUpstreamServers.html">CloudGateExtUpstreamServers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateMapping.html">CloudGateMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateMappingCloudGate.html">CloudGateMappingCloudGate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateMappingGatewayApp.html">CloudGateMappingGatewayApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateMappingSearchRequest.html">CloudGateMappingSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateMappingServer.html">CloudGateMappingServer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateMappingUpstreamServerGroup.html">CloudGateMappingUpstreamServerGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateMappings.html">CloudGateMappings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateOauthClient.html">CloudGateOauthClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateSearchRequest.html">CloudGateSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateServer.html">CloudGateServer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateServerCloudGate.html">CloudGateServerCloudGate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateServerSearchRequest.html">CloudGateServerSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGateServers.html">CloudGateServers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CloudGates.html">CloudGates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Condition.html">Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ConditionExtensionOciconsolesignonpolicyconsentPolicy.html">ConditionExtensionOciconsolesignonpolicyconsentPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ConditionSearchRequest.html">ConditionSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Conditions.html">Conditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CustomerSecretKey.html">CustomerSecretKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CustomerSecretKeySearchRequest.html">CustomerSecretKeySearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CustomerSecretKeyUser.html">CustomerSecretKeyUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.CustomerSecretKeys.html">CustomerSecretKeys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.DefinedTags.html">DefinedTags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.DynamicResourceGroup.html">DynamicResourceGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.DynamicResourceGroupDynamicGroupAppRoles.html">DynamicResourceGroupDynamicGroupAppRoles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.DynamicResourceGroupGrants.html">DynamicResourceGroupGrants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.DynamicResourceGroupSearchRequest.html">DynamicResourceGroupSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.DynamicResourceGroups.html">DynamicResourceGroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionAdaptiveUser.html">ExtensionAdaptiveUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionCapabilitiesUser.html">ExtensionCapabilitiesUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionDbCredentialsUser.html">ExtensionDbCredentialsUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionDbUserUser.html">ExtensionDbUserUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionDbcsGroup.html">ExtensionDbcsGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionDynamicGroup.html">ExtensionDynamicGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionEnterprise20User.html">ExtensionEnterprise20User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionFidoAuthenticationFactorSettings.html">ExtensionFidoAuthenticationFactorSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionGroupGroup.html">ExtensionGroupGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionKerberosUserUser.html">ExtensionKerberosUserUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionMeUser.html">ExtensionMeUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionMessagesError.html">ExtensionMessagesError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionMfaUser.html">ExtensionMfaUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionOCITags.html">ExtensionOCITags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionPasswordStateUser.html">ExtensionPasswordStateUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionPasswordlessUser.html">ExtensionPasswordlessUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionPosixGroup.html">ExtensionPosixGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionPosixUser.html">ExtensionPosixUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionRequestableGroup.html">ExtensionRequestableGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionSecurityQuestionsUser.html">ExtensionSecurityQuestionsUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionSelfChangeUser.html">ExtensionSelfChangeUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionSelfRegistrationUser.html">ExtensionSelfRegistrationUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionSffUser.html">ExtensionSffUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionSocialAccountUser.html">ExtensionSocialAccountUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionSocialIdentityProvider.html">ExtensionSocialIdentityProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionTermsOfUseUser.html">ExtensionTermsOfUseUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionThirdPartyAuthenticationFactorSettings.html">ExtensionThirdPartyAuthenticationFactorSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionUserCredentialsUser.html">ExtensionUserCredentialsUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionUserStateUser.html">ExtensionUserStateUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionUserUser.html">ExtensionUserUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ExtensionX509IdentityProvider.html">ExtensionX509IdentityProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.FreeformTags.html">FreeformTags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Grant.html">Grant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.GrantApp.html">GrantApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.GrantAppEntitlementCollection.html">GrantAppEntitlementCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.GrantEntitlement.html">GrantEntitlement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.GrantGrantee.html">GrantGrantee</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.GrantGrantor.html">GrantGrantor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.GrantSearchRequest.html">GrantSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Grants.html">Grants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Group.html">Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.GroupExtAppRoles.html">GroupExtAppRoles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.GroupExtDomainLevelSchemaNames.html">GroupExtDomainLevelSchemaNames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.GroupExtGrants.html">GroupExtGrants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.GroupExtInstanceLevelSchemaNames.html">GroupExtInstanceLevelSchemaNames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.GroupExtOwners.html">GroupExtOwners</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.GroupExtPasswordPolicy.html">GroupExtPasswordPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.GroupExtSyncedFromApp.html">GroupExtSyncedFromApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.GroupMembers.html">GroupMembers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.GroupSearchRequest.html">GroupSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Groups.html">Groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdcsCreatedBy.html">IdcsCreatedBy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdcsLastModifiedBy.html">IdcsLastModifiedBy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentityPropagationTrust.html">IdentityPropagationTrust</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentityPropagationTrustImpersonationServiceUsers.html">IdentityPropagationTrustImpersonationServiceUsers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentityPropagationTrustKeytab.html">IdentityPropagationTrustKeytab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentityPropagationTrusts.html">IdentityPropagationTrusts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentityProvider.html">IdentityProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentityProviderCorrelationPolicy.html">IdentityProviderCorrelationPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentityProviderJitProvAssignedGroups.html">IdentityProviderJitProvAssignedGroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentityProviderJitUserProvAssignedGroups.html">IdentityProviderJitUserProvAssignedGroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentityProviderJitUserProvAttributes.html">IdentityProviderJitUserProvAttributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentityProviderJitUserProvGroupMappings.html">IdentityProviderJitUserProvGroupMappings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentityProviderRelayIdpParamMappings.html">IdentityProviderRelayIdpParamMappings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentityProviderSearchRequest.html">IdentityProviderSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentityProviders.html">IdentityProviders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentitySetting.html">IdentitySetting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentitySettings.html">IdentitySettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentitySettingsMyProfile.html">IdentitySettingsMyProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentitySettingsPOSIXGid.html">IdentitySettingsPOSIXGid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentitySettingsPOSIXUid.html">IdentitySettingsPOSIXUid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentitySettingsSearchRequest.html">IdentitySettingsSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.IdentitySettingsTokens.html">IdentitySettingsTokens</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.KmsiSetting.html">KmsiSetting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.KmsiSettings.html">KmsiSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.KmsiSettingsSearchRequest.html">KmsiSettingsSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Me.html">Me</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MeEmails.html">MeEmails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MeEntitlements.html">MeEntitlements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MeGroups.html">MeGroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MeIms.html">MeIms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MeName.html">MeName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MePasswordChanger.html">MePasswordChanger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MePhoneNumbers.html">MePhoneNumbers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MePhotos.html">MePhotos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MeRoles.html">MeRoles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MeX509Certificates.html">MeX509Certificates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Meta.html">Meta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyApiKey.html">MyApiKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyApiKeyUser.html">MyApiKeyUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyApiKeys.html">MyApiKeys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyApp.html">MyApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAppApp.html">MyAppApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAppOwner.html">MyAppOwner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAppSearchRequest.html">MyAppSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAppUserWalletArtifact.html">MyAppUserWalletArtifact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyApps.html">MyApps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAuthToken.html">MyAuthToken</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAuthTokenUser.html">MyAuthTokenUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAuthTokens.html">MyAuthTokens</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAuthenticationFactorInitiator.html">MyAuthenticationFactorInitiator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAuthenticationFactorInitiatorAdditionalAttributes.html">MyAuthenticationFactorInitiatorAdditionalAttributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAuthenticationFactorInitiatorThirdPartyFactor.html">MyAuthenticationFactorInitiatorThirdPartyFactor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAuthenticationFactorValidator.html">MyAuthenticationFactorValidator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAuthenticationFactorValidatorAdditionalAttributes.html">MyAuthenticationFactorValidatorAdditionalAttributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAuthenticationFactorValidatorSecurityQuestions.html">MyAuthenticationFactorValidatorSecurityQuestions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAuthenticationFactorValidatorThirdPartyFactor.html">MyAuthenticationFactorValidatorThirdPartyFactor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAuthenticationFactorsRemover.html">MyAuthenticationFactorsRemover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyAuthenticationFactorsRemoverUser.html">MyAuthenticationFactorsRemoverUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyCompletedApproval.html">MyCompletedApproval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyCompletedApprovals.html">MyCompletedApprovals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyCustomerSecretKey.html">MyCustomerSecretKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyCustomerSecretKeyUser.html">MyCustomerSecretKeyUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyCustomerSecretKeys.html">MyCustomerSecretKeys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyDevice.html">MyDevice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyDeviceAdditionalAttributes.html">MyDeviceAdditionalAttributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyDeviceAuthenticationFactors.html">MyDeviceAuthenticationFactors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyDeviceNonCompliances.html">MyDeviceNonCompliances</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyDevicePushNotificationTarget.html">MyDevicePushNotificationTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyDeviceThirdPartyFactor.html">MyDeviceThirdPartyFactor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyDeviceUser.html">MyDeviceUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyDevices.html">MyDevices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyGroup.html">MyGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyGroupMembers.html">MyGroupMembers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyGroupSearchRequest.html">MyGroupSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyGroups.html">MyGroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyOAuth2ClientCredential.html">MyOAuth2ClientCredential</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyOAuth2ClientCredentialScopes.html">MyOAuth2ClientCredentialScopes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyOAuth2ClientCredentialUser.html">MyOAuth2ClientCredentialUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyOAuth2ClientCredentials.html">MyOAuth2ClientCredentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyPendingApproval.html">MyPendingApproval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyPendingApprovals.html">MyPendingApprovals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyRequest.html">MyRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyRequestApprovalDetails.html">MyRequestApprovalDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyRequestRequesting.html">MyRequestRequesting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyRequestRequestor.html">MyRequestRequestor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyRequestSearchRequest.html">MyRequestSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyRequestableGroup.html">MyRequestableGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyRequestableGroupMembers.html">MyRequestableGroupMembers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyRequestableGroupSearchRequest.html">MyRequestableGroupSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyRequestableGroups.html">MyRequestableGroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyRequests.html">MyRequests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MySmtpCredential.html">MySmtpCredential</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MySmtpCredentialUser.html">MySmtpCredentialUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MySmtpCredentials.html">MySmtpCredentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MySupportAccount.html">MySupportAccount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MySupportAccountUser.html">MySupportAccountUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MySupportAccounts.html">MySupportAccounts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyTrustedUserAgent.html">MyTrustedUserAgent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyTrustedUserAgentTrustedFactors.html">MyTrustedUserAgentTrustedFactors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyTrustedUserAgentUser.html">MyTrustedUserAgentUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyTrustedUserAgents.html">MyTrustedUserAgents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyUserDbCredential.html">MyUserDbCredential</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyUserDbCredentials.html">MyUserDbCredentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.MyUserDbCredentialsUser.html">MyUserDbCredentialsUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.NetworkPerimeter.html">NetworkPerimeter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.NetworkPerimeterIpAddresses.html">NetworkPerimeterIpAddresses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.NetworkPerimeterSearchRequest.html">NetworkPerimeterSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.NetworkPerimeters.html">NetworkPerimeters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.NotificationSetting.html">NotificationSetting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.NotificationSettings.html">NotificationSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.NotificationSettingsEventSettings.html">NotificationSettingsEventSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.NotificationSettingsFromEmailAddress.html">NotificationSettingsFromEmailAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.NotificationSettingsSearchRequest.html">NotificationSettingsSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OAuth2ClientCredential.html">OAuth2ClientCredential</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OAuth2ClientCredentialScopes.html">OAuth2ClientCredentialScopes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OAuth2ClientCredentialSearchRequest.html">OAuth2ClientCredentialSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OAuth2ClientCredentialUser.html">OAuth2ClientCredentialUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OAuth2ClientCredentials.html">OAuth2ClientCredentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OAuthClientCertificate.html">OAuthClientCertificate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OAuthClientCertificateSearchRequest.html">OAuthClientCertificateSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OAuthClientCertificates.html">OAuthClientCertificates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OAuthPartnerCertificate.html">OAuthPartnerCertificate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OAuthPartnerCertificateSearchRequest.html">OAuthPartnerCertificateSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OAuthPartnerCertificates.html">OAuthPartnerCertificates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OciConsoleSignOnPolicyConsent.html">OciConsoleSignOnPolicyConsent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OciConsoleSignOnPolicyConsentConsentSignedBy.html">OciConsoleSignOnPolicyConsentConsentSignedBy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OciConsoleSignOnPolicyConsentModifiedResource.html">OciConsoleSignOnPolicyConsentModifiedResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OciConsoleSignOnPolicyConsentPolicyResource.html">OciConsoleSignOnPolicyConsentPolicyResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OciConsoleSignOnPolicyConsentSearchRequest.html">OciConsoleSignOnPolicyConsentSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.OciConsoleSignOnPolicyConsents.html">OciConsoleSignOnPolicyConsents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Operations.html">Operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.PasswordPolicies.html">PasswordPolicies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.PasswordPolicy.html">PasswordPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.PasswordPolicyConfiguredPasswordPolicyRules.html">PasswordPolicyConfiguredPasswordPolicyRules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.PasswordPolicyGroups.html">PasswordPolicyGroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.PasswordPolicySearchRequest.html">PasswordPolicySearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.PatchOp.html">PatchOp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Policies.html">Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Policy.html">Policy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.PolicyExtensionOciconsolesignonpolicyconsentPolicy.html">PolicyExtensionOciconsolesignonpolicyconsentPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.PolicyPolicyType.html">PolicyPolicyType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.PolicyRules.html">PolicyRules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.PolicySearchRequest.html">PolicySearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ResourceTypeSchemaAttribute.html">ResourceTypeSchemaAttribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ResourceTypeSchemaAttributeSearchRequest.html">ResourceTypeSchemaAttributeSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.ResourceTypeSchemaAttributes.html">ResourceTypeSchemaAttributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.RestoreOciConsolePolicy.html">RestoreOciConsolePolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Rule.html">Rule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.RuleConditionGroup.html">RuleConditionGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.RuleExtensionOciconsolesignonpolicyconsentPolicy.html">RuleExtensionOciconsolesignonpolicyconsentPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.RulePolicyType.html">RulePolicyType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.RuleReturn.html">RuleReturn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.RuleSearchRequest.html">RuleSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Rules.html">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Schema.html">Schema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SchemaAttributes.html">SchemaAttributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SchemaIdcsComplexAttributeNameMappings.html">SchemaIdcsComplexAttributeNameMappings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SchemaIdcsCsvAttributeNameMappings.html">SchemaIdcsCsvAttributeNameMappings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SchemaLocalizedCanonicalValues.html">SchemaLocalizedCanonicalValues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SchemaLocalizedDisplayName.html">SchemaLocalizedDisplayName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SchemaReferencedResourceTypeUniqueAttributeNameMappings.html">SchemaReferencedResourceTypeUniqueAttributeNameMappings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SchemaResolveValueUsingResourceType.html">SchemaResolveValueUsingResourceType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SchemaSearchRequest.html">SchemaSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SchemaSubAttributes.html">SchemaSubAttributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Schemas.html">Schemas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SecurityQuestion.html">SecurityQuestion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SecurityQuestionQuestionText.html">SecurityQuestionQuestionText</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SecurityQuestionSearchRequest.html">SecurityQuestionSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SecurityQuestionSetting.html">SecurityQuestionSetting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SecurityQuestionSettings.html">SecurityQuestionSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SecurityQuestionSettingsSearchRequest.html">SecurityQuestionSettingsSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SecurityQuestions.html">SecurityQuestions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SelfRegistrationProfile.html">SelfRegistrationProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SelfRegistrationProfileAfterSubmitText.html">SelfRegistrationProfileAfterSubmitText</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SelfRegistrationProfileConsentText.html">SelfRegistrationProfileConsentText</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SelfRegistrationProfileDefaultGroups.html">SelfRegistrationProfileDefaultGroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SelfRegistrationProfileDisplayName.html">SelfRegistrationProfileDisplayName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SelfRegistrationProfileEmailTemplate.html">SelfRegistrationProfileEmailTemplate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SelfRegistrationProfileFooterText.html">SelfRegistrationProfileFooterText</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SelfRegistrationProfileHeaderText.html">SelfRegistrationProfileHeaderText</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SelfRegistrationProfileSearchRequest.html">SelfRegistrationProfileSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SelfRegistrationProfileUserAttributes.html">SelfRegistrationProfileUserAttributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SelfRegistrationProfiles.html">SelfRegistrationProfiles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Setting.html">Setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Settings.html">Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SettingsCertificateValidation.html">SettingsCertificateValidation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SettingsCloudGateCorsSettings.html">SettingsCloudGateCorsSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SettingsCompanyNames.html">SettingsCompanyNames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SettingsDefaultCompanyNames.html">SettingsDefaultCompanyNames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SettingsDefaultImages.html">SettingsDefaultImages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SettingsDefaultLoginTexts.html">SettingsDefaultLoginTexts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SettingsImages.html">SettingsImages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SettingsLoginTexts.html">SettingsLoginTexts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SettingsPurgeConfigs.html">SettingsPurgeConfigs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SettingsSearchRequest.html">SettingsSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SettingsTenantCustomClaims.html">SettingsTenantCustomClaims</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SmtpCredential.html">SmtpCredential</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SmtpCredentialSearchRequest.html">SmtpCredentialSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SmtpCredentialUser.html">SmtpCredentialUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SmtpCredentials.html">SmtpCredentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SocialIdentityProvider.html">SocialIdentityProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SocialIdentityProviderJitProvAssignedGroups.html">SocialIdentityProviderJitProvAssignedGroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SocialIdentityProviderRelayIdpParamMappings.html">SocialIdentityProviderRelayIdpParamMappings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SocialIdentityProviderSearchRequest.html">SocialIdentityProviderSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.SocialIdentityProviders.html">SocialIdentityProviders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Tags.html">Tags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.User.html">User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserAttributesSetting.html">UserAttributesSetting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserAttributesSettings.html">UserAttributesSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserAttributesSettingsAttributeSettings.html">UserAttributesSettingsAttributeSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserAttributesSettingsSearchRequest.html">UserAttributesSettingsSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserCapabilitiesChanger.html">UserCapabilitiesChanger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserDbCredential.html">UserDbCredential</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserDbCredentials.html">UserDbCredentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserDbCredentialsSearchRequest.html">UserDbCredentialsSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserDbCredentialsUser.html">UserDbCredentialsUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserEmails.html">UserEmails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserEntitlements.html">UserEntitlements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtAccounts.html">UserExtAccounts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtApiKeys.html">UserExtApiKeys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtAppRoles.html">UserExtAppRoles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtApplicableAuthenticationTargetApp.html">UserExtApplicableAuthenticationTargetApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtApplicablePasswordPolicy.html">UserExtApplicablePasswordPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtAuthTokens.html">UserExtAuthTokens</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtBypassCodes.html">UserExtBypassCodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtCustomerSecretKeys.html">UserExtCustomerSecretKeys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtDbCredentials.html">UserExtDbCredentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtDelegatedAuthenticationTargetApp.html">UserExtDelegatedAuthenticationTargetApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtDevices.html">UserExtDevices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtFactorIdentifier.html">UserExtFactorIdentifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtGrants.html">UserExtGrants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtIdcsAppRolesLimitedToGroups.html">UserExtIdcsAppRolesLimitedToGroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtLocked.html">UserExtLocked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtManager.html">UserExtManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtOAuth2ClientCredentials.html">UserExtOAuth2ClientCredentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtPasswordVerifiers.html">UserExtPasswordVerifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtPreferredDevice.html">UserExtPreferredDevice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtRealmUsers.html">UserExtRealmUsers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtRecoveryLocked.html">UserExtRecoveryLocked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtRiskScores.html">UserExtRiskScores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtSecQuestions.html">UserExtSecQuestions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtSelfRegistrationProfile.html">UserExtSelfRegistrationProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtSmtpCredentials.html">UserExtSmtpCredentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtSocialAccounts.html">UserExtSocialAccounts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtSupportAccounts.html">UserExtSupportAccounts</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">UserExtSyncedFromApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtTermsOfUseConsents.html">UserExtTermsOfUseConsents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtTrustedUserAgents.html">UserExtTrustedUserAgents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserExtUserToken.html">UserExtUserToken</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserGroups.html">UserGroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserIms.html">UserIms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserName.html">UserName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserPasswordChanger.html">UserPasswordChanger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserPasswordResetter.html">UserPasswordResetter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserPasswordResetterUserToken.html">UserPasswordResetterUserToken</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserPhoneNumbers.html">UserPhoneNumbers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserPhotos.html">UserPhotos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserRoles.html">UserRoles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserSearchRequest.html">UserSearchRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserStatusChanger.html">UserStatusChanger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.UserX509Certificates.html">UserX509Certificates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.identity_domains.models.Users.html">Users</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../identity_domains.html">Identity Domains</a> &raquo;</li>
+        
+      <li>UserExtSyncedFromApp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/identity_domains/models/oci.identity_domains.models.UserExtSyncedFromApp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="userextsyncedfromapp">
+<h1>UserExtSyncedFromApp<a class="headerlink" href="#userextsyncedfromapp" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.identity_domains.models.UserExtSyncedFromApp">
+<em class="property">class </em><code class="descclassname">oci.identity_domains.models.</code><code class="descname">UserExtSyncedFromApp</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.identity_domains.models.UserExtSyncedFromApp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Managed App or an Identity Source from where the user is synced. If enabled, this Managed App or Identity Source can be used for performing delegated authentication.</p>
+<p><strong>Added In:</strong> 18.2.6</p>
+<p><strong>SCIM++ Properties:</strong>
+- idcsCompositeKey: [value]
+- idcsSearchable: true
+- multiValued: false
+- mutability: readOnly
+- required: false
+- returned: default
+- type: complex
+- uniqueness: none</p>
+<p><strong>Attributes</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.identity_domains.models.UserExtSyncedFromApp.TYPE_APP" title="oci.identity_domains.models.UserExtSyncedFromApp.TYPE_APP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TYPE_APP</span></code></a></td>
+<td>A constant which can be used with the type property of a UserExtSyncedFromApp.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.identity_domains.models.UserExtSyncedFromApp.TYPE_IDENTITY_PROVIDER" title="oci.identity_domains.models.UserExtSyncedFromApp.TYPE_IDENTITY_PROVIDER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TYPE_IDENTITY_PROVIDER</span></code></a></td>
+<td>A constant which can be used with the type property of a UserExtSyncedFromApp.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.identity_domains.models.UserExtSyncedFromApp.TYPE_IDENTITY_SOURCE" title="oci.identity_domains.models.UserExtSyncedFromApp.TYPE_IDENTITY_SOURCE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TYPE_IDENTITY_SOURCE</span></code></a></td>
+<td>A constant which can be used with the type property of a UserExtSyncedFromApp.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.identity_domains.models.UserExtSyncedFromApp.display" title="oci.identity_domains.models.UserExtSyncedFromApp.display"><code class="xref py py-obj docutils literal notranslate"><span class="pre">display</span></code></a></td>
+<td>Gets the display of this UserExtSyncedFromApp.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.identity_domains.models.UserExtSyncedFromApp.ref" title="oci.identity_domains.models.UserExtSyncedFromApp.ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ref</span></code></a></td>
+<td>Gets the ref of this UserExtSyncedFromApp.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.identity_domains.models.UserExtSyncedFromApp.type" title="oci.identity_domains.models.UserExtSyncedFromApp.type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></td>
+<td><strong>[Required]</strong> Gets the type of this UserExtSyncedFromApp.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.identity_domains.models.UserExtSyncedFromApp.value" title="oci.identity_domains.models.UserExtSyncedFromApp.value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code></a></td>
+<td><strong>[Required]</strong> Gets the value of this UserExtSyncedFromApp.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.identity_domains.models.UserExtSyncedFromApp.__init__" title="oci.identity_domains.models.UserExtSyncedFromApp.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(**kwargs)</td>
+<td>Initializes a new UserExtSyncedFromApp object with values from keyword arguments.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="oci.identity_domains.models.UserExtSyncedFromApp.TYPE_APP">
+<code class="descname">TYPE_APP</code><em class="property"> = 'App'</em><a class="headerlink" href="#oci.identity_domains.models.UserExtSyncedFromApp.TYPE_APP" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the type property of a UserExtSyncedFromApp.
+This constant has a value of “App”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.identity_domains.models.UserExtSyncedFromApp.TYPE_IDENTITY_PROVIDER">
+<code class="descname">TYPE_IDENTITY_PROVIDER</code><em class="property"> = 'IdentityProvider'</em><a class="headerlink" href="#oci.identity_domains.models.UserExtSyncedFromApp.TYPE_IDENTITY_PROVIDER" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the type property of a UserExtSyncedFromApp.
+This constant has a value of “IdentityProvider”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.identity_domains.models.UserExtSyncedFromApp.TYPE_IDENTITY_SOURCE">
+<code class="descname">TYPE_IDENTITY_SOURCE</code><em class="property"> = 'IdentitySource'</em><a class="headerlink" href="#oci.identity_domains.models.UserExtSyncedFromApp.TYPE_IDENTITY_SOURCE" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the type property of a UserExtSyncedFromApp.
+This constant has a value of “IdentitySource”</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.identity_domains.models.UserExtSyncedFromApp.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.identity_domains.models.UserExtSyncedFromApp.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new UserExtSyncedFromApp object with values from keyword arguments.
+The following keyword arguments are supported (corresponding to the getters/setters of this class):</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>value</strong> (<em>str</em>) – The value to assign to the value property of this UserExtSyncedFromApp.</li>
+<li><strong>type</strong> (<em>str</em>) – The value to assign to the type property of this UserExtSyncedFromApp.
+Allowed values for this property are: “IdentitySource”, “App”, “IdentityProvider”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>ref</strong> (<em>str</em>) – The value to assign to the ref property of this UserExtSyncedFromApp.</li>
+<li><strong>display</strong> (<em>str</em>) – The value to assign to the display property of this UserExtSyncedFromApp.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.identity_domains.models.UserExtSyncedFromApp.display">
+<code class="descname">display</code><a class="headerlink" href="#oci.identity_domains.models.UserExtSyncedFromApp.display" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the display of this UserExtSyncedFromApp.
+App Display Name</p>
+<p><strong>Added In:</strong> 18.2.6</p>
+<dl class="docutils">
+<dt><strong>SCIM++ Properties:</strong></dt>
+<dd><ul class="first last simple">
+<li>caseExact: true</li>
+<li>idcsSearchable: true</li>
+<li>multiValued: false</li>
+<li>mutability: readOnly</li>
+<li>required: false</li>
+<li>returned: default</li>
+<li>type: string</li>
+<li>uniqueness: none</li>
+</ul>
+</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The display of this UserExtSyncedFromApp.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.identity_domains.models.UserExtSyncedFromApp.ref">
+<code class="descname">ref</code><a class="headerlink" href="#oci.identity_domains.models.UserExtSyncedFromApp.ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the ref of this UserExtSyncedFromApp.
+App URI</p>
+<p><strong>Added In:</strong> 18.2.6</p>
+<dl class="docutils">
+<dt><strong>SCIM++ Properties:</strong></dt>
+<dd><ul class="first last simple">
+<li>idcsSearchable: false</li>
+<li>multiValued: false</li>
+<li>mutability: readOnly</li>
+<li>required: false</li>
+<li>returned: default</li>
+<li>type: reference</li>
+<li>uniqueness: none</li>
+</ul>
+</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The ref of this UserExtSyncedFromApp.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.identity_domains.models.UserExtSyncedFromApp.type">
+<code class="descname">type</code><a class="headerlink" href="#oci.identity_domains.models.UserExtSyncedFromApp.type" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the type of this UserExtSyncedFromApp.
+A label that indicates whether this is an App or IdentitySource.</p>
+<p><strong>Added In:</strong> 18.2.6</p>
+<dl class="docutils">
+<dt><strong>SCIM++ Properties:</strong></dt>
+<dd><ul class="first last simple">
+<li>idcsDefaultValue: IdentitySource</li>
+<li>idcsSearchable: false</li>
+<li>multiValued: false</li>
+<li>mutability: immutable</li>
+<li>required: true</li>
+<li>returned: default</li>
+<li>type: string</li>
+<li>uniqueness: none</li>
+</ul>
+</dd>
+</dl>
+<p>Allowed values for this property are: “IdentitySource”, “App”, “IdentityProvider”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The type of this UserExtSyncedFromApp.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.identity_domains.models.UserExtSyncedFromApp.value">
+<code class="descname">value</code><a class="headerlink" href="#oci.identity_domains.models.UserExtSyncedFromApp.value" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the value of this UserExtSyncedFromApp.
+App identifier</p>
+<p><strong>Added In:</strong> 18.2.6</p>
+<dl class="docutils">
+<dt><strong>SCIM++ Properties:</strong></dt>
+<dd><ul class="first last simple">
+<li>caseExact: true</li>
+<li>idcsSearchable: true</li>
+<li>multiValued: false</li>
+<li>mutability: readWrite</li>
+<li>required: true</li>
+<li>returned: default</li>
+<li>type: string</li>
+<li>uniqueness: none</li>
+</ul>
+</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The value of this UserExtSyncedFromApp.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.identity_domains.models.UserExtTermsOfUseConsents.html" class="btn btn-neutral float-right" title="UserExtTermsOfUseConsents" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.identity_domains.models.UserExtSupportAccounts.html" class="btn btn-neutral" title="UserExtSupportAccounts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,2057 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MarketplaceClient &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="AccountClientCompositeOperations" href="oci.marketplace.AccountClientCompositeOperations.html" />
+    <link rel="prev" title="AccountClient" href="oci.marketplace.AccountClient.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../marketplace.html">Marketplace</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="oci.marketplace.AccountClient.html">AccountClient</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">MarketplaceClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oci.marketplace.AccountClientCompositeOperations.html">AccountClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oci.marketplace.MarketplaceClientCompositeOperations.html">MarketplaceClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../marketplace.html#models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../marketplace.html">Marketplace</a> &raquo;</li>
+        
+      <li>MarketplaceClient</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/marketplace/client/oci.marketplace.MarketplaceClient.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="marketplaceclient">
+<h1>MarketplaceClient<a class="headerlink" href="#marketplaceclient" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.marketplace.MarketplaceClient">
+<em class="property">class </em><code class="descclassname">oci.marketplace.</code><code class="descname">MarketplaceClient</code><span class="sig-paren">(</span><em>config</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the Marketplace API to manage applications in Oracle Cloud Infrastructure Marketplace. For more information, see [Overview of Marketplace](/Content/Marketplace/Concepts/marketoverview.htm)</p>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.__init__" title="oci.marketplace.MarketplaceClient.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(config,&nbsp;**kwargs)</td>
+<td>Creates a new service client</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.change_publication_compartment" title="oci.marketplace.MarketplaceClient.change_publication_compartment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">change_publication_compartment</span></code></a>(…)</td>
+<td>Moves the specified publication from one compartment to another.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.create_accepted_agreement" title="oci.marketplace.MarketplaceClient.create_accepted_agreement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_accepted_agreement</span></code></a>(…)</td>
+<td>Accepts a terms of use agreement for a specific package version of a listing.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.create_publication" title="oci.marketplace.MarketplaceClient.create_publication"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_publication</span></code></a>(…)</td>
+<td>Creates a publication of the specified listing type with an optional default package.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.delete_accepted_agreement" title="oci.marketplace.MarketplaceClient.delete_accepted_agreement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_accepted_agreement</span></code></a>(…)</td>
+<td>Removes a previously accepted terms of use agreement from the list of agreements that Marketplace checks before initiating a deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.delete_publication" title="oci.marketplace.MarketplaceClient.delete_publication"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_publication</span></code></a>(publication_id,&nbsp;**kwargs)</td>
+<td>Deletes a publication, which also removes the associated listing from anywhere it was published, such as Marketplace or Compute.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.export_listing" title="oci.marketplace.MarketplaceClient.export_listing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_listing</span></code></a>(listing_id,&nbsp;package_version,&nbsp;…)</td>
+<td>Exports container images or helm chart from marketplace to customer’s registry.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.get_accepted_agreement" title="oci.marketplace.MarketplaceClient.get_accepted_agreement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_accepted_agreement</span></code></a>(…)</td>
+<td>Gets the details of a specific, previously accepted terms of use agreement.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.get_agreement" title="oci.marketplace.MarketplaceClient.get_agreement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_agreement</span></code></a>(listing_id,&nbsp;package_version,&nbsp;…)</td>
+<td>Returns a terms of use agreement for a package with a time-based signature that can be used to accept the agreement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.get_listing" title="oci.marketplace.MarketplaceClient.get_listing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_listing</span></code></a>(listing_id,&nbsp;**kwargs)</td>
+<td>Gets detailed information about a listing, including the listing’s name, version, description, and resources.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.get_package" title="oci.marketplace.MarketplaceClient.get_package"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_package</span></code></a>(listing_id,&nbsp;package_version,&nbsp;…)</td>
+<td>Get the details of the specified version of a package, including information needed to launch the package.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.get_publication" title="oci.marketplace.MarketplaceClient.get_publication"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_publication</span></code></a>(publication_id,&nbsp;**kwargs)</td>
+<td>Gets the details of the specified publication.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.get_publication_package" title="oci.marketplace.MarketplaceClient.get_publication_package"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_publication_package</span></code></a>(publication_id,&nbsp;…)</td>
+<td>Gets the details of a specific package version within a given publication.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.get_work_request" title="oci.marketplace.MarketplaceClient.get_work_request"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_work_request</span></code></a>(work_request_id,&nbsp;**kwargs)</td>
+<td>Gets the details of the specified work request</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.list_accepted_agreements" title="oci.marketplace.MarketplaceClient.list_accepted_agreements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_accepted_agreements</span></code></a>(compartment_id,&nbsp;…)</td>
+<td>Lists the terms of use agreements that have been accepted in the specified compartment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.list_agreements" title="oci.marketplace.MarketplaceClient.list_agreements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_agreements</span></code></a>(listing_id,&nbsp;package_version,&nbsp;…)</td>
+<td>Returns the terms of use agreements that must be accepted before you can deploy the specified version of a package.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.list_categories" title="oci.marketplace.MarketplaceClient.list_categories"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_categories</span></code></a>(**kwargs)</td>
+<td>Gets the list of all the categories for listings published to Oracle Cloud Infrastructure Marketplace.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.list_listings" title="oci.marketplace.MarketplaceClient.list_listings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_listings</span></code></a>(**kwargs)</td>
+<td>Gets a list of listings from Oracle Cloud Infrastructure Marketplace by searching keywords and filtering according to listing attributes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.list_packages" title="oci.marketplace.MarketplaceClient.list_packages"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_packages</span></code></a>(listing_id,&nbsp;**kwargs)</td>
+<td>Gets the list of packages for a listing.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.list_publication_packages" title="oci.marketplace.MarketplaceClient.list_publication_packages"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_publication_packages</span></code></a>(publication_id,&nbsp;…)</td>
+<td>Lists the packages in the specified publication.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.list_publications" title="oci.marketplace.MarketplaceClient.list_publications"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_publications</span></code></a>(compartment_id,&nbsp;…)</td>
+<td>Lists the publications in the specified compartment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.list_publishers" title="oci.marketplace.MarketplaceClient.list_publishers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_publishers</span></code></a>(**kwargs)</td>
+<td>Gets the list of all the publishers of listings available in Oracle Cloud Infrastructure Marketplace.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.list_report_types" title="oci.marketplace.MarketplaceClient.list_report_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_report_types</span></code></a>(compartment_id,&nbsp;**kwargs)</td>
+<td>Lists available types of reports for the compartment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.list_reports" title="oci.marketplace.MarketplaceClient.list_reports"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_reports</span></code></a>(report_type,&nbsp;date,&nbsp;…)</td>
+<td>Lists reports in the compartment that match the specified report type and date.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.list_taxes" title="oci.marketplace.MarketplaceClient.list_taxes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_taxes</span></code></a>(listing_id,&nbsp;**kwargs)</td>
+<td>Returns list of all tax implications that current tenant may be liable to once they launch the listing.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.list_work_request_errors" title="oci.marketplace.MarketplaceClient.list_work_request_errors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_request_errors</span></code></a>(work_request_id,&nbsp;…)</td>
+<td>List all errors for a work request</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.list_work_request_logs" title="oci.marketplace.MarketplaceClient.list_work_request_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_request_logs</span></code></a>(work_request_id,&nbsp;**kwargs)</td>
+<td>List all logs for a work request</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.list_work_requests" title="oci.marketplace.MarketplaceClient.list_work_requests"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_requests</span></code></a>(compartment_id,&nbsp;**kwargs)</td>
+<td>List all work requests in a compartment</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.search_listings" title="oci.marketplace.MarketplaceClient.search_listings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">search_listings</span></code></a>(search_listings_details,&nbsp;…)</td>
+<td>Queries all Marketplace Applications to find listings that match the specified criteria.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.update_accepted_agreement" title="oci.marketplace.MarketplaceClient.update_accepted_agreement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_accepted_agreement</span></code></a>(…)</td>
+<td>Updates the display name or tags associated with a listing’s previously accepted terms of use agreement.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.marketplace.MarketplaceClient.update_publication" title="oci.marketplace.MarketplaceClient.update_publication"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_publication</span></code></a>(publication_id,&nbsp;…)</td>
+<td>Updates the details of an existing publication.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>config</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new service client</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>config</strong> (<em>dict</em>) – Configuration keys and values as per <a class="reference external" href="https://docs.cloud.oracle.com/Content/API/Concepts/sdkconfig.htm">SDK and Tool Configuration</a>.
+The <a class="reference internal" href="../../config.html#oci.config.from_file" title="oci.config.from_file"><code class="xref py py-meth docutils literal notranslate"><span class="pre">from_file()</span></code></a> method can be used to load configuration from a file. Alternatively, a <code class="docutils literal notranslate"><span class="pre">dict</span></code> can be passed. You can validate_config
+the dict using <a class="reference internal" href="../../config.html#oci.config.validate_config" title="oci.config.validate_config"><code class="xref py py-meth docutils literal notranslate"><span class="pre">validate_config()</span></code></a></li>
+<li><strong>service_endpoint</strong> (<em>str</em>) – (optional)
+The endpoint of the service to call using this client. For example <code class="docutils literal notranslate"><span class="pre">https://iaas.us-ashburn-1.oraclecloud.com</span></code>. If this keyword argument is
+not provided then it will be derived using the region in the config parameter. You should only provide this keyword argument if you have an explicit
+need to specify a service endpoint.</li>
+<li><strong>timeout</strong> (<em>float</em><em> or </em><em>tuple</em><em>(</em><em>float</em><em>, </em><em>float</em><em>)</em>) – (optional)
+The connection and read timeouts for the client. The default values are connection timeout 10 seconds and read timeout 60 seconds. This keyword argument can be provided
+as a single float, in which case the value provided is used for both the read and connection timeouts, or as a tuple of two floats. If
+a tuple is provided then the first value is used as the connection timeout and the second value as the read timeout.</li>
+<li><strong>signer</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractBaseSigner</span></code>) – <p>(optional)
+The signer to use when signing requests made by the service client. The default is to use a <a class="reference internal" href="../../signing.html#oci.signer.Signer" title="oci.signer.Signer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Signer</span></code></a> based on the values
+provided in the config parameter.</p>
+<p>One use case for this parameter is for <a class="reference external" href="https://docs.cloud.oracle.com/Content/Identity/Tasks/callingservicesfrominstances.htm">Instance Principals authentication</a>
+by passing an instance of <a class="reference internal" href="../../signing.html#oci.auth.signers.InstancePrincipalsSecurityTokenSigner" title="oci.auth.signers.InstancePrincipalsSecurityTokenSigner"><code class="xref py py-class docutils literal notranslate"><span class="pre">InstancePrincipalsSecurityTokenSigner</span></code></a> as the value for this keyword argument</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to all calls made by this service client (i.e. at the client level). There is no retry strategy applied by default.
+Retry strategies can also be applied at the operation level by passing a <code class="docutils literal notranslate"><span class="pre">retry_strategy</span></code> keyword argument as part of calling the operation.
+Any value provided at the operation level will override whatever is specified at the client level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. A convenience <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a>
+is also available. The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+</li>
+<li><strong>circuit_breaker_strategy</strong> (<em>obj</em>) – (optional)
+A circuit breaker strategy to apply to all calls made by this service client (i.e. at the client level).
+This client uses <a class="reference internal" href="../../circuit_breaker.html#oci.circuit_breaker.DEFAULT_CIRCUIT_BREAKER_STRATEGY" title="oci.circuit_breaker.DEFAULT_CIRCUIT_BREAKER_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_CIRCUIT_BREAKER_STRATEGY</span></code></a> as default if no circuit breaker strategy is provided.
+The specifics of circuit breaker strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/circuit_breakers.html">here</a>.</li>
+<li><strong>circuit_breaker_callback</strong> (<em>function</em>) – (optional)
+Callback function to receive any exceptions triggerred by the circuit breaker.</li>
+<li><strong>client_level_realm_specific_endpoint_template_enabled</strong> (<em>bool</em>) – (optional)
+A boolean flag to indicate whether or not this client should be created with realm specific endpoint template enabled or disable. By default, this will be set as None.</li>
+<li><strong>allow_control_chars</strong> – (optional)
+allow_control_chars is a boolean to indicate whether or not this client should allow control characters in the response object. By default, the client will not
+allow control characters to be in the response object.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.change_publication_compartment">
+<code class="descname">change_publication_compartment</code><span class="sig-paren">(</span><em>publication_id</em>, <em>change_publication_compartment_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.change_publication_compartment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves the specified publication from one compartment to another.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>publication_id</strong> (<em>str</em>) – (required)
+The unique identifier for the publication.</li>
+<li><strong>change_publication_compartment_details</strong> (<a class="reference internal" href="../models/oci.marketplace.models.ChangePublicationCompartmentDetails.html#oci.marketplace.models.ChangePublicationCompartmentDetails" title="oci.marketplace.models.ChangePublicationCompartmentDetails"><em>oci.marketplace.models.ChangePublicationCompartmentDetails</em></a>) – (required)
+The details of the request to change the compartment of a given publication.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or server error without
+risk of executing that same action again. Retry tokens expire after 24 hours, but can be invalidated before
+then due to conflicting operations (for example, if a resource has been deleted and purged from the system,
+then a retry of the original creation request might be rejected).</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call for a resource, set the <cite>if-match</cite> parameter to
+the value of the etag from a previous GET or POST response for that resource.  The resource will be updated or
+deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/change_publication_compartment.py.html">here</a> to see an example of how to use change_publication_compartment API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.create_accepted_agreement">
+<code class="descname">create_accepted_agreement</code><span class="sig-paren">(</span><em>create_accepted_agreement_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.create_accepted_agreement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accepts a terms of use agreement for a specific package version of a listing. You must accept all
+terms of use for a package before you can deploy the package.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>create_accepted_agreement_details</strong> (<a class="reference internal" href="../models/oci.marketplace.models.CreateAcceptedAgreementDetails.html#oci.marketplace.models.CreateAcceptedAgreementDetails" title="oci.marketplace.models.CreateAcceptedAgreementDetails"><em>oci.marketplace.models.CreateAcceptedAgreementDetails</em></a>) – (required)
+Details necessary to accept an agreement.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or server error without
+risk of executing that same action again. Retry tokens expire after 24 hours, but can be invalidated before
+then due to conflicting operations (for example, if a resource has been deleted and purged from the system,
+then a retry of the original creation request might be rejected).</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.AcceptedAgreement.html#oci.marketplace.models.AcceptedAgreement" title="oci.marketplace.models.AcceptedAgreement"><code class="xref py py-class docutils literal notranslate"><span class="pre">AcceptedAgreement</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/create_accepted_agreement.py.html">here</a> to see an example of how to use create_accepted_agreement API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.create_publication">
+<code class="descname">create_publication</code><span class="sig-paren">(</span><em>create_publication_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.create_publication" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a publication of the specified listing type with an optional default package.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>create_publication_details</strong> (<a class="reference internal" href="../models/oci.marketplace.models.CreatePublicationDetails.html#oci.marketplace.models.CreatePublicationDetails" title="oci.marketplace.models.CreatePublicationDetails"><em>oci.marketplace.models.CreatePublicationDetails</em></a>) – (required)
+The details for creating the publication.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or server error without
+risk of executing that same action again. Retry tokens expire after 24 hours, but can be invalidated before
+then due to conflicting operations (for example, if a resource has been deleted and purged from the system,
+then a retry of the original creation request might be rejected).</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.Publication.html#oci.marketplace.models.Publication" title="oci.marketplace.models.Publication"><code class="xref py py-class docutils literal notranslate"><span class="pre">Publication</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/create_publication.py.html">here</a> to see an example of how to use create_publication API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.delete_accepted_agreement">
+<code class="descname">delete_accepted_agreement</code><span class="sig-paren">(</span><em>accepted_agreement_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.delete_accepted_agreement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes a previously accepted terms of use agreement from the list of agreements that Marketplace checks
+before initiating a deployment. Listings in Marketplace that require acceptance of the specified terms
+of use can no longer be deployed, but existing deployments aren’t affected.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>accepted_agreement_id</strong> (<em>str</em>) – (required)
+The unique identifier for the accepted terms of use agreement.</li>
+<li><strong>signature</strong> (<em>str</em>) – (optional)
+Previously, the signature generated for the listing package terms of use agreement, but now deprecated and ignored.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call for a resource, set the <cite>if-match</cite> parameter to
+the value of the etag from a previous GET or POST response for that resource.  The resource will be updated or
+deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/delete_accepted_agreement.py.html">here</a> to see an example of how to use delete_accepted_agreement API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.delete_publication">
+<code class="descname">delete_publication</code><span class="sig-paren">(</span><em>publication_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.delete_publication" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a publication, which also removes the associated listing from anywhere it was published, such as Marketplace or Compute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>publication_id</strong> (<em>str</em>) – (required)
+The unique identifier for the publication.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call for a resource, set the <cite>if-match</cite> parameter to
+the value of the etag from a previous GET or POST response for that resource.  The resource will be updated or
+deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/delete_publication.py.html">here</a> to see an example of how to use delete_publication API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.export_listing">
+<code class="descname">export_listing</code><span class="sig-paren">(</span><em>listing_id</em>, <em>package_version</em>, <em>export_package_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.export_listing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exports container images or helm chart from marketplace to customer’s registry.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>listing_id</strong> (<em>str</em>) – (required)
+The unique identifier for the listing.</li>
+<li><strong>package_version</strong> (<em>str</em>) – (required)
+The version of the package. Package versions are unique within a listing.</li>
+<li><strong>export_package_details</strong> (<a class="reference internal" href="../models/oci.marketplace.models.ExportPackageDetails.html#oci.marketplace.models.ExportPackageDetails" title="oci.marketplace.models.ExportPackageDetails"><em>oci.marketplace.models.ExportPackageDetails</em></a>) – (required)
+The details for exporting container images or helm chart.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or server error without
+risk of executing that same action again. Retry tokens expire after 24 hours, but can be invalidated before
+then due to conflicting operations (for example, if a resource has been deleted and purged from the system,
+then a retry of the original creation request might be rejected).</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.WorkRequest.html#oci.marketplace.models.WorkRequest" title="oci.marketplace.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/export_listing.py.html">here</a> to see an example of how to use export_listing API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.get_accepted_agreement">
+<code class="descname">get_accepted_agreement</code><span class="sig-paren">(</span><em>accepted_agreement_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.get_accepted_agreement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the details of a specific, previously accepted terms of use agreement.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>accepted_agreement_id</strong> (<em>str</em>) – (required)
+The unique identifier for the accepted terms of use agreement.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.AcceptedAgreement.html#oci.marketplace.models.AcceptedAgreement" title="oci.marketplace.models.AcceptedAgreement"><code class="xref py py-class docutils literal notranslate"><span class="pre">AcceptedAgreement</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/get_accepted_agreement.py.html">here</a> to see an example of how to use get_accepted_agreement API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.get_agreement">
+<code class="descname">get_agreement</code><span class="sig-paren">(</span><em>listing_id</em>, <em>package_version</em>, <em>agreement_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.get_agreement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a terms of use agreement for a package with a time-based signature that can be used to
+accept the agreement.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>listing_id</strong> (<em>str</em>) – (required)
+The unique identifier for the listing.</li>
+<li><strong>package_version</strong> (<em>str</em>) – (required)
+The version of the package. Package versions are unique within a listing.</li>
+<li><strong>agreement_id</strong> (<em>str</em>) – (required)
+The unique identifier for the agreement.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The unique identifier for the compartment.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.Agreement.html#oci.marketplace.models.Agreement" title="oci.marketplace.models.Agreement"><code class="xref py py-class docutils literal notranslate"><span class="pre">Agreement</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/get_agreement.py.html">here</a> to see an example of how to use get_agreement API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.get_listing">
+<code class="descname">get_listing</code><span class="sig-paren">(</span><em>listing_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.get_listing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets detailed information about a listing, including the listing’s name, version, description, and
+resources.</p>
+<p>If you plan to launch an instance from an image listing, you must first subscribe to the listing. When
+you launch the instance, you also need to provide the image ID of the listing resource version that you want.</p>
+<p>Subscribing to the listing requires you to first get a signature from the terms of use agreement for the
+listing resource version. To get the signature, issue a <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements/GetAppCatalogListingAgreements">GetAppCatalogListingAgreements</a> API call.
+The <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements">AppCatalogListingResourceVersionAgreements</a> object, including
+its signature, is returned in the response. With the signature for the terms of use agreement for the desired
+listing resource version, create a subscription by issuing a
+<a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogSubscription/CreateAppCatalogSubscription">CreateAppCatalogSubscription</a> API call.</p>
+<p>To get the image ID to launch an instance, issue a <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersion/GetAppCatalogListingResourceVersion">GetAppCatalogListingResourceVersion</a> API call.
+Lastly, to launch the instance, use the image ID of the listing resource version to issue a <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/Instance/LaunchInstance">LaunchInstance</a> API call.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>listing_id</strong> (<em>str</em>) – (required)
+The unique identifier for the listing.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The unique identifier for the compartment.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.Listing.html#oci.marketplace.models.Listing" title="oci.marketplace.models.Listing"><code class="xref py py-class docutils literal notranslate"><span class="pre">Listing</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/get_listing.py.html">here</a> to see an example of how to use get_listing API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.get_package">
+<code class="descname">get_package</code><span class="sig-paren">(</span><em>listing_id</em>, <em>package_version</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.get_package" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the details of the specified version of a package, including information needed to launch the package.</p>
+<p>If you plan to launch an instance from an image listing, you must first subscribe to the listing. When
+you launch the instance, you also need to provide the image ID of the listing resource version that you want.</p>
+<p>Subscribing to the listing requires you to first get a signature from the terms of use agreement for the
+listing resource version. To get the signature, issue a <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements/GetAppCatalogListingAgreements">GetAppCatalogListingAgreements</a> API call.
+The <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements">AppCatalogListingResourceVersionAgreements</a> object, including
+its signature, is returned in the response. With the signature for the terms of use agreement for the desired
+listing resource version, create a subscription by issuing a
+<a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogSubscription/CreateAppCatalogSubscription">CreateAppCatalogSubscription</a> API call.</p>
+<p>To get the image ID to launch an instance, issue a <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersion/GetAppCatalogListingResourceVersion">GetAppCatalogListingResourceVersion</a> API call.
+Lastly, to launch the instance, use the image ID of the listing resource version to issue a <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/Instance/LaunchInstance">LaunchInstance</a> API call.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>listing_id</strong> (<em>str</em>) – (required)
+The unique identifier for the listing.</li>
+<li><strong>package_version</strong> (<em>str</em>) – (required)
+The version of the package. Package versions are unique within a listing.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The unique identifier for the compartment.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.ListingPackage.html#oci.marketplace.models.ListingPackage" title="oci.marketplace.models.ListingPackage"><code class="xref py py-class docutils literal notranslate"><span class="pre">ListingPackage</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/get_package.py.html">here</a> to see an example of how to use get_package API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.get_publication">
+<code class="descname">get_publication</code><span class="sig-paren">(</span><em>publication_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.get_publication" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the details of the specified publication.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>publication_id</strong> (<em>str</em>) – (required)
+The unique identifier for the publication.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.Publication.html#oci.marketplace.models.Publication" title="oci.marketplace.models.Publication"><code class="xref py py-class docutils literal notranslate"><span class="pre">Publication</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/get_publication.py.html">here</a> to see an example of how to use get_publication API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.get_publication_package">
+<code class="descname">get_publication_package</code><span class="sig-paren">(</span><em>publication_id</em>, <em>package_version</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.get_publication_package" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the details of a specific package version within a given publication.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>publication_id</strong> (<em>str</em>) – (required)
+The unique identifier for the publication.</li>
+<li><strong>package_version</strong> (<em>str</em>) – (required)
+The version of the package. Package versions are unique within a listing.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.PublicationPackage.html#oci.marketplace.models.PublicationPackage" title="oci.marketplace.models.PublicationPackage"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublicationPackage</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/get_publication_package.py.html">here</a> to see an example of how to use get_publication_package API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.get_work_request">
+<code class="descname">get_work_request</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.get_work_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the details of the specified work request</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The OCID of the work request.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.WorkRequest.html#oci.marketplace.models.WorkRequest" title="oci.marketplace.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/get_work_request.py.html">here</a> to see an example of how to use get_work_request API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.list_accepted_agreements">
+<code class="descname">list_accepted_agreements</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.list_accepted_agreements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the terms of use agreements that have been accepted in the specified compartment.
+You can filter results by specifying query parameters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The unique identifier for the compartment.</li>
+<li><strong>display_name</strong> (<em>str</em>) – (optional)
+The display name of the resource.</li>
+<li><strong>listing_id</strong> (<em>str</em>) – (optional)
+The unique identifier for the listing.</li>
+<li><strong>package_version</strong> (<em>str</em>) – (optional)
+The version of the package. Package versions are unique within a listing.</li>
+<li><strong>accepted_agreement_id</strong> (<em>str</em>) – (optional)
+The unique identifier for the accepted terms of use agreement.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to use to sort listed results. You can only specify one field to sort by.
+<cite>TIMEACCEPTED</cite> displays results in descending order by default. You can change your
+preference by specifying a different sort order.</p>
+<p>Allowed values are: “TIMEACCEPTED”</p>
+</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either <cite>ASC</cite> or <cite>DESC</cite>.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+How many records to return. Specify a value greater than zero and less than or equal to 1000. The default is 30.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.marketplace.models.AcceptedAgreementSummary.html#oci.marketplace.models.AcceptedAgreementSummary" title="oci.marketplace.models.AcceptedAgreementSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">AcceptedAgreementSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/list_accepted_agreements.py.html">here</a> to see an example of how to use list_accepted_agreements API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.list_agreements">
+<code class="descname">list_agreements</code><span class="sig-paren">(</span><em>listing_id</em>, <em>package_version</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.list_agreements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the terms of use agreements that must be accepted before you can deploy the specified version of a package.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>listing_id</strong> (<em>str</em>) – (required)
+The unique identifier for the listing.</li>
+<li><strong>package_version</strong> (<em>str</em>) – (required)
+The version of the package. Package versions are unique within a listing.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+How many records to return. Specify a value greater than zero and less than or equal to 1000. The default is 30.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The unique identifier for the compartment.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.marketplace.models.AgreementSummary.html#oci.marketplace.models.AgreementSummary" title="oci.marketplace.models.AgreementSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">AgreementSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/list_agreements.py.html">here</a> to see an example of how to use list_agreements API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.list_categories">
+<code class="descname">list_categories</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.list_categories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of all the categories for listings published to Oracle Cloud Infrastructure Marketplace. Categories apply
+to the software product provided by the listing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+How many records to return. Specify a value greater than zero and less than or equal to 1000. The default is 30.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The unique identifier for the compartment.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.marketplace.models.CategorySummary.html#oci.marketplace.models.CategorySummary" title="oci.marketplace.models.CategorySummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">CategorySummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/list_categories.py.html">here</a> to see an example of how to use list_categories API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.list_listings">
+<code class="descname">list_listings</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.list_listings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a list of listings from Oracle Cloud Infrastructure Marketplace by searching keywords and
+filtering according to listing attributes.</p>
+<p>If you plan to launch an instance from an image listing, you must first subscribe to the listing. When
+you launch the instance, you also need to provide the image ID of the listing resource version that you want.</p>
+<p>Subscribing to the listing requires you to first get a signature from the terms of use agreement for the
+listing resource version. To get the signature, issue a <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements/GetAppCatalogListingAgreements">GetAppCatalogListingAgreements</a> API call.
+The <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements">AppCatalogListingResourceVersionAgreements</a> object, including
+its signature, is returned in the response. With the signature for the terms of use agreement for the desired
+listing resource version, create a subscription by issuing a
+<a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogSubscription/CreateAppCatalogSubscription">CreateAppCatalogSubscription</a> API call.</p>
+<p>To get the image ID to launch an instance, issue a <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersion/GetAppCatalogListingResourceVersion">GetAppCatalogListingResourceVersion</a> API call.
+Lastly, to launch the instance, use the image ID of the listing resource version to issue a <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/Instance/LaunchInstance">LaunchInstance</a> API call.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – (optional)
+The name of the listing.</li>
+<li><strong>listing_id</strong> (<em>str</em>) – (optional)
+The unique identifier for the listing.</li>
+<li><strong>image_id</strong> (<em>str</em>) – (optional)
+The image identifier of the listing.</li>
+<li><strong>publisher_id</strong> (<em>str</em>) – (optional)
+Limit results to just this publisher.</li>
+<li><strong>package_type</strong> (<em>str</em>) – (optional)
+A filter to return only packages that match the given package type exactly.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+How many records to return. Specify a value greater than zero and less than or equal to 1000. The default is 30.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to use to sort listed results. You can only specify one field to sort by.
+<cite>TIMERELEASED</cite> displays results in descending order by default.
+You can change your preference by specifying a different sort order.</p>
+<p>Allowed values are: “TIMERELEASED”</p>
+</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either <cite>ASC</cite> or <cite>DESC</cite>.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>category</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – (optional)
+Name of the product category or categories. If you specify multiple categories, then Marketplace returns any listing with
+one or more matching categories.</li>
+<li><strong>pricing</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – <p>(optional)
+Name of the pricing type. If multiple pricing types are provided, then any listing with
+one or more matching pricing models will be returned.</p>
+<p>Allowed values are: “FREE”, “BYOL”, “PAYGO”</p>
+</li>
+<li><strong>is_featured</strong> (<em>bool</em>) – (optional)
+Indicates whether to show only featured listings. If this is set to <cite>false</cite> or is omitted, then all listings will be returned.</li>
+<li><strong>listing_types</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – <p>(optional)
+The type of the listing.</p>
+<p>Allowed values are: “COMMUNITY”, “PARTNER”, “PRIVATE”</p>
+</li>
+<li><strong>operating_systems</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – (optional)
+The operating system of the listing.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The unique identifier for the compartment.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.marketplace.models.ListingSummary.html#oci.marketplace.models.ListingSummary" title="oci.marketplace.models.ListingSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">ListingSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/list_listings.py.html">here</a> to see an example of how to use list_listings API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.list_packages">
+<code class="descname">list_packages</code><span class="sig-paren">(</span><em>listing_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.list_packages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of packages for a listing.</p>
+<p>If you plan to launch an instance from an image listing, you must first subscribe to the listing. When
+you launch the instance, you also need to provide the image ID of the listing resource version that you want.</p>
+<p>Subscribing to the listing requires you to first get a signature from the terms of use agreement for the
+listing resource version. To get the signature, issue a <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements/GetAppCatalogListingAgreements">GetAppCatalogListingAgreements</a> API call.
+The <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersionAgreements">AppCatalogListingResourceVersionAgreements</a> object, including
+its signature, is returned in the response. With the signature for the terms of use agreement for the desired
+listing resource version, create a subscription by issuing a
+<a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogSubscription/CreateAppCatalogSubscription">CreateAppCatalogSubscription</a> API call.</p>
+<p>To get the image ID to launch an instance, issue a <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/AppCatalogListingResourceVersion/GetAppCatalogListingResourceVersion">GetAppCatalogListingResourceVersion</a> API call.
+Lastly, to launch the instance, use the image ID of the listing resource version to issue a <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/api/#/en/iaas/latest/Instance/LaunchInstance">LaunchInstance</a> API call.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>listing_id</strong> (<em>str</em>) – (required)
+The unique identifier for the listing.</li>
+<li><strong>package_version</strong> (<em>str</em>) – (optional)
+The version of the package. Package versions are unique within a listing.</li>
+<li><strong>package_type</strong> (<em>str</em>) – (optional)
+A filter to return only packages that match the given package type exactly.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+How many records to return. Specify a value greater than zero and less than or equal to 1000. The default is 30.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to use to sort listed results. You can only specify one field to sort by.
+<cite>TIMERELEASED</cite> displays results in descending order by default.
+You can change your preference by specifying a different sort order.</p>
+<p>Allowed values are: “TIMERELEASED”</p>
+</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either <cite>ASC</cite> or <cite>DESC</cite>.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The unique identifier for the compartment.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.marketplace.models.ListingPackageSummary.html#oci.marketplace.models.ListingPackageSummary" title="oci.marketplace.models.ListingPackageSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">ListingPackageSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/list_packages.py.html">here</a> to see an example of how to use list_packages API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.list_publication_packages">
+<code class="descname">list_publication_packages</code><span class="sig-paren">(</span><em>publication_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.list_publication_packages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the packages in the specified publication.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>publication_id</strong> (<em>str</em>) – (required)
+The unique identifier for the publication.</li>
+<li><strong>package_version</strong> (<em>str</em>) – (optional)
+The version of the package. Package versions are unique within a listing.</li>
+<li><strong>package_type</strong> (<em>str</em>) – (optional)
+A filter to return only packages that match the given package type exactly.</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to use to sort listed results. You can only specify one field to sort by.
+<cite>TIMERELEASED</cite> displays results in descending order by default.
+You can change your preference by specifying a different sort order.</p>
+<p>Allowed values are: “TIMERELEASED”</p>
+</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either <cite>ASC</cite> or <cite>DESC</cite>.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+How many records to return. Specify a value greater than zero and less than or equal to 1000. The default is 30.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.marketplace.models.PublicationPackageSummary.html#oci.marketplace.models.PublicationPackageSummary" title="oci.marketplace.models.PublicationPackageSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublicationPackageSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/list_publication_packages.py.html">here</a> to see an example of how to use list_publication_packages API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.list_publications">
+<code class="descname">list_publications</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>listing_type</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.list_publications" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the publications in the specified compartment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The unique identifier for the compartment.</li>
+<li><strong>listing_type</strong> (<em>str</em>) – <p>(required)
+The type of the listing.</p>
+<p>Allowed values are: “COMMUNITY”, “PARTNER”, “PRIVATE”</p>
+</li>
+<li><strong>name</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – (optional)
+The name of the publication.</li>
+<li><strong>publication_id</strong> (<em>str</em>) – (optional)
+The unique identifier for the publication.</li>
+<li><strong>operating_systems</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – (optional)
+The operating system of the listing.</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to use to sort listed results. You can only specify one field to sort by.
+<cite>TIMERELEASED</cite> displays results in descending order by default.
+You can change your preference by specifying a different sort order.</p>
+<p>Allowed values are: “TIMERELEASED”</p>
+</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either <cite>ASC</cite> or <cite>DESC</cite>.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+How many records to return. Specify a value greater than zero and less than or equal to 1000. The default is 30.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.marketplace.models.PublicationSummary.html#oci.marketplace.models.PublicationSummary" title="oci.marketplace.models.PublicationSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublicationSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/list_publications.py.html">here</a> to see an example of how to use list_publications API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.list_publishers">
+<code class="descname">list_publishers</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.list_publishers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of all the publishers of listings available in Oracle Cloud Infrastructure Marketplace.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>publisher_id</strong> (<em>str</em>) – (optional)
+Limit results to just this publisher.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+How many records to return. Specify a value greater than zero and less than or equal to 1000. The default is 30.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The unique identifier for the compartment.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.marketplace.models.PublisherSummary.html#oci.marketplace.models.PublisherSummary" title="oci.marketplace.models.PublisherSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublisherSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/list_publishers.py.html">here</a> to see an example of how to use list_publishers API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.list_report_types">
+<code class="descname">list_report_types</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.list_report_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists available types of reports for the compartment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The unique identifier for the compartment.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.ReportTypeCollection.html#oci.marketplace.models.ReportTypeCollection" title="oci.marketplace.models.ReportTypeCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReportTypeCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/list_report_types.py.html">here</a> to see an example of how to use list_report_types API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.list_reports">
+<code class="descname">list_reports</code><span class="sig-paren">(</span><em>report_type</em>, <em>date</em>, <em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.list_reports" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists reports in the compartment that match the specified report type and date.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>report_type</strong> (<em>str</em>) – (required)
+The type of the report.</li>
+<li><strong>date</strong> (<em>datetime</em>) – <p>(required)
+Date, expressed in <a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> timestamp format. The service only interprets the year, month, and day parts in the input value, and ignores the hour, minute, and second parts.</p>
+</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The unique identifier for the compartment.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.ReportCollection.html#oci.marketplace.models.ReportCollection" title="oci.marketplace.models.ReportCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReportCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/list_reports.py.html">here</a> to see an example of how to use list_reports API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.list_taxes">
+<code class="descname">list_taxes</code><span class="sig-paren">(</span><em>listing_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.list_taxes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of all tax implications that current tenant may be liable to once they launch the listing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>listing_id</strong> (<em>str</em>) – (required)
+The unique identifier for the listing.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The unique identifier for the compartment.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.marketplace.models.TaxSummary.html#oci.marketplace.models.TaxSummary" title="oci.marketplace.models.TaxSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaxSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/list_taxes.py.html">here</a> to see an example of how to use list_taxes API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.list_work_request_errors">
+<code class="descname">list_work_request_errors</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.list_work_request_errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all errors for a work request</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The OCID of the work request.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+How many records to return. Specify a value greater than zero and less than or equal to 1000. The default is 30.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either <cite>ASC</cite> or <cite>DESC</cite>.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending.</p>
+<p>Allowed values are: “timeCreated”</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.WorkRequestErrorCollection.html#oci.marketplace.models.WorkRequestErrorCollection" title="oci.marketplace.models.WorkRequestErrorCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestErrorCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/list_work_request_errors.py.html">here</a> to see an example of how to use list_work_request_errors API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.list_work_request_logs">
+<code class="descname">list_work_request_logs</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.list_work_request_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all logs for a work request</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The OCID of the work request.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+How many records to return. Specify a value greater than zero and less than or equal to 1000. The default is 30.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either <cite>ASC</cite> or <cite>DESC</cite>.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending.</p>
+<p>Allowed values are: “timeCreated”</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.WorkRequestLogEntryCollection.html#oci.marketplace.models.WorkRequestLogEntryCollection" title="oci.marketplace.models.WorkRequestLogEntryCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestLogEntryCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/list_work_request_logs.py.html">here</a> to see an example of how to use list_work_request_logs API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.list_work_requests">
+<code class="descname">list_work_requests</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.list_work_requests" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all work requests in a compartment</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The unique identifier for the compartment.</li>
+<li><strong>work_request_id</strong> (<em>str</em>) – (optional)
+The OCID of the work request.</li>
+<li><strong>status</strong> (<em>str</em>) – <p>(optional)
+A filter to return only resources whose status matches the given OperationStatus.</p>
+<p>Allowed values are: “ACCEPTED”, “IN_PROGRESS”, “FAILED”, “SUCCEEDED”</p>
+</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+How many records to return. Specify a value greater than zero and less than or equal to 1000. The default is 30.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either <cite>ASC</cite> or <cite>DESC</cite>.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending.</p>
+<p>Allowed values are: “timeAccepted”</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.WorkRequestCollection.html#oci.marketplace.models.WorkRequestCollection" title="oci.marketplace.models.WorkRequestCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/list_work_requests.py.html">here</a> to see an example of how to use list_work_requests API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.search_listings">
+<code class="descname">search_listings</code><span class="sig-paren">(</span><em>search_listings_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.search_listings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries all Marketplace Applications to find listings that match the specified criteria. To search
+for a listing, you can use a free text or structured search.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>search_listings_details</strong> (<a class="reference internal" href="../models/oci.marketplace.models.SearchListingsDetails.html#oci.marketplace.models.SearchListingsDetails" title="oci.marketplace.models.SearchListingsDetails"><em>oci.marketplace.models.SearchListingsDetails</em></a>) – (required)
+Details related to the search query</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+How many records to return. Specify a value greater than zero and less than or equal to 1000. The default is 30.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.marketplace.models.ListingSummary.html#oci.marketplace.models.ListingSummary" title="oci.marketplace.models.ListingSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">ListingSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/search_listings.py.html">here</a> to see an example of how to use search_listings API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.update_accepted_agreement">
+<code class="descname">update_accepted_agreement</code><span class="sig-paren">(</span><em>accepted_agreement_id</em>, <em>update_accepted_agreement_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.update_accepted_agreement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the display name or tags associated with a listing’s previously accepted terms of use agreement.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>accepted_agreement_id</strong> (<em>str</em>) – (required)
+The unique identifier for the accepted terms of use agreement.</li>
+<li><strong>update_accepted_agreement_details</strong> (<a class="reference internal" href="../models/oci.marketplace.models.UpdateAcceptedAgreementDetails.html#oci.marketplace.models.UpdateAcceptedAgreementDetails" title="oci.marketplace.models.UpdateAcceptedAgreementDetails"><em>oci.marketplace.models.UpdateAcceptedAgreementDetails</em></a>) – (required)
+Details to update for an accepted agreement.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or server error without
+risk of executing that same action again. Retry tokens expire after 24 hours, but can be invalidated before
+then due to conflicting operations (for example, if a resource has been deleted and purged from the system,
+then a retry of the original creation request might be rejected).</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call for a resource, set the <cite>if-match</cite> parameter to
+the value of the etag from a previous GET or POST response for that resource.  The resource will be updated or
+deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.AcceptedAgreement.html#oci.marketplace.models.AcceptedAgreement" title="oci.marketplace.models.AcceptedAgreement"><code class="xref py py-class docutils literal notranslate"><span class="pre">AcceptedAgreement</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/update_accepted_agreement.py.html">here</a> to see an example of how to use update_accepted_agreement API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.marketplace.MarketplaceClient.update_publication">
+<code class="descname">update_publication</code><span class="sig-paren">(</span><em>publication_id</em>, <em>update_publication_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.marketplace.MarketplaceClient.update_publication" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the details of an existing publication.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>publication_id</strong> (<em>str</em>) – (required)
+The unique identifier for the publication.</li>
+<li><strong>update_publication_details</strong> (<a class="reference internal" href="../models/oci.marketplace.models.UpdatePublicationDetails.html#oci.marketplace.models.UpdatePublicationDetails" title="oci.marketplace.models.UpdatePublicationDetails"><em>oci.marketplace.models.UpdatePublicationDetails</em></a>) – (required)
+The details for updating the publication.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request. If you need to contact Oracle about a particular request,
+please provide the request ID.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or server error without
+risk of executing that same action again. Retry tokens expire after 24 hours, but can be invalidated before
+then due to conflicting operations (for example, if a resource has been deleted and purged from the system,
+then a retry of the original creation request might be rejected).</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call for a resource, set the <cite>if-match</cite> parameter to
+the value of the etag from a previous GET or POST response for that resource.  The resource will be updated or
+deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.marketplace.models.Publication.html#oci.marketplace.models.Publication" title="oci.marketplace.models.Publication"><code class="xref py py-class docutils literal notranslate"><span class="pre">Publication</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/marketplace/update_publication.py.html">here</a> to see an example of how to use update_publication API.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.marketplace.AccountClientCompositeOperations.html" class="btn btn-neutral float-right" title="AccountClientCompositeOperations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.marketplace.AccountClient.html" class="btn btn-neutral" title="AccountClient" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

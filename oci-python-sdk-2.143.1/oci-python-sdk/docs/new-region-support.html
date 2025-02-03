@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>New Region Support &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Backward Compatibility" href="backward-compatibility.html" />
+    <link rel="prev" title="Forward Compatibility" href="forward-compatibility.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">New Region Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#oraclecloud-com-realm">oraclecloud.com Realm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-realms">Other Realms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/landing.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>New Region Support</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/new-region-support.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <script type='text/javascript'>
+    var oldDocsHost = 'oracle-bare-metal-cloud-services-python-sdk';
+    if (window.location.href.indexOf(oldDocsHost) != -1) {
+        window.location.href = 'https://oracle-bare-metal-cloud-services-python-sdk.readthedocs.io/en/latest/deprecation-notice.html';
+    }
+</script><div class="section" id="id1">
+<h1>New Region Support<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>If you are using a version of the SDK released prior to the announcement of a new region, you may need to use a workaround to reach it, depending on whether the region is in the oraclecloud.com realm.</p>
+<p>A <em>region</em> is a localized geographic area. For more information on regions and how to identify them, see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm">Regions and Availability Domains</a></p>
+<p>A <em>realm</em> is a set of regions that share entities. You can identify your realm by looking at the domain name at the end of the network address. For example, the realm for <code class="docutils literal notranslate"><span class="pre">xyz.abc.123.oraclecloud.com</span></code> is <code class="docutils literal notranslate"><span class="pre">oraclecloud.com</span></code>.</p>
+<div class="section" id="oraclecloud-com-realm">
+<h2>oraclecloud.com Realm<a class="headerlink" href="#oraclecloud-com-realm" title="Permalink to this headline">¶</a></h2>
+<p>For regions in the oraclecloud.com realm, the forward compatibility of the SDK can automatically handle it. You can pass new region names just as you would pass ones that are already defined. For more information on passing region names in the configuration, see <a class="reference internal" href="configuration.html"><span class="doc">Configuration</span></a>.</p>
+</div>
+<div class="section" id="other-realms">
+<h2>Other Realms<a class="headerlink" href="#other-realms" title="Permalink to this headline">¶</a></h2>
+<p>For regions in realms other than oraclecloud.com, you can use the following workarounds to reach new regions with earlier versions of the SDK.</p>
+<p>NOTE: Be sure to supply the appropriate endpoints for your region.</p>
+<p>You can set the endpoint on an initialized client via the base client:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">base_client</span><span class="o">.</span><span class="n">endpoint</span> <span class="o">=</span> <span class="s1">&#39;https://identity.us-gov-phoenix-1.oraclegovcloud.com&#39;</span>
+</pre></div>
+</div>
+<p>If you are authenticating via instance principals, you can set the federation_endpoint for the region using InstancePrincipalsSecurityTokenSigner when initializing the signer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">signer</span> <span class="o">=</span> <span class="n">oci</span><span class="o">.</span><span class="n">auth</span><span class="o">.</span><span class="n">signers</span><span class="o">.</span><span class="n">InstancePrincipalsSecurityTokenSigner</span><span class="p">(</span><span class="n">federation_endpoint</span><span class="o">=</span><span class="s1">&#39;https://auth.us-gov-phoenix-1.oraclegovcloud.com/v1/x509&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If the correct federation_endpoint for the region is not passed in, you will see the following error during instance principals authentication:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">oci</span><span class="o">.</span><span class="n">_vendor</span><span class="o">.</span><span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span><span class="p">:</span> <span class="n">HTTPSConnectionPool</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;auth.us-gov-phoenix-1.oraclecloud.com&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">443</span><span class="p">):</span> <span class="n">Max</span> <span class="n">retries</span> <span class="n">exceeded</span> <span class="k">with</span> <span class="n">url</span><span class="p">:</span> <span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">x509</span> <span class="p">(</span><span class="n">Caused</span> <span class="n">by</span> <span class="n">NewConnectionError</span><span class="p">(</span><span class="s1">&#39;&lt;oci._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x7f5c91002ba8&gt;: Failed to establish a new connection: [Errno -2] Name or service not known&#39;</span><span class="p">,))</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="backward-compatibility.html" class="btn btn-neutral float-right" title="Backward Compatibility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="forward-compatibility.html" class="btn btn-neutral" title="Forward Compatibility" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

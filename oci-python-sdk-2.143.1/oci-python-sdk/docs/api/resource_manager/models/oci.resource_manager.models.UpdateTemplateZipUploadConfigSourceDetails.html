@@ -1,0 +1,628 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>UpdateTemplateZipUploadConfigSourceDetails &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="UpdateZipUploadConfigSourceDetails" href="oci.resource_manager.models.UpdateZipUploadConfigSourceDetails.html" />
+    <link rel="prev" title="UpdateTemplateDetails" href="oci.resource_manager.models.UpdateTemplateDetails.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.resource_manager.ResourceManagerClient.html">ResourceManagerClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.resource_manager.ResourceManagerClientCompositeOperations.html">ResourceManagerClientCompositeOperations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../resource_manager.html#models">Models</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ApplyJobOperationDetails.html">ApplyJobOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ApplyJobOperationDetailsSummary.html">ApplyJobOperationDetailsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ApplyJobPlanResolution.html">ApplyJobPlanResolution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ApplyRollbackJobOperationDetails.html">ApplyRollbackJobOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ApplyRollbackJobOperationDetailsSummary.html">ApplyRollbackJobOperationDetailsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.AssociatedResourceSummary.html">AssociatedResourceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.AssociatedResourcesCollection.html">AssociatedResourcesCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.BitbucketCloudConfigSource.html">BitbucketCloudConfigSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.BitbucketCloudConfigSourceRecord.html">BitbucketCloudConfigSourceRecord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.BitbucketCloudUsernameAppPasswordConfigurationSourceProvider.html">BitbucketCloudUsernameAppPasswordConfigurationSourceProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary.html">BitbucketCloudUsernameAppPasswordConfigurationSourceProviderSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.BitbucketServerAccessTokenConfigurationSourceProvider.html">BitbucketServerAccessTokenConfigurationSourceProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.BitbucketServerAccessTokenConfigurationSourceProviderSummary.html">BitbucketServerAccessTokenConfigurationSourceProviderSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.BitbucketServerConfigSource.html">BitbucketServerConfigSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.BitbucketServerConfigSourceRecord.html">BitbucketServerConfigSourceRecord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CancellationDetails.html">CancellationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ChangeConfigurationSourceProviderCompartmentDetails.html">ChangeConfigurationSourceProviderCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ChangePrivateEndpointCompartmentDetails.html">ChangePrivateEndpointCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ChangeStackCompartmentDetails.html">ChangeStackCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ChangeTemplateCompartmentDetails.html">ChangeTemplateCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CompartmentConfigSource.html">CompartmentConfigSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ConfigSource.html">ConfigSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ConfigSourceRecord.html">ConfigSourceRecord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ConfigurationSourceProvider.html">ConfigurationSourceProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ConfigurationSourceProviderCollection.html">ConfigurationSourceProviderCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ConfigurationSourceProviderSummary.html">ConfigurationSourceProviderSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateApplyJobOperationDetails.html">CreateApplyJobOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateApplyRollbackJobOperationDetails.html">CreateApplyRollbackJobOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateBitbucketCloudConfigSourceDetails.html">CreateBitbucketCloudConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateBitbucketCloudUsernameAppPasswordConfigurationSourceProviderDetails.html">CreateBitbucketCloudUsernameAppPasswordConfigurationSourceProviderDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateBitbucketServerAccessTokenConfigurationSourceProviderDetails.html">CreateBitbucketServerAccessTokenConfigurationSourceProviderDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateBitbucketServerConfigSourceDetails.html">CreateBitbucketServerConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateCompartmentConfigSourceDetails.html">CreateCompartmentConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateConfigSourceDetails.html">CreateConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateConfigurationSourceProviderDetails.html">CreateConfigurationSourceProviderDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateDestroyJobOperationDetails.html">CreateDestroyJobOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateDevOpsConfigSourceDetails.html">CreateDevOpsConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateGitConfigSourceDetails.html">CreateGitConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateGithubAccessTokenConfigurationSourceProviderDetails.html">CreateGithubAccessTokenConfigurationSourceProviderDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateGitlabAccessTokenConfigurationSourceProviderDetails.html">CreateGitlabAccessTokenConfigurationSourceProviderDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateImportTfStateJobOperationDetails.html">CreateImportTfStateJobOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateJobDetails.html">CreateJobDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateJobOperationDetails.html">CreateJobOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateObjectStorageConfigSourceDetails.html">CreateObjectStorageConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreatePlanJobOperationDetails.html">CreatePlanJobOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreatePlanRollbackJobOperationDetails.html">CreatePlanRollbackJobOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreatePrivateEndpointDetails.html">CreatePrivateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateStackDetails.html">CreateStackDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateStackTemplateConfigSourceDetails.html">CreateStackTemplateConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateTemplateConfigSourceDetails.html">CreateTemplateConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateTemplateDetails.html">CreateTemplateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateTemplateZipUploadConfigSourceDetails.html">CreateTemplateZipUploadConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CreateZipUploadConfigSourceDetails.html">CreateZipUploadConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.CustomTerraformProvider.html">CustomTerraformProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.DestroyJobOperationDetails.html">DestroyJobOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.DestroyJobOperationDetailsSummary.html">DestroyJobOperationDetailsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.DetectStackDriftDetails.html">DetectStackDriftDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.DevOpsConfigSource.html">DevOpsConfigSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.DevOpsConfigSourceRecord.html">DevOpsConfigSourceRecord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.FailureDetails.html">FailureDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.GitConfigSource.html">GitConfigSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.GitConfigSourceRecord.html">GitConfigSourceRecord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.GithubAccessTokenConfigurationSourceProvider.html">GithubAccessTokenConfigurationSourceProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.GithubAccessTokenConfigurationSourceProviderSummary.html">GithubAccessTokenConfigurationSourceProviderSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.GitlabAccessTokenConfigurationSourceProvider.html">GitlabAccessTokenConfigurationSourceProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.GitlabAccessTokenConfigurationSourceProviderSummary.html">GitlabAccessTokenConfigurationSourceProviderSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ImportTfStateJobOperationDetails.html">ImportTfStateJobOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ImportTfStateJobOperationDetailsSummary.html">ImportTfStateJobOperationDetailsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.Job.html">Job</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.JobOperationDetails.html">JobOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.JobOperationDetailsSummary.html">JobOperationDetailsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.JobOutputSummary.html">JobOutputSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.JobOutputsCollection.html">JobOutputsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.JobSummary.html">JobSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.LogEntry.html">LogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ObjectStorageConfigSource.html">ObjectStorageConfigSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ObjectStorageConfigSourceRecord.html">ObjectStorageConfigSourceRecord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.PlanJobOperationDetails.html">PlanJobOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.PlanJobOperationDetailsSummary.html">PlanJobOperationDetailsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.PlanRollbackJobOperationDetails.html">PlanRollbackJobOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.PlanRollbackJobOperationDetailsSummary.html">PlanRollbackJobOperationDetailsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.PrivateEndpoint.html">PrivateEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.PrivateEndpointCollection.html">PrivateEndpointCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.PrivateEndpointSummary.html">PrivateEndpointSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.PrivateServerConfigDetails.html">PrivateServerConfigDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ReachableIp.html">ReachableIp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ResourceDiscoveryServiceCollection.html">ResourceDiscoveryServiceCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ResourceDiscoveryServiceSummary.html">ResourceDiscoveryServiceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.Stack.html">Stack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.StackResourceDriftCollection.html">StackResourceDriftCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.StackResourceDriftSummary.html">StackResourceDriftSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.StackSummary.html">StackSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.Template.html">Template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.TemplateCategorySummary.html">TemplateCategorySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.TemplateCategorySummaryCollection.html">TemplateCategorySummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.TemplateConfigSource.html">TemplateConfigSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.TemplateSummary.html">TemplateSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.TemplateSummaryCollection.html">TemplateSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.TemplateZipUploadConfigSource.html">TemplateZipUploadConfigSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.TerraformAdvancedOptions.html">TerraformAdvancedOptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.TerraformVersionCollection.html">TerraformVersionCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.TerraformVersionSummary.html">TerraformVersionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateBitbucketCloudConfigSourceDetails.html">UpdateBitbucketCloudConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateBitbucketCloudUsernameAppPasswordConfigurationSourceProviderDetails.html">UpdateBitbucketCloudUsernameAppPasswordConfigurationSourceProviderDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateBitbucketServerAccessTokenConfigurationSourceProviderDetails.html">UpdateBitbucketServerAccessTokenConfigurationSourceProviderDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateBitbucketServerConfigSourceDetails.html">UpdateBitbucketServerConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateConfigSourceDetails.html">UpdateConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateConfigurationSourceProviderDetails.html">UpdateConfigurationSourceProviderDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateDevOpsConfigSourceDetails.html">UpdateDevOpsConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateGitConfigSourceDetails.html">UpdateGitConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateGithubAccessTokenConfigurationSourceProviderDetails.html">UpdateGithubAccessTokenConfigurationSourceProviderDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateGitlabAccessTokenConfigurationSourceProviderDetails.html">UpdateGitlabAccessTokenConfigurationSourceProviderDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateJobDetails.html">UpdateJobDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateObjectStorageConfigSourceDetails.html">UpdateObjectStorageConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdatePrivateEndpointDetails.html">UpdatePrivateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateStackDetails.html">UpdateStackDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateTemplateConfigSourceDetails.html">UpdateTemplateConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateTemplateDetails.html">UpdateTemplateDetails</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">UpdateTemplateZipUploadConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.UpdateZipUploadConfigSourceDetails.html">UpdateZipUploadConfigSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.WorkRequestResource.html">WorkRequestResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.WorkRequestSummary.html">WorkRequestSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ZipUploadConfigSource.html">ZipUploadConfigSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.resource_manager.models.ZipUploadConfigSourceRecord.html">ZipUploadConfigSourceRecord</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../resource_manager.html">Resource Manager</a> &raquo;</li>
+        
+      <li>UpdateTemplateZipUploadConfigSourceDetails</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/resource_manager/models/oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="updatetemplatezipuploadconfigsourcedetails">
+<h1>UpdateTemplateZipUploadConfigSourceDetails<a class="headerlink" href="#updatetemplatezipuploadconfigsourcedetails" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails">
+<em class="property">class </em><code class="descclassname">oci.resource_manager.models.</code><code class="descname">UpdateTemplateZipUploadConfigSourceDetails</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">oci.resource_manager.models.update_template_config_source_details.UpdateTemplateConfigSourceDetails</span></code></p>
+<p>Update details for a configuration zip file.</p>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.__init__" title="oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(**kwargs)</td>
+<td>Initializes a new UpdateTemplateZipUploadConfigSourceDetails object with values from keyword arguments.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.get_subtype" title="oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.get_subtype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_subtype</span></code></a>(object_dictionary)</td>
+<td>Given the hash representation of a subtype of this class, use the info in the hash to return the class of the subtype.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attributes</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.template_config_source_type" title="oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.template_config_source_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">template_config_source_type</span></code></a></td>
+<td><strong>[Required]</strong> Gets the template_config_source_type of this UpdateTemplateConfigSourceDetails.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.zip_file_base64_encoded" title="oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.zip_file_base64_encoded"><code class="xref py py-obj docutils literal notranslate"><span class="pre">zip_file_base64_encoded</span></code></a></td>
+<td>Gets the zip_file_base64_encoded of this UpdateTemplateZipUploadConfigSourceDetails.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new UpdateTemplateZipUploadConfigSourceDetails object with values from keyword arguments. The default value of the <a class="reference internal" href="#oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.template_config_source_type" title="oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.template_config_source_type"><code class="xref py py-attr docutils literal notranslate"><span class="pre">template_config_source_type</span></code></a> attribute
+of this class is <code class="docutils literal notranslate"><span class="pre">ZIP_UPLOAD</span></code> and it should not be changed.
+The following keyword arguments are supported (corresponding to the getters/setters of this class):</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>template_config_source_type</strong> (<em>str</em>) – The value to assign to the template_config_source_type property of this UpdateTemplateZipUploadConfigSourceDetails.</li>
+<li><strong>zip_file_base64_encoded</strong> (<em>str</em>) – The value to assign to the zip_file_base64_encoded property of this UpdateTemplateZipUploadConfigSourceDetails.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.get_subtype">
+<em class="property">static </em><code class="descname">get_subtype</code><span class="sig-paren">(</span><em>object_dictionary</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.get_subtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the hash representation of a subtype of this class,
+use the info in the hash to return the class of the subtype.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.template_config_source_type">
+<code class="descname">template_config_source_type</code><a class="headerlink" href="#oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.template_config_source_type" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the template_config_source_type of this UpdateTemplateConfigSourceDetails.
+Specifies the <cite>configSourceType</cite> for uploading the Terraform configuration.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The template_config_source_type of this UpdateTemplateConfigSourceDetails.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.zip_file_base64_encoded">
+<code class="descname">zip_file_base64_encoded</code><a class="headerlink" href="#oci.resource_manager.models.UpdateTemplateZipUploadConfigSourceDetails.zip_file_base64_encoded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the zip_file_base64_encoded of this UpdateTemplateZipUploadConfigSourceDetails.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The zip_file_base64_encoded of this UpdateTemplateZipUploadConfigSourceDetails.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.resource_manager.models.UpdateZipUploadConfigSourceDetails.html" class="btn btn-neutral float-right" title="UpdateZipUploadConfigSourceDetails" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.resource_manager.models.UpdateTemplateDetails.html" class="btn btn-neutral" title="UpdateTemplateDetails" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

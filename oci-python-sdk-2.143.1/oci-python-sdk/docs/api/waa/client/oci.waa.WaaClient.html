@@ -1,0 +1,1116 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>WaaClient &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="WorkRequestClient" href="oci.waa.WorkRequestClient.html" />
+    <link rel="prev" title="Waa" href="../../waa.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../waa.html">Waa</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">WaaClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oci.waa.WorkRequestClient.html">WorkRequestClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oci.waa.WaaClientCompositeOperations.html">WaaClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oci.waa.WorkRequestClientCompositeOperations.html">WorkRequestClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../waa.html#models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../waa.html">Waa</a> &raquo;</li>
+        
+      <li>WaaClient</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/waa/client/oci.waa.WaaClient.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="waaclient">
+<h1>WaaClient<a class="headerlink" href="#waaclient" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.waa.WaaClient">
+<em class="property">class </em><code class="descclassname">oci.waa.</code><code class="descname">WaaClient</code><span class="sig-paren">(</span><em>config</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.waa.WaaClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>API for the Web Application Acceleration service.
+Use this API to manage regional Web App Acceleration policies such as Caching and Compression
+for accelerating HTTP services.</p>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.waa.WaaClient.__init__" title="oci.waa.WaaClient.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(config,&nbsp;**kwargs)</td>
+<td>Creates a new service client</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.waa.WaaClient.change_web_app_acceleration_compartment" title="oci.waa.WaaClient.change_web_app_acceleration_compartment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">change_web_app_acceleration_compartment</span></code></a>(…)</td>
+<td>Moves a Web App Acceleration resource from one compartment to another.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.waa.WaaClient.change_web_app_acceleration_policy_compartment" title="oci.waa.WaaClient.change_web_app_acceleration_policy_compartment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">change_web_app_acceleration_policy_compartment</span></code></a>(…)</td>
+<td>Moves a WebAppAccelerationfPolicy resource from one compartment to another.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.waa.WaaClient.create_web_app_acceleration" title="oci.waa.WaaClient.create_web_app_acceleration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_web_app_acceleration</span></code></a>(…)</td>
+<td>Creates a new WebAppAcceleration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.waa.WaaClient.create_web_app_acceleration_policy" title="oci.waa.WaaClient.create_web_app_acceleration_policy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_web_app_acceleration_policy</span></code></a>(…)</td>
+<td>Creates a new WebAppAccelerationPolicy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.waa.WaaClient.delete_web_app_acceleration" title="oci.waa.WaaClient.delete_web_app_acceleration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_web_app_acceleration</span></code></a>(…)</td>
+<td>Deletes a WebAppAcceleration resource identified by the OCID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.waa.WaaClient.delete_web_app_acceleration_policy" title="oci.waa.WaaClient.delete_web_app_acceleration_policy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_web_app_acceleration_policy</span></code></a>(…)</td>
+<td>Deletes a WebAppAccelerationPolicy resource identified by the OCID.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.waa.WaaClient.get_web_app_acceleration" title="oci.waa.WaaClient.get_web_app_acceleration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_web_app_acceleration</span></code></a>(…)</td>
+<td>Gets a WebAppAcceleration by OCID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.waa.WaaClient.get_web_app_acceleration_policy" title="oci.waa.WaaClient.get_web_app_acceleration_policy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_web_app_acceleration_policy</span></code></a>(…)</td>
+<td>Gets a WebAppAccelerationPolicy with the given OCID.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.waa.WaaClient.list_web_app_acceleration_policies" title="oci.waa.WaaClient.list_web_app_acceleration_policies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_web_app_acceleration_policies</span></code></a>(…)</td>
+<td>Gets a list of all WebAppAccelerationPolicies in a compartment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.waa.WaaClient.list_web_app_accelerations" title="oci.waa.WaaClient.list_web_app_accelerations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_web_app_accelerations</span></code></a>(compartment_id,&nbsp;…)</td>
+<td>Gets a list of all WebAppAccelerations in a compartment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.waa.WaaClient.purge_web_app_acceleration_cache" title="oci.waa.WaaClient.purge_web_app_acceleration_cache"><code class="xref py py-obj docutils literal notranslate"><span class="pre">purge_web_app_acceleration_cache</span></code></a>(…)</td>
+<td>Clears resources from the cache of the WebAppAcceleration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.waa.WaaClient.update_web_app_acceleration" title="oci.waa.WaaClient.update_web_app_acceleration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_web_app_acceleration</span></code></a>(…)</td>
+<td>Updates the WebAppAcceleration identified by the OCID.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.waa.WaaClient.update_web_app_acceleration_policy" title="oci.waa.WaaClient.update_web_app_acceleration_policy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_web_app_acceleration_policy</span></code></a>(…)</td>
+<td>Update the WebAppAccelerationPolicy identified by the OCID.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="oci.waa.WaaClient.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>config</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.waa.WaaClient.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new service client</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>config</strong> (<em>dict</em>) – Configuration keys and values as per <a class="reference external" href="https://docs.cloud.oracle.com/Content/API/Concepts/sdkconfig.htm">SDK and Tool Configuration</a>.
+The <a class="reference internal" href="../../config.html#oci.config.from_file" title="oci.config.from_file"><code class="xref py py-meth docutils literal notranslate"><span class="pre">from_file()</span></code></a> method can be used to load configuration from a file. Alternatively, a <code class="docutils literal notranslate"><span class="pre">dict</span></code> can be passed. You can validate_config
+the dict using <a class="reference internal" href="../../config.html#oci.config.validate_config" title="oci.config.validate_config"><code class="xref py py-meth docutils literal notranslate"><span class="pre">validate_config()</span></code></a></li>
+<li><strong>service_endpoint</strong> (<em>str</em>) – (optional)
+The endpoint of the service to call using this client. For example <code class="docutils literal notranslate"><span class="pre">https://iaas.us-ashburn-1.oraclecloud.com</span></code>. If this keyword argument is
+not provided then it will be derived using the region in the config parameter. You should only provide this keyword argument if you have an explicit
+need to specify a service endpoint.</li>
+<li><strong>timeout</strong> (<em>float</em><em> or </em><em>tuple</em><em>(</em><em>float</em><em>, </em><em>float</em><em>)</em>) – (optional)
+The connection and read timeouts for the client. The default values are connection timeout 10 seconds and read timeout 60 seconds. This keyword argument can be provided
+as a single float, in which case the value provided is used for both the read and connection timeouts, or as a tuple of two floats. If
+a tuple is provided then the first value is used as the connection timeout and the second value as the read timeout.</li>
+<li><strong>signer</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractBaseSigner</span></code>) – <p>(optional)
+The signer to use when signing requests made by the service client. The default is to use a <a class="reference internal" href="../../signing.html#oci.signer.Signer" title="oci.signer.Signer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Signer</span></code></a> based on the values
+provided in the config parameter.</p>
+<p>One use case for this parameter is for <a class="reference external" href="https://docs.cloud.oracle.com/Content/Identity/Tasks/callingservicesfrominstances.htm">Instance Principals authentication</a>
+by passing an instance of <a class="reference internal" href="../../signing.html#oci.auth.signers.InstancePrincipalsSecurityTokenSigner" title="oci.auth.signers.InstancePrincipalsSecurityTokenSigner"><code class="xref py py-class docutils literal notranslate"><span class="pre">InstancePrincipalsSecurityTokenSigner</span></code></a> as the value for this keyword argument</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to all calls made by this service client (i.e. at the client level). There is no retry strategy applied by default.
+Retry strategies can also be applied at the operation level by passing a <code class="docutils literal notranslate"><span class="pre">retry_strategy</span></code> keyword argument as part of calling the operation.
+Any value provided at the operation level will override whatever is specified at the client level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. A convenience <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a>
+is also available. The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+</li>
+<li><strong>circuit_breaker_strategy</strong> (<em>obj</em>) – (optional)
+A circuit breaker strategy to apply to all calls made by this service client (i.e. at the client level).
+This client uses <a class="reference internal" href="../../circuit_breaker.html#oci.circuit_breaker.DEFAULT_CIRCUIT_BREAKER_STRATEGY" title="oci.circuit_breaker.DEFAULT_CIRCUIT_BREAKER_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_CIRCUIT_BREAKER_STRATEGY</span></code></a> as default if no circuit breaker strategy is provided.
+The specifics of circuit breaker strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/circuit_breakers.html">here</a>.</li>
+<li><strong>circuit_breaker_callback</strong> (<em>function</em>) – (optional)
+Callback function to receive any exceptions triggerred by the circuit breaker.</li>
+<li><strong>client_level_realm_specific_endpoint_template_enabled</strong> (<em>bool</em>) – (optional)
+A boolean flag to indicate whether or not this client should be created with realm specific endpoint template enabled or disable. By default, this will be set as None.</li>
+<li><strong>allow_control_chars</strong> – (optional)
+allow_control_chars is a boolean to indicate whether or not this client should allow control characters in the response object. By default, the client will not
+allow control characters to be in the response object.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.waa.WaaClient.change_web_app_acceleration_compartment">
+<code class="descname">change_web_app_acceleration_compartment</code><span class="sig-paren">(</span><em>web_app_acceleration_id</em>, <em>change_web_app_acceleration_compartment_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.waa.WaaClient.change_web_app_acceleration_compartment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves a Web App Acceleration resource from one compartment to another.
+When provided, If-Match is checked against ETag values of the resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>web_app_acceleration_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the WebAppAcceleration.</p>
+</li>
+<li><strong>change_web_app_acceleration_compartment_details</strong> (<a class="reference internal" href="../models/oci.waa.models.ChangeWebAppAccelerationCompartmentDetails.html#oci.waa.models.ChangeWebAppAccelerationCompartmentDetails" title="oci.waa.models.ChangeWebAppAccelerationCompartmentDetails"><em>oci.waa.models.ChangeWebAppAccelerationCompartmentDetails</em></a>) – (required)
+The information to be updated.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call for a resource,
+set the <cite>if-match</cite> parameter to the value of the etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/waa/change_web_app_acceleration_compartment.py.html">here</a> to see an example of how to use change_web_app_acceleration_compartment API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.waa.WaaClient.change_web_app_acceleration_policy_compartment">
+<code class="descname">change_web_app_acceleration_policy_compartment</code><span class="sig-paren">(</span><em>web_app_acceleration_policy_id</em>, <em>change_web_app_acceleration_policy_compartment_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.waa.WaaClient.change_web_app_acceleration_policy_compartment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves a WebAppAccelerationfPolicy resource from one compartment to another.
+When provided, If-Match is checked against ETag values of the resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>web_app_acceleration_policy_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the WebAppAccelerationPolicy.</p>
+</li>
+<li><strong>change_web_app_acceleration_policy_compartment_details</strong> (<a class="reference internal" href="../models/oci.waa.models.ChangeWebAppAccelerationPolicyCompartmentDetails.html#oci.waa.models.ChangeWebAppAccelerationPolicyCompartmentDetails" title="oci.waa.models.ChangeWebAppAccelerationPolicyCompartmentDetails"><em>oci.waa.models.ChangeWebAppAccelerationPolicyCompartmentDetails</em></a>) – (required)
+The information to be updated.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call for a resource,
+set the <cite>if-match</cite> parameter to the value of the etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/waa/change_web_app_acceleration_policy_compartment.py.html">here</a> to see an example of how to use change_web_app_acceleration_policy_compartment API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.waa.WaaClient.create_web_app_acceleration">
+<code class="descname">create_web_app_acceleration</code><span class="sig-paren">(</span><em>create_web_app_acceleration_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.waa.WaaClient.create_web_app_acceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new WebAppAcceleration.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>create_web_app_acceleration_details</strong> (<a class="reference internal" href="../models/oci.waa.models.CreateWebAppAccelerationDetails.html#oci.waa.models.CreateWebAppAccelerationDetails" title="oci.waa.models.CreateWebAppAccelerationDetails"><em>oci.waa.models.CreateWebAppAccelerationDetails</em></a>) – (required)
+Details for the new WebAppAcceleration.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request might be rejected.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.waa.models.WebAppAcceleration.html#oci.waa.models.WebAppAcceleration" title="oci.waa.models.WebAppAcceleration"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebAppAcceleration</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/waa/create_web_app_acceleration.py.html">here</a> to see an example of how to use create_web_app_acceleration API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.waa.WaaClient.create_web_app_acceleration_policy">
+<code class="descname">create_web_app_acceleration_policy</code><span class="sig-paren">(</span><em>create_web_app_acceleration_policy_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.waa.WaaClient.create_web_app_acceleration_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new WebAppAccelerationPolicy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>create_web_app_acceleration_policy_details</strong> (<a class="reference internal" href="../models/oci.waa.models.CreateWebAppAccelerationPolicyDetails.html#oci.waa.models.CreateWebAppAccelerationPolicyDetails" title="oci.waa.models.CreateWebAppAccelerationPolicyDetails"><em>oci.waa.models.CreateWebAppAccelerationPolicyDetails</em></a>) – (required)
+Details for the new WebAppAccelerationPolicy.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request might be rejected.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.waa.models.WebAppAccelerationPolicy.html#oci.waa.models.WebAppAccelerationPolicy" title="oci.waa.models.WebAppAccelerationPolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebAppAccelerationPolicy</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/waa/create_web_app_acceleration_policy.py.html">here</a> to see an example of how to use create_web_app_acceleration_policy API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.waa.WaaClient.delete_web_app_acceleration">
+<code class="descname">delete_web_app_acceleration</code><span class="sig-paren">(</span><em>web_app_acceleration_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.waa.WaaClient.delete_web_app_acceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a WebAppAcceleration resource identified by the OCID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>web_app_acceleration_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the WebAppAcceleration.</p>
+</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call for a resource,
+set the <cite>if-match</cite> parameter to the value of the etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/waa/delete_web_app_acceleration.py.html">here</a> to see an example of how to use delete_web_app_acceleration API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.waa.WaaClient.delete_web_app_acceleration_policy">
+<code class="descname">delete_web_app_acceleration_policy</code><span class="sig-paren">(</span><em>web_app_acceleration_policy_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.waa.WaaClient.delete_web_app_acceleration_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a WebAppAccelerationPolicy resource identified by the OCID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>web_app_acceleration_policy_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the WebAppAccelerationPolicy.</p>
+</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call for a resource,
+set the <cite>if-match</cite> parameter to the value of the etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/waa/delete_web_app_acceleration_policy.py.html">here</a> to see an example of how to use delete_web_app_acceleration_policy API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.waa.WaaClient.get_web_app_acceleration">
+<code class="descname">get_web_app_acceleration</code><span class="sig-paren">(</span><em>web_app_acceleration_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.waa.WaaClient.get_web_app_acceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a WebAppAcceleration by OCID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>web_app_acceleration_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the WebAppAcceleration.</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.waa.models.WebAppAcceleration.html#oci.waa.models.WebAppAcceleration" title="oci.waa.models.WebAppAcceleration"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebAppAcceleration</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/waa/get_web_app_acceleration.py.html">here</a> to see an example of how to use get_web_app_acceleration API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.waa.WaaClient.get_web_app_acceleration_policy">
+<code class="descname">get_web_app_acceleration_policy</code><span class="sig-paren">(</span><em>web_app_acceleration_policy_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.waa.WaaClient.get_web_app_acceleration_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a WebAppAccelerationPolicy with the given OCID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>web_app_acceleration_policy_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the WebAppAccelerationPolicy.</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.waa.models.WebAppAccelerationPolicy.html#oci.waa.models.WebAppAccelerationPolicy" title="oci.waa.models.WebAppAccelerationPolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebAppAccelerationPolicy</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/waa/get_web_app_acceleration_policy.py.html">here</a> to see an example of how to use get_web_app_acceleration_policy API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.waa.WaaClient.list_web_app_acceleration_policies">
+<code class="descname">list_web_app_acceleration_policies</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.waa.WaaClient.list_web_app_acceleration_policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a list of all WebAppAccelerationPolicies in a compartment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the compartment in which to list resources.</p>
+</li>
+<li><strong>lifecycle_state</strong> (<em>list</em><em>[</em><em>WebAppAccelerationPolicyLifecycleState</em><em>]</em>) – (optional)
+A filter to return only resources that match the given lifecycleState.</li>
+<li><strong>display_name</strong> (<em>str</em>) – (optional)
+A filter to return only resources that match the entire display name given.</li>
+<li><strong>id</strong> (<em>str</em>) – <p>(optional)
+A filter to return only the WebAppAccelerationPolicy with the given <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a>.</p>
+</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+A token representing the position at which to start retrieving results.
+This must come from the <cite>opc-next-page</cite> header field of a previous response.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ‘ASC’ or ‘DESC’.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Only one sort order may be provided.
+Default order for timeCreated is descending.
+Default order for displayName is ascending.
+If no value is specified timeCreated is default.</p>
+<p>Allowed values are: “timeCreated”, “displayName”</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.waa.models.WebAppAccelerationPolicyCollection.html#oci.waa.models.WebAppAccelerationPolicyCollection" title="oci.waa.models.WebAppAccelerationPolicyCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebAppAccelerationPolicyCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/waa/list_web_app_acceleration_policies.py.html">here</a> to see an example of how to use list_web_app_acceleration_policies API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.waa.WaaClient.list_web_app_accelerations">
+<code class="descname">list_web_app_accelerations</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.waa.WaaClient.list_web_app_accelerations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a list of all WebAppAccelerations in a compartment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the compartment in which to list resources.</p>
+</li>
+<li><strong>id</strong> (<em>str</em>) – <p>(optional)
+A filter to return only the WebAppAcceleration with the given <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a>.</p>
+</li>
+<li><strong>web_app_acceleration_policy_id</strong> (<em>str</em>) – <p>(optional)
+A filter to return only the WebAppAcceleration with the given
+<a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of related WebAppAccelerationPolicy.</p>
+</li>
+<li><strong>lifecycle_state</strong> (<em>list</em><em>[</em><em>WebAppAccelerationLifecycleState</em><em>]</em>) – (optional)
+A filter to return only resources that match the given lifecycleState.</li>
+<li><strong>display_name</strong> (<em>str</em>) – (optional)
+A filter to return only resources that match the entire display name given.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+A token representing the position at which to start retrieving results.
+This must come from the <cite>opc-next-page</cite> header field of a previous response.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ‘ASC’ or ‘DESC’.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Only one sort order may be provided.
+Default order for timeCreated is descending.
+Default order for displayName is ascending.
+If no value is specified timeCreated is default.</p>
+<p>Allowed values are: “timeCreated”, “displayName”</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.waa.models.WebAppAccelerationCollection.html#oci.waa.models.WebAppAccelerationCollection" title="oci.waa.models.WebAppAccelerationCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebAppAccelerationCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/waa/list_web_app_accelerations.py.html">here</a> to see an example of how to use list_web_app_accelerations API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.waa.WaaClient.purge_web_app_acceleration_cache">
+<code class="descname">purge_web_app_acceleration_cache</code><span class="sig-paren">(</span><em>web_app_acceleration_id</em>, <em>purge_web_app_acceleration_cache_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.waa.WaaClient.purge_web_app_acceleration_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears resources from the cache of the WebAppAcceleration. Each new request for a purged resource will be
+forwarded to the origin server to fetch a new version of the resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>web_app_acceleration_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the WebAppAcceleration.</p>
+</li>
+<li><strong>purge_web_app_acceleration_cache_details</strong> (<a class="reference internal" href="../models/oci.waa.models.PurgeWebAppAccelerationCacheDetails.html#oci.waa.models.PurgeWebAppAccelerationCacheDetails" title="oci.waa.models.PurgeWebAppAccelerationCacheDetails"><em>oci.waa.models.PurgeWebAppAccelerationCacheDetails</em></a>) – (required)
+Options for the cache purge.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/waa/purge_web_app_acceleration_cache.py.html">here</a> to see an example of how to use purge_web_app_acceleration_cache API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.waa.WaaClient.update_web_app_acceleration">
+<code class="descname">update_web_app_acceleration</code><span class="sig-paren">(</span><em>web_app_acceleration_id</em>, <em>update_web_app_acceleration_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.waa.WaaClient.update_web_app_acceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the WebAppAcceleration identified by the OCID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>web_app_acceleration_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the WebAppAcceleration.</p>
+</li>
+<li><strong>update_web_app_acceleration_details</strong> (<a class="reference internal" href="../models/oci.waa.models.UpdateWebAppAccelerationDetails.html#oci.waa.models.UpdateWebAppAccelerationDetails" title="oci.waa.models.UpdateWebAppAccelerationDetails"><em>oci.waa.models.UpdateWebAppAccelerationDetails</em></a>) – (required)
+The information to be updated.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call for a resource,
+set the <cite>if-match</cite> parameter to the value of the etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/waa/update_web_app_acceleration.py.html">here</a> to see an example of how to use update_web_app_acceleration API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.waa.WaaClient.update_web_app_acceleration_policy">
+<code class="descname">update_web_app_acceleration_policy</code><span class="sig-paren">(</span><em>web_app_acceleration_policy_id</em>, <em>update_web_app_acceleration_policy_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.waa.WaaClient.update_web_app_acceleration_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the WebAppAccelerationPolicy identified by the OCID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>web_app_acceleration_policy_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the WebAppAccelerationPolicy.</p>
+</li>
+<li><strong>update_web_app_acceleration_policy_details</strong> (<a class="reference internal" href="../models/oci.waa.models.UpdateWebAppAccelerationPolicyDetails.html#oci.waa.models.UpdateWebAppAccelerationPolicyDetails" title="oci.waa.models.UpdateWebAppAccelerationPolicyDetails"><em>oci.waa.models.UpdateWebAppAccelerationPolicyDetails</em></a>) – (required)
+The information to be updated.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call for a resource,
+set the <cite>if-match</cite> parameter to the value of the etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/waa/update_web_app_acceleration_policy.py.html">here</a> to see an example of how to use update_web_app_acceleration_policy API.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.waa.WorkRequestClient.html" class="btn btn-neutral float-right" title="WorkRequestClient" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../waa.html" class="btn btn-neutral" title="Waa" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

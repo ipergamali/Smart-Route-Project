@@ -1,0 +1,1706 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>NosqlClient &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="NosqlClientCompositeOperations" href="oci.nosql.NosqlClientCompositeOperations.html" />
+    <link rel="prev" title="Nosql" href="../../nosql.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../nosql.html">Nosql</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">NosqlClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oci.nosql.NosqlClientCompositeOperations.html">NosqlClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nosql.html#models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../nosql.html">Nosql</a> &raquo;</li>
+        
+      <li>NosqlClient</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/nosql/client/oci.nosql.NosqlClient.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nosqlclient">
+<h1>NosqlClient<a class="headerlink" href="#nosqlclient" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.nosql.NosqlClient">
+<em class="property">class </em><code class="descclassname">oci.nosql.</code><code class="descname">NosqlClient</code><span class="sig-paren">(</span><em>config</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>The control plane API for NoSQL Database Cloud Service HTTPS
+provides endpoints to perform NDCS operations, including creation
+and deletion of tables and indexes; population and access of data
+in tables; and access of table usage metrics.</p>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.nosql.NosqlClient.__init__" title="oci.nosql.NosqlClient.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(config,&nbsp;**kwargs)</td>
+<td>Creates a new service client</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.nosql.NosqlClient.change_table_compartment" title="oci.nosql.NosqlClient.change_table_compartment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">change_table_compartment</span></code></a>(table_name_or_id,&nbsp;…)</td>
+<td>Change a table’s compartment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.nosql.NosqlClient.create_index" title="oci.nosql.NosqlClient.create_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_index</span></code></a>(table_name_or_id,&nbsp;…)</td>
+<td>Create a new index on the table identified by tableNameOrId.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.nosql.NosqlClient.create_replica" title="oci.nosql.NosqlClient.create_replica"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_replica</span></code></a>(table_name_or_id,&nbsp;…)</td>
+<td>Add a replica for this table</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.nosql.NosqlClient.create_table" title="oci.nosql.NosqlClient.create_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_table</span></code></a>(create_table_details,&nbsp;**kwargs)</td>
+<td>Create a new table.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.nosql.NosqlClient.delete_index" title="oci.nosql.NosqlClient.delete_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_index</span></code></a>(table_name_or_id,&nbsp;index_name,&nbsp;…)</td>
+<td>Delete an index from the table identified by tableNameOrId.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.nosql.NosqlClient.delete_replica" title="oci.nosql.NosqlClient.delete_replica"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_replica</span></code></a>(table_name_or_id,&nbsp;region,&nbsp;…)</td>
+<td>Delete the specified replica table in the remote region.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.nosql.NosqlClient.delete_row" title="oci.nosql.NosqlClient.delete_row"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_row</span></code></a>(table_name_or_id,&nbsp;key,&nbsp;**kwargs)</td>
+<td>Delete a single row from the table, by primary key.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.nosql.NosqlClient.delete_table" title="oci.nosql.NosqlClient.delete_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_table</span></code></a>(table_name_or_id,&nbsp;**kwargs)</td>
+<td>Delete a table by tableNameOrId.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.nosql.NosqlClient.delete_work_request" title="oci.nosql.NosqlClient.delete_work_request"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_work_request</span></code></a>(work_request_id,&nbsp;**kwargs)</td>
+<td>Cancel a work request operation with the given ID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.nosql.NosqlClient.get_index" title="oci.nosql.NosqlClient.get_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_index</span></code></a>(table_name_or_id,&nbsp;index_name,&nbsp;**kwargs)</td>
+<td>Get information about a single index.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.nosql.NosqlClient.get_row" title="oci.nosql.NosqlClient.get_row"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_row</span></code></a>(table_name_or_id,&nbsp;key,&nbsp;**kwargs)</td>
+<td>Get a single row from the table by primary key.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.nosql.NosqlClient.get_table" title="oci.nosql.NosqlClient.get_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_table</span></code></a>(table_name_or_id,&nbsp;**kwargs)</td>
+<td>Get table info by identifier.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.nosql.NosqlClient.get_work_request" title="oci.nosql.NosqlClient.get_work_request"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_work_request</span></code></a>(work_request_id,&nbsp;**kwargs)</td>
+<td>Get the status of the work request with the given ID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.nosql.NosqlClient.list_indexes" title="oci.nosql.NosqlClient.list_indexes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_indexes</span></code></a>(table_name_or_id,&nbsp;**kwargs)</td>
+<td>Get a list of indexes on a table.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.nosql.NosqlClient.list_table_usage" title="oci.nosql.NosqlClient.list_table_usage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_table_usage</span></code></a>(table_name_or_id,&nbsp;**kwargs)</td>
+<td>Get table usage info.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.nosql.NosqlClient.list_tables" title="oci.nosql.NosqlClient.list_tables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_tables</span></code></a>(compartment_id,&nbsp;**kwargs)</td>
+<td>Get a list of tables in a compartment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.nosql.NosqlClient.list_work_request_errors" title="oci.nosql.NosqlClient.list_work_request_errors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_request_errors</span></code></a>(work_request_id,&nbsp;…)</td>
+<td>Return a (paginated) list of errors for a given work request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.nosql.NosqlClient.list_work_request_logs" title="oci.nosql.NosqlClient.list_work_request_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_request_logs</span></code></a>(work_request_id,&nbsp;**kwargs)</td>
+<td>Return a (paginated) list of logs for a given work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.nosql.NosqlClient.list_work_requests" title="oci.nosql.NosqlClient.list_work_requests"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_requests</span></code></a>(compartment_id,&nbsp;**kwargs)</td>
+<td>List the work requests in a compartment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.nosql.NosqlClient.prepare_statement" title="oci.nosql.NosqlClient.prepare_statement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prepare_statement</span></code></a>(compartment_id,&nbsp;statement,&nbsp;…)</td>
+<td>Prepare a SQL statement for use in a query with variable substitution.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.nosql.NosqlClient.query" title="oci.nosql.NosqlClient.query"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query</span></code></a>(query_details,&nbsp;**kwargs)</td>
+<td>Execute a SQL query.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.nosql.NosqlClient.summarize_statement" title="oci.nosql.NosqlClient.summarize_statement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">summarize_statement</span></code></a>(compartment_id,&nbsp;…)</td>
+<td>Check the syntax and return a brief summary of a SQL statement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.nosql.NosqlClient.update_row" title="oci.nosql.NosqlClient.update_row"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_row</span></code></a>(table_name_or_id,&nbsp;…)</td>
+<td>Write a single row into the table.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.nosql.NosqlClient.update_table" title="oci.nosql.NosqlClient.update_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_table</span></code></a>(table_name_or_id,&nbsp;…)</td>
+<td>Alter the table identified by tableNameOrId,</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>config</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new service client</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>config</strong> (<em>dict</em>) – Configuration keys and values as per <a class="reference external" href="https://docs.cloud.oracle.com/Content/API/Concepts/sdkconfig.htm">SDK and Tool Configuration</a>.
+The <a class="reference internal" href="../../config.html#oci.config.from_file" title="oci.config.from_file"><code class="xref py py-meth docutils literal notranslate"><span class="pre">from_file()</span></code></a> method can be used to load configuration from a file. Alternatively, a <code class="docutils literal notranslate"><span class="pre">dict</span></code> can be passed. You can validate_config
+the dict using <a class="reference internal" href="../../config.html#oci.config.validate_config" title="oci.config.validate_config"><code class="xref py py-meth docutils literal notranslate"><span class="pre">validate_config()</span></code></a></li>
+<li><strong>service_endpoint</strong> (<em>str</em>) – (optional)
+The endpoint of the service to call using this client. For example <code class="docutils literal notranslate"><span class="pre">https://iaas.us-ashburn-1.oraclecloud.com</span></code>. If this keyword argument is
+not provided then it will be derived using the region in the config parameter. You should only provide this keyword argument if you have an explicit
+need to specify a service endpoint.</li>
+<li><strong>timeout</strong> (<em>float</em><em> or </em><em>tuple</em><em>(</em><em>float</em><em>, </em><em>float</em><em>)</em>) – (optional)
+The connection and read timeouts for the client. The default values are connection timeout 10 seconds and read timeout 60 seconds. This keyword argument can be provided
+as a single float, in which case the value provided is used for both the read and connection timeouts, or as a tuple of two floats. If
+a tuple is provided then the first value is used as the connection timeout and the second value as the read timeout.</li>
+<li><strong>signer</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractBaseSigner</span></code>) – <p>(optional)
+The signer to use when signing requests made by the service client. The default is to use a <a class="reference internal" href="../../signing.html#oci.signer.Signer" title="oci.signer.Signer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Signer</span></code></a> based on the values
+provided in the config parameter.</p>
+<p>One use case for this parameter is for <a class="reference external" href="https://docs.cloud.oracle.com/Content/Identity/Tasks/callingservicesfrominstances.htm">Instance Principals authentication</a>
+by passing an instance of <a class="reference internal" href="../../signing.html#oci.auth.signers.InstancePrincipalsSecurityTokenSigner" title="oci.auth.signers.InstancePrincipalsSecurityTokenSigner"><code class="xref py py-class docutils literal notranslate"><span class="pre">InstancePrincipalsSecurityTokenSigner</span></code></a> as the value for this keyword argument</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to all calls made by this service client (i.e. at the client level). There is no retry strategy applied by default.
+Retry strategies can also be applied at the operation level by passing a <code class="docutils literal notranslate"><span class="pre">retry_strategy</span></code> keyword argument as part of calling the operation.
+Any value provided at the operation level will override whatever is specified at the client level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. A convenience <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a>
+is also available. The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+</li>
+<li><strong>circuit_breaker_strategy</strong> (<em>obj</em>) – (optional)
+A circuit breaker strategy to apply to all calls made by this service client (i.e. at the client level).
+This client uses <a class="reference internal" href="../../circuit_breaker.html#oci.circuit_breaker.DEFAULT_CIRCUIT_BREAKER_STRATEGY" title="oci.circuit_breaker.DEFAULT_CIRCUIT_BREAKER_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_CIRCUIT_BREAKER_STRATEGY</span></code></a> as default if no circuit breaker strategy is provided.
+The specifics of circuit breaker strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/circuit_breakers.html">here</a>.</li>
+<li><strong>circuit_breaker_callback</strong> (<em>function</em>) – (optional)
+Callback function to receive any exceptions triggerred by the circuit breaker.</li>
+<li><strong>client_level_realm_specific_endpoint_template_enabled</strong> (<em>bool</em>) – (optional)
+A boolean flag to indicate whether or not this client should be created with realm specific endpoint template enabled or disable. By default, this will be set as None.</li>
+<li><strong>allow_control_chars</strong> – (optional)
+allow_control_chars is a boolean to indicate whether or not this client should allow control characters in the response object. By default, the client will not
+allow control characters to be in the response object.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.change_table_compartment">
+<code class="descname">change_table_compartment</code><span class="sig-paren">(</span><em>table_name_or_id</em>, <em>change_table_compartment_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.change_table_compartment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change a table’s compartment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>table_name_or_id</strong> (<em>str</em>) – (required)
+A table name within the compartment, or a table OCID.</li>
+<li><strong>change_table_compartment_details</strong> (<a class="reference internal" href="../models/oci.nosql.models.ChangeTableCompartmentDetails.html#oci.nosql.models.ChangeTableCompartmentDetails" title="oci.nosql.models.ChangeTableCompartmentDetails"><em>oci.nosql.models.ChangeTableCompartmentDetails</em></a>) – (required)
+Specifications of the source and target compartments.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried
+in case of a timeout or server error without risk of executing
+that same action again. Retry tokens expire after 24 hours, but
+can be invalidated before then due to conflicting
+operations. For example, if a resource has been deleted and
+purged from the system, then a retry of the original creation
+request might be rejected.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/change_table_compartment.py.html">here</a> to see an example of how to use change_table_compartment API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.create_index">
+<code class="descname">create_index</code><span class="sig-paren">(</span><em>table_name_or_id</em>, <em>create_index_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.create_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new index on the table identified by tableNameOrId.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>table_name_or_id</strong> (<em>str</em>) – (required)
+A table name within the compartment, or a table OCID.</li>
+<li><strong>create_index_details</strong> (<a class="reference internal" href="../models/oci.nosql.models.CreateIndexDetails.html#oci.nosql.models.CreateIndexDetails" title="oci.nosql.models.CreateIndexDetails"><em>oci.nosql.models.CreateIndexDetails</em></a>) – (required)
+Specifications for the new index.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried
+in case of a timeout or server error without risk of executing
+that same action again. Retry tokens expire after 24 hours, but
+can be invalidated before then due to conflicting
+operations. For example, if a resource has been deleted and
+purged from the system, then a retry of the original creation
+request might be rejected.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/create_index.py.html">here</a> to see an example of how to use create_index API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.create_replica">
+<code class="descname">create_replica</code><span class="sig-paren">(</span><em>table_name_or_id</em>, <em>create_replica_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.create_replica" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a replica for this table</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>table_name_or_id</strong> (<em>str</em>) – (required)
+A table name within the compartment, or a table OCID.</li>
+<li><strong>create_replica_details</strong> (<a class="reference internal" href="../models/oci.nosql.models.CreateReplicaDetails.html#oci.nosql.models.CreateReplicaDetails" title="oci.nosql.models.CreateReplicaDetails"><em>oci.nosql.models.CreateReplicaDetails</em></a>) – (required)
+Specifications for the new replica</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried
+in case of a timeout or server error without risk of executing
+that same action again. Retry tokens expire after 24 hours, but
+can be invalidated before then due to conflicting
+operations. For example, if a resource has been deleted and
+purged from the system, then a retry of the original creation
+request might be rejected.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/create_replica.py.html">here</a> to see an example of how to use create_replica API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.create_table">
+<code class="descname">create_table</code><span class="sig-paren">(</span><em>create_table_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.create_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new table.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>create_table_details</strong> (<a class="reference internal" href="../models/oci.nosql.models.CreateTableDetails.html#oci.nosql.models.CreateTableDetails" title="oci.nosql.models.CreateTableDetails"><em>oci.nosql.models.CreateTableDetails</em></a>) – (required)
+Specifications for the new table.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried
+in case of a timeout or server error without risk of executing
+that same action again. Retry tokens expire after 24 hours, but
+can be invalidated before then due to conflicting
+operations. For example, if a resource has been deleted and
+purged from the system, then a retry of the original creation
+request might be rejected.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/create_table.py.html">here</a> to see an example of how to use create_table API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.delete_index">
+<code class="descname">delete_index</code><span class="sig-paren">(</span><em>table_name_or_id</em>, <em>index_name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.delete_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete an index from the table identified by tableNameOrId.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>table_name_or_id</strong> (<em>str</em>) – (required)
+A table name within the compartment, or a table OCID.</li>
+<li><strong>index_name</strong> (<em>str</em>) – (required)
+The name of a table’s index.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The ID of a table’s compartment. When a table is identified
+by name, the compartmentId is often needed to provide
+context for interpreting the name.</li>
+<li><strong>is_if_exists</strong> (<em>bool</em>) – (optional)
+Set as true to select “if exists” behavior.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/delete_index.py.html">here</a> to see an example of how to use delete_index API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.delete_replica">
+<code class="descname">delete_replica</code><span class="sig-paren">(</span><em>table_name_or_id</em>, <em>region</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.delete_replica" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the specified replica table in the remote region.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>table_name_or_id</strong> (<em>str</em>) – (required)
+A table name within the compartment, or a table OCID.</li>
+<li><strong>region</strong> (<em>str</em>) – (required)
+A customer-facing region identifier</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The ID of a table’s compartment. When a table is identified
+by name, the compartmentId is often needed to provide
+context for interpreting the name.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/delete_replica.py.html">here</a> to see an example of how to use delete_replica API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.delete_row">
+<code class="descname">delete_row</code><span class="sig-paren">(</span><em>table_name_or_id</em>, <em>key</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.delete_row" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a single row from the table, by primary key.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>table_name_or_id</strong> (<em>str</em>) – (required)
+A table name within the compartment, or a table OCID.</li>
+<li><strong>key</strong> (<em>oci.nosql.models.list</em><em>[</em><em>str</em><em>]</em>) – (required)
+An array of strings, each of the format “column-name:value”,
+representing the primary key of the row.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The ID of a table’s compartment. When a table is identified
+by name, the compartmentId is often needed to provide
+context for interpreting the name.</li>
+<li><strong>is_get_return_row</strong> (<em>bool</em>) – (optional)
+If true, and the operation fails due to an option setting
+(ifVersion et al), then the existing row will be returned.</li>
+<li><strong>timeout_in_ms</strong> (<em>int</em>) – (optional)
+Timeout setting for this operation.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.nosql.models.DeleteRowResult.html#oci.nosql.models.DeleteRowResult" title="oci.nosql.models.DeleteRowResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeleteRowResult</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/delete_row.py.html">here</a> to see an example of how to use delete_row API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.delete_table">
+<code class="descname">delete_table</code><span class="sig-paren">(</span><em>table_name_or_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.delete_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a table by tableNameOrId.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>table_name_or_id</strong> (<em>str</em>) – (required)
+A table name within the compartment, or a table OCID.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The ID of a table’s compartment. When a table is identified
+by name, the compartmentId is often needed to provide
+context for interpreting the name.</li>
+<li><strong>is_if_exists</strong> (<em>bool</em>) – (optional)
+Set as true to select “if exists” behavior.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/delete_table.py.html">here</a> to see an example of how to use delete_table API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.delete_work_request">
+<code class="descname">delete_work_request</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.delete_work_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cancel a work request operation with the given ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The ID of the asynchronous request.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/delete_work_request.py.html">here</a> to see an example of how to use delete_work_request API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.get_index">
+<code class="descname">get_index</code><span class="sig-paren">(</span><em>table_name_or_id</em>, <em>index_name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.get_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get information about a single index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>table_name_or_id</strong> (<em>str</em>) – (required)
+A table name within the compartment, or a table OCID.</li>
+<li><strong>index_name</strong> (<em>str</em>) – (required)
+The name of a table’s index.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The ID of a table’s compartment. When a table is identified
+by name, the compartmentId is often needed to provide
+context for interpreting the name.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.nosql.models.Index.html#oci.nosql.models.Index" title="oci.nosql.models.Index"><code class="xref py py-class docutils literal notranslate"><span class="pre">Index</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/get_index.py.html">here</a> to see an example of how to use get_index API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.get_row">
+<code class="descname">get_row</code><span class="sig-paren">(</span><em>table_name_or_id</em>, <em>key</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.get_row" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a single row from the table by primary key.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>table_name_or_id</strong> (<em>str</em>) – (required)
+A table name within the compartment, or a table OCID.</li>
+<li><strong>key</strong> (<em>oci.nosql.models.list</em><em>[</em><em>str</em><em>]</em>) – (required)
+An array of strings, each of the format “column-name:value”,
+representing the primary key of the row.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The ID of a table’s compartment. When a table is identified
+by name, the compartmentId is often needed to provide
+context for interpreting the name.</li>
+<li><strong>consistency</strong> (<em>str</em>) – <p>(optional)
+Consistency requirement for a read operation.</p>
+<p>Allowed values are: “EVENTUAL”, “ABSOLUTE”</p>
+</li>
+<li><strong>timeout_in_ms</strong> (<em>int</em>) – (optional)
+Timeout setting for this operation.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.nosql.models.Row.html#oci.nosql.models.Row" title="oci.nosql.models.Row"><code class="xref py py-class docutils literal notranslate"><span class="pre">Row</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/get_row.py.html">here</a> to see an example of how to use get_row API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.get_table">
+<code class="descname">get_table</code><span class="sig-paren">(</span><em>table_name_or_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.get_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get table info by identifier.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>table_name_or_id</strong> (<em>str</em>) – (required)
+A table name within the compartment, or a table OCID.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The ID of a table’s compartment. When a table is identified
+by name, the compartmentId is often needed to provide
+context for interpreting the name.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.nosql.models.Table.html#oci.nosql.models.Table" title="oci.nosql.models.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/get_table.py.html">here</a> to see an example of how to use get_table API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.get_work_request">
+<code class="descname">get_work_request</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.get_work_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the status of the work request with the given ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The ID of the asynchronous request.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.nosql.models.WorkRequest.html#oci.nosql.models.WorkRequest" title="oci.nosql.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/get_work_request.py.html">here</a> to see an example of how to use get_work_request API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.list_indexes">
+<code class="descname">list_indexes</code><span class="sig-paren">(</span><em>table_name_or_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.list_indexes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of indexes on a table.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>table_name_or_id</strong> (<em>str</em>) – (required)
+A table name within the compartment, or a table OCID.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The ID of a table’s compartment. When a table is identified
+by name, the compartmentId is often needed to provide
+context for interpreting the name.</li>
+<li><strong>name</strong> (<em>str</em>) – (optional)
+A shell-globbing-style (<a href="#id1"><span class="problematic" id="id2">*</span></a>?[]) filter for names.</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+Filter list by the lifecycle state of the item.</p>
+<p>Allowed values are: “ALL”, “CREATING”, “UPDATING”, “ACTIVE”, “DELETING”, “DELETED”, “FAILED”, “INACTIVE”</p>
+</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start
+retrieving results. This is usually retrieved from a previous
+list call.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ‘ASC’ or ‘DESC’.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Only one sort order may be
+provided. Default order for timeCreated is descending. Default
+order for name is ascending. If no value is specified
+timeCreated is default.</p>
+<p>Allowed values are: “timeCreated”, “name”</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.nosql.models.IndexCollection.html#oci.nosql.models.IndexCollection" title="oci.nosql.models.IndexCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">IndexCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/list_indexes.py.html">here</a> to see an example of how to use list_indexes API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.list_table_usage">
+<code class="descname">list_table_usage</code><span class="sig-paren">(</span><em>table_name_or_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.list_table_usage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get table usage info.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>table_name_or_id</strong> (<em>str</em>) – (required)
+A table name within the compartment, or a table OCID.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The ID of a table’s compartment. When a table is identified
+by name, the compartmentId is often needed to provide
+context for interpreting the name.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>time_start</strong> (<em>datetime</em>) – (optional)
+The start time to use for the request. If no time range
+is set for this request, the most recent complete usage
+record is returned.</li>
+<li><strong>time_end</strong> (<em>datetime</em>) – (optional)
+The end time to use for the request.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start
+retrieving results. This is usually retrieved from a previous
+list call.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.nosql.models.TableUsageCollection.html#oci.nosql.models.TableUsageCollection" title="oci.nosql.models.TableUsageCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">TableUsageCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/list_table_usage.py.html">here</a> to see an example of how to use list_table_usage API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.list_tables">
+<code class="descname">list_tables</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.list_tables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of tables in a compartment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The ID of a table’s compartment.</li>
+<li><strong>name</strong> (<em>str</em>) – (optional)
+A shell-globbing-style (<a href="#id3"><span class="problematic" id="id4">*</span></a>?[]) filter for names.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start
+retrieving results. This is usually retrieved from a previous
+list call.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ‘ASC’ or ‘DESC’.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Only one sort order may be
+provided. Default order for timeCreated is descending. Default
+order for name is ascending. If no value is specified
+timeCreated is default.</p>
+<p>Allowed values are: “timeCreated”, “name”</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+Filter list by the lifecycle state of the item.</p>
+<p>Allowed values are: “ALL”, “CREATING”, “UPDATING”, “ACTIVE”, “DELETING”, “DELETED”, “FAILED”, “INACTIVE”</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.nosql.models.TableCollection.html#oci.nosql.models.TableCollection" title="oci.nosql.models.TableCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">TableCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/list_tables.py.html">here</a> to see an example of how to use list_tables API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.list_work_request_errors">
+<code class="descname">list_work_request_errors</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.list_work_request_errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a (paginated) list of errors for a given work request.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The ID of the asynchronous request.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start
+retrieving results. This is usually retrieved from a previous
+list call.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.nosql.models.WorkRequestErrorCollection.html#oci.nosql.models.WorkRequestErrorCollection" title="oci.nosql.models.WorkRequestErrorCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestErrorCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/list_work_request_errors.py.html">here</a> to see an example of how to use list_work_request_errors API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.list_work_request_logs">
+<code class="descname">list_work_request_logs</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.list_work_request_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a (paginated) list of logs for a given work request.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The ID of the asynchronous request.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start
+retrieving results. This is usually retrieved from a previous
+list call.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.nosql.models.WorkRequestLogEntryCollection.html#oci.nosql.models.WorkRequestLogEntryCollection" title="oci.nosql.models.WorkRequestLogEntryCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestLogEntryCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/list_work_request_logs.py.html">here</a> to see an example of how to use list_work_request_logs API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.list_work_requests">
+<code class="descname">list_work_requests</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.list_work_requests" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the work requests in a compartment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The ID of a table’s compartment.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start
+retrieving results. This is usually retrieved from a previous
+list call.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.nosql.models.WorkRequestCollection.html#oci.nosql.models.WorkRequestCollection" title="oci.nosql.models.WorkRequestCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/list_work_requests.py.html">here</a> to see an example of how to use list_work_requests API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.prepare_statement">
+<code class="descname">prepare_statement</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>statement</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.prepare_statement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prepare a SQL statement for use in a query with variable substitution.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The ID of a table’s compartment.</li>
+<li><strong>statement</strong> (<em>str</em>) – (required)
+A NoSQL SQL statement.</li>
+<li><strong>is_get_query_plan</strong> (<em>bool</em>) – (optional)
+Include a query execution plan in the result.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.nosql.models.PreparedStatement.html#oci.nosql.models.PreparedStatement" title="oci.nosql.models.PreparedStatement"><code class="xref py py-class docutils literal notranslate"><span class="pre">PreparedStatement</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/prepare_statement.py.html">here</a> to see an example of how to use prepare_statement API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.query">
+<code class="descname">query</code><span class="sig-paren">(</span><em>query_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute a SQL query.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>query_details</strong> (<a class="reference internal" href="../models/oci.nosql.models.QueryDetails.html#oci.nosql.models.QueryDetails" title="oci.nosql.models.QueryDetails"><em>oci.nosql.models.QueryDetails</em></a>) – (required)
+SQL query statement and ancillary information.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start
+retrieving results. This is usually retrieved from a previous
+list call.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.nosql.models.QueryResultCollection.html#oci.nosql.models.QueryResultCollection" title="oci.nosql.models.QueryResultCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueryResultCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/query.py.html">here</a> to see an example of how to use query API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.summarize_statement">
+<code class="descname">summarize_statement</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>statement</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.summarize_statement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the syntax and return a brief summary of a SQL statement.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The ID of a table’s compartment.</li>
+<li><strong>statement</strong> (<em>str</em>) – (required)
+A NoSQL SQL statement.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.nosql.models.StatementSummary.html#oci.nosql.models.StatementSummary" title="oci.nosql.models.StatementSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">StatementSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/summarize_statement.py.html">here</a> to see an example of how to use summarize_statement API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.update_row">
+<code class="descname">update_row</code><span class="sig-paren">(</span><em>table_name_or_id</em>, <em>update_row_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.update_row" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a single row into the table.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>table_name_or_id</strong> (<em>str</em>) – (required)
+A table name within the compartment, or a table OCID.</li>
+<li><strong>update_row_details</strong> (<a class="reference internal" href="../models/oci.nosql.models.UpdateRowDetails.html#oci.nosql.models.UpdateRowDetails" title="oci.nosql.models.UpdateRowDetails"><em>oci.nosql.models.UpdateRowDetails</em></a>) – (required)
+Specifications for the putting of a table row.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.nosql.models.UpdateRowResult.html#oci.nosql.models.UpdateRowResult" title="oci.nosql.models.UpdateRowResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">UpdateRowResult</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/update_row.py.html">here</a> to see an example of how to use update_row API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.nosql.NosqlClient.update_table">
+<code class="descname">update_table</code><span class="sig-paren">(</span><em>table_name_or_id</em>, <em>update_table_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.nosql.NosqlClient.update_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alter the table identified by tableNameOrId,
+changing schema, limits, or tags</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>table_name_or_id</strong> (<em>str</em>) – (required)
+A table name within the compartment, or a table OCID.</li>
+<li><strong>update_table_details</strong> (<a class="reference internal" href="../models/oci.nosql.models.UpdateTableDetails.html#oci.nosql.models.UpdateTableDetails" title="oci.nosql.models.UpdateTableDetails"><em>oci.nosql.models.UpdateTableDetails</em></a>) – (required)
+Specifications for the alteration.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/nosql/update_table.py.html">here</a> to see an example of how to use update_table API.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.nosql.NosqlClientCompositeOperations.html" class="btn btn-neutral float-right" title="NosqlClientCompositeOperations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../nosql.html" class="btn btn-neutral" title="Nosql" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

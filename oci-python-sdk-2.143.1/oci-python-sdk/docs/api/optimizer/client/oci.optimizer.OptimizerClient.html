@@ -1,0 +1,1962 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>OptimizerClient &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="OptimizerClientCompositeOperations" href="oci.optimizer.OptimizerClientCompositeOperations.html" />
+    <link rel="prev" title="Optimizer" href="../../optimizer.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../optimizer.html">Optimizer</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">OptimizerClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oci.optimizer.OptimizerClientCompositeOperations.html">OptimizerClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../optimizer.html#models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../optimizer.html">Optimizer</a> &raquo;</li>
+        
+      <li>OptimizerClient</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/optimizer/client/oci.optimizer.OptimizerClient.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="optimizerclient">
+<h1>OptimizerClient<a class="headerlink" href="#optimizerclient" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.optimizer.OptimizerClient">
+<em class="property">class </em><code class="descclassname">oci.optimizer.</code><code class="descname">OptimizerClient</code><span class="sig-paren">(</span><em>config</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the Cloud Advisor API to find potential inefficiencies in your tenancy and address them.
+Cloud Advisor can help you save money, improve performance, strengthen system resilience, and improve security.
+For more information, see [Cloud Advisor](/Content/CloudAdvisor/Concepts/cloudadvisoroverview.htm).</p>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.__init__" title="oci.optimizer.OptimizerClient.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(config,&nbsp;**kwargs)</td>
+<td>Creates a new service client</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.bulk_apply_recommendations" title="oci.optimizer.OptimizerClient.bulk_apply_recommendations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bulk_apply_recommendations</span></code></a>(…)</td>
+<td>Applies the specified recommendations to the resources.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.create_profile" title="oci.optimizer.OptimizerClient.create_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_profile</span></code></a>(create_profile_details,&nbsp;**kwargs)</td>
+<td>Creates a new profile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.delete_profile" title="oci.optimizer.OptimizerClient.delete_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_profile</span></code></a>(profile_id,&nbsp;**kwargs)</td>
+<td>Deletes the specified profile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.filter_resource_actions" title="oci.optimizer.OptimizerClient.filter_resource_actions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter_resource_actions</span></code></a>(compartment_id,&nbsp;…)</td>
+<td>Queries the Cloud Advisor resource actions that are supported.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.get_category" title="oci.optimizer.OptimizerClient.get_category"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_category</span></code></a>(category_id,&nbsp;**kwargs)</td>
+<td>Gets the category that corresponds to the specified OCID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.get_enrollment_status" title="oci.optimizer.OptimizerClient.get_enrollment_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_enrollment_status</span></code></a>(enrollment_status_id,&nbsp;…)</td>
+<td>Gets the Cloud Advisor enrollment status.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.get_profile" title="oci.optimizer.OptimizerClient.get_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_profile</span></code></a>(profile_id,&nbsp;**kwargs)</td>
+<td>Gets the specified profile’s information.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.get_recommendation" title="oci.optimizer.OptimizerClient.get_recommendation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_recommendation</span></code></a>(recommendation_id,&nbsp;**kwargs)</td>
+<td>Gets the recommendation for the specified OCID.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.get_resource_action" title="oci.optimizer.OptimizerClient.get_resource_action"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_resource_action</span></code></a>(resource_action_id,&nbsp;**kwargs)</td>
+<td>Gets the resource action that corresponds to the specified OCID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.get_work_request" title="oci.optimizer.OptimizerClient.get_work_request"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_work_request</span></code></a>(work_request_id,&nbsp;**kwargs)</td>
+<td>Gets the status of the work request associated with the specified ID.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.list_categories" title="oci.optimizer.OptimizerClient.list_categories"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_categories</span></code></a>(compartment_id,&nbsp;…)</td>
+<td>Lists the supported Cloud Advisor categories.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.list_enrollment_statuses" title="oci.optimizer.OptimizerClient.list_enrollment_statuses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_enrollment_statuses</span></code></a>(compartment_id,&nbsp;…)</td>
+<td>Lists the Cloud Advisor enrollment statuses.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.list_histories" title="oci.optimizer.OptimizerClient.list_histories"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_histories</span></code></a>(compartment_id,&nbsp;…)</td>
+<td>Lists changes to the recommendations based on user activity.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.list_profile_levels" title="oci.optimizer.OptimizerClient.list_profile_levels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_profile_levels</span></code></a>(compartment_id,&nbsp;…)</td>
+<td>Lists the existing profile levels.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.list_profiles" title="oci.optimizer.OptimizerClient.list_profiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_profiles</span></code></a>(compartment_id,&nbsp;**kwargs)</td>
+<td>Lists the existing profiles.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.list_recommendation_strategies" title="oci.optimizer.OptimizerClient.list_recommendation_strategies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_recommendation_strategies</span></code></a>(…)</td>
+<td>Lists the existing strategies.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.list_recommendations" title="oci.optimizer.OptimizerClient.list_recommendations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_recommendations</span></code></a>(compartment_id,&nbsp;…)</td>
+<td>Lists the Cloud Advisor recommendations that are currently supported.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.list_resource_action_queryable_fields" title="oci.optimizer.OptimizerClient.list_resource_action_queryable_fields"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_resource_action_queryable_fields</span></code></a>(…)</td>
+<td>Lists the fields that are indexed for querying and their associated value types.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.list_resource_actions" title="oci.optimizer.OptimizerClient.list_resource_actions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_resource_actions</span></code></a>(compartment_id,&nbsp;…)</td>
+<td>Lists the Cloud Advisor resource actions that are supported.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.list_work_request_errors" title="oci.optimizer.OptimizerClient.list_work_request_errors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_request_errors</span></code></a>(work_request_id,&nbsp;…)</td>
+<td>Lists errors associated with the specified work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.list_work_request_logs" title="oci.optimizer.OptimizerClient.list_work_request_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_request_logs</span></code></a>(work_request_id,&nbsp;**kwargs)</td>
+<td>Lists the logs associated with the specified work request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.list_work_requests" title="oci.optimizer.OptimizerClient.list_work_requests"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_requests</span></code></a>(compartment_id,&nbsp;**kwargs)</td>
+<td>Lists the work requests in the tenancy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.update_enrollment_status" title="oci.optimizer.OptimizerClient.update_enrollment_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_enrollment_status</span></code></a>(…)</td>
+<td>Updates the enrollment status of the tenancy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.update_profile" title="oci.optimizer.OptimizerClient.update_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_profile</span></code></a>(profile_id,&nbsp;…)</td>
+<td>Updates the specified profile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.update_recommendation" title="oci.optimizer.OptimizerClient.update_recommendation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_recommendation</span></code></a>(recommendation_id,&nbsp;…)</td>
+<td>Updates the recommendation that corresponds to the specified OCID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.optimizer.OptimizerClient.update_resource_action" title="oci.optimizer.OptimizerClient.update_resource_action"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_resource_action</span></code></a>(resource_action_id,&nbsp;…)</td>
+<td>Updates the resource action that corresponds to the specified OCID.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>config</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new service client</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>config</strong> (<em>dict</em>) – Configuration keys and values as per <a class="reference external" href="https://docs.cloud.oracle.com/Content/API/Concepts/sdkconfig.htm">SDK and Tool Configuration</a>.
+The <a class="reference internal" href="../../config.html#oci.config.from_file" title="oci.config.from_file"><code class="xref py py-meth docutils literal notranslate"><span class="pre">from_file()</span></code></a> method can be used to load configuration from a file. Alternatively, a <code class="docutils literal notranslate"><span class="pre">dict</span></code> can be passed. You can validate_config
+the dict using <a class="reference internal" href="../../config.html#oci.config.validate_config" title="oci.config.validate_config"><code class="xref py py-meth docutils literal notranslate"><span class="pre">validate_config()</span></code></a></li>
+<li><strong>service_endpoint</strong> (<em>str</em>) – (optional)
+The endpoint of the service to call using this client. For example <code class="docutils literal notranslate"><span class="pre">https://iaas.us-ashburn-1.oraclecloud.com</span></code>. If this keyword argument is
+not provided then it will be derived using the region in the config parameter. You should only provide this keyword argument if you have an explicit
+need to specify a service endpoint.</li>
+<li><strong>timeout</strong> (<em>float</em><em> or </em><em>tuple</em><em>(</em><em>float</em><em>, </em><em>float</em><em>)</em>) – (optional)
+The connection and read timeouts for the client. The default values are connection timeout 10 seconds and read timeout 60 seconds. This keyword argument can be provided
+as a single float, in which case the value provided is used for both the read and connection timeouts, or as a tuple of two floats. If
+a tuple is provided then the first value is used as the connection timeout and the second value as the read timeout.</li>
+<li><strong>signer</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractBaseSigner</span></code>) – <p>(optional)
+The signer to use when signing requests made by the service client. The default is to use a <a class="reference internal" href="../../signing.html#oci.signer.Signer" title="oci.signer.Signer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Signer</span></code></a> based on the values
+provided in the config parameter.</p>
+<p>One use case for this parameter is for <a class="reference external" href="https://docs.cloud.oracle.com/Content/Identity/Tasks/callingservicesfrominstances.htm">Instance Principals authentication</a>
+by passing an instance of <a class="reference internal" href="../../signing.html#oci.auth.signers.InstancePrincipalsSecurityTokenSigner" title="oci.auth.signers.InstancePrincipalsSecurityTokenSigner"><code class="xref py py-class docutils literal notranslate"><span class="pre">InstancePrincipalsSecurityTokenSigner</span></code></a> as the value for this keyword argument</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to all calls made by this service client (i.e. at the client level). There is no retry strategy applied by default.
+Retry strategies can also be applied at the operation level by passing a <code class="docutils literal notranslate"><span class="pre">retry_strategy</span></code> keyword argument as part of calling the operation.
+Any value provided at the operation level will override whatever is specified at the client level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. A convenience <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a>
+is also available. The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+</li>
+<li><strong>circuit_breaker_strategy</strong> (<em>obj</em>) – (optional)
+A circuit breaker strategy to apply to all calls made by this service client (i.e. at the client level).
+This client uses <a class="reference internal" href="../../circuit_breaker.html#oci.circuit_breaker.DEFAULT_CIRCUIT_BREAKER_STRATEGY" title="oci.circuit_breaker.DEFAULT_CIRCUIT_BREAKER_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_CIRCUIT_BREAKER_STRATEGY</span></code></a> as default if no circuit breaker strategy is provided.
+The specifics of circuit breaker strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/circuit_breakers.html">here</a>.</li>
+<li><strong>circuit_breaker_callback</strong> (<em>function</em>) – (optional)
+Callback function to receive any exceptions triggerred by the circuit breaker.</li>
+<li><strong>client_level_realm_specific_endpoint_template_enabled</strong> (<em>bool</em>) – (optional)
+A boolean flag to indicate whether or not this client should be created with realm specific endpoint template enabled or disable. By default, this will be set as None.</li>
+<li><strong>allow_control_chars</strong> – (optional)
+allow_control_chars is a boolean to indicate whether or not this client should allow control characters in the response object. By default, the client will not
+allow control characters to be in the response object.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.bulk_apply_recommendations">
+<code class="descname">bulk_apply_recommendations</code><span class="sig-paren">(</span><em>recommendation_id</em>, <em>bulk_apply_recommendations_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.bulk_apply_recommendations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the specified recommendations to the resources.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>recommendation_id</strong> (<em>str</em>) – (required)
+The unique OCID associated with the recommendation.</li>
+<li><strong>bulk_apply_recommendations_details</strong> (<a class="reference internal" href="../models/oci.optimizer.models.BulkApplyRecommendationsDetails.html#oci.optimizer.models.BulkApplyRecommendationsDetails" title="oci.optimizer.models.BulkApplyRecommendationsDetails"><em>oci.optimizer.models.BulkApplyRecommendationsDetails</em></a>) – (required)
+Details about bulk recommendation actions.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations (for example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request
+may be rejected).</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/bulk_apply_recommendations.py.html">here</a> to see an example of how to use bulk_apply_recommendations API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.create_profile">
+<code class="descname">create_profile</code><span class="sig-paren">(</span><em>create_profile_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.create_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new profile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>create_profile_details</strong> (<a class="reference internal" href="../models/oci.optimizer.models.CreateProfileDetails.html#oci.optimizer.models.CreateProfileDetails" title="oci.optimizer.models.CreateProfileDetails"><em>oci.optimizer.models.CreateProfileDetails</em></a>) – (required)
+Details for creating the profile.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations (for example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request
+may be rejected).</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.Profile.html#oci.optimizer.models.Profile" title="oci.optimizer.models.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">Profile</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/create_profile.py.html">here</a> to see an example of how to use create_profile API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.delete_profile">
+<code class="descname">delete_profile</code><span class="sig-paren">(</span><em>profile_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.delete_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the specified profile. Uses the profile’s OCID to determine which profile to delete.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>profile_id</strong> (<em>str</em>) – (required)
+The unique OCID of the profile.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/delete_profile.py.html">here</a> to see an example of how to use delete_profile API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.filter_resource_actions">
+<code class="descname">filter_resource_actions</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>compartment_id_in_subtree</em>, <em>query_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.filter_resource_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the Cloud Advisor resource actions that are supported.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment.</li>
+<li><strong>compartment_id_in_subtree</strong> (<em>bool</em>) – <p>(required)
+When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned depending on the the setting of <cite>accessLevel</cite>.</p>
+<p>Can only be set to true when performing ListCompartments on the tenancy (root compartment).</p>
+</li>
+<li><strong>query_details</strong> (<a class="reference internal" href="../models/oci.optimizer.models.QueryDetails.html#oci.optimizer.models.QueryDetails" title="oci.optimizer.models.QueryDetails"><em>oci.optimizer.models.QueryDetails</em></a>) – (required)
+The request parameters that describe the query criteria.</li>
+<li><strong>recommendation_id</strong> (<em>str</em>) – (optional)
+The unique OCID associated with the recommendation.</li>
+<li><strong>recommendation_name</strong> (<em>str</em>) – (optional)
+Optional. A filter that returns results that match the recommendation name specified.</li>
+<li><strong>child_tenancy_ids</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – <p>(optional)
+A list of child tenancies for which the respective data will be returned. Please note that
+the parent tenancy id can also be included in this list. For example, if there is a parent P with two
+children A and B, to return results of only parent P and child A, this list should be populated with
+tenancy id of parent P and child A.</p>
+<p>If this list contains a tenancy id that isn’t part of the organization of parent P, the request will
+fail. That is, let’s say there is an organization with parent P with children A and B, and also one
+other tenant T that isn’t part of the organization. If T is included in the list of
+childTenancyIds, the request will fail.</p>
+<p>It is important to note that if you are setting the includeOrganization parameter value as true and
+also populating the childTenancyIds parameter with a list of child tenancies, the request will fail.
+The childTenancyIds and includeOrganization should be used exclusively.</p>
+<p>When using this parameter, please make sure to set the compartmentId with the parent tenancy ID.</p>
+</li>
+<li><strong>include_organization</strong> (<em>bool</em>) – <p>(optional)
+When set to true, the data for all child tenancies including the parent is returned. That is, if
+there is an organization with parent P and children A and B, to return the data for the parent P, child
+A and child B, this parameter value should be set to true.</p>
+<p>Please note that this parameter shouldn’t be used along with childTenancyIds parameter. If you would like
+to get results specifically for parent P and only child A, use the childTenancyIds parameter and populate
+the list with tenancy id of P and A.</p>
+<p>When using this parameter, please make sure to set the compartmentId with the parent tenancy ID.</p>
+</li>
+<li><strong>include_resource_metadata</strong> (<em>bool</em>) – (optional)
+Supplement additional resource information in extended metadata response.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return in a paginated “List” call.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.ResourceActionCollection.html#oci.optimizer.models.ResourceActionCollection" title="oci.optimizer.models.ResourceActionCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceActionCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/filter_resource_actions.py.html">here</a> to see an example of how to use filter_resource_actions API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.get_category">
+<code class="descname">get_category</code><span class="sig-paren">(</span><em>category_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.get_category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the category that corresponds to the specified OCID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>category_id</strong> (<em>str</em>) – (required)
+The unique OCID associated with the category.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.Category.html#oci.optimizer.models.Category" title="oci.optimizer.models.Category"><code class="xref py py-class docutils literal notranslate"><span class="pre">Category</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/get_category.py.html">here</a> to see an example of how to use get_category API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.get_enrollment_status">
+<code class="descname">get_enrollment_status</code><span class="sig-paren">(</span><em>enrollment_status_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.get_enrollment_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the Cloud Advisor enrollment status.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>enrollment_status_id</strong> (<em>str</em>) – (required)
+The unique OCID associated with the enrollment status.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.EnrollmentStatus.html#oci.optimizer.models.EnrollmentStatus" title="oci.optimizer.models.EnrollmentStatus"><code class="xref py py-class docutils literal notranslate"><span class="pre">EnrollmentStatus</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/get_enrollment_status.py.html">here</a> to see an example of how to use get_enrollment_status API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.get_profile">
+<code class="descname">get_profile</code><span class="sig-paren">(</span><em>profile_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.get_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the specified profile’s information. Uses the profile’s OCID to determine which profile to retrieve.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>profile_id</strong> (<em>str</em>) – (required)
+The unique OCID of the profile.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.Profile.html#oci.optimizer.models.Profile" title="oci.optimizer.models.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">Profile</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/get_profile.py.html">here</a> to see an example of how to use get_profile API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.get_recommendation">
+<code class="descname">get_recommendation</code><span class="sig-paren">(</span><em>recommendation_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.get_recommendation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the recommendation for the specified OCID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>recommendation_id</strong> (<em>str</em>) – (required)
+The unique OCID associated with the recommendation.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.Recommendation.html#oci.optimizer.models.Recommendation" title="oci.optimizer.models.Recommendation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Recommendation</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/get_recommendation.py.html">here</a> to see an example of how to use get_recommendation API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.get_resource_action">
+<code class="descname">get_resource_action</code><span class="sig-paren">(</span><em>resource_action_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.get_resource_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the resource action that corresponds to the specified OCID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>resource_action_id</strong> (<em>str</em>) – (required)
+The unique OCID associated with the resource action.</li>
+<li><strong>include_resource_metadata</strong> (<em>bool</em>) – (optional)
+Supplement additional resource information in extended metadata response.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.ResourceAction.html#oci.optimizer.models.ResourceAction" title="oci.optimizer.models.ResourceAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceAction</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/get_resource_action.py.html">here</a> to see an example of how to use get_resource_action API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.get_work_request">
+<code class="descname">get_work_request</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.get_work_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the status of the work request associated with the specified ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The OCID of the work request.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.WorkRequest.html#oci.optimizer.models.WorkRequest" title="oci.optimizer.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/get_work_request.py.html">here</a> to see an example of how to use get_work_request API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.list_categories">
+<code class="descname">list_categories</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>compartment_id_in_subtree</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.list_categories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the supported Cloud Advisor categories.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment.</li>
+<li><strong>compartment_id_in_subtree</strong> (<em>bool</em>) – <p>(required)
+When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned depending on the the setting of <cite>accessLevel</cite>.</p>
+<p>Can only be set to true when performing ListCompartments on the tenancy (root compartment).</p>
+</li>
+<li><strong>child_tenancy_ids</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – <p>(optional)
+A list of child tenancies for which the respective data will be returned. Please note that
+the parent tenancy id can also be included in this list. For example, if there is a parent P with two
+children A and B, to return results of only parent P and child A, this list should be populated with
+tenancy id of parent P and child A.</p>
+<p>If this list contains a tenancy id that isn’t part of the organization of parent P, the request will
+fail. That is, let’s say there is an organization with parent P with children A and B, and also one
+other tenant T that isn’t part of the organization. If T is included in the list of
+childTenancyIds, the request will fail.</p>
+<p>It is important to note that if you are setting the includeOrganization parameter value as true and
+also populating the childTenancyIds parameter with a list of child tenancies, the request will fail.
+The childTenancyIds and includeOrganization should be used exclusively.</p>
+<p>When using this parameter, please make sure to set the compartmentId with the parent tenancy ID.</p>
+</li>
+<li><strong>include_organization</strong> (<em>bool</em>) – <p>(optional)
+When set to true, the data for all child tenancies including the parent is returned. That is, if
+there is an organization with parent P and children A and B, to return the data for the parent P, child
+A and child B, this parameter value should be set to true.</p>
+<p>Please note that this parameter shouldn’t be used along with childTenancyIds parameter. If you would like
+to get results specifically for parent P and only child A, use the childTenancyIds parameter and populate
+the list with tenancy id of P and A.</p>
+<p>When using this parameter, please make sure to set the compartmentId with the parent tenancy ID.</p>
+</li>
+<li><strong>name</strong> (<em>str</em>) – (optional)
+Optional. A filter that returns results that match the name specified.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return in a paginated “List” call.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ascending (<cite>ASC</cite>) or descending (<cite>DESC</cite>).</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. You can provide one sort order (<cite>sortOrder</cite>). Default order for TIMECREATED is descending. Default order for NAME is ascending. The NAME sort order is case sensitive.</p>
+<p>Allowed values are: “NAME”, “TIMECREATED”</p>
+</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+A filter that returns results that match the lifecycle state specified.</p>
+<p>Allowed values are: “ACTIVE”, “FAILED”, “INACTIVE”, “ATTACHING”, “DETACHING”, “DELETING”, “DELETED”, “UPDATING”, “CREATING”</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.CategoryCollection.html#oci.optimizer.models.CategoryCollection" title="oci.optimizer.models.CategoryCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">CategoryCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/list_categories.py.html">here</a> to see an example of how to use list_categories API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.list_enrollment_statuses">
+<code class="descname">list_enrollment_statuses</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.list_enrollment_statuses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the Cloud Advisor enrollment statuses.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return in a paginated “List” call.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ascending (<cite>ASC</cite>) or descending (<cite>DESC</cite>).</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. You can provide one sort order (<cite>sortOrder</cite>). Default order for TIMECREATED is descending. Default order for NAME is ascending. The NAME sort order is case sensitive.</p>
+<p>Allowed values are: “NAME”, “TIMECREATED”</p>
+</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+A filter that returns results that match the lifecycle state specified.</p>
+<p>Allowed values are: “ACTIVE”, “FAILED”, “INACTIVE”, “ATTACHING”, “DETACHING”, “DELETING”, “DELETED”, “UPDATING”, “CREATING”</p>
+</li>
+<li><strong>status</strong> (<em>str</em>) – <p>(optional)
+A filter that returns results that match the Cloud Advisor enrollment status specified.</p>
+<p>Allowed values are: “ACTIVE”, “INACTIVE”</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.EnrollmentStatusCollection.html#oci.optimizer.models.EnrollmentStatusCollection" title="oci.optimizer.models.EnrollmentStatusCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">EnrollmentStatusCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/list_enrollment_statuses.py.html">here</a> to see an example of how to use list_enrollment_statuses API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.list_histories">
+<code class="descname">list_histories</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>compartment_id_in_subtree</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.list_histories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists changes to the recommendations based on user activity.
+For example, lists when recommendations have been implemented, dismissed, postponed, or reactivated.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment.</li>
+<li><strong>compartment_id_in_subtree</strong> (<em>bool</em>) – <p>(required)
+When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned depending on the the setting of <cite>accessLevel</cite>.</p>
+<p>Can only be set to true when performing ListCompartments on the tenancy (root compartment).</p>
+</li>
+<li><strong>name</strong> (<em>str</em>) – (optional)
+Optional. A filter that returns results that match the name specified.</li>
+<li><strong>recommendation_name</strong> (<em>str</em>) – (optional)
+Optional. A filter that returns results that match the recommendation name specified.</li>
+<li><strong>recommendation_id</strong> (<em>str</em>) – (optional)
+The unique OCID associated with the recommendation.</li>
+<li><strong>resource_type</strong> (<em>str</em>) – (optional)
+Optional. A filter that returns results that match the resource type specified.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return in a paginated “List” call.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ascending (<cite>ASC</cite>) or descending (<cite>DESC</cite>).</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. You can provide one sort order (<cite>sortOrder</cite>). Default order for TIMECREATED is descending. Default order for NAME is ascending. The NAME sort order is case sensitive.</p>
+<p>Allowed values are: “NAME”, “TIMECREATED”</p>
+</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+A filter that returns results that match the lifecycle state specified.</p>
+<p>Allowed values are: “ACTIVE”, “FAILED”, “INACTIVE”, “ATTACHING”, “DETACHING”, “DELETING”, “DELETED”, “UPDATING”, “CREATING”</p>
+</li>
+<li><strong>status</strong> (<em>str</em>) – <p>(optional)
+A filter that returns recommendations that match the status specified.</p>
+<p>Allowed values are: “PENDING”, “DISMISSED”, “POSTPONED”, “IMPLEMENTED”</p>
+</li>
+<li><strong>include_resource_metadata</strong> (<em>bool</em>) – (optional)
+Supplement additional resource information in extended metadata response.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.HistoryCollection.html#oci.optimizer.models.HistoryCollection" title="oci.optimizer.models.HistoryCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">HistoryCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/list_histories.py.html">here</a> to see an example of how to use list_histories API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.list_profile_levels">
+<code class="descname">list_profile_levels</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>compartment_id_in_subtree</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.list_profile_levels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the existing profile levels.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment.</li>
+<li><strong>compartment_id_in_subtree</strong> (<em>bool</em>) – <p>(required)
+When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned depending on the the setting of <cite>accessLevel</cite>.</p>
+<p>Can only be set to true when performing ListCompartments on the tenancy (root compartment).</p>
+</li>
+<li><strong>name</strong> (<em>str</em>) – (optional)
+Optional. A filter that returns results that match the name specified.</li>
+<li><strong>recommendation_name</strong> (<em>str</em>) – (optional)
+Optional. A filter that returns results that match the recommendation name specified.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return in a paginated “List” call.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ascending (<cite>ASC</cite>) or descending (<cite>DESC</cite>).</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. You can provide one sort order (<cite>sortOrder</cite>). Default order for TIMECREATED is descending. Default order for NAME is ascending. The NAME sort order is case sensitive.</p>
+<p>Allowed values are: “NAME”, “TIMECREATED”</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.ProfileLevelCollection.html#oci.optimizer.models.ProfileLevelCollection" title="oci.optimizer.models.ProfileLevelCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProfileLevelCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/list_profile_levels.py.html">here</a> to see an example of how to use list_profile_levels API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.list_profiles">
+<code class="descname">list_profiles</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.list_profiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the existing profiles.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment.</li>
+<li><strong>name</strong> (<em>str</em>) – (optional)
+Optional. A filter that returns results that match the name specified.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return in a paginated “List” call.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ascending (<cite>ASC</cite>) or descending (<cite>DESC</cite>).</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. You can provide one sort order (<cite>sortOrder</cite>). Default order for TIMECREATED is descending. Default order for NAME is ascending. The NAME sort order is case sensitive.</p>
+<p>Allowed values are: “NAME”, “TIMECREATED”</p>
+</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+A filter that returns results that match the lifecycle state specified.</p>
+<p>Allowed values are: “ACTIVE”, “FAILED”, “INACTIVE”, “ATTACHING”, “DETACHING”, “DELETING”, “DELETED”, “UPDATING”, “CREATING”</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.ProfileCollection.html#oci.optimizer.models.ProfileCollection" title="oci.optimizer.models.ProfileCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProfileCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/list_profiles.py.html">here</a> to see an example of how to use list_profiles API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.list_recommendation_strategies">
+<code class="descname">list_recommendation_strategies</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>compartment_id_in_subtree</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.list_recommendation_strategies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the existing strategies.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment.</li>
+<li><strong>compartment_id_in_subtree</strong> (<em>bool</em>) – <p>(required)
+When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned depending on the the setting of <cite>accessLevel</cite>.</p>
+<p>Can only be set to true when performing ListCompartments on the tenancy (root compartment).</p>
+</li>
+<li><strong>name</strong> (<em>str</em>) – (optional)
+Optional. A filter that returns results that match the name specified.</li>
+<li><strong>recommendation_name</strong> (<em>str</em>) – (optional)
+Optional. A filter that returns results that match the recommendation name specified.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return in a paginated “List” call.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ascending (<cite>ASC</cite>) or descending (<cite>DESC</cite>).</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. You can provide one sort order (<cite>sortOrder</cite>). Default order for TIMECREATED is descending. Default order for NAME is ascending. The NAME sort order is case sensitive.</p>
+<p>Allowed values are: “NAME”, “TIMECREATED”</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.RecommendationStrategyCollection.html#oci.optimizer.models.RecommendationStrategyCollection" title="oci.optimizer.models.RecommendationStrategyCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">RecommendationStrategyCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/list_recommendation_strategies.py.html">here</a> to see an example of how to use list_recommendation_strategies API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.list_recommendations">
+<code class="descname">list_recommendations</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>compartment_id_in_subtree</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.list_recommendations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the Cloud Advisor recommendations that are currently supported.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment.</li>
+<li><strong>compartment_id_in_subtree</strong> (<em>bool</em>) – <p>(required)
+When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned depending on the the setting of <cite>accessLevel</cite>.</p>
+<p>Can only be set to true when performing ListCompartments on the tenancy (root compartment).</p>
+</li>
+<li><strong>category_id</strong> (<em>str</em>) – (optional)
+The unique OCID associated with the category.</li>
+<li><strong>category_name</strong> (<em>str</em>) – (optional)
+Optional. A filter that returns results that match the category name specified.</li>
+<li><strong>child_tenancy_ids</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – <p>(optional)
+A list of child tenancies for which the respective data will be returned. Please note that
+the parent tenancy id can also be included in this list. For example, if there is a parent P with two
+children A and B, to return results of only parent P and child A, this list should be populated with
+tenancy id of parent P and child A.</p>
+<p>If this list contains a tenancy id that isn’t part of the organization of parent P, the request will
+fail. That is, let’s say there is an organization with parent P with children A and B, and also one
+other tenant T that isn’t part of the organization. If T is included in the list of
+childTenancyIds, the request will fail.</p>
+<p>It is important to note that if you are setting the includeOrganization parameter value as true and
+also populating the childTenancyIds parameter with a list of child tenancies, the request will fail.
+The childTenancyIds and includeOrganization should be used exclusively.</p>
+<p>When using this parameter, please make sure to set the compartmentId with the parent tenancy ID.</p>
+</li>
+<li><strong>include_organization</strong> (<em>bool</em>) – <p>(optional)
+When set to true, the data for all child tenancies including the parent is returned. That is, if
+there is an organization with parent P and children A and B, to return the data for the parent P, child
+A and child B, this parameter value should be set to true.</p>
+<p>Please note that this parameter shouldn’t be used along with childTenancyIds parameter. If you would like
+to get results specifically for parent P and only child A, use the childTenancyIds parameter and populate
+the list with tenancy id of P and A.</p>
+<p>When using this parameter, please make sure to set the compartmentId with the parent tenancy ID.</p>
+</li>
+<li><strong>name</strong> (<em>str</em>) – (optional)
+Optional. A filter that returns results that match the name specified.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return in a paginated “List” call.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ascending (<cite>ASC</cite>) or descending (<cite>DESC</cite>).</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. You can provide one sort order (<cite>sortOrder</cite>). Default order for TIMECREATED is descending. Default order for NAME is ascending. The NAME sort order is case sensitive.</p>
+<p>Allowed values are: “NAME”, “TIMECREATED”</p>
+</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+A filter that returns results that match the lifecycle state specified.</p>
+<p>Allowed values are: “ACTIVE”, “FAILED”, “INACTIVE”, “ATTACHING”, “DETACHING”, “DELETING”, “DELETED”, “UPDATING”, “CREATING”</p>
+</li>
+<li><strong>status</strong> (<em>str</em>) – <p>(optional)
+A filter that returns recommendations that match the status specified.</p>
+<p>Allowed values are: “PENDING”, “DISMISSED”, “POSTPONED”, “IMPLEMENTED”</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.RecommendationCollection.html#oci.optimizer.models.RecommendationCollection" title="oci.optimizer.models.RecommendationCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">RecommendationCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/list_recommendations.py.html">here</a> to see an example of how to use list_recommendations API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.list_resource_action_queryable_fields">
+<code class="descname">list_resource_action_queryable_fields</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>compartment_id_in_subtree</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.list_resource_action_queryable_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the fields that are indexed for querying and their associated value types.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment.</li>
+<li><strong>compartment_id_in_subtree</strong> (<em>bool</em>) – <p>(required)
+When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned depending on the the setting of <cite>accessLevel</cite>.</p>
+<p>Can only be set to true when performing ListCompartments on the tenancy (root compartment).</p>
+</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return in a paginated “List” call.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.QueryableFieldCollection.html#oci.optimizer.models.QueryableFieldCollection" title="oci.optimizer.models.QueryableFieldCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueryableFieldCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/list_resource_action_queryable_fields.py.html">here</a> to see an example of how to use list_resource_action_queryable_fields API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.list_resource_actions">
+<code class="descname">list_resource_actions</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>compartment_id_in_subtree</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.list_resource_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the Cloud Advisor resource actions that are supported.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment.</li>
+<li><strong>compartment_id_in_subtree</strong> (<em>bool</em>) – <p>(required)
+When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned depending on the the setting of <cite>accessLevel</cite>.</p>
+<p>Can only be set to true when performing ListCompartments on the tenancy (root compartment).</p>
+</li>
+<li><strong>recommendation_id</strong> (<em>str</em>) – (optional)
+The unique OCID associated with the recommendation.</li>
+<li><strong>recommendation_name</strong> (<em>str</em>) – (optional)
+Optional. A filter that returns results that match the recommendation name specified.</li>
+<li><strong>child_tenancy_ids</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – <p>(optional)
+A list of child tenancies for which the respective data will be returned. Please note that
+the parent tenancy id can also be included in this list. For example, if there is a parent P with two
+children A and B, to return results of only parent P and child A, this list should be populated with
+tenancy id of parent P and child A.</p>
+<p>If this list contains a tenancy id that isn’t part of the organization of parent P, the request will
+fail. That is, let’s say there is an organization with parent P with children A and B, and also one
+other tenant T that isn’t part of the organization. If T is included in the list of
+childTenancyIds, the request will fail.</p>
+<p>It is important to note that if you are setting the includeOrganization parameter value as true and
+also populating the childTenancyIds parameter with a list of child tenancies, the request will fail.
+The childTenancyIds and includeOrganization should be used exclusively.</p>
+<p>When using this parameter, please make sure to set the compartmentId with the parent tenancy ID.</p>
+</li>
+<li><strong>include_organization</strong> (<em>bool</em>) – <p>(optional)
+When set to true, the data for all child tenancies including the parent is returned. That is, if
+there is an organization with parent P and children A and B, to return the data for the parent P, child
+A and child B, this parameter value should be set to true.</p>
+<p>Please note that this parameter shouldn’t be used along with childTenancyIds parameter. If you would like
+to get results specifically for parent P and only child A, use the childTenancyIds parameter and populate
+the list with tenancy id of P and A.</p>
+<p>When using this parameter, please make sure to set the compartmentId with the parent tenancy ID.</p>
+</li>
+<li><strong>name</strong> (<em>str</em>) – (optional)
+Optional. A filter that returns results that match the name specified.</li>
+<li><strong>resource_type</strong> (<em>str</em>) – (optional)
+Optional. A filter that returns results that match the resource type specified.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return in a paginated “List” call.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ascending (<cite>ASC</cite>) or descending (<cite>DESC</cite>).</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. You can provide one sort order (<cite>sortOrder</cite>). Default order for TIMECREATED is descending. Default order for NAME is ascending. The NAME sort order is case sensitive.</p>
+<p>Allowed values are: “NAME”, “TIMECREATED”</p>
+</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+A filter that returns results that match the lifecycle state specified.</p>
+<p>Allowed values are: “ACTIVE”, “FAILED”, “INACTIVE”, “ATTACHING”, “DETACHING”, “DELETING”, “DELETED”, “UPDATING”, “CREATING”</p>
+</li>
+<li><strong>status</strong> (<em>str</em>) – <p>(optional)
+A filter that returns recommendations that match the status specified.</p>
+<p>Allowed values are: “PENDING”, “DISMISSED”, “POSTPONED”, “IMPLEMENTED”</p>
+</li>
+<li><strong>include_resource_metadata</strong> (<em>bool</em>) – (optional)
+Supplement additional resource information in extended metadata response.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.ResourceActionCollection.html#oci.optimizer.models.ResourceActionCollection" title="oci.optimizer.models.ResourceActionCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceActionCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/list_resource_actions.py.html">here</a> to see an example of how to use list_resource_actions API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.list_work_request_errors">
+<code class="descname">list_work_request_errors</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.list_work_request_errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists errors associated with the specified work request.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The OCID of the work request.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return in a paginated “List” call.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.WorkRequestErrorCollection.html#oci.optimizer.models.WorkRequestErrorCollection" title="oci.optimizer.models.WorkRequestErrorCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestErrorCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/list_work_request_errors.py.html">here</a> to see an example of how to use list_work_request_errors API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.list_work_request_logs">
+<code class="descname">list_work_request_logs</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.list_work_request_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the logs associated with the specified work request.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The OCID of the work request.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return in a paginated “List” call.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.WorkRequestLogEntryCollection.html#oci.optimizer.models.WorkRequestLogEntryCollection" title="oci.optimizer.models.WorkRequestLogEntryCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestLogEntryCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/list_work_request_logs.py.html">here</a> to see an example of how to use list_work_request_logs API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.list_work_requests">
+<code class="descname">list_work_requests</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.list_work_requests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the work requests in the tenancy. The tenancy is the root compartment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The value of the <cite>opc-next-page</cite> response header from the previous “List” call.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return in a paginated “List” call.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.WorkRequestCollection.html#oci.optimizer.models.WorkRequestCollection" title="oci.optimizer.models.WorkRequestCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/list_work_requests.py.html">here</a> to see an example of how to use list_work_requests API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.update_enrollment_status">
+<code class="descname">update_enrollment_status</code><span class="sig-paren">(</span><em>enrollment_status_id</em>, <em>update_enrollment_status_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.update_enrollment_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the enrollment status of the tenancy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>enrollment_status_id</strong> (<em>str</em>) – (required)
+The unique OCID associated with the enrollment status.</li>
+<li><strong>update_enrollment_status_details</strong> (<a class="reference internal" href="../models/oci.optimizer.models.UpdateEnrollmentStatusDetails.html#oci.optimizer.models.UpdateEnrollmentStatusDetails" title="oci.optimizer.models.UpdateEnrollmentStatusDetails"><em>oci.optimizer.models.UpdateEnrollmentStatusDetails</em></a>) – (required)
+The request object for updating the enrollment status.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.EnrollmentStatus.html#oci.optimizer.models.EnrollmentStatus" title="oci.optimizer.models.EnrollmentStatus"><code class="xref py py-class docutils literal notranslate"><span class="pre">EnrollmentStatus</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/update_enrollment_status.py.html">here</a> to see an example of how to use update_enrollment_status API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.update_profile">
+<code class="descname">update_profile</code><span class="sig-paren">(</span><em>profile_id</em>, <em>update_profile_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.update_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the specified profile. Uses the profile’s OCID to determine which profile to update.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>profile_id</strong> (<em>str</em>) – (required)
+The unique OCID of the profile.</li>
+<li><strong>update_profile_details</strong> (<a class="reference internal" href="../models/oci.optimizer.models.UpdateProfileDetails.html#oci.optimizer.models.UpdateProfileDetails" title="oci.optimizer.models.UpdateProfileDetails"><em>oci.optimizer.models.UpdateProfileDetails</em></a>) – (required)
+The profile information to use for the update.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.Profile.html#oci.optimizer.models.Profile" title="oci.optimizer.models.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">Profile</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/update_profile.py.html">here</a> to see an example of how to use update_profile API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.update_recommendation">
+<code class="descname">update_recommendation</code><span class="sig-paren">(</span><em>recommendation_id</em>, <em>update_recommendation_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.update_recommendation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the recommendation that corresponds to the specified OCID.
+Use this operation to implement the following actions:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Postpone recommendation</li>
+<li>Dismiss recommendation</li>
+<li>Reactivate recommendation</li>
+</ul>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>recommendation_id</strong> (<em>str</em>) – (required)
+The unique OCID associated with the recommendation.</li>
+<li><strong>update_recommendation_details</strong> (<a class="reference internal" href="../models/oci.optimizer.models.UpdateRecommendationDetails.html#oci.optimizer.models.UpdateRecommendationDetails" title="oci.optimizer.models.UpdateRecommendationDetails"><em>oci.optimizer.models.UpdateRecommendationDetails</em></a>) – (required)
+The request object for updating the recommendation details.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.Recommendation.html#oci.optimizer.models.Recommendation" title="oci.optimizer.models.Recommendation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Recommendation</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/update_recommendation.py.html">here</a> to see an example of how to use update_recommendation API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.optimizer.OptimizerClient.update_resource_action">
+<code class="descname">update_resource_action</code><span class="sig-paren">(</span><em>resource_action_id</em>, <em>update_resource_action_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.optimizer.OptimizerClient.update_resource_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the resource action that corresponds to the specified OCID.
+Use this operation to implement the following actions:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Postpone resource action</li>
+<li>Ignore resource action</li>
+<li>Reactivate resource action</li>
+</ul>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>resource_action_id</strong> (<em>str</em>) – (required)
+The unique OCID associated with the resource action.</li>
+<li><strong>update_resource_action_details</strong> (<a class="reference internal" href="../models/oci.optimizer.models.UpdateResourceActionDetails.html#oci.optimizer.models.UpdateResourceActionDetails" title="oci.optimizer.models.UpdateResourceActionDetails"><em>oci.optimizer.models.UpdateResourceActionDetails</em></a>) – (required)
+The resource action information to be updated.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+Unique Oracle-assigned identifier for the request.
+If you need to contact Oracle about a particular request, please provide the request ID.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation uses <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> as default if no retry strategy is provided.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.optimizer.models.ResourceAction.html#oci.optimizer.models.ResourceAction" title="oci.optimizer.models.ResourceAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceAction</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/optimizer/update_resource_action.py.html">here</a> to see an example of how to use update_resource_action API.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.optimizer.OptimizerClientCompositeOperations.html" class="btn btn-neutral float-right" title="OptimizerClientCompositeOperations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../optimizer.html" class="btn btn-neutral" title="Optimizer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

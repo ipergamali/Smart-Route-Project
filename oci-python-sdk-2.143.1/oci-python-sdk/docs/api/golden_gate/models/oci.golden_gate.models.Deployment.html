@@ -1,0 +1,2026 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Deployment &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="DeploymentBackup" href="oci.golden_gate.models.DeploymentBackup.html" />
+    <link rel="prev" title="DefaultUpgradeDeploymentUpgradeDetails" href="oci.golden_gate.models.DefaultUpgradeDeploymentUpgradeDetails.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.golden_gate.GoldenGateClient.html">GoldenGateClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.golden_gate.GoldenGateClientCompositeOperations.html">GoldenGateClientCompositeOperations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../golden_gate.html#models">Models</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.AddResourceLockDetails.html">AddResourceLockDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.AmazonKinesisConnection.html">AmazonKinesisConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.AmazonKinesisConnectionSummary.html">AmazonKinesisConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.AmazonRedshiftConnection.html">AmazonRedshiftConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.AmazonRedshiftConnectionSummary.html">AmazonRedshiftConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.AmazonS3Connection.html">AmazonS3Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.AmazonS3ConnectionSummary.html">AmazonS3ConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.AzureDataLakeStorageConnection.html">AzureDataLakeStorageConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.AzureDataLakeStorageConnectionSummary.html">AzureDataLakeStorageConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.AzureSynapseConnection.html">AzureSynapseConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.AzureSynapseConnectionSummary.html">AzureSynapseConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CancelDeploymentBackupDetails.html">CancelDeploymentBackupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CancelDeploymentUpgradeDetails.html">CancelDeploymentUpgradeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CancelSnoozeDeploymentUpgradeDetails.html">CancelSnoozeDeploymentUpgradeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.Certificate.html">Certificate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CertificateCollection.html">CertificateCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CertificateSummary.html">CertificateSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ChangeConnectionCompartmentDetails.html">ChangeConnectionCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ChangeDatabaseRegistrationCompartmentDetails.html">ChangeDatabaseRegistrationCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ChangeDeploymentBackupCompartmentDetails.html">ChangeDeploymentBackupCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ChangeDeploymentCompartmentDetails.html">ChangeDeploymentCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ChangePipelineCompartmentDetails.html">ChangePipelineCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CollectDeploymentDiagnosticDetails.html">CollectDeploymentDiagnosticDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.Connection.html">Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ConnectionAssignment.html">ConnectionAssignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ConnectionAssignmentCollection.html">ConnectionAssignmentCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ConnectionAssignmentSummary.html">ConnectionAssignmentSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ConnectionCollection.html">ConnectionCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ConnectionSummary.html">ConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CopyDeploymentBackupDetails.html">CopyDeploymentBackupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateAmazonKinesisConnectionDetails.html">CreateAmazonKinesisConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateAmazonRedshiftConnectionDetails.html">CreateAmazonRedshiftConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateAmazonS3ConnectionDetails.html">CreateAmazonS3ConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateAzureDataLakeStorageConnectionDetails.html">CreateAzureDataLakeStorageConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateAzureSynapseConnectionDetails.html">CreateAzureSynapseConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateCertificateDetails.html">CreateCertificateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateConnectionAssignmentDetails.html">CreateConnectionAssignmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateConnectionDetails.html">CreateConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateDatabaseRegistrationDetails.html">CreateDatabaseRegistrationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateDb2ConnectionDetails.html">CreateDb2ConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateDeploymentBackupDetails.html">CreateDeploymentBackupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateDeploymentDetails.html">CreateDeploymentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateElasticsearchConnectionDetails.html">CreateElasticsearchConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateGenericConnectionDetails.html">CreateGenericConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateGoldenGateConnectionDetails.html">CreateGoldenGateConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateGoogleBigQueryConnectionDetails.html">CreateGoogleBigQueryConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateGoogleCloudStorageConnectionDetails.html">CreateGoogleCloudStorageConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateHdfsConnectionDetails.html">CreateHdfsConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateJavaMessageServiceConnectionDetails.html">CreateJavaMessageServiceConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateKafkaConnectionDetails.html">CreateKafkaConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateKafkaSchemaRegistryConnectionDetails.html">CreateKafkaSchemaRegistryConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateMaintenanceConfigurationDetails.html">CreateMaintenanceConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateMaintenanceWindowDetails.html">CreateMaintenanceWindowDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateMicrosoftSqlserverConnectionDetails.html">CreateMicrosoftSqlserverConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateMongoDbConnectionDetails.html">CreateMongoDbConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateMysqlConnectionDetails.html">CreateMysqlConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateOciObjectStorageConnectionDetails.html">CreateOciObjectStorageConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateOggDeploymentDetails.html">CreateOggDeploymentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateOracleConnectionDetails.html">CreateOracleConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateOracleNosqlConnectionDetails.html">CreateOracleNosqlConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreatePipelineDetails.html">CreatePipelineDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreatePostgresqlConnectionDetails.html">CreatePostgresqlConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateRedisConnectionDetails.html">CreateRedisConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateSnowflakeConnectionDetails.html">CreateSnowflakeConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.CreateZeroEtlPipelineDetails.html">CreateZeroEtlPipelineDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DatabaseRegistration.html">DatabaseRegistration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DatabaseRegistrationCollection.html">DatabaseRegistrationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DatabaseRegistrationSummary.html">DatabaseRegistrationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.Db2Connection.html">Db2Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.Db2ConnectionSummary.html">Db2ConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DefaultCancelDeploymentBackupDetails.html">DefaultCancelDeploymentBackupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DefaultCancelDeploymentUpgradeDetails.html">DefaultCancelDeploymentUpgradeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DefaultCancelSnoozeDeploymentUpgradeDetails.html">DefaultCancelSnoozeDeploymentUpgradeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DefaultDeploymentWalletExistsDetails.html">DefaultDeploymentWalletExistsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DefaultRefreshConnectionDetails.html">DefaultRefreshConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DefaultRestoreDeploymentDetails.html">DefaultRestoreDeploymentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DefaultRollbackDeploymentUpgradeDetails.html">DefaultRollbackDeploymentUpgradeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DefaultSnoozeDeploymentUpgradeDetails.html">DefaultSnoozeDeploymentUpgradeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DefaultStartDeploymentDetails.html">DefaultStartDeploymentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DefaultStartPipelineDetails.html">DefaultStartPipelineDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DefaultStopDeploymentDetails.html">DefaultStopDeploymentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DefaultStopPipelineDetails.html">DefaultStopPipelineDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DefaultTestConnectionAssignmentDetails.html">DefaultTestConnectionAssignmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DefaultTestPipelineConnectionDetails.html">DefaultTestPipelineConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DefaultUpgradeDeploymentUpgradeDetails.html">DefaultUpgradeDeploymentUpgradeDetails</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Deployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentBackup.html">DeploymentBackup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentBackupCollection.html">DeploymentBackupCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentBackupSummary.html">DeploymentBackupSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentCollection.html">DeploymentCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentDiagnosticData.html">DeploymentDiagnosticData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentEnvironmentCollection.html">DeploymentEnvironmentCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentEnvironmentSummary.html">DeploymentEnvironmentSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentMessageCollection.html">DeploymentMessageCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentSummary.html">DeploymentSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentTypeCollection.html">DeploymentTypeCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentTypeSummary.html">DeploymentTypeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentUpgrade.html">DeploymentUpgrade</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentUpgradeCollection.html">DeploymentUpgradeCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentUpgradeSummary.html">DeploymentUpgradeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentVersionCollection.html">DeploymentVersionCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentVersionSummary.html">DeploymentVersionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentWalletExistsDetails.html">DeploymentWalletExistsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentWalletExistsResponseDetails.html">DeploymentWalletExistsResponseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentWalletsOperationCollection.html">DeploymentWalletsOperationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.DeploymentWalletsOperationSummary.html">DeploymentWalletsOperationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ElasticsearchConnection.html">ElasticsearchConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ElasticsearchConnectionSummary.html">ElasticsearchConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ExportDeploymentWalletDetails.html">ExportDeploymentWalletDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.GenerateLibraryUrlDetails.html">GenerateLibraryUrlDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.GenerateLogReaderComponentLibraryUrlDetails.html">GenerateLogReaderComponentLibraryUrlDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.GenericConnection.html">GenericConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.GenericConnectionSummary.html">GenericConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.GoldenGateConnection.html">GoldenGateConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.GoldenGateConnectionSummary.html">GoldenGateConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.GoogleBigQueryConnection.html">GoogleBigQueryConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.GoogleBigQueryConnectionSummary.html">GoogleBigQueryConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.GoogleCloudStorageConnection.html">GoogleCloudStorageConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.GoogleCloudStorageConnectionSummary.html">GoogleCloudStorageConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.GroupToRolesMappingDetails.html">GroupToRolesMappingDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.HdfsConnection.html">HdfsConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.HdfsConnectionSummary.html">HdfsConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ImportDeploymentWalletDetails.html">ImportDeploymentWalletDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.IngressIpDetails.html">IngressIpDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.InitialDataLoad.html">InitialDataLoad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.JavaMessageServiceConnection.html">JavaMessageServiceConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.JavaMessageServiceConnectionSummary.html">JavaMessageServiceConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.KafkaBootstrapServer.html">KafkaBootstrapServer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.KafkaConnection.html">KafkaConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.KafkaConnectionSummary.html">KafkaConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.KafkaSchemaRegistryConnection.html">KafkaSchemaRegistryConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.KafkaSchemaRegistryConnectionSummary.html">KafkaSchemaRegistryConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.LibraryUrl.html">LibraryUrl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.MaintenanceConfiguration.html">MaintenanceConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.MaintenanceWindow.html">MaintenanceWindow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.MappingRule.html">MappingRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.MessageSummary.html">MessageSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.MicrosoftSqlserverConnection.html">MicrosoftSqlserverConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.MicrosoftSqlserverConnectionSummary.html">MicrosoftSqlserverConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.MongoDbConnection.html">MongoDbConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.MongoDbConnectionSummary.html">MongoDbConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.MysqlConnection.html">MysqlConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.MysqlConnectionSummary.html">MysqlConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.NameValuePair.html">NameValuePair</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.OciObjectStorageConnection.html">OciObjectStorageConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.OciObjectStorageConnectionSummary.html">OciObjectStorageConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.OggDeployment.html">OggDeployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.OracleConnection.html">OracleConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.OracleConnectionSummary.html">OracleConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.OracleNosqlConnection.html">OracleNosqlConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.OracleNosqlConnectionSummary.html">OracleNosqlConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.Pipeline.html">Pipeline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.PipelineCollection.html">PipelineCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.PipelineInitializationStep.html">PipelineInitializationStep</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.PipelineInitializationSteps.html">PipelineInitializationSteps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.PipelineRunningProcessCollection.html">PipelineRunningProcessCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.PipelineRunningProcessSummary.html">PipelineRunningProcessSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.PipelineSchemaCollection.html">PipelineSchemaCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.PipelineSchemaSummary.html">PipelineSchemaSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.PipelineSchemaTableCollection.html">PipelineSchemaTableCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.PipelineSchemaTableSummary.html">PipelineSchemaTableSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.PipelineSummary.html">PipelineSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.PostgresqlConnection.html">PostgresqlConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.PostgresqlConnectionSummary.html">PostgresqlConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ProcessOptions.html">ProcessOptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.RecipeSummary.html">RecipeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.RecipeSummaryCollection.html">RecipeSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.RedisConnection.html">RedisConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.RedisConnectionSummary.html">RedisConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.RefreshConnectionDetails.html">RefreshConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.RemoveResourceLockDetails.html">RemoveResourceLockDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ReplicateSchemaChange.html">ReplicateSchemaChange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.RescheduleDeploymentUpgradeDetails.html">RescheduleDeploymentUpgradeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.RescheduleDeploymentUpgradeToDateDetails.html">RescheduleDeploymentUpgradeToDateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ResourceLock.html">ResourceLock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.RestoreDeploymentDetails.html">RestoreDeploymentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.RollbackDeploymentUpgradeDetails.html">RollbackDeploymentUpgradeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.SnoozeDeploymentUpgradeDetails.html">SnoozeDeploymentUpgradeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.SnowflakeConnection.html">SnowflakeConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.SnowflakeConnectionSummary.html">SnowflakeConnectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.SourcePipelineConnectionDetails.html">SourcePipelineConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.StartDeploymentDetails.html">StartDeploymentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.StartPipelineDetails.html">StartPipelineDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.StepMessage.html">StepMessage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.StopDeploymentDetails.html">StopDeploymentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.StopPipelineDetails.html">StopPipelineDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.TargetPipelineConnectionDetails.html">TargetPipelineConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.TestConnectionAssignmentDetails.html">TestConnectionAssignmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.TestConnectionAssignmentError.html">TestConnectionAssignmentError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.TestConnectionAssignmentResult.html">TestConnectionAssignmentResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.TestPipelineConnectionDetails.html">TestPipelineConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.TestPipelineConnectionError.html">TestPipelineConnectionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.TestPipelineConnectionResult.html">TestPipelineConnectionResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.TrailFileCollection.html">TrailFileCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.TrailFileSummary.html">TrailFileSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.TrailSequenceCollection.html">TrailSequenceCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.TrailSequenceSummary.html">TrailSequenceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateAmazonKinesisConnectionDetails.html">UpdateAmazonKinesisConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateAmazonRedshiftConnectionDetails.html">UpdateAmazonRedshiftConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateAmazonS3ConnectionDetails.html">UpdateAmazonS3ConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateAzureDataLakeStorageConnectionDetails.html">UpdateAzureDataLakeStorageConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateAzureSynapseConnectionDetails.html">UpdateAzureSynapseConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateConnectionDetails.html">UpdateConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateDatabaseRegistrationDetails.html">UpdateDatabaseRegistrationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateDb2ConnectionDetails.html">UpdateDb2ConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateDeploymentBackupDetails.html">UpdateDeploymentBackupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateDeploymentDetails.html">UpdateDeploymentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateElasticsearchConnectionDetails.html">UpdateElasticsearchConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateGenericConnectionDetails.html">UpdateGenericConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateGoldenGateConnectionDetails.html">UpdateGoldenGateConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateGoogleBigQueryConnectionDetails.html">UpdateGoogleBigQueryConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateGoogleCloudStorageConnectionDetails.html">UpdateGoogleCloudStorageConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateGroupToRolesMappingDetails.html">UpdateGroupToRolesMappingDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateHdfsConnectionDetails.html">UpdateHdfsConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateJavaMessageServiceConnectionDetails.html">UpdateJavaMessageServiceConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateKafkaConnectionDetails.html">UpdateKafkaConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateKafkaSchemaRegistryConnectionDetails.html">UpdateKafkaSchemaRegistryConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateMaintenanceConfigurationDetails.html">UpdateMaintenanceConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateMaintenanceWindowDetails.html">UpdateMaintenanceWindowDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateMicrosoftSqlserverConnectionDetails.html">UpdateMicrosoftSqlserverConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateMongoDbConnectionDetails.html">UpdateMongoDbConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateMysqlConnectionDetails.html">UpdateMysqlConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateOciObjectStorageConnectionDetails.html">UpdateOciObjectStorageConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateOggDeploymentDetails.html">UpdateOggDeploymentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateOracleConnectionDetails.html">UpdateOracleConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateOracleNosqlConnectionDetails.html">UpdateOracleNosqlConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdatePipelineDetails.html">UpdatePipelineDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdatePostgresqlConnectionDetails.html">UpdatePostgresqlConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateRedisConnectionDetails.html">UpdateRedisConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateSnowflakeConnectionDetails.html">UpdateSnowflakeConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpdateZeroEtlPipelineDetails.html">UpdateZeroEtlPipelineDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpgradeDeploymentCurrentReleaseDetails.html">UpgradeDeploymentCurrentReleaseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpgradeDeploymentDetails.html">UpgradeDeploymentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpgradeDeploymentSpecificReleaseDetails.html">UpgradeDeploymentSpecificReleaseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.UpgradeDeploymentUpgradeDetails.html">UpgradeDeploymentUpgradeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.WorkRequestResource.html">WorkRequestResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ZeroEtlPipeline.html">ZeroEtlPipeline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.golden_gate.models.ZeroEtlPipelineSummary.html">ZeroEtlPipelineSummary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../golden_gate.html">Golden Gate</a> &raquo;</li>
+        
+      <li>Deployment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/golden_gate/models/oci.golden_gate.models.Deployment.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="deployment">
+<h1>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.golden_gate.models.Deployment">
+<em class="property">class </em><code class="descclassname">oci.golden_gate.models.</code><code class="descname">Deployment</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.golden_gate.models.Deployment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A container for your OCI GoldenGate resources, such as the OCI GoldenGate deployment console.</p>
+<p><strong>Attributes</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.CATEGORY_DATA_REPLICATION" title="oci.golden_gate.models.Deployment.CATEGORY_DATA_REPLICATION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CATEGORY_DATA_REPLICATION</span></code></a></td>
+<td>A constant which can be used with the category property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.CATEGORY_DATA_TRANSFORMS" title="oci.golden_gate.models.Deployment.CATEGORY_DATA_TRANSFORMS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CATEGORY_DATA_TRANSFORMS</span></code></a></td>
+<td>A constant which can be used with the category property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.CATEGORY_STREAM_ANALYTICS" title="oci.golden_gate.models.Deployment.CATEGORY_STREAM_ANALYTICS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CATEGORY_STREAM_ANALYTICS</span></code></a></td>
+<td>A constant which can be used with the category property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_BIGDATA" title="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_BIGDATA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEPLOYMENT_TYPE_BIGDATA</span></code></a></td>
+<td>A constant which can be used with the deployment_type property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_DB2_ZOS" title="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_DB2_ZOS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEPLOYMENT_TYPE_DATABASE_DB2_ZOS</span></code></a></td>
+<td>A constant which can be used with the deployment_type property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_MICROSOFT_SQLSERVER" title="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_MICROSOFT_SQLSERVER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEPLOYMENT_TYPE_DATABASE_MICROSOFT_SQLSERVER</span></code></a></td>
+<td>A constant which can be used with the deployment_type property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_MYSQL" title="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_MYSQL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEPLOYMENT_TYPE_DATABASE_MYSQL</span></code></a></td>
+<td>A constant which can be used with the deployment_type property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_ORACLE" title="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_ORACLE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEPLOYMENT_TYPE_DATABASE_ORACLE</span></code></a></td>
+<td>A constant which can be used with the deployment_type property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_POSTGRESQL" title="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_POSTGRESQL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEPLOYMENT_TYPE_DATABASE_POSTGRESQL</span></code></a></td>
+<td>A constant which can be used with the deployment_type property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATA_TRANSFORMS" title="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATA_TRANSFORMS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEPLOYMENT_TYPE_DATA_TRANSFORMS</span></code></a></td>
+<td>A constant which can be used with the deployment_type property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_GGSA" title="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_GGSA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEPLOYMENT_TYPE_GGSA</span></code></a></td>
+<td>A constant which can be used with the deployment_type property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_OGG" title="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_OGG"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEPLOYMENT_TYPE_OGG</span></code></a></td>
+<td>A constant which can be used with the deployment_type property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.ENVIRONMENT_TYPE_DEVELOPMENT_OR_TESTING" title="oci.golden_gate.models.Deployment.ENVIRONMENT_TYPE_DEVELOPMENT_OR_TESTING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ENVIRONMENT_TYPE_DEVELOPMENT_OR_TESTING</span></code></a></td>
+<td>A constant which can be used with the environment_type property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.ENVIRONMENT_TYPE_PRODUCTION" title="oci.golden_gate.models.Deployment.ENVIRONMENT_TYPE_PRODUCTION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ENVIRONMENT_TYPE_PRODUCTION</span></code></a></td>
+<td>A constant which can be used with the environment_type property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LICENSE_MODEL_BRING_YOUR_OWN_LICENSE" title="oci.golden_gate.models.Deployment.LICENSE_MODEL_BRING_YOUR_OWN_LICENSE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LICENSE_MODEL_BRING_YOUR_OWN_LICENSE</span></code></a></td>
+<td>A constant which can be used with the license_model property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LICENSE_MODEL_LICENSE_INCLUDED" title="oci.golden_gate.models.Deployment.LICENSE_MODEL_LICENSE_INCLUDED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LICENSE_MODEL_LICENSE_INCLUDED</span></code></a></td>
+<td>A constant which can be used with the license_model property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_ACTIVE" title="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_ACTIVE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_ACTIVE</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_CANCELED" title="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_CANCELED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_CANCELED</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_CANCELING" title="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_CANCELING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_CANCELING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_CREATING" title="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_CREATING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_CREATING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_DELETED" title="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_DELETED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_DELETED</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_DELETING" title="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_DELETING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_DELETING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_FAILED" title="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_FAILED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_FAILED</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_INACTIVE" title="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_INACTIVE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_INACTIVE</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_IN_PROGRESS" title="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_IN_PROGRESS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_IN_PROGRESS</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_NEEDS_ATTENTION" title="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_NEEDS_ATTENTION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_NEEDS_ATTENTION</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_SUCCEEDED" title="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_SUCCEEDED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_SUCCEEDED</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_UPDATING" title="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_UPDATING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_UPDATING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_WAITING" title="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_WAITING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_WAITING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_BACKUP_IN_PROGRESS" title="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_BACKUP_IN_PROGRESS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_BACKUP_IN_PROGRESS</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_MOVING" title="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_MOVING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_MOVING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_RECOVERING" title="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_RECOVERING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_RECOVERING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_RESTORING" title="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_RESTORING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_RESTORING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_ROLLBACK_IN_PROGRESS" title="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_ROLLBACK_IN_PROGRESS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_ROLLBACK_IN_PROGRESS</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_STARTING" title="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_STARTING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_STARTING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_STOPPING" title="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_STOPPING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_STOPPING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_UPGRADING" title="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_UPGRADING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_UPGRADING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.NEXT_MAINTENANCE_ACTION_TYPE_UPGRADE" title="oci.golden_gate.models.Deployment.NEXT_MAINTENANCE_ACTION_TYPE_UPGRADE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NEXT_MAINTENANCE_ACTION_TYPE_UPGRADE</span></code></a></td>
+<td>A constant which can be used with the next_maintenance_action_type property of a Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.category" title="oci.golden_gate.models.Deployment.category"><code class="xref py py-obj docutils literal notranslate"><span class="pre">category</span></code></a></td>
+<td><strong>[Required]</strong> Gets the category of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.compartment_id" title="oci.golden_gate.models.Deployment.compartment_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compartment_id</span></code></a></td>
+<td><strong>[Required]</strong> Gets the compartment_id of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.cpu_core_count" title="oci.golden_gate.models.Deployment.cpu_core_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cpu_core_count</span></code></a></td>
+<td><strong>[Required]</strong> Gets the cpu_core_count of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.defined_tags" title="oci.golden_gate.models.Deployment.defined_tags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">defined_tags</span></code></a></td>
+<td>Gets the defined_tags of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.deployment_backup_id" title="oci.golden_gate.models.Deployment.deployment_backup_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deployment_backup_id</span></code></a></td>
+<td>Gets the deployment_backup_id of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.deployment_diagnostic_data" title="oci.golden_gate.models.Deployment.deployment_diagnostic_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deployment_diagnostic_data</span></code></a></td>
+<td>Gets the deployment_diagnostic_data of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.deployment_type" title="oci.golden_gate.models.Deployment.deployment_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deployment_type</span></code></a></td>
+<td><strong>[Required]</strong> Gets the deployment_type of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.deployment_url" title="oci.golden_gate.models.Deployment.deployment_url"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deployment_url</span></code></a></td>
+<td>Gets the deployment_url of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.description" title="oci.golden_gate.models.Deployment.description"><code class="xref py py-obj docutils literal notranslate"><span class="pre">description</span></code></a></td>
+<td>Gets the description of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.display_name" title="oci.golden_gate.models.Deployment.display_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">display_name</span></code></a></td>
+<td>Gets the display_name of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.environment_type" title="oci.golden_gate.models.Deployment.environment_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">environment_type</span></code></a></td>
+<td>Gets the environment_type of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.fqdn" title="oci.golden_gate.models.Deployment.fqdn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fqdn</span></code></a></td>
+<td>Gets the fqdn of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.freeform_tags" title="oci.golden_gate.models.Deployment.freeform_tags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">freeform_tags</span></code></a></td>
+<td>Gets the freeform_tags of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.id" title="oci.golden_gate.models.Deployment.id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">id</span></code></a></td>
+<td><strong>[Required]</strong> Gets the id of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.ingress_ips" title="oci.golden_gate.models.Deployment.ingress_ips"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ingress_ips</span></code></a></td>
+<td>Gets the ingress_ips of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.is_auto_scaling_enabled" title="oci.golden_gate.models.Deployment.is_auto_scaling_enabled"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_auto_scaling_enabled</span></code></a></td>
+<td><strong>[Required]</strong> Gets the is_auto_scaling_enabled of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.is_healthy" title="oci.golden_gate.models.Deployment.is_healthy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_healthy</span></code></a></td>
+<td>Gets the is_healthy of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.is_latest_version" title="oci.golden_gate.models.Deployment.is_latest_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_latest_version</span></code></a></td>
+<td>Gets the is_latest_version of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.is_public" title="oci.golden_gate.models.Deployment.is_public"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_public</span></code></a></td>
+<td>Gets the is_public of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.is_storage_utilization_limit_exceeded" title="oci.golden_gate.models.Deployment.is_storage_utilization_limit_exceeded"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_storage_utilization_limit_exceeded</span></code></a></td>
+<td>Gets the is_storage_utilization_limit_exceeded of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.license_model" title="oci.golden_gate.models.Deployment.license_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">license_model</span></code></a></td>
+<td><strong>[Required]</strong> Gets the license_model of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.lifecycle_details" title="oci.golden_gate.models.Deployment.lifecycle_details"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lifecycle_details</span></code></a></td>
+<td>Gets the lifecycle_details of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.lifecycle_state" title="oci.golden_gate.models.Deployment.lifecycle_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></td>
+<td>Gets the lifecycle_state of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.lifecycle_sub_state" title="oci.golden_gate.models.Deployment.lifecycle_sub_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lifecycle_sub_state</span></code></a></td>
+<td>Gets the lifecycle_sub_state of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.load_balancer_id" title="oci.golden_gate.models.Deployment.load_balancer_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_balancer_id</span></code></a></td>
+<td>Gets the load_balancer_id of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.load_balancer_subnet_id" title="oci.golden_gate.models.Deployment.load_balancer_subnet_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_balancer_subnet_id</span></code></a></td>
+<td>Gets the load_balancer_subnet_id of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.locks" title="oci.golden_gate.models.Deployment.locks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locks</span></code></a></td>
+<td>Gets the locks of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.maintenance_configuration" title="oci.golden_gate.models.Deployment.maintenance_configuration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">maintenance_configuration</span></code></a></td>
+<td>Gets the maintenance_configuration of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.maintenance_window" title="oci.golden_gate.models.Deployment.maintenance_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">maintenance_window</span></code></a></td>
+<td>Gets the maintenance_window of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.next_maintenance_action_type" title="oci.golden_gate.models.Deployment.next_maintenance_action_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">next_maintenance_action_type</span></code></a></td>
+<td>Gets the next_maintenance_action_type of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.next_maintenance_description" title="oci.golden_gate.models.Deployment.next_maintenance_description"><code class="xref py py-obj docutils literal notranslate"><span class="pre">next_maintenance_description</span></code></a></td>
+<td>Gets the next_maintenance_description of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.nsg_ids" title="oci.golden_gate.models.Deployment.nsg_ids"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nsg_ids</span></code></a></td>
+<td>Gets the nsg_ids of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.ogg_data" title="oci.golden_gate.models.Deployment.ogg_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ogg_data</span></code></a></td>
+<td>Gets the ogg_data of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.private_ip_address" title="oci.golden_gate.models.Deployment.private_ip_address"><code class="xref py py-obj docutils literal notranslate"><span class="pre">private_ip_address</span></code></a></td>
+<td>Gets the private_ip_address of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.public_ip_address" title="oci.golden_gate.models.Deployment.public_ip_address"><code class="xref py py-obj docutils literal notranslate"><span class="pre">public_ip_address</span></code></a></td>
+<td>Gets the public_ip_address of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.storage_utilization_in_bytes" title="oci.golden_gate.models.Deployment.storage_utilization_in_bytes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">storage_utilization_in_bytes</span></code></a></td>
+<td>Gets the storage_utilization_in_bytes of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.subnet_id" title="oci.golden_gate.models.Deployment.subnet_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subnet_id</span></code></a></td>
+<td><strong>[Required]</strong> Gets the subnet_id of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.system_tags" title="oci.golden_gate.models.Deployment.system_tags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">system_tags</span></code></a></td>
+<td>Gets the system_tags of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.time_created" title="oci.golden_gate.models.Deployment.time_created"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_created</span></code></a></td>
+<td>Gets the time_created of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.time_of_next_maintenance" title="oci.golden_gate.models.Deployment.time_of_next_maintenance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_of_next_maintenance</span></code></a></td>
+<td>Gets the time_of_next_maintenance of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.time_ogg_version_supported_until" title="oci.golden_gate.models.Deployment.time_ogg_version_supported_until"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_ogg_version_supported_until</span></code></a></td>
+<td>Gets the time_ogg_version_supported_until of this Deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.time_updated" title="oci.golden_gate.models.Deployment.time_updated"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_updated</span></code></a></td>
+<td>Gets the time_updated of this Deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.time_upgrade_required" title="oci.golden_gate.models.Deployment.time_upgrade_required"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_upgrade_required</span></code></a></td>
+<td>Gets the time_upgrade_required of this Deployment.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.golden_gate.models.Deployment.__init__" title="oci.golden_gate.models.Deployment.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(**kwargs)</td>
+<td>Initializes a new Deployment object with values from keyword arguments.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.CATEGORY_DATA_REPLICATION">
+<code class="descname">CATEGORY_DATA_REPLICATION</code><em class="property"> = 'DATA_REPLICATION'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.CATEGORY_DATA_REPLICATION" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the category property of a Deployment.
+This constant has a value of “DATA_REPLICATION”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.CATEGORY_DATA_TRANSFORMS">
+<code class="descname">CATEGORY_DATA_TRANSFORMS</code><em class="property"> = 'DATA_TRANSFORMS'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.CATEGORY_DATA_TRANSFORMS" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the category property of a Deployment.
+This constant has a value of “DATA_TRANSFORMS”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.CATEGORY_STREAM_ANALYTICS">
+<code class="descname">CATEGORY_STREAM_ANALYTICS</code><em class="property"> = 'STREAM_ANALYTICS'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.CATEGORY_STREAM_ANALYTICS" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the category property of a Deployment.
+This constant has a value of “STREAM_ANALYTICS”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_BIGDATA">
+<code class="descname">DEPLOYMENT_TYPE_BIGDATA</code><em class="property"> = 'BIGDATA'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_BIGDATA" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the deployment_type property of a Deployment.
+This constant has a value of “BIGDATA”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_DB2_ZOS">
+<code class="descname">DEPLOYMENT_TYPE_DATABASE_DB2_ZOS</code><em class="property"> = 'DATABASE_DB2ZOS'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_DB2_ZOS" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the deployment_type property of a Deployment.
+This constant has a value of “DATABASE_DB2ZOS”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_MICROSOFT_SQLSERVER">
+<code class="descname">DEPLOYMENT_TYPE_DATABASE_MICROSOFT_SQLSERVER</code><em class="property"> = 'DATABASE_MICROSOFT_SQLSERVER'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_MICROSOFT_SQLSERVER" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the deployment_type property of a Deployment.
+This constant has a value of “DATABASE_MICROSOFT_SQLSERVER”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_MYSQL">
+<code class="descname">DEPLOYMENT_TYPE_DATABASE_MYSQL</code><em class="property"> = 'DATABASE_MYSQL'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_MYSQL" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the deployment_type property of a Deployment.
+This constant has a value of “DATABASE_MYSQL”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_ORACLE">
+<code class="descname">DEPLOYMENT_TYPE_DATABASE_ORACLE</code><em class="property"> = 'DATABASE_ORACLE'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_ORACLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the deployment_type property of a Deployment.
+This constant has a value of “DATABASE_ORACLE”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_POSTGRESQL">
+<code class="descname">DEPLOYMENT_TYPE_DATABASE_POSTGRESQL</code><em class="property"> = 'DATABASE_POSTGRESQL'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATABASE_POSTGRESQL" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the deployment_type property of a Deployment.
+This constant has a value of “DATABASE_POSTGRESQL”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATA_TRANSFORMS">
+<code class="descname">DEPLOYMENT_TYPE_DATA_TRANSFORMS</code><em class="property"> = 'DATA_TRANSFORMS'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_DATA_TRANSFORMS" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the deployment_type property of a Deployment.
+This constant has a value of “DATA_TRANSFORMS”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_GGSA">
+<code class="descname">DEPLOYMENT_TYPE_GGSA</code><em class="property"> = 'GGSA'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_GGSA" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the deployment_type property of a Deployment.
+This constant has a value of “GGSA”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_OGG">
+<code class="descname">DEPLOYMENT_TYPE_OGG</code><em class="property"> = 'OGG'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.DEPLOYMENT_TYPE_OGG" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the deployment_type property of a Deployment.
+This constant has a value of “OGG”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.ENVIRONMENT_TYPE_DEVELOPMENT_OR_TESTING">
+<code class="descname">ENVIRONMENT_TYPE_DEVELOPMENT_OR_TESTING</code><em class="property"> = 'DEVELOPMENT_OR_TESTING'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.ENVIRONMENT_TYPE_DEVELOPMENT_OR_TESTING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the environment_type property of a Deployment.
+This constant has a value of “DEVELOPMENT_OR_TESTING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.ENVIRONMENT_TYPE_PRODUCTION">
+<code class="descname">ENVIRONMENT_TYPE_PRODUCTION</code><em class="property"> = 'PRODUCTION'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.ENVIRONMENT_TYPE_PRODUCTION" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the environment_type property of a Deployment.
+This constant has a value of “PRODUCTION”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LICENSE_MODEL_BRING_YOUR_OWN_LICENSE">
+<code class="descname">LICENSE_MODEL_BRING_YOUR_OWN_LICENSE</code><em class="property"> = 'BRING_YOUR_OWN_LICENSE'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LICENSE_MODEL_BRING_YOUR_OWN_LICENSE" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the license_model property of a Deployment.
+This constant has a value of “BRING_YOUR_OWN_LICENSE”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LICENSE_MODEL_LICENSE_INCLUDED">
+<code class="descname">LICENSE_MODEL_LICENSE_INCLUDED</code><em class="property"> = 'LICENSE_INCLUDED'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LICENSE_MODEL_LICENSE_INCLUDED" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the license_model property of a Deployment.
+This constant has a value of “LICENSE_INCLUDED”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_ACTIVE">
+<code class="descname">LIFECYCLE_STATE_ACTIVE</code><em class="property"> = 'ACTIVE'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_ACTIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a Deployment.
+This constant has a value of “ACTIVE”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_CANCELED">
+<code class="descname">LIFECYCLE_STATE_CANCELED</code><em class="property"> = 'CANCELED'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_CANCELED" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a Deployment.
+This constant has a value of “CANCELED”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_CANCELING">
+<code class="descname">LIFECYCLE_STATE_CANCELING</code><em class="property"> = 'CANCELING'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_CANCELING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a Deployment.
+This constant has a value of “CANCELING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_CREATING">
+<code class="descname">LIFECYCLE_STATE_CREATING</code><em class="property"> = 'CREATING'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_CREATING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a Deployment.
+This constant has a value of “CREATING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_DELETED">
+<code class="descname">LIFECYCLE_STATE_DELETED</code><em class="property"> = 'DELETED'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_DELETED" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a Deployment.
+This constant has a value of “DELETED”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_DELETING">
+<code class="descname">LIFECYCLE_STATE_DELETING</code><em class="property"> = 'DELETING'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_DELETING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a Deployment.
+This constant has a value of “DELETING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_FAILED">
+<code class="descname">LIFECYCLE_STATE_FAILED</code><em class="property"> = 'FAILED'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a Deployment.
+This constant has a value of “FAILED”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_INACTIVE">
+<code class="descname">LIFECYCLE_STATE_INACTIVE</code><em class="property"> = 'INACTIVE'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_INACTIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a Deployment.
+This constant has a value of “INACTIVE”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_IN_PROGRESS">
+<code class="descname">LIFECYCLE_STATE_IN_PROGRESS</code><em class="property"> = 'IN_PROGRESS'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a Deployment.
+This constant has a value of “IN_PROGRESS”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_NEEDS_ATTENTION">
+<code class="descname">LIFECYCLE_STATE_NEEDS_ATTENTION</code><em class="property"> = 'NEEDS_ATTENTION'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_NEEDS_ATTENTION" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a Deployment.
+This constant has a value of “NEEDS_ATTENTION”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_SUCCEEDED">
+<code class="descname">LIFECYCLE_STATE_SUCCEEDED</code><em class="property"> = 'SUCCEEDED'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_SUCCEEDED" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a Deployment.
+This constant has a value of “SUCCEEDED”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_UPDATING">
+<code class="descname">LIFECYCLE_STATE_UPDATING</code><em class="property"> = 'UPDATING'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_UPDATING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a Deployment.
+This constant has a value of “UPDATING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_STATE_WAITING">
+<code class="descname">LIFECYCLE_STATE_WAITING</code><em class="property"> = 'WAITING'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_STATE_WAITING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a Deployment.
+This constant has a value of “WAITING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_BACKUP_IN_PROGRESS">
+<code class="descname">LIFECYCLE_SUB_STATE_BACKUP_IN_PROGRESS</code><em class="property"> = 'BACKUP_IN_PROGRESS'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_BACKUP_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a Deployment.
+This constant has a value of “BACKUP_IN_PROGRESS”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_MOVING">
+<code class="descname">LIFECYCLE_SUB_STATE_MOVING</code><em class="property"> = 'MOVING'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_MOVING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a Deployment.
+This constant has a value of “MOVING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_RECOVERING">
+<code class="descname">LIFECYCLE_SUB_STATE_RECOVERING</code><em class="property"> = 'RECOVERING'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_RECOVERING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a Deployment.
+This constant has a value of “RECOVERING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_RESTORING">
+<code class="descname">LIFECYCLE_SUB_STATE_RESTORING</code><em class="property"> = 'RESTORING'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_RESTORING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a Deployment.
+This constant has a value of “RESTORING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_ROLLBACK_IN_PROGRESS">
+<code class="descname">LIFECYCLE_SUB_STATE_ROLLBACK_IN_PROGRESS</code><em class="property"> = 'ROLLBACK_IN_PROGRESS'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_ROLLBACK_IN_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a Deployment.
+This constant has a value of “ROLLBACK_IN_PROGRESS”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_STARTING">
+<code class="descname">LIFECYCLE_SUB_STATE_STARTING</code><em class="property"> = 'STARTING'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_STARTING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a Deployment.
+This constant has a value of “STARTING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_STOPPING">
+<code class="descname">LIFECYCLE_SUB_STATE_STOPPING</code><em class="property"> = 'STOPPING'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_STOPPING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a Deployment.
+This constant has a value of “STOPPING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_UPGRADING">
+<code class="descname">LIFECYCLE_SUB_STATE_UPGRADING</code><em class="property"> = 'UPGRADING'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.LIFECYCLE_SUB_STATE_UPGRADING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a Deployment.
+This constant has a value of “UPGRADING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.NEXT_MAINTENANCE_ACTION_TYPE_UPGRADE">
+<code class="descname">NEXT_MAINTENANCE_ACTION_TYPE_UPGRADE</code><em class="property"> = 'UPGRADE'</em><a class="headerlink" href="#oci.golden_gate.models.Deployment.NEXT_MAINTENANCE_ACTION_TYPE_UPGRADE" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the next_maintenance_action_type property of a Deployment.
+This constant has a value of “UPGRADE”</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.golden_gate.models.Deployment.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.golden_gate.models.Deployment.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new Deployment object with values from keyword arguments.
+The following keyword arguments are supported (corresponding to the getters/setters of this class):</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>str</em>) – The value to assign to the id property of this Deployment.</li>
+<li><strong>display_name</strong> (<em>str</em>) – The value to assign to the display_name property of this Deployment.</li>
+<li><strong>description</strong> (<em>str</em>) – The value to assign to the description property of this Deployment.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – The value to assign to the compartment_id property of this Deployment.</li>
+<li><strong>deployment_backup_id</strong> (<em>str</em>) – The value to assign to the deployment_backup_id property of this Deployment.</li>
+<li><strong>time_created</strong> (<em>datetime</em>) – The value to assign to the time_created property of this Deployment.</li>
+<li><strong>time_updated</strong> (<em>datetime</em>) – The value to assign to the time_updated property of this Deployment.</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – The value to assign to the lifecycle_state property of this Deployment.
+Allowed values for this property are: “CREATING”, “UPDATING”, “ACTIVE”, “INACTIVE”, “DELETING”, “DELETED”, “FAILED”, “NEEDS_ATTENTION”, “IN_PROGRESS”, “CANCELING”, “CANCELED”, “SUCCEEDED”, “WAITING”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>lifecycle_sub_state</strong> (<em>str</em>) – The value to assign to the lifecycle_sub_state property of this Deployment.
+Allowed values for this property are: “RECOVERING”, “STARTING”, “STOPPING”, “MOVING”, “UPGRADING”, “RESTORING”, “BACKUP_IN_PROGRESS”, “ROLLBACK_IN_PROGRESS”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>lifecycle_details</strong> (<em>str</em>) – The value to assign to the lifecycle_details property of this Deployment.</li>
+<li><strong>freeform_tags</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>str</em><em>)</em>) – The value to assign to the freeform_tags property of this Deployment.</li>
+<li><strong>defined_tags</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>dict</em><em>(</em><em>str</em><em>, </em><em>object</em><em>)</em><em>)</em>) – The value to assign to the defined_tags property of this Deployment.</li>
+<li><strong>locks</strong> (<em>list</em><em>[</em><a class="reference internal" href="oci.golden_gate.models.ResourceLock.html#oci.golden_gate.models.ResourceLock" title="oci.golden_gate.models.ResourceLock"><em>oci.golden_gate.models.ResourceLock</em></a><em>]</em>) – The value to assign to the locks property of this Deployment.</li>
+<li><strong>is_healthy</strong> (<em>bool</em>) – The value to assign to the is_healthy property of this Deployment.</li>
+<li><strong>subnet_id</strong> (<em>str</em>) – The value to assign to the subnet_id property of this Deployment.</li>
+<li><strong>load_balancer_subnet_id</strong> (<em>str</em>) – The value to assign to the load_balancer_subnet_id property of this Deployment.</li>
+<li><strong>load_balancer_id</strong> (<em>str</em>) – The value to assign to the load_balancer_id property of this Deployment.</li>
+<li><strong>fqdn</strong> (<em>str</em>) – The value to assign to the fqdn property of this Deployment.</li>
+<li><strong>license_model</strong> (<em>str</em>) – The value to assign to the license_model property of this Deployment.
+Allowed values for this property are: “LICENSE_INCLUDED”, “BRING_YOUR_OWN_LICENSE”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>environment_type</strong> (<em>str</em>) – The value to assign to the environment_type property of this Deployment.
+Allowed values for this property are: “PRODUCTION”, “DEVELOPMENT_OR_TESTING”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>category</strong> (<em>str</em>) – The value to assign to the category property of this Deployment.
+Allowed values for this property are: “DATA_REPLICATION”, “STREAM_ANALYTICS”, “DATA_TRANSFORMS”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>cpu_core_count</strong> (<em>int</em>) – The value to assign to the cpu_core_count property of this Deployment.</li>
+<li><strong>is_auto_scaling_enabled</strong> (<em>bool</em>) – The value to assign to the is_auto_scaling_enabled property of this Deployment.</li>
+<li><strong>nsg_ids</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – The value to assign to the nsg_ids property of this Deployment.</li>
+<li><strong>is_public</strong> (<em>bool</em>) – The value to assign to the is_public property of this Deployment.</li>
+<li><strong>public_ip_address</strong> (<em>str</em>) – The value to assign to the public_ip_address property of this Deployment.</li>
+<li><strong>private_ip_address</strong> (<em>str</em>) – The value to assign to the private_ip_address property of this Deployment.</li>
+<li><strong>deployment_url</strong> (<em>str</em>) – The value to assign to the deployment_url property of this Deployment.</li>
+<li><strong>system_tags</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>dict</em><em>(</em><em>str</em><em>, </em><em>object</em><em>)</em><em>)</em>) – The value to assign to the system_tags property of this Deployment.</li>
+<li><strong>is_latest_version</strong> (<em>bool</em>) – The value to assign to the is_latest_version property of this Deployment.</li>
+<li><strong>time_upgrade_required</strong> (<em>datetime</em>) – The value to assign to the time_upgrade_required property of this Deployment.</li>
+<li><strong>storage_utilization_in_bytes</strong> (<em>int</em>) – The value to assign to the storage_utilization_in_bytes property of this Deployment.</li>
+<li><strong>is_storage_utilization_limit_exceeded</strong> (<em>bool</em>) – The value to assign to the is_storage_utilization_limit_exceeded property of this Deployment.</li>
+<li><strong>deployment_type</strong> (<em>str</em>) – The value to assign to the deployment_type property of this Deployment.
+Allowed values for this property are: “OGG”, “DATABASE_ORACLE”, “BIGDATA”, “DATABASE_MICROSOFT_SQLSERVER”, “DATABASE_MYSQL”, “DATABASE_POSTGRESQL”, “DATABASE_DB2ZOS”, “GGSA”, “DATA_TRANSFORMS”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>ogg_data</strong> (<a class="reference internal" href="oci.golden_gate.models.OggDeployment.html#oci.golden_gate.models.OggDeployment" title="oci.golden_gate.models.OggDeployment"><em>oci.golden_gate.models.OggDeployment</em></a>) – The value to assign to the ogg_data property of this Deployment.</li>
+<li><strong>deployment_diagnostic_data</strong> (<a class="reference internal" href="oci.golden_gate.models.DeploymentDiagnosticData.html#oci.golden_gate.models.DeploymentDiagnosticData" title="oci.golden_gate.models.DeploymentDiagnosticData"><em>oci.golden_gate.models.DeploymentDiagnosticData</em></a>) – The value to assign to the deployment_diagnostic_data property of this Deployment.</li>
+<li><strong>maintenance_window</strong> (<a class="reference internal" href="oci.golden_gate.models.MaintenanceWindow.html#oci.golden_gate.models.MaintenanceWindow" title="oci.golden_gate.models.MaintenanceWindow"><em>oci.golden_gate.models.MaintenanceWindow</em></a>) – The value to assign to the maintenance_window property of this Deployment.</li>
+<li><strong>time_of_next_maintenance</strong> (<em>datetime</em>) – The value to assign to the time_of_next_maintenance property of this Deployment.</li>
+<li><strong>next_maintenance_action_type</strong> (<em>str</em>) – The value to assign to the next_maintenance_action_type property of this Deployment.
+Allowed values for this property are: “UPGRADE”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>next_maintenance_description</strong> (<em>str</em>) – The value to assign to the next_maintenance_description property of this Deployment.</li>
+<li><strong>maintenance_configuration</strong> (<a class="reference internal" href="oci.golden_gate.models.MaintenanceConfiguration.html#oci.golden_gate.models.MaintenanceConfiguration" title="oci.golden_gate.models.MaintenanceConfiguration"><em>oci.golden_gate.models.MaintenanceConfiguration</em></a>) – The value to assign to the maintenance_configuration property of this Deployment.</li>
+<li><strong>time_ogg_version_supported_until</strong> (<em>datetime</em>) – The value to assign to the time_ogg_version_supported_until property of this Deployment.</li>
+<li><strong>ingress_ips</strong> (<em>list</em><em>[</em><a class="reference internal" href="oci.golden_gate.models.IngressIpDetails.html#oci.golden_gate.models.IngressIpDetails" title="oci.golden_gate.models.IngressIpDetails"><em>oci.golden_gate.models.IngressIpDetails</em></a><em>]</em>) – The value to assign to the ingress_ips property of this Deployment.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.category">
+<code class="descname">category</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.category" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the category of this Deployment.
+The deployment category defines the broad separation of the deployment type into three categories.
+Currently the separation is ‘DATA_REPLICATION’, ‘STREAM_ANALYTICS’ and ‘DATA_TRANSFORMS’.</p>
+<p>Allowed values for this property are: “DATA_REPLICATION”, “STREAM_ANALYTICS”, “DATA_TRANSFORMS”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The category of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.compartment_id">
+<code class="descname">compartment_id</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.compartment_id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the compartment_id of this Deployment.
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the compartment being referenced.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The compartment_id of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.cpu_core_count">
+<code class="descname">cpu_core_count</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.cpu_core_count" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the cpu_core_count of this Deployment.
+The Minimum number of OCPUs to be made available for this Deployment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The cpu_core_count of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.defined_tags">
+<code class="descname">defined_tags</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.defined_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the defined_tags of this Deployment.
+Tags defined for this resource. Each key is predefined and scoped to a namespace.</p>
+<p>Example: <cite>{“foo-namespace”: {“bar-key”: “value”}}</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The defined_tags of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict(str, dict(str, object))</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.deployment_backup_id">
+<code class="descname">deployment_backup_id</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.deployment_backup_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the deployment_backup_id of this Deployment.
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the backup being referenced.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The deployment_backup_id of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.deployment_diagnostic_data">
+<code class="descname">deployment_diagnostic_data</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.deployment_diagnostic_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the deployment_diagnostic_data of this Deployment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The deployment_diagnostic_data of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.golden_gate.models.DeploymentDiagnosticData.html#oci.golden_gate.models.DeploymentDiagnosticData" title="oci.golden_gate.models.DeploymentDiagnosticData">oci.golden_gate.models.DeploymentDiagnosticData</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.deployment_type">
+<code class="descname">deployment_type</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.deployment_type" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the deployment_type of this Deployment.
+The type of deployment, which can be any one of the Allowed values.
+NOTE: Use of the value ‘OGG’ is maintained for backward compatibility purposes.</p>
+<blockquote>
+<div>Its use is discouraged in favor of ‘DATABASE_ORACLE’.</div></blockquote>
+<p>Allowed values for this property are: “OGG”, “DATABASE_ORACLE”, “BIGDATA”, “DATABASE_MICROSOFT_SQLSERVER”, “DATABASE_MYSQL”, “DATABASE_POSTGRESQL”, “DATABASE_DB2ZOS”, “GGSA”, “DATA_TRANSFORMS”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The deployment_type of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.deployment_url">
+<code class="descname">deployment_url</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.deployment_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the deployment_url of this Deployment.
+The URL of a resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The deployment_url of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.description">
+<code class="descname">description</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the description of this Deployment.
+Metadata about this specific object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The description of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.display_name">
+<code class="descname">display_name</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the display_name of this Deployment.
+An object’s Display Name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The display_name of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.environment_type">
+<code class="descname">environment_type</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.environment_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the environment_type of this Deployment.
+Specifies whether the deployment is used in a production or development/testing environment.</p>
+<p>Allowed values for this property are: “PRODUCTION”, “DEVELOPMENT_OR_TESTING”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The environment_type of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.fqdn">
+<code class="descname">fqdn</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.fqdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the fqdn of this Deployment.
+A three-label Fully Qualified Domain Name (FQDN) for a resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The fqdn of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.freeform_tags">
+<code class="descname">freeform_tags</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.freeform_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the freeform_tags of this Deployment.
+A simple key-value pair that is applied without any predefined name, type, or scope. Exists
+for cross-compatibility only.</p>
+<p>Example: <cite>{“bar-key”: “value”}</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The freeform_tags of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict(str, str)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.id">
+<code class="descname">id</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the id of this Deployment.
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the deployment being referenced.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The id of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.ingress_ips">
+<code class="descname">ingress_ips</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.ingress_ips" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the ingress_ips of this Deployment.
+List of ingress IP addresses from where the GoldenGate deployment connects to this connection’s privateIp.
+Customers may optionally set up ingress security rules to restrict traffic from these IP addresses.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The ingress_ips of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[<a class="reference internal" href="oci.golden_gate.models.IngressIpDetails.html#oci.golden_gate.models.IngressIpDetails" title="oci.golden_gate.models.IngressIpDetails">oci.golden_gate.models.IngressIpDetails</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.is_auto_scaling_enabled">
+<code class="descname">is_auto_scaling_enabled</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.is_auto_scaling_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the is_auto_scaling_enabled of this Deployment.
+Indicates if auto scaling is enabled for the Deployment’s CPU core count.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_auto_scaling_enabled of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.is_healthy">
+<code class="descname">is_healthy</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.is_healthy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_healthy of this Deployment.
+True if all of the aggregate resources are working correctly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_healthy of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.is_latest_version">
+<code class="descname">is_latest_version</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.is_latest_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_latest_version of this Deployment.
+Indicates if the resource is the the latest available version.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_latest_version of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.is_public">
+<code class="descname">is_public</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.is_public" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_public of this Deployment.
+True if this object is publicly available.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_public of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.is_storage_utilization_limit_exceeded">
+<code class="descname">is_storage_utilization_limit_exceeded</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.is_storage_utilization_limit_exceeded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_storage_utilization_limit_exceeded of this Deployment.
+Deprecated: This field is not updated and will be removed in future versions. If storage utilization exceeds the limit, the respective warning message will appear in deployment messages, which can be accessed through /messages?deploymentId=.
+Indicator will be true if the amount of storage being utilized exceeds the allowable storage utilization limit.  Exceeding the limit may be an indication of a misconfiguration of the deployment’s GoldenGate service.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_storage_utilization_limit_exceeded of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.license_model">
+<code class="descname">license_model</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.license_model" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the license_model of this Deployment.
+The Oracle license model that applies to a Deployment.</p>
+<p>Allowed values for this property are: “LICENSE_INCLUDED”, “BRING_YOUR_OWN_LICENSE”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The license_model of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.lifecycle_details">
+<code class="descname">lifecycle_details</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.lifecycle_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the lifecycle_details of this Deployment.
+Describes the object’s current state in detail. For example, it can be used to provide
+actionable information for a resource in a Failed state.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The lifecycle_details of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.lifecycle_state">
+<code class="descname">lifecycle_state</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.lifecycle_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the lifecycle_state of this Deployment.
+Possible lifecycle states.</p>
+<p>Allowed values for this property are: “CREATING”, “UPDATING”, “ACTIVE”, “INACTIVE”, “DELETING”, “DELETED”, “FAILED”, “NEEDS_ATTENTION”, “IN_PROGRESS”, “CANCELING”, “CANCELED”, “SUCCEEDED”, “WAITING”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The lifecycle_state of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.lifecycle_sub_state">
+<code class="descname">lifecycle_sub_state</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.lifecycle_sub_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the lifecycle_sub_state of this Deployment.
+Possible GGS lifecycle sub-states.</p>
+<p>Allowed values for this property are: “RECOVERING”, “STARTING”, “STOPPING”, “MOVING”, “UPGRADING”, “RESTORING”, “BACKUP_IN_PROGRESS”, “ROLLBACK_IN_PROGRESS”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The lifecycle_sub_state of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.load_balancer_id">
+<code class="descname">load_balancer_id</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.load_balancer_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the load_balancer_id of this Deployment.
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the loadbalancer in the customer’s subnet.
+The loadbalancer of the public deployment created in the customer subnet.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The load_balancer_id of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.load_balancer_subnet_id">
+<code class="descname">load_balancer_subnet_id</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.load_balancer_subnet_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the load_balancer_subnet_id of this Deployment.
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of a public subnet in the customer tenancy.
+Can be provided only for public deployments. If provided, the loadbalancer will be created in this subnet instead of the service tenancy.
+For backward compatibility, this is an optional property. It will become mandatory for public deployments after October 1, 2024.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The load_balancer_subnet_id of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.locks">
+<code class="descname">locks</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.locks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the locks of this Deployment.
+Locks associated with this resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The locks of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[<a class="reference internal" href="oci.golden_gate.models.ResourceLock.html#oci.golden_gate.models.ResourceLock" title="oci.golden_gate.models.ResourceLock">oci.golden_gate.models.ResourceLock</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.maintenance_configuration">
+<code class="descname">maintenance_configuration</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.maintenance_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the maintenance_configuration of this Deployment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The maintenance_configuration of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.golden_gate.models.MaintenanceConfiguration.html#oci.golden_gate.models.MaintenanceConfiguration" title="oci.golden_gate.models.MaintenanceConfiguration">oci.golden_gate.models.MaintenanceConfiguration</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.maintenance_window">
+<code class="descname">maintenance_window</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.maintenance_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the maintenance_window of this Deployment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The maintenance_window of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.golden_gate.models.MaintenanceWindow.html#oci.golden_gate.models.MaintenanceWindow" title="oci.golden_gate.models.MaintenanceWindow">oci.golden_gate.models.MaintenanceWindow</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.next_maintenance_action_type">
+<code class="descname">next_maintenance_action_type</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.next_maintenance_action_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the next_maintenance_action_type of this Deployment.
+Type of the next maintenance.</p>
+<p>Allowed values for this property are: “UPGRADE”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The next_maintenance_action_type of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.next_maintenance_description">
+<code class="descname">next_maintenance_description</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.next_maintenance_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the next_maintenance_description of this Deployment.
+Description of the next maintenance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The next_maintenance_description of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.nsg_ids">
+<code class="descname">nsg_ids</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.nsg_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the nsg_ids of this Deployment.
+An array of Network Security Group OCIDs used to define network access for either Deployments or Connections.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The nsg_ids of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.ogg_data">
+<code class="descname">ogg_data</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.ogg_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the ogg_data of this Deployment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The ogg_data of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.golden_gate.models.OggDeployment.html#oci.golden_gate.models.OggDeployment" title="oci.golden_gate.models.OggDeployment">oci.golden_gate.models.OggDeployment</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.private_ip_address">
+<code class="descname">private_ip_address</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.private_ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the private_ip_address of this Deployment.
+The private IP address in the customer’s VCN representing the access point for the
+associated endpoint service in the GoldenGate service VCN.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The private_ip_address of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.public_ip_address">
+<code class="descname">public_ip_address</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.public_ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the public_ip_address of this Deployment.
+The public IP address representing the access point for the Deployment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The public_ip_address of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.storage_utilization_in_bytes">
+<code class="descname">storage_utilization_in_bytes</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.storage_utilization_in_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the storage_utilization_in_bytes of this Deployment.
+The amount of storage being utilized (in bytes)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The storage_utilization_in_bytes of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.subnet_id">
+<code class="descname">subnet_id</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.subnet_id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the subnet_id of this Deployment.
+The <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a> of the subnet of the deployment’s private endpoint.
+The subnet must be a private subnet. For backward compatibility, public subnets are allowed until May 31 2025,
+after which the private subnet will be enforced.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The subnet_id of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.system_tags">
+<code class="descname">system_tags</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.system_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the system_tags of this Deployment.
+The system tags associated with this resource, if any. The system tags are set by Oracle
+Cloud Infrastructure services. Each key is predefined and scoped to namespaces.  For more
+information, see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm">Resource Tags</a>.</p>
+<p>Example: <cite>{orcl-cloud: {free-tier-retain: true}}</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The system_tags of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict(str, dict(str, object))</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.time_created">
+<code class="descname">time_created</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.time_created" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_created of this Deployment.
+The time the resource was created. The format is defined by
+<a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a>, such as <cite>2016-08-25T21:10:29.600Z</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_created of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.time_of_next_maintenance">
+<code class="descname">time_of_next_maintenance</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.time_of_next_maintenance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_of_next_maintenance of this Deployment.
+The time of next maintenance schedule. The format is defined by
+<a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a>, such as <cite>2016-08-25T21:10:29.600Z</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_of_next_maintenance of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.time_ogg_version_supported_until">
+<code class="descname">time_ogg_version_supported_until</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.time_ogg_version_supported_until" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_ogg_version_supported_until of this Deployment.
+The time until OGG version is supported. After this date has passed OGG version will not be available anymore. The format is defined by
+<a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a>, such as <cite>2016-08-25T21:10:29.600Z</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_ogg_version_supported_until of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.time_updated">
+<code class="descname">time_updated</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.time_updated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_updated of this Deployment.
+The time the resource was last updated. The format is defined by
+<a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a>, such as <cite>2016-08-25T21:10:29.600Z</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_updated of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.golden_gate.models.Deployment.time_upgrade_required">
+<code class="descname">time_upgrade_required</code><a class="headerlink" href="#oci.golden_gate.models.Deployment.time_upgrade_required" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_upgrade_required of this Deployment.
+Note: Deprecated: Use timeOfNextMaintenance instead, or related upgrade records
+to check, when deployment will be forced to upgrade to a newer version.
+Old description:
+The date the existing version in use will no longer be considered as usable
+and an upgrade will be required.  This date is typically 6 months after the
+version was released for use by GGS.  The format is defined by
+<a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a>, such as <cite>2016-08-25T21:10:29.600Z</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_upgrade_required of this Deployment.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.golden_gate.models.DeploymentBackup.html" class="btn btn-neutral float-right" title="DeploymentBackup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.golden_gate.models.DefaultUpgradeDeploymentUpgradeDetails.html" class="btn btn-neutral" title="DefaultUpgradeDeploymentUpgradeDetails" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1435 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CompareCommandDescriptor &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="CompareContentDetails" href="oci.log_analytics.models.CompareContentDetails.html" />
+    <link rel="prev" title="CommandDescriptor" href="oci.log_analytics.models.CommandDescriptor.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.log_analytics.LogAnalyticsClient.html">LogAnalyticsClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.log_analytics.LogAnalyticsClientCompositeOperations.html">LogAnalyticsClientCompositeOperations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../log_analytics.html#models">Models</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AbstractColumn.html">AbstractColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AbstractCommandDescriptor.html">AbstractCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AbstractField.html">AbstractField</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AbstractParserTestResultLogEntry.html">AbstractParserTestResultLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AbstractParserTestResultLogLine.html">AbstractParserTestResultLogLine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.Action.html">Action</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AddEntityAssociationDetails.html">AddEntityAssociationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AddFieldsCommandDescriptor.html">AddFieldsCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AddInsightsCommandDescriptor.html">AddInsightsCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AnomalyCommandDescriptor.html">AnomalyCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ArchivingConfiguration.html">ArchivingConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.Argument.html">Argument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AssignEncryptionKeyDetails.html">AssignEncryptionKeyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AssociableEntity.html">AssociableEntity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AssociableEntityCollection.html">AssociableEntityCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AssociationProperty.html">AssociationProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AssociationSummaryReport.html">AssociationSummaryReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AutoAssociationCollection.html">AutoAssociationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AutoAssociationState.html">AutoAssociationState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.AutoLookups.html">AutoLookups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.BottomCommandDescriptor.html">BottomCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.BucketCommandDescriptor.html">BucketCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.BucketRange.html">BucketRange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ChangeIngestTimeRuleCompartmentDetails.html">ChangeIngestTimeRuleCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ChangeLogAnalyticsEmBridgeCompartmentDetails.html">ChangeLogAnalyticsEmBridgeCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ChangeLogAnalyticsEntityCompartmentDetails.html">ChangeLogAnalyticsEntityCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ChangeLogAnalyticsLogGroupCompartmentDetails.html">ChangeLogAnalyticsLogGroupCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ChangeLogAnalyticsObjectCollectionRuleCompartmentDetails.html">ChangeLogAnalyticsObjectCollectionRuleCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ChangeScheduledTaskCompartmentDetails.html">ChangeScheduledTaskCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CharEncodingCollection.html">CharEncodingCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ChartColumn.html">ChartColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ChartDataColumn.html">ChartDataColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ClassifyColumn.html">ClassifyColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ClassifyCommandDescriptor.html">ClassifyCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ClusterCommandDescriptor.html">ClusterCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ClusterCompareCommandDescriptor.html">ClusterCompareCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ClusterDetailsCommandDescriptor.html">ClusterDetailsCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ClusterSplitCommandDescriptor.html">ClusterSplitCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.Column.html">Column</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ColumnName.html">ColumnName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ColumnNameCollection.html">ColumnNameCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CommandDescriptor.html">CommandDescriptor</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">CompareCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CompareContentDetails.html">CompareContentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CompareContentResult.html">CompareContentResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CompareLineResult.html">CompareLineResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ConditionBlock.html">ConditionBlock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CreateAccelerationTaskDetails.html">CreateAccelerationTaskDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CreateIngestTimeRuleDetails.html">CreateIngestTimeRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CreateLogAnalyticsEmBridgeDetails.html">CreateLogAnalyticsEmBridgeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CreateLogAnalyticsEntityDetails.html">CreateLogAnalyticsEntityDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CreateLogAnalyticsEntityTypeDetails.html">CreateLogAnalyticsEntityTypeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CreateLogAnalyticsLogGroupDetails.html">CreateLogAnalyticsLogGroupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CreateLogAnalyticsObjectCollectionRuleDetails.html">CreateLogAnalyticsObjectCollectionRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CreateScheduledTaskDetails.html">CreateScheduledTaskDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CreateStandardTaskDetails.html">CreateStandardTaskDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CreateTableCommandDescriptor.html">CreateTableCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CreateViewCommandDescriptor.html">CreateViewCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CreationSource.html">CreationSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CredentialEndpoint.html">CredentialEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.CronSchedule.html">CronSchedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.DedupCommandDescriptor.html">DedupCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.DeleteCommandDescriptor.html">DeleteCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.DeleteLogAnalyticsAssociation.html">DeleteLogAnalyticsAssociation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.DeleteLogAnalyticsAssociationDetails.html">DeleteLogAnalyticsAssociationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.DeltaCommandDescriptor.html">DeltaCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.DemoModeCommandDescriptor.html">DemoModeCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.Dependency.html">Dependency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.DependentParser.html">DependentParser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.DependentSource.html">DependentSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.DisableAutoAssociationDetail.html">DisableAutoAssociationDetail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.DisableAutoAssociationDetails.html">DisableAutoAssociationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.DistinctCommandDescriptor.html">DistinctCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EfdRegexResult.html">EfdRegexResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EffectivePropertyCollection.html">EffectivePropertyCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EffectivePropertySummary.html">EffectivePropertySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EnableAutoAssociationDetail.html">EnableAutoAssociationDetail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EnableAutoAssociationDetails.html">EnableAutoAssociationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EncryptionKeyInfoCollection.html">EncryptionKeyInfoCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EncryptionKeyInfoSummary.html">EncryptionKeyInfoSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EndpointCredentials.html">EndpointCredentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EndpointProxy.html">EndpointProxy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EndpointRequest.html">EndpointRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EndpointResponse.html">EndpointResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EndpointResult.html">EndpointResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EntityTypeProperty.html">EntityTypeProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ErrorDetails.html">ErrorDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EstimatePurgeDataSizeDetails.html">EstimatePurgeDataSizeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EstimatePurgeDataSizeResult.html">EstimatePurgeDataSizeResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EstimateRecallDataSizeDetails.html">EstimateRecallDataSizeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EstimateRecallDataSizeResult.html">EstimateRecallDataSizeResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EstimateReleaseDataSizeDetails.html">EstimateReleaseDataSizeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EstimateReleaseDataSizeResult.html">EstimateReleaseDataSizeResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EvalCommandDescriptor.html">EvalCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EventStatsCommandDescriptor.html">EventStatsCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EventType.html">EventType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EventTypeCollection.html">EventTypeCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.EventTypeDetails.html">EventTypeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ExportContent.html">ExportContent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ExportDetails.html">ExportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ExtendedFieldsValidationResult.html">ExtendedFieldsValidationResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ExtractCommandDescriptor.html">ExtractCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ExtractLogFieldResults.html">ExtractLogFieldResults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ExtractLogHeaderDetails.html">ExtractLogHeaderDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ExtractLogHeaderResults.html">ExtractLogHeaderResults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.Field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.FieldArgument.html">FieldArgument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.FieldSummaryCommandDescriptor.html">FieldSummaryCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.FieldSummaryReport.html">FieldSummaryReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.FieldValue.html">FieldValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.FieldsAddRemoveField.html">FieldsAddRemoveField</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.FieldsCommandDescriptor.html">FieldsCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.FileValidationResponse.html">FileValidationResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.Filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.FilterDetails.html">FilterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.FilterOutput.html">FilterOutput</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.FixedFrequencySchedule.html">FixedFrequencySchedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.FrequentCommandDescriptor.html">FrequentCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.FunctionField.html">FunctionField</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.GeoStatsCommandDescriptor.html">GeoStatsCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.HeadCommandDescriptor.html">HeadCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.HighlightCommandDescriptor.html">HighlightCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.HighlightGroupsCommandDescriptor.html">HighlightGroupsCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.HighlightRowsCommandDescriptor.html">HighlightRowsCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.Indexes.html">Indexes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.IngestTimeRule.html">IngestTimeRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.IngestTimeRuleAction.html">IngestTimeRuleAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.IngestTimeRuleAdditionalFieldCondition.html">IngestTimeRuleAdditionalFieldCondition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.IngestTimeRuleCondition.html">IngestTimeRuleCondition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.IngestTimeRuleFieldCondition.html">IngestTimeRuleFieldCondition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.IngestTimeRuleMetricExtractionAction.html">IngestTimeRuleMetricExtractionAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.IngestTimeRuleResource.html">IngestTimeRuleResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.IngestTimeRuleSummary.html">IngestTimeRuleSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.IngestTimeRuleSummaryCollection.html">IngestTimeRuleSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.JsonExtractCommandDescriptor.html">JsonExtractCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LabelNames.html">LabelNames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LabelPriority.html">LabelPriority</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LabelPriorityCollection.html">LabelPriorityCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LabelSourceCollection.html">LabelSourceCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LabelSourceSummary.html">LabelSourceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LabelSummaryReport.html">LabelSummaryReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.Level.html">Level</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LinkCommandDescriptor.html">LinkCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LinkDetailsCommandDescriptor.html">LinkDetailsCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LiteralArgument.html">LiteralArgument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsAssociatedEntity.html">LogAnalyticsAssociatedEntity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsAssociatedEntityCollection.html">LogAnalyticsAssociatedEntityCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsAssociation.html">LogAnalyticsAssociation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsAssociationCollection.html">LogAnalyticsAssociationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsAssociationParameter.html">LogAnalyticsAssociationParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsAssociationParameterCollection.html">LogAnalyticsAssociationParameterCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsCategory.html">LogAnalyticsCategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsCategoryCollection.html">LogAnalyticsCategoryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsConfigWorkRequest.html">LogAnalyticsConfigWorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsConfigWorkRequestCollection.html">LogAnalyticsConfigWorkRequestCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsConfigWorkRequestPayload.html">LogAnalyticsConfigWorkRequestPayload</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsConfigWorkRequestSummary.html">LogAnalyticsConfigWorkRequestSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEmBridge.html">LogAnalyticsEmBridge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEmBridgeCollection.html">LogAnalyticsEmBridgeCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEmBridgeSummary.html">LogAnalyticsEmBridgeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEmBridgeSummaryReport.html">LogAnalyticsEmBridgeSummaryReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEndpoint.html">LogAnalyticsEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEntity.html">LogAnalyticsEntity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEntityCollection.html">LogAnalyticsEntityCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEntitySummary.html">LogAnalyticsEntitySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEntitySummaryReport.html">LogAnalyticsEntitySummaryReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEntityTopologyCollection.html">LogAnalyticsEntityTopologyCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEntityTopologyLink.html">LogAnalyticsEntityTopologyLink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEntityTopologyLinkCollection.html">LogAnalyticsEntityTopologyLinkCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEntityTopologySummary.html">LogAnalyticsEntityTopologySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEntityType.html">LogAnalyticsEntityType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEntityTypeCollection.html">LogAnalyticsEntityTypeCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsEntityTypeSummary.html">LogAnalyticsEntityTypeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsExtendedField.html">LogAnalyticsExtendedField</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsField.html">LogAnalyticsField</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsFieldCollection.html">LogAnalyticsFieldCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsFieldSummary.html">LogAnalyticsFieldSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsImportCustomChangeList.html">LogAnalyticsImportCustomChangeList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsImportCustomContent.html">LogAnalyticsImportCustomContent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsLabel.html">LogAnalyticsLabel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsLabelAlias.html">LogAnalyticsLabelAlias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsLabelCollection.html">LogAnalyticsLabelCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsLabelDefinition.html">LogAnalyticsLabelDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsLabelOperator.html">LogAnalyticsLabelOperator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsLabelOperatorCollection.html">LogAnalyticsLabelOperatorCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsLabelSummary.html">LogAnalyticsLabelSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsLabelView.html">LogAnalyticsLabelView</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsLogGroup.html">LogAnalyticsLogGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsLogGroupSummary.html">LogAnalyticsLogGroupSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsLogGroupSummaryCollection.html">LogAnalyticsLogGroupSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsLookup.html">LogAnalyticsLookup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsLookupCollection.html">LogAnalyticsLookupCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsLookupFields.html">LogAnalyticsLookupFields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsMetaFunction.html">LogAnalyticsMetaFunction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsMetaFunctionArgument.html">LogAnalyticsMetaFunctionArgument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsMetaFunctionCollection.html">LogAnalyticsMetaFunctionCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsMetaSourceType.html">LogAnalyticsMetaSourceType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsMetaSourceTypeCollection.html">LogAnalyticsMetaSourceTypeCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsMetadata.html">LogAnalyticsMetadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsMetadataCollection.html">LogAnalyticsMetadataCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsMetadataDetails.html">LogAnalyticsMetadataDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsMetadataSummary.html">LogAnalyticsMetadataSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsMetric.html">LogAnalyticsMetric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsObjectCollectionRule.html">LogAnalyticsObjectCollectionRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsObjectCollectionRuleCollection.html">LogAnalyticsObjectCollectionRuleCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsObjectCollectionRuleSummary.html">LogAnalyticsObjectCollectionRuleSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsParameter.html">LogAnalyticsParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsParser.html">LogAnalyticsParser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsParserCollection.html">LogAnalyticsParserCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsParserField.html">LogAnalyticsParserField</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsParserFilter.html">LogAnalyticsParserFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsParserFunction.html">LogAnalyticsParserFunction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsParserFunctionCollection.html">LogAnalyticsParserFunctionCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsParserFunctionParameter.html">LogAnalyticsParserFunctionParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsParserMetaPlugin.html">LogAnalyticsParserMetaPlugin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsParserMetaPluginCollection.html">LogAnalyticsParserMetaPluginCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsParserMetaPluginParameter.html">LogAnalyticsParserMetaPluginParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsParserSummary.html">LogAnalyticsParserSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsPatternFilter.html">LogAnalyticsPatternFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsPreference.html">LogAnalyticsPreference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsPreferenceCollection.html">LogAnalyticsPreferenceCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsPreferenceDetails.html">LogAnalyticsPreferenceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsProperty.html">LogAnalyticsProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsResourceCategory.html">LogAnalyticsResourceCategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsResourceCategoryCollection.html">LogAnalyticsResourceCategoryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsResourceCategoryDetails.html">LogAnalyticsResourceCategoryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsSource.html">LogAnalyticsSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsSourceCollection.html">LogAnalyticsSourceCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsSourceDataFilter.html">LogAnalyticsSourceDataFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsSourceEntityType.html">LogAnalyticsSourceEntityType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsSourceExtendedFieldDefinition.html">LogAnalyticsSourceExtendedFieldDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsSourceExtendedFieldDefinitionCollection.html">LogAnalyticsSourceExtendedFieldDefinitionCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsSourceFunction.html">LogAnalyticsSourceFunction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsSourceLabelCondition.html">LogAnalyticsSourceLabelCondition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsSourceMetadataField.html">LogAnalyticsSourceMetadataField</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsSourceMetric.html">LogAnalyticsSourceMetric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsSourcePattern.html">LogAnalyticsSourcePattern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsSourcePatternCollection.html">LogAnalyticsSourcePatternCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsSourceSummary.html">LogAnalyticsSourceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsWarning.html">LogAnalyticsWarning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogAnalyticsWarningCollection.html">LogAnalyticsWarningCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogEndpoint.html">LogEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogGroupSummaryReport.html">LogGroupSummaryReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogListEndpoint.html">LogListEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogListTypeEndpoint.html">LogListTypeEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogSetCollection.html">LogSetCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogSetsCount.html">LogSetsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LogTypeEndpoint.html">LogTypeEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LookupCommandDescriptor.html">LookupCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LookupField.html">LookupField</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.LookupSummaryReport.html">LookupSummaryReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.MacroCommandDescriptor.html">MacroCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.MapCommandDescriptor.html">MapCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.MatchInfo.html">MatchInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.MetricExtraction.html">MetricExtraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ModuleCommandDescriptor.html">ModuleCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.MultiSearchCommandDescriptor.html">MultiSearchCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.NameValuePair.html">NameValuePair</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.Namespace.html">Namespace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.NamespaceCollection.html">NamespaceCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.NamespaceSummary.html">NamespaceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.NlpCommandDescriptor.html">NlpCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.OutlierCommandDescriptor.html">OutlierCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.OverlappingRecallCollection.html">OverlappingRecallCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.OverlappingRecallSummary.html">OverlappingRecallSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ParseQueryDetails.html">ParseQueryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ParseQueryOutput.html">ParseQueryOutput</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ParsedContent.html">ParsedContent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ParsedField.html">ParsedField</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ParserSummaryReport.html">ParserSummaryReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ParserTestResult.html">ParserTestResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.PatternOverride.html">PatternOverride</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.PropertyMetadataSummary.html">PropertyMetadataSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.PropertyMetadataSummaryCollection.html">PropertyMetadataSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.PropertyOverride.html">PropertyOverride</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.PurgeAction.html">PurgeAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.PurgeStorageDataDetails.html">PurgeStorageDataDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.QueryAggregation.html">QueryAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.QueryDetails.html">QueryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.QueryWorkRequest.html">QueryWorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.QueryWorkRequestCollection.html">QueryWorkRequestCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.QueryWorkRequestSummary.html">QueryWorkRequestSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.RareCommandDescriptor.html">RareCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.RecallArchivedDataDetails.html">RecallArchivedDataDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.RecallCount.html">RecallCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.RecalledData.html">RecalledData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.RecalledDataCollection.html">RecalledDataCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.RecalledDataInfo.html">RecalledDataInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.RecalledDataSize.html">RecalledDataSize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.RegexCommandDescriptor.html">RegexCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.RegexMatchResult.html">RegexMatchResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ReleaseRecalledDataDetails.html">ReleaseRecalledDataDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.RemoveEntityAssociationsDetails.html">RemoveEntityAssociationsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.RenameCommandDescriptor.html">RenameCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ResultColumn.html">ResultColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.Rule.html">Rule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.RuleSummary.html">RuleSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.RuleSummaryCollection.html">RuleSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.RuleSummaryReport.html">RuleSummaryReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.Schedule.html">Schedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ScheduledTask.html">ScheduledTask</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ScheduledTaskCollection.html">ScheduledTaskCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ScheduledTaskSummary.html">ScheduledTaskSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.SchedulerResource.html">SchedulerResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ScopeFilter.html">ScopeFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.SearchCommandDescriptor.html">SearchCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.SearchLookupCommandDescriptor.html">SearchLookupCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.SequenceCommandDescriptor.html">SequenceCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.SortCommandDescriptor.html">SortCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.SortField.html">SortField</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.SourceMappingResponse.html">SourceMappingResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.SourceSummaryReport.html">SourceSummaryReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.SourceValidateDetails.html">SourceValidateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.SourceValidateResults.html">SourceValidateResults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.StandardTask.html">StandardTask</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.StatsCommandDescriptor.html">StatsCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.StatusSummary.html">StatusSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.StepInfo.html">StepInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.Storage.html">Storage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.StorageUsage.html">StorageUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.StorageWorkRequest.html">StorageWorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.StorageWorkRequestCollection.html">StorageWorkRequestCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.StorageWorkRequestSummary.html">StorageWorkRequestSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.StreamAction.html">StreamAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.Success.html">Success</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.SuggestDetails.html">SuggestDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.SuggestOutput.html">SuggestOutput</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TableColumn.html">TableColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TailCommandDescriptor.html">TailCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TestParserPayloadDetails.html">TestParserPayloadDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TimeClusterColumn.html">TimeClusterColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TimeClusterCommandDescriptor.html">TimeClusterCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TimeClusterDataColumn.html">TimeClusterDataColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TimeColumn.html">TimeColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TimeCompareCommandDescriptor.html">TimeCompareCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TimeRange.html">TimeRange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TimeStatsCluster.html">TimeStatsCluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TimeStatsColumn.html">TimeStatsColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TimeStatsCommandDescriptor.html">TimeStatsCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TimeStatsDataColumn.html">TimeStatsDataColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TimezoneCollection.html">TimezoneCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TopCommandDescriptor.html">TopCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.TrendColumn.html">TrendColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UiParserTestMetadata.html">UiParserTestMetadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UnprocessedDataBucket.html">UnprocessedDataBucket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UpdateLogAnalyticsEmBridgeDetails.html">UpdateLogAnalyticsEmBridgeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UpdateLogAnalyticsEntityDetails.html">UpdateLogAnalyticsEntityDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UpdateLogAnalyticsEntityTypeDetails.html">UpdateLogAnalyticsEntityTypeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UpdateLogAnalyticsLogGroupDetails.html">UpdateLogAnalyticsLogGroupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UpdateLogAnalyticsObjectCollectionRuleDetails.html">UpdateLogAnalyticsObjectCollectionRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UpdateLookupMetadataDetails.html">UpdateLookupMetadataDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UpdateScheduledTaskDetails.html">UpdateScheduledTaskDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UpdateStandardTaskDetails.html">UpdateStandardTaskDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UpdateStorageDetails.html">UpdateStorageDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.Upload.html">Upload</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UploadCollection.html">UploadCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UploadFileCollection.html">UploadFileCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UploadFileStatus.html">UploadFileStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UploadFileSummary.html">UploadFileSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UploadSummary.html">UploadSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UploadWarningCollection.html">UploadWarningCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UploadWarningSummary.html">UploadWarningSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UpsertLogAnalyticsAssociation.html">UpsertLogAnalyticsAssociation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UpsertLogAnalyticsAssociationDetails.html">UpsertLogAnalyticsAssociationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UpsertLogAnalyticsFieldDetails.html">UpsertLogAnalyticsFieldDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UpsertLogAnalyticsLabelDetails.html">UpsertLogAnalyticsLabelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UpsertLogAnalyticsParserDetails.html">UpsertLogAnalyticsParserDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UpsertLogAnalyticsSourceDetails.html">UpsertLogAnalyticsSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.UsageStatusItem.html">UsageStatusItem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ValidateEndpointResult.html">ValidateEndpointResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ValidateLabelConditionDetails.html">ValidateLabelConditionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.ValidateLabelConditionResult.html">ValidateLabelConditionResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.VerifyOutput.html">VerifyOutput</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.Violation.html">Violation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.WarningReferenceDetails.html">WarningReferenceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.WhereCommandDescriptor.html">WhereCommandDescriptor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.WorkRequestCollection.html">WorkRequestCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.WorkRequestErrorCollection.html">WorkRequestErrorCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.WorkRequestLog.html">WorkRequestLog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.WorkRequestLogCollection.html">WorkRequestLogCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.WorkRequestResource.html">WorkRequestResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.WorkRequestSummary.html">WorkRequestSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.log_analytics.models.XmlExtractCommandDescriptor.html">XmlExtractCommandDescriptor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../log_analytics.html">Log Analytics</a> &raquo;</li>
+        
+      <li>CompareCommandDescriptor</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/log_analytics/models/oci.log_analytics.models.CompareCommandDescriptor.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="comparecommanddescriptor">
+<h1>CompareCommandDescriptor<a class="headerlink" href="#comparecommanddescriptor" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor">
+<em class="property">class </em><code class="descclassname">oci.log_analytics.models.</code><code class="descname">CompareCommandDescriptor</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">oci.log_analytics.models.abstract_command_descriptor.AbstractCommandDescriptor</span></code></p>
+<p>Command descriptor for querylanguage COMPARE command.</p>
+<p><strong>Attributes</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_ADD_FIELDS" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_ADD_FIELDS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_ADD_FIELDS</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_ADD_INSIGHTS" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_ADD_INSIGHTS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_ADD_INSIGHTS</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_ANOMALY" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_ANOMALY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_ANOMALY</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_BOTTOM" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_BOTTOM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_BOTTOM</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_BUCKET" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_BUCKET"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_BUCKET</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_CLASSIFY" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_CLASSIFY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_CLASSIFY</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_CLUSTER</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER_COMPARE" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER_COMPARE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_CLUSTER_COMPARE</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER_DETAILS" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER_DETAILS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_CLUSTER_DETAILS</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER_SPLIT" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER_SPLIT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_CLUSTER_SPLIT</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_COMMAND" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_COMMAND"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_COMMAND</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_COMPARE" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_COMPARE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_COMPARE</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_CREATETABLE" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_CREATETABLE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_CREATETABLE</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_CREATE_VIEW" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_CREATE_VIEW"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_CREATE_VIEW</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_DEDUP" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_DEDUP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_DEDUP</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_DELETE" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_DELETE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_DELETE</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_DELTA" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_DELTA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_DELTA</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_DEMO_MODE" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_DEMO_MODE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_DEMO_MODE</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_DISTINCT" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_DISTINCT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_DISTINCT</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_EVAL" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_EVAL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_EVAL</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_EVENT_STATS" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_EVENT_STATS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_EVENT_STATS</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_EXTRACT" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_EXTRACT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_EXTRACT</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_FIELDS" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_FIELDS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_FIELDS</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_FIELD_SUMMARY" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_FIELD_SUMMARY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_FIELD_SUMMARY</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_FREQUENT" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_FREQUENT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_FREQUENT</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_GEO_STATS" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_GEO_STATS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_GEO_STATS</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_HEAD" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_HEAD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_HEAD</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_HIGHLIGHT" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_HIGHLIGHT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_HIGHLIGHT</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_HIGHLIGHT_GROUPS" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_HIGHLIGHT_GROUPS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_HIGHLIGHT_GROUPS</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_HIGHLIGHT_ROWS" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_HIGHLIGHT_ROWS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_HIGHLIGHT_ROWS</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_JSON_EXTRACT" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_JSON_EXTRACT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_JSON_EXTRACT</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_LINK" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_LINK"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_LINK</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_LINK_DETAILS" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_LINK_DETAILS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_LINK_DETAILS</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_LOOKUP" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_LOOKUP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_LOOKUP</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_MACRO" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_MACRO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_MACRO</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_MAP" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_MAP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_MAP</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_MODULE" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_MODULE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_MODULE</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_MULTI_SEARCH" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_MULTI_SEARCH"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_MULTI_SEARCH</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_NLP" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_NLP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_NLP</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_OUTLIER" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_OUTLIER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_OUTLIER</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_RARE" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_RARE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_RARE</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_REGEX" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_REGEX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_REGEX</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_RENAME" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_RENAME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_RENAME</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_SEARCH" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_SEARCH"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_SEARCH</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_SEARCH_LOOKUP" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_SEARCH_LOOKUP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_SEARCH_LOOKUP</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_SEQUENCE" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_SEQUENCE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_SEQUENCE</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_SORT" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_SORT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_SORT</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_STATS" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_STATS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_STATS</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_TAIL" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_TAIL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_TAIL</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_TIME_CLUSTER" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_TIME_CLUSTER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_TIME_CLUSTER</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_TIME_COMPARE" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_TIME_COMPARE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_TIME_COMPARE</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_TIME_STATS" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_TIME_STATS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_TIME_STATS</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_TOP" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_TOP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_TOP</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_WHERE" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_WHERE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_WHERE</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_XML_EXTRACT" title="oci.log_analytics.models.CompareCommandDescriptor.NAME_XML_EXTRACT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NAME_XML_EXTRACT</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.category" title="oci.log_analytics.models.CompareCommandDescriptor.category"><code class="xref py py-obj docutils literal notranslate"><span class="pre">category</span></code></a></td>
+<td>Gets the category of this AbstractCommandDescriptor.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.declared_fields" title="oci.log_analytics.models.CompareCommandDescriptor.declared_fields"><code class="xref py py-obj docutils literal notranslate"><span class="pre">declared_fields</span></code></a></td>
+<td>Gets the declared_fields of this AbstractCommandDescriptor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.display_query_string" title="oci.log_analytics.models.CompareCommandDescriptor.display_query_string"><code class="xref py py-obj docutils literal notranslate"><span class="pre">display_query_string</span></code></a></td>
+<td><strong>[Required]</strong> Gets the display_query_string of this AbstractCommandDescriptor.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.internal_query_string" title="oci.log_analytics.models.CompareCommandDescriptor.internal_query_string"><code class="xref py py-obj docutils literal notranslate"><span class="pre">internal_query_string</span></code></a></td>
+<td><strong>[Required]</strong> Gets the internal_query_string of this AbstractCommandDescriptor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.is_hidden" title="oci.log_analytics.models.CompareCommandDescriptor.is_hidden"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_hidden</span></code></a></td>
+<td>Gets the is_hidden of this AbstractCommandDescriptor.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.name" title="oci.log_analytics.models.CompareCommandDescriptor.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></td>
+<td><strong>[Required]</strong> Gets the name of this AbstractCommandDescriptor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.referenced_fields" title="oci.log_analytics.models.CompareCommandDescriptor.referenced_fields"><code class="xref py py-obj docutils literal notranslate"><span class="pre">referenced_fields</span></code></a></td>
+<td>Gets the referenced_fields of this AbstractCommandDescriptor.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.__init__" title="oci.log_analytics.models.CompareCommandDescriptor.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(**kwargs)</td>
+<td>Initializes a new CompareCommandDescriptor object with values from keyword arguments.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.get_subtype" title="oci.log_analytics.models.CompareCommandDescriptor.get_subtype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_subtype</span></code></a>(object_dictionary)</td>
+<td>Given the hash representation of a subtype of this class, use the info in the hash to return the class of the subtype.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_ADD_FIELDS">
+<code class="descname">NAME_ADD_FIELDS</code><em class="property"> = 'ADD_FIELDS'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_ADD_FIELDS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_ADD_INSIGHTS">
+<code class="descname">NAME_ADD_INSIGHTS</code><em class="property"> = 'ADD_INSIGHTS'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_ADD_INSIGHTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_ANOMALY">
+<code class="descname">NAME_ANOMALY</code><em class="property"> = 'ANOMALY'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_ANOMALY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_BOTTOM">
+<code class="descname">NAME_BOTTOM</code><em class="property"> = 'BOTTOM'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_BOTTOM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_BUCKET">
+<code class="descname">NAME_BUCKET</code><em class="property"> = 'BUCKET'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_BUCKET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_CLASSIFY">
+<code class="descname">NAME_CLASSIFY</code><em class="property"> = 'CLASSIFY'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_CLASSIFY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER">
+<code class="descname">NAME_CLUSTER</code><em class="property"> = 'CLUSTER'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER_COMPARE">
+<code class="descname">NAME_CLUSTER_COMPARE</code><em class="property"> = 'CLUSTER_COMPARE'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER_COMPARE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER_DETAILS">
+<code class="descname">NAME_CLUSTER_DETAILS</code><em class="property"> = 'CLUSTER_DETAILS'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER_DETAILS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER_SPLIT">
+<code class="descname">NAME_CLUSTER_SPLIT</code><em class="property"> = 'CLUSTER_SPLIT'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_CLUSTER_SPLIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_COMMAND">
+<code class="descname">NAME_COMMAND</code><em class="property"> = 'COMMAND'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_COMMAND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_COMPARE">
+<code class="descname">NAME_COMPARE</code><em class="property"> = 'COMPARE'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_COMPARE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_CREATETABLE">
+<code class="descname">NAME_CREATETABLE</code><em class="property"> = 'CREATETABLE'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_CREATETABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_CREATE_VIEW">
+<code class="descname">NAME_CREATE_VIEW</code><em class="property"> = 'CREATE_VIEW'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_CREATE_VIEW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_DEDUP">
+<code class="descname">NAME_DEDUP</code><em class="property"> = 'DEDUP'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_DEDUP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_DELETE">
+<code class="descname">NAME_DELETE</code><em class="property"> = 'DELETE'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_DELETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_DELTA">
+<code class="descname">NAME_DELTA</code><em class="property"> = 'DELTA'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_DELTA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_DEMO_MODE">
+<code class="descname">NAME_DEMO_MODE</code><em class="property"> = 'DEMO_MODE'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_DEMO_MODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_DISTINCT">
+<code class="descname">NAME_DISTINCT</code><em class="property"> = 'DISTINCT'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_DISTINCT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_EVAL">
+<code class="descname">NAME_EVAL</code><em class="property"> = 'EVAL'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_EVAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_EVENT_STATS">
+<code class="descname">NAME_EVENT_STATS</code><em class="property"> = 'EVENT_STATS'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_EVENT_STATS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_EXTRACT">
+<code class="descname">NAME_EXTRACT</code><em class="property"> = 'EXTRACT'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_EXTRACT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_FIELDS">
+<code class="descname">NAME_FIELDS</code><em class="property"> = 'FIELDS'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_FIELDS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_FIELD_SUMMARY">
+<code class="descname">NAME_FIELD_SUMMARY</code><em class="property"> = 'FIELD_SUMMARY'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_FIELD_SUMMARY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_FREQUENT">
+<code class="descname">NAME_FREQUENT</code><em class="property"> = 'FREQUENT'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_FREQUENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_GEO_STATS">
+<code class="descname">NAME_GEO_STATS</code><em class="property"> = 'GEO_STATS'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_GEO_STATS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_HEAD">
+<code class="descname">NAME_HEAD</code><em class="property"> = 'HEAD'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_HEAD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_HIGHLIGHT">
+<code class="descname">NAME_HIGHLIGHT</code><em class="property"> = 'HIGHLIGHT'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_HIGHLIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_HIGHLIGHT_GROUPS">
+<code class="descname">NAME_HIGHLIGHT_GROUPS</code><em class="property"> = 'HIGHLIGHT_GROUPS'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_HIGHLIGHT_GROUPS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_HIGHLIGHT_ROWS">
+<code class="descname">NAME_HIGHLIGHT_ROWS</code><em class="property"> = 'HIGHLIGHT_ROWS'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_HIGHLIGHT_ROWS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_JSON_EXTRACT">
+<code class="descname">NAME_JSON_EXTRACT</code><em class="property"> = 'JSON_EXTRACT'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_JSON_EXTRACT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_LINK">
+<code class="descname">NAME_LINK</code><em class="property"> = 'LINK'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_LINK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_LINK_DETAILS">
+<code class="descname">NAME_LINK_DETAILS</code><em class="property"> = 'LINK_DETAILS'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_LINK_DETAILS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_LOOKUP">
+<code class="descname">NAME_LOOKUP</code><em class="property"> = 'LOOKUP'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_LOOKUP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_MACRO">
+<code class="descname">NAME_MACRO</code><em class="property"> = 'MACRO'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_MACRO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_MAP">
+<code class="descname">NAME_MAP</code><em class="property"> = 'MAP'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_MAP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_MODULE">
+<code class="descname">NAME_MODULE</code><em class="property"> = 'MODULE'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_MODULE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_MULTI_SEARCH">
+<code class="descname">NAME_MULTI_SEARCH</code><em class="property"> = 'MULTI_SEARCH'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_MULTI_SEARCH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_NLP">
+<code class="descname">NAME_NLP</code><em class="property"> = 'NLP'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_NLP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_OUTLIER">
+<code class="descname">NAME_OUTLIER</code><em class="property"> = 'OUTLIER'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_OUTLIER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_RARE">
+<code class="descname">NAME_RARE</code><em class="property"> = 'RARE'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_RARE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_REGEX">
+<code class="descname">NAME_REGEX</code><em class="property"> = 'REGEX'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_REGEX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_RENAME">
+<code class="descname">NAME_RENAME</code><em class="property"> = 'RENAME'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_RENAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_SEARCH">
+<code class="descname">NAME_SEARCH</code><em class="property"> = 'SEARCH'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_SEARCH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_SEARCH_LOOKUP">
+<code class="descname">NAME_SEARCH_LOOKUP</code><em class="property"> = 'SEARCH_LOOKUP'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_SEARCH_LOOKUP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_SEQUENCE">
+<code class="descname">NAME_SEQUENCE</code><em class="property"> = 'SEQUENCE'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_SEQUENCE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_SORT">
+<code class="descname">NAME_SORT</code><em class="property"> = 'SORT'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_SORT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_STATS">
+<code class="descname">NAME_STATS</code><em class="property"> = 'STATS'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_STATS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_TAIL">
+<code class="descname">NAME_TAIL</code><em class="property"> = 'TAIL'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_TAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_TIME_CLUSTER">
+<code class="descname">NAME_TIME_CLUSTER</code><em class="property"> = 'TIME_CLUSTER'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_TIME_CLUSTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_TIME_COMPARE">
+<code class="descname">NAME_TIME_COMPARE</code><em class="property"> = 'TIME_COMPARE'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_TIME_COMPARE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_TIME_STATS">
+<code class="descname">NAME_TIME_STATS</code><em class="property"> = 'TIME_STATS'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_TIME_STATS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_TOP">
+<code class="descname">NAME_TOP</code><em class="property"> = 'TOP'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_TOP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_WHERE">
+<code class="descname">NAME_WHERE</code><em class="property"> = 'WHERE'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_WHERE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.NAME_XML_EXTRACT">
+<code class="descname">NAME_XML_EXTRACT</code><em class="property"> = 'XML_EXTRACT'</em><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.NAME_XML_EXTRACT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new CompareCommandDescriptor object with values from keyword arguments. The default value of the <a class="reference internal" href="#oci.log_analytics.models.CompareCommandDescriptor.name" title="oci.log_analytics.models.CompareCommandDescriptor.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a> attribute
+of this class is <code class="docutils literal notranslate"><span class="pre">COMPARE</span></code> and it should not be changed.
+The following keyword arguments are supported (corresponding to the getters/setters of this class):</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>str</em>) – The value to assign to the name property of this CompareCommandDescriptor.
+Allowed values for this property are: “COMMAND”, “SEARCH”, “STATS”, “GEO_STATS”, “TIME_STATS”, “SORT”, “FIELDS”, “ADD_FIELDS”, “LINK”, “LINK_DETAILS”, “CLUSTER”, “CLUSTER_DETAILS”, “CLUSTER_SPLIT”, “EVAL”, “EXTRACT”, “JSON_EXTRACT”, “XML_EXTRACT”, “EVENT_STATS”, “BUCKET”, “CLASSIFY”, “TOP”, “BOTTOM”, “HEAD”, “TAIL”, “FIELD_SUMMARY”, “REGEX”, “RENAME”, “TIME_COMPARE”, “WHERE”, “CLUSTER_COMPARE”, “DELETE”, “CREATETABLE”, “SEQUENCE”, “DELTA”, “DISTINCT”, “SEARCH_LOOKUP”, “LOOKUP”, “DEMO_MODE”, “MACRO”, “MODULE”, “MULTI_SEARCH”, “HIGHLIGHT”, “HIGHLIGHT_ROWS”, “HIGHLIGHT_GROUPS”, “CREATE_VIEW”, “MAP”, “NLP”, “COMPARE”, “ADD_INSIGHTS”, “ANOMALY”, “DEDUP”, “TIME_CLUSTER”, “FREQUENT”, “RARE”, “OUTLIER”</li>
+<li><strong>display_query_string</strong> (<em>str</em>) – The value to assign to the display_query_string property of this CompareCommandDescriptor.</li>
+<li><strong>internal_query_string</strong> (<em>str</em>) – The value to assign to the internal_query_string property of this CompareCommandDescriptor.</li>
+<li><strong>category</strong> (<em>str</em>) – The value to assign to the category property of this CompareCommandDescriptor.</li>
+<li><strong>referenced_fields</strong> (<em>list</em><em>[</em><a class="reference internal" href="oci.log_analytics.models.AbstractField.html#oci.log_analytics.models.AbstractField" title="oci.log_analytics.models.AbstractField"><em>oci.log_analytics.models.AbstractField</em></a><em>]</em>) – The value to assign to the referenced_fields property of this CompareCommandDescriptor.</li>
+<li><strong>declared_fields</strong> (<em>list</em><em>[</em><a class="reference internal" href="oci.log_analytics.models.AbstractField.html#oci.log_analytics.models.AbstractField" title="oci.log_analytics.models.AbstractField"><em>oci.log_analytics.models.AbstractField</em></a><em>]</em>) – The value to assign to the declared_fields property of this CompareCommandDescriptor.</li>
+<li><strong>is_hidden</strong> (<em>bool</em>) – The value to assign to the is_hidden property of this CompareCommandDescriptor.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.category">
+<code class="descname">category</code><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the category of this AbstractCommandDescriptor.
+querylanguage command designation for example; reporting vs filtering</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The category of this AbstractCommandDescriptor.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.declared_fields">
+<code class="descname">declared_fields</code><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the declared_fields of this AbstractCommandDescriptor.
+Fields declared in command fragment from user specified query string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The declared_fields of this AbstractCommandDescriptor.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[<a class="reference internal" href="oci.log_analytics.models.AbstractField.html#oci.log_analytics.models.AbstractField" title="oci.log_analytics.models.AbstractField">oci.log_analytics.models.AbstractField</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.display_query_string">
+<code class="descname">display_query_string</code><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.display_query_string" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the display_query_string of this AbstractCommandDescriptor.
+Command fragment display string from user specified query string formatted by query builder.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The display_query_string of this AbstractCommandDescriptor.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.get_subtype">
+<em class="property">static </em><code class="descname">get_subtype</code><span class="sig-paren">(</span><em>object_dictionary</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.get_subtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the hash representation of a subtype of this class,
+use the info in the hash to return the class of the subtype.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.internal_query_string">
+<code class="descname">internal_query_string</code><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.internal_query_string" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the internal_query_string of this AbstractCommandDescriptor.
+Command fragment internal string from user specified query string formatted by query builder.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The internal_query_string of this AbstractCommandDescriptor.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.is_hidden">
+<code class="descname">is_hidden</code><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.is_hidden" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_hidden of this AbstractCommandDescriptor.
+Field denoting if this is a hidden command that is not shown in the query string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_hidden of this AbstractCommandDescriptor.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.name">
+<code class="descname">name</code><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the name of this AbstractCommandDescriptor.
+Name of querylanguage command</p>
+<p>Allowed values for this property are: “COMMAND”, “SEARCH”, “STATS”, “GEO_STATS”, “TIME_STATS”, “SORT”, “FIELDS”, “ADD_FIELDS”, “LINK”, “LINK_DETAILS”, “CLUSTER”, “CLUSTER_DETAILS”, “CLUSTER_SPLIT”, “EVAL”, “EXTRACT”, “JSON_EXTRACT”, “XML_EXTRACT”, “EVENT_STATS”, “BUCKET”, “CLASSIFY”, “TOP”, “BOTTOM”, “HEAD”, “TAIL”, “FIELD_SUMMARY”, “REGEX”, “RENAME”, “TIME_COMPARE”, “WHERE”, “CLUSTER_COMPARE”, “DELETE”, “CREATETABLE”, “SEQUENCE”, “DELTA”, “DISTINCT”, “SEARCH_LOOKUP”, “LOOKUP”, “DEMO_MODE”, “MACRO”, “MODULE”, “MULTI_SEARCH”, “HIGHLIGHT”, “HIGHLIGHT_ROWS”, “HIGHLIGHT_GROUPS”, “CREATE_VIEW”, “MAP”, “NLP”, “COMPARE”, “ADD_INSIGHTS”, “ANOMALY”, “DEDUP”, “TIME_CLUSTER”, “FREQUENT”, “RARE”, “OUTLIER”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The name of this AbstractCommandDescriptor.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.log_analytics.models.CompareCommandDescriptor.referenced_fields">
+<code class="descname">referenced_fields</code><a class="headerlink" href="#oci.log_analytics.models.CompareCommandDescriptor.referenced_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the referenced_fields of this AbstractCommandDescriptor.
+Fields referenced in command fragment from user specified query string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The referenced_fields of this AbstractCommandDescriptor.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[<a class="reference internal" href="oci.log_analytics.models.AbstractField.html#oci.log_analytics.models.AbstractField" title="oci.log_analytics.models.AbstractField">oci.log_analytics.models.AbstractField</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.log_analytics.models.CompareContentDetails.html" class="btn btn-neutral float-right" title="CompareContentDetails" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.log_analytics.models.CommandDescriptor.html" class="btn btn-neutral" title="CommandDescriptor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,965 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SqlCollectionLogAggregation &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="SqlCollectionLogDimensions" href="oci.data_safe.models.SqlCollectionLogDimensions.html" />
+    <link rel="prev" title="SqlCollectionDimensions" href="oci.data_safe.models.SqlCollectionDimensions.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../data_safe.html">Data Safe</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.data_safe.DataSafeClient.html">DataSafeClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.data_safe.DataSafeClientCompositeOperations.html">DataSafeClientCompositeOperations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../data_safe.html#models">Models</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ActivateTargetDatabaseDetails.html">ActivateTargetDatabaseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.Alert.html">Alert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AlertAggregationItems.html">AlertAggregationItems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AlertAnalyticsCollection.html">AlertAnalyticsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AlertCollection.html">AlertCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AlertPolicy.html">AlertPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AlertPolicyCollection.html">AlertPolicyCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AlertPolicyRule.html">AlertPolicyRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AlertPolicyRuleCollection.html">AlertPolicyRuleCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AlertPolicyRuleSummary.html">AlertPolicyRuleSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AlertPolicySummary.html">AlertPolicySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AlertSummary.html">AlertSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AlertsAggregationDimension.html">AlertsAggregationDimension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AlertsUpdateDetails.html">AlertsUpdateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ApplyDiscoveryJobResultsDetails.html">ApplyDiscoveryJobResultsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ApplySdmMaskingPolicyDifferenceDetails.html">ApplySdmMaskingPolicyDifferenceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditArchiveRetrieval.html">AuditArchiveRetrieval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditArchiveRetrievalCollection.html">AuditArchiveRetrievalCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditArchiveRetrievalSummary.html">AuditArchiveRetrievalSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditConditions.html">AuditConditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditEventAggregationDimensions.html">AuditEventAggregationDimensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditEventAggregationItems.html">AuditEventAggregationItems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditEventAnalyticsCollection.html">AuditEventAnalyticsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditEventCollection.html">AuditEventCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditEventSummary.html">AuditEventSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditPolicy.html">AuditPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditPolicyAggregationItems.html">AuditPolicyAggregationItems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditPolicyAnalyticCollection.html">AuditPolicyAnalyticCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditPolicyCollection.html">AuditPolicyCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditPolicyDimensions.html">AuditPolicyDimensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditPolicySummary.html">AuditPolicySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditProfile.html">AuditProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditProfileAggregationItems.html">AuditProfileAggregationItems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditProfileAnalyticCollection.html">AuditProfileAnalyticCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditProfileCollection.html">AuditProfileCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditProfileDimensions.html">AuditProfileDimensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditProfileSummary.html">AuditProfileSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditSpecification.html">AuditSpecification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditTrail.html">AuditTrail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditTrailAggregationItems.html">AuditTrailAggregationItems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditTrailAnalyticCollection.html">AuditTrailAnalyticCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditTrailCollection.html">AuditTrailCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditTrailDimensions.html">AuditTrailDimensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AuditTrailSummary.html">AuditTrailSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AutonomousDatabaseDetails.html">AutonomousDatabaseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AvailableAuditVolumeCollection.html">AvailableAuditVolumeCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.AvailableAuditVolumeSummary.html">AvailableAuditVolumeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.BulkCreateSqlFirewallAllowedSqlsDetails.html">BulkCreateSqlFirewallAllowedSqlsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.BulkDeleteSqlFirewallAllowedSqlsDetails.html">BulkDeleteSqlFirewallAllowedSqlsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CalculateAuditVolumeAvailableDetails.html">CalculateAuditVolumeAvailableDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CalculateAuditVolumeCollectedDetails.html">CalculateAuditVolumeCollectedDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeAlertCompartmentDetails.html">ChangeAlertCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeAlertPolicyCompartmentDetails.html">ChangeAlertPolicyCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeAuditArchiveRetrievalCompartmentDetails.html">ChangeAuditArchiveRetrievalCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeAuditPolicyCompartmentDetails.html">ChangeAuditPolicyCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeAuditProfileCompartmentDetails.html">ChangeAuditProfileCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeDataSafePrivateEndpointCompartmentDetails.html">ChangeDataSafePrivateEndpointCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeDatabaseSecurityConfigCompartmentDetails.html">ChangeDatabaseSecurityConfigCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeDiscoveryJobCompartmentDetails.html">ChangeDiscoveryJobCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeLibraryMaskingFormatCompartmentDetails.html">ChangeLibraryMaskingFormatCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeMaskingPolicyCompartmentDetails.html">ChangeMaskingPolicyCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeMaskingPolicyHealthReportCompartmentDetails.html">ChangeMaskingPolicyHealthReportCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeOnPremConnectorCompartmentDetails.html">ChangeOnPremConnectorCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeReportCompartmentDetails.html">ChangeReportCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeReportDefinitionCompartmentDetails.html">ChangeReportDefinitionCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeRetentionDetails.html">ChangeRetentionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeSdmMaskingPolicyDifferenceCompartmentDetails.html">ChangeSdmMaskingPolicyDifferenceCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeSecurityAssessmentCompartmentDetails.html">ChangeSecurityAssessmentCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeSecurityPolicyCompartmentDetails.html">ChangeSecurityPolicyCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeSecurityPolicyDeploymentCompartmentDetails.html">ChangeSecurityPolicyDeploymentCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeSensitiveDataModelCompartmentDetails.html">ChangeSensitiveDataModelCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeSensitiveTypeCompartmentDetails.html">ChangeSensitiveTypeCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeSqlCollectionCompartmentDetails.html">ChangeSqlCollectionCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeSqlFirewallPolicyCompartmentDetails.html">ChangeSqlFirewallPolicyCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeTargetAlertPolicyAssociationCompartmentDetails.html">ChangeTargetAlertPolicyAssociationCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeTargetDatabaseCompartmentDetails.html">ChangeTargetDatabaseCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ChangeUserAssessmentCompartmentDetails.html">ChangeUserAssessmentCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CollectedAuditVolumeCollection.html">CollectedAuditVolumeCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CollectedAuditVolumeSummary.html">CollectedAuditVolumeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.Column.html">Column</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ColumnFilter.html">ColumnFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ColumnSorting.html">ColumnSorting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ColumnSourceDetails.html">ColumnSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ColumnSourceFromSdmDetails.html">ColumnSourceFromSdmDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ColumnSourceFromTargetDetails.html">ColumnSourceFromTargetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ColumnSummary.html">ColumnSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CompareSecurityAssessmentDetails.html">CompareSecurityAssessmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CompareUserAssessmentDetails.html">CompareUserAssessmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CompatibleFormatsForDataTypes.html">CompatibleFormatsForDataTypes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CompatibleFormatsForSensitiveTypes.html">CompatibleFormatsForSensitiveTypes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ConnectionOption.html">ConnectionOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateAlertPolicyDetails.html">CreateAlertPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateAlertPolicyRuleDetails.html">CreateAlertPolicyRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateAuditArchiveRetrievalDetails.html">CreateAuditArchiveRetrievalDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateAuditPolicyDetails.html">CreateAuditPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateAuditProfileDetails.html">CreateAuditProfileDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateColumnSourceDetails.html">CreateColumnSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateColumnSourceFromSdmDetails.html">CreateColumnSourceFromSdmDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateColumnSourceFromTargetDetails.html">CreateColumnSourceFromTargetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateDataSafePrivateEndpointDetails.html">CreateDataSafePrivateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateDiscoveryJobDetails.html">CreateDiscoveryJobDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateLibraryMaskingFormatDetails.html">CreateLibraryMaskingFormatDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateMaskingColumnDetails.html">CreateMaskingColumnDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateMaskingPolicyDetails.html">CreateMaskingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateOnPremConnectorDetails.html">CreateOnPremConnectorDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreatePeerTargetDatabaseDetails.html">CreatePeerTargetDatabaseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateReportDefinitionDetails.html">CreateReportDefinitionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateSdmMaskingPolicyDifferenceDetails.html">CreateSdmMaskingPolicyDifferenceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateSecurityAssessmentDetails.html">CreateSecurityAssessmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateSensitiveCategoryDetails.html">CreateSensitiveCategoryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateSensitiveColumnDetails.html">CreateSensitiveColumnDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateSensitiveDataModelDetails.html">CreateSensitiveDataModelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateSensitiveTypeDetails.html">CreateSensitiveTypeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateSensitiveTypePatternDetails.html">CreateSensitiveTypePatternDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateSqlCollectionDetails.html">CreateSqlCollectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateTargetAlertPolicyAssociationDetails.html">CreateTargetAlertPolicyAssociationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateTargetDatabaseDetails.html">CreateTargetDatabaseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.CreateUserAssessmentDetails.html">CreateUserAssessmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.Credentials.html">Credentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DataSafeConfiguration.html">DataSafeConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DataSafePrivateEndpoint.html">DataSafePrivateEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DataSafePrivateEndpointSummary.html">DataSafePrivateEndpointSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DatabaseCloudServiceDetails.html">DatabaseCloudServiceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DatabaseDetails.html">DatabaseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DatabaseSecurityConfig.html">DatabaseSecurityConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DatabaseSecurityConfigCollection.html">DatabaseSecurityConfigCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DatabaseSecurityConfigSummary.html">DatabaseSecurityConfigSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DatabaseTableAccessEntry.html">DatabaseTableAccessEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DatabaseTableAccessEntryCollection.html">DatabaseTableAccessEntryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DatabaseTableAccessEntrySummary.html">DatabaseTableAccessEntrySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DatabaseViewAccessEntry.html">DatabaseViewAccessEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DatabaseViewAccessEntryCollection.html">DatabaseViewAccessEntryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DatabaseViewAccessEntrySummary.html">DatabaseViewAccessEntrySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DeleteRowsFormatEntry.html">DeleteRowsFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DeterministicEncryptionDateFormatEntry.html">DeterministicEncryptionDateFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DeterministicEncryptionFormatEntry.html">DeterministicEncryptionFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DeterministicSubstitutionFormatEntry.html">DeterministicSubstitutionFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DifferenceColumn.html">DifferenceColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DifferenceColumnSummary.html">DifferenceColumnSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.Diffs.html">Diffs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.Dimensions.html">Dimensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DiscoveryAnalyticsCollection.html">DiscoveryAnalyticsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DiscoveryAnalyticsSummary.html">DiscoveryAnalyticsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DiscoveryJob.html">DiscoveryJob</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DiscoveryJobCollection.html">DiscoveryJobCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DiscoveryJobResult.html">DiscoveryJobResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DiscoveryJobResultCollection.html">DiscoveryJobResultCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DiscoveryJobResultSummary.html">DiscoveryJobResultSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DiscoveryJobSummary.html">DiscoveryJobSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DownloadDiscoveryReportDetails.html">DownloadDiscoveryReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DownloadMaskingLogDetails.html">DownloadMaskingLogDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DownloadMaskingPolicyDetails.html">DownloadMaskingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DownloadMaskingReportDetails.html">DownloadMaskingReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DownloadSecurityAssessmentReportDetails.html">DownloadSecurityAssessmentReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DownloadSensitiveDataModelDetails.html">DownloadSensitiveDataModelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.DownloadUserAssessmentReportDetails.html">DownloadUserAssessmentReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.EnableConditions.html">EnableConditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.EnableDataSafeConfigurationDetails.html">EnableDataSafeConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.EntryDetails.html">EntryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.Finding.html">Finding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.FindingAnalyticsCollection.html">FindingAnalyticsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.FindingAnalyticsDimensions.html">FindingAnalyticsDimensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.FindingAnalyticsSummary.html">FindingAnalyticsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.FindingSummary.html">FindingSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.FindingsChangeAuditLogCollection.html">FindingsChangeAuditLogCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.FindingsChangeAuditLogSummary.html">FindingsChangeAuditLogSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.FirewallPolicyEntryDetails.html">FirewallPolicyEntryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.FixedNumberFormatEntry.html">FixedNumberFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.FixedStringFormatEntry.html">FixedStringFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.FormatEntry.html">FormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.FormatSummary.html">FormatSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.FormatsForDataType.html">FormatsForDataType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.FormatsForSensitiveType.html">FormatsForSensitiveType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.GenerateDiscoveryReportForDownloadDetails.html">GenerateDiscoveryReportForDownloadDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.GenerateHealthReportDetails.html">GenerateHealthReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.GenerateMaskingPolicyForDownloadDetails.html">GenerateMaskingPolicyForDownloadDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.GenerateMaskingReportForDownloadDetails.html">GenerateMaskingReportForDownloadDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.GenerateOnPremConnectorConfigurationDetails.html">GenerateOnPremConnectorConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.GenerateReportDetails.html">GenerateReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.GenerateSecurityAssessmentReportDetails.html">GenerateSecurityAssessmentReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.GenerateSensitiveDataModelForDownloadDetails.html">GenerateSensitiveDataModelForDownloadDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.GenerateUserAssessmentReportDetails.html">GenerateUserAssessmentReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.GlobalSettings.html">GlobalSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.GrantSummary.html">GrantSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.InitializationParameter.html">InitializationParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.InstalledDatabaseDetails.html">InstalledDatabaseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.LibraryMaskingFormat.html">LibraryMaskingFormat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.LibraryMaskingFormatCollection.html">LibraryMaskingFormatCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.LibraryMaskingFormatEntry.html">LibraryMaskingFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.LibraryMaskingFormatSummary.html">LibraryMaskingFormatSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ListSelectionMode.html">ListSelectionMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskDataDetails.html">MaskDataDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskedColumnCollection.html">MaskedColumnCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskedColumnSummary.html">MaskedColumnSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingAnalyticsCollection.html">MaskingAnalyticsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingAnalyticsDimensions.html">MaskingAnalyticsDimensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingAnalyticsSummary.html">MaskingAnalyticsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingColumn.html">MaskingColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingColumnCollection.html">MaskingColumnCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingColumnSummary.html">MaskingColumnSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingFormat.html">MaskingFormat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingObjectCollection.html">MaskingObjectCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingObjectSummary.html">MaskingObjectSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingPolicy.html">MaskingPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingPolicyCollection.html">MaskingPolicyCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingPolicyHealthReport.html">MaskingPolicyHealthReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingPolicyHealthReportCollection.html">MaskingPolicyHealthReportCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingPolicyHealthReportLogCollection.html">MaskingPolicyHealthReportLogCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingPolicyHealthReportLogSummary.html">MaskingPolicyHealthReportLogSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingPolicyHealthReportSummary.html">MaskingPolicyHealthReportSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingPolicySummary.html">MaskingPolicySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingReport.html">MaskingReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingReportCollection.html">MaskingReportCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingReportSummary.html">MaskingReportSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingSchemaCollection.html">MaskingSchemaCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.MaskingSchemaSummary.html">MaskingSchemaSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ModifiedAttributes.html">ModifiedAttributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ModifyGlobalSettingsDetails.html">ModifyGlobalSettingsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.NullValueFormatEntry.html">NullValueFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.OnPremConnector.html">OnPremConnector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.OnPremConnectorSummary.html">OnPremConnectorSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.OnPremiseConnector.html">OnPremiseConnector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PPFFormatEntry.html">PPFFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PatchAlertPolicyRuleDetails.html">PatchAlertPolicyRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PatchAlertsDetails.html">PatchAlertsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PatchDiscoveryJobResultDetails.html">PatchDiscoveryJobResultDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PatchInsertInstruction.html">PatchInsertInstruction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PatchInstruction.html">PatchInstruction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PatchMaskingColumnsDetails.html">PatchMaskingColumnsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PatchMergeInstruction.html">PatchMergeInstruction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PatchRemoveInstruction.html">PatchRemoveInstruction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PatchSdmMaskingPolicyDifferenceColumnsDetails.html">PatchSdmMaskingPolicyDifferenceColumnsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PatchSensitiveColumnDetails.html">PatchSensitiveColumnDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PatchSqlFirewallAllowedSqlDetails.html">PatchSqlFirewallAllowedSqlDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PatchTargetAlertPolicyAssociationDetails.html">PatchTargetAlertPolicyAssociationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PatternFormatEntry.html">PatternFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PeerTargetDatabase.html">PeerTargetDatabase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PeerTargetDatabaseCollection.html">PeerTargetDatabaseCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PeerTargetDatabaseSummary.html">PeerTargetDatabaseSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PreserveOriginalDataFormatEntry.html">PreserveOriginalDataFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.PrivateEndpoint.html">PrivateEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.Profile.html">Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ProfileAggregation.html">ProfileAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ProfileDetails.html">ProfileDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ProfileSummary.html">ProfileSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ProvisionAuditConditions.html">ProvisionAuditConditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ProvisionAuditPolicyDetails.html">ProvisionAuditPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.RandomDateFormatEntry.html">RandomDateFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.RandomDecimalNumberFormatEntry.html">RandomDecimalNumberFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.RandomDigitsFormatEntry.html">RandomDigitsFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.RandomListFormatEntry.html">RandomListFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.RandomNumberFormatEntry.html">RandomNumberFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.RandomStringFormatEntry.html">RandomStringFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.RandomSubstitutionFormatEntry.html">RandomSubstitutionFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.References.html">References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.RegularExpressionFormatEntry.html">RegularExpressionFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.Report.html">Report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ReportCollection.html">ReportCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ReportDefinition.html">ReportDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ReportDefinitionCollection.html">ReportDefinitionCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ReportDefinitionSummary.html">ReportDefinitionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ReportDetails.html">ReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ReportSummary.html">ReportSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.RoleGrantPathCollection.html">RoleGrantPathCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.RoleGrantPathSummary.html">RoleGrantPathSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.RoleSummary.html">RoleSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.RunSecurityAssessmentDetails.html">RunSecurityAssessmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.RunUserAssessmentDetails.html">RunUserAssessmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SQLExpressionFormatEntry.html">SQLExpressionFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ScheduleAuditReportDetails.html">ScheduleAuditReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ScheduleReportDetails.html">ScheduleReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SchemaSummary.html">SchemaSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ScimQuerySelectionMode.html">ScimQuerySelectionMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SdmMaskingPolicyDifference.html">SdmMaskingPolicyDifference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SdmMaskingPolicyDifferenceCollection.html">SdmMaskingPolicyDifferenceCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SdmMaskingPolicyDifferenceColumnCollection.html">SdmMaskingPolicyDifferenceColumnCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SdmMaskingPolicyDifferenceSummary.html">SdmMaskingPolicyDifferenceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SectionStatistics.html">SectionStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityAssessment.html">SecurityAssessment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityAssessmentBaseLineDetails.html">SecurityAssessmentBaseLineDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityAssessmentComparison.html">SecurityAssessmentComparison</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityAssessmentComparisonPerTarget.html">SecurityAssessmentComparisonPerTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityAssessmentStatistics.html">SecurityAssessmentStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityAssessmentSummary.html">SecurityAssessmentSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityFeatureAnalyticsCollection.html">SecurityFeatureAnalyticsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityFeatureAnalyticsDimensions.html">SecurityFeatureAnalyticsDimensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityFeatureAnalyticsSummary.html">SecurityFeatureAnalyticsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityFeatureCollection.html">SecurityFeatureCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityFeatureSummary.html">SecurityFeatureSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityPolicy.html">SecurityPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityPolicyCollection.html">SecurityPolicyCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityPolicyDeployment.html">SecurityPolicyDeployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityPolicyDeploymentCollection.html">SecurityPolicyDeploymentCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityPolicyDeploymentSummary.html">SecurityPolicyDeploymentSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityPolicyEntryState.html">SecurityPolicyEntryState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityPolicyEntryStateCollection.html">SecurityPolicyEntryStateCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityPolicyEntryStateSummary.html">SecurityPolicyEntryStateSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityPolicyReport.html">SecurityPolicyReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityPolicyReportCollection.html">SecurityPolicyReportCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityPolicyReportSummary.html">SecurityPolicyReportSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SecurityPolicySummary.html">SecurityPolicySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SelectionDetails.html">SelectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveCategory.html">SensitiveCategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveColumn.html">SensitiveColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveColumnCollection.html">SensitiveColumnCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveColumnSummary.html">SensitiveColumnSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveDataModel.html">SensitiveDataModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveDataModelCollection.html">SensitiveDataModelCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveDataModelSensitiveTypeCollection.html">SensitiveDataModelSensitiveTypeCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveDataModelSensitiveTypeSummary.html">SensitiveDataModelSensitiveTypeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveDataModelSummary.html">SensitiveDataModelSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveObjectCollection.html">SensitiveObjectCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveObjectSummary.html">SensitiveObjectSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveSchemaCollection.html">SensitiveSchemaCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveSchemaSummary.html">SensitiveSchemaSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveType.html">SensitiveType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveTypeCollection.html">SensitiveTypeCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveTypePattern.html">SensitiveTypePattern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SensitiveTypeSummary.html">SensitiveTypeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.ShuffleFormatEntry.html">ShuffleFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlCollection.html">SqlCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlCollectionAggregation.html">SqlCollectionAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlCollectionAnalyticsCollection.html">SqlCollectionAnalyticsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlCollectionCollection.html">SqlCollectionCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlCollectionDimensions.html">SqlCollectionDimensions</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">SqlCollectionLogAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlCollectionLogDimensions.html">SqlCollectionLogDimensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlCollectionLogInsightsCollection.html">SqlCollectionLogInsightsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlCollectionSummary.html">SqlCollectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallAllowedSql.html">SqlFirewallAllowedSql</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallAllowedSqlAggregation.html">SqlFirewallAllowedSqlAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallAllowedSqlAnalyticsCollection.html">SqlFirewallAllowedSqlAnalyticsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallAllowedSqlCollection.html">SqlFirewallAllowedSqlCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallAllowedSqlDimensions.html">SqlFirewallAllowedSqlDimensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallAllowedSqlSummary.html">SqlFirewallAllowedSqlSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallConfig.html">SqlFirewallConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallPolicy.html">SqlFirewallPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallPolicyAggregation.html">SqlFirewallPolicyAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallPolicyAnalyticsCollection.html">SqlFirewallPolicyAnalyticsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallPolicyCollection.html">SqlFirewallPolicyCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallPolicyDimensions.html">SqlFirewallPolicyDimensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallPolicySummary.html">SqlFirewallPolicySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallViolationAggregation.html">SqlFirewallViolationAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallViolationAggregationDimensions.html">SqlFirewallViolationAggregationDimensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallViolationAnalyticsCollection.html">SqlFirewallViolationAnalyticsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallViolationSummary.html">SqlFirewallViolationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SqlFirewallViolationsCollection.html">SqlFirewallViolationsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.StartAuditTrailDetails.html">StartAuditTrailDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.SubstringFormatEntry.html">SubstringFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.Summary.html">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.TableSummary.html">TableSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.TablesForDiscovery.html">TablesForDiscovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.TargetAlertPolicyAssociation.html">TargetAlertPolicyAssociation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.TargetAlertPolicyAssociationCollection.html">TargetAlertPolicyAssociationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.TargetAlertPolicyAssociationSummary.html">TargetAlertPolicyAssociationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.TargetDatabase.html">TargetDatabase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.TargetDatabaseSummary.html">TargetDatabaseSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.TlsConfig.html">TlsConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.TruncateTableFormatEntry.html">TruncateTableFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UDFFormatEntry.html">UDFFormatEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UnsetSecurityAssessmentBaselineDetails.html">UnsetSecurityAssessmentBaselineDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UnsetUserAssessmentBaselineDetails.html">UnsetUserAssessmentBaselineDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateAlertDetails.html">UpdateAlertDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateAlertPolicyDetails.html">UpdateAlertPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateAlertPolicyRuleDetails.html">UpdateAlertPolicyRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateAuditArchiveRetrievalDetails.html">UpdateAuditArchiveRetrievalDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateAuditPolicyDetails.html">UpdateAuditPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateAuditProfileDetails.html">UpdateAuditProfileDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateAuditTrailDetails.html">UpdateAuditTrailDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateColumnSourceDetails.html">UpdateColumnSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateColumnSourceSdmDetails.html">UpdateColumnSourceSdmDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateColumnSourceTargetDetails.html">UpdateColumnSourceTargetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateDataSafePrivateEndpointDetails.html">UpdateDataSafePrivateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateDatabaseSecurityConfigDetails.html">UpdateDatabaseSecurityConfigDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateFindingDetails.html">UpdateFindingDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateLibraryMaskingFormatDetails.html">UpdateLibraryMaskingFormatDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateMaskingColumnDetails.html">UpdateMaskingColumnDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateMaskingPolicyDetails.html">UpdateMaskingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateOnPremConnectorDetails.html">UpdateOnPremConnectorDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateOnPremConnectorWalletDetails.html">UpdateOnPremConnectorWalletDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdatePeerTargetDatabaseDetails.html">UpdatePeerTargetDatabaseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateReportDefinitionDetails.html">UpdateReportDefinitionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateReportDetails.html">UpdateReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateSdmMaskingPolicyDifferenceDetails.html">UpdateSdmMaskingPolicyDifferenceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateSecurityAssessmentDetails.html">UpdateSecurityAssessmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateSecurityPolicyDeploymentDetails.html">UpdateSecurityPolicyDeploymentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateSecurityPolicyDetails.html">UpdateSecurityPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateSensitiveCategoryDetails.html">UpdateSensitiveCategoryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateSensitiveColumnDetails.html">UpdateSensitiveColumnDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateSensitiveDataModelDetails.html">UpdateSensitiveDataModelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateSensitiveTypeDetails.html">UpdateSensitiveTypeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateSensitiveTypePatternDetails.html">UpdateSensitiveTypePatternDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateSqlCollectionDetails.html">UpdateSqlCollectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateSqlFirewallConfigDetails.html">UpdateSqlFirewallConfigDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateSqlFirewallPolicyDetails.html">UpdateSqlFirewallPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateTargetAlertPolicyAssociationDetails.html">UpdateTargetAlertPolicyAssociationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateTargetDatabaseDetails.html">UpdateTargetDatabaseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UpdateUserAssessmentDetails.html">UpdateUserAssessmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UserAccessAnalyticsCollection.html">UserAccessAnalyticsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UserAccessAnalyticsSummary.html">UserAccessAnalyticsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UserAggregation.html">UserAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UserAssessment.html">UserAssessment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UserAssessmentBaseLineDetails.html">UserAssessmentBaseLineDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UserAssessmentComparison.html">UserAssessmentComparison</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UserAssessmentSummary.html">UserAssessmentSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UserDetails.html">UserDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.UserSummary.html">UserSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.WorkRequestResource.html">WorkRequestResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.data_safe.models.WorkRequestSummary.html">WorkRequestSummary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../data_safe.html">Data Safe</a> &raquo;</li>
+        
+      <li>SqlCollectionLogAggregation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/data_safe/models/oci.data_safe.models.SqlCollectionLogAggregation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sqlcollectionlogaggregation">
+<h1>SqlCollectionLogAggregation<a class="headerlink" href="#sqlcollectionlogaggregation" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.data_safe.models.SqlCollectionLogAggregation">
+<em class="property">class </em><code class="descclassname">oci.data_safe.models.</code><code class="descname">SqlCollectionLogAggregation</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.data_safe.models.SqlCollectionLogAggregation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The details of SQL collection log aggregation items.</p>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.data_safe.models.SqlCollectionLogAggregation.__init__" title="oci.data_safe.models.SqlCollectionLogAggregation.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(**kwargs)</td>
+<td>Initializes a new SqlCollectionLogAggregation object with values from keyword arguments.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attributes</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.data_safe.models.SqlCollectionLogAggregation.count" title="oci.data_safe.models.SqlCollectionLogAggregation.count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">count</span></code></a></td>
+<td><strong>[Required]</strong> Gets the count of this SqlCollectionLogAggregation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.data_safe.models.SqlCollectionLogAggregation.dimensions" title="oci.data_safe.models.SqlCollectionLogAggregation.dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimensions</span></code></a></td>
+<td>Gets the dimensions of this SqlCollectionLogAggregation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.data_safe.models.SqlCollectionLogAggregation.metric_name" title="oci.data_safe.models.SqlCollectionLogAggregation.metric_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metric_name</span></code></a></td>
+<td><strong>[Required]</strong> Gets the metric_name of this SqlCollectionLogAggregation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.data_safe.models.SqlCollectionLogAggregation.time_ended" title="oci.data_safe.models.SqlCollectionLogAggregation.time_ended"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_ended</span></code></a></td>
+<td>Gets the time_ended of this SqlCollectionLogAggregation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.data_safe.models.SqlCollectionLogAggregation.time_started" title="oci.data_safe.models.SqlCollectionLogAggregation.time_started"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_started</span></code></a></td>
+<td>Gets the time_started of this SqlCollectionLogAggregation.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="oci.data_safe.models.SqlCollectionLogAggregation.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.data_safe.models.SqlCollectionLogAggregation.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new SqlCollectionLogAggregation object with values from keyword arguments.
+The following keyword arguments are supported (corresponding to the getters/setters of this class):</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>metric_name</strong> (<em>str</em>) – The value to assign to the metric_name property of this SqlCollectionLogAggregation.</li>
+<li><strong>time_started</strong> (<em>datetime</em>) – The value to assign to the time_started property of this SqlCollectionLogAggregation.</li>
+<li><strong>time_ended</strong> (<em>datetime</em>) – The value to assign to the time_ended property of this SqlCollectionLogAggregation.</li>
+<li><strong>count</strong> (<em>int</em>) – The value to assign to the count property of this SqlCollectionLogAggregation.</li>
+<li><strong>dimensions</strong> (<a class="reference internal" href="oci.data_safe.models.SqlCollectionLogDimensions.html#oci.data_safe.models.SqlCollectionLogDimensions" title="oci.data_safe.models.SqlCollectionLogDimensions"><em>oci.data_safe.models.SqlCollectionLogDimensions</em></a>) – The value to assign to the dimensions property of this SqlCollectionLogAggregation.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.data_safe.models.SqlCollectionLogAggregation.count">
+<code class="descname">count</code><a class="headerlink" href="#oci.data_safe.models.SqlCollectionLogAggregation.count" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the count of this SqlCollectionLogAggregation.
+Total count of aggregated value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The count of this SqlCollectionLogAggregation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.data_safe.models.SqlCollectionLogAggregation.dimensions">
+<code class="descname">dimensions</code><a class="headerlink" href="#oci.data_safe.models.SqlCollectionLogAggregation.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the dimensions of this SqlCollectionLogAggregation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The dimensions of this SqlCollectionLogAggregation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.data_safe.models.SqlCollectionLogDimensions.html#oci.data_safe.models.SqlCollectionLogDimensions" title="oci.data_safe.models.SqlCollectionLogDimensions">oci.data_safe.models.SqlCollectionLogDimensions</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.data_safe.models.SqlCollectionLogAggregation.metric_name">
+<code class="descname">metric_name</code><a class="headerlink" href="#oci.data_safe.models.SqlCollectionLogAggregation.metric_name" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the metric_name of this SqlCollectionLogAggregation.
+Name of the aggregation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The metric_name of this SqlCollectionLogAggregation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.data_safe.models.SqlCollectionLogAggregation.time_ended">
+<code class="descname">time_ended</code><a class="headerlink" href="#oci.data_safe.models.SqlCollectionLogAggregation.time_ended" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_ended of this SqlCollectionLogAggregation.
+The time at which the aggregation ended.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_ended of this SqlCollectionLogAggregation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.data_safe.models.SqlCollectionLogAggregation.time_started">
+<code class="descname">time_started</code><a class="headerlink" href="#oci.data_safe.models.SqlCollectionLogAggregation.time_started" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_started of this SqlCollectionLogAggregation.
+The time at which the aggregation started.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_started of this SqlCollectionLogAggregation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.data_safe.models.SqlCollectionLogDimensions.html" class="btn btn-neutral float-right" title="SqlCollectionLogDimensions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.data_safe.models.SqlCollectionDimensions.html" class="btn btn-neutral" title="SqlCollectionDimensions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

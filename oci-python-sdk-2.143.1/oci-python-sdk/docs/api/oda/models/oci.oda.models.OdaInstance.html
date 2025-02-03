@@ -1,0 +1,1350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>OdaInstance &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="OdaInstanceAttachment" href="oci.oda.models.OdaInstanceAttachment.html" />
+    <link rel="prev" title="OSSChannel" href="oci.oda.models.OSSChannel.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../oda.html">Oda</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.oda.ManagementClient.html">ManagementClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.oda.OdaClient.html">OdaClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.oda.OdapackageClient.html">OdapackageClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.oda.ManagementClientCompositeOperations.html">ManagementClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.oda.OdaClientCompositeOperations.html">OdaClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.oda.OdapackageClientCompositeOperations.html">OdapackageClientCompositeOperations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../oda.html#models">Models</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.AndroidChannel.html">AndroidChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.AppEventChannel.html">AppEventChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ApplicationChannel.html">ApplicationChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.AuthenticationProvider.html">AuthenticationProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.AuthenticationProviderCollection.html">AuthenticationProviderCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.AuthenticationProviderSummary.html">AuthenticationProviderSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.Bot.html">Bot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.BulkCreateSkillEntitiesDetails.html">BulkCreateSkillEntitiesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ChangeOdaInstanceCompartmentDetails.html">ChangeOdaInstanceCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ChangeOdaPrivateEndpointCompartmentDetails.html">ChangeOdaPrivateEndpointCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.Channel.html">Channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ChannelCollection.html">ChannelCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ChannelSummary.html">ChannelSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CloneDigitalAssistantDetails.html">CloneDigitalAssistantDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CloneSkillDetails.html">CloneSkillDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CompositeEntity.html">CompositeEntity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ConfigureDigitalAssistantParametersDetails.html">ConfigureDigitalAssistantParametersDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CortanaChannel.html">CortanaChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateAndroidChannelDetails.html">CreateAndroidChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateAndroidChannelResult.html">CreateAndroidChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateAppEventChannelDetails.html">CreateAppEventChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateAppEventChannelResult.html">CreateAppEventChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateApplicationChannelDetails.html">CreateApplicationChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateApplicationChannelResult.html">CreateApplicationChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateAuthenticationProviderDetails.html">CreateAuthenticationProviderDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateChannelDetails.html">CreateChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateChannelResult.html">CreateChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateCortanaChannelDetails.html">CreateCortanaChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateCortanaChannelResult.html">CreateCortanaChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateDigitalAssistantDetails.html">CreateDigitalAssistantDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateDigitalAssistantVersionDetails.html">CreateDigitalAssistantVersionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateFacebookChannelDetails.html">CreateFacebookChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateFacebookChannelResult.html">CreateFacebookChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateImportedPackageDetails.html">CreateImportedPackageDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateIosChannelDetails.html">CreateIosChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateIosChannelResult.html">CreateIosChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateMSTeamsChannelDetails.html">CreateMSTeamsChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateMSTeamsChannelResult.html">CreateMSTeamsChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateNewDigitalAssistantDetails.html">CreateNewDigitalAssistantDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateNewSkillDetails.html">CreateNewSkillDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateOSSChannelDetails.html">CreateOSSChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateOSSChannelResult.html">CreateOSSChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateOdaInstanceAttachmentDetails.html">CreateOdaInstanceAttachmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateOdaInstanceDetails.html">CreateOdaInstanceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateOdaPrivateEndpointAttachmentDetails.html">CreateOdaPrivateEndpointAttachmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateOdaPrivateEndpointDetails.html">CreateOdaPrivateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateOdaPrivateEndpointScanProxyDetails.html">CreateOdaPrivateEndpointScanProxyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateOsvcChannelDetails.html">CreateOsvcChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateOsvcChannelResult.html">CreateOsvcChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateServiceCloudChannelDetails.html">CreateServiceCloudChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateServiceCloudChannelResult.html">CreateServiceCloudChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateSkillCompositeEntityDetails.html">CreateSkillCompositeEntityDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateSkillDetails.html">CreateSkillDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateSkillEntityDetails.html">CreateSkillEntityDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateSkillParameterDetails.html">CreateSkillParameterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateSkillValueListEntityDetails.html">CreateSkillValueListEntityDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateSkillVersionDetails.html">CreateSkillVersionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateSlackChannelDetails.html">CreateSlackChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateSlackChannelResult.html">CreateSlackChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateTestChannelResult.html">CreateTestChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateTranslatorDetails.html">CreateTranslatorDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateTwilioChannelDetails.html">CreateTwilioChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateTwilioChannelResult.html">CreateTwilioChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateWebChannelDetails.html">CreateWebChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateWebChannelResult.html">CreateWebChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateWebhookChannelDetails.html">CreateWebhookChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.CreateWebhookChannelResult.html">CreateWebhookChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.DefaultParameterValues.html">DefaultParameterValues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.DigitalAssistant.html">DigitalAssistant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.DigitalAssistantCollection.html">DigitalAssistantCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.DigitalAssistantParameter.html">DigitalAssistantParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.DigitalAssistantParameterCollection.html">DigitalAssistantParameterCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.DigitalAssistantParameterSummary.html">DigitalAssistantParameterSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.DigitalAssistantParameterValue.html">DigitalAssistantParameterValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.DigitalAssistantSummary.html">DigitalAssistantSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.Entity.html">Entity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.EntityAction.html">EntityAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.EntityActionArgument.html">EntityActionArgument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.EntityActionArgumentNaturalLanguageMapping.html">EntityActionArgumentNaturalLanguageMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.EntityActionNaturalLanguageMapping.html">EntityActionNaturalLanguageMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.EntityAttribute.html">EntityAttribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.EntityAttributeNaturalLanguageMapping.html">EntityAttributeNaturalLanguageMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.EntityNaturalLanguageMapping.html">EntityNaturalLanguageMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ErrorBody.html">ErrorBody</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ExportBotDetails.html">ExportBotDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ExportDigitalAssistantDetails.html">ExportDigitalAssistantDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ExportSkillDetails.html">ExportSkillDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ExtendDigitalAssistantDetails.html">ExtendDigitalAssistantDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ExtendSkillDetails.html">ExtendSkillDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.FacebookChannel.html">FacebookChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ImportBotDetails.html">ImportBotDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ImportContract.html">ImportContract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ImportedPackage.html">ImportedPackage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ImportedPackageSummary.html">ImportedPackageSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.IosChannel.html">IosChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.LanguageMapping.html">LanguageMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.MSTeamsChannel.html">MSTeamsChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.MetadataProperty.html">MetadataProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.NameMapping.html">NameMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OSSChannel.html">OSSChannel</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">OdaInstance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OdaInstanceAttachment.html">OdaInstanceAttachment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OdaInstanceAttachmentCollection.html">OdaInstanceAttachmentCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OdaInstanceAttachmentOwner.html">OdaInstanceAttachmentOwner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OdaInstanceAttachmentSummary.html">OdaInstanceAttachmentSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OdaInstanceOwner.html">OdaInstanceOwner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OdaInstanceSummary.html">OdaInstanceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OdaPrivateEndpoint.html">OdaPrivateEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OdaPrivateEndpointAttachment.html">OdaPrivateEndpointAttachment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OdaPrivateEndpointAttachmentCollection.html">OdaPrivateEndpointAttachmentCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OdaPrivateEndpointAttachmentSummary.html">OdaPrivateEndpointAttachmentSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OdaPrivateEndpointCollection.html">OdaPrivateEndpointCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OdaPrivateEndpointScanProxy.html">OdaPrivateEndpointScanProxy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OdaPrivateEndpointScanProxyCollection.html">OdaPrivateEndpointScanProxyCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OdaPrivateEndpointScanProxySummary.html">OdaPrivateEndpointScanProxySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OdaPrivateEndpointSummary.html">OdaPrivateEndpointSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.OsvcChannel.html">OsvcChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.Package.html">Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.PackageSummary.html">PackageSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.Parameter.html">Parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ParameterDefinition.html">ParameterDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ResourceTypeDefaultParameterValues.html">ResourceTypeDefaultParameterValues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ResourceTypeImportContract.html">ResourceTypeImportContract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ResourceTypeMetadata.html">ResourceTypeMetadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.RestrictedOperation.html">RestrictedOperation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ScanListenerInfo.html">ScanListenerInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ServiceCloudChannel.html">ServiceCloudChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.Skill.html">Skill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.SkillCollection.html">SkillCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.SkillParameter.html">SkillParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.SkillParameterCollection.html">SkillParameterCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.SkillParameterSummary.html">SkillParameterSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.SkillSummary.html">SkillSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.SlackChannel.html">SlackChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.StaticEntityValue.html">StaticEntityValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.StaticEntityValueNaturalLanguageMapping.html">StaticEntityValueNaturalLanguageMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.StorageLocation.html">StorageLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.TestChannel.html">TestChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.TrainSkillDetails.html">TrainSkillDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.TrainSkillParameter.html">TrainSkillParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.TrainSkillQueryEntityParameter.html">TrainSkillQueryEntityParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.Translator.html">Translator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.TranslatorCollection.html">TranslatorCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.TranslatorSummary.html">TranslatorSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.TwilioChannel.html">TwilioChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateAndroidChannelDetails.html">UpdateAndroidChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateAppEventChannelDetails.html">UpdateAppEventChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateApplicationChannelDetails.html">UpdateApplicationChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateAuthenticationProviderDetails.html">UpdateAuthenticationProviderDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateChannelDetails.html">UpdateChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateCortanaChannelDetails.html">UpdateCortanaChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateDigitalAssistantDetails.html">UpdateDigitalAssistantDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateDigitalAssistantParameterDetails.html">UpdateDigitalAssistantParameterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateFacebookChannelDetails.html">UpdateFacebookChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateImportedPackageDetails.html">UpdateImportedPackageDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateIosChannelDetails.html">UpdateIosChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateMSTeamsChannelDetails.html">UpdateMSTeamsChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateOSSChannelDetails.html">UpdateOSSChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateOdaInstanceAttachmentDetails.html">UpdateOdaInstanceAttachmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateOdaInstanceDetails.html">UpdateOdaInstanceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateOdaPrivateEndpointDetails.html">UpdateOdaPrivateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateOsvcChannelDetails.html">UpdateOsvcChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateServiceCloudChannelDetails.html">UpdateServiceCloudChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateSkillDetails.html">UpdateSkillDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateSkillParameterDetails.html">UpdateSkillParameterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateSlackChannelDetails.html">UpdateSlackChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateTranslatorDetails.html">UpdateTranslatorDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateTwilioChannelDetails.html">UpdateTwilioChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateWebChannelDetails.html">UpdateWebChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.UpdateWebhookChannelDetails.html">UpdateWebhookChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.ValueListEntity.html">ValueListEntity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.WebChannel.html">WebChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.WebhookChannel.html">WebhookChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.WorkRequestResource.html">WorkRequestResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.oda.models.WorkRequestSummary.html">WorkRequestSummary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../oda.html">Oda</a> &raquo;</li>
+        
+      <li>OdaInstance</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/oda/models/oci.oda.models.OdaInstance.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="odainstance">
+<h1>OdaInstance<a class="headerlink" href="#odainstance" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.oda.models.OdaInstance">
+<em class="property">class </em><code class="descclassname">oci.oda.models.</code><code class="descname">OdaInstance</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.oda.models.OdaInstance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Description of <cite>OdaServiceInstance</cite> object.</p>
+<p><strong>Attributes</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_STATE_ACTIVE" title="oci.oda.models.OdaInstance.LIFECYCLE_STATE_ACTIVE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_ACTIVE</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_STATE_CREATING" title="oci.oda.models.OdaInstance.LIFECYCLE_STATE_CREATING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_CREATING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_STATE_DELETED" title="oci.oda.models.OdaInstance.LIFECYCLE_STATE_DELETED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_DELETED</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_STATE_DELETING" title="oci.oda.models.OdaInstance.LIFECYCLE_STATE_DELETING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_DELETING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_STATE_FAILED" title="oci.oda.models.OdaInstance.LIFECYCLE_STATE_FAILED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_FAILED</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_STATE_INACTIVE" title="oci.oda.models.OdaInstance.LIFECYCLE_STATE_INACTIVE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_INACTIVE</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_STATE_UPDATING" title="oci.oda.models.OdaInstance.LIFECYCLE_STATE_UPDATING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_STATE_UPDATING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_ACTIVATING_CUSTOMER_ENCRYPTION_KEY" title="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_ACTIVATING_CUSTOMER_ENCRYPTION_KEY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_ACTIVATING_CUSTOMER_ENCRYPTION_KEY</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_CHANGING_COMPARTMENT" title="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_CHANGING_COMPARTMENT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_CHANGING_COMPARTMENT</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_CREATING" title="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_CREATING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_CREATING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_DEACTIVATING_CUSTOMER_ENCRYPTION_KEY" title="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_DEACTIVATING_CUSTOMER_ENCRYPTION_KEY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_DEACTIVATING_CUSTOMER_ENCRYPTION_KEY</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_DELETE_PENDING" title="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_DELETE_PENDING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_DELETE_PENDING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_DELETING" title="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_DELETING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_DELETING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_PURGING" title="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_PURGING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_PURGING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_QUEUED" title="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_QUEUED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_QUEUED</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_RECOVERING" title="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_RECOVERING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_RECOVERING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_STARTING" title="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_STARTING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_STARTING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_STOPPING" title="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_STOPPING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_STOPPING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_UPDATING" title="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_UPDATING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_UPDATING</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_UPDATING_CUSTOMER_ENCRYPTION_KEY" title="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_UPDATING_CUSTOMER_ENCRYPTION_KEY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LIFECYCLE_SUB_STATE_UPDATING_CUSTOMER_ENCRYPTION_KEY</span></code></a></td>
+<td>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.SHAPE_NAME_DEVELOPMENT" title="oci.oda.models.OdaInstance.SHAPE_NAME_DEVELOPMENT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SHAPE_NAME_DEVELOPMENT</span></code></a></td>
+<td>A constant which can be used with the shape_name property of a OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.SHAPE_NAME_PRODUCTION" title="oci.oda.models.OdaInstance.SHAPE_NAME_PRODUCTION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SHAPE_NAME_PRODUCTION</span></code></a></td>
+<td>A constant which can be used with the shape_name property of a OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.attachment_ids" title="oci.oda.models.OdaInstance.attachment_ids"><code class="xref py py-obj docutils literal notranslate"><span class="pre">attachment_ids</span></code></a></td>
+<td>Gets the attachment_ids of this OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.attachment_types" title="oci.oda.models.OdaInstance.attachment_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">attachment_types</span></code></a></td>
+<td>Gets the attachment_types of this OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.compartment_id" title="oci.oda.models.OdaInstance.compartment_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compartment_id</span></code></a></td>
+<td><strong>[Required]</strong> Gets the compartment_id of this OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.connector_url" title="oci.oda.models.OdaInstance.connector_url"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connector_url</span></code></a></td>
+<td>Gets the connector_url of this OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.defined_tags" title="oci.oda.models.OdaInstance.defined_tags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">defined_tags</span></code></a></td>
+<td>Gets the defined_tags of this OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.description" title="oci.oda.models.OdaInstance.description"><code class="xref py py-obj docutils literal notranslate"><span class="pre">description</span></code></a></td>
+<td>Gets the description of this OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.display_name" title="oci.oda.models.OdaInstance.display_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">display_name</span></code></a></td>
+<td>Gets the display_name of this OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.freeform_tags" title="oci.oda.models.OdaInstance.freeform_tags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">freeform_tags</span></code></a></td>
+<td>Gets the freeform_tags of this OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.id" title="oci.oda.models.OdaInstance.id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">id</span></code></a></td>
+<td><strong>[Required]</strong> Gets the id of this OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.identity_app_console_url" title="oci.oda.models.OdaInstance.identity_app_console_url"><code class="xref py py-obj docutils literal notranslate"><span class="pre">identity_app_console_url</span></code></a></td>
+<td>Gets the identity_app_console_url of this OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.identity_app_guid" title="oci.oda.models.OdaInstance.identity_app_guid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">identity_app_guid</span></code></a></td>
+<td>Gets the identity_app_guid of this OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.identity_domain" title="oci.oda.models.OdaInstance.identity_domain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">identity_domain</span></code></a></td>
+<td>Gets the identity_domain of this OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.imported_package_ids" title="oci.oda.models.OdaInstance.imported_package_ids"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imported_package_ids</span></code></a></td>
+<td>Gets the imported_package_ids of this OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.imported_package_names" title="oci.oda.models.OdaInstance.imported_package_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imported_package_names</span></code></a></td>
+<td>Gets the imported_package_names of this OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.is_role_based_access" title="oci.oda.models.OdaInstance.is_role_based_access"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_role_based_access</span></code></a></td>
+<td>Gets the is_role_based_access of this OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.lifecycle_state" title="oci.oda.models.OdaInstance.lifecycle_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></td>
+<td>Gets the lifecycle_state of this OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.lifecycle_sub_state" title="oci.oda.models.OdaInstance.lifecycle_sub_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lifecycle_sub_state</span></code></a></td>
+<td>Gets the lifecycle_sub_state of this OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.restricted_operations" title="oci.oda.models.OdaInstance.restricted_operations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restricted_operations</span></code></a></td>
+<td>Gets the restricted_operations of this OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.shape_name" title="oci.oda.models.OdaInstance.shape_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shape_name</span></code></a></td>
+<td><strong>[Required]</strong> Gets the shape_name of this OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.state_message" title="oci.oda.models.OdaInstance.state_message"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state_message</span></code></a></td>
+<td>Gets the state_message of this OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.time_created" title="oci.oda.models.OdaInstance.time_created"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_created</span></code></a></td>
+<td>Gets the time_created of this OdaInstance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.time_updated" title="oci.oda.models.OdaInstance.time_updated"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_updated</span></code></a></td>
+<td>Gets the time_updated of this OdaInstance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.web_app_url" title="oci.oda.models.OdaInstance.web_app_url"><code class="xref py py-obj docutils literal notranslate"><span class="pre">web_app_url</span></code></a></td>
+<td>Gets the web_app_url of this OdaInstance.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.oda.models.OdaInstance.__init__" title="oci.oda.models.OdaInstance.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(**kwargs)</td>
+<td>Initializes a new OdaInstance object with values from keyword arguments.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_STATE_ACTIVE">
+<code class="descname">LIFECYCLE_STATE_ACTIVE</code><em class="property"> = 'ACTIVE'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_STATE_ACTIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a OdaInstance.
+This constant has a value of “ACTIVE”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_STATE_CREATING">
+<code class="descname">LIFECYCLE_STATE_CREATING</code><em class="property"> = 'CREATING'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_STATE_CREATING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a OdaInstance.
+This constant has a value of “CREATING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_STATE_DELETED">
+<code class="descname">LIFECYCLE_STATE_DELETED</code><em class="property"> = 'DELETED'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_STATE_DELETED" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a OdaInstance.
+This constant has a value of “DELETED”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_STATE_DELETING">
+<code class="descname">LIFECYCLE_STATE_DELETING</code><em class="property"> = 'DELETING'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_STATE_DELETING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a OdaInstance.
+This constant has a value of “DELETING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_STATE_FAILED">
+<code class="descname">LIFECYCLE_STATE_FAILED</code><em class="property"> = 'FAILED'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_STATE_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a OdaInstance.
+This constant has a value of “FAILED”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_STATE_INACTIVE">
+<code class="descname">LIFECYCLE_STATE_INACTIVE</code><em class="property"> = 'INACTIVE'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_STATE_INACTIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a OdaInstance.
+This constant has a value of “INACTIVE”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_STATE_UPDATING">
+<code class="descname">LIFECYCLE_STATE_UPDATING</code><em class="property"> = 'UPDATING'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_STATE_UPDATING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_state property of a OdaInstance.
+This constant has a value of “UPDATING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_ACTIVATING_CUSTOMER_ENCRYPTION_KEY">
+<code class="descname">LIFECYCLE_SUB_STATE_ACTIVATING_CUSTOMER_ENCRYPTION_KEY</code><em class="property"> = 'ACTIVATING_CUSTOMER_ENCRYPTION_KEY'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_ACTIVATING_CUSTOMER_ENCRYPTION_KEY" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.
+This constant has a value of “ACTIVATING_CUSTOMER_ENCRYPTION_KEY”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_CHANGING_COMPARTMENT">
+<code class="descname">LIFECYCLE_SUB_STATE_CHANGING_COMPARTMENT</code><em class="property"> = 'CHANGING_COMPARTMENT'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_CHANGING_COMPARTMENT" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.
+This constant has a value of “CHANGING_COMPARTMENT”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_CREATING">
+<code class="descname">LIFECYCLE_SUB_STATE_CREATING</code><em class="property"> = 'CREATING'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_CREATING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.
+This constant has a value of “CREATING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_DEACTIVATING_CUSTOMER_ENCRYPTION_KEY">
+<code class="descname">LIFECYCLE_SUB_STATE_DEACTIVATING_CUSTOMER_ENCRYPTION_KEY</code><em class="property"> = 'DEACTIVATING_CUSTOMER_ENCRYPTION_KEY'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_DEACTIVATING_CUSTOMER_ENCRYPTION_KEY" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.
+This constant has a value of “DEACTIVATING_CUSTOMER_ENCRYPTION_KEY”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_DELETE_PENDING">
+<code class="descname">LIFECYCLE_SUB_STATE_DELETE_PENDING</code><em class="property"> = 'DELETE_PENDING'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_DELETE_PENDING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.
+This constant has a value of “DELETE_PENDING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_DELETING">
+<code class="descname">LIFECYCLE_SUB_STATE_DELETING</code><em class="property"> = 'DELETING'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_DELETING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.
+This constant has a value of “DELETING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_PURGING">
+<code class="descname">LIFECYCLE_SUB_STATE_PURGING</code><em class="property"> = 'PURGING'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_PURGING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.
+This constant has a value of “PURGING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_QUEUED">
+<code class="descname">LIFECYCLE_SUB_STATE_QUEUED</code><em class="property"> = 'QUEUED'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_QUEUED" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.
+This constant has a value of “QUEUED”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_RECOVERING">
+<code class="descname">LIFECYCLE_SUB_STATE_RECOVERING</code><em class="property"> = 'RECOVERING'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_RECOVERING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.
+This constant has a value of “RECOVERING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_STARTING">
+<code class="descname">LIFECYCLE_SUB_STATE_STARTING</code><em class="property"> = 'STARTING'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_STARTING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.
+This constant has a value of “STARTING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_STOPPING">
+<code class="descname">LIFECYCLE_SUB_STATE_STOPPING</code><em class="property"> = 'STOPPING'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_STOPPING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.
+This constant has a value of “STOPPING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_UPDATING">
+<code class="descname">LIFECYCLE_SUB_STATE_UPDATING</code><em class="property"> = 'UPDATING'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_UPDATING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.
+This constant has a value of “UPDATING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_UPDATING_CUSTOMER_ENCRYPTION_KEY">
+<code class="descname">LIFECYCLE_SUB_STATE_UPDATING_CUSTOMER_ENCRYPTION_KEY</code><em class="property"> = 'UPDATING_CUSTOMER_ENCRYPTION_KEY'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.LIFECYCLE_SUB_STATE_UPDATING_CUSTOMER_ENCRYPTION_KEY" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the lifecycle_sub_state property of a OdaInstance.
+This constant has a value of “UPDATING_CUSTOMER_ENCRYPTION_KEY”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.SHAPE_NAME_DEVELOPMENT">
+<code class="descname">SHAPE_NAME_DEVELOPMENT</code><em class="property"> = 'DEVELOPMENT'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.SHAPE_NAME_DEVELOPMENT" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the shape_name property of a OdaInstance.
+This constant has a value of “DEVELOPMENT”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.SHAPE_NAME_PRODUCTION">
+<code class="descname">SHAPE_NAME_PRODUCTION</code><em class="property"> = 'PRODUCTION'</em><a class="headerlink" href="#oci.oda.models.OdaInstance.SHAPE_NAME_PRODUCTION" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the shape_name property of a OdaInstance.
+This constant has a value of “PRODUCTION”</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.oda.models.OdaInstance.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.oda.models.OdaInstance.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new OdaInstance object with values from keyword arguments.
+The following keyword arguments are supported (corresponding to the getters/setters of this class):</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>str</em>) – The value to assign to the id property of this OdaInstance.</li>
+<li><strong>display_name</strong> (<em>str</em>) – The value to assign to the display_name property of this OdaInstance.</li>
+<li><strong>description</strong> (<em>str</em>) – The value to assign to the description property of this OdaInstance.</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – The value to assign to the compartment_id property of this OdaInstance.</li>
+<li><strong>shape_name</strong> (<em>str</em>) – The value to assign to the shape_name property of this OdaInstance.
+Allowed values for this property are: “DEVELOPMENT”, “PRODUCTION”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>web_app_url</strong> (<em>str</em>) – The value to assign to the web_app_url property of this OdaInstance.</li>
+<li><strong>connector_url</strong> (<em>str</em>) – The value to assign to the connector_url property of this OdaInstance.</li>
+<li><strong>time_created</strong> (<em>datetime</em>) – The value to assign to the time_created property of this OdaInstance.</li>
+<li><strong>time_updated</strong> (<em>datetime</em>) – The value to assign to the time_updated property of this OdaInstance.</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – The value to assign to the lifecycle_state property of this OdaInstance.
+Allowed values for this property are: “CREATING”, “UPDATING”, “ACTIVE”, “INACTIVE”, “DELETING”, “DELETED”, “FAILED”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>lifecycle_sub_state</strong> (<em>str</em>) – The value to assign to the lifecycle_sub_state property of this OdaInstance.
+Allowed values for this property are: “CREATING”, “STARTING”, “STOPPING”, “CHANGING_COMPARTMENT”, “ACTIVATING_CUSTOMER_ENCRYPTION_KEY”, “UPDATING_CUSTOMER_ENCRYPTION_KEY”, “DEACTIVATING_CUSTOMER_ENCRYPTION_KEY”, “DELETING”, “DELETE_PENDING”, “RECOVERING”, “UPDATING”, “PURGING”, “QUEUED”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>state_message</strong> (<em>str</em>) – The value to assign to the state_message property of this OdaInstance.</li>
+<li><strong>freeform_tags</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>str</em><em>)</em>) – The value to assign to the freeform_tags property of this OdaInstance.</li>
+<li><strong>defined_tags</strong> (<em>dict</em><em>(</em><em>str</em><em>, </em><em>dict</em><em>(</em><em>str</em><em>, </em><em>object</em><em>)</em><em>)</em>) – The value to assign to the defined_tags property of this OdaInstance.</li>
+<li><strong>is_role_based_access</strong> (<em>bool</em>) – The value to assign to the is_role_based_access property of this OdaInstance.</li>
+<li><strong>identity_domain</strong> (<em>str</em>) – The value to assign to the identity_domain property of this OdaInstance.</li>
+<li><strong>identity_app_guid</strong> (<em>str</em>) – The value to assign to the identity_app_guid property of this OdaInstance.</li>
+<li><strong>identity_app_console_url</strong> (<em>str</em>) – The value to assign to the identity_app_console_url property of this OdaInstance.</li>
+<li><strong>imported_package_names</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – The value to assign to the imported_package_names property of this OdaInstance.</li>
+<li><strong>imported_package_ids</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – The value to assign to the imported_package_ids property of this OdaInstance.</li>
+<li><strong>attachment_types</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – The value to assign to the attachment_types property of this OdaInstance.</li>
+<li><strong>attachment_ids</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – The value to assign to the attachment_ids property of this OdaInstance.</li>
+<li><strong>restricted_operations</strong> (<em>list</em><em>[</em><a class="reference internal" href="oci.oda.models.RestrictedOperation.html#oci.oda.models.RestrictedOperation" title="oci.oda.models.RestrictedOperation"><em>oci.oda.models.RestrictedOperation</em></a><em>]</em>) – The value to assign to the restricted_operations property of this OdaInstance.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.attachment_ids">
+<code class="descname">attachment_ids</code><a class="headerlink" href="#oci.oda.models.OdaInstance.attachment_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the attachment_ids of this OdaInstance.
+A list of attachment identifiers for this instance (if any). Use GetOdaInstanceAttachment to get the details of the attachments.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The attachment_ids of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.attachment_types">
+<code class="descname">attachment_types</code><a class="headerlink" href="#oci.oda.models.OdaInstance.attachment_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the attachment_types of this OdaInstance.
+A list of attachment types for this instance (if any). Use attachmentIds to get the details of the attachments.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The attachment_types of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.compartment_id">
+<code class="descname">compartment_id</code><a class="headerlink" href="#oci.oda.models.OdaInstance.compartment_id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the compartment_id of this OdaInstance.
+Identifier of the compartment that the instance belongs to.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The compartment_id of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.connector_url">
+<code class="descname">connector_url</code><a class="headerlink" href="#oci.oda.models.OdaInstance.connector_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the connector_url of this OdaInstance.
+URL for the connector’s endpoint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The connector_url of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.defined_tags">
+<code class="descname">defined_tags</code><a class="headerlink" href="#oci.oda.models.OdaInstance.defined_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the defined_tags of this OdaInstance.
+Usage of predefined tag keys. These predefined keys are scoped to namespaces.
+Example: <cite>{“foo-namespace”: {“bar-key”: “value”}}</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The defined_tags of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict(str, dict(str, object))</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.description">
+<code class="descname">description</code><a class="headerlink" href="#oci.oda.models.OdaInstance.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the description of this OdaInstance.
+Description of the Digital Assistant instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The description of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.display_name">
+<code class="descname">display_name</code><a class="headerlink" href="#oci.oda.models.OdaInstance.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the display_name of this OdaInstance.
+User-defined name for the Digital Assistant instance. Avoid entering confidential information.
+You can change this value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The display_name of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.freeform_tags">
+<code class="descname">freeform_tags</code><a class="headerlink" href="#oci.oda.models.OdaInstance.freeform_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the freeform_tags of this OdaInstance.
+Simple key-value pair that is applied without any predefined name, type, or scope.
+Example: <cite>{“bar-key”: “value”}</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The freeform_tags of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict(str, str)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.id">
+<code class="descname">id</code><a class="headerlink" href="#oci.oda.models.OdaInstance.id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the id of this OdaInstance.
+Unique immutable identifier that was assigned when the instance was created.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The id of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.identity_app_console_url">
+<code class="descname">identity_app_console_url</code><a class="headerlink" href="#oci.oda.models.OdaInstance.identity_app_console_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the identity_app_console_url of this OdaInstance.
+If isRoleBasedAccess is set to true, this property specifies the URL for the administration console used to manage the Identity Application instance Digital Assistant has created inside the user-specified identity domain.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The identity_app_console_url of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.identity_app_guid">
+<code class="descname">identity_app_guid</code><a class="headerlink" href="#oci.oda.models.OdaInstance.identity_app_guid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the identity_app_guid of this OdaInstance.
+If isRoleBasedAccess is set to true, this property specifies the GUID of the Identity Application instance Digital Assistant has created inside the user-specified identity domain. This identity application instance may be used to host user roll mappings to grant access to this Digital Assistant instance for users within the identity domain.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The identity_app_guid of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.identity_domain">
+<code class="descname">identity_domain</code><a class="headerlink" href="#oci.oda.models.OdaInstance.identity_domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the identity_domain of this OdaInstance.
+If isRoleBasedAccess is set to true, this property specifies the identity domain that is to be used to implement this type of authorzation. Digital Assistant will create an Identity Application instance and Application Roles within this identity domain. The caller may then perform and user roll mappings they like to grant access to users within the identity domain.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The identity_domain of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.imported_package_ids">
+<code class="descname">imported_package_ids</code><a class="headerlink" href="#oci.oda.models.OdaInstance.imported_package_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the imported_package_ids of this OdaInstance.
+A list of package ids imported into this instance (if any). Use GetImportedPackage to get the details of the imported packages.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The imported_package_ids of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.imported_package_names">
+<code class="descname">imported_package_names</code><a class="headerlink" href="#oci.oda.models.OdaInstance.imported_package_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the imported_package_names of this OdaInstance.
+A list of package names imported into this instance (if any). Use importedPackageIds field to get the details of the imported packages.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The imported_package_names of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.is_role_based_access">
+<code class="descname">is_role_based_access</code><a class="headerlink" href="#oci.oda.models.OdaInstance.is_role_based_access" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_role_based_access of this OdaInstance.
+Should this Digital Assistant instance use role-based authorization via an identity domain (true) or use the default policy-based authorization via IAM policies (false)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_role_based_access of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.lifecycle_state">
+<code class="descname">lifecycle_state</code><a class="headerlink" href="#oci.oda.models.OdaInstance.lifecycle_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the lifecycle_state of this OdaInstance.
+The current state of the Digital Assistant instance.</p>
+<p>Allowed values for this property are: “CREATING”, “UPDATING”, “ACTIVE”, “INACTIVE”, “DELETING”, “DELETED”, “FAILED”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The lifecycle_state of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.lifecycle_sub_state">
+<code class="descname">lifecycle_sub_state</code><a class="headerlink" href="#oci.oda.models.OdaInstance.lifecycle_sub_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the lifecycle_sub_state of this OdaInstance.
+The current sub-state of the Digital Assistant instance.</p>
+<p>Allowed values for this property are: “CREATING”, “STARTING”, “STOPPING”, “CHANGING_COMPARTMENT”, “ACTIVATING_CUSTOMER_ENCRYPTION_KEY”, “UPDATING_CUSTOMER_ENCRYPTION_KEY”, “DEACTIVATING_CUSTOMER_ENCRYPTION_KEY”, “DELETING”, “DELETE_PENDING”, “RECOVERING”, “UPDATING”, “PURGING”, “QUEUED”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The lifecycle_sub_state of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.restricted_operations">
+<code class="descname">restricted_operations</code><a class="headerlink" href="#oci.oda.models.OdaInstance.restricted_operations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the restricted_operations of this OdaInstance.
+A list of restricted operations (across all attachments) for this instance (if any). Use GetOdaInstanceAttachment to get the details of the attachments.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The restricted_operations of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[<a class="reference internal" href="oci.oda.models.RestrictedOperation.html#oci.oda.models.RestrictedOperation" title="oci.oda.models.RestrictedOperation">oci.oda.models.RestrictedOperation</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.shape_name">
+<code class="descname">shape_name</code><a class="headerlink" href="#oci.oda.models.OdaInstance.shape_name" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the shape_name of this OdaInstance.
+Shape or size of the instance.</p>
+<p>Allowed values for this property are: “DEVELOPMENT”, “PRODUCTION”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The shape_name of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.state_message">
+<code class="descname">state_message</code><a class="headerlink" href="#oci.oda.models.OdaInstance.state_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the state_message of this OdaInstance.
+A message that describes the current state in more detail.
+For example, actionable information about an instance that’s in the <cite>FAILED</cite> state.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The state_message of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.time_created">
+<code class="descname">time_created</code><a class="headerlink" href="#oci.oda.models.OdaInstance.time_created" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_created of this OdaInstance.
+When the Digital Assistant instance was created. A date-time string as described in <a class="reference external" href="https://tools.ietf.org/rfc/rfc3339">RFC 3339</a>, section 14.29.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_created of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.time_updated">
+<code class="descname">time_updated</code><a class="headerlink" href="#oci.oda.models.OdaInstance.time_updated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_updated of this OdaInstance.
+When the Digital Assistance instance was last updated. A date-time string as described in <a class="reference external" href="https://tools.ietf.org/rfc/rfc3339">RFC 3339</a>, section 14.29.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_updated of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.oda.models.OdaInstance.web_app_url">
+<code class="descname">web_app_url</code><a class="headerlink" href="#oci.oda.models.OdaInstance.web_app_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the web_app_url of this OdaInstance.
+URL for the Digital Assistant web application that’s associated with the instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The web_app_url of this OdaInstance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.oda.models.OdaInstanceAttachment.html" class="btn btn-neutral float-right" title="OdaInstanceAttachment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.oda.models.OSSChannel.html" class="btn btn-neutral" title="OSSChannel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

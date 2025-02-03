@@ -1,0 +1,2775 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SubscribedServiceSummary &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="SubscribedServiceUser" href="oci.onesubscription.models.SubscribedServiceUser.html" />
+    <link rel="prev" title="SubscribedServicePaymentTerm" href="oci.onesubscription.models.SubscribedServicePaymentTerm.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.BillingScheduleClient.html">BillingScheduleClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.CommitmentClient.html">CommitmentClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.ComputedUsageClient.html">ComputedUsageClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.InvoiceSummaryClient.html">InvoiceSummaryClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.OrganizationSubscriptionClient.html">OrganizationSubscriptionClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.RatecardClient.html">RatecardClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.SubscribedServiceClient.html">SubscribedServiceClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.SubscriptionClient.html">SubscriptionClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.BillingScheduleClientCompositeOperations.html">BillingScheduleClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.CommitmentClientCompositeOperations.html">CommitmentClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.ComputedUsageClientCompositeOperations.html">ComputedUsageClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.InvoiceSummaryClientCompositeOperations.html">InvoiceSummaryClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.OrganizationSubscriptionClientCompositeOperations.html">OrganizationSubscriptionClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.RatecardClientCompositeOperations.html">RatecardClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.SubscribedServiceClientCompositeOperations.html">SubscribedServiceClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.onesubscription.SubscriptionClientCompositeOperations.html">SubscriptionClientCompositeOperations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../onesubscription.html#models">Models</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.AggregatedComputedUsageSummary.html">AggregatedComputedUsageSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.BillingScheduleProduct.html">BillingScheduleProduct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.BillingScheduleSummary.html">BillingScheduleSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.Commitment.html">Commitment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.CommitmentService.html">CommitmentService</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.CommitmentSummary.html">CommitmentSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.ComputedUsage.html">ComputedUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.ComputedUsageAggregation.html">ComputedUsageAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.ComputedUsageProduct.html">ComputedUsageProduct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.ComputedUsageSummary.html">ComputedUsageSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.InvoiceLineSummary.html">InvoiceLineSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.InvoiceSummary.html">InvoiceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.InvoicelineComputedUsageSummary.html">InvoicelineComputedUsageSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.InvoicingAddress.html">InvoicingAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.InvoicingBusinessPartner.html">InvoicingBusinessPartner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.InvoicingCurrency.html">InvoicingCurrency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.InvoicingLocation.html">InvoicingLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.InvoicingOrganization.html">InvoicingOrganization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.InvoicingPaymentTerm.html">InvoicingPaymentTerm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.InvoicingProduct.html">InvoicingProduct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.InvoicingUser.html">InvoicingUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.OrganizationSubscriptionSummary.html">OrganizationSubscriptionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.OrgnizationSubsCurrency.html">OrgnizationSubsCurrency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.RateCardProduct.html">RateCardProduct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.RateCardSummary.html">RateCardSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.RateCardTier.html">RateCardTier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.SubscribedService.html">SubscribedService</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceAddress.html">SubscribedServiceAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceBusinessPartner.html">SubscribedServiceBusinessPartner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceLocation.html">SubscribedServiceLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.SubscribedServicePaymentTerm.html">SubscribedServicePaymentTerm</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">SubscribedServiceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceUser.html">SubscribedServiceUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.SubscriptionCurrency.html">SubscriptionCurrency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.SubscriptionProduct.html">SubscriptionProduct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.SubscriptionSubscribedService.html">SubscriptionSubscribedService</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.onesubscription.models.SubscriptionSummary.html">SubscriptionSummary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../onesubscription.html">Onesubscription</a> &raquo;</li>
+        
+      <li>SubscribedServiceSummary</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/onesubscription/models/oci.onesubscription.models.SubscribedServiceSummary.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="subscribedservicesummary">
+<h1>SubscribedServiceSummary<a class="headerlink" href="#subscribedservicesummary" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary">
+<em class="property">class </em><code class="descclassname">oci.onesubscription.models.</code><code class="descname">SubscribedServiceSummary</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Subscribed service contract details</p>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.__init__" title="oci.onesubscription.models.SubscribedServiceSummary.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(**kwargs)</td>
+<td>Initializes a new SubscribedServiceSummary object with values from keyword arguments.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attributes</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.admin_email" title="oci.onesubscription.models.SubscribedServiceSummary.admin_email"><code class="xref py py-obj docutils literal notranslate"><span class="pre">admin_email</span></code></a></td>
+<td>Gets the admin_email of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.agreement_id" title="oci.onesubscription.models.SubscribedServiceSummary.agreement_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">agreement_id</span></code></a></td>
+<td>Gets the agreement_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.agreement_name" title="oci.onesubscription.models.SubscribedServiceSummary.agreement_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">agreement_name</span></code></a></td>
+<td>Gets the agreement_name of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.agreement_type" title="oci.onesubscription.models.SubscribedServiceSummary.agreement_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">agreement_type</span></code></a></td>
+<td>Gets the agreement_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.available_amount" title="oci.onesubscription.models.SubscribedServiceSummary.available_amount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">available_amount</span></code></a></td>
+<td>Gets the available_amount of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.bill_to_address" title="oci.onesubscription.models.SubscribedServiceSummary.bill_to_address"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bill_to_address</span></code></a></td>
+<td>Gets the bill_to_address of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.bill_to_contact" title="oci.onesubscription.models.SubscribedServiceSummary.bill_to_contact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bill_to_contact</span></code></a></td>
+<td>Gets the bill_to_contact of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.bill_to_customer" title="oci.onesubscription.models.SubscribedServiceSummary.bill_to_customer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bill_to_customer</span></code></a></td>
+<td>Gets the bill_to_customer of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.billing_frequency" title="oci.onesubscription.models.SubscribedServiceSummary.billing_frequency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">billing_frequency</span></code></a></td>
+<td>Gets the billing_frequency of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.booking_opty_number" title="oci.onesubscription.models.SubscribedServiceSummary.booking_opty_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">booking_opty_number</span></code></a></td>
+<td>Gets the booking_opty_number of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.buyer_email" title="oci.onesubscription.models.SubscribedServiceSummary.buyer_email"><code class="xref py py-obj docutils literal notranslate"><span class="pre">buyer_email</span></code></a></td>
+<td>Gets the buyer_email of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.commitment_schedule_id" title="oci.onesubscription.models.SubscribedServiceSummary.commitment_schedule_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">commitment_schedule_id</span></code></a></td>
+<td>Gets the commitment_schedule_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.created_by" title="oci.onesubscription.models.SubscribedServiceSummary.created_by"><code class="xref py py-obj docutils literal notranslate"><span class="pre">created_by</span></code></a></td>
+<td>Gets the created_by of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.credit_percentage" title="oci.onesubscription.models.SubscribedServiceSummary.credit_percentage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">credit_percentage</span></code></a></td>
+<td>Gets the credit_percentage of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.csi" title="oci.onesubscription.models.SubscribedServiceSummary.csi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">csi</span></code></a></td>
+<td>Gets the csi of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.customer_transaction_reference" title="oci.onesubscription.models.SubscribedServiceSummary.customer_transaction_reference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">customer_transaction_reference</span></code></a></td>
+<td>Gets the customer_transaction_reference of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.data_center" title="oci.onesubscription.models.SubscribedServiceSummary.data_center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data_center</span></code></a></td>
+<td>Gets the data_center of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.data_center_region" title="oci.onesubscription.models.SubscribedServiceSummary.data_center_region"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data_center_region</span></code></a></td>
+<td>Gets the data_center_region of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.eligible_to_renew" title="oci.onesubscription.models.SubscribedServiceSummary.eligible_to_renew"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eligible_to_renew</span></code></a></td>
+<td>Gets the eligible_to_renew of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.end_user_address" title="oci.onesubscription.models.SubscribedServiceSummary.end_user_address"><code class="xref py py-obj docutils literal notranslate"><span class="pre">end_user_address</span></code></a></td>
+<td>Gets the end_user_address of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.end_user_contact" title="oci.onesubscription.models.SubscribedServiceSummary.end_user_contact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">end_user_contact</span></code></a></td>
+<td>Gets the end_user_contact of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.end_user_customer" title="oci.onesubscription.models.SubscribedServiceSummary.end_user_customer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">end_user_customer</span></code></a></td>
+<td>Gets the end_user_customer of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.fulfillment_set" title="oci.onesubscription.models.SubscribedServiceSummary.fulfillment_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fulfillment_set</span></code></a></td>
+<td>Gets the fulfillment_set of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.funded_allocation_value" title="oci.onesubscription.models.SubscribedServiceSummary.funded_allocation_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">funded_allocation_value</span></code></a></td>
+<td>Gets the funded_allocation_value of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.id" title="oci.onesubscription.models.SubscribedServiceSummary.id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">id</span></code></a></td>
+<td><strong>[Required]</strong> Gets the id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.is_allowance" title="oci.onesubscription.models.SubscribedServiceSummary.is_allowance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_allowance</span></code></a></td>
+<td>Gets the is_allowance of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.is_cap_to_price_list" title="oci.onesubscription.models.SubscribedServiceSummary.is_cap_to_price_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_cap_to_price_list</span></code></a></td>
+<td>Gets the is_cap_to_price_list of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.is_credit_enabled" title="oci.onesubscription.models.SubscribedServiceSummary.is_credit_enabled"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_credit_enabled</span></code></a></td>
+<td>Gets the is_credit_enabled of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.is_having_usage" title="oci.onesubscription.models.SubscribedServiceSummary.is_having_usage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_having_usage</span></code></a></td>
+<td>Gets the is_having_usage of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.is_intent_to_pay" title="oci.onesubscription.models.SubscribedServiceSummary.is_intent_to_pay"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_intent_to_pay</span></code></a></td>
+<td>Gets the is_intent_to_pay of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.is_payg" title="oci.onesubscription.models.SubscribedServiceSummary.is_payg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_payg</span></code></a></td>
+<td>Gets the is_payg of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.is_single_rate_card" title="oci.onesubscription.models.SubscribedServiceSummary.is_single_rate_card"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_single_rate_card</span></code></a></td>
+<td>Gets the is_single_rate_card of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.is_variable_commitment" title="oci.onesubscription.models.SubscribedServiceSummary.is_variable_commitment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_variable_commitment</span></code></a></td>
+<td>Gets the is_variable_commitment of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.line_net_amount" title="oci.onesubscription.models.SubscribedServiceSummary.line_net_amount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">line_net_amount</span></code></a></td>
+<td>Gets the line_net_amount of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.major_set" title="oci.onesubscription.models.SubscribedServiceSummary.major_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">major_set</span></code></a></td>
+<td>Gets the major_set of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.net_unit_price" title="oci.onesubscription.models.SubscribedServiceSummary.net_unit_price"><code class="xref py py-obj docutils literal notranslate"><span class="pre">net_unit_price</span></code></a></td>
+<td>Gets the net_unit_price of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.operation_type" title="oci.onesubscription.models.SubscribedServiceSummary.operation_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">operation_type</span></code></a></td>
+<td>Gets the operation_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.order_header_id" title="oci.onesubscription.models.SubscribedServiceSummary.order_header_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">order_header_id</span></code></a></td>
+<td>Gets the order_header_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.order_line_id" title="oci.onesubscription.models.SubscribedServiceSummary.order_line_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">order_line_id</span></code></a></td>
+<td>Gets the order_line_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.order_line_number" title="oci.onesubscription.models.SubscribedServiceSummary.order_line_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">order_line_number</span></code></a></td>
+<td>Gets the order_line_number of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.order_number" title="oci.onesubscription.models.SubscribedServiceSummary.order_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">order_number</span></code></a></td>
+<td>Gets the order_number of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.order_type" title="oci.onesubscription.models.SubscribedServiceSummary.order_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">order_type</span></code></a></td>
+<td>Gets the order_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.original_promo_amount" title="oci.onesubscription.models.SubscribedServiceSummary.original_promo_amount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">original_promo_amount</span></code></a></td>
+<td>Gets the original_promo_amount of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.overage_bill_to" title="oci.onesubscription.models.SubscribedServiceSummary.overage_bill_to"><code class="xref py py-obj docutils literal notranslate"><span class="pre">overage_bill_to</span></code></a></td>
+<td>Gets the overage_bill_to of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.overage_discount_percentage" title="oci.onesubscription.models.SubscribedServiceSummary.overage_discount_percentage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">overage_discount_percentage</span></code></a></td>
+<td>Gets the overage_discount_percentage of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.overage_policy" title="oci.onesubscription.models.SubscribedServiceSummary.overage_policy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">overage_policy</span></code></a></td>
+<td>Gets the overage_policy of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.partner_credit_amount" title="oci.onesubscription.models.SubscribedServiceSummary.partner_credit_amount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">partner_credit_amount</span></code></a></td>
+<td>Gets the partner_credit_amount of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.partner_transaction_type" title="oci.onesubscription.models.SubscribedServiceSummary.partner_transaction_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">partner_transaction_type</span></code></a></td>
+<td>Gets the partner_transaction_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.payg_policy" title="oci.onesubscription.models.SubscribedServiceSummary.payg_policy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">payg_policy</span></code></a></td>
+<td>Gets the payg_policy of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.payment_method" title="oci.onesubscription.models.SubscribedServiceSummary.payment_method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">payment_method</span></code></a></td>
+<td>Gets the payment_method of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.payment_number" title="oci.onesubscription.models.SubscribedServiceSummary.payment_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">payment_number</span></code></a></td>
+<td>Gets the payment_number of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.payment_term" title="oci.onesubscription.models.SubscribedServiceSummary.payment_term"><code class="xref py py-obj docutils literal notranslate"><span class="pre">payment_term</span></code></a></td>
+<td>Gets the payment_term of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.price_period" title="oci.onesubscription.models.SubscribedServiceSummary.price_period"><code class="xref py py-obj docutils literal notranslate"><span class="pre">price_period</span></code></a></td>
+<td>Gets the price_period of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.pricing_model" title="oci.onesubscription.models.SubscribedServiceSummary.pricing_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pricing_model</span></code></a></td>
+<td>Gets the pricing_model of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.product" title="oci.onesubscription.models.SubscribedServiceSummary.product"><code class="xref py py-obj docutils literal notranslate"><span class="pre">product</span></code></a></td>
+<td>Gets the product of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.program_type" title="oci.onesubscription.models.SubscribedServiceSummary.program_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">program_type</span></code></a></td>
+<td>Gets the program_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.promo_order_line_id" title="oci.onesubscription.models.SubscribedServiceSummary.promo_order_line_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">promo_order_line_id</span></code></a></td>
+<td>Gets the promo_order_line_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.promo_type" title="oci.onesubscription.models.SubscribedServiceSummary.promo_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">promo_type</span></code></a></td>
+<td>Gets the promo_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.promotion_pricing_type" title="oci.onesubscription.models.SubscribedServiceSummary.promotion_pricing_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">promotion_pricing_type</span></code></a></td>
+<td>Gets the promotion_pricing_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.provisioning_source" title="oci.onesubscription.models.SubscribedServiceSummary.provisioning_source"><code class="xref py py-obj docutils literal notranslate"><span class="pre">provisioning_source</span></code></a></td>
+<td>Gets the provisioning_source of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.quantity" title="oci.onesubscription.models.SubscribedServiceSummary.quantity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quantity</span></code></a></td>
+<td>Gets the quantity of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.rate_card_discount_percentage" title="oci.onesubscription.models.SubscribedServiceSummary.rate_card_discount_percentage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rate_card_discount_percentage</span></code></a></td>
+<td>Gets the rate_card_discount_percentage of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.ratecard_type" title="oci.onesubscription.models.SubscribedServiceSummary.ratecard_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ratecard_type</span></code></a></td>
+<td>Gets the ratecard_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.renewal_opty_id" title="oci.onesubscription.models.SubscribedServiceSummary.renewal_opty_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renewal_opty_id</span></code></a></td>
+<td>Gets the renewal_opty_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.renewal_opty_number" title="oci.onesubscription.models.SubscribedServiceSummary.renewal_opty_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renewal_opty_number</span></code></a></td>
+<td>Gets the renewal_opty_number of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.renewal_opty_type" title="oci.onesubscription.models.SubscribedServiceSummary.renewal_opty_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renewal_opty_type</span></code></a></td>
+<td>Gets the renewal_opty_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.renewed_subscribed_service_id" title="oci.onesubscription.models.SubscribedServiceSummary.renewed_subscribed_service_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renewed_subscribed_service_id</span></code></a></td>
+<td>Gets the renewed_subscribed_service_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.reseller_address" title="oci.onesubscription.models.SubscribedServiceSummary.reseller_address"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reseller_address</span></code></a></td>
+<td>Gets the reseller_address of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.reseller_contact" title="oci.onesubscription.models.SubscribedServiceSummary.reseller_contact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reseller_contact</span></code></a></td>
+<td>Gets the reseller_contact of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.reseller_customer" title="oci.onesubscription.models.SubscribedServiceSummary.reseller_customer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reseller_customer</span></code></a></td>
+<td>Gets the reseller_customer of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.revenue_line_id" title="oci.onesubscription.models.SubscribedServiceSummary.revenue_line_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">revenue_line_id</span></code></a></td>
+<td>Gets the revenue_line_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.revenue_line_number" title="oci.onesubscription.models.SubscribedServiceSummary.revenue_line_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">revenue_line_number</span></code></a></td>
+<td>Gets the revenue_line_number of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.revised_arr_in_lc" title="oci.onesubscription.models.SubscribedServiceSummary.revised_arr_in_lc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">revised_arr_in_lc</span></code></a></td>
+<td>Gets the revised_arr_in_lc of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.revised_arr_in_sc" title="oci.onesubscription.models.SubscribedServiceSummary.revised_arr_in_sc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">revised_arr_in_sc</span></code></a></td>
+<td>Gets the revised_arr_in_sc of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.sales_account_party_id" title="oci.onesubscription.models.SubscribedServiceSummary.sales_account_party_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sales_account_party_id</span></code></a></td>
+<td>Gets the sales_account_party_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.sales_channel" title="oci.onesubscription.models.SubscribedServiceSummary.sales_channel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sales_channel</span></code></a></td>
+<td>Gets the sales_channel of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.serial_number" title="oci.onesubscription.models.SubscribedServiceSummary.serial_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">serial_number</span></code></a></td>
+<td>Gets the serial_number of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.service_to_address" title="oci.onesubscription.models.SubscribedServiceSummary.service_to_address"><code class="xref py py-obj docutils literal notranslate"><span class="pre">service_to_address</span></code></a></td>
+<td>Gets the service_to_address of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.service_to_contact" title="oci.onesubscription.models.SubscribedServiceSummary.service_to_contact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">service_to_contact</span></code></a></td>
+<td>Gets the service_to_contact of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.service_to_customer" title="oci.onesubscription.models.SubscribedServiceSummary.service_to_customer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">service_to_customer</span></code></a></td>
+<td>Gets the service_to_customer of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.sold_to_contact" title="oci.onesubscription.models.SubscribedServiceSummary.sold_to_contact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sold_to_contact</span></code></a></td>
+<td>Gets the sold_to_contact of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.sold_to_customer" title="oci.onesubscription.models.SubscribedServiceSummary.sold_to_customer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sold_to_customer</span></code></a></td>
+<td>Gets the sold_to_customer of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.start_date_type" title="oci.onesubscription.models.SubscribedServiceSummary.start_date_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_date_type</span></code></a></td>
+<td>Gets the start_date_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.status" title="oci.onesubscription.models.SubscribedServiceSummary.status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">status</span></code></a></td>
+<td>Gets the status of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.subscription_id" title="oci.onesubscription.models.SubscribedServiceSummary.subscription_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subscription_id</span></code></a></td>
+<td>Gets the subscription_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.subscription_source" title="oci.onesubscription.models.SubscribedServiceSummary.subscription_source"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subscription_source</span></code></a></td>
+<td>Gets the subscription_source of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.system_arr_in_lc" title="oci.onesubscription.models.SubscribedServiceSummary.system_arr_in_lc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">system_arr_in_lc</span></code></a></td>
+<td>Gets the system_arr_in_lc of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.system_arr_in_sc" title="oci.onesubscription.models.SubscribedServiceSummary.system_arr_in_sc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">system_arr_in_sc</span></code></a></td>
+<td>Gets the system_arr_in_sc of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.system_atr_arr_in_lc" title="oci.onesubscription.models.SubscribedServiceSummary.system_atr_arr_in_lc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">system_atr_arr_in_lc</span></code></a></td>
+<td>Gets the system_atr_arr_in_lc of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.system_atr_arr_in_sc" title="oci.onesubscription.models.SubscribedServiceSummary.system_atr_arr_in_sc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">system_atr_arr_in_sc</span></code></a></td>
+<td>Gets the system_atr_arr_in_sc of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.term_value" title="oci.onesubscription.models.SubscribedServiceSummary.term_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">term_value</span></code></a></td>
+<td>Gets the term_value of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.term_value_uom" title="oci.onesubscription.models.SubscribedServiceSummary.term_value_uom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">term_value_uom</span></code></a></td>
+<td>Gets the term_value_uom of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.time_agreement_end" title="oci.onesubscription.models.SubscribedServiceSummary.time_agreement_end"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_agreement_end</span></code></a></td>
+<td>Gets the time_agreement_end of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.time_created" title="oci.onesubscription.models.SubscribedServiceSummary.time_created"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_created</span></code></a></td>
+<td>Gets the time_created of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.time_customer_config" title="oci.onesubscription.models.SubscribedServiceSummary.time_customer_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_customer_config</span></code></a></td>
+<td>Gets the time_customer_config of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.time_end" title="oci.onesubscription.models.SubscribedServiceSummary.time_end"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_end</span></code></a></td>
+<td>Gets the time_end of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.time_majorset_end" title="oci.onesubscription.models.SubscribedServiceSummary.time_majorset_end"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_majorset_end</span></code></a></td>
+<td>Gets the time_majorset_end of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.time_majorset_start" title="oci.onesubscription.models.SubscribedServiceSummary.time_majorset_start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_majorset_start</span></code></a></td>
+<td>Gets the time_majorset_start of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.time_payment_expiry" title="oci.onesubscription.models.SubscribedServiceSummary.time_payment_expiry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_payment_expiry</span></code></a></td>
+<td>Gets the time_payment_expiry of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.time_provisioned" title="oci.onesubscription.models.SubscribedServiceSummary.time_provisioned"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_provisioned</span></code></a></td>
+<td>Gets the time_provisioned of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.time_service_configuration_email_sent" title="oci.onesubscription.models.SubscribedServiceSummary.time_service_configuration_email_sent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_service_configuration_email_sent</span></code></a></td>
+<td>Gets the time_service_configuration_email_sent of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.time_start" title="oci.onesubscription.models.SubscribedServiceSummary.time_start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_start</span></code></a></td>
+<td>Gets the time_start of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.time_updated" title="oci.onesubscription.models.SubscribedServiceSummary.time_updated"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_updated</span></code></a></td>
+<td>Gets the time_updated of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.time_welcome_email_sent" title="oci.onesubscription.models.SubscribedServiceSummary.time_welcome_email_sent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_welcome_email_sent</span></code></a></td>
+<td>Gets the time_welcome_email_sent of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.total_value" title="oci.onesubscription.models.SubscribedServiceSummary.total_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">total_value</span></code></a></td>
+<td>Gets the total_value of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.transaction_extension_id" title="oci.onesubscription.models.SubscribedServiceSummary.transaction_extension_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transaction_extension_id</span></code></a></td>
+<td>Gets the transaction_extension_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.type" title="oci.onesubscription.models.SubscribedServiceSummary.type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></td>
+<td>Gets the type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.updated_by" title="oci.onesubscription.models.SubscribedServiceSummary.updated_by"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updated_by</span></code></a></td>
+<td>Gets the updated_by of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.onesubscription.models.SubscribedServiceSummary.used_amount" title="oci.onesubscription.models.SubscribedServiceSummary.used_amount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">used_amount</span></code></a></td>
+<td>Gets the used_amount of this SubscribedServiceSummary.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new SubscribedServiceSummary object with values from keyword arguments.
+The following keyword arguments are supported (corresponding to the getters/setters of this class):</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<em>str</em>) – The value to assign to the id property of this SubscribedServiceSummary.</li>
+<li><strong>type</strong> (<em>str</em>) – The value to assign to the type property of this SubscribedServiceSummary.</li>
+<li><strong>serial_number</strong> (<em>str</em>) – The value to assign to the serial_number property of this SubscribedServiceSummary.</li>
+<li><strong>subscription_id</strong> (<em>str</em>) – The value to assign to the subscription_id property of this SubscribedServiceSummary.</li>
+<li><strong>product</strong> (<a class="reference internal" href="oci.onesubscription.models.RateCardProduct.html#oci.onesubscription.models.RateCardProduct" title="oci.onesubscription.models.RateCardProduct"><em>oci.onesubscription.models.RateCardProduct</em></a>) – The value to assign to the product property of this SubscribedServiceSummary.</li>
+<li><strong>time_start</strong> (<em>datetime</em>) – The value to assign to the time_start property of this SubscribedServiceSummary.</li>
+<li><strong>time_end</strong> (<em>datetime</em>) – The value to assign to the time_end property of this SubscribedServiceSummary.</li>
+<li><strong>quantity</strong> (<em>str</em>) – The value to assign to the quantity property of this SubscribedServiceSummary.</li>
+<li><strong>status</strong> (<em>str</em>) – The value to assign to the status property of this SubscribedServiceSummary.</li>
+<li><strong>operation_type</strong> (<em>str</em>) – The value to assign to the operation_type property of this SubscribedServiceSummary.</li>
+<li><strong>net_unit_price</strong> (<em>str</em>) – The value to assign to the net_unit_price property of this SubscribedServiceSummary.</li>
+<li><strong>price_period</strong> (<em>str</em>) – The value to assign to the price_period property of this SubscribedServiceSummary.</li>
+<li><strong>line_net_amount</strong> (<em>str</em>) – The value to assign to the line_net_amount property of this SubscribedServiceSummary.</li>
+<li><strong>is_variable_commitment</strong> (<em>bool</em>) – The value to assign to the is_variable_commitment property of this SubscribedServiceSummary.</li>
+<li><strong>is_allowance</strong> (<em>bool</em>) – The value to assign to the is_allowance property of this SubscribedServiceSummary.</li>
+<li><strong>used_amount</strong> (<em>str</em>) – The value to assign to the used_amount property of this SubscribedServiceSummary.</li>
+<li><strong>available_amount</strong> (<em>str</em>) – The value to assign to the available_amount property of this SubscribedServiceSummary.</li>
+<li><strong>funded_allocation_value</strong> (<em>str</em>) – The value to assign to the funded_allocation_value property of this SubscribedServiceSummary.</li>
+<li><strong>is_having_usage</strong> (<em>bool</em>) – The value to assign to the is_having_usage property of this SubscribedServiceSummary.</li>
+<li><strong>is_cap_to_price_list</strong> (<em>bool</em>) – The value to assign to the is_cap_to_price_list property of this SubscribedServiceSummary.</li>
+<li><strong>credit_percentage</strong> (<em>str</em>) – The value to assign to the credit_percentage property of this SubscribedServiceSummary.</li>
+<li><strong>partner_transaction_type</strong> (<em>str</em>) – The value to assign to the partner_transaction_type property of this SubscribedServiceSummary.</li>
+<li><strong>is_credit_enabled</strong> (<em>bool</em>) – The value to assign to the is_credit_enabled property of this SubscribedServiceSummary.</li>
+<li><strong>overage_policy</strong> (<em>str</em>) – The value to assign to the overage_policy property of this SubscribedServiceSummary.</li>
+<li><strong>overage_bill_to</strong> (<em>str</em>) – The value to assign to the overage_bill_to property of this SubscribedServiceSummary.</li>
+<li><strong>payg_policy</strong> (<em>str</em>) – The value to assign to the payg_policy property of this SubscribedServiceSummary.</li>
+<li><strong>promo_order_line_id</strong> (<em>int</em>) – The value to assign to the promo_order_line_id property of this SubscribedServiceSummary.</li>
+<li><strong>promotion_pricing_type</strong> (<em>str</em>) – The value to assign to the promotion_pricing_type property of this SubscribedServiceSummary.</li>
+<li><strong>rate_card_discount_percentage</strong> (<em>str</em>) – The value to assign to the rate_card_discount_percentage property of this SubscribedServiceSummary.</li>
+<li><strong>overage_discount_percentage</strong> (<em>str</em>) – The value to assign to the overage_discount_percentage property of this SubscribedServiceSummary.</li>
+<li><strong>bill_to_customer</strong> (<a class="reference internal" href="oci.onesubscription.models.SubscribedServiceBusinessPartner.html#oci.onesubscription.models.SubscribedServiceBusinessPartner" title="oci.onesubscription.models.SubscribedServiceBusinessPartner"><em>oci.onesubscription.models.SubscribedServiceBusinessPartner</em></a>) – The value to assign to the bill_to_customer property of this SubscribedServiceSummary.</li>
+<li><strong>bill_to_contact</strong> (<a class="reference internal" href="oci.onesubscription.models.SubscribedServiceUser.html#oci.onesubscription.models.SubscribedServiceUser" title="oci.onesubscription.models.SubscribedServiceUser"><em>oci.onesubscription.models.SubscribedServiceUser</em></a>) – The value to assign to the bill_to_contact property of this SubscribedServiceSummary.</li>
+<li><strong>bill_to_address</strong> (<a class="reference internal" href="oci.onesubscription.models.SubscribedServiceAddress.html#oci.onesubscription.models.SubscribedServiceAddress" title="oci.onesubscription.models.SubscribedServiceAddress"><em>oci.onesubscription.models.SubscribedServiceAddress</em></a>) – The value to assign to the bill_to_address property of this SubscribedServiceSummary.</li>
+<li><strong>payment_number</strong> (<em>str</em>) – The value to assign to the payment_number property of this SubscribedServiceSummary.</li>
+<li><strong>time_payment_expiry</strong> (<em>datetime</em>) – The value to assign to the time_payment_expiry property of this SubscribedServiceSummary.</li>
+<li><strong>payment_term</strong> (<a class="reference internal" href="oci.onesubscription.models.SubscribedServicePaymentTerm.html#oci.onesubscription.models.SubscribedServicePaymentTerm" title="oci.onesubscription.models.SubscribedServicePaymentTerm"><em>oci.onesubscription.models.SubscribedServicePaymentTerm</em></a>) – The value to assign to the payment_term property of this SubscribedServiceSummary.</li>
+<li><strong>payment_method</strong> (<em>str</em>) – The value to assign to the payment_method property of this SubscribedServiceSummary.</li>
+<li><strong>transaction_extension_id</strong> (<em>int</em>) – The value to assign to the transaction_extension_id property of this SubscribedServiceSummary.</li>
+<li><strong>sales_channel</strong> (<em>str</em>) – The value to assign to the sales_channel property of this SubscribedServiceSummary.</li>
+<li><strong>eligible_to_renew</strong> (<em>str</em>) – The value to assign to the eligible_to_renew property of this SubscribedServiceSummary.</li>
+<li><strong>renewed_subscribed_service_id</strong> (<em>str</em>) – The value to assign to the renewed_subscribed_service_id property of this SubscribedServiceSummary.</li>
+<li><strong>term_value</strong> (<em>int</em>) – The value to assign to the term_value property of this SubscribedServiceSummary.</li>
+<li><strong>term_value_uom</strong> (<em>str</em>) – The value to assign to the term_value_uom property of this SubscribedServiceSummary.</li>
+<li><strong>renewal_opty_id</strong> (<em>int</em>) – The value to assign to the renewal_opty_id property of this SubscribedServiceSummary.</li>
+<li><strong>renewal_opty_number</strong> (<em>str</em>) – The value to assign to the renewal_opty_number property of this SubscribedServiceSummary.</li>
+<li><strong>renewal_opty_type</strong> (<em>str</em>) – The value to assign to the renewal_opty_type property of this SubscribedServiceSummary.</li>
+<li><strong>booking_opty_number</strong> (<em>str</em>) – The value to assign to the booking_opty_number property of this SubscribedServiceSummary.</li>
+<li><strong>revenue_line_id</strong> (<em>int</em>) – The value to assign to the revenue_line_id property of this SubscribedServiceSummary.</li>
+<li><strong>revenue_line_number</strong> (<em>str</em>) – The value to assign to the revenue_line_number property of this SubscribedServiceSummary.</li>
+<li><strong>major_set</strong> (<em>int</em>) – The value to assign to the major_set property of this SubscribedServiceSummary.</li>
+<li><strong>time_majorset_start</strong> (<em>datetime</em>) – The value to assign to the time_majorset_start property of this SubscribedServiceSummary.</li>
+<li><strong>time_majorset_end</strong> (<em>datetime</em>) – The value to assign to the time_majorset_end property of this SubscribedServiceSummary.</li>
+<li><strong>system_arr_in_lc</strong> (<em>str</em>) – The value to assign to the system_arr_in_lc property of this SubscribedServiceSummary.</li>
+<li><strong>system_arr_in_sc</strong> (<em>str</em>) – The value to assign to the system_arr_in_sc property of this SubscribedServiceSummary.</li>
+<li><strong>system_atr_arr_in_lc</strong> (<em>str</em>) – The value to assign to the system_atr_arr_in_lc property of this SubscribedServiceSummary.</li>
+<li><strong>system_atr_arr_in_sc</strong> (<em>str</em>) – The value to assign to the system_atr_arr_in_sc property of this SubscribedServiceSummary.</li>
+<li><strong>revised_arr_in_lc</strong> (<em>str</em>) – The value to assign to the revised_arr_in_lc property of this SubscribedServiceSummary.</li>
+<li><strong>revised_arr_in_sc</strong> (<em>str</em>) – The value to assign to the revised_arr_in_sc property of this SubscribedServiceSummary.</li>
+<li><strong>total_value</strong> (<em>str</em>) – The value to assign to the total_value property of this SubscribedServiceSummary.</li>
+<li><strong>original_promo_amount</strong> (<em>str</em>) – The value to assign to the original_promo_amount property of this SubscribedServiceSummary.</li>
+<li><strong>order_header_id</strong> (<em>int</em>) – The value to assign to the order_header_id property of this SubscribedServiceSummary.</li>
+<li><strong>order_number</strong> (<em>int</em>) – The value to assign to the order_number property of this SubscribedServiceSummary.</li>
+<li><strong>order_type</strong> (<em>str</em>) – The value to assign to the order_type property of this SubscribedServiceSummary.</li>
+<li><strong>order_line_id</strong> (<em>int</em>) – The value to assign to the order_line_id property of this SubscribedServiceSummary.</li>
+<li><strong>order_line_number</strong> (<em>int</em>) – The value to assign to the order_line_number property of this SubscribedServiceSummary.</li>
+<li><strong>commitment_schedule_id</strong> (<em>str</em>) – The value to assign to the commitment_schedule_id property of this SubscribedServiceSummary.</li>
+<li><strong>sales_account_party_id</strong> (<em>int</em>) – The value to assign to the sales_account_party_id property of this SubscribedServiceSummary.</li>
+<li><strong>data_center</strong> (<em>str</em>) – The value to assign to the data_center property of this SubscribedServiceSummary.</li>
+<li><strong>data_center_region</strong> (<em>str</em>) – The value to assign to the data_center_region property of this SubscribedServiceSummary.</li>
+<li><strong>admin_email</strong> (<em>str</em>) – The value to assign to the admin_email property of this SubscribedServiceSummary.</li>
+<li><strong>buyer_email</strong> (<em>str</em>) – The value to assign to the buyer_email property of this SubscribedServiceSummary.</li>
+<li><strong>subscription_source</strong> (<em>str</em>) – The value to assign to the subscription_source property of this SubscribedServiceSummary.</li>
+<li><strong>provisioning_source</strong> (<em>str</em>) – The value to assign to the provisioning_source property of this SubscribedServiceSummary.</li>
+<li><strong>fulfillment_set</strong> (<em>str</em>) – The value to assign to the fulfillment_set property of this SubscribedServiceSummary.</li>
+<li><strong>is_intent_to_pay</strong> (<em>bool</em>) – The value to assign to the is_intent_to_pay property of this SubscribedServiceSummary.</li>
+<li><strong>is_payg</strong> (<em>bool</em>) – The value to assign to the is_payg property of this SubscribedServiceSummary.</li>
+<li><strong>pricing_model</strong> (<em>str</em>) – The value to assign to the pricing_model property of this SubscribedServiceSummary.</li>
+<li><strong>program_type</strong> (<em>str</em>) – The value to assign to the program_type property of this SubscribedServiceSummary.</li>
+<li><strong>start_date_type</strong> (<em>str</em>) – The value to assign to the start_date_type property of this SubscribedServiceSummary.</li>
+<li><strong>time_provisioned</strong> (<em>datetime</em>) – The value to assign to the time_provisioned property of this SubscribedServiceSummary.</li>
+<li><strong>promo_type</strong> (<em>str</em>) – The value to assign to the promo_type property of this SubscribedServiceSummary.</li>
+<li><strong>service_to_customer</strong> (<a class="reference internal" href="oci.onesubscription.models.SubscribedServiceBusinessPartner.html#oci.onesubscription.models.SubscribedServiceBusinessPartner" title="oci.onesubscription.models.SubscribedServiceBusinessPartner"><em>oci.onesubscription.models.SubscribedServiceBusinessPartner</em></a>) – The value to assign to the service_to_customer property of this SubscribedServiceSummary.</li>
+<li><strong>service_to_contact</strong> (<a class="reference internal" href="oci.onesubscription.models.SubscribedServiceUser.html#oci.onesubscription.models.SubscribedServiceUser" title="oci.onesubscription.models.SubscribedServiceUser"><em>oci.onesubscription.models.SubscribedServiceUser</em></a>) – The value to assign to the service_to_contact property of this SubscribedServiceSummary.</li>
+<li><strong>service_to_address</strong> (<a class="reference internal" href="oci.onesubscription.models.SubscribedServiceAddress.html#oci.onesubscription.models.SubscribedServiceAddress" title="oci.onesubscription.models.SubscribedServiceAddress"><em>oci.onesubscription.models.SubscribedServiceAddress</em></a>) – The value to assign to the service_to_address property of this SubscribedServiceSummary.</li>
+<li><strong>sold_to_customer</strong> (<a class="reference internal" href="oci.onesubscription.models.SubscribedServiceBusinessPartner.html#oci.onesubscription.models.SubscribedServiceBusinessPartner" title="oci.onesubscription.models.SubscribedServiceBusinessPartner"><em>oci.onesubscription.models.SubscribedServiceBusinessPartner</em></a>) – The value to assign to the sold_to_customer property of this SubscribedServiceSummary.</li>
+<li><strong>sold_to_contact</strong> (<a class="reference internal" href="oci.onesubscription.models.SubscribedServiceUser.html#oci.onesubscription.models.SubscribedServiceUser" title="oci.onesubscription.models.SubscribedServiceUser"><em>oci.onesubscription.models.SubscribedServiceUser</em></a>) – The value to assign to the sold_to_contact property of this SubscribedServiceSummary.</li>
+<li><strong>end_user_customer</strong> (<a class="reference internal" href="oci.onesubscription.models.SubscribedServiceBusinessPartner.html#oci.onesubscription.models.SubscribedServiceBusinessPartner" title="oci.onesubscription.models.SubscribedServiceBusinessPartner"><em>oci.onesubscription.models.SubscribedServiceBusinessPartner</em></a>) – The value to assign to the end_user_customer property of this SubscribedServiceSummary.</li>
+<li><strong>end_user_contact</strong> (<a class="reference internal" href="oci.onesubscription.models.SubscribedServiceUser.html#oci.onesubscription.models.SubscribedServiceUser" title="oci.onesubscription.models.SubscribedServiceUser"><em>oci.onesubscription.models.SubscribedServiceUser</em></a>) – The value to assign to the end_user_contact property of this SubscribedServiceSummary.</li>
+<li><strong>end_user_address</strong> (<a class="reference internal" href="oci.onesubscription.models.SubscribedServiceAddress.html#oci.onesubscription.models.SubscribedServiceAddress" title="oci.onesubscription.models.SubscribedServiceAddress"><em>oci.onesubscription.models.SubscribedServiceAddress</em></a>) – The value to assign to the end_user_address property of this SubscribedServiceSummary.</li>
+<li><strong>reseller_customer</strong> (<a class="reference internal" href="oci.onesubscription.models.SubscribedServiceBusinessPartner.html#oci.onesubscription.models.SubscribedServiceBusinessPartner" title="oci.onesubscription.models.SubscribedServiceBusinessPartner"><em>oci.onesubscription.models.SubscribedServiceBusinessPartner</em></a>) – The value to assign to the reseller_customer property of this SubscribedServiceSummary.</li>
+<li><strong>reseller_contact</strong> (<a class="reference internal" href="oci.onesubscription.models.SubscribedServiceUser.html#oci.onesubscription.models.SubscribedServiceUser" title="oci.onesubscription.models.SubscribedServiceUser"><em>oci.onesubscription.models.SubscribedServiceUser</em></a>) – The value to assign to the reseller_contact property of this SubscribedServiceSummary.</li>
+<li><strong>reseller_address</strong> (<a class="reference internal" href="oci.onesubscription.models.SubscribedServiceAddress.html#oci.onesubscription.models.SubscribedServiceAddress" title="oci.onesubscription.models.SubscribedServiceAddress"><em>oci.onesubscription.models.SubscribedServiceAddress</em></a>) – The value to assign to the reseller_address property of this SubscribedServiceSummary.</li>
+<li><strong>csi</strong> (<em>int</em>) – The value to assign to the csi property of this SubscribedServiceSummary.</li>
+<li><strong>customer_transaction_reference</strong> (<em>str</em>) – The value to assign to the customer_transaction_reference property of this SubscribedServiceSummary.</li>
+<li><strong>partner_credit_amount</strong> (<em>str</em>) – The value to assign to the partner_credit_amount property of this SubscribedServiceSummary.</li>
+<li><strong>is_single_rate_card</strong> (<em>bool</em>) – The value to assign to the is_single_rate_card property of this SubscribedServiceSummary.</li>
+<li><strong>agreement_id</strong> (<em>int</em>) – The value to assign to the agreement_id property of this SubscribedServiceSummary.</li>
+<li><strong>agreement_name</strong> (<em>str</em>) – The value to assign to the agreement_name property of this SubscribedServiceSummary.</li>
+<li><strong>agreement_type</strong> (<em>str</em>) – The value to assign to the agreement_type property of this SubscribedServiceSummary.</li>
+<li><strong>billing_frequency</strong> (<em>str</em>) – The value to assign to the billing_frequency property of this SubscribedServiceSummary.</li>
+<li><strong>time_welcome_email_sent</strong> (<em>datetime</em>) – The value to assign to the time_welcome_email_sent property of this SubscribedServiceSummary.</li>
+<li><strong>time_service_configuration_email_sent</strong> (<em>datetime</em>) – The value to assign to the time_service_configuration_email_sent property of this SubscribedServiceSummary.</li>
+<li><strong>time_customer_config</strong> (<em>datetime</em>) – The value to assign to the time_customer_config property of this SubscribedServiceSummary.</li>
+<li><strong>time_agreement_end</strong> (<em>datetime</em>) – The value to assign to the time_agreement_end property of this SubscribedServiceSummary.</li>
+<li><strong>time_created</strong> (<em>datetime</em>) – The value to assign to the time_created property of this SubscribedServiceSummary.</li>
+<li><strong>created_by</strong> (<em>str</em>) – The value to assign to the created_by property of this SubscribedServiceSummary.</li>
+<li><strong>time_updated</strong> (<em>datetime</em>) – The value to assign to the time_updated property of this SubscribedServiceSummary.</li>
+<li><strong>updated_by</strong> (<em>str</em>) – The value to assign to the updated_by property of this SubscribedServiceSummary.</li>
+<li><strong>ratecard_type</strong> (<em>str</em>) – The value to assign to the ratecard_type property of this SubscribedServiceSummary.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.admin_email">
+<code class="descname">admin_email</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.admin_email" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the admin_email of this SubscribedServiceSummary.
+Subscribed service admin email id</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The admin_email of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.agreement_id">
+<code class="descname">agreement_id</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.agreement_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the agreement_id of this SubscribedServiceSummary.
+Subscribed service agreement ID</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The agreement_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.agreement_name">
+<code class="descname">agreement_name</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.agreement_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the agreement_name of this SubscribedServiceSummary.
+Subscribed service agrrement name</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The agreement_name of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.agreement_type">
+<code class="descname">agreement_type</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.agreement_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the agreement_type of this SubscribedServiceSummary.
+Subscribed service agrrement type</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The agreement_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.available_amount">
+<code class="descname">available_amount</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.available_amount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the available_amount of this SubscribedServiceSummary.
+Subscribed sercice available or remaining amount</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The available_amount of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.bill_to_address">
+<code class="descname">bill_to_address</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.bill_to_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the bill_to_address of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The bill_to_address of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceAddress.html#oci.onesubscription.models.SubscribedServiceAddress" title="oci.onesubscription.models.SubscribedServiceAddress">oci.onesubscription.models.SubscribedServiceAddress</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.bill_to_contact">
+<code class="descname">bill_to_contact</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.bill_to_contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the bill_to_contact of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The bill_to_contact of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceUser.html#oci.onesubscription.models.SubscribedServiceUser" title="oci.onesubscription.models.SubscribedServiceUser">oci.onesubscription.models.SubscribedServiceUser</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.bill_to_customer">
+<code class="descname">bill_to_customer</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.bill_to_customer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the bill_to_customer of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The bill_to_customer of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceBusinessPartner.html#oci.onesubscription.models.SubscribedServiceBusinessPartner" title="oci.onesubscription.models.SubscribedServiceBusinessPartner">oci.onesubscription.models.SubscribedServiceBusinessPartner</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.billing_frequency">
+<code class="descname">billing_frequency</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.billing_frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the billing_frequency of this SubscribedServiceSummary.
+Subscribed service invoice frequency</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The billing_frequency of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.booking_opty_number">
+<code class="descname">booking_opty_number</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.booking_opty_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the booking_opty_number of this SubscribedServiceSummary.
+Booking Opportunity Number of Subscribed Service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The booking_opty_number of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.buyer_email">
+<code class="descname">buyer_email</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.buyer_email" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the buyer_email of this SubscribedServiceSummary.
+Subscribed service buyer email id</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The buyer_email of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.commitment_schedule_id">
+<code class="descname">commitment_schedule_id</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.commitment_schedule_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the commitment_schedule_id of this SubscribedServiceSummary.
+Subscribed service commitment schedule Id</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The commitment_schedule_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.created_by">
+<code class="descname">created_by</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.created_by" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the created_by of this SubscribedServiceSummary.
+User that created the subscribed service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The created_by of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.credit_percentage">
+<code class="descname">credit_percentage</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.credit_percentage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the credit_percentage of this SubscribedServiceSummary.
+Subscribed service credit percentage</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The credit_percentage of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.csi">
+<code class="descname">csi</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.csi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the csi of this SubscribedServiceSummary.
+Subscribed service CSI number</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The csi of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.customer_transaction_reference">
+<code class="descname">customer_transaction_reference</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.customer_transaction_reference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the customer_transaction_reference of this SubscribedServiceSummary.
+Identifier for a customer’s transactions for purchase of ay oracle services</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The customer_transaction_reference of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.data_center">
+<code class="descname">data_center</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.data_center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the data_center of this SubscribedServiceSummary.
+Subscribed service data center</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The data_center of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.data_center_region">
+<code class="descname">data_center_region</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.data_center_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the data_center_region of this SubscribedServiceSummary.
+Subscribed service data center region</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The data_center_region of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.eligible_to_renew">
+<code class="descname">eligible_to_renew</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.eligible_to_renew" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the eligible_to_renew of this SubscribedServiceSummary.
+Subscribed service eligible to renew field</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The eligible_to_renew of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.end_user_address">
+<code class="descname">end_user_address</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.end_user_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the end_user_address of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The end_user_address of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceAddress.html#oci.onesubscription.models.SubscribedServiceAddress" title="oci.onesubscription.models.SubscribedServiceAddress">oci.onesubscription.models.SubscribedServiceAddress</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.end_user_contact">
+<code class="descname">end_user_contact</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.end_user_contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the end_user_contact of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The end_user_contact of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceUser.html#oci.onesubscription.models.SubscribedServiceUser" title="oci.onesubscription.models.SubscribedServiceUser">oci.onesubscription.models.SubscribedServiceUser</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.end_user_customer">
+<code class="descname">end_user_customer</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.end_user_customer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the end_user_customer of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The end_user_customer of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceBusinessPartner.html#oci.onesubscription.models.SubscribedServiceBusinessPartner" title="oci.onesubscription.models.SubscribedServiceBusinessPartner">oci.onesubscription.models.SubscribedServiceBusinessPartner</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.fulfillment_set">
+<code class="descname">fulfillment_set</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.fulfillment_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the fulfillment_set of this SubscribedServiceSummary.
+Subscribed service fulfillment set</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The fulfillment_set of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.funded_allocation_value">
+<code class="descname">funded_allocation_value</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.funded_allocation_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the funded_allocation_value of this SubscribedServiceSummary.
+Funded Allocation line value
+example: 12000.00</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The funded_allocation_value of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.id">
+<code class="descname">id</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the id of this SubscribedServiceSummary.
+SPM internal Subscribed Service ID</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.is_allowance">
+<code class="descname">is_allowance</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.is_allowance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_allowance of this SubscribedServiceSummary.
+Indicates if a service can recieve usages and consequently have available amounts computed</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_allowance of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.is_cap_to_price_list">
+<code class="descname">is_cap_to_price_list</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.is_cap_to_price_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_cap_to_price_list of this SubscribedServiceSummary.
+If true compares rate between ratecard and the active pricelist and minimum rate would be fetched</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_cap_to_price_list of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.is_credit_enabled">
+<code class="descname">is_credit_enabled</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.is_credit_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_credit_enabled of this SubscribedServiceSummary.
+Used in context of service credit lines</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_credit_enabled of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.is_having_usage">
+<code class="descname">is_having_usage</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.is_having_usage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_having_usage of this SubscribedServiceSummary.
+Indicator on whether or not there has been usage for the subscribed service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_having_usage of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.is_intent_to_pay">
+<code class="descname">is_intent_to_pay</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.is_intent_to_pay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_intent_to_pay of this SubscribedServiceSummary.
+Subscribed service intent to pay flag</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_intent_to_pay of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.is_payg">
+<code class="descname">is_payg</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.is_payg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_payg of this SubscribedServiceSummary.
+Subscribed service payg flag</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_payg of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.is_single_rate_card">
+<code class="descname">is_single_rate_card</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.is_single_rate_card" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_single_rate_card of this SubscribedServiceSummary.
+Indicates if the Subscribed service has a single ratecard</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_single_rate_card of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.is_variable_commitment">
+<code class="descname">is_variable_commitment</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.is_variable_commitment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_variable_commitment of this SubscribedServiceSummary.
+Indicates if the commitment lines can have different quantities</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_variable_commitment of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.line_net_amount">
+<code class="descname">line_net_amount</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.line_net_amount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the line_net_amount of this SubscribedServiceSummary.
+Subscribed service line net amount</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The line_net_amount of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.major_set">
+<code class="descname">major_set</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.major_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the major_set of this SubscribedServiceSummary.
+Subscribed service Major Set</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The major_set of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.net_unit_price">
+<code class="descname">net_unit_price</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.net_unit_price" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the net_unit_price of this SubscribedServiceSummary.
+Subscribed service net unit price</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The net_unit_price of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.operation_type">
+<code class="descname">operation_type</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.operation_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the operation_type of this SubscribedServiceSummary.
+Subscribed service operation type</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The operation_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.order_header_id">
+<code class="descname">order_header_id</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.order_header_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the order_header_id of this SubscribedServiceSummary.
+Sales Order Header associated to the subscribed service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The order_header_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.order_line_id">
+<code class="descname">order_line_id</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.order_line_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the order_line_id of this SubscribedServiceSummary.
+Sales Order Line Id associated to the subscribed service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The order_line_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.order_line_number">
+<code class="descname">order_line_number</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.order_line_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the order_line_number of this SubscribedServiceSummary.
+Sales Order Line Number associated to the subscribed service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The order_line_number of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.order_number">
+<code class="descname">order_number</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.order_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the order_number of this SubscribedServiceSummary.
+Sales Order Number associated to the subscribed service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The order_number of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.order_type">
+<code class="descname">order_type</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.order_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the order_type of this SubscribedServiceSummary.
+Order Type of Subscribed Service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The order_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.original_promo_amount">
+<code class="descname">original_promo_amount</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.original_promo_amount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the original_promo_amount of this SubscribedServiceSummary.
+Subscribed service Promotion Amount</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The original_promo_amount of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.overage_bill_to">
+<code class="descname">overage_bill_to</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.overage_bill_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the overage_bill_to of this SubscribedServiceSummary.
+Overage Bill To of Subscribed Service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The overage_bill_to of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.overage_discount_percentage">
+<code class="descname">overage_discount_percentage</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.overage_discount_percentage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the overage_discount_percentage of this SubscribedServiceSummary.
+Subscribed service Overage Discount Percentage</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The overage_discount_percentage of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.overage_policy">
+<code class="descname">overage_policy</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.overage_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the overage_policy of this SubscribedServiceSummary.
+Overage Policy of Subscribed Service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The overage_policy of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.partner_credit_amount">
+<code class="descname">partner_credit_amount</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.partner_credit_amount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the partner_credit_amount of this SubscribedServiceSummary.
+Subscribed service partner credit amount</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The partner_credit_amount of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.partner_transaction_type">
+<code class="descname">partner_transaction_type</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.partner_transaction_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the partner_transaction_type of this SubscribedServiceSummary.
+This field contains the name of the partner to which the subscription belongs - depending on which the invoicing may differ</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The partner_transaction_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.payg_policy">
+<code class="descname">payg_policy</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.payg_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the payg_policy of this SubscribedServiceSummary.
+Pay As You Go policy of Subscribed Service (Can be null - indicating no payg policy)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The payg_policy of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.payment_method">
+<code class="descname">payment_method</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.payment_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the payment_method of this SubscribedServiceSummary.
+Payment Method of Subscribed Service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The payment_method of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.payment_number">
+<code class="descname">payment_number</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.payment_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the payment_number of this SubscribedServiceSummary.
+Payment Number of Subscribed Service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The payment_number of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.payment_term">
+<code class="descname">payment_term</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.payment_term" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the payment_term of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The payment_term of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.SubscribedServicePaymentTerm.html#oci.onesubscription.models.SubscribedServicePaymentTerm" title="oci.onesubscription.models.SubscribedServicePaymentTerm">oci.onesubscription.models.SubscribedServicePaymentTerm</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.price_period">
+<code class="descname">price_period</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.price_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the price_period of this SubscribedServiceSummary.
+Indicates the period for which the commitment amount can be utilised exceeding which the amount lapses. Also used in calculation of total contract line value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The price_period of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.pricing_model">
+<code class="descname">pricing_model</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.pricing_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the pricing_model of this SubscribedServiceSummary.
+Subscribed service pricing model</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The pricing_model of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.product">
+<code class="descname">product</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.product" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the product of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The product of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.RateCardProduct.html#oci.onesubscription.models.RateCardProduct" title="oci.onesubscription.models.RateCardProduct">oci.onesubscription.models.RateCardProduct</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.program_type">
+<code class="descname">program_type</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.program_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the program_type of this SubscribedServiceSummary.
+Subscribed service program type</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The program_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.promo_order_line_id">
+<code class="descname">promo_order_line_id</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.promo_order_line_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the promo_order_line_id of this SubscribedServiceSummary.
+Not null if this service has an associated promotion line in SPM. Contains the line identifier from Order Management of
+the associated promo line.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The promo_order_line_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.promo_type">
+<code class="descname">promo_type</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.promo_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the promo_type of this SubscribedServiceSummary.
+Subscribed service promotion type</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The promo_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.promotion_pricing_type">
+<code class="descname">promotion_pricing_type</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.promotion_pricing_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the promotion_pricing_type of this SubscribedServiceSummary.
+Promotion Pricing Type of Subscribed Service (Can be null - indicating no promotion pricing)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The promotion_pricing_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.provisioning_source">
+<code class="descname">provisioning_source</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.provisioning_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the provisioning_source of this SubscribedServiceSummary.
+Subscribed service provisioning source</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The provisioning_source of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.quantity">
+<code class="descname">quantity</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.quantity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the quantity of this SubscribedServiceSummary.
+Subscribed service quantity</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The quantity of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.rate_card_discount_percentage">
+<code class="descname">rate_card_discount_percentage</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.rate_card_discount_percentage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the rate_card_discount_percentage of this SubscribedServiceSummary.
+Subscribed service Rate Card Discount Percentage</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The rate_card_discount_percentage of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.ratecard_type">
+<code class="descname">ratecard_type</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.ratecard_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the ratecard_type of this SubscribedServiceSummary.
+SPM Ratecard Type</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The ratecard_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.renewal_opty_id">
+<code class="descname">renewal_opty_id</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.renewal_opty_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the renewal_opty_id of this SubscribedServiceSummary.
+Subscribed service Opportunity Id</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The renewal_opty_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.renewal_opty_number">
+<code class="descname">renewal_opty_number</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.renewal_opty_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the renewal_opty_number of this SubscribedServiceSummary.
+Renewal Opportunity Number of Subscribed Service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The renewal_opty_number of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.renewal_opty_type">
+<code class="descname">renewal_opty_type</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.renewal_opty_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the renewal_opty_type of this SubscribedServiceSummary.
+Renewal Opportunity Type of Subscribed Service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The renewal_opty_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.renewed_subscribed_service_id">
+<code class="descname">renewed_subscribed_service_id</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.renewed_subscribed_service_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the renewed_subscribed_service_id of this SubscribedServiceSummary.
+SPM renewed Subscription ID</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The renewed_subscribed_service_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.reseller_address">
+<code class="descname">reseller_address</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.reseller_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the reseller_address of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The reseller_address of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceAddress.html#oci.onesubscription.models.SubscribedServiceAddress" title="oci.onesubscription.models.SubscribedServiceAddress">oci.onesubscription.models.SubscribedServiceAddress</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.reseller_contact">
+<code class="descname">reseller_contact</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.reseller_contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the reseller_contact of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The reseller_contact of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceUser.html#oci.onesubscription.models.SubscribedServiceUser" title="oci.onesubscription.models.SubscribedServiceUser">oci.onesubscription.models.SubscribedServiceUser</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.reseller_customer">
+<code class="descname">reseller_customer</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.reseller_customer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the reseller_customer of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The reseller_customer of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceBusinessPartner.html#oci.onesubscription.models.SubscribedServiceBusinessPartner" title="oci.onesubscription.models.SubscribedServiceBusinessPartner">oci.onesubscription.models.SubscribedServiceBusinessPartner</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.revenue_line_id">
+<code class="descname">revenue_line_id</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.revenue_line_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the revenue_line_id of this SubscribedServiceSummary.
+Subscribed service Revenue Line Id</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The revenue_line_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.revenue_line_number">
+<code class="descname">revenue_line_number</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.revenue_line_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the revenue_line_number of this SubscribedServiceSummary.
+Revenue Line NUmber of Subscribed Service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The revenue_line_number of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.revised_arr_in_lc">
+<code class="descname">revised_arr_in_lc</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.revised_arr_in_lc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the revised_arr_in_lc of this SubscribedServiceSummary.
+Subscribed service Revised ARR</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The revised_arr_in_lc of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.revised_arr_in_sc">
+<code class="descname">revised_arr_in_sc</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.revised_arr_in_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the revised_arr_in_sc of this SubscribedServiceSummary.
+Subscribed service Revised ARR in Standard Currency</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The revised_arr_in_sc of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.sales_account_party_id">
+<code class="descname">sales_account_party_id</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.sales_account_party_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the sales_account_party_id of this SubscribedServiceSummary.
+Subscribed service sales account party id</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The sales_account_party_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.sales_channel">
+<code class="descname">sales_channel</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.sales_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the sales_channel of this SubscribedServiceSummary.
+Sales Channel of Subscribed Service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The sales_channel of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.serial_number">
+<code class="descname">serial_number</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.serial_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the serial_number of this SubscribedServiceSummary.
+Subscribed service line number</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The serial_number of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.service_to_address">
+<code class="descname">service_to_address</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.service_to_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the service_to_address of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The service_to_address of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceAddress.html#oci.onesubscription.models.SubscribedServiceAddress" title="oci.onesubscription.models.SubscribedServiceAddress">oci.onesubscription.models.SubscribedServiceAddress</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.service_to_contact">
+<code class="descname">service_to_contact</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.service_to_contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the service_to_contact of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The service_to_contact of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceUser.html#oci.onesubscription.models.SubscribedServiceUser" title="oci.onesubscription.models.SubscribedServiceUser">oci.onesubscription.models.SubscribedServiceUser</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.service_to_customer">
+<code class="descname">service_to_customer</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.service_to_customer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the service_to_customer of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The service_to_customer of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceBusinessPartner.html#oci.onesubscription.models.SubscribedServiceBusinessPartner" title="oci.onesubscription.models.SubscribedServiceBusinessPartner">oci.onesubscription.models.SubscribedServiceBusinessPartner</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.sold_to_contact">
+<code class="descname">sold_to_contact</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.sold_to_contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the sold_to_contact of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The sold_to_contact of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceUser.html#oci.onesubscription.models.SubscribedServiceUser" title="oci.onesubscription.models.SubscribedServiceUser">oci.onesubscription.models.SubscribedServiceUser</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.sold_to_customer">
+<code class="descname">sold_to_customer</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.sold_to_customer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the sold_to_customer of this SubscribedServiceSummary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The sold_to_customer of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.onesubscription.models.SubscribedServiceBusinessPartner.html#oci.onesubscription.models.SubscribedServiceBusinessPartner" title="oci.onesubscription.models.SubscribedServiceBusinessPartner">oci.onesubscription.models.SubscribedServiceBusinessPartner</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.start_date_type">
+<code class="descname">start_date_type</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.start_date_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the start_date_type of this SubscribedServiceSummary.
+Subscribed service start date type</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The start_date_type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.status">
+<code class="descname">status</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the status of this SubscribedServiceSummary.
+Subscribed service status</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The status of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.subscription_id">
+<code class="descname">subscription_id</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.subscription_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the subscription_id of this SubscribedServiceSummary.
+Subscription ID associated to the subscribed service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The subscription_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.subscription_source">
+<code class="descname">subscription_source</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.subscription_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the subscription_source of this SubscribedServiceSummary.
+Subscribed service source</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The subscription_source of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.system_arr_in_lc">
+<code class="descname">system_arr_in_lc</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.system_arr_in_lc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the system_arr_in_lc of this SubscribedServiceSummary.
+Subscribed service System ARR</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The system_arr_in_lc of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.system_arr_in_sc">
+<code class="descname">system_arr_in_sc</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.system_arr_in_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the system_arr_in_sc of this SubscribedServiceSummary.
+Subscribed service System ARR in Standard Currency</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The system_arr_in_sc of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.system_atr_arr_in_lc">
+<code class="descname">system_atr_arr_in_lc</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.system_atr_arr_in_lc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the system_atr_arr_in_lc of this SubscribedServiceSummary.
+Subscribed service System ATR-ARR</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The system_atr_arr_in_lc of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.system_atr_arr_in_sc">
+<code class="descname">system_atr_arr_in_sc</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.system_atr_arr_in_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the system_atr_arr_in_sc of this SubscribedServiceSummary.
+Subscribed service System ATR-ARR in Standard Currency</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The system_atr_arr_in_sc of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.term_value">
+<code class="descname">term_value</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.term_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the term_value of this SubscribedServiceSummary.
+Term value in Months</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The term_value of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.term_value_uom">
+<code class="descname">term_value_uom</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.term_value_uom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the term_value_uom of this SubscribedServiceSummary.
+Term value UOM</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The term_value_uom of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.time_agreement_end">
+<code class="descname">time_agreement_end</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.time_agreement_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_agreement_end of this SubscribedServiceSummary.
+Subscribed service agrrement end date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_agreement_end of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.time_created">
+<code class="descname">time_created</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.time_created" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_created of this SubscribedServiceSummary.
+Subscribed service creation date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_created of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.time_customer_config">
+<code class="descname">time_customer_config</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.time_customer_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_customer_config of this SubscribedServiceSummary.
+Subscribed service customer config date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_customer_config of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.time_end">
+<code class="descname">time_end</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.time_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_end of this SubscribedServiceSummary.
+Subscribed service end date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_end of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.time_majorset_end">
+<code class="descname">time_majorset_end</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.time_majorset_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_majorset_end of this SubscribedServiceSummary.
+Subscribed service Major Set End date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_majorset_end of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.time_majorset_start">
+<code class="descname">time_majorset_start</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.time_majorset_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_majorset_start of this SubscribedServiceSummary.
+Subscribed service Major Set Start date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_majorset_start of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.time_payment_expiry">
+<code class="descname">time_payment_expiry</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.time_payment_expiry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_payment_expiry of this SubscribedServiceSummary.
+Subscribed service payment expiry date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_payment_expiry of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.time_provisioned">
+<code class="descname">time_provisioned</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.time_provisioned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_provisioned of this SubscribedServiceSummary.
+Subscribed service provisioning date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_provisioned of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.time_service_configuration_email_sent">
+<code class="descname">time_service_configuration_email_sent</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.time_service_configuration_email_sent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_service_configuration_email_sent of this SubscribedServiceSummary.
+Subscribed service service configuration email sent date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_service_configuration_email_sent of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.time_start">
+<code class="descname">time_start</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.time_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_start of this SubscribedServiceSummary.
+Subscribed service start date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_start of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.time_updated">
+<code class="descname">time_updated</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.time_updated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_updated of this SubscribedServiceSummary.
+Subscribed service last update date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_updated of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.time_welcome_email_sent">
+<code class="descname">time_welcome_email_sent</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.time_welcome_email_sent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_welcome_email_sent of this SubscribedServiceSummary.
+Subscribed service welcome email sent date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_welcome_email_sent of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.total_value">
+<code class="descname">total_value</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.total_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the total_value of this SubscribedServiceSummary.
+Subscribed service total value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The total_value of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.transaction_extension_id">
+<code class="descname">transaction_extension_id</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.transaction_extension_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the transaction_extension_id of this SubscribedServiceSummary.
+Subscribed service Transaction Extension Id</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The transaction_extension_id of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.type">
+<code class="descname">type</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the type of this SubscribedServiceSummary.
+Subscribed Service line type</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The type of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.updated_by">
+<code class="descname">updated_by</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.updated_by" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the updated_by of this SubscribedServiceSummary.
+User that updated the subscribed service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The updated_by of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.onesubscription.models.SubscribedServiceSummary.used_amount">
+<code class="descname">used_amount</code><a class="headerlink" href="#oci.onesubscription.models.SubscribedServiceSummary.used_amount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the used_amount of this SubscribedServiceSummary.
+Subscribed service used amount</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The used_amount of this SubscribedServiceSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.onesubscription.models.SubscribedServiceUser.html" class="btn btn-neutral float-right" title="SubscribedServiceUser" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.onesubscription.models.SubscribedServicePaymentTerm.html" class="btn btn-neutral" title="SubscribedServicePaymentTerm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

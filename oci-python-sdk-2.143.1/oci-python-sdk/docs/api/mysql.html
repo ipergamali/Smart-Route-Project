@@ -1,0 +1,831 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Mysql &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ChannelsClient" href="mysql/client/oci.mysql.ChannelsClient.html" />
+    <link rel="prev" title="UpdateAlarmDetails" href="monitoring/models/oci.monitoring.models.UpdateAlarmDetails.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Mysql</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mysql/client/oci.mysql.ChannelsClient.html">ChannelsClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mysql/client/oci.mysql.DbBackupsClient.html">DbBackupsClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mysql/client/oci.mysql.DbSystemClient.html">DbSystemClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mysql/client/oci.mysql.MysqlaasClient.html">MysqlaasClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mysql/client/oci.mysql.ReplicasClient.html">ReplicasClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mysql/client/oci.mysql.WorkRequestsClient.html">WorkRequestsClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mysql/client/oci.mysql.ChannelsClientCompositeOperations.html">ChannelsClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mysql/client/oci.mysql.DbBackupsClientCompositeOperations.html">DbBackupsClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mysql/client/oci.mysql.DbSystemClientCompositeOperations.html">DbSystemClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mysql/client/oci.mysql.MysqlaasClientCompositeOperations.html">MysqlaasClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mysql/client/oci.mysql.ReplicasClientCompositeOperations.html">ReplicasClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mysql/client/oci.mysql.WorkRequestsClientCompositeOperations.html">WorkRequestsClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models">Models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.AddHeatWaveClusterDetails.html">AddHeatWaveClusterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.AnonymousTransactionsHandling.html">AnonymousTransactionsHandling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.AssignManualUuidHandling.html">AssignManualUuidHandling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.AssignTargetUuidHandling.html">AssignTargetUuidHandling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.Backup.html">Backup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.BackupPolicy.html">BackupPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.BackupSummary.html">BackupSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CaCertificate.html">CaCertificate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.ChangeBackupCompartmentDetails.html">ChangeBackupCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.Channel.html">Channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.ChannelFilter.html">ChannelFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.ChannelSource.html">ChannelSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.ChannelSourceMysql.html">ChannelSourceMysql</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.ChannelSummary.html">ChannelSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.ChannelTarget.html">ChannelTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.ChannelTargetDbSystem.html">ChannelTargetDbSystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.Configuration.html">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.ConfigurationSummary.html">ConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.ConfigurationVariables.html">ConfigurationVariables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CopyBackupDetails.html">CopyBackupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateBackupDetails.html">CreateBackupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateBackupPolicyDetails.html">CreateBackupPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateChannelDetails.html">CreateChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateChannelSourceDetails.html">CreateChannelSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateChannelSourceFromMysqlDetails.html">CreateChannelSourceFromMysqlDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateChannelTargetDetails.html">CreateChannelTargetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateChannelTargetFromDbSystemDetails.html">CreateChannelTargetFromDbSystemDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateConfigurationDetails.html">CreateConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateDbSystemDetails.html">CreateDbSystemDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateDbSystemSourceDetails.html">CreateDbSystemSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateDbSystemSourceFromBackupDetails.html">CreateDbSystemSourceFromBackupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateDbSystemSourceFromNoneDetails.html">CreateDbSystemSourceFromNoneDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateDbSystemSourceFromPitrDetails.html">CreateDbSystemSourceFromPitrDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateDbSystemSourceImportFromUrlDetails.html">CreateDbSystemSourceImportFromUrlDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateDeletionPolicyDetails.html">CreateDeletionPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateMaintenanceDetails.html">CreateMaintenanceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CreateReplicaDetails.html">CreateReplicaDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.CustomerContact.html">CustomerContact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.DataStorage.html">DataStorage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.DataStorageDetails.html">DataStorageDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystem.html">DbSystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemEndpoint.html">DbSystemEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemPlacement.html">DbSystemPlacement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSnapshot.html">DbSystemSnapshot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSnapshotSummary.html">DbSystemSnapshotSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSource.html">DbSystemSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSourceFromBackup.html">DbSystemSourceFromBackup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSourceFromNone.html">DbSystemSourceFromNone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSourceFromPitr.html">DbSystemSourceFromPitr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSourceImportFromUrl.html">DbSystemSourceImportFromUrl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSummary.html">DbSystemSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.DeletionPolicyDetails.html">DeletionPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.ErrorOnAnonymousHandling.html">ErrorOnAnonymousHandling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.HeatWaveCluster.html">HeatWaveCluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.HeatWaveClusterMemoryEstimate.html">HeatWaveClusterMemoryEstimate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.HeatWaveClusterSchemaMemoryEstimate.html">HeatWaveClusterSchemaMemoryEstimate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.HeatWaveClusterSummary.html">HeatWaveClusterSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.HeatWaveClusterTableMemoryEstimate.html">HeatWaveClusterTableMemoryEstimate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.HeatWaveNode.html">HeatWaveNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.InitializationVariables.html">InitializationVariables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.MaintenanceDetails.html">MaintenanceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.PemCaCertificate.html">PemCaCertificate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.PitrPolicy.html">PitrPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.PointInTimeRecoveryDetails.html">PointInTimeRecoveryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.Replica.html">Replica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.ReplicaOverrides.html">ReplicaOverrides</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.ReplicaSummary.html">ReplicaSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.RestartDbSystemDetails.html">RestartDbSystemDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.SecureConnectionDetails.html">SecureConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.ShapeSummary.html">ShapeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.StopDbSystemDetails.html">StopDbSystemDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateBackupDetails.html">UpdateBackupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateBackupPolicyDetails.html">UpdateBackupPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateChannelDetails.html">UpdateChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateChannelSourceDetails.html">UpdateChannelSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateChannelSourceFromMysqlDetails.html">UpdateChannelSourceFromMysqlDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateChannelTargetDetails.html">UpdateChannelTargetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateChannelTargetFromDbSystemDetails.html">UpdateChannelTargetFromDbSystemDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateConfigurationDetails.html">UpdateConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateDbSystemDetails.html">UpdateDbSystemDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateDeletionPolicyDetails.html">UpdateDeletionPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateHeatWaveClusterDetails.html">UpdateHeatWaveClusterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateMaintenanceDetails.html">UpdateMaintenanceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateReplicaDetails.html">UpdateReplicaDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.Version.html">Version</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.VersionSummary.html">VersionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.WorkRequestResource.html">WorkRequestResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mysql/models/oci.mysql.models.WorkRequestSummary.html">WorkRequestSummary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="landing.html">API Reference</a> &raquo;</li>
+        
+      <li>Mysql</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/mysql.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mysql">
+<h1>Mysql<a class="headerlink" href="#mysql" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="mysql/client/oci.mysql.ChannelsClient.html#oci.mysql.ChannelsClient" title="oci.mysql.ChannelsClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.ChannelsClient</span></code></a></td>
+<td>The API for the MySQL Database Service</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/client/oci.mysql.DbBackupsClient.html#oci.mysql.DbBackupsClient" title="oci.mysql.DbBackupsClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.DbBackupsClient</span></code></a></td>
+<td>The API for the MySQL Database Service</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/client/oci.mysql.DbSystemClient.html#oci.mysql.DbSystemClient" title="oci.mysql.DbSystemClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.DbSystemClient</span></code></a></td>
+<td>The API for the MySQL Database Service</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/client/oci.mysql.MysqlaasClient.html#oci.mysql.MysqlaasClient" title="oci.mysql.MysqlaasClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.MysqlaasClient</span></code></a></td>
+<td>The API for the MySQL Database Service</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/client/oci.mysql.ReplicasClient.html#oci.mysql.ReplicasClient" title="oci.mysql.ReplicasClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.ReplicasClient</span></code></a></td>
+<td>The API for the MySQL Database Service</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/client/oci.mysql.WorkRequestsClient.html#oci.mysql.WorkRequestsClient" title="oci.mysql.WorkRequestsClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.WorkRequestsClient</span></code></a></td>
+<td>The API for the MySQL Database Service</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/client/oci.mysql.ChannelsClientCompositeOperations.html#oci.mysql.ChannelsClientCompositeOperations" title="oci.mysql.ChannelsClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.ChannelsClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="mysql/client/oci.mysql.ChannelsClient.html#oci.mysql.ChannelsClient" title="oci.mysql.ChannelsClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChannelsClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/client/oci.mysql.DbBackupsClientCompositeOperations.html#oci.mysql.DbBackupsClientCompositeOperations" title="oci.mysql.DbBackupsClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.DbBackupsClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="mysql/client/oci.mysql.DbBackupsClient.html#oci.mysql.DbBackupsClient" title="oci.mysql.DbBackupsClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">DbBackupsClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/client/oci.mysql.DbSystemClientCompositeOperations.html#oci.mysql.DbSystemClientCompositeOperations" title="oci.mysql.DbSystemClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.DbSystemClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="mysql/client/oci.mysql.DbSystemClient.html#oci.mysql.DbSystemClient" title="oci.mysql.DbSystemClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">DbSystemClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/client/oci.mysql.MysqlaasClientCompositeOperations.html#oci.mysql.MysqlaasClientCompositeOperations" title="oci.mysql.MysqlaasClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.MysqlaasClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="mysql/client/oci.mysql.MysqlaasClient.html#oci.mysql.MysqlaasClient" title="oci.mysql.MysqlaasClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">MysqlaasClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/client/oci.mysql.ReplicasClientCompositeOperations.html#oci.mysql.ReplicasClientCompositeOperations" title="oci.mysql.ReplicasClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.ReplicasClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="mysql/client/oci.mysql.ReplicasClient.html#oci.mysql.ReplicasClient" title="oci.mysql.ReplicasClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReplicasClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/client/oci.mysql.WorkRequestsClientCompositeOperations.html#oci.mysql.WorkRequestsClientCompositeOperations" title="oci.mysql.WorkRequestsClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.WorkRequestsClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="mysql/client/oci.mysql.WorkRequestsClient.html#oci.mysql.WorkRequestsClient" title="oci.mysql.WorkRequestsClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestsClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.AddHeatWaveClusterDetails.html#oci.mysql.models.AddHeatWaveClusterDetails" title="oci.mysql.models.AddHeatWaveClusterDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.AddHeatWaveClusterDetails</span></code></a></td>
+<td>Details required to add a HeatWave cluster.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.AnonymousTransactionsHandling.html#oci.mysql.models.AnonymousTransactionsHandling" title="oci.mysql.models.AnonymousTransactionsHandling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.AnonymousTransactionsHandling</span></code></a></td>
+<td>Specifies how the replication channel handles replicated transactions without an identifier, enabling replication from a source that does not use transaction-id-based replication to a replica that does.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.AssignManualUuidHandling.html#oci.mysql.models.AssignManualUuidHandling" title="oci.mysql.models.AssignManualUuidHandling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.AssignManualUuidHandling</span></code></a></td>
+<td>Enables assignment of IDs on the target to anonymous transactions coming from the source.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.AssignTargetUuidHandling.html#oci.mysql.models.AssignTargetUuidHandling" title="oci.mysql.models.AssignTargetUuidHandling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.AssignTargetUuidHandling</span></code></a></td>
+<td>Enables assignment of IDs on the target to anonymous transactions coming from the source.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.Backup.html#oci.mysql.models.Backup" title="oci.mysql.models.Backup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.Backup</span></code></a></td>
+<td>A full or incremental copy of a DB System which can be used to create a new DB System or recover a DB System.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.BackupPolicy.html#oci.mysql.models.BackupPolicy" title="oci.mysql.models.BackupPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.BackupPolicy</span></code></a></td>
+<td>The Backup policy for the DB System.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.BackupSummary.html#oci.mysql.models.BackupSummary" title="oci.mysql.models.BackupSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.BackupSummary</span></code></a></td>
+<td>Details of Backups such as OCID, description, backupType, and so on.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CaCertificate.html#oci.mysql.models.CaCertificate" title="oci.mysql.models.CaCertificate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CaCertificate</span></code></a></td>
+<td>The CA certificate of the server used for VERIFY_IDENTITY and VERIFY_CA ssl modes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.ChangeBackupCompartmentDetails.html#oci.mysql.models.ChangeBackupCompartmentDetails" title="oci.mysql.models.ChangeBackupCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.ChangeBackupCompartmentDetails</span></code></a></td>
+<td>OCID of the target compartment for DB System Backup change compartment request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.Channel.html#oci.mysql.models.Channel" title="oci.mysql.models.Channel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.Channel</span></code></a></td>
+<td>A Channel connecting a DB System to an external entity.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.ChannelFilter.html#oci.mysql.models.ChannelFilter" title="oci.mysql.models.ChannelFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.ChannelFilter</span></code></a></td>
+<td>Replication filter rule for a channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.ChannelSource.html#oci.mysql.models.ChannelSource" title="oci.mysql.models.ChannelSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.ChannelSource</span></code></a></td>
+<td>Parameters detailing how to provision the source for the given Channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.ChannelSourceMysql.html#oci.mysql.models.ChannelSourceMysql" title="oci.mysql.models.ChannelSourceMysql"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.ChannelSourceMysql</span></code></a></td>
+<td>Core properties of a Mysql Channel source.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.ChannelSummary.html#oci.mysql.models.ChannelSummary" title="oci.mysql.models.ChannelSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.ChannelSummary</span></code></a></td>
+<td>Summary of a Channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.ChannelTarget.html#oci.mysql.models.ChannelTarget" title="oci.mysql.models.ChannelTarget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.ChannelTarget</span></code></a></td>
+<td>Details about the Channel target.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.ChannelTargetDbSystem.html#oci.mysql.models.ChannelTargetDbSystem" title="oci.mysql.models.ChannelTargetDbSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.ChannelTargetDbSystem</span></code></a></td>
+<td>Core properties of a DB System Channel target.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.Configuration.html#oci.mysql.models.Configuration" title="oci.mysql.models.Configuration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.Configuration</span></code></a></td>
+<td>The set of MySQL variables to be used when deploying a MySQL Database Service DB System.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.ConfigurationSummary.html#oci.mysql.models.ConfigurationSummary" title="oci.mysql.models.ConfigurationSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.ConfigurationSummary</span></code></a></td>
+<td>The general details of a Configuration such as its id, displayName, type, and shape association.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.ConfigurationVariables.html#oci.mysql.models.ConfigurationVariables" title="oci.mysql.models.ConfigurationVariables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.ConfigurationVariables</span></code></a></td>
+<td>User-defined service variables.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CopyBackupDetails.html#oci.mysql.models.CopyBackupDetails" title="oci.mysql.models.CopyBackupDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CopyBackupDetails</span></code></a></td>
+<td>Details required to copy a DB system backup from its source region to a destination region.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateBackupDetails.html#oci.mysql.models.CreateBackupDetails" title="oci.mysql.models.CreateBackupDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateBackupDetails</span></code></a></td>
+<td>Complete information for a Backup.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateBackupPolicyDetails.html#oci.mysql.models.CreateBackupPolicyDetails" title="oci.mysql.models.CreateBackupPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateBackupPolicyDetails</span></code></a></td>
+<td>Backup policy as optionally used for DB System Creation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateChannelDetails.html#oci.mysql.models.CreateChannelDetails" title="oci.mysql.models.CreateChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateChannelDetails</span></code></a></td>
+<td>Details required to create a Channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateChannelSourceDetails.html#oci.mysql.models.CreateChannelSourceDetails" title="oci.mysql.models.CreateChannelSourceDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateChannelSourceDetails</span></code></a></td>
+<td>Parameters detailing how to provision the source for the given Channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateChannelSourceFromMysqlDetails.html#oci.mysql.models.CreateChannelSourceFromMysqlDetails" title="oci.mysql.models.CreateChannelSourceFromMysqlDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateChannelSourceFromMysqlDetails</span></code></a></td>
+<td>Parameters detailing how to provision the source endpoint that is a MySQL Server.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateChannelTargetDetails.html#oci.mysql.models.CreateChannelTargetDetails" title="oci.mysql.models.CreateChannelTargetDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateChannelTargetDetails</span></code></a></td>
+<td>Parameters detailing how to provision the target for the given Channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateChannelTargetFromDbSystemDetails.html#oci.mysql.models.CreateChannelTargetFromDbSystemDetails" title="oci.mysql.models.CreateChannelTargetFromDbSystemDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateChannelTargetFromDbSystemDetails</span></code></a></td>
+<td>Parameters detailing how to provision the target endpoint that is a DB System.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateConfigurationDetails.html#oci.mysql.models.CreateConfigurationDetails" title="oci.mysql.models.CreateConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateConfigurationDetails</span></code></a></td>
+<td>The details required to create a new Configuration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateDbSystemDetails.html#oci.mysql.models.CreateDbSystemDetails" title="oci.mysql.models.CreateDbSystemDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateDbSystemDetails</span></code></a></td>
+<td>Details required to create a DB System.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateDbSystemSourceDetails.html#oci.mysql.models.CreateDbSystemSourceDetails" title="oci.mysql.models.CreateDbSystemSourceDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateDbSystemSourceDetails</span></code></a></td>
+<td>Parameters detailing how to provision the initial data of the system.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateDbSystemSourceFromBackupDetails.html#oci.mysql.models.CreateDbSystemSourceFromBackupDetails" title="oci.mysql.models.CreateDbSystemSourceFromBackupDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateDbSystemSourceFromBackupDetails</span></code></a></td>
+<td>Use the backupId to specify from which backup the new DB System will be created.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateDbSystemSourceFromNoneDetails.html#oci.mysql.models.CreateDbSystemSourceFromNoneDetails" title="oci.mysql.models.CreateDbSystemSourceFromNoneDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateDbSystemSourceFromNoneDetails</span></code></a></td>
+<td>Creation of a DbSystem from no particular source.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateDbSystemSourceFromPitrDetails.html#oci.mysql.models.CreateDbSystemSourceFromPitrDetails" title="oci.mysql.models.CreateDbSystemSourceFromPitrDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateDbSystemSourceFromPitrDetails</span></code></a></td>
+<td>DB System OCID to perform a point in time recovery to the current point in time.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateDbSystemSourceImportFromUrlDetails.html#oci.mysql.models.CreateDbSystemSourceImportFromUrlDetails" title="oci.mysql.models.CreateDbSystemSourceImportFromUrlDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateDbSystemSourceImportFromUrlDetails</span></code></a></td>
+<td>An Object Storage PAR from which to import the DB System initial data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateDeletionPolicyDetails.html#oci.mysql.models.CreateDeletionPolicyDetails" title="oci.mysql.models.CreateDeletionPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateDeletionPolicyDetails</span></code></a></td>
+<td>Policy for how the DB System and related resources should be handled at the time of its deletion.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateMaintenanceDetails.html#oci.mysql.models.CreateMaintenanceDetails" title="oci.mysql.models.CreateMaintenanceDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateMaintenanceDetails</span></code></a></td>
+<td>The Maintenance Policy for the DB System or Read Replica that this model is included in.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CreateReplicaDetails.html#oci.mysql.models.CreateReplicaDetails" title="oci.mysql.models.CreateReplicaDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CreateReplicaDetails</span></code></a></td>
+<td>Details required to create a read replica.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.CustomerContact.html#oci.mysql.models.CustomerContact" title="oci.mysql.models.CustomerContact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.CustomerContact</span></code></a></td>
+<td>Customer contact information that will be used by Oracle to provide notifications needed by DB System administrators.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.DataStorage.html#oci.mysql.models.DataStorage" title="oci.mysql.models.DataStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.DataStorage</span></code></a></td>
+<td>Data Storage information.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.DataStorageDetails.html#oci.mysql.models.DataStorageDetails" title="oci.mysql.models.DataStorageDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.DataStorageDetails</span></code></a></td>
+<td>Data Storage configuration properties.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystem.html#oci.mysql.models.DbSystem" title="oci.mysql.models.DbSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.DbSystem</span></code></a></td>
+<td>A DB System is the core logical unit of MySQL Database Service.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemEndpoint.html#oci.mysql.models.DbSystemEndpoint" title="oci.mysql.models.DbSystemEndpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.DbSystemEndpoint</span></code></a></td>
+<td>A particular functional endpoint for access to a DB System, and the properties that apply to it.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemPlacement.html#oci.mysql.models.DbSystemPlacement" title="oci.mysql.models.DbSystemPlacement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.DbSystemPlacement</span></code></a></td>
+<td>The availability domain and fault domain a DB System is placed in.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSnapshot.html#oci.mysql.models.DbSystemSnapshot" title="oci.mysql.models.DbSystemSnapshot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.DbSystemSnapshot</span></code></a></td>
+<td>Snapshot of the DbSystem details at the time of the backup</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSnapshotSummary.html#oci.mysql.models.DbSystemSnapshotSummary" title="oci.mysql.models.DbSystemSnapshotSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.DbSystemSnapshotSummary</span></code></a></td>
+<td>A summary of snapshot of the DB system details at the time of the backup.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSource.html#oci.mysql.models.DbSystemSource" title="oci.mysql.models.DbSystemSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.DbSystemSource</span></code></a></td>
+<td>Parameters detailing how to provision the initial data of the DB System.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSourceFromBackup.html#oci.mysql.models.DbSystemSourceFromBackup" title="oci.mysql.models.DbSystemSourceFromBackup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.DbSystemSourceFromBackup</span></code></a></td>
+<td>From which backup this DB System was created.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSourceFromNone.html#oci.mysql.models.DbSystemSourceFromNone" title="oci.mysql.models.DbSystemSourceFromNone"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.DbSystemSourceFromNone</span></code></a></td>
+<td>A DB System created from no particular external source.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSourceFromPitr.html#oci.mysql.models.DbSystemSourceFromPitr" title="oci.mysql.models.DbSystemSourceFromPitr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.DbSystemSourceFromPitr</span></code></a></td>
+<td>DB System OCID to perform a point in time recovery to the current point in time.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSourceImportFromUrl.html#oci.mysql.models.DbSystemSourceImportFromUrl" title="oci.mysql.models.DbSystemSourceImportFromUrl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.DbSystemSourceImportFromUrl</span></code></a></td>
+<td>An Object Storage PAR from which to import the DB System initial data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.DbSystemSummary.html#oci.mysql.models.DbSystemSummary" title="oci.mysql.models.DbSystemSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.DbSystemSummary</span></code></a></td>
+<td>A summary of a DB System.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.DeletionPolicyDetails.html#oci.mysql.models.DeletionPolicyDetails" title="oci.mysql.models.DeletionPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.DeletionPolicyDetails</span></code></a></td>
+<td>The Deletion policy for the DB System.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.ErrorOnAnonymousHandling.html#oci.mysql.models.ErrorOnAnonymousHandling" title="oci.mysql.models.ErrorOnAnonymousHandling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.ErrorOnAnonymousHandling</span></code></a></td>
+<td>Disables assignment of IDs to anonymous transactions coming from the source.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.HeatWaveCluster.html#oci.mysql.models.HeatWaveCluster" title="oci.mysql.models.HeatWaveCluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.HeatWaveCluster</span></code></a></td>
+<td>A HeatWave cluster is a database accelerator for a DB System.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.HeatWaveClusterMemoryEstimate.html#oci.mysql.models.HeatWaveClusterMemoryEstimate" title="oci.mysql.models.HeatWaveClusterMemoryEstimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.HeatWaveClusterMemoryEstimate</span></code></a></td>
+<td>HeatWave cluster memory estimate that can be used to determine a suitable HeatWave cluster size.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.HeatWaveClusterSchemaMemoryEstimate.html#oci.mysql.models.HeatWaveClusterSchemaMemoryEstimate" title="oci.mysql.models.HeatWaveClusterSchemaMemoryEstimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.HeatWaveClusterSchemaMemoryEstimate</span></code></a></td>
+<td>Schema with estimated memory footprints for each MySQL user table of the schema when loaded to HeatWave cluster memory.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.HeatWaveClusterSummary.html#oci.mysql.models.HeatWaveClusterSummary" title="oci.mysql.models.HeatWaveClusterSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.HeatWaveClusterSummary</span></code></a></td>
+<td>A summary of a HeatWave cluster.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.HeatWaveClusterTableMemoryEstimate.html#oci.mysql.models.HeatWaveClusterTableMemoryEstimate" title="oci.mysql.models.HeatWaveClusterTableMemoryEstimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.HeatWaveClusterTableMemoryEstimate</span></code></a></td>
+<td>Estimated memory footprint for a MySQL user table when loaded to the HeatWave cluster memory.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.HeatWaveNode.html#oci.mysql.models.HeatWaveNode" title="oci.mysql.models.HeatWaveNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.HeatWaveNode</span></code></a></td>
+<td>A HeatWave node is a compute host that is part of a HeatWave cluster.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.InitializationVariables.html#oci.mysql.models.InitializationVariables" title="oci.mysql.models.InitializationVariables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.InitializationVariables</span></code></a></td>
+<td>User-defined service variables set only at DB system initialization.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.MaintenanceDetails.html#oci.mysql.models.MaintenanceDetails" title="oci.mysql.models.MaintenanceDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.MaintenanceDetails</span></code></a></td>
+<td>The Maintenance Policy for the DB System or Read Replica that this model is included in.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.PemCaCertificate.html#oci.mysql.models.PemCaCertificate" title="oci.mysql.models.PemCaCertificate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.PemCaCertificate</span></code></a></td>
+<td>The CA certificate in PEM format.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.PitrPolicy.html#oci.mysql.models.PitrPolicy" title="oci.mysql.models.PitrPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.PitrPolicy</span></code></a></td>
+<td>The PITR policy for the DB System.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.PointInTimeRecoveryDetails.html#oci.mysql.models.PointInTimeRecoveryDetails" title="oci.mysql.models.PointInTimeRecoveryDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.PointInTimeRecoveryDetails</span></code></a></td>
+<td>Point-in-time Recovery details like earliest and latest recovery time point for the DB System.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.Replica.html#oci.mysql.models.Replica" title="oci.mysql.models.Replica"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.Replica</span></code></a></td>
+<td>A DB System read replica.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.ReplicaOverrides.html#oci.mysql.models.ReplicaOverrides" title="oci.mysql.models.ReplicaOverrides"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.ReplicaOverrides</span></code></a></td>
+<td>By default a read replica inherits the MySQL version, shape, and configuration of the source DB system.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.ReplicaSummary.html#oci.mysql.models.ReplicaSummary" title="oci.mysql.models.ReplicaSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.ReplicaSummary</span></code></a></td>
+<td>Summary of the read replica.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.RestartDbSystemDetails.html#oci.mysql.models.RestartDbSystemDetails" title="oci.mysql.models.RestartDbSystemDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.RestartDbSystemDetails</span></code></a></td>
+<td>DB System restart parameters.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.SecureConnectionDetails.html#oci.mysql.models.SecureConnectionDetails" title="oci.mysql.models.SecureConnectionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.SecureConnectionDetails</span></code></a></td>
+<td>Secure connection configuration details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.ShapeSummary.html#oci.mysql.models.ShapeSummary" title="oci.mysql.models.ShapeSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.ShapeSummary</span></code></a></td>
+<td>The shape of the DB System.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.StopDbSystemDetails.html#oci.mysql.models.StopDbSystemDetails" title="oci.mysql.models.StopDbSystemDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.StopDbSystemDetails</span></code></a></td>
+<td>DB System shutdown parameters.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateBackupDetails.html#oci.mysql.models.UpdateBackupDetails" title="oci.mysql.models.UpdateBackupDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.UpdateBackupDetails</span></code></a></td>
+<td>The Backup metadata which can be updated.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateBackupPolicyDetails.html#oci.mysql.models.UpdateBackupPolicyDetails" title="oci.mysql.models.UpdateBackupPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.UpdateBackupPolicyDetails</span></code></a></td>
+<td>Backup Policy as optionally used for DB System update.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateChannelDetails.html#oci.mysql.models.UpdateChannelDetails" title="oci.mysql.models.UpdateChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.UpdateChannelDetails</span></code></a></td>
+<td>Details required to update a Channel</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateChannelSourceDetails.html#oci.mysql.models.UpdateChannelSourceDetails" title="oci.mysql.models.UpdateChannelSourceDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.UpdateChannelSourceDetails</span></code></a></td>
+<td>Parameters detailing how to provision the source for the given Channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateChannelSourceFromMysqlDetails.html#oci.mysql.models.UpdateChannelSourceFromMysqlDetails" title="oci.mysql.models.UpdateChannelSourceFromMysqlDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.UpdateChannelSourceFromMysqlDetails</span></code></a></td>
+<td>Parameters detailing how to provision the source endpoint that is a MySQL Server.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateChannelTargetDetails.html#oci.mysql.models.UpdateChannelTargetDetails" title="oci.mysql.models.UpdateChannelTargetDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.UpdateChannelTargetDetails</span></code></a></td>
+<td>Parameters detailing how to provision the target for the given Channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateChannelTargetFromDbSystemDetails.html#oci.mysql.models.UpdateChannelTargetFromDbSystemDetails" title="oci.mysql.models.UpdateChannelTargetFromDbSystemDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.UpdateChannelTargetFromDbSystemDetails</span></code></a></td>
+<td>Parameters detailing how to provision the target endpoint that is a DB System.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateConfigurationDetails.html#oci.mysql.models.UpdateConfigurationDetails" title="oci.mysql.models.UpdateConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.UpdateConfigurationDetails</span></code></a></td>
+<td>The details required to update a Configuration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateDbSystemDetails.html#oci.mysql.models.UpdateDbSystemDetails" title="oci.mysql.models.UpdateDbSystemDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.UpdateDbSystemDetails</span></code></a></td>
+<td>Details required to update a DB System.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateDeletionPolicyDetails.html#oci.mysql.models.UpdateDeletionPolicyDetails" title="oci.mysql.models.UpdateDeletionPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.UpdateDeletionPolicyDetails</span></code></a></td>
+<td>Policy for how the DB System and related resources should be handled at the time of its deletion.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateHeatWaveClusterDetails.html#oci.mysql.models.UpdateHeatWaveClusterDetails" title="oci.mysql.models.UpdateHeatWaveClusterDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.UpdateHeatWaveClusterDetails</span></code></a></td>
+<td>Details about the HeatWave cluster properties to be updated.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateMaintenanceDetails.html#oci.mysql.models.UpdateMaintenanceDetails" title="oci.mysql.models.UpdateMaintenanceDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.UpdateMaintenanceDetails</span></code></a></td>
+<td>The Maintenance Policy for the DB System or Read Replica that this model is included in.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.UpdateReplicaDetails.html#oci.mysql.models.UpdateReplicaDetails" title="oci.mysql.models.UpdateReplicaDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.UpdateReplicaDetails</span></code></a></td>
+<td>Details required to update a read replica.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.Version.html#oci.mysql.models.Version" title="oci.mysql.models.Version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.Version</span></code></a></td>
+<td>A supported MySQL Version.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.VersionSummary.html#oci.mysql.models.VersionSummary" title="oci.mysql.models.VersionSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.VersionSummary</span></code></a></td>
+<td>A summary of the supported MySQL Versions families, and a list of their supported minor versions.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.WorkRequest.html#oci.mysql.models.WorkRequest" title="oci.mysql.models.WorkRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.WorkRequest</span></code></a></td>
+<td>The status of an asynchronous task in the system.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.WorkRequestError.html#oci.mysql.models.WorkRequestError" title="oci.mysql.models.WorkRequestError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.WorkRequestError</span></code></a></td>
+<td>An error encountered while executing a work request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.WorkRequestLogEntry.html#oci.mysql.models.WorkRequestLogEntry" title="oci.mysql.models.WorkRequestLogEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.WorkRequestLogEntry</span></code></a></td>
+<td>A log message from the execution of a work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="mysql/models/oci.mysql.models.WorkRequestResource.html#oci.mysql.models.WorkRequestResource" title="oci.mysql.models.WorkRequestResource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.WorkRequestResource</span></code></a></td>
+<td>A resource created or operated on by a work request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="mysql/models/oci.mysql.models.WorkRequestSummary.html#oci.mysql.models.WorkRequestSummary" title="oci.mysql.models.WorkRequestSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.mysql.models.WorkRequestSummary</span></code></a></td>
+<td>The status of an asynchronous task in the system.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mysql/client/oci.mysql.ChannelsClient.html" class="btn btn-neutral float-right" title="ChannelsClient" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="monitoring/models/oci.monitoring.models.UpdateAlarmDetails.html" class="btn btn-neutral" title="UpdateAlarmDetails" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

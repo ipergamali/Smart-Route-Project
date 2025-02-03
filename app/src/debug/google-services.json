@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "965681083258",
-    "project_id": "movewise-40eae",
-    "storage_bucket": "movewise-40eae.firebasestorage.app"
+    "project_number": "290365104758",
+    "project_id": "smartroute-72ba3",
+    "storage_bucket": "smartroute-72ba3.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:965681083258:android:8948b34156d397d96a9cc3",
+        "mobilesdk_app_id": "1:290365104758:android:396e3268165bda23b73557",
         "android_client_info": {
-          "package_name": "com.ioannapergamali.movewise"
+          "package_name": "com.ioannapergamali.smartroute"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB-6g7bc3jH-Ts7MxRhxZ6J0DUwdDnREx4"
+          "current_key": "AIzaSyAkjx0FrHghimEkbxuawde64qSVaWFEQ8s"
         }
       ],
       "services": {

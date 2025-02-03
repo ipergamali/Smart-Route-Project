@@ -1,0 +1,1155 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Oda &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ManagementClient" href="oda/client/oci.oda.ManagementClient.html" />
+    <link rel="prev" title="WorkRequestResource" href="ocvp/models/oci.ocvp.models.WorkRequestResource.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocvp.html">Ocvp</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Oda</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="oda/client/oci.oda.ManagementClient.html">ManagementClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oda/client/oci.oda.OdaClient.html">OdaClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oda/client/oci.oda.OdapackageClient.html">OdapackageClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oda/client/oci.oda.ManagementClientCompositeOperations.html">ManagementClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oda/client/oci.oda.OdaClientCompositeOperations.html">OdaClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oda/client/oci.oda.OdapackageClientCompositeOperations.html">OdapackageClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models">Models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.AndroidChannel.html">AndroidChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.AppEventChannel.html">AppEventChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ApplicationChannel.html">ApplicationChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.AuthenticationProvider.html">AuthenticationProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.AuthenticationProviderCollection.html">AuthenticationProviderCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.AuthenticationProviderSummary.html">AuthenticationProviderSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.Bot.html">Bot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.BulkCreateSkillEntitiesDetails.html">BulkCreateSkillEntitiesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ChangeOdaInstanceCompartmentDetails.html">ChangeOdaInstanceCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ChangeOdaPrivateEndpointCompartmentDetails.html">ChangeOdaPrivateEndpointCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.Channel.html">Channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ChannelCollection.html">ChannelCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ChannelSummary.html">ChannelSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CloneDigitalAssistantDetails.html">CloneDigitalAssistantDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CloneSkillDetails.html">CloneSkillDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CompositeEntity.html">CompositeEntity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ConfigureDigitalAssistantParametersDetails.html">ConfigureDigitalAssistantParametersDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CortanaChannel.html">CortanaChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateAndroidChannelDetails.html">CreateAndroidChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateAndroidChannelResult.html">CreateAndroidChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateAppEventChannelDetails.html">CreateAppEventChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateAppEventChannelResult.html">CreateAppEventChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateApplicationChannelDetails.html">CreateApplicationChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateApplicationChannelResult.html">CreateApplicationChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateAuthenticationProviderDetails.html">CreateAuthenticationProviderDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateChannelDetails.html">CreateChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateChannelResult.html">CreateChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateCortanaChannelDetails.html">CreateCortanaChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateCortanaChannelResult.html">CreateCortanaChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateDigitalAssistantDetails.html">CreateDigitalAssistantDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateDigitalAssistantVersionDetails.html">CreateDigitalAssistantVersionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateFacebookChannelDetails.html">CreateFacebookChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateFacebookChannelResult.html">CreateFacebookChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateImportedPackageDetails.html">CreateImportedPackageDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateIosChannelDetails.html">CreateIosChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateIosChannelResult.html">CreateIosChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateMSTeamsChannelDetails.html">CreateMSTeamsChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateMSTeamsChannelResult.html">CreateMSTeamsChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateNewDigitalAssistantDetails.html">CreateNewDigitalAssistantDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateNewSkillDetails.html">CreateNewSkillDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateOSSChannelDetails.html">CreateOSSChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateOSSChannelResult.html">CreateOSSChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateOdaInstanceAttachmentDetails.html">CreateOdaInstanceAttachmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateOdaInstanceDetails.html">CreateOdaInstanceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateOdaPrivateEndpointAttachmentDetails.html">CreateOdaPrivateEndpointAttachmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateOdaPrivateEndpointDetails.html">CreateOdaPrivateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateOdaPrivateEndpointScanProxyDetails.html">CreateOdaPrivateEndpointScanProxyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateOsvcChannelDetails.html">CreateOsvcChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateOsvcChannelResult.html">CreateOsvcChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateServiceCloudChannelDetails.html">CreateServiceCloudChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateServiceCloudChannelResult.html">CreateServiceCloudChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateSkillCompositeEntityDetails.html">CreateSkillCompositeEntityDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateSkillDetails.html">CreateSkillDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateSkillEntityDetails.html">CreateSkillEntityDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateSkillParameterDetails.html">CreateSkillParameterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateSkillValueListEntityDetails.html">CreateSkillValueListEntityDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateSkillVersionDetails.html">CreateSkillVersionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateSlackChannelDetails.html">CreateSlackChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateSlackChannelResult.html">CreateSlackChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateTestChannelResult.html">CreateTestChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateTranslatorDetails.html">CreateTranslatorDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateTwilioChannelDetails.html">CreateTwilioChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateTwilioChannelResult.html">CreateTwilioChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateWebChannelDetails.html">CreateWebChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateWebChannelResult.html">CreateWebChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateWebhookChannelDetails.html">CreateWebhookChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.CreateWebhookChannelResult.html">CreateWebhookChannelResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.DefaultParameterValues.html">DefaultParameterValues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.DigitalAssistant.html">DigitalAssistant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.DigitalAssistantCollection.html">DigitalAssistantCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.DigitalAssistantParameter.html">DigitalAssistantParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.DigitalAssistantParameterCollection.html">DigitalAssistantParameterCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.DigitalAssistantParameterSummary.html">DigitalAssistantParameterSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.DigitalAssistantParameterValue.html">DigitalAssistantParameterValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.DigitalAssistantSummary.html">DigitalAssistantSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.Entity.html">Entity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.EntityAction.html">EntityAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.EntityActionArgument.html">EntityActionArgument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.EntityActionArgumentNaturalLanguageMapping.html">EntityActionArgumentNaturalLanguageMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.EntityActionNaturalLanguageMapping.html">EntityActionNaturalLanguageMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.EntityAttribute.html">EntityAttribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.EntityAttributeNaturalLanguageMapping.html">EntityAttributeNaturalLanguageMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.EntityNaturalLanguageMapping.html">EntityNaturalLanguageMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ErrorBody.html">ErrorBody</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ExportBotDetails.html">ExportBotDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ExportDigitalAssistantDetails.html">ExportDigitalAssistantDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ExportSkillDetails.html">ExportSkillDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ExtendDigitalAssistantDetails.html">ExtendDigitalAssistantDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ExtendSkillDetails.html">ExtendSkillDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.FacebookChannel.html">FacebookChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ImportBotDetails.html">ImportBotDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ImportContract.html">ImportContract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ImportedPackage.html">ImportedPackage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ImportedPackageSummary.html">ImportedPackageSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.IosChannel.html">IosChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.LanguageMapping.html">LanguageMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.MSTeamsChannel.html">MSTeamsChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.MetadataProperty.html">MetadataProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.NameMapping.html">NameMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OSSChannel.html">OSSChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaInstance.html">OdaInstance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaInstanceAttachment.html">OdaInstanceAttachment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaInstanceAttachmentCollection.html">OdaInstanceAttachmentCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaInstanceAttachmentOwner.html">OdaInstanceAttachmentOwner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaInstanceAttachmentSummary.html">OdaInstanceAttachmentSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaInstanceOwner.html">OdaInstanceOwner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaInstanceSummary.html">OdaInstanceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpoint.html">OdaPrivateEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointAttachment.html">OdaPrivateEndpointAttachment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointAttachmentCollection.html">OdaPrivateEndpointAttachmentCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointAttachmentSummary.html">OdaPrivateEndpointAttachmentSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointCollection.html">OdaPrivateEndpointCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointScanProxy.html">OdaPrivateEndpointScanProxy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointScanProxyCollection.html">OdaPrivateEndpointScanProxyCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointScanProxySummary.html">OdaPrivateEndpointScanProxySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointSummary.html">OdaPrivateEndpointSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.OsvcChannel.html">OsvcChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.Package.html">Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.PackageSummary.html">PackageSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.Parameter.html">Parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ParameterDefinition.html">ParameterDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ResourceTypeDefaultParameterValues.html">ResourceTypeDefaultParameterValues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ResourceTypeImportContract.html">ResourceTypeImportContract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ResourceTypeMetadata.html">ResourceTypeMetadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.RestrictedOperation.html">RestrictedOperation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ScanListenerInfo.html">ScanListenerInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ServiceCloudChannel.html">ServiceCloudChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.Skill.html">Skill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.SkillCollection.html">SkillCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.SkillParameter.html">SkillParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.SkillParameterCollection.html">SkillParameterCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.SkillParameterSummary.html">SkillParameterSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.SkillSummary.html">SkillSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.SlackChannel.html">SlackChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.StaticEntityValue.html">StaticEntityValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.StaticEntityValueNaturalLanguageMapping.html">StaticEntityValueNaturalLanguageMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.StorageLocation.html">StorageLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.TestChannel.html">TestChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.TrainSkillDetails.html">TrainSkillDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.TrainSkillParameter.html">TrainSkillParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.TrainSkillQueryEntityParameter.html">TrainSkillQueryEntityParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.Translator.html">Translator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.TranslatorCollection.html">TranslatorCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.TranslatorSummary.html">TranslatorSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.TwilioChannel.html">TwilioChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateAndroidChannelDetails.html">UpdateAndroidChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateAppEventChannelDetails.html">UpdateAppEventChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateApplicationChannelDetails.html">UpdateApplicationChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateAuthenticationProviderDetails.html">UpdateAuthenticationProviderDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateChannelDetails.html">UpdateChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateCortanaChannelDetails.html">UpdateCortanaChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateDigitalAssistantDetails.html">UpdateDigitalAssistantDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateDigitalAssistantParameterDetails.html">UpdateDigitalAssistantParameterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateFacebookChannelDetails.html">UpdateFacebookChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateImportedPackageDetails.html">UpdateImportedPackageDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateIosChannelDetails.html">UpdateIosChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateMSTeamsChannelDetails.html">UpdateMSTeamsChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateOSSChannelDetails.html">UpdateOSSChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateOdaInstanceAttachmentDetails.html">UpdateOdaInstanceAttachmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateOdaInstanceDetails.html">UpdateOdaInstanceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateOdaPrivateEndpointDetails.html">UpdateOdaPrivateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateOsvcChannelDetails.html">UpdateOsvcChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateServiceCloudChannelDetails.html">UpdateServiceCloudChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateSkillDetails.html">UpdateSkillDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateSkillParameterDetails.html">UpdateSkillParameterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateSlackChannelDetails.html">UpdateSlackChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateTranslatorDetails.html">UpdateTranslatorDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateTwilioChannelDetails.html">UpdateTwilioChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateWebChannelDetails.html">UpdateWebChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.UpdateWebhookChannelDetails.html">UpdateWebhookChannelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.ValueListEntity.html">ValueListEntity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.WebChannel.html">WebChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.WebhookChannel.html">WebhookChannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.WorkRequestResource.html">WorkRequestResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oda/models/oci.oda.models.WorkRequestSummary.html">WorkRequestSummary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="landing.html">API Reference</a> &raquo;</li>
+        
+      <li>Oda</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/oda.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="oda">
+<h1>Oda<a class="headerlink" href="#oda" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="oda/client/oci.oda.ManagementClient.html#oci.oda.ManagementClient" title="oci.oda.ManagementClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.ManagementClient</span></code></a></td>
+<td>API to create and maintain Oracle Digital Assistant service instances.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/client/oci.oda.OdaClient.html#oci.oda.OdaClient" title="oci.oda.OdaClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.OdaClient</span></code></a></td>
+<td>API to create and maintain Oracle Digital Assistant service instances.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/client/oci.oda.OdapackageClient.html#oci.oda.OdapackageClient" title="oci.oda.OdapackageClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.OdapackageClient</span></code></a></td>
+<td>API to create and maintain Oracle Digital Assistant service instances.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/client/oci.oda.ManagementClientCompositeOperations.html#oci.oda.ManagementClientCompositeOperations" title="oci.oda.ManagementClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.ManagementClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="oda/client/oci.oda.ManagementClient.html#oci.oda.ManagementClient" title="oci.oda.ManagementClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagementClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/client/oci.oda.OdaClientCompositeOperations.html#oci.oda.OdaClientCompositeOperations" title="oci.oda.OdaClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.OdaClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="oda/client/oci.oda.OdaClient.html#oci.oda.OdaClient" title="oci.oda.OdaClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">OdaClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/client/oci.oda.OdapackageClientCompositeOperations.html#oci.oda.OdapackageClientCompositeOperations" title="oci.oda.OdapackageClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.OdapackageClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="oda/client/oci.oda.OdapackageClient.html#oci.oda.OdapackageClient" title="oci.oda.OdapackageClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">OdapackageClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.AndroidChannel.html#oci.oda.models.AndroidChannel" title="oci.oda.models.AndroidChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.AndroidChannel</span></code></a></td>
+<td>The configuration for an Android channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.AppEventChannel.html#oci.oda.models.AppEventChannel" title="oci.oda.models.AppEventChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.AppEventChannel</span></code></a></td>
+<td>The configuration for an Application Event channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.ApplicationChannel.html#oci.oda.models.ApplicationChannel" title="oci.oda.models.ApplicationChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ApplicationChannel</span></code></a></td>
+<td>The configuration for an Application channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.AuthenticationProvider.html#oci.oda.models.AuthenticationProvider" title="oci.oda.models.AuthenticationProvider"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.AuthenticationProvider</span></code></a></td>
+<td>Settings for the Authentication Provider.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.AuthenticationProviderCollection.html#oci.oda.models.AuthenticationProviderCollection" title="oci.oda.models.AuthenticationProviderCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.AuthenticationProviderCollection</span></code></a></td>
+<td>A collection of Authentication Provider summaries.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.AuthenticationProviderSummary.html#oci.oda.models.AuthenticationProviderSummary" title="oci.oda.models.AuthenticationProviderSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.AuthenticationProviderSummary</span></code></a></td>
+<td>Summary of the Authentication Provider.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.Bot.html#oci.oda.models.Bot" title="oci.oda.models.Bot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.Bot</span></code></a></td>
+<td>Metadata for a Bot resource.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.BulkCreateSkillEntitiesDetails.html#oci.oda.models.BulkCreateSkillEntitiesDetails" title="oci.oda.models.BulkCreateSkillEntitiesDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.BulkCreateSkillEntitiesDetails</span></code></a></td>
+<td>A collection of skill entities to create.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.ChangeOdaInstanceCompartmentDetails.html#oci.oda.models.ChangeOdaInstanceCompartmentDetails" title="oci.oda.models.ChangeOdaInstanceCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ChangeOdaInstanceCompartmentDetails</span></code></a></td>
+<td>Properties required to move a Digital Assistant instance from one compartment to another.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.ChangeOdaPrivateEndpointCompartmentDetails.html#oci.oda.models.ChangeOdaPrivateEndpointCompartmentDetails" title="oci.oda.models.ChangeOdaPrivateEndpointCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ChangeOdaPrivateEndpointCompartmentDetails</span></code></a></td>
+<td>Properties required to move an ODA Private Endpoint from one compartment to another.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.Channel.html#oci.oda.models.Channel" title="oci.oda.models.Channel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.Channel</span></code></a></td>
+<td>Properties of a Channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.ChannelCollection.html#oci.oda.models.ChannelCollection" title="oci.oda.models.ChannelCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ChannelCollection</span></code></a></td>
+<td>A collection of Channel summaries.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.ChannelSummary.html#oci.oda.models.ChannelSummary" title="oci.oda.models.ChannelSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ChannelSummary</span></code></a></td>
+<td>Summary of the Channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CloneDigitalAssistantDetails.html#oci.oda.models.CloneDigitalAssistantDetails" title="oci.oda.models.CloneDigitalAssistantDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CloneDigitalAssistantDetails</span></code></a></td>
+<td>Properties that are required to create a new Digital Assistant by cloning an existing Digital Assistant.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CloneSkillDetails.html#oci.oda.models.CloneSkillDetails" title="oci.oda.models.CloneSkillDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CloneSkillDetails</span></code></a></td>
+<td>Properties that are required to create a new Skill by cloning an existing Skill.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CompositeEntity.html#oci.oda.models.CompositeEntity" title="oci.oda.models.CompositeEntity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CompositeEntity</span></code></a></td>
+<td>Metadata for a composite entity.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.ConfigureDigitalAssistantParametersDetails.html#oci.oda.models.ConfigureDigitalAssistantParametersDetails" title="oci.oda.models.ConfigureDigitalAssistantParametersDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ConfigureDigitalAssistantParametersDetails</span></code></a></td>
+<td>Properties for configuring the Digital Assistant Parameters in a Digital Assistant instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CortanaChannel.html#oci.oda.models.CortanaChannel" title="oci.oda.models.CortanaChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CortanaChannel</span></code></a></td>
+<td>The configuration for a Cortana channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateAndroidChannelDetails.html#oci.oda.models.CreateAndroidChannelDetails" title="oci.oda.models.CreateAndroidChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateAndroidChannelDetails</span></code></a></td>
+<td>Properties required to create an Android channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateAndroidChannelResult.html#oci.oda.models.CreateAndroidChannelResult" title="oci.oda.models.CreateAndroidChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateAndroidChannelResult</span></code></a></td>
+<td>The configuration for an Android channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateAppEventChannelDetails.html#oci.oda.models.CreateAppEventChannelDetails" title="oci.oda.models.CreateAppEventChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateAppEventChannelDetails</span></code></a></td>
+<td>Properties required to create an Application Event channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateAppEventChannelResult.html#oci.oda.models.CreateAppEventChannelResult" title="oci.oda.models.CreateAppEventChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateAppEventChannelResult</span></code></a></td>
+<td>The configuration for an Application Event channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateApplicationChannelDetails.html#oci.oda.models.CreateApplicationChannelDetails" title="oci.oda.models.CreateApplicationChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateApplicationChannelDetails</span></code></a></td>
+<td>Properties required to create an Application channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateApplicationChannelResult.html#oci.oda.models.CreateApplicationChannelResult" title="oci.oda.models.CreateApplicationChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateApplicationChannelResult</span></code></a></td>
+<td>The configuration for an Application channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateAuthenticationProviderDetails.html#oci.oda.models.CreateAuthenticationProviderDetails" title="oci.oda.models.CreateAuthenticationProviderDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateAuthenticationProviderDetails</span></code></a></td>
+<td>Properties required to create a new Authentication Provider.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateChannelDetails.html#oci.oda.models.CreateChannelDetails" title="oci.oda.models.CreateChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateChannelDetails</span></code></a></td>
+<td>Properties that are required to create a Channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateChannelResult.html#oci.oda.models.CreateChannelResult" title="oci.oda.models.CreateChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateChannelResult</span></code></a></td>
+<td>Properties of a Channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateCortanaChannelDetails.html#oci.oda.models.CreateCortanaChannelDetails" title="oci.oda.models.CreateCortanaChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateCortanaChannelDetails</span></code></a></td>
+<td>Properties required to create a Cortana channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateCortanaChannelResult.html#oci.oda.models.CreateCortanaChannelResult" title="oci.oda.models.CreateCortanaChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateCortanaChannelResult</span></code></a></td>
+<td>The configuration for a Cortana channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateDigitalAssistantDetails.html#oci.oda.models.CreateDigitalAssistantDetails" title="oci.oda.models.CreateDigitalAssistantDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateDigitalAssistantDetails</span></code></a></td>
+<td>Properties that are required to create a Digital Assistant.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateDigitalAssistantVersionDetails.html#oci.oda.models.CreateDigitalAssistantVersionDetails" title="oci.oda.models.CreateDigitalAssistantVersionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateDigitalAssistantVersionDetails</span></code></a></td>
+<td>Properties that are required to create a new version of an existing Digital Assistant.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateFacebookChannelDetails.html#oci.oda.models.CreateFacebookChannelDetails" title="oci.oda.models.CreateFacebookChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateFacebookChannelDetails</span></code></a></td>
+<td>Properties required to create a Facebook channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateFacebookChannelResult.html#oci.oda.models.CreateFacebookChannelResult" title="oci.oda.models.CreateFacebookChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateFacebookChannelResult</span></code></a></td>
+<td>The configuration for a Facebook channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateImportedPackageDetails.html#oci.oda.models.CreateImportedPackageDetails" title="oci.oda.models.CreateImportedPackageDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateImportedPackageDetails</span></code></a></td>
+<td>Payload for creating an imported package</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateIosChannelDetails.html#oci.oda.models.CreateIosChannelDetails" title="oci.oda.models.CreateIosChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateIosChannelDetails</span></code></a></td>
+<td>Properties required to create an iOS channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateIosChannelResult.html#oci.oda.models.CreateIosChannelResult" title="oci.oda.models.CreateIosChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateIosChannelResult</span></code></a></td>
+<td>The configuration for an iOS channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateMSTeamsChannelDetails.html#oci.oda.models.CreateMSTeamsChannelDetails" title="oci.oda.models.CreateMSTeamsChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateMSTeamsChannelDetails</span></code></a></td>
+<td>Properties required to create an MS Teams channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateMSTeamsChannelResult.html#oci.oda.models.CreateMSTeamsChannelResult" title="oci.oda.models.CreateMSTeamsChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateMSTeamsChannelResult</span></code></a></td>
+<td>The configuration for an MS Teams channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateNewDigitalAssistantDetails.html#oci.oda.models.CreateNewDigitalAssistantDetails" title="oci.oda.models.CreateNewDigitalAssistantDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateNewDigitalAssistantDetails</span></code></a></td>
+<td>Properties that are required to create a Digital Assistant from scratch.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateNewSkillDetails.html#oci.oda.models.CreateNewSkillDetails" title="oci.oda.models.CreateNewSkillDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateNewSkillDetails</span></code></a></td>
+<td>Properties that are required to create a Skill from scratch.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateOSSChannelDetails.html#oci.oda.models.CreateOSSChannelDetails" title="oci.oda.models.CreateOSSChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateOSSChannelDetails</span></code></a></td>
+<td>Properties required to create an Oracle Streaming Service (OSS) channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateOSSChannelResult.html#oci.oda.models.CreateOSSChannelResult" title="oci.oda.models.CreateOSSChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateOSSChannelResult</span></code></a></td>
+<td>The configuration for an Oracle Streaming Service (OSS) channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateOdaInstanceAttachmentDetails.html#oci.oda.models.CreateOdaInstanceAttachmentDetails" title="oci.oda.models.CreateOdaInstanceAttachmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateOdaInstanceAttachmentDetails</span></code></a></td>
+<td>Properties required to create an ODA instance attachment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateOdaInstanceDetails.html#oci.oda.models.CreateOdaInstanceDetails" title="oci.oda.models.CreateOdaInstanceDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateOdaInstanceDetails</span></code></a></td>
+<td>Properties that are required to create a Digital Assistant instance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateOdaPrivateEndpointAttachmentDetails.html#oci.oda.models.CreateOdaPrivateEndpointAttachmentDetails" title="oci.oda.models.CreateOdaPrivateEndpointAttachmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateOdaPrivateEndpointAttachmentDetails</span></code></a></td>
+<td>Properties that are required to create an ODA private endpoint attachment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateOdaPrivateEndpointDetails.html#oci.oda.models.CreateOdaPrivateEndpointDetails" title="oci.oda.models.CreateOdaPrivateEndpointDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateOdaPrivateEndpointDetails</span></code></a></td>
+<td>Properties that can be specified to create an ODA private endpoint.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateOdaPrivateEndpointScanProxyDetails.html#oci.oda.models.CreateOdaPrivateEndpointScanProxyDetails" title="oci.oda.models.CreateOdaPrivateEndpointScanProxyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateOdaPrivateEndpointScanProxyDetails</span></code></a></td>
+<td>Properties that are required to create an ODA Private Endpoint Scan Proxy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateOsvcChannelDetails.html#oci.oda.models.CreateOsvcChannelDetails" title="oci.oda.models.CreateOsvcChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateOsvcChannelDetails</span></code></a></td>
+<td>Properties required to create an OSVC channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateOsvcChannelResult.html#oci.oda.models.CreateOsvcChannelResult" title="oci.oda.models.CreateOsvcChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateOsvcChannelResult</span></code></a></td>
+<td>The configuration for an OSVC channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateServiceCloudChannelDetails.html#oci.oda.models.CreateServiceCloudChannelDetails" title="oci.oda.models.CreateServiceCloudChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateServiceCloudChannelDetails</span></code></a></td>
+<td>Properties required to create an Service Cloud channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateServiceCloudChannelResult.html#oci.oda.models.CreateServiceCloudChannelResult" title="oci.oda.models.CreateServiceCloudChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateServiceCloudChannelResult</span></code></a></td>
+<td>The configuration for a Service Cloud agent channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateSkillCompositeEntityDetails.html#oci.oda.models.CreateSkillCompositeEntityDetails" title="oci.oda.models.CreateSkillCompositeEntityDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateSkillCompositeEntityDetails</span></code></a></td>
+<td>Properties that are required to create a skill composite entity.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateSkillDetails.html#oci.oda.models.CreateSkillDetails" title="oci.oda.models.CreateSkillDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateSkillDetails</span></code></a></td>
+<td>Properties that are required to create a Skill.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateSkillEntityDetails.html#oci.oda.models.CreateSkillEntityDetails" title="oci.oda.models.CreateSkillEntityDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateSkillEntityDetails</span></code></a></td>
+<td>Properties that are required to create a skill entity.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateSkillParameterDetails.html#oci.oda.models.CreateSkillParameterDetails" title="oci.oda.models.CreateSkillParameterDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateSkillParameterDetails</span></code></a></td>
+<td>Properties that are required to create a Skill Parameter.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateSkillValueListEntityDetails.html#oci.oda.models.CreateSkillValueListEntityDetails" title="oci.oda.models.CreateSkillValueListEntityDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateSkillValueListEntityDetails</span></code></a></td>
+<td>Properties that are required to create a value list entity.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateSkillVersionDetails.html#oci.oda.models.CreateSkillVersionDetails" title="oci.oda.models.CreateSkillVersionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateSkillVersionDetails</span></code></a></td>
+<td>Properties that are required to create a new version of an existing Skill.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateSlackChannelDetails.html#oci.oda.models.CreateSlackChannelDetails" title="oci.oda.models.CreateSlackChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateSlackChannelDetails</span></code></a></td>
+<td>Properties required to create a Slack channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateSlackChannelResult.html#oci.oda.models.CreateSlackChannelResult" title="oci.oda.models.CreateSlackChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateSlackChannelResult</span></code></a></td>
+<td>The configuration for a Slack channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateTestChannelResult.html#oci.oda.models.CreateTestChannelResult" title="oci.oda.models.CreateTestChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateTestChannelResult</span></code></a></td>
+<td>The configuration for the Test channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateTranslatorDetails.html#oci.oda.models.CreateTranslatorDetails" title="oci.oda.models.CreateTranslatorDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateTranslatorDetails</span></code></a></td>
+<td>Properties that are required to create a Translator.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateTwilioChannelDetails.html#oci.oda.models.CreateTwilioChannelDetails" title="oci.oda.models.CreateTwilioChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateTwilioChannelDetails</span></code></a></td>
+<td>Properties required to create a Twilio channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateTwilioChannelResult.html#oci.oda.models.CreateTwilioChannelResult" title="oci.oda.models.CreateTwilioChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateTwilioChannelResult</span></code></a></td>
+<td>The configuration for a Twilio channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateWebChannelDetails.html#oci.oda.models.CreateWebChannelDetails" title="oci.oda.models.CreateWebChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateWebChannelDetails</span></code></a></td>
+<td>Properties required to create a Web channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateWebChannelResult.html#oci.oda.models.CreateWebChannelResult" title="oci.oda.models.CreateWebChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateWebChannelResult</span></code></a></td>
+<td>The configuration for a Web channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateWebhookChannelDetails.html#oci.oda.models.CreateWebhookChannelDetails" title="oci.oda.models.CreateWebhookChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateWebhookChannelDetails</span></code></a></td>
+<td>Properties required to create a Webhook channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.CreateWebhookChannelResult.html#oci.oda.models.CreateWebhookChannelResult" title="oci.oda.models.CreateWebhookChannelResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.CreateWebhookChannelResult</span></code></a></td>
+<td>The configuration for a Webhook channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.DefaultParameterValues.html#oci.oda.models.DefaultParameterValues" title="oci.oda.models.DefaultParameterValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.DefaultParameterValues</span></code></a></td>
+<td>Default values for parameters required to import a package</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.DigitalAssistant.html#oci.oda.models.DigitalAssistant" title="oci.oda.models.DigitalAssistant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.DigitalAssistant</span></code></a></td>
+<td>Digital Assistant metadata.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.DigitalAssistantCollection.html#oci.oda.models.DigitalAssistantCollection" title="oci.oda.models.DigitalAssistantCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.DigitalAssistantCollection</span></code></a></td>
+<td>A collection of Digital Assistant summaries.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.DigitalAssistantParameter.html#oci.oda.models.DigitalAssistantParameter" title="oci.oda.models.DigitalAssistantParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.DigitalAssistantParameter</span></code></a></td>
+<td>Metadata for a Digital Assistant Parameter.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.DigitalAssistantParameterCollection.html#oci.oda.models.DigitalAssistantParameterCollection" title="oci.oda.models.DigitalAssistantParameterCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.DigitalAssistantParameterCollection</span></code></a></td>
+<td>A collection of Digital Assistant Parameter summaries.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.DigitalAssistantParameterSummary.html#oci.oda.models.DigitalAssistantParameterSummary" title="oci.oda.models.DigitalAssistantParameterSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.DigitalAssistantParameterSummary</span></code></a></td>
+<td>Metadata for a Digital Assistant Parameter property.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.DigitalAssistantParameterValue.html#oci.oda.models.DigitalAssistantParameterValue" title="oci.oda.models.DigitalAssistantParameterValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.DigitalAssistantParameterValue</span></code></a></td>
+<td>Properties for configuring a Parameter in a Digital Assistant instance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.DigitalAssistantSummary.html#oci.oda.models.DigitalAssistantSummary" title="oci.oda.models.DigitalAssistantSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.DigitalAssistantSummary</span></code></a></td>
+<td>Summary of a Digital Assistant.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.Entity.html#oci.oda.models.Entity" title="oci.oda.models.Entity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.Entity</span></code></a></td>
+<td>Metadata for an entity.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.EntityAction.html#oci.oda.models.EntityAction" title="oci.oda.models.EntityAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.EntityAction</span></code></a></td>
+<td>Action of an entity</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.EntityActionArgument.html#oci.oda.models.EntityActionArgument" title="oci.oda.models.EntityActionArgument"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.EntityActionArgument</span></code></a></td>
+<td>Argument of an entity action</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.EntityActionArgumentNaturalLanguageMapping.html#oci.oda.models.EntityActionArgumentNaturalLanguageMapping" title="oci.oda.models.EntityActionArgumentNaturalLanguageMapping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.EntityActionArgumentNaturalLanguageMapping</span></code></a></td>
+<td>Natural language mapping of an entity action argument.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.EntityActionNaturalLanguageMapping.html#oci.oda.models.EntityActionNaturalLanguageMapping" title="oci.oda.models.EntityActionNaturalLanguageMapping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.EntityActionNaturalLanguageMapping</span></code></a></td>
+<td>Natural language mapping of an entity action.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.EntityAttribute.html#oci.oda.models.EntityAttribute" title="oci.oda.models.EntityAttribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.EntityAttribute</span></code></a></td>
+<td>Attribute of an entity</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.EntityAttributeNaturalLanguageMapping.html#oci.oda.models.EntityAttributeNaturalLanguageMapping" title="oci.oda.models.EntityAttributeNaturalLanguageMapping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.EntityAttributeNaturalLanguageMapping</span></code></a></td>
+<td>Natural language mapping of an entity attribute</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.EntityNaturalLanguageMapping.html#oci.oda.models.EntityNaturalLanguageMapping" title="oci.oda.models.EntityNaturalLanguageMapping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.EntityNaturalLanguageMapping</span></code></a></td>
+<td>Natural language mapping of an entity attribute.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.ErrorBody.html#oci.oda.models.ErrorBody" title="oci.oda.models.ErrorBody"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ErrorBody</span></code></a></td>
+<td>Error Information.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.ExportBotDetails.html#oci.oda.models.ExportBotDetails" title="oci.oda.models.ExportBotDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ExportBotDetails</span></code></a></td>
+<td>Properties to export a Bot to Object Storage.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.ExportDigitalAssistantDetails.html#oci.oda.models.ExportDigitalAssistantDetails" title="oci.oda.models.ExportDigitalAssistantDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ExportDigitalAssistantDetails</span></code></a></td>
+<td>Properties that specify where in Object Storage to export the Digital Assistant to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.ExportSkillDetails.html#oci.oda.models.ExportSkillDetails" title="oci.oda.models.ExportSkillDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ExportSkillDetails</span></code></a></td>
+<td>Properties that specify where in Object Storage to export the Skill to.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.ExtendDigitalAssistantDetails.html#oci.oda.models.ExtendDigitalAssistantDetails" title="oci.oda.models.ExtendDigitalAssistantDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ExtendDigitalAssistantDetails</span></code></a></td>
+<td>Properties that are required to create a new Digital Assistant by extending an existing Digital Assistant.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.ExtendSkillDetails.html#oci.oda.models.ExtendSkillDetails" title="oci.oda.models.ExtendSkillDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ExtendSkillDetails</span></code></a></td>
+<td>Properties that are required to create a new Skill by extending an existing Skill.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.FacebookChannel.html#oci.oda.models.FacebookChannel" title="oci.oda.models.FacebookChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.FacebookChannel</span></code></a></td>
+<td>The configuration for a Facebook channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.ImportBotDetails.html#oci.oda.models.ImportBotDetails" title="oci.oda.models.ImportBotDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ImportBotDetails</span></code></a></td>
+<td>Properties to import a Bot resource from Object Storage.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.ImportContract.html#oci.oda.models.ImportContract" title="oci.oda.models.ImportContract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ImportContract</span></code></a></td>
+<td>The contract guiding the import experience for the consumer and behavior of the resource providers for all resource types in a package.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.ImportedPackage.html#oci.oda.models.ImportedPackage" title="oci.oda.models.ImportedPackage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ImportedPackage</span></code></a></td>
+<td>An imported/instantiated package within an instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.ImportedPackageSummary.html#oci.oda.models.ImportedPackageSummary" title="oci.oda.models.ImportedPackageSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ImportedPackageSummary</span></code></a></td>
+<td>A summary of an imported/instantiated package within an instance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.IosChannel.html#oci.oda.models.IosChannel" title="oci.oda.models.IosChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.IosChannel</span></code></a></td>
+<td>The configuration for an iOS channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.LanguageMapping.html#oci.oda.models.LanguageMapping" title="oci.oda.models.LanguageMapping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.LanguageMapping</span></code></a></td>
+<td>A natural language mapping.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.MSTeamsChannel.html#oci.oda.models.MSTeamsChannel" title="oci.oda.models.MSTeamsChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.MSTeamsChannel</span></code></a></td>
+<td>The configuration for an MS Teams channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.MetadataProperty.html#oci.oda.models.MetadataProperty" title="oci.oda.models.MetadataProperty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.MetadataProperty</span></code></a></td>
+<td>Property to describe and object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.NameMapping.html#oci.oda.models.NameMapping" title="oci.oda.models.NameMapping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.NameMapping</span></code></a></td>
+<td>A language name mapping.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.OSSChannel.html#oci.oda.models.OSSChannel" title="oci.oda.models.OSSChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OSSChannel</span></code></a></td>
+<td>The configuration for an Oracle Streaming Service (OSS) channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaInstance.html#oci.oda.models.OdaInstance" title="oci.oda.models.OdaInstance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaInstance</span></code></a></td>
+<td>Description of <cite>OdaServiceInstance</cite> object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaInstanceAttachment.html#oci.oda.models.OdaInstanceAttachment" title="oci.oda.models.OdaInstanceAttachment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaInstanceAttachment</span></code></a></td>
+<td>Description of an ODA instance attachment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaInstanceAttachmentCollection.html#oci.oda.models.OdaInstanceAttachmentCollection" title="oci.oda.models.OdaInstanceAttachmentCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaInstanceAttachmentCollection</span></code></a></td>
+<td>Results of a Oda instance attachment search.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaInstanceAttachmentOwner.html#oci.oda.models.OdaInstanceAttachmentOwner" title="oci.oda.models.OdaInstanceAttachmentOwner"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaInstanceAttachmentOwner</span></code></a></td>
+<td>Details about an attachment owner</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaInstanceAttachmentSummary.html#oci.oda.models.OdaInstanceAttachmentSummary" title="oci.oda.models.OdaInstanceAttachmentSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaInstanceAttachmentSummary</span></code></a></td>
+<td>Description of an ODA instance attachment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaInstanceOwner.html#oci.oda.models.OdaInstanceOwner" title="oci.oda.models.OdaInstanceOwner"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaInstanceOwner</span></code></a></td>
+<td>Details about an ODA instance owner</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaInstanceSummary.html#oci.oda.models.OdaInstanceSummary" title="oci.oda.models.OdaInstanceSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaInstanceSummary</span></code></a></td>
+<td>Summary of the Digital Assistant instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpoint.html#oci.oda.models.OdaPrivateEndpoint" title="oci.oda.models.OdaPrivateEndpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaPrivateEndpoint</span></code></a></td>
+<td>A private endpoint allows Digital Assistant Instance to access resources in a customer’s virtual cloud network (VCN).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointAttachment.html#oci.oda.models.OdaPrivateEndpointAttachment" title="oci.oda.models.OdaPrivateEndpointAttachment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaPrivateEndpointAttachment</span></code></a></td>
+<td>ODA Private Endpoint Attachment is used to attach ODA Private Endpoint to ODA (Digital Assistant) Instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointAttachmentCollection.html#oci.oda.models.OdaPrivateEndpointAttachmentCollection" title="oci.oda.models.OdaPrivateEndpointAttachmentCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaPrivateEndpointAttachmentCollection</span></code></a></td>
+<td>A collection of ODA Private Endpoint Attachment summaries.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointAttachmentSummary.html#oci.oda.models.OdaPrivateEndpointAttachmentSummary" title="oci.oda.models.OdaPrivateEndpointAttachmentSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaPrivateEndpointAttachmentSummary</span></code></a></td>
+<td>Summary of the ODA private endpoint attachment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointCollection.html#oci.oda.models.OdaPrivateEndpointCollection" title="oci.oda.models.OdaPrivateEndpointCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaPrivateEndpointCollection</span></code></a></td>
+<td>A collection of ODA Private Endpoint summaries.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointScanProxy.html#oci.oda.models.OdaPrivateEndpointScanProxy" title="oci.oda.models.OdaPrivateEndpointScanProxy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaPrivateEndpointScanProxy</span></code></a></td>
+<td>Details pertaining to a scan proxy instance created for a scan listener FQDN/IPs</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointScanProxyCollection.html#oci.oda.models.OdaPrivateEndpointScanProxyCollection" title="oci.oda.models.OdaPrivateEndpointScanProxyCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaPrivateEndpointScanProxyCollection</span></code></a></td>
+<td>A collection of ODA Private Endpoint Scan Proxy summaries.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointScanProxySummary.html#oci.oda.models.OdaPrivateEndpointScanProxySummary" title="oci.oda.models.OdaPrivateEndpointScanProxySummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaPrivateEndpointScanProxySummary</span></code></a></td>
+<td>Details pertaining to a scan proxy instance created for a scan listener FQDN/IPs</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.OdaPrivateEndpointSummary.html#oci.oda.models.OdaPrivateEndpointSummary" title="oci.oda.models.OdaPrivateEndpointSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OdaPrivateEndpointSummary</span></code></a></td>
+<td>Summary of the ODA private endpoint.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.OsvcChannel.html#oci.oda.models.OsvcChannel" title="oci.oda.models.OsvcChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.OsvcChannel</span></code></a></td>
+<td>The configuration for an OSVC channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.Package.html#oci.oda.models.Package" title="oci.oda.models.Package"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.Package</span></code></a></td>
+<td>Details of <cite>Package</cite> object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.PackageSummary.html#oci.oda.models.PackageSummary" title="oci.oda.models.PackageSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.PackageSummary</span></code></a></td>
+<td>Summary of <cite>Package</cite> object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.Parameter.html#oci.oda.models.Parameter" title="oci.oda.models.Parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.Parameter</span></code></a></td>
+<td>Metadata for a Parameter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.ParameterDefinition.html#oci.oda.models.ParameterDefinition" title="oci.oda.models.ParameterDefinition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ParameterDefinition</span></code></a></td>
+<td>A parameter to a resource.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.ResourceTypeDefaultParameterValues.html#oci.oda.models.ResourceTypeDefaultParameterValues" title="oci.oda.models.ResourceTypeDefaultParameterValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ResourceTypeDefaultParameterValues</span></code></a></td>
+<td>Default values needed to import a resource type for a package.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.ResourceTypeImportContract.html#oci.oda.models.ResourceTypeImportContract" title="oci.oda.models.ResourceTypeImportContract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ResourceTypeImportContract</span></code></a></td>
+<td>The contract guiding the import experience for the consumer and behavior of the resource provider for a single resourceType.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.ResourceTypeMetadata.html#oci.oda.models.ResourceTypeMetadata" title="oci.oda.models.ResourceTypeMetadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ResourceTypeMetadata</span></code></a></td>
+<td>Describes resources of a given type within a package.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.RestrictedOperation.html#oci.oda.models.RestrictedOperation" title="oci.oda.models.RestrictedOperation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.RestrictedOperation</span></code></a></td>
+<td>Summary of a restricted operation for a Digital Assistant instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.ScanListenerInfo.html#oci.oda.models.ScanListenerInfo" title="oci.oda.models.ScanListenerInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ScanListenerInfo</span></code></a></td>
+<td>Customer’s Real Application Cluster (RAC)’s SCAN listener FQDN, port or list IPs and their ports.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.ServiceCloudChannel.html#oci.oda.models.ServiceCloudChannel" title="oci.oda.models.ServiceCloudChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ServiceCloudChannel</span></code></a></td>
+<td>The configuration for a Service Cloud agent channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.Skill.html#oci.oda.models.Skill" title="oci.oda.models.Skill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.Skill</span></code></a></td>
+<td>Skill metadata.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.SkillCollection.html#oci.oda.models.SkillCollection" title="oci.oda.models.SkillCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.SkillCollection</span></code></a></td>
+<td>A collection of Skill summaries.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.SkillParameter.html#oci.oda.models.SkillParameter" title="oci.oda.models.SkillParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.SkillParameter</span></code></a></td>
+<td>Metadata for a Skill Parameter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.SkillParameterCollection.html#oci.oda.models.SkillParameterCollection" title="oci.oda.models.SkillParameterCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.SkillParameterCollection</span></code></a></td>
+<td>A collection of Skill Parameter summaries.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.SkillParameterSummary.html#oci.oda.models.SkillParameterSummary" title="oci.oda.models.SkillParameterSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.SkillParameterSummary</span></code></a></td>
+<td>Metadata for a Skill Parameter property.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.SkillSummary.html#oci.oda.models.SkillSummary" title="oci.oda.models.SkillSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.SkillSummary</span></code></a></td>
+<td>Summary of a Skill.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.SlackChannel.html#oci.oda.models.SlackChannel" title="oci.oda.models.SlackChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.SlackChannel</span></code></a></td>
+<td>The configuration for a Slack channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.StaticEntityValue.html#oci.oda.models.StaticEntityValue" title="oci.oda.models.StaticEntityValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.StaticEntityValue</span></code></a></td>
+<td>Value in a static entity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.StaticEntityValueNaturalLanguageMapping.html#oci.oda.models.StaticEntityValueNaturalLanguageMapping" title="oci.oda.models.StaticEntityValueNaturalLanguageMapping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.StaticEntityValueNaturalLanguageMapping</span></code></a></td>
+<td>Natural language mapping of a static entity value.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.StorageLocation.html#oci.oda.models.StorageLocation" title="oci.oda.models.StorageLocation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.StorageLocation</span></code></a></td>
+<td>Properties that point to a specific object in Object Storage.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.TestChannel.html#oci.oda.models.TestChannel" title="oci.oda.models.TestChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.TestChannel</span></code></a></td>
+<td>The configuration for the Test channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.TrainSkillDetails.html#oci.oda.models.TrainSkillDetails" title="oci.oda.models.TrainSkillDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.TrainSkillDetails</span></code></a></td>
+<td>Parameters for training the skill.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.TrainSkillParameter.html#oci.oda.models.TrainSkillParameter" title="oci.oda.models.TrainSkillParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.TrainSkillParameter</span></code></a></td>
+<td>Train skill parameter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.TrainSkillQueryEntityParameter.html#oci.oda.models.TrainSkillQueryEntityParameter" title="oci.oda.models.TrainSkillQueryEntityParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.TrainSkillQueryEntityParameter</span></code></a></td>
+<td>Query entity parameter for training the skill.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.Translator.html#oci.oda.models.Translator" title="oci.oda.models.Translator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.Translator</span></code></a></td>
+<td>The properties for a Translator.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.TranslatorCollection.html#oci.oda.models.TranslatorCollection" title="oci.oda.models.TranslatorCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.TranslatorCollection</span></code></a></td>
+<td>A collection of Translator summaries.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.TranslatorSummary.html#oci.oda.models.TranslatorSummary" title="oci.oda.models.TranslatorSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.TranslatorSummary</span></code></a></td>
+<td>Summary of the Translator.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.TwilioChannel.html#oci.oda.models.TwilioChannel" title="oci.oda.models.TwilioChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.TwilioChannel</span></code></a></td>
+<td>The configuration for a Twilio channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateAndroidChannelDetails.html#oci.oda.models.UpdateAndroidChannelDetails" title="oci.oda.models.UpdateAndroidChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateAndroidChannelDetails</span></code></a></td>
+<td>Properties to update an Android channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateAppEventChannelDetails.html#oci.oda.models.UpdateAppEventChannelDetails" title="oci.oda.models.UpdateAppEventChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateAppEventChannelDetails</span></code></a></td>
+<td>Properties to update an Application Event channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateApplicationChannelDetails.html#oci.oda.models.UpdateApplicationChannelDetails" title="oci.oda.models.UpdateApplicationChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateApplicationChannelDetails</span></code></a></td>
+<td>Properties to update an Application channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateAuthenticationProviderDetails.html#oci.oda.models.UpdateAuthenticationProviderDetails" title="oci.oda.models.UpdateAuthenticationProviderDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateAuthenticationProviderDetails</span></code></a></td>
+<td>Properties to update an Authentication Provider.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateChannelDetails.html#oci.oda.models.UpdateChannelDetails" title="oci.oda.models.UpdateChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateChannelDetails</span></code></a></td>
+<td>Properties to update a Channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateCortanaChannelDetails.html#oci.oda.models.UpdateCortanaChannelDetails" title="oci.oda.models.UpdateCortanaChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateCortanaChannelDetails</span></code></a></td>
+<td>Properties to update a Cortana channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateDigitalAssistantDetails.html#oci.oda.models.UpdateDigitalAssistantDetails" title="oci.oda.models.UpdateDigitalAssistantDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateDigitalAssistantDetails</span></code></a></td>
+<td>Properties to update a Digital Assistant.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateDigitalAssistantParameterDetails.html#oci.oda.models.UpdateDigitalAssistantParameterDetails" title="oci.oda.models.UpdateDigitalAssistantParameterDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateDigitalAssistantParameterDetails</span></code></a></td>
+<td>Properties to update a Digital Assistant Parameter.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateFacebookChannelDetails.html#oci.oda.models.UpdateFacebookChannelDetails" title="oci.oda.models.UpdateFacebookChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateFacebookChannelDetails</span></code></a></td>
+<td>Properties to update a Facebook channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateImportedPackageDetails.html#oci.oda.models.UpdateImportedPackageDetails" title="oci.oda.models.UpdateImportedPackageDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateImportedPackageDetails</span></code></a></td>
+<td>Payload for updating an imported package</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateIosChannelDetails.html#oci.oda.models.UpdateIosChannelDetails" title="oci.oda.models.UpdateIosChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateIosChannelDetails</span></code></a></td>
+<td>Properties to update an iOS channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateMSTeamsChannelDetails.html#oci.oda.models.UpdateMSTeamsChannelDetails" title="oci.oda.models.UpdateMSTeamsChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateMSTeamsChannelDetails</span></code></a></td>
+<td>Properties to update an MS Teams channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateOSSChannelDetails.html#oci.oda.models.UpdateOSSChannelDetails" title="oci.oda.models.UpdateOSSChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateOSSChannelDetails</span></code></a></td>
+<td>Properties to update an Oracle Streaming Service (OSS) channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateOdaInstanceAttachmentDetails.html#oci.oda.models.UpdateOdaInstanceAttachmentDetails" title="oci.oda.models.UpdateOdaInstanceAttachmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateOdaInstanceAttachmentDetails</span></code></a></td>
+<td>ODA attachment details to be updated.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateOdaInstanceDetails.html#oci.oda.models.UpdateOdaInstanceDetails" title="oci.oda.models.UpdateOdaInstanceDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateOdaInstanceDetails</span></code></a></td>
+<td>The Digital Assistant instance information to be updated.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateOdaPrivateEndpointDetails.html#oci.oda.models.UpdateOdaPrivateEndpointDetails" title="oci.oda.models.UpdateOdaPrivateEndpointDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateOdaPrivateEndpointDetails</span></code></a></td>
+<td>The ODA Private Endpoint information to be updated.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateOsvcChannelDetails.html#oci.oda.models.UpdateOsvcChannelDetails" title="oci.oda.models.UpdateOsvcChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateOsvcChannelDetails</span></code></a></td>
+<td>Properties required to update an OSVC channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateServiceCloudChannelDetails.html#oci.oda.models.UpdateServiceCloudChannelDetails" title="oci.oda.models.UpdateServiceCloudChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateServiceCloudChannelDetails</span></code></a></td>
+<td>Properties to update a Service Cloud agent channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateSkillDetails.html#oci.oda.models.UpdateSkillDetails" title="oci.oda.models.UpdateSkillDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateSkillDetails</span></code></a></td>
+<td>Properties to update a Skill.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateSkillParameterDetails.html#oci.oda.models.UpdateSkillParameterDetails" title="oci.oda.models.UpdateSkillParameterDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateSkillParameterDetails</span></code></a></td>
+<td>Properties to update a Skill Parameter.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateSlackChannelDetails.html#oci.oda.models.UpdateSlackChannelDetails" title="oci.oda.models.UpdateSlackChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateSlackChannelDetails</span></code></a></td>
+<td>Properties to update a Slack channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateTranslatorDetails.html#oci.oda.models.UpdateTranslatorDetails" title="oci.oda.models.UpdateTranslatorDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateTranslatorDetails</span></code></a></td>
+<td>Properties to update a Translator.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateTwilioChannelDetails.html#oci.oda.models.UpdateTwilioChannelDetails" title="oci.oda.models.UpdateTwilioChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateTwilioChannelDetails</span></code></a></td>
+<td>Properties to update a Twilio channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateWebChannelDetails.html#oci.oda.models.UpdateWebChannelDetails" title="oci.oda.models.UpdateWebChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateWebChannelDetails</span></code></a></td>
+<td>Properties to update a Web channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.UpdateWebhookChannelDetails.html#oci.oda.models.UpdateWebhookChannelDetails" title="oci.oda.models.UpdateWebhookChannelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.UpdateWebhookChannelDetails</span></code></a></td>
+<td>Properties to update a Webhook channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.ValueListEntity.html#oci.oda.models.ValueListEntity" title="oci.oda.models.ValueListEntity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.ValueListEntity</span></code></a></td>
+<td>Metadata for a value list entity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.WebChannel.html#oci.oda.models.WebChannel" title="oci.oda.models.WebChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.WebChannel</span></code></a></td>
+<td>The configuration for a Web channel.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.WebhookChannel.html#oci.oda.models.WebhookChannel" title="oci.oda.models.WebhookChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.WebhookChannel</span></code></a></td>
+<td>The configuration for a Webhook channel.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.WorkRequest.html#oci.oda.models.WorkRequest" title="oci.oda.models.WorkRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.WorkRequest</span></code></a></td>
+<td>The description of work request, including its status.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.WorkRequestError.html#oci.oda.models.WorkRequestError" title="oci.oda.models.WorkRequestError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.WorkRequestError</span></code></a></td>
+<td>Description of the unexpected error that prevented completion of the request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.WorkRequestLogEntry.html#oci.oda.models.WorkRequestLogEntry" title="oci.oda.models.WorkRequestLogEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.WorkRequestLogEntry</span></code></a></td>
+<td>A log message from the execution of a work request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="oda/models/oci.oda.models.WorkRequestResource.html#oci.oda.models.WorkRequestResource" title="oci.oda.models.WorkRequestResource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.WorkRequestResource</span></code></a></td>
+<td>A resource created or operated on by a work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="oda/models/oci.oda.models.WorkRequestSummary.html#oci.oda.models.WorkRequestSummary" title="oci.oda.models.WorkRequestSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.oda.models.WorkRequestSummary</span></code></a></td>
+<td>A description of the work request’s status.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oda/client/oci.oda.ManagementClient.html" class="btn btn-neutral float-right" title="ManagementClient" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ocvp/models/oci.ocvp.models.WorkRequestResource.html" class="btn btn-neutral" title="WorkRequestResource" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

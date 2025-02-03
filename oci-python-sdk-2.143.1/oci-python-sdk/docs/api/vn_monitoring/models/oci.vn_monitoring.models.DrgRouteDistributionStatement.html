@@ -1,0 +1,874 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DrgRouteDistributionStatement &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="DrgRouteRule" href="oci.vn_monitoring.models.DrgRouteRule.html" />
+    <link rel="prev" title="DrgRouteDistributionMatchCriteria" href="oci.vn_monitoring.models.DrgRouteDistributionMatchCriteria.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.vn_monitoring.VnMonitoringClient.html">VnMonitoringClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.vn_monitoring.VnMonitoringClientCompositeOperations.html">VnMonitoringClientCompositeOperations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../vn_monitoring.html#models">Models</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AccessDeniedTrafficNode.html">AccessDeniedTrafficNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AddDrgRouteDistributionStatementDetails.html">AddDrgRouteDistributionStatementDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AddDrgRouteDistributionStatementsDetails.html">AddDrgRouteDistributionStatementsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AddDrgRouteRuleDetails.html">AddDrgRouteRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AddDrgRouteRulesDetails.html">AddDrgRouteRulesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AddNetworkSecurityGroupSecurityRulesDetails.html">AddNetworkSecurityGroupSecurityRulesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AddPublicIpPoolCapacityDetails.html">AddPublicIpPoolCapacityDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AddSecurityRuleDetails.html">AddSecurityRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AddSubnetIpv6CidrDetails.html">AddSubnetIpv6CidrDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AddVcnCidrDetails.html">AddVcnCidrDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AddVcnIpv6CidrDetails.html">AddVcnIpv6CidrDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AddedNetworkSecurityGroupSecurityRules.html">AddedNetworkSecurityGroupSecurityRules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AdhocGetPathAnalysisDetails.html">AdhocGetPathAnalysisDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AllowedIkeIPSecParameters.html">AllowedIkeIPSecParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AllowedPhaseOneParameters.html">AllowedPhaseOneParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AllowedPhaseTwoParameters.html">AllowedPhaseTwoParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AllowedSecurityAction.html">AllowedSecurityAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AllowedSecurityActionDetails.html">AllowedSecurityActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.AllowedSecurityConfiguration.html">AllowedSecurityConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.BgpSessionInfo.html">BgpSessionInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.BulkAddVirtualCircuitPublicPrefixesDetails.html">BulkAddVirtualCircuitPublicPrefixesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.BulkDeleteVirtualCircuitPublicPrefixesDetails.html">BulkDeleteVirtualCircuitPublicPrefixesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ByoipAllocatedRangeCollection.html">ByoipAllocatedRangeCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ByoipAllocatedRangeSummary.html">ByoipAllocatedRangeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ByoipRange.html">ByoipRange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ByoipRangeCollection.html">ByoipRangeCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ByoipRangeSummary.html">ByoipRangeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ByoipRangeVcnIpv6AllocationSummary.html">ByoipRangeVcnIpv6AllocationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.Byoipv6CidrDetails.html">Byoipv6CidrDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CaptureFilter.html">CaptureFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeByoipRangeCompartmentDetails.html">ChangeByoipRangeCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeCaptureFilterCompartmentDetails.html">ChangeCaptureFilterCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeCpeCompartmentDetails.html">ChangeCpeCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeCrossConnectCompartmentDetails.html">ChangeCrossConnectCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeCrossConnectGroupCompartmentDetails.html">ChangeCrossConnectGroupCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeDhcpOptionsCompartmentDetails.html">ChangeDhcpOptionsCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeDrgCompartmentDetails.html">ChangeDrgCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeIPSecConnectionCompartmentDetails.html">ChangeIPSecConnectionCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeInternetGatewayCompartmentDetails.html">ChangeInternetGatewayCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeLocalPeeringGatewayCompartmentDetails.html">ChangeLocalPeeringGatewayCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeNatGatewayCompartmentDetails.html">ChangeNatGatewayCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeNetworkSecurityGroupCompartmentDetails.html">ChangeNetworkSecurityGroupCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangePathAnalyzerTestCompartmentDetails.html">ChangePathAnalyzerTestCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangePublicIpCompartmentDetails.html">ChangePublicIpCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangePublicIpPoolCompartmentDetails.html">ChangePublicIpPoolCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeRemotePeeringConnectionCompartmentDetails.html">ChangeRemotePeeringConnectionCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeRouteTableCompartmentDetails.html">ChangeRouteTableCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeSecurityListCompartmentDetails.html">ChangeSecurityListCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeServiceGatewayCompartmentDetails.html">ChangeServiceGatewayCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeSubnetCompartmentDetails.html">ChangeSubnetCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeVcnCompartmentDetails.html">ChangeVcnCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeVirtualCircuitCompartmentDetails.html">ChangeVirtualCircuitCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeVlanCompartmentDetails.html">ChangeVlanCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ChangeVtapCompartmentDetails.html">ChangeVtapCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CompartmentInternal.html">CompartmentInternal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ComputeInstanceEndpoint.html">ComputeInstanceEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ConnectLocalPeeringGatewaysDetails.html">ConnectLocalPeeringGatewaysDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ConnectRemotePeeringConnectionsDetails.html">ConnectRemotePeeringConnectionsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.Cpe.html">Cpe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CpeDeviceConfigAnswer.html">CpeDeviceConfigAnswer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CpeDeviceConfigQuestion.html">CpeDeviceConfigQuestion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CpeDeviceInfo.html">CpeDeviceInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CpeDeviceShapeDetail.html">CpeDeviceShapeDetail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CpeDeviceShapeSummary.html">CpeDeviceShapeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateByoipRangeDetails.html">CreateByoipRangeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateCaptureFilterDetails.html">CreateCaptureFilterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateCpeDetails.html">CreateCpeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateCrossConnectDetails.html">CreateCrossConnectDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateCrossConnectGroupDetails.html">CreateCrossConnectGroupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateDhcpDetails.html">CreateDhcpDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateDrgAttachmentDetails.html">CreateDrgAttachmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateDrgDetails.html">CreateDrgDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateDrgRouteDistributionDetails.html">CreateDrgRouteDistributionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateDrgRouteTableDetails.html">CreateDrgRouteTableDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateIPSecConnectionDetails.html">CreateIPSecConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateIPSecConnectionTunnelDetails.html">CreateIPSecConnectionTunnelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateIPSecTunnelBgpSessionDetails.html">CreateIPSecTunnelBgpSessionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateIPSecTunnelEncryptionDomainDetails.html">CreateIPSecTunnelEncryptionDomainDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateInternetGatewayDetails.html">CreateInternetGatewayDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateIpv6Details.html">CreateIpv6Details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateLocalPeeringGatewayDetails.html">CreateLocalPeeringGatewayDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateMacsecKey.html">CreateMacsecKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateMacsecProperties.html">CreateMacsecProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateNatGatewayDetails.html">CreateNatGatewayDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateNetworkSecurityGroupDetails.html">CreateNetworkSecurityGroupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreatePathAnalyzerTestDetails.html">CreatePathAnalyzerTestDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreatePrivateIpDetails.html">CreatePrivateIpDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreatePublicIpDetails.html">CreatePublicIpDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreatePublicIpPoolDetails.html">CreatePublicIpPoolDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateRemotePeeringConnectionDetails.html">CreateRemotePeeringConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateRouteTableDetails.html">CreateRouteTableDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateSecurityListDetails.html">CreateSecurityListDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateServiceGatewayDetails.html">CreateServiceGatewayDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateSubnetDetails.html">CreateSubnetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateVcnDetails.html">CreateVcnDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateVirtualCircuitDetails.html">CreateVirtualCircuitDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateVirtualCircuitPublicPrefixDetails.html">CreateVirtualCircuitPublicPrefixDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateVlanDetails.html">CreateVlanDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateVnicDetails.html">CreateVnicDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CreateVtapDetails.html">CreateVtapDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CrossConnect.html">CrossConnect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CrossConnectGroup.html">CrossConnectGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CrossConnectLocation.html">CrossConnectLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CrossConnectMapping.html">CrossConnectMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CrossConnectMappingDetails.html">CrossConnectMappingDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CrossConnectMappingDetailsCollection.html">CrossConnectMappingDetailsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CrossConnectPortSpeedShape.html">CrossConnectPortSpeedShape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.CrossConnectStatus.html">CrossConnectStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DefaultDrgRouteTables.html">DefaultDrgRouteTables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DefaultPhaseOneParameters.html">DefaultPhaseOneParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DefaultPhaseTwoParameters.html">DefaultPhaseTwoParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DeleteVirtualCircuitPublicPrefixDetails.html">DeleteVirtualCircuitPublicPrefixDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DeniedSecurityAction.html">DeniedSecurityAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DeniedSecurityActionDetails.html">DeniedSecurityActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DhcpDnsOption.html">DhcpDnsOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DhcpOption.html">DhcpOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DhcpOptions.html">DhcpOptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DhcpSearchDomainOption.html">DhcpSearchDomainOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DpdConfig.html">DpdConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.Drg.html">Drg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DrgAttachment.html">DrgAttachment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DrgAttachmentIdDrgRouteDistributionMatchCriteria.html">DrgAttachmentIdDrgRouteDistributionMatchCriteria</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DrgAttachmentInfo.html">DrgAttachmentInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DrgAttachmentMatchAllDrgRouteDistributionMatchCriteria.html">DrgAttachmentMatchAllDrgRouteDistributionMatchCriteria</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DrgAttachmentNetworkCreateDetails.html">DrgAttachmentNetworkCreateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DrgAttachmentNetworkDetails.html">DrgAttachmentNetworkDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DrgAttachmentNetworkUpdateDetails.html">DrgAttachmentNetworkUpdateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DrgAttachmentTypeDrgRouteDistributionMatchCriteria.html">DrgAttachmentTypeDrgRouteDistributionMatchCriteria</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DrgRedundancyStatus.html">DrgRedundancyStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DrgRouteDistribution.html">DrgRouteDistribution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DrgRouteDistributionMatchCriteria.html">DrgRouteDistributionMatchCriteria</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">DrgRouteDistributionStatement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DrgRouteRule.html">DrgRouteRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DrgRouteTable.html">DrgRouteTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.DrgRoutingConfiguration.html">DrgRoutingConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.EgressSecurityListConfiguration.html">EgressSecurityListConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.EgressSecurityRule.html">EgressSecurityRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.EgressTrafficSpec.html">EgressTrafficSpec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.EncryptionDomainConfig.html">EncryptionDomainConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.Endpoint.html">Endpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.FastConnectProviderService.html">FastConnectProviderService</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.FastConnectProviderServiceKey.html">FastConnectProviderServiceKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.FlowLogCaptureFilterRuleDetails.html">FlowLogCaptureFilterRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ForwardedRoutingAction.html">ForwardedRoutingAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ForwardedRoutingActionDetails.html">ForwardedRoutingActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ForwardedRoutingConfiguration.html">ForwardedRoutingConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.GetPathAnalysisDetails.html">GetPathAnalysisDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.GetPublicIpByIpAddressDetails.html">GetPublicIpByIpAddressDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.GetPublicIpByPrivateIpIdDetails.html">GetPublicIpByPrivateIpIdDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.IPSecConnection.html">IPSecConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.IPSecConnectionDeviceConfig.html">IPSecConnectionDeviceConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.IPSecConnectionDeviceStatus.html">IPSecConnectionDeviceStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.IPSecConnectionTunnel.html">IPSecConnectionTunnel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.IPSecConnectionTunnelErrorDetails.html">IPSecConnectionTunnelErrorDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.IPSecConnectionTunnelSharedSecret.html">IPSecConnectionTunnelSharedSecret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.IcmpOptions.html">IcmpOptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.IcmpProtocolParameters.html">IcmpProtocolParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.IcmpTrafficProtocolParameters.html">IcmpTrafficProtocolParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.IndeterminateRoutingAction.html">IndeterminateRoutingAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.IngressSecurityListConfiguration.html">IngressSecurityListConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.IngressSecurityRule.html">IngressSecurityRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.InternetGateway.html">InternetGateway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.IpAddressEndpoint.html">IpAddressEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.IpsecTunnelDrgAttachmentNetworkDetails.html">IpsecTunnelDrgAttachmentNetworkDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.Ipv6.html">Ipv6</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.LetterOfAuthority.html">LetterOfAuthority</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.LoadBalancerEndpoint.html">LoadBalancerEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.LoadBalancerListenerEndpoint.html">LoadBalancerListenerEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.LocalPeeringGateway.html">LocalPeeringGateway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.LoopBackDrgAttachmentNetworkDetails.html">LoopBackDrgAttachmentNetworkDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.MacsecKey.html">MacsecKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.MacsecProperties.html">MacsecProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ModifyVcnCidrDetails.html">ModifyVcnCidrDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.NatGateway.html">NatGateway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.NetworkLoadBalancerEndpoint.html">NetworkLoadBalancerEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.NetworkLoadBalancerListenerEndpoint.html">NetworkLoadBalancerListenerEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.NetworkSecurityGroup.html">NetworkSecurityGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.NetworkSecurityGroupVnic.html">NetworkSecurityGroupVnic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.NetworkingTopology.html">NetworkingTopology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.NoRouteRoutingAction.html">NoRouteRoutingAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.NoRouteRoutingActionDetails.html">NoRouteRoutingActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.NsgConfiguration.html">NsgConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.OnPremEndpoint.html">OnPremEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.Path.html">Path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.PathAnalysisWorkRequestResult.html">PathAnalysisWorkRequestResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.PathAnalyzerTest.html">PathAnalyzerTest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.PathAnalyzerTestCollection.html">PathAnalyzerTestCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.PathAnalyzerTestSummary.html">PathAnalyzerTestSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.PathTopology.html">PathTopology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.PersistedGetPathAnalysisDetails.html">PersistedGetPathAnalysisDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.PhaseOneConfigDetails.html">PhaseOneConfigDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.PhaseTwoConfigDetails.html">PhaseTwoConfigDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.PortRange.html">PortRange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.PrivateIp.html">PrivateIp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ProtocolParameters.html">ProtocolParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.PublicIp.html">PublicIp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.PublicIpPool.html">PublicIpPool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.PublicIpPoolCollection.html">PublicIpPoolCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.PublicIpPoolSummary.html">PublicIpPoolSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.QueryOptions.html">QueryOptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.RemotePeeringConnection.html">RemotePeeringConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.RemotePeeringConnectionDrgAttachmentNetworkDetails.html">RemotePeeringConnectionDrgAttachmentNetworkDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.RemoveDrgRouteDistributionStatementsDetails.html">RemoveDrgRouteDistributionStatementsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.RemoveDrgRouteRulesDetails.html">RemoveDrgRouteRulesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.RemoveNetworkSecurityGroupSecurityRulesDetails.html">RemoveNetworkSecurityGroupSecurityRulesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.RemovePublicIpPoolCapacityDetails.html">RemovePublicIpPoolCapacityDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.RemoveSubnetIpv6CidrDetails.html">RemoveSubnetIpv6CidrDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.RemoveVcnCidrDetails.html">RemoveVcnCidrDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.RemoveVcnIpv6CidrDetails.html">RemoveVcnIpv6CidrDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.RouteRule.html">RouteRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.RouteTable.html">RouteTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.RoutingAction.html">RoutingAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.SecurityAction.html">SecurityAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.SecurityList.html">SecurityList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.SecurityRule.html">SecurityRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.Service.html">Service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ServiceGateway.html">ServiceGateway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ServiceIdRequestDetails.html">ServiceIdRequestDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.ServiceIdResponseDetails.html">ServiceIdResponseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.StatefulEgressSecurityListConfiguration.html">StatefulEgressSecurityListConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.StatefulIngressSecurityListConfiguration.html">StatefulIngressSecurityListConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.StatefulNsgConfiguration.html">StatefulNsgConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.Subnet.html">Subnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.SubnetEndpoint.html">SubnetEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.SubnetTopology.html">SubnetTopology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TcpOptions.html">TcpOptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TcpProtocolParameters.html">TcpProtocolParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TcpTrafficProtocolParameters.html">TcpTrafficProtocolParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.Topology.html">Topology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TopologyAssociatedWithEntityRelationship.html">TopologyAssociatedWithEntityRelationship</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TopologyAssociatedWithRelationshipDetails.html">TopologyAssociatedWithRelationshipDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TopologyContainsEntityRelationship.html">TopologyContainsEntityRelationship</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TopologyEntityRelationship.html">TopologyEntityRelationship</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TopologyRoutesToEntityRelationship.html">TopologyRoutesToEntityRelationship</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TopologyRoutesToRelationshipDetails.html">TopologyRoutesToRelationshipDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TrafficNode.html">TrafficNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TrafficProtocolParameters.html">TrafficProtocolParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TrafficRoute.html">TrafficRoute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TunnelConfig.html">TunnelConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TunnelCpeDeviceConfig.html">TunnelCpeDeviceConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TunnelPhaseOneDetails.html">TunnelPhaseOneDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TunnelPhaseTwoDetails.html">TunnelPhaseTwoDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TunnelRouteSummary.html">TunnelRouteSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TunnelSecurityAssociationSummary.html">TunnelSecurityAssociationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.TunnelStatus.html">TunnelStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UdpOptions.html">UdpOptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UdpProtocolParameters.html">UdpProtocolParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UdpTrafficProtocolParameters.html">UdpTrafficProtocolParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateByoipRangeDetails.html">UpdateByoipRangeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateCaptureFilterDetails.html">UpdateCaptureFilterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateCpeDetails.html">UpdateCpeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateCrossConnectDetails.html">UpdateCrossConnectDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateCrossConnectGroupDetails.html">UpdateCrossConnectGroupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateDhcpDetails.html">UpdateDhcpDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateDrgAttachmentDetails.html">UpdateDrgAttachmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateDrgDetails.html">UpdateDrgDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateDrgRouteDistributionDetails.html">UpdateDrgRouteDistributionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateDrgRouteDistributionStatementDetails.html">UpdateDrgRouteDistributionStatementDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateDrgRouteDistributionStatementsDetails.html">UpdateDrgRouteDistributionStatementsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateDrgRouteRuleDetails.html">UpdateDrgRouteRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateDrgRouteRulesDetails.html">UpdateDrgRouteRulesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateDrgRouteTableDetails.html">UpdateDrgRouteTableDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateIPSecConnectionDetails.html">UpdateIPSecConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateIPSecConnectionTunnelDetails.html">UpdateIPSecConnectionTunnelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateIPSecConnectionTunnelSharedSecretDetails.html">UpdateIPSecConnectionTunnelSharedSecretDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateIPSecTunnelBgpSessionDetails.html">UpdateIPSecTunnelBgpSessionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateIPSecTunnelEncryptionDomainDetails.html">UpdateIPSecTunnelEncryptionDomainDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateInternetGatewayDetails.html">UpdateInternetGatewayDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateIpv6Details.html">UpdateIpv6Details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateLocalPeeringGatewayDetails.html">UpdateLocalPeeringGatewayDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateMacsecKey.html">UpdateMacsecKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateMacsecProperties.html">UpdateMacsecProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateNatGatewayDetails.html">UpdateNatGatewayDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateNetworkSecurityGroupDetails.html">UpdateNetworkSecurityGroupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateNetworkSecurityGroupSecurityRulesDetails.html">UpdateNetworkSecurityGroupSecurityRulesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdatePathAnalyzerTestDetails.html">UpdatePathAnalyzerTestDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdatePrivateIpDetails.html">UpdatePrivateIpDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdatePublicIpDetails.html">UpdatePublicIpDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdatePublicIpPoolDetails.html">UpdatePublicIpPoolDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateRemotePeeringConnectionDetails.html">UpdateRemotePeeringConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateRouteTableDetails.html">UpdateRouteTableDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateSecurityListDetails.html">UpdateSecurityListDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateSecurityRuleDetails.html">UpdateSecurityRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateServiceGatewayDetails.html">UpdateServiceGatewayDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateSubnetDetails.html">UpdateSubnetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateTunnelCpeDeviceConfigDetails.html">UpdateTunnelCpeDeviceConfigDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateVcnDetails.html">UpdateVcnDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateVirtualCircuitDetails.html">UpdateVirtualCircuitDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateVlanDetails.html">UpdateVlanDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateVnicDetails.html">UpdateVnicDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdateVtapDetails.html">UpdateVtapDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpdatedNetworkSecurityGroupSecurityRules.html">UpdatedNetworkSecurityGroupSecurityRules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.UpgradeStatus.html">UpgradeStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.Vcn.html">Vcn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.VcnDnsResolverAssociation.html">VcnDnsResolverAssociation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.VcnDrgAttachmentNetworkCreateDetails.html">VcnDrgAttachmentNetworkCreateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.VcnDrgAttachmentNetworkDetails.html">VcnDrgAttachmentNetworkDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.VcnDrgAttachmentNetworkUpdateDetails.html">VcnDrgAttachmentNetworkUpdateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.VcnRoutingConfiguration.html">VcnRoutingConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.VcnTopology.html">VcnTopology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.VirtualCircuit.html">VirtualCircuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.VirtualCircuitAssociatedTunnelDetails.html">VirtualCircuitAssociatedTunnelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.VirtualCircuitBandwidthShape.html">VirtualCircuitBandwidthShape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.VirtualCircuitDrgAttachmentNetworkDetails.html">VirtualCircuitDrgAttachmentNetworkDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.VirtualCircuitPublicPrefix.html">VirtualCircuitPublicPrefix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.VisibleTrafficNode.html">VisibleTrafficNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.Vlan.html">Vlan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.VlanEndpoint.html">VlanEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.Vnic.html">Vnic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.VnicEndpoint.html">VnicEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.Vtap.html">Vtap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.VtapCaptureFilterRuleDetails.html">VtapCaptureFilterRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.WorkRequestErrorCollection.html">WorkRequestErrorCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.WorkRequestLogEntryCollection.html">WorkRequestLogEntryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.WorkRequestResource.html">WorkRequestResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.WorkRequestResult.html">WorkRequestResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.WorkRequestResultCollection.html">WorkRequestResultCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.WorkRequestSummary.html">WorkRequestSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.vn_monitoring.models.WorkRequestSummaryCollection.html">WorkRequestSummaryCollection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../vn_monitoring.html">Vn Monitoring</a> &raquo;</li>
+        
+      <li>DrgRouteDistributionStatement</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/vn_monitoring/models/oci.vn_monitoring.models.DrgRouteDistributionStatement.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="drgroutedistributionstatement">
+<h1>DrgRouteDistributionStatement<a class="headerlink" href="#drgroutedistributionstatement" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.vn_monitoring.models.DrgRouteDistributionStatement">
+<em class="property">class </em><code class="descclassname">oci.vn_monitoring.models.</code><code class="descname">DrgRouteDistributionStatement</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.vn_monitoring.models.DrgRouteDistributionStatement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A single statement within a route distribution. All match criteria in a statement must be met
+for the action to take place.</p>
+<p><strong>Attributes</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.vn_monitoring.models.DrgRouteDistributionStatement.ACTION_ACCEPT" title="oci.vn_monitoring.models.DrgRouteDistributionStatement.ACTION_ACCEPT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ACTION_ACCEPT</span></code></a></td>
+<td>A constant which can be used with the action property of a DrgRouteDistributionStatement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.vn_monitoring.models.DrgRouteDistributionStatement.action" title="oci.vn_monitoring.models.DrgRouteDistributionStatement.action"><code class="xref py py-obj docutils literal notranslate"><span class="pre">action</span></code></a></td>
+<td><strong>[Required]</strong> Gets the action of this DrgRouteDistributionStatement.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.vn_monitoring.models.DrgRouteDistributionStatement.id" title="oci.vn_monitoring.models.DrgRouteDistributionStatement.id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">id</span></code></a></td>
+<td><strong>[Required]</strong> Gets the id of this DrgRouteDistributionStatement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.vn_monitoring.models.DrgRouteDistributionStatement.match_criteria" title="oci.vn_monitoring.models.DrgRouteDistributionStatement.match_criteria"><code class="xref py py-obj docutils literal notranslate"><span class="pre">match_criteria</span></code></a></td>
+<td><strong>[Required]</strong> Gets the match_criteria of this DrgRouteDistributionStatement.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.vn_monitoring.models.DrgRouteDistributionStatement.priority" title="oci.vn_monitoring.models.DrgRouteDistributionStatement.priority"><code class="xref py py-obj docutils literal notranslate"><span class="pre">priority</span></code></a></td>
+<td><strong>[Required]</strong> Gets the priority of this DrgRouteDistributionStatement.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.vn_monitoring.models.DrgRouteDistributionStatement.__init__" title="oci.vn_monitoring.models.DrgRouteDistributionStatement.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(**kwargs)</td>
+<td>Initializes a new DrgRouteDistributionStatement object with values from keyword arguments.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="oci.vn_monitoring.models.DrgRouteDistributionStatement.ACTION_ACCEPT">
+<code class="descname">ACTION_ACCEPT</code><em class="property"> = 'ACCEPT'</em><a class="headerlink" href="#oci.vn_monitoring.models.DrgRouteDistributionStatement.ACTION_ACCEPT" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the action property of a DrgRouteDistributionStatement.
+This constant has a value of “ACCEPT”</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.vn_monitoring.models.DrgRouteDistributionStatement.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.vn_monitoring.models.DrgRouteDistributionStatement.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new DrgRouteDistributionStatement object with values from keyword arguments.
+The following keyword arguments are supported (corresponding to the getters/setters of this class):</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>match_criteria</strong> (<em>list</em><em>[</em><a class="reference internal" href="oci.vn_monitoring.models.DrgRouteDistributionMatchCriteria.html#oci.vn_monitoring.models.DrgRouteDistributionMatchCriteria" title="oci.vn_monitoring.models.DrgRouteDistributionMatchCriteria"><em>oci.vn_monitoring.models.DrgRouteDistributionMatchCriteria</em></a><em>]</em>) – The value to assign to the match_criteria property of this DrgRouteDistributionStatement.</li>
+<li><strong>action</strong> (<em>str</em>) – The value to assign to the action property of this DrgRouteDistributionStatement.
+Allowed values for this property are: “ACCEPT”</li>
+<li><strong>priority</strong> (<em>int</em>) – The value to assign to the priority property of this DrgRouteDistributionStatement.</li>
+<li><strong>id</strong> (<em>str</em>) – The value to assign to the id property of this DrgRouteDistributionStatement.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.vn_monitoring.models.DrgRouteDistributionStatement.action">
+<code class="descname">action</code><a class="headerlink" href="#oci.vn_monitoring.models.DrgRouteDistributionStatement.action" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the action of this DrgRouteDistributionStatement.
+<cite>ACCEPT</cite> indicates the route should be imported or exported as-is.</p>
+<p>Allowed values for this property are: “ACCEPT”</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The action of this DrgRouteDistributionStatement.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.vn_monitoring.models.DrgRouteDistributionStatement.id">
+<code class="descname">id</code><a class="headerlink" href="#oci.vn_monitoring.models.DrgRouteDistributionStatement.id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the id of this DrgRouteDistributionStatement.
+The Oracle-assigned ID of the route distribution statement.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The id of this DrgRouteDistributionStatement.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.vn_monitoring.models.DrgRouteDistributionStatement.match_criteria">
+<code class="descname">match_criteria</code><a class="headerlink" href="#oci.vn_monitoring.models.DrgRouteDistributionStatement.match_criteria" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the match_criteria of this DrgRouteDistributionStatement.
+The action is applied only if all of the match criteria is met.
+If there are no match criteria in a statement, any input is considered a match and the action is applied.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The match_criteria of this DrgRouteDistributionStatement.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[<a class="reference internal" href="oci.vn_monitoring.models.DrgRouteDistributionMatchCriteria.html#oci.vn_monitoring.models.DrgRouteDistributionMatchCriteria" title="oci.vn_monitoring.models.DrgRouteDistributionMatchCriteria">oci.vn_monitoring.models.DrgRouteDistributionMatchCriteria</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.vn_monitoring.models.DrgRouteDistributionStatement.priority">
+<code class="descname">priority</code><a class="headerlink" href="#oci.vn_monitoring.models.DrgRouteDistributionStatement.priority" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the priority of this DrgRouteDistributionStatement.
+This field specifies the priority of each statement in a route distribution.
+Priorities must be unique within a particular route distribution.
+The priority will be represented as a number between 0 and 65535 where a lower number
+indicates a higher priority. When a route is processed, statements are applied in the order
+defined by their priority. The first matching rule dictates the action that will be taken
+on the route.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The priority of this DrgRouteDistributionStatement.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.vn_monitoring.models.DrgRouteRule.html" class="btn btn-neutral float-right" title="DrgRouteRule" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.vn_monitoring.models.DrgRouteDistributionMatchCriteria.html" class="btn btn-neutral" title="DrgRouteDistributionMatchCriteria" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1391 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MediaServicesClientCompositeOperations &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="MediaStreamClientCompositeOperations" href="oci.media_services.MediaStreamClientCompositeOperations.html" />
+    <link rel="prev" title="MediaStreamClient" href="oci.media_services.MediaStreamClient.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../media_services.html">Media Services</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="oci.media_services.MediaServicesClient.html">MediaServicesClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oci.media_services.MediaStreamClient.html">MediaStreamClient</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">MediaServicesClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oci.media_services.MediaStreamClientCompositeOperations.html">MediaStreamClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../media_services.html#models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../media_services.html">Media Services</a> &raquo;</li>
+        
+      <li>MediaServicesClientCompositeOperations</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/media_services/client/oci.media_services.MediaServicesClientCompositeOperations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mediaservicesclientcompositeoperations">
+<h1>MediaServicesClientCompositeOperations<a class="headerlink" href="#mediaservicesclientcompositeoperations" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations">
+<em class="property">class </em><code class="descclassname">oci.media_services.</code><code class="descname">MediaServicesClientCompositeOperations</code><span class="sig-paren">(</span><em>client</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides a wrapper around <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient" title="oci.media_services.MediaServicesClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaServicesClient</span></code></a> and offers convenience methods
+for operations that would otherwise need to be chained together. For example, instead of performing an action
+on a resource (e.g. launching an instance, creating a load balancer) and then using a waiter to wait for the resource
+to enter a given state, you can call a single method in this class to accomplish the same functionality</p>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.__init__" title="oci.media_services.MediaServicesClientCompositeOperations.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(client,&nbsp;**kwargs)</td>
+<td>Creates a new MediaServicesClientCompositeOperations object</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.add_media_asset_lock_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.add_media_asset_lock_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_media_asset_lock_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_media_asset_lock" title="oci.media_services.MediaServicesClient.add_media_asset_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_media_asset_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaAsset.html#oci.media_services.models.MediaAsset" title="oci.media_services.models.MediaAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaAsset</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.add_media_workflow_configuration_lock_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.add_media_workflow_configuration_lock_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_media_workflow_configuration_lock_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_media_workflow_configuration_lock" title="oci.media_services.MediaServicesClient.add_media_workflow_configuration_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_media_workflow_configuration_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowConfiguration.html#oci.media_services.models.MediaWorkflowConfiguration" title="oci.media_services.models.MediaWorkflowConfiguration"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowConfiguration</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.add_media_workflow_job_lock_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.add_media_workflow_job_lock_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_media_workflow_job_lock_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_media_workflow_job_lock" title="oci.media_services.MediaServicesClient.add_media_workflow_job_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_media_workflow_job_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowJob.html#oci.media_services.models.MediaWorkflowJob" title="oci.media_services.models.MediaWorkflowJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowJob</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.add_media_workflow_lock_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.add_media_workflow_lock_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_media_workflow_lock_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_media_workflow_lock" title="oci.media_services.MediaServicesClient.add_media_workflow_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_media_workflow_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflow.html#oci.media_services.models.MediaWorkflow" title="oci.media_services.models.MediaWorkflow"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflow</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.add_stream_cdn_config_lock_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.add_stream_cdn_config_lock_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_stream_cdn_config_lock_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_stream_cdn_config_lock" title="oci.media_services.MediaServicesClient.add_stream_cdn_config_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_stream_cdn_config_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamCdnConfig.html#oci.media_services.models.StreamCdnConfig" title="oci.media_services.models.StreamCdnConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamCdnConfig</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.add_stream_distribution_channel_lock_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.add_stream_distribution_channel_lock_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_stream_distribution_channel_lock_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_stream_distribution_channel_lock" title="oci.media_services.MediaServicesClient.add_stream_distribution_channel_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_stream_distribution_channel_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamDistributionChannel.html#oci.media_services.models.StreamDistributionChannel" title="oci.media_services.models.StreamDistributionChannel"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamDistributionChannel</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.add_stream_packaging_config_lock_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.add_stream_packaging_config_lock_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_stream_packaging_config_lock_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_stream_packaging_config_lock" title="oci.media_services.MediaServicesClient.add_stream_packaging_config_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_stream_packaging_config_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamPackagingConfig.html#oci.media_services.models.StreamPackagingConfig" title="oci.media_services.models.StreamPackagingConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamPackagingConfig</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.create_media_asset_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.create_media_asset_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_media_asset_and_wait_for_state</span></code></a>(…[,&nbsp;…])</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_media_asset" title="oci.media_services.MediaServicesClient.create_media_asset"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_media_asset()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaAsset.html#oci.media_services.models.MediaAsset" title="oci.media_services.models.MediaAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaAsset</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.create_media_workflow_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.create_media_workflow_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_media_workflow_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_media_workflow" title="oci.media_services.MediaServicesClient.create_media_workflow"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_media_workflow()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflow.html#oci.media_services.models.MediaWorkflow" title="oci.media_services.models.MediaWorkflow"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflow</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.create_media_workflow_configuration_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.create_media_workflow_configuration_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_media_workflow_configuration_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_media_workflow_configuration" title="oci.media_services.MediaServicesClient.create_media_workflow_configuration"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_media_workflow_configuration()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowConfiguration.html#oci.media_services.models.MediaWorkflowConfiguration" title="oci.media_services.models.MediaWorkflowConfiguration"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowConfiguration</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.create_media_workflow_job_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.create_media_workflow_job_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_media_workflow_job_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_media_workflow_job" title="oci.media_services.MediaServicesClient.create_media_workflow_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_media_workflow_job()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowJob.html#oci.media_services.models.MediaWorkflowJob" title="oci.media_services.models.MediaWorkflowJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowJob</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.create_stream_cdn_config_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.create_stream_cdn_config_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_stream_cdn_config_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_stream_cdn_config" title="oci.media_services.MediaServicesClient.create_stream_cdn_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_stream_cdn_config()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamCdnConfig.html#oci.media_services.models.StreamCdnConfig" title="oci.media_services.models.StreamCdnConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamCdnConfig</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.create_stream_distribution_channel_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.create_stream_distribution_channel_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_stream_distribution_channel_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_stream_distribution_channel" title="oci.media_services.MediaServicesClient.create_stream_distribution_channel"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_stream_distribution_channel()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamDistributionChannel.html#oci.media_services.models.StreamDistributionChannel" title="oci.media_services.models.StreamDistributionChannel"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamDistributionChannel</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.create_stream_packaging_config_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.create_stream_packaging_config_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_stream_packaging_config_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_stream_packaging_config" title="oci.media_services.MediaServicesClient.create_stream_packaging_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_stream_packaging_config()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamPackagingConfig.html#oci.media_services.models.StreamPackagingConfig" title="oci.media_services.models.StreamPackagingConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamPackagingConfig</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.delete_media_asset_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.delete_media_asset_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_media_asset_and_wait_for_state</span></code></a>(…[,&nbsp;…])</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_media_asset" title="oci.media_services.MediaServicesClient.delete_media_asset"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_media_asset()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaAsset.html#oci.media_services.models.MediaAsset" title="oci.media_services.models.MediaAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaAsset</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.delete_media_workflow_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.delete_media_workflow_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_media_workflow_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_media_workflow" title="oci.media_services.MediaServicesClient.delete_media_workflow"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_media_workflow()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflow.html#oci.media_services.models.MediaWorkflow" title="oci.media_services.models.MediaWorkflow"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflow</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.delete_media_workflow_configuration_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.delete_media_workflow_configuration_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_media_workflow_configuration_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_media_workflow_configuration" title="oci.media_services.MediaServicesClient.delete_media_workflow_configuration"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_media_workflow_configuration()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowConfiguration.html#oci.media_services.models.MediaWorkflowConfiguration" title="oci.media_services.models.MediaWorkflowConfiguration"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowConfiguration</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.delete_media_workflow_job_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.delete_media_workflow_job_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_media_workflow_job_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_media_workflow_job" title="oci.media_services.MediaServicesClient.delete_media_workflow_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_media_workflow_job()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowJob.html#oci.media_services.models.MediaWorkflowJob" title="oci.media_services.models.MediaWorkflowJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowJob</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.delete_stream_cdn_config_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.delete_stream_cdn_config_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_stream_cdn_config_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_stream_cdn_config" title="oci.media_services.MediaServicesClient.delete_stream_cdn_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_stream_cdn_config()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamCdnConfig.html#oci.media_services.models.StreamCdnConfig" title="oci.media_services.models.StreamCdnConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamCdnConfig</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.delete_stream_distribution_channel_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.delete_stream_distribution_channel_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_stream_distribution_channel_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_stream_distribution_channel" title="oci.media_services.MediaServicesClient.delete_stream_distribution_channel"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_stream_distribution_channel()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamDistributionChannel.html#oci.media_services.models.StreamDistributionChannel" title="oci.media_services.models.StreamDistributionChannel"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamDistributionChannel</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.delete_stream_packaging_config_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.delete_stream_packaging_config_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_stream_packaging_config_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_stream_packaging_config" title="oci.media_services.MediaServicesClient.delete_stream_packaging_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_stream_packaging_config()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamPackagingConfig.html#oci.media_services.models.StreamPackagingConfig" title="oci.media_services.models.StreamPackagingConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamPackagingConfig</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.remove_media_asset_lock_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.remove_media_asset_lock_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_media_asset_lock_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_media_asset_lock" title="oci.media_services.MediaServicesClient.remove_media_asset_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_media_asset_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaAsset.html#oci.media_services.models.MediaAsset" title="oci.media_services.models.MediaAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaAsset</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.remove_media_workflow_configuration_lock_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.remove_media_workflow_configuration_lock_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_media_workflow_configuration_lock_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_media_workflow_configuration_lock" title="oci.media_services.MediaServicesClient.remove_media_workflow_configuration_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_media_workflow_configuration_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowConfiguration.html#oci.media_services.models.MediaWorkflowConfiguration" title="oci.media_services.models.MediaWorkflowConfiguration"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowConfiguration</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.remove_media_workflow_job_lock_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.remove_media_workflow_job_lock_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_media_workflow_job_lock_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_media_workflow_job_lock" title="oci.media_services.MediaServicesClient.remove_media_workflow_job_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_media_workflow_job_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowJob.html#oci.media_services.models.MediaWorkflowJob" title="oci.media_services.models.MediaWorkflowJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowJob</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.remove_media_workflow_lock_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.remove_media_workflow_lock_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_media_workflow_lock_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_media_workflow_lock" title="oci.media_services.MediaServicesClient.remove_media_workflow_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_media_workflow_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflow.html#oci.media_services.models.MediaWorkflow" title="oci.media_services.models.MediaWorkflow"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflow</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.remove_stream_cdn_config_lock_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.remove_stream_cdn_config_lock_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_stream_cdn_config_lock_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_stream_cdn_config_lock" title="oci.media_services.MediaServicesClient.remove_stream_cdn_config_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_stream_cdn_config_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamCdnConfig.html#oci.media_services.models.StreamCdnConfig" title="oci.media_services.models.StreamCdnConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamCdnConfig</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.remove_stream_distribution_channel_lock_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.remove_stream_distribution_channel_lock_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_stream_distribution_channel_lock_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_stream_distribution_channel_lock" title="oci.media_services.MediaServicesClient.remove_stream_distribution_channel_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_stream_distribution_channel_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamDistributionChannel.html#oci.media_services.models.StreamDistributionChannel" title="oci.media_services.models.StreamDistributionChannel"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamDistributionChannel</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.remove_stream_packaging_config_lock_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.remove_stream_packaging_config_lock_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_stream_packaging_config_lock_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_stream_packaging_config_lock" title="oci.media_services.MediaServicesClient.remove_stream_packaging_config_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_stream_packaging_config_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamPackagingConfig.html#oci.media_services.models.StreamPackagingConfig" title="oci.media_services.models.StreamPackagingConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamPackagingConfig</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.update_media_asset_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.update_media_asset_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_media_asset_and_wait_for_state</span></code></a>(…[,&nbsp;…])</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_media_asset" title="oci.media_services.MediaServicesClient.update_media_asset"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_media_asset()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaAsset.html#oci.media_services.models.MediaAsset" title="oci.media_services.models.MediaAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaAsset</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.update_media_workflow_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.update_media_workflow_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_media_workflow_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_media_workflow" title="oci.media_services.MediaServicesClient.update_media_workflow"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_media_workflow()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflow.html#oci.media_services.models.MediaWorkflow" title="oci.media_services.models.MediaWorkflow"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflow</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.update_media_workflow_configuration_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.update_media_workflow_configuration_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_media_workflow_configuration_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_media_workflow_configuration" title="oci.media_services.MediaServicesClient.update_media_workflow_configuration"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_media_workflow_configuration()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowConfiguration.html#oci.media_services.models.MediaWorkflowConfiguration" title="oci.media_services.models.MediaWorkflowConfiguration"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowConfiguration</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.update_media_workflow_job_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.update_media_workflow_job_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_media_workflow_job_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_media_workflow_job" title="oci.media_services.MediaServicesClient.update_media_workflow_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_media_workflow_job()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowJob.html#oci.media_services.models.MediaWorkflowJob" title="oci.media_services.models.MediaWorkflowJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowJob</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.update_stream_cdn_config_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.update_stream_cdn_config_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_stream_cdn_config_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_stream_cdn_config" title="oci.media_services.MediaServicesClient.update_stream_cdn_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_stream_cdn_config()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamCdnConfig.html#oci.media_services.models.StreamCdnConfig" title="oci.media_services.models.StreamCdnConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamCdnConfig</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.update_stream_distribution_channel_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.update_stream_distribution_channel_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_stream_distribution_channel_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_stream_distribution_channel" title="oci.media_services.MediaServicesClient.update_stream_distribution_channel"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_stream_distribution_channel()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamDistributionChannel.html#oci.media_services.models.StreamDistributionChannel" title="oci.media_services.models.StreamDistributionChannel"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamDistributionChannel</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.media_services.MediaServicesClientCompositeOperations.update_stream_packaging_config_and_wait_for_state" title="oci.media_services.MediaServicesClientCompositeOperations.update_stream_packaging_config_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_stream_packaging_config_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_stream_packaging_config" title="oci.media_services.MediaServicesClient.update_stream_packaging_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_stream_packaging_config()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamPackagingConfig.html#oci.media_services.models.StreamPackagingConfig" title="oci.media_services.models.StreamPackagingConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamPackagingConfig</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>client</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new MediaServicesClientCompositeOperations object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>client</strong> (<a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient" title="oci.media_services.MediaServicesClient"><em>MediaServicesClient</em></a>) – The service client which will be wrapped by this object</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.add_media_asset_lock_and_wait_for_state">
+<code class="descname">add_media_asset_lock_and_wait_for_state</code><span class="sig-paren">(</span><em>add_lock_details</em>, <em>media_asset_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.add_media_asset_lock_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_media_asset_lock" title="oci.media_services.MediaServicesClient.add_media_asset_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_media_asset_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaAsset.html#oci.media_services.models.MediaAsset" title="oci.media_services.models.MediaAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaAsset</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>add_lock_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.AddLockDetails.html#oci.media_services.models.AddLockDetails" title="oci.media_services.models.AddLockDetails"><em>oci.media_services.models.AddLockDetails</em></a>) – (required)
+The details to be updated for the AddLock.</li>
+<li><strong>media_asset_id</strong> (<em>str</em>) – (required)
+Unique MediaAsset identifier</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaAsset.html#oci.media_services.models.MediaAsset.lifecycle_state" title="oci.media_services.models.MediaAsset.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_media_asset_lock" title="oci.media_services.MediaServicesClient.add_media_asset_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_media_asset_lock()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.add_media_workflow_configuration_lock_and_wait_for_state">
+<code class="descname">add_media_workflow_configuration_lock_and_wait_for_state</code><span class="sig-paren">(</span><em>add_resource_lock_details</em>, <em>media_workflow_configuration_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.add_media_workflow_configuration_lock_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_media_workflow_configuration_lock" title="oci.media_services.MediaServicesClient.add_media_workflow_configuration_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_media_workflow_configuration_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowConfiguration.html#oci.media_services.models.MediaWorkflowConfiguration" title="oci.media_services.models.MediaWorkflowConfiguration"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowConfiguration</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>add_resource_lock_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.AddLockDetails.html#oci.media_services.models.AddLockDetails" title="oci.media_services.models.AddLockDetails"><em>oci.media_services.models.AddLockDetails</em></a>) – (required)
+AddResourceLockDetails body parameter</li>
+<li><strong>media_workflow_configuration_id</strong> (<em>str</em>) – (required)
+Unique MediaWorkflowConfiguration identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowConfiguration.html#oci.media_services.models.MediaWorkflowConfiguration.lifecycle_state" title="oci.media_services.models.MediaWorkflowConfiguration.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_media_workflow_configuration_lock" title="oci.media_services.MediaServicesClient.add_media_workflow_configuration_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_media_workflow_configuration_lock()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.add_media_workflow_job_lock_and_wait_for_state">
+<code class="descname">add_media_workflow_job_lock_and_wait_for_state</code><span class="sig-paren">(</span><em>add_lock_details</em>, <em>media_workflow_job_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.add_media_workflow_job_lock_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_media_workflow_job_lock" title="oci.media_services.MediaServicesClient.add_media_workflow_job_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_media_workflow_job_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowJob.html#oci.media_services.models.MediaWorkflowJob" title="oci.media_services.models.MediaWorkflowJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowJob</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>add_lock_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.AddLockDetails.html#oci.media_services.models.AddLockDetails" title="oci.media_services.models.AddLockDetails"><em>oci.media_services.models.AddLockDetails</em></a>) – (required)
+The details to be updated for the AddLock.</li>
+<li><strong>media_workflow_job_id</strong> (<em>str</em>) – (required)
+Unique MediaWorkflowJob identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowJob.html#oci.media_services.models.MediaWorkflowJob.lifecycle_state" title="oci.media_services.models.MediaWorkflowJob.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_media_workflow_job_lock" title="oci.media_services.MediaServicesClient.add_media_workflow_job_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_media_workflow_job_lock()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.add_media_workflow_lock_and_wait_for_state">
+<code class="descname">add_media_workflow_lock_and_wait_for_state</code><span class="sig-paren">(</span><em>add_resource_lock_details</em>, <em>media_workflow_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.add_media_workflow_lock_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_media_workflow_lock" title="oci.media_services.MediaServicesClient.add_media_workflow_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_media_workflow_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflow.html#oci.media_services.models.MediaWorkflow" title="oci.media_services.models.MediaWorkflow"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflow</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>add_resource_lock_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.AddLockDetails.html#oci.media_services.models.AddLockDetails" title="oci.media_services.models.AddLockDetails"><em>oci.media_services.models.AddLockDetails</em></a>) – (required)
+AddResourceLockDetails body parameter</li>
+<li><strong>media_workflow_id</strong> (<em>str</em>) – (required)
+Unique MediaWorkflow identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflow.html#oci.media_services.models.MediaWorkflow.lifecycle_state" title="oci.media_services.models.MediaWorkflow.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_media_workflow_lock" title="oci.media_services.MediaServicesClient.add_media_workflow_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_media_workflow_lock()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.add_stream_cdn_config_lock_and_wait_for_state">
+<code class="descname">add_stream_cdn_config_lock_and_wait_for_state</code><span class="sig-paren">(</span><em>add_resource_lock_details</em>, <em>stream_cdn_config_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.add_stream_cdn_config_lock_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_stream_cdn_config_lock" title="oci.media_services.MediaServicesClient.add_stream_cdn_config_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_stream_cdn_config_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamCdnConfig.html#oci.media_services.models.StreamCdnConfig" title="oci.media_services.models.StreamCdnConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamCdnConfig</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>add_resource_lock_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.AddLockDetails.html#oci.media_services.models.AddLockDetails" title="oci.media_services.models.AddLockDetails"><em>oci.media_services.models.AddLockDetails</em></a>) – (required)
+AddResourceLockDetails body parameter</li>
+<li><strong>stream_cdn_config_id</strong> (<em>str</em>) – (required)
+Unique StreamCdnConfig identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.StreamCdnConfig.html#oci.media_services.models.StreamCdnConfig.lifecycle_state" title="oci.media_services.models.StreamCdnConfig.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_stream_cdn_config_lock" title="oci.media_services.MediaServicesClient.add_stream_cdn_config_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_stream_cdn_config_lock()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.add_stream_distribution_channel_lock_and_wait_for_state">
+<code class="descname">add_stream_distribution_channel_lock_and_wait_for_state</code><span class="sig-paren">(</span><em>add_resource_lock_details</em>, <em>stream_distribution_channel_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.add_stream_distribution_channel_lock_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_stream_distribution_channel_lock" title="oci.media_services.MediaServicesClient.add_stream_distribution_channel_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_stream_distribution_channel_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamDistributionChannel.html#oci.media_services.models.StreamDistributionChannel" title="oci.media_services.models.StreamDistributionChannel"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamDistributionChannel</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>add_resource_lock_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.AddLockDetails.html#oci.media_services.models.AddLockDetails" title="oci.media_services.models.AddLockDetails"><em>oci.media_services.models.AddLockDetails</em></a>) – (required)
+AddResourceLockDetails body parameter</li>
+<li><strong>stream_distribution_channel_id</strong> (<em>str</em>) – (required)
+Unique Stream Distribution Channel path identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.StreamDistributionChannel.html#oci.media_services.models.StreamDistributionChannel.lifecycle_state" title="oci.media_services.models.StreamDistributionChannel.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_stream_distribution_channel_lock" title="oci.media_services.MediaServicesClient.add_stream_distribution_channel_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_stream_distribution_channel_lock()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.add_stream_packaging_config_lock_and_wait_for_state">
+<code class="descname">add_stream_packaging_config_lock_and_wait_for_state</code><span class="sig-paren">(</span><em>add_resource_lock_details</em>, <em>stream_packaging_config_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.add_stream_packaging_config_lock_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_stream_packaging_config_lock" title="oci.media_services.MediaServicesClient.add_stream_packaging_config_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_stream_packaging_config_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamPackagingConfig.html#oci.media_services.models.StreamPackagingConfig" title="oci.media_services.models.StreamPackagingConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamPackagingConfig</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>add_resource_lock_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.AddLockDetails.html#oci.media_services.models.AddLockDetails" title="oci.media_services.models.AddLockDetails"><em>oci.media_services.models.AddLockDetails</em></a>) – (required)
+AddResourceLockDetails body parameter</li>
+<li><strong>stream_packaging_config_id</strong> (<em>str</em>) – (required)
+Unique Stream Packaging Configuration path identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.StreamPackagingConfig.html#oci.media_services.models.StreamPackagingConfig.lifecycle_state" title="oci.media_services.models.StreamPackagingConfig.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.add_stream_packaging_config_lock" title="oci.media_services.MediaServicesClient.add_stream_packaging_config_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_stream_packaging_config_lock()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.create_media_asset_and_wait_for_state">
+<code class="descname">create_media_asset_and_wait_for_state</code><span class="sig-paren">(</span><em>create_media_asset_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.create_media_asset_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_media_asset" title="oci.media_services.MediaServicesClient.create_media_asset"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_media_asset()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaAsset.html#oci.media_services.models.MediaAsset" title="oci.media_services.models.MediaAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaAsset</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>create_media_asset_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.CreateMediaAssetDetails.html#oci.media_services.models.CreateMediaAssetDetails" title="oci.media_services.models.CreateMediaAssetDetails"><em>oci.media_services.models.CreateMediaAssetDetails</em></a>) – (required)
+Details for the new MediaAsset.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaAsset.html#oci.media_services.models.MediaAsset.lifecycle_state" title="oci.media_services.models.MediaAsset.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_media_asset" title="oci.media_services.MediaServicesClient.create_media_asset"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_media_asset()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.create_media_workflow_and_wait_for_state">
+<code class="descname">create_media_workflow_and_wait_for_state</code><span class="sig-paren">(</span><em>create_media_workflow_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.create_media_workflow_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_media_workflow" title="oci.media_services.MediaServicesClient.create_media_workflow"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_media_workflow()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflow.html#oci.media_services.models.MediaWorkflow" title="oci.media_services.models.MediaWorkflow"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflow</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>create_media_workflow_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.CreateMediaWorkflowDetails.html#oci.media_services.models.CreateMediaWorkflowDetails" title="oci.media_services.models.CreateMediaWorkflowDetails"><em>oci.media_services.models.CreateMediaWorkflowDetails</em></a>) – (required)
+Details for the new MediaWorkflow.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflow.html#oci.media_services.models.MediaWorkflow.lifecycle_state" title="oci.media_services.models.MediaWorkflow.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_media_workflow" title="oci.media_services.MediaServicesClient.create_media_workflow"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_media_workflow()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.create_media_workflow_configuration_and_wait_for_state">
+<code class="descname">create_media_workflow_configuration_and_wait_for_state</code><span class="sig-paren">(</span><em>create_media_workflow_configuration_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.create_media_workflow_configuration_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_media_workflow_configuration" title="oci.media_services.MediaServicesClient.create_media_workflow_configuration"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_media_workflow_configuration()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowConfiguration.html#oci.media_services.models.MediaWorkflowConfiguration" title="oci.media_services.models.MediaWorkflowConfiguration"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowConfiguration</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>create_media_workflow_configuration_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.CreateMediaWorkflowConfigurationDetails.html#oci.media_services.models.CreateMediaWorkflowConfigurationDetails" title="oci.media_services.models.CreateMediaWorkflowConfigurationDetails"><em>oci.media_services.models.CreateMediaWorkflowConfigurationDetails</em></a>) – (required)
+Details for the new MediaWorkflowConfiguration.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowConfiguration.html#oci.media_services.models.MediaWorkflowConfiguration.lifecycle_state" title="oci.media_services.models.MediaWorkflowConfiguration.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_media_workflow_configuration" title="oci.media_services.MediaServicesClient.create_media_workflow_configuration"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_media_workflow_configuration()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.create_media_workflow_job_and_wait_for_state">
+<code class="descname">create_media_workflow_job_and_wait_for_state</code><span class="sig-paren">(</span><em>create_media_workflow_job_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.create_media_workflow_job_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_media_workflow_job" title="oci.media_services.MediaServicesClient.create_media_workflow_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_media_workflow_job()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowJob.html#oci.media_services.models.MediaWorkflowJob" title="oci.media_services.models.MediaWorkflowJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowJob</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>create_media_workflow_job_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.CreateMediaWorkflowJobDetails.html#oci.media_services.models.CreateMediaWorkflowJobDetails" title="oci.media_services.models.CreateMediaWorkflowJobDetails"><em>oci.media_services.models.CreateMediaWorkflowJobDetails</em></a>) – (required)
+The information to run the mediaWorkflow.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowJob.html#oci.media_services.models.MediaWorkflowJob.lifecycle_state" title="oci.media_services.models.MediaWorkflowJob.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_media_workflow_job" title="oci.media_services.MediaServicesClient.create_media_workflow_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_media_workflow_job()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.create_stream_cdn_config_and_wait_for_state">
+<code class="descname">create_stream_cdn_config_and_wait_for_state</code><span class="sig-paren">(</span><em>create_stream_cdn_config_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.create_stream_cdn_config_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_stream_cdn_config" title="oci.media_services.MediaServicesClient.create_stream_cdn_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_stream_cdn_config()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamCdnConfig.html#oci.media_services.models.StreamCdnConfig" title="oci.media_services.models.StreamCdnConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamCdnConfig</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>create_stream_cdn_config_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.CreateStreamCdnConfigDetails.html#oci.media_services.models.CreateStreamCdnConfigDetails" title="oci.media_services.models.CreateStreamCdnConfigDetails"><em>oci.media_services.models.CreateStreamCdnConfigDetails</em></a>) – (required)
+Details for the new StreamCdnConfig.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.StreamCdnConfig.html#oci.media_services.models.StreamCdnConfig.lifecycle_state" title="oci.media_services.models.StreamCdnConfig.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_stream_cdn_config" title="oci.media_services.MediaServicesClient.create_stream_cdn_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_stream_cdn_config()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.create_stream_distribution_channel_and_wait_for_state">
+<code class="descname">create_stream_distribution_channel_and_wait_for_state</code><span class="sig-paren">(</span><em>create_stream_distribution_channel_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.create_stream_distribution_channel_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_stream_distribution_channel" title="oci.media_services.MediaServicesClient.create_stream_distribution_channel"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_stream_distribution_channel()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamDistributionChannel.html#oci.media_services.models.StreamDistributionChannel" title="oci.media_services.models.StreamDistributionChannel"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamDistributionChannel</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>create_stream_distribution_channel_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.CreateStreamDistributionChannelDetails.html#oci.media_services.models.CreateStreamDistributionChannelDetails" title="oci.media_services.models.CreateStreamDistributionChannelDetails"><em>oci.media_services.models.CreateStreamDistributionChannelDetails</em></a>) – (required)
+Details for the new Stream Distribution Channel.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.StreamDistributionChannel.html#oci.media_services.models.StreamDistributionChannel.lifecycle_state" title="oci.media_services.models.StreamDistributionChannel.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_stream_distribution_channel" title="oci.media_services.MediaServicesClient.create_stream_distribution_channel"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_stream_distribution_channel()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.create_stream_packaging_config_and_wait_for_state">
+<code class="descname">create_stream_packaging_config_and_wait_for_state</code><span class="sig-paren">(</span><em>create_stream_packaging_config_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.create_stream_packaging_config_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_stream_packaging_config" title="oci.media_services.MediaServicesClient.create_stream_packaging_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_stream_packaging_config()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamPackagingConfig.html#oci.media_services.models.StreamPackagingConfig" title="oci.media_services.models.StreamPackagingConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamPackagingConfig</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>create_stream_packaging_config_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.CreateStreamPackagingConfigDetails.html#oci.media_services.models.CreateStreamPackagingConfigDetails" title="oci.media_services.models.CreateStreamPackagingConfigDetails"><em>oci.media_services.models.CreateStreamPackagingConfigDetails</em></a>) – (required)
+Details for the new Stream Packaging Configuration.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.StreamPackagingConfig.html#oci.media_services.models.StreamPackagingConfig.lifecycle_state" title="oci.media_services.models.StreamPackagingConfig.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.create_stream_packaging_config" title="oci.media_services.MediaServicesClient.create_stream_packaging_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_stream_packaging_config()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.delete_media_asset_and_wait_for_state">
+<code class="descname">delete_media_asset_and_wait_for_state</code><span class="sig-paren">(</span><em>media_asset_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.delete_media_asset_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_media_asset" title="oci.media_services.MediaServicesClient.delete_media_asset"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_media_asset()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaAsset.html#oci.media_services.models.MediaAsset" title="oci.media_services.models.MediaAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaAsset</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>media_asset_id</strong> (<em>str</em>) – (required)
+Unique MediaAsset identifier</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaAsset.html#oci.media_services.models.MediaAsset.lifecycle_state" title="oci.media_services.models.MediaAsset.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_media_asset" title="oci.media_services.MediaServicesClient.delete_media_asset"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_media_asset()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.delete_media_workflow_and_wait_for_state">
+<code class="descname">delete_media_workflow_and_wait_for_state</code><span class="sig-paren">(</span><em>media_workflow_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.delete_media_workflow_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_media_workflow" title="oci.media_services.MediaServicesClient.delete_media_workflow"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_media_workflow()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflow.html#oci.media_services.models.MediaWorkflow" title="oci.media_services.models.MediaWorkflow"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflow</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>media_workflow_id</strong> (<em>str</em>) – (required)
+Unique MediaWorkflow identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflow.html#oci.media_services.models.MediaWorkflow.lifecycle_state" title="oci.media_services.models.MediaWorkflow.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_media_workflow" title="oci.media_services.MediaServicesClient.delete_media_workflow"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_media_workflow()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.delete_media_workflow_configuration_and_wait_for_state">
+<code class="descname">delete_media_workflow_configuration_and_wait_for_state</code><span class="sig-paren">(</span><em>media_workflow_configuration_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.delete_media_workflow_configuration_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_media_workflow_configuration" title="oci.media_services.MediaServicesClient.delete_media_workflow_configuration"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_media_workflow_configuration()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowConfiguration.html#oci.media_services.models.MediaWorkflowConfiguration" title="oci.media_services.models.MediaWorkflowConfiguration"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowConfiguration</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>media_workflow_configuration_id</strong> (<em>str</em>) – (required)
+Unique MediaWorkflowConfiguration identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowConfiguration.html#oci.media_services.models.MediaWorkflowConfiguration.lifecycle_state" title="oci.media_services.models.MediaWorkflowConfiguration.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_media_workflow_configuration" title="oci.media_services.MediaServicesClient.delete_media_workflow_configuration"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_media_workflow_configuration()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.delete_media_workflow_job_and_wait_for_state">
+<code class="descname">delete_media_workflow_job_and_wait_for_state</code><span class="sig-paren">(</span><em>media_workflow_job_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.delete_media_workflow_job_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_media_workflow_job" title="oci.media_services.MediaServicesClient.delete_media_workflow_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_media_workflow_job()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowJob.html#oci.media_services.models.MediaWorkflowJob" title="oci.media_services.models.MediaWorkflowJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowJob</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>media_workflow_job_id</strong> (<em>str</em>) – (required)
+Unique MediaWorkflowJob identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowJob.html#oci.media_services.models.MediaWorkflowJob.lifecycle_state" title="oci.media_services.models.MediaWorkflowJob.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_media_workflow_job" title="oci.media_services.MediaServicesClient.delete_media_workflow_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_media_workflow_job()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.delete_stream_cdn_config_and_wait_for_state">
+<code class="descname">delete_stream_cdn_config_and_wait_for_state</code><span class="sig-paren">(</span><em>stream_cdn_config_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.delete_stream_cdn_config_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_stream_cdn_config" title="oci.media_services.MediaServicesClient.delete_stream_cdn_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_stream_cdn_config()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamCdnConfig.html#oci.media_services.models.StreamCdnConfig" title="oci.media_services.models.StreamCdnConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamCdnConfig</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stream_cdn_config_id</strong> (<em>str</em>) – (required)
+Unique StreamCdnConfig identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.StreamCdnConfig.html#oci.media_services.models.StreamCdnConfig.lifecycle_state" title="oci.media_services.models.StreamCdnConfig.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_stream_cdn_config" title="oci.media_services.MediaServicesClient.delete_stream_cdn_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_stream_cdn_config()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.delete_stream_distribution_channel_and_wait_for_state">
+<code class="descname">delete_stream_distribution_channel_and_wait_for_state</code><span class="sig-paren">(</span><em>stream_distribution_channel_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.delete_stream_distribution_channel_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_stream_distribution_channel" title="oci.media_services.MediaServicesClient.delete_stream_distribution_channel"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_stream_distribution_channel()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamDistributionChannel.html#oci.media_services.models.StreamDistributionChannel" title="oci.media_services.models.StreamDistributionChannel"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamDistributionChannel</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stream_distribution_channel_id</strong> (<em>str</em>) – (required)
+Unique Stream Distribution Channel path identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.StreamDistributionChannel.html#oci.media_services.models.StreamDistributionChannel.lifecycle_state" title="oci.media_services.models.StreamDistributionChannel.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_stream_distribution_channel" title="oci.media_services.MediaServicesClient.delete_stream_distribution_channel"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_stream_distribution_channel()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.delete_stream_packaging_config_and_wait_for_state">
+<code class="descname">delete_stream_packaging_config_and_wait_for_state</code><span class="sig-paren">(</span><em>stream_packaging_config_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.delete_stream_packaging_config_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_stream_packaging_config" title="oci.media_services.MediaServicesClient.delete_stream_packaging_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_stream_packaging_config()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamPackagingConfig.html#oci.media_services.models.StreamPackagingConfig" title="oci.media_services.models.StreamPackagingConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamPackagingConfig</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stream_packaging_config_id</strong> (<em>str</em>) – (required)
+Unique Stream Packaging Configuration path identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.StreamPackagingConfig.html#oci.media_services.models.StreamPackagingConfig.lifecycle_state" title="oci.media_services.models.StreamPackagingConfig.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.delete_stream_packaging_config" title="oci.media_services.MediaServicesClient.delete_stream_packaging_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_stream_packaging_config()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.remove_media_asset_lock_and_wait_for_state">
+<code class="descname">remove_media_asset_lock_and_wait_for_state</code><span class="sig-paren">(</span><em>remove_lock_details</em>, <em>media_asset_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.remove_media_asset_lock_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_media_asset_lock" title="oci.media_services.MediaServicesClient.remove_media_asset_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_media_asset_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaAsset.html#oci.media_services.models.MediaAsset" title="oci.media_services.models.MediaAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaAsset</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>remove_lock_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.RemoveLockDetails.html#oci.media_services.models.RemoveLockDetails" title="oci.media_services.models.RemoveLockDetails"><em>oci.media_services.models.RemoveLockDetails</em></a>) – (required)
+The details to be updated for the RemoveLock.</li>
+<li><strong>media_asset_id</strong> (<em>str</em>) – (required)
+Unique MediaAsset identifier</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaAsset.html#oci.media_services.models.MediaAsset.lifecycle_state" title="oci.media_services.models.MediaAsset.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_media_asset_lock" title="oci.media_services.MediaServicesClient.remove_media_asset_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_media_asset_lock()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.remove_media_workflow_configuration_lock_and_wait_for_state">
+<code class="descname">remove_media_workflow_configuration_lock_and_wait_for_state</code><span class="sig-paren">(</span><em>remove_resource_lock_details</em>, <em>media_workflow_configuration_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.remove_media_workflow_configuration_lock_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_media_workflow_configuration_lock" title="oci.media_services.MediaServicesClient.remove_media_workflow_configuration_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_media_workflow_configuration_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowConfiguration.html#oci.media_services.models.MediaWorkflowConfiguration" title="oci.media_services.models.MediaWorkflowConfiguration"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowConfiguration</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>remove_resource_lock_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.RemoveLockDetails.html#oci.media_services.models.RemoveLockDetails" title="oci.media_services.models.RemoveLockDetails"><em>oci.media_services.models.RemoveLockDetails</em></a>) – (required)
+RemoveResourceLockDetails body parameter</li>
+<li><strong>media_workflow_configuration_id</strong> (<em>str</em>) – (required)
+Unique MediaWorkflowConfiguration identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowConfiguration.html#oci.media_services.models.MediaWorkflowConfiguration.lifecycle_state" title="oci.media_services.models.MediaWorkflowConfiguration.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_media_workflow_configuration_lock" title="oci.media_services.MediaServicesClient.remove_media_workflow_configuration_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_media_workflow_configuration_lock()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.remove_media_workflow_job_lock_and_wait_for_state">
+<code class="descname">remove_media_workflow_job_lock_and_wait_for_state</code><span class="sig-paren">(</span><em>remove_lock_details</em>, <em>media_workflow_job_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.remove_media_workflow_job_lock_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_media_workflow_job_lock" title="oci.media_services.MediaServicesClient.remove_media_workflow_job_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_media_workflow_job_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowJob.html#oci.media_services.models.MediaWorkflowJob" title="oci.media_services.models.MediaWorkflowJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowJob</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>remove_lock_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.RemoveLockDetails.html#oci.media_services.models.RemoveLockDetails" title="oci.media_services.models.RemoveLockDetails"><em>oci.media_services.models.RemoveLockDetails</em></a>) – (required)
+The details to be updated for the RemoveLock.</li>
+<li><strong>media_workflow_job_id</strong> (<em>str</em>) – (required)
+Unique MediaWorkflowJob identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowJob.html#oci.media_services.models.MediaWorkflowJob.lifecycle_state" title="oci.media_services.models.MediaWorkflowJob.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_media_workflow_job_lock" title="oci.media_services.MediaServicesClient.remove_media_workflow_job_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_media_workflow_job_lock()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.remove_media_workflow_lock_and_wait_for_state">
+<code class="descname">remove_media_workflow_lock_and_wait_for_state</code><span class="sig-paren">(</span><em>remove_resource_lock_details</em>, <em>media_workflow_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.remove_media_workflow_lock_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_media_workflow_lock" title="oci.media_services.MediaServicesClient.remove_media_workflow_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_media_workflow_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflow.html#oci.media_services.models.MediaWorkflow" title="oci.media_services.models.MediaWorkflow"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflow</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>remove_resource_lock_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.RemoveLockDetails.html#oci.media_services.models.RemoveLockDetails" title="oci.media_services.models.RemoveLockDetails"><em>oci.media_services.models.RemoveLockDetails</em></a>) – (required)
+RemoveResourceLockDetails body parameter</li>
+<li><strong>media_workflow_id</strong> (<em>str</em>) – (required)
+Unique MediaWorkflow identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflow.html#oci.media_services.models.MediaWorkflow.lifecycle_state" title="oci.media_services.models.MediaWorkflow.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_media_workflow_lock" title="oci.media_services.MediaServicesClient.remove_media_workflow_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_media_workflow_lock()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.remove_stream_cdn_config_lock_and_wait_for_state">
+<code class="descname">remove_stream_cdn_config_lock_and_wait_for_state</code><span class="sig-paren">(</span><em>remove_resource_lock_details</em>, <em>stream_cdn_config_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.remove_stream_cdn_config_lock_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_stream_cdn_config_lock" title="oci.media_services.MediaServicesClient.remove_stream_cdn_config_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_stream_cdn_config_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamCdnConfig.html#oci.media_services.models.StreamCdnConfig" title="oci.media_services.models.StreamCdnConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamCdnConfig</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>remove_resource_lock_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.RemoveLockDetails.html#oci.media_services.models.RemoveLockDetails" title="oci.media_services.models.RemoveLockDetails"><em>oci.media_services.models.RemoveLockDetails</em></a>) – (required)
+RemoveResourceLockDetails body parameter</li>
+<li><strong>stream_cdn_config_id</strong> (<em>str</em>) – (required)
+Unique StreamCdnConfig identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.StreamCdnConfig.html#oci.media_services.models.StreamCdnConfig.lifecycle_state" title="oci.media_services.models.StreamCdnConfig.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_stream_cdn_config_lock" title="oci.media_services.MediaServicesClient.remove_stream_cdn_config_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_stream_cdn_config_lock()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.remove_stream_distribution_channel_lock_and_wait_for_state">
+<code class="descname">remove_stream_distribution_channel_lock_and_wait_for_state</code><span class="sig-paren">(</span><em>remove_resource_lock_details</em>, <em>stream_distribution_channel_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.remove_stream_distribution_channel_lock_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_stream_distribution_channel_lock" title="oci.media_services.MediaServicesClient.remove_stream_distribution_channel_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_stream_distribution_channel_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamDistributionChannel.html#oci.media_services.models.StreamDistributionChannel" title="oci.media_services.models.StreamDistributionChannel"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamDistributionChannel</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>remove_resource_lock_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.RemoveLockDetails.html#oci.media_services.models.RemoveLockDetails" title="oci.media_services.models.RemoveLockDetails"><em>oci.media_services.models.RemoveLockDetails</em></a>) – (required)
+RemoveResourceLockDetails body parameter</li>
+<li><strong>stream_distribution_channel_id</strong> (<em>str</em>) – (required)
+Unique Stream Distribution Channel path identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.StreamDistributionChannel.html#oci.media_services.models.StreamDistributionChannel.lifecycle_state" title="oci.media_services.models.StreamDistributionChannel.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_stream_distribution_channel_lock" title="oci.media_services.MediaServicesClient.remove_stream_distribution_channel_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_stream_distribution_channel_lock()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.remove_stream_packaging_config_lock_and_wait_for_state">
+<code class="descname">remove_stream_packaging_config_lock_and_wait_for_state</code><span class="sig-paren">(</span><em>remove_resource_lock_details</em>, <em>stream_packaging_config_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.remove_stream_packaging_config_lock_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_stream_packaging_config_lock" title="oci.media_services.MediaServicesClient.remove_stream_packaging_config_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_stream_packaging_config_lock()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamPackagingConfig.html#oci.media_services.models.StreamPackagingConfig" title="oci.media_services.models.StreamPackagingConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamPackagingConfig</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>remove_resource_lock_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.RemoveLockDetails.html#oci.media_services.models.RemoveLockDetails" title="oci.media_services.models.RemoveLockDetails"><em>oci.media_services.models.RemoveLockDetails</em></a>) – (required)
+RemoveResourceLockDetails body parameter</li>
+<li><strong>stream_packaging_config_id</strong> (<em>str</em>) – (required)
+Unique Stream Packaging Configuration path identifier.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.StreamPackagingConfig.html#oci.media_services.models.StreamPackagingConfig.lifecycle_state" title="oci.media_services.models.StreamPackagingConfig.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.remove_stream_packaging_config_lock" title="oci.media_services.MediaServicesClient.remove_stream_packaging_config_lock"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_stream_packaging_config_lock()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.update_media_asset_and_wait_for_state">
+<code class="descname">update_media_asset_and_wait_for_state</code><span class="sig-paren">(</span><em>media_asset_id</em>, <em>update_media_asset_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.update_media_asset_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_media_asset" title="oci.media_services.MediaServicesClient.update_media_asset"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_media_asset()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaAsset.html#oci.media_services.models.MediaAsset" title="oci.media_services.models.MediaAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaAsset</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>media_asset_id</strong> (<em>str</em>) – (required)
+Unique MediaAsset identifier</li>
+<li><strong>update_media_asset_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.UpdateMediaAssetDetails.html#oci.media_services.models.UpdateMediaAssetDetails" title="oci.media_services.models.UpdateMediaAssetDetails"><em>oci.media_services.models.UpdateMediaAssetDetails</em></a>) – (required)
+The information to be updated.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaAsset.html#oci.media_services.models.MediaAsset.lifecycle_state" title="oci.media_services.models.MediaAsset.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_media_asset" title="oci.media_services.MediaServicesClient.update_media_asset"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_media_asset()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.update_media_workflow_and_wait_for_state">
+<code class="descname">update_media_workflow_and_wait_for_state</code><span class="sig-paren">(</span><em>media_workflow_id</em>, <em>update_media_workflow_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.update_media_workflow_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_media_workflow" title="oci.media_services.MediaServicesClient.update_media_workflow"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_media_workflow()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflow.html#oci.media_services.models.MediaWorkflow" title="oci.media_services.models.MediaWorkflow"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflow</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>media_workflow_id</strong> (<em>str</em>) – (required)
+Unique MediaWorkflow identifier.</li>
+<li><strong>update_media_workflow_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.UpdateMediaWorkflowDetails.html#oci.media_services.models.UpdateMediaWorkflowDetails" title="oci.media_services.models.UpdateMediaWorkflowDetails"><em>oci.media_services.models.UpdateMediaWorkflowDetails</em></a>) – (required)
+The information to be updated.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflow.html#oci.media_services.models.MediaWorkflow.lifecycle_state" title="oci.media_services.models.MediaWorkflow.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_media_workflow" title="oci.media_services.MediaServicesClient.update_media_workflow"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_media_workflow()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.update_media_workflow_configuration_and_wait_for_state">
+<code class="descname">update_media_workflow_configuration_and_wait_for_state</code><span class="sig-paren">(</span><em>media_workflow_configuration_id</em>, <em>update_media_workflow_configuration_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.update_media_workflow_configuration_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_media_workflow_configuration" title="oci.media_services.MediaServicesClient.update_media_workflow_configuration"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_media_workflow_configuration()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowConfiguration.html#oci.media_services.models.MediaWorkflowConfiguration" title="oci.media_services.models.MediaWorkflowConfiguration"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowConfiguration</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>media_workflow_configuration_id</strong> (<em>str</em>) – (required)
+Unique MediaWorkflowConfiguration identifier.</li>
+<li><strong>update_media_workflow_configuration_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.UpdateMediaWorkflowConfigurationDetails.html#oci.media_services.models.UpdateMediaWorkflowConfigurationDetails" title="oci.media_services.models.UpdateMediaWorkflowConfigurationDetails"><em>oci.media_services.models.UpdateMediaWorkflowConfigurationDetails</em></a>) – (required)
+The information to be updated.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowConfiguration.html#oci.media_services.models.MediaWorkflowConfiguration.lifecycle_state" title="oci.media_services.models.MediaWorkflowConfiguration.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_media_workflow_configuration" title="oci.media_services.MediaServicesClient.update_media_workflow_configuration"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_media_workflow_configuration()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.update_media_workflow_job_and_wait_for_state">
+<code class="descname">update_media_workflow_job_and_wait_for_state</code><span class="sig-paren">(</span><em>media_workflow_job_id</em>, <em>update_media_workflow_job_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.update_media_workflow_job_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_media_workflow_job" title="oci.media_services.MediaServicesClient.update_media_workflow_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_media_workflow_job()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowJob.html#oci.media_services.models.MediaWorkflowJob" title="oci.media_services.models.MediaWorkflowJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">MediaWorkflowJob</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>media_workflow_job_id</strong> (<em>str</em>) – (required)
+Unique MediaWorkflowJob identifier.</li>
+<li><strong>update_media_workflow_job_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.UpdateMediaWorkflowJobDetails.html#oci.media_services.models.UpdateMediaWorkflowJobDetails" title="oci.media_services.models.UpdateMediaWorkflowJobDetails"><em>oci.media_services.models.UpdateMediaWorkflowJobDetails</em></a>) – (required)
+The information to be updated.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.MediaWorkflowJob.html#oci.media_services.models.MediaWorkflowJob.lifecycle_state" title="oci.media_services.models.MediaWorkflowJob.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_media_workflow_job" title="oci.media_services.MediaServicesClient.update_media_workflow_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_media_workflow_job()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.update_stream_cdn_config_and_wait_for_state">
+<code class="descname">update_stream_cdn_config_and_wait_for_state</code><span class="sig-paren">(</span><em>stream_cdn_config_id</em>, <em>update_stream_cdn_config_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.update_stream_cdn_config_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_stream_cdn_config" title="oci.media_services.MediaServicesClient.update_stream_cdn_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_stream_cdn_config()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamCdnConfig.html#oci.media_services.models.StreamCdnConfig" title="oci.media_services.models.StreamCdnConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamCdnConfig</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stream_cdn_config_id</strong> (<em>str</em>) – (required)
+Unique StreamCdnConfig identifier.</li>
+<li><strong>update_stream_cdn_config_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.UpdateStreamCdnConfigDetails.html#oci.media_services.models.UpdateStreamCdnConfigDetails" title="oci.media_services.models.UpdateStreamCdnConfigDetails"><em>oci.media_services.models.UpdateStreamCdnConfigDetails</em></a>) – (required)
+The information to be updated.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.StreamCdnConfig.html#oci.media_services.models.StreamCdnConfig.lifecycle_state" title="oci.media_services.models.StreamCdnConfig.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_stream_cdn_config" title="oci.media_services.MediaServicesClient.update_stream_cdn_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_stream_cdn_config()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.update_stream_distribution_channel_and_wait_for_state">
+<code class="descname">update_stream_distribution_channel_and_wait_for_state</code><span class="sig-paren">(</span><em>stream_distribution_channel_id</em>, <em>update_stream_distribution_channel_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.update_stream_distribution_channel_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_stream_distribution_channel" title="oci.media_services.MediaServicesClient.update_stream_distribution_channel"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_stream_distribution_channel()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamDistributionChannel.html#oci.media_services.models.StreamDistributionChannel" title="oci.media_services.models.StreamDistributionChannel"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamDistributionChannel</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stream_distribution_channel_id</strong> (<em>str</em>) – (required)
+Unique Stream Distribution Channel path identifier.</li>
+<li><strong>update_stream_distribution_channel_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.UpdateStreamDistributionChannelDetails.html#oci.media_services.models.UpdateStreamDistributionChannelDetails" title="oci.media_services.models.UpdateStreamDistributionChannelDetails"><em>oci.media_services.models.UpdateStreamDistributionChannelDetails</em></a>) – (required)
+The information to be updated.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.StreamDistributionChannel.html#oci.media_services.models.StreamDistributionChannel.lifecycle_state" title="oci.media_services.models.StreamDistributionChannel.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_stream_distribution_channel" title="oci.media_services.MediaServicesClient.update_stream_distribution_channel"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_stream_distribution_channel()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.media_services.MediaServicesClientCompositeOperations.update_stream_packaging_config_and_wait_for_state">
+<code class="descname">update_stream_packaging_config_and_wait_for_state</code><span class="sig-paren">(</span><em>stream_packaging_config_id</em>, <em>update_stream_packaging_config_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.media_services.MediaServicesClientCompositeOperations.update_stream_packaging_config_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_stream_packaging_config" title="oci.media_services.MediaServicesClient.update_stream_packaging_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_stream_packaging_config()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.media_services.models.StreamPackagingConfig.html#oci.media_services.models.StreamPackagingConfig" title="oci.media_services.models.StreamPackagingConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamPackagingConfig</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stream_packaging_config_id</strong> (<em>str</em>) – (required)
+Unique Stream Packaging Configuration path identifier.</li>
+<li><strong>update_stream_packaging_config_details</strong> (<a class="reference internal" href="../models/oci.media_services.models.UpdateStreamPackagingConfigDetails.html#oci.media_services.models.UpdateStreamPackagingConfigDetails" title="oci.media_services.models.UpdateStreamPackagingConfigDetails"><em>oci.media_services.models.UpdateStreamPackagingConfigDetails</em></a>) – (required)
+The information to be updated.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.media_services.models.StreamPackagingConfig.html#oci.media_services.models.StreamPackagingConfig.lifecycle_state" title="oci.media_services.models.StreamPackagingConfig.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.media_services.MediaServicesClient.html#oci.media_services.MediaServicesClient.update_stream_packaging_config" title="oci.media_services.MediaServicesClient.update_stream_packaging_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_stream_packaging_config()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.media_services.MediaStreamClientCompositeOperations.html" class="btn btn-neutral float-right" title="MediaStreamClientCompositeOperations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.media_services.MediaStreamClient.html" class="btn btn-neutral" title="MediaStreamClient" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

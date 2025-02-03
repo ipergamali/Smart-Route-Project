@@ -1,0 +1,696 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ExecutionWorkflowDetails &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="ExportComplianceReportDetails" href="oci.fleet_apps_management.models.ExportComplianceReportDetails.html" />
+    <link rel="prev" title="ExecutionSummary" href="oci.fleet_apps_management.models.ExecutionSummary.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.fleet_apps_management.FleetAppsManagementAdminClient.html">FleetAppsManagementAdminClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.fleet_apps_management.FleetAppsManagementClient.html">FleetAppsManagementClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.fleet_apps_management.FleetAppsManagementMaintenanceWindowClient.html">FleetAppsManagementMaintenanceWindowClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.fleet_apps_management.FleetAppsManagementOperationsClient.html">FleetAppsManagementOperationsClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.fleet_apps_management.FleetAppsManagementRunbooksClient.html">FleetAppsManagementRunbooksClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.fleet_apps_management.FleetAppsManagementAdminClientCompositeOperations.html">FleetAppsManagementAdminClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.fleet_apps_management.FleetAppsManagementClientCompositeOperations.html">FleetAppsManagementClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.fleet_apps_management.FleetAppsManagementMaintenanceWindowClientCompositeOperations.html">FleetAppsManagementMaintenanceWindowClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.fleet_apps_management.FleetAppsManagementOperationsClientCompositeOperations.html">FleetAppsManagementOperationsClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.fleet_apps_management.FleetAppsManagementRunbooksClientCompositeOperations.html">FleetAppsManagementRunbooksClientCompositeOperations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../fleet_apps_management.html#models">Models</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ActionGroup.html">ActionGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ActionGroupBasedUserActionDetails.html">ActionGroupBasedUserActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ActionGroupDetails.html">ActionGroupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ActivityResourceTarget.html">ActivityResourceTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.AnnouncementCollection.html">AnnouncementCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.AnnouncementSummary.html">AnnouncementSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ApiBasedExecutionDetails.html">ApiBasedExecutionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ArtifactDetails.html">ArtifactDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.AssociatedFleetCredentialDetails.html">AssociatedFleetCredentialDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.AssociatedFleetPropertyDetails.html">AssociatedFleetPropertyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.AssociatedFleetResourceDetails.html">AssociatedFleetResourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.AssociatedLocalTaskDetails.html">AssociatedLocalTaskDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.AssociatedSchedulerDefinition.html">AssociatedSchedulerDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.AssociatedSharedTaskDetails.html">AssociatedSharedTaskDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.AssociatedTaskDetails.html">AssociatedTaskDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Associations.html">Associations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CheckResourceTaggingDetails.html">CheckResourceTaggingDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComplianceDetailPolicy.html">ComplianceDetailPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComplianceDetailProduct.html">ComplianceDetailProduct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComplianceDetailResource.html">ComplianceDetailResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComplianceDetailTarget.html">ComplianceDetailTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CompliancePatchDetail.html">CompliancePatchDetail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CompliancePolicy.html">CompliancePolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CompliancePolicyCollection.html">CompliancePolicyCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CompliancePolicyRule.html">CompliancePolicyRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CompliancePolicyRuleCollection.html">CompliancePolicyRuleCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CompliancePolicyRuleSummary.html">CompliancePolicyRuleSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CompliancePolicySummary.html">CompliancePolicySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComplianceRecord.html">ComplianceRecord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComplianceRecordAggregation.html">ComplianceRecordAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComplianceRecordAggregationCollection.html">ComplianceRecordAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComplianceRecordCollection.html">ComplianceRecordCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComplianceRecordDimension.html">ComplianceRecordDimension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComplianceRecordSummary.html">ComplianceRecordSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComplianceReport.html">ComplianceReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComplianceReportPatchDetail.html">ComplianceReportPatchDetail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComplianceReportProduct.html">ComplianceReportProduct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComplianceReportResource.html">ComplianceReportResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComplianceReportTarget.html">ComplianceReportTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ComponentProperties.html">ComponentProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Condition.html">Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ConfigAssociationDetails.html">ConfigAssociationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ConfigCategoryDetails.html">ConfigCategoryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ConfirmTargetsDetails.html">ConfirmTargetsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ContentDetails.html">ContentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CreateCompliancePolicyRuleDetails.html">CreateCompliancePolicyRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CreateFleetCredentialDetails.html">CreateFleetCredentialDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CreateFleetDetails.html">CreateFleetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CreateFleetPropertyDetails.html">CreateFleetPropertyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CreateFleetResourceDetails.html">CreateFleetResourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CreateMaintenanceWindowDetails.html">CreateMaintenanceWindowDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CreateOnboardingDetails.html">CreateOnboardingDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CreatePatchDetails.html">CreatePatchDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CreatePlatformConfigurationDetails.html">CreatePlatformConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CreatePropertyDetails.html">CreatePropertyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CreateRunbookDetails.html">CreateRunbookDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CreateSchedulerDefinitionDetails.html">CreateSchedulerDefinitionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CreateTaskRecordDetails.html">CreateTaskRecordDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CredentialConfigCategoryDetails.html">CredentialConfigCategoryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CredentialDetails.html">CredentialDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.CredentialEntitySpecificDetails.html">CredentialEntitySpecificDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.DependentPatchDetails.html">DependentPatchDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Details.html">Details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.DiscoveredTarget.html">DiscoveredTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.EnableLatestPolicyDetails.html">EnableLatestPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.EntityExecutionDetails.html">EntityExecutionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.EnvironmentConfigCategoryDetails.html">EnvironmentConfigCategoryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Execution.html">Execution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ExecutionCollection.html">ExecutionCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ExecutionDetails.html">ExecutionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ExecutionSummary.html">ExecutionSummary</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ExecutionWorkflowDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ExportComplianceReportDetails.html">ExportComplianceReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Fleet.html">Fleet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetCollection.html">FleetCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetCredential.html">FleetCredential</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetCredentialCollection.html">FleetCredentialCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetCredentialEntitySpecificDetails.html">FleetCredentialEntitySpecificDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetCredentialSummary.html">FleetCredentialSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetProductCollection.html">FleetProductCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetProductSummary.html">FleetProductSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetProperty.html">FleetProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetPropertyCollection.html">FleetPropertyCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetPropertySummary.html">FleetPropertySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetResource.html">FleetResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetResourceCollection.html">FleetResourceCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetResourceSummary.html">FleetResourceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetSummary.html">FleetSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetTarget.html">FleetTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetTargetCollection.html">FleetTargetCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.FleetTargetSummary.html">FleetTargetSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.GenerateComplianceReportDetails.html">GenerateComplianceReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.GenericArtifact.html">GenericArtifact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.GenericArtifactDetails.html">GenericArtifactDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Group.html">Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.InputArgument.html">InputArgument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.InputParameter.html">InputParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.InventoryResourceCollection.html">InventoryResourceCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.InventoryResourceSummary.html">InventoryResourceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.JobActivity.html">JobActivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.KeyEncryptionCredentialDetails.html">KeyEncryptionCredentialDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.MaintenanceWindow.html">MaintenanceWindow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.MaintenanceWindowCollection.html">MaintenanceWindowCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.MaintenanceWindowSummary.html">MaintenanceWindowSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ManageJobExecutionDetails.html">ManageJobExecutionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ManageSettingsDetails.html">ManageSettingsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ManagedEntityAggregation.html">ManagedEntityAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ManagedEntityAggregationCollection.html">ManagedEntityAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ManagedEntityDimension.html">ManagedEntityDimension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ModelProperty.html">ModelProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.NotificationPreferences.html">NotificationPreferences</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ObjectStorageBucketContentDetails.html">ObjectStorageBucketContentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Onboarding.html">Onboarding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.OnboardingCollection.html">OnboardingCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.OnboardingPolicyCollection.html">OnboardingPolicyCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.OnboardingPolicySummary.html">OnboardingPolicySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.OnboardingSummary.html">OnboardingSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.OperationRunbook.html">OperationRunbook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Outcome.html">Outcome</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.OutputVariableDetails.html">OutputVariableDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.OutputVariableInputArgument.html">OutputVariableInputArgument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.OutputVariableMapping.html">OutputVariableMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Patch.html">Patch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PatchCollection.html">PatchCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PatchLevelSelectionDetails.html">PatchLevelSelectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PatchNameSelectionDetails.html">PatchNameSelectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PatchProduct.html">PatchProduct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PatchReleaseDateSelectionDetails.html">PatchReleaseDateSelectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PatchSelectionDetails.html">PatchSelectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PatchSummary.html">PatchSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PatchType.html">PatchType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PatchTypeConfigCategoryDetails.html">PatchTypeConfigCategoryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PauseDetails.html">PauseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PlainTextCredentialDetails.html">PlainTextCredentialDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PlatformConfiguration.html">PlatformConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PlatformConfigurationCollection.html">PlatformConfigurationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PlatformConfigurationSummary.html">PlatformConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PlatformSpecificArtifact.html">PlatformSpecificArtifact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PlatformSpecificArtifactDetails.html">PlatformSpecificArtifactDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Preferences.html">Preferences</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ProductConfigCategoryDetails.html">ProductConfigCategoryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ProductStackAsProductSubCategoryDetails.html">ProductStackAsProductSubCategoryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ProductStackConfigCategoryDetails.html">ProductStackConfigCategoryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ProductStackGenericSubCategoryDetails.html">ProductStackGenericSubCategoryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ProductStackSubCategoryDetails.html">ProductStackSubCategoryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ProductVersionDetails.html">ProductVersionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Properties.html">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PropertyCollection.html">PropertyCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PropertySummary.html">PropertySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.PublishRunbookDetails.html">PublishRunbookDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.RequestResourceValidationDetails.html">RequestResourceValidationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.RequestTargetDiscoveryDetails.html">RequestTargetDiscoveryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ResourceCollection.html">ResourceCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ResourceCredentialEntitySpecificDetails.html">ResourceCredentialEntitySpecificDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ResourceSummary.html">ResourceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ResourceTagCheckDetails.html">ResourceTagCheckDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ResourceTagEnablementInfo.html">ResourceTagEnablementInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.RollbackWorkflowDetails.html">RollbackWorkflowDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Rule.html">Rule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Runbook.html">Runbook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.RunbookCollection.html">RunbookCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.RunbookSummary.html">RunbookSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Schedule.html">Schedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ScheduledFleetCollection.html">ScheduledFleetCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ScheduledFleetSummary.html">ScheduledFleetSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.SchedulerDefinition.html">SchedulerDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.SchedulerDefinitionCollection.html">SchedulerDefinitionCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.SchedulerDefinitionSummary.html">SchedulerDefinitionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.SchedulerJob.html">SchedulerJob</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.SchedulerJobAggregation.html">SchedulerJobAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.SchedulerJobAggregationCollection.html">SchedulerJobAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.SchedulerJobCollection.html">SchedulerJobCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.SchedulerJobDimension.html">SchedulerJobDimension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.SchedulerJobSummary.html">SchedulerJobSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.ScriptBasedExecutionDetails.html">ScriptBasedExecutionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.SelectionCriteria.html">SelectionCriteria</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.SetDefaultRunbookDetails.html">SetDefaultRunbookDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.StepBasedUserActionDetails.html">StepBasedUserActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.StepCollection.html">StepCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.StepSummary.html">StepSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.StringInputArgument.html">StringInputArgument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.TargetCredentialEntitySpecificDetails.html">TargetCredentialEntitySpecificDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.TargetResource.html">TargetResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Task.html">Task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.TaskArgument.html">TaskArgument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.TaskNotificationPreferences.html">TaskNotificationPreferences</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.TaskRecord.html">TaskRecord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.TaskRecordCollection.html">TaskRecordCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.TaskRecordSummary.html">TaskRecordSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.TaskVariable.html">TaskVariable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.TimeBasedPauseDetails.html">TimeBasedPauseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UpdateCompliancePolicyRuleDetails.html">UpdateCompliancePolicyRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UpdateFleetCredentialDetails.html">UpdateFleetCredentialDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UpdateFleetDetails.html">UpdateFleetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UpdateFleetPropertyDetails.html">UpdateFleetPropertyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UpdateFleetResourceDetails.html">UpdateFleetResourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UpdateMaintenanceWindowDetails.html">UpdateMaintenanceWindowDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UpdateOnboardingDetails.html">UpdateOnboardingDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UpdatePatchDetails.html">UpdatePatchDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UpdatePlatformConfigurationDetails.html">UpdatePlatformConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UpdatePropertyDetails.html">UpdatePropertyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UpdateRunbookDetails.html">UpdateRunbookDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UpdateSchedulerDefinitionDetails.html">UpdateSchedulerDefinitionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UpdateSchedulerJobDetails.html">UpdateSchedulerJobDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UpdateTaskRecordDetails.html">UpdateTaskRecordDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UserActionBasedPauseDetails.html">UserActionBasedPauseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.UserActionDetails.html">UserActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.Variable.html">Variable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.VaultSecretCredentialDetails.html">VaultSecretCredentialDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.WorkRequestErrorCollection.html">WorkRequestErrorCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.WorkRequestLogEntryCollection.html">WorkRequestLogEntryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.WorkRequestResource.html">WorkRequestResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.WorkRequestSummary.html">WorkRequestSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.WorkRequestSummaryCollection.html">WorkRequestSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.WorkflowComponent.html">WorkflowComponent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.WorkflowGroup.html">WorkflowGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.WorkflowGroupComponent.html">WorkflowGroupComponent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.fleet_apps_management.models.WorkflowTaskComponent.html">WorkflowTaskComponent</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../fleet_apps_management.html">Fleet Apps Management</a> &raquo;</li>
+        
+      <li>ExecutionWorkflowDetails</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/fleet_apps_management/models/oci.fleet_apps_management.models.ExecutionWorkflowDetails.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="executionworkflowdetails">
+<h1>ExecutionWorkflowDetails<a class="headerlink" href="#executionworkflowdetails" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.fleet_apps_management.models.ExecutionWorkflowDetails">
+<em class="property">class </em><code class="descclassname">oci.fleet_apps_management.models.</code><code class="descname">ExecutionWorkflowDetails</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.fleet_apps_management.models.ExecutionWorkflowDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Execution Workflow details.</p>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.fleet_apps_management.models.ExecutionWorkflowDetails.__init__" title="oci.fleet_apps_management.models.ExecutionWorkflowDetails.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(**kwargs)</td>
+<td>Initializes a new ExecutionWorkflowDetails object with values from keyword arguments.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attributes</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.fleet_apps_management.models.ExecutionWorkflowDetails.workflow" title="oci.fleet_apps_management.models.ExecutionWorkflowDetails.workflow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workflow</span></code></a></td>
+<td><strong>[Required]</strong> Gets the workflow of this ExecutionWorkflowDetails.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="oci.fleet_apps_management.models.ExecutionWorkflowDetails.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.fleet_apps_management.models.ExecutionWorkflowDetails.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new ExecutionWorkflowDetails object with values from keyword arguments.
+The following keyword arguments are supported (corresponding to the getters/setters of this class):</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>workflow</strong> (<em>list</em><em>[</em><a class="reference internal" href="oci.fleet_apps_management.models.WorkflowGroup.html#oci.fleet_apps_management.models.WorkflowGroup" title="oci.fleet_apps_management.models.WorkflowGroup"><em>oci.fleet_apps_management.models.WorkflowGroup</em></a><em>]</em>) – The value to assign to the workflow property of this ExecutionWorkflowDetails.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.fleet_apps_management.models.ExecutionWorkflowDetails.workflow">
+<code class="descname">workflow</code><a class="headerlink" href="#oci.fleet_apps_management.models.ExecutionWorkflowDetails.workflow" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the workflow of this ExecutionWorkflowDetails.
+Execution Workflow for the runbook.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The workflow of this ExecutionWorkflowDetails.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[<a class="reference internal" href="oci.fleet_apps_management.models.WorkflowGroup.html#oci.fleet_apps_management.models.WorkflowGroup" title="oci.fleet_apps_management.models.WorkflowGroup">oci.fleet_apps_management.models.WorkflowGroup</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.fleet_apps_management.models.ExportComplianceReportDetails.html" class="btn btn-neutral float-right" title="ExportComplianceReportDetails" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.fleet_apps_management.models.ExecutionSummary.html" class="btn btn-neutral" title="ExecutionSummary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

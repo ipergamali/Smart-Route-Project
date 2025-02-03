@@ -1,0 +1,979 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Bds &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="BdsClient" href="bds/client/oci.bds.BdsClient.html" />
+    <link rel="prev" title="WorkRequestSummary" href="bastion/models/oci.bastion.models.WorkRequestSummary.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bastion.html">Bastion</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Bds</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bds/client/oci.bds.BdsClient.html">BdsClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bds/client/oci.bds.BdsClientCompositeOperations.html">BdsClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models">Models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.ActivateBdsMetastoreConfigurationDetails.html">ActivateBdsMetastoreConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.ActivateIamUserSyncConfigurationDetails.html">ActivateIamUserSyncConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.ActivateUpstConfigurationDetails.html">ActivateUpstConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AddAutoScalePolicyDetails.html">AddAutoScalePolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AddAutoScalingConfigurationDetails.html">AddAutoScalingConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AddBlockStorageDetails.html">AddBlockStorageDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AddCloudSqlDetails.html">AddCloudSqlDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AddKafkaDetails.html">AddKafkaDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AddMasterNodesDetails.html">AddMasterNodesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AddMetricBasedHorizontalScalingPolicyDetails.html">AddMetricBasedHorizontalScalingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AddMetricBasedVerticalScalingPolicyDetails.html">AddMetricBasedVerticalScalingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AddScheduleBasedHorizontalScalingPolicyDetails.html">AddScheduleBasedHorizontalScalingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AddScheduleBasedVerticalScalingPolicyDetails.html">AddScheduleBasedVerticalScalingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AddUtilityNodesDetails.html">AddUtilityNodesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AddWorkerNodesDetails.html">AddWorkerNodesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AutoScalePolicy.html">AutoScalePolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AutoScalePolicyDetails.html">AutoScalePolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AutoScalePolicyMetricRule.html">AutoScalePolicyMetricRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AutoScalePolicyRule.html">AutoScalePolicyRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AutoScalingConfiguration.html">AutoScalingConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.AutoScalingConfigurationSummary.html">AutoScalingConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.BackupNodeDetails.html">BackupNodeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.BatchingBasedOdhPatchingConfig.html">BatchingBasedOdhPatchingConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.BatchingBasedPatchingConfigs.html">BatchingBasedPatchingConfigs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.BdsApiKey.html">BdsApiKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.BdsApiKeySummary.html">BdsApiKeySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.BdsClusterVersionSummary.html">BdsClusterVersionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.BdsInstance.html">BdsInstance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.BdsInstanceSummary.html">BdsInstanceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.BdsMetastoreConfiguration.html">BdsMetastoreConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.BdsMetastoreConfigurationSummary.html">BdsMetastoreConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.CertificateServiceInfoDetails.html">CertificateServiceInfoDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.CertificateServiceInfoSummary.html">CertificateServiceInfoSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.ChangeBdsInstanceCompartmentDetails.html">ChangeBdsInstanceCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.ChangeShapeDetails.html">ChangeShapeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.ChangeShapeNodes.html">ChangeShapeNodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.CloudSqlDetails.html">CloudSqlDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.ClusterDetails.html">ClusterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.CreateBdsApiKeyDetails.html">CreateBdsApiKeyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.CreateBdsInstanceDetails.html">CreateBdsInstanceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.CreateBdsMetastoreConfigurationDetails.html">CreateBdsMetastoreConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.CreateIdentityConfigurationDetails.html">CreateIdentityConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.CreateNodeBackupConfigurationDetails.html">CreateNodeBackupConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.CreateNodeDetails.html">CreateNodeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.CreateNodeReplaceConfigurationDetails.html">CreateNodeReplaceConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.CreateResourcePrincipalConfigurationDetails.html">CreateResourcePrincipalConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.DayBasedHorizontalScalingScheduleDetails.html">DayBasedHorizontalScalingScheduleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.DayBasedVerticalScalingScheduleDetails.html">DayBasedVerticalScalingScheduleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.DeactivateIamUserSyncConfigurationDetails.html">DeactivateIamUserSyncConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.DeactivateUpstConfigurationDetails.html">DeactivateUpstConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.DefaultError.html">DefaultError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.DisableCertificateDetails.html">DisableCertificateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.DomainBasedOdhPatchingConfig.html">DomainBasedOdhPatchingConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.DomainBasedPatchingConfigs.html">DomainBasedPatchingConfigs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.DowntimeBasedOdhPatchingConfig.html">DowntimeBasedOdhPatchingConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.DowntimeBasedPatchingConfigs.html">DowntimeBasedPatchingConfigs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.EnableCertificateDetails.html">EnableCertificateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.ExecuteBootstrapScriptDetails.html">ExecuteBootstrapScriptDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.ForceRefreshResourcePrincipalDetails.html">ForceRefreshResourcePrincipalDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.HorizontalScalingScheduleDetails.html">HorizontalScalingScheduleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.HostCertDetails.html">HostCertDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.HostSpecificCertificateDetails.html">HostSpecificCertificateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.IamUserSyncConfiguration.html">IamUserSyncConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.IamUserSyncConfigurationDetails.html">IamUserSyncConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.IdentityConfiguration.html">IdentityConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.IdentityConfigurationSummary.html">IdentityConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.InstallOsPatchDetails.html">InstallOsPatchDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.InstallPatchDetails.html">InstallPatchDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.KerberosDetails.html">KerberosDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.LevelTypeDetails.html">LevelTypeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.MetricBasedHorizontalScaleInConfig.html">MetricBasedHorizontalScaleInConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.MetricBasedHorizontalScaleOutConfig.html">MetricBasedHorizontalScaleOutConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.MetricBasedHorizontalScalingPolicyDetails.html">MetricBasedHorizontalScalingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.MetricBasedVerticalScaleDownConfig.html">MetricBasedVerticalScaleDownConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.MetricBasedVerticalScaleUpConfig.html">MetricBasedVerticalScaleUpConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.MetricBasedVerticalScalingPolicyDetails.html">MetricBasedVerticalScalingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.MetricThresholdRule.html">MetricThresholdRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.NetworkConfig.html">NetworkConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.Node.html">Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.NodeBackup.html">NodeBackup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.NodeBackupConfiguration.html">NodeBackupConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.NodeBackupConfigurationSummary.html">NodeBackupConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.NodeBackupSummary.html">NodeBackupSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.NodeLevelDetails.html">NodeLevelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.NodeReplaceConfiguration.html">NodeReplaceConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.NodeReplaceConfigurationSummary.html">NodeReplaceConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.NodeTypeLevelDetails.html">NodeTypeLevelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.NodeTypeShapeConfig.html">NodeTypeShapeConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.OdhPatchingConfig.html">OdhPatchingConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.OsPatchDetails.html">OsPatchDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.OsPatchPackageSummary.html">OsPatchPackageSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.OsPatchSummary.html">OsPatchSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.PatchHistorySummary.html">PatchHistorySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.PatchSummary.html">PatchSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.PatchingConfigs.html">PatchingConfigs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.RefreshConfidentialApplicationDetails.html">RefreshConfidentialApplicationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.RefreshUpstTokenExchangeKeytabDetails.html">RefreshUpstTokenExchangeKeytabDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.RemoveAutoScalingConfigurationDetails.html">RemoveAutoScalingConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.RemoveCloudSqlDetails.html">RemoveCloudSqlDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.RemoveKafkaDetails.html">RemoveKafkaDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.RemoveNodeDetails.html">RemoveNodeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.RemoveNodeReplaceConfigurationDetails.html">RemoveNodeReplaceConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.RemoveResourcePrincipalConfigurationDetails.html">RemoveResourcePrincipalConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.RenewCertificateDetails.html">RenewCertificateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.ReplaceNodeDetails.html">ReplaceNodeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.ResourcePrincipalConfiguration.html">ResourcePrincipalConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.ResourcePrincipalConfigurationSummary.html">ResourcePrincipalConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.RestartNodeDetails.html">RestartNodeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.ScheduleBasedHorizontalScalingPolicyDetails.html">ScheduleBasedHorizontalScalingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.ScheduleBasedVerticalScalingPolicyDetails.html">ScheduleBasedVerticalScalingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.ShapeConfigDetails.html">ShapeConfigDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.StartBdsInstanceDetails.html">StartBdsInstanceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.StartClusterShapeConfigs.html">StartClusterShapeConfigs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.StopBdsInstanceDetails.html">StopBdsInstanceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.TestBdsMetastoreConfigurationDetails.html">TestBdsMetastoreConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.TestBdsObjectStorageConnectionDetails.html">TestBdsObjectStorageConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.TimeAndHorizontalScalingConfig.html">TimeAndHorizontalScalingConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.TimeAndVerticalScalingConfig.html">TimeAndVerticalScalingConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.UpdateAutoScalePolicyDetails.html">UpdateAutoScalePolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.UpdateAutoScalingConfigurationDetails.html">UpdateAutoScalingConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.UpdateBdsInstanceDetails.html">UpdateBdsInstanceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.UpdateBdsMetastoreConfigurationDetails.html">UpdateBdsMetastoreConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.UpdateIdentityConfigurationDetails.html">UpdateIdentityConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.UpdateMetricBasedHorizontalScalingPolicyDetails.html">UpdateMetricBasedHorizontalScalingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.UpdateMetricBasedVerticalScalingPolicyDetails.html">UpdateMetricBasedVerticalScalingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.UpdateNodeBackupConfigurationDetails.html">UpdateNodeBackupConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.UpdateNodeReplaceConfigurationDetails.html">UpdateNodeReplaceConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.UpdateResourcePrincipalConfigurationDetails.html">UpdateResourcePrincipalConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.UpdateScheduleBasedHorizontalScalingPolicyDetails.html">UpdateScheduleBasedHorizontalScalingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.UpdateScheduleBasedVerticalScalingPolicyDetails.html">UpdateScheduleBasedVerticalScalingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.UpstConfiguration.html">UpstConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.UpstConfigurationDetails.html">UpstConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.VerticalScalingScheduleDetails.html">VerticalScalingScheduleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.VolumeAttachmentDetail.html">VolumeAttachmentDetail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bds/models/oci.bds.models.WorkRequestResource.html">WorkRequestResource</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="landing.html">API Reference</a> &raquo;</li>
+        
+      <li>Bds</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/bds.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bds">
+<h1>Bds<a class="headerlink" href="#bds" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="bds/client/oci.bds.BdsClient.html#oci.bds.BdsClient" title="oci.bds.BdsClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.BdsClient</span></code></a></td>
+<td>REST API for Oracle Big Data Service.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/client/oci.bds.BdsClientCompositeOperations.html#oci.bds.BdsClientCompositeOperations" title="oci.bds.BdsClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.BdsClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="bds/client/oci.bds.BdsClient.html#oci.bds.BdsClient" title="oci.bds.BdsClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">BdsClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.ActivateBdsMetastoreConfigurationDetails.html#oci.bds.models.ActivateBdsMetastoreConfigurationDetails" title="oci.bds.models.ActivateBdsMetastoreConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.ActivateBdsMetastoreConfigurationDetails</span></code></a></td>
+<td>The reqeust body when activating a BDS metastore configuration</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.ActivateIamUserSyncConfigurationDetails.html#oci.bds.models.ActivateIamUserSyncConfigurationDetails" title="oci.bds.models.ActivateIamUserSyncConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.ActivateIamUserSyncConfigurationDetails</span></code></a></td>
+<td>Details for activating IAM user sync configuration</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.ActivateUpstConfigurationDetails.html#oci.bds.models.ActivateUpstConfigurationDetails" title="oci.bds.models.ActivateUpstConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.ActivateUpstConfigurationDetails</span></code></a></td>
+<td>Details for activating UPST config on the cluster</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.AddAutoScalePolicyDetails.html#oci.bds.models.AddAutoScalePolicyDetails" title="oci.bds.models.AddAutoScalePolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AddAutoScalePolicyDetails</span></code></a></td>
+<td>Policy definition for the autoscale configuration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.AddAutoScalingConfigurationDetails.html#oci.bds.models.AddAutoScalingConfigurationDetails" title="oci.bds.models.AddAutoScalingConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AddAutoScalingConfigurationDetails</span></code></a></td>
+<td>The information about the autoscale configuration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.AddBlockStorageDetails.html#oci.bds.models.AddBlockStorageDetails" title="oci.bds.models.AddBlockStorageDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AddBlockStorageDetails</span></code></a></td>
+<td>The information about added block volumes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.AddCloudSqlDetails.html#oci.bds.models.AddCloudSqlDetails" title="oci.bds.models.AddCloudSqlDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AddCloudSqlDetails</span></code></a></td>
+<td>The information about the added Cloud SQL.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.AddKafkaDetails.html#oci.bds.models.AddKafkaDetails" title="oci.bds.models.AddKafkaDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AddKafkaDetails</span></code></a></td>
+<td>The information about the Kafka service to be added.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.AddMasterNodesDetails.html#oci.bds.models.AddMasterNodesDetails" title="oci.bds.models.AddMasterNodesDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AddMasterNodesDetails</span></code></a></td>
+<td>The information about added master nodes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.AddMetricBasedHorizontalScalingPolicyDetails.html#oci.bds.models.AddMetricBasedHorizontalScalingPolicyDetails" title="oci.bds.models.AddMetricBasedHorizontalScalingPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AddMetricBasedHorizontalScalingPolicyDetails</span></code></a></td>
+<td>Details of a metric based horizontal autoscaling policy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.AddMetricBasedVerticalScalingPolicyDetails.html#oci.bds.models.AddMetricBasedVerticalScalingPolicyDetails" title="oci.bds.models.AddMetricBasedVerticalScalingPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AddMetricBasedVerticalScalingPolicyDetails</span></code></a></td>
+<td>Details of a metric based vertical autoscaling policy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.AddScheduleBasedHorizontalScalingPolicyDetails.html#oci.bds.models.AddScheduleBasedHorizontalScalingPolicyDetails" title="oci.bds.models.AddScheduleBasedHorizontalScalingPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AddScheduleBasedHorizontalScalingPolicyDetails</span></code></a></td>
+<td>Details of a schedule based horizontal autoscaling policy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.AddScheduleBasedVerticalScalingPolicyDetails.html#oci.bds.models.AddScheduleBasedVerticalScalingPolicyDetails" title="oci.bds.models.AddScheduleBasedVerticalScalingPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AddScheduleBasedVerticalScalingPolicyDetails</span></code></a></td>
+<td>Details of a schedule based vertical autoscaling policy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.AddUtilityNodesDetails.html#oci.bds.models.AddUtilityNodesDetails" title="oci.bds.models.AddUtilityNodesDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AddUtilityNodesDetails</span></code></a></td>
+<td>The information about added utility nodes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.AddWorkerNodesDetails.html#oci.bds.models.AddWorkerNodesDetails" title="oci.bds.models.AddWorkerNodesDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AddWorkerNodesDetails</span></code></a></td>
+<td>The information about added nodes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.AutoScalePolicy.html#oci.bds.models.AutoScalePolicy" title="oci.bds.models.AutoScalePolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AutoScalePolicy</span></code></a></td>
+<td>This model for autoscaling policy is deprecated and not supported for ODH clusters.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.AutoScalePolicyDetails.html#oci.bds.models.AutoScalePolicyDetails" title="oci.bds.models.AutoScalePolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AutoScalePolicyDetails</span></code></a></td>
+<td>Details of an autoscale policy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.AutoScalePolicyMetricRule.html#oci.bds.models.AutoScalePolicyMetricRule" title="oci.bds.models.AutoScalePolicyMetricRule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AutoScalePolicyMetricRule</span></code></a></td>
+<td>Metric and threshold details for triggering an autoscale action.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.AutoScalePolicyRule.html#oci.bds.models.AutoScalePolicyRule" title="oci.bds.models.AutoScalePolicyRule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AutoScalePolicyRule</span></code></a></td>
+<td>A rule that defines a specific autoscale action to take and the metric that triggers that action.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.AutoScalingConfiguration.html#oci.bds.models.AutoScalingConfiguration" title="oci.bds.models.AutoScalingConfiguration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AutoScalingConfiguration</span></code></a></td>
+<td>The information about the autoscale configuration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.AutoScalingConfigurationSummary.html#oci.bds.models.AutoScalingConfigurationSummary" title="oci.bds.models.AutoScalingConfigurationSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.AutoScalingConfigurationSummary</span></code></a></td>
+<td>The information about the autoscale configuration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.BackupNodeDetails.html#oci.bds.models.BackupNodeDetails" title="oci.bds.models.BackupNodeDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.BackupNodeDetails</span></code></a></td>
+<td>The information about the nodes to backup.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.BatchingBasedOdhPatchingConfig.html#oci.bds.models.BatchingBasedOdhPatchingConfig" title="oci.bds.models.BatchingBasedOdhPatchingConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.BatchingBasedOdhPatchingConfig</span></code></a></td>
+<td>Patching configurations which allows patch the nodes batch by batch.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.BatchingBasedPatchingConfigs.html#oci.bds.models.BatchingBasedPatchingConfigs" title="oci.bds.models.BatchingBasedPatchingConfigs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.BatchingBasedPatchingConfigs</span></code></a></td>
+<td>Configuration that applies the patch in batches, the batch size is a user defined parameter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.BdsApiKey.html#oci.bds.models.BdsApiKey" title="oci.bds.models.BdsApiKey"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.BdsApiKey</span></code></a></td>
+<td>The API key information.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.BdsApiKeySummary.html#oci.bds.models.BdsApiKeySummary" title="oci.bds.models.BdsApiKeySummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.BdsApiKeySummary</span></code></a></td>
+<td>The API key summary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.BdsClusterVersionSummary.html#oci.bds.models.BdsClusterVersionSummary" title="oci.bds.models.BdsClusterVersionSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.BdsClusterVersionSummary</span></code></a></td>
+<td>Cluster version details including bds and odh version information.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.BdsInstance.html#oci.bds.models.BdsInstance" title="oci.bds.models.BdsInstance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.BdsInstance</span></code></a></td>
+<td>Description of the cluster.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.BdsInstanceSummary.html#oci.bds.models.BdsInstanceSummary" title="oci.bds.models.BdsInstanceSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.BdsInstanceSummary</span></code></a></td>
+<td>Summary details of the Big Data Service cluster.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.BdsMetastoreConfiguration.html#oci.bds.models.BdsMetastoreConfiguration" title="oci.bds.models.BdsMetastoreConfiguration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.BdsMetastoreConfiguration</span></code></a></td>
+<td>The metastore configuration information.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.BdsMetastoreConfigurationSummary.html#oci.bds.models.BdsMetastoreConfigurationSummary" title="oci.bds.models.BdsMetastoreConfigurationSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.BdsMetastoreConfigurationSummary</span></code></a></td>
+<td>The summary of metastore configuration information.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.CertificateServiceInfoDetails.html#oci.bds.models.CertificateServiceInfoDetails" title="oci.bds.models.CertificateServiceInfoDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.CertificateServiceInfoDetails</span></code></a></td>
+<td>Details for certificate service info</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.CertificateServiceInfoSummary.html#oci.bds.models.CertificateServiceInfoSummary" title="oci.bds.models.CertificateServiceInfoSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.CertificateServiceInfoSummary</span></code></a></td>
+<td>List of TLS/SSL information of services</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.ChangeBdsInstanceCompartmentDetails.html#oci.bds.models.ChangeBdsInstanceCompartmentDetails" title="oci.bds.models.ChangeBdsInstanceCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.ChangeBdsInstanceCompartmentDetails</span></code></a></td>
+<td>Move a Cluster to a Different Compartment</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.ChangeShapeDetails.html#oci.bds.models.ChangeShapeDetails" title="oci.bds.models.ChangeShapeDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.ChangeShapeDetails</span></code></a></td>
+<td>Resize details specified for individual nodes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.ChangeShapeNodes.html#oci.bds.models.ChangeShapeNodes" title="oci.bds.models.ChangeShapeNodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.ChangeShapeNodes</span></code></a></td>
+<td>Individual worker nodes groups details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.CloudSqlDetails.html#oci.bds.models.CloudSqlDetails" title="oci.bds.models.CloudSqlDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.CloudSqlDetails</span></code></a></td>
+<td>The information about added Cloud SQL capability</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.ClusterDetails.html#oci.bds.models.ClusterDetails" title="oci.bds.models.ClusterDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.ClusterDetails</span></code></a></td>
+<td>Specific info about a Hadoop cluster</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.CreateBdsApiKeyDetails.html#oci.bds.models.CreateBdsApiKeyDetails" title="oci.bds.models.CreateBdsApiKeyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.CreateBdsApiKeyDetails</span></code></a></td>
+<td>API key created on user’s behalf.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.CreateBdsInstanceDetails.html#oci.bds.models.CreateBdsInstanceDetails" title="oci.bds.models.CreateBdsInstanceDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.CreateBdsInstanceDetails</span></code></a></td>
+<td>The information about the new cluster.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.CreateBdsMetastoreConfigurationDetails.html#oci.bds.models.CreateBdsMetastoreConfigurationDetails" title="oci.bds.models.CreateBdsMetastoreConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.CreateBdsMetastoreConfigurationDetails</span></code></a></td>
+<td>The request body when creating BDS metastore configuration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.CreateIdentityConfigurationDetails.html#oci.bds.models.CreateIdentityConfigurationDetails" title="oci.bds.models.CreateIdentityConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.CreateIdentityConfigurationDetails</span></code></a></td>
+<td>Details for creating the identity configuration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.CreateNodeBackupConfigurationDetails.html#oci.bds.models.CreateNodeBackupConfigurationDetails" title="oci.bds.models.CreateNodeBackupConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.CreateNodeBackupConfigurationDetails</span></code></a></td>
+<td>The information about the NodeBackupConfiguration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.CreateNodeDetails.html#oci.bds.models.CreateNodeDetails" title="oci.bds.models.CreateNodeDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.CreateNodeDetails</span></code></a></td>
+<td>The information about the new node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.CreateNodeReplaceConfigurationDetails.html#oci.bds.models.CreateNodeReplaceConfigurationDetails" title="oci.bds.models.CreateNodeReplaceConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.CreateNodeReplaceConfigurationDetails</span></code></a></td>
+<td>The information about the NodeReplaceConfiguration</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.CreateResourcePrincipalConfigurationDetails.html#oci.bds.models.CreateResourcePrincipalConfigurationDetails" title="oci.bds.models.CreateResourcePrincipalConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.CreateResourcePrincipalConfigurationDetails</span></code></a></td>
+<td>Details of creating a resource principal configuration for the cluster.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.DayBasedHorizontalScalingScheduleDetails.html#oci.bds.models.DayBasedHorizontalScalingScheduleDetails" title="oci.bds.models.DayBasedHorizontalScalingScheduleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.DayBasedHorizontalScalingScheduleDetails</span></code></a></td>
+<td>Details of day based horizontal scaling schedule.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.DayBasedVerticalScalingScheduleDetails.html#oci.bds.models.DayBasedVerticalScalingScheduleDetails" title="oci.bds.models.DayBasedVerticalScalingScheduleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.DayBasedVerticalScalingScheduleDetails</span></code></a></td>
+<td>Details of day based vertical scaling schedule.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.DeactivateIamUserSyncConfigurationDetails.html#oci.bds.models.DeactivateIamUserSyncConfigurationDetails" title="oci.bds.models.DeactivateIamUserSyncConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.DeactivateIamUserSyncConfigurationDetails</span></code></a></td>
+<td>Details for deactivating an IAM user sync configuration</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.DeactivateUpstConfigurationDetails.html#oci.bds.models.DeactivateUpstConfigurationDetails" title="oci.bds.models.DeactivateUpstConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.DeactivateUpstConfigurationDetails</span></code></a></td>
+<td>Details for deleting UPST config from cluster</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.DefaultError.html#oci.bds.models.DefaultError" title="oci.bds.models.DefaultError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.DefaultError</span></code></a></td>
+<td>Error Information.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.DisableCertificateDetails.html#oci.bds.models.DisableCertificateDetails" title="oci.bds.models.DisableCertificateDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.DisableCertificateDetails</span></code></a></td>
+<td>The request body info about disable certificate service list.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.DomainBasedOdhPatchingConfig.html#oci.bds.models.DomainBasedOdhPatchingConfig" title="oci.bds.models.DomainBasedOdhPatchingConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.DomainBasedOdhPatchingConfig</span></code></a></td>
+<td>This patching config will patch all nodes in one AD/FD at a time.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.DomainBasedPatchingConfigs.html#oci.bds.models.DomainBasedPatchingConfigs" title="oci.bds.models.DomainBasedPatchingConfigs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.DomainBasedPatchingConfigs</span></code></a></td>
+<td>This patching config will patch all nodes in one AD/FD at a time.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.DowntimeBasedOdhPatchingConfig.html#oci.bds.models.DowntimeBasedOdhPatchingConfig" title="oci.bds.models.DowntimeBasedOdhPatchingConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.DowntimeBasedOdhPatchingConfig</span></code></a></td>
+<td>Patching configurations which allows downtime.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.DowntimeBasedPatchingConfigs.html#oci.bds.models.DowntimeBasedPatchingConfigs" title="oci.bds.models.DowntimeBasedPatchingConfigs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.DowntimeBasedPatchingConfigs</span></code></a></td>
+<td>Patching configurations which allows downtime.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.EnableCertificateDetails.html#oci.bds.models.EnableCertificateDetails" title="oci.bds.models.EnableCertificateDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.EnableCertificateDetails</span></code></a></td>
+<td>The request body info about configure certificate service list.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.ExecuteBootstrapScriptDetails.html#oci.bds.models.ExecuteBootstrapScriptDetails" title="oci.bds.models.ExecuteBootstrapScriptDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.ExecuteBootstrapScriptDetails</span></code></a></td>
+<td>The information about the bootstrap script to be executed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.ForceRefreshResourcePrincipalDetails.html#oci.bds.models.ForceRefreshResourcePrincipalDetails" title="oci.bds.models.ForceRefreshResourcePrincipalDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.ForceRefreshResourcePrincipalDetails</span></code></a></td>
+<td>Force Refresh Resource Principal Session Token Details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.HorizontalScalingScheduleDetails.html#oci.bds.models.HorizontalScalingScheduleDetails" title="oci.bds.models.HorizontalScalingScheduleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.HorizontalScalingScheduleDetails</span></code></a></td>
+<td>Details of a horizontal scaling schedule.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.HostCertDetails.html#oci.bds.models.HostCertDetails" title="oci.bds.models.HostCertDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.HostCertDetails</span></code></a></td>
+<td>Details about the host and corresponding certificate.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.HostSpecificCertificateDetails.html#oci.bds.models.HostSpecificCertificateDetails" title="oci.bds.models.HostSpecificCertificateDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.HostSpecificCertificateDetails</span></code></a></td>
+<td>Host specific certificate details</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.IamUserSyncConfiguration.html#oci.bds.models.IamUserSyncConfiguration" title="oci.bds.models.IamUserSyncConfiguration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.IamUserSyncConfiguration</span></code></a></td>
+<td>Information about the IAM user sync configuration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.IamUserSyncConfigurationDetails.html#oci.bds.models.IamUserSyncConfigurationDetails" title="oci.bds.models.IamUserSyncConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.IamUserSyncConfigurationDetails</span></code></a></td>
+<td>Details for activating/updating an IAM user sync configuration</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.IdentityConfiguration.html#oci.bds.models.IdentityConfiguration" title="oci.bds.models.IdentityConfiguration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.IdentityConfiguration</span></code></a></td>
+<td>Details about the identity configuration</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.IdentityConfigurationSummary.html#oci.bds.models.IdentityConfigurationSummary" title="oci.bds.models.IdentityConfigurationSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.IdentityConfigurationSummary</span></code></a></td>
+<td>Summary of the identity config</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.InstallOsPatchDetails.html#oci.bds.models.InstallOsPatchDetails" title="oci.bds.models.InstallOsPatchDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.InstallOsPatchDetails</span></code></a></td>
+<td>Os patch details for installing a os patches to a cluster.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.InstallPatchDetails.html#oci.bds.models.InstallPatchDetails" title="oci.bds.models.InstallPatchDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.InstallPatchDetails</span></code></a></td>
+<td>The reqeust body while installing a patch to a cluster.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.KerberosDetails.html#oci.bds.models.KerberosDetails" title="oci.bds.models.KerberosDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.KerberosDetails</span></code></a></td>
+<td>Details about the Kerberos principals.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.LevelTypeDetails.html#oci.bds.models.LevelTypeDetails" title="oci.bds.models.LevelTypeDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.LevelTypeDetails</span></code></a></td>
+<td>Details of the type of level used to trigger the creation of a new node backup configuration or node replacement configuration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.MetricBasedHorizontalScaleInConfig.html#oci.bds.models.MetricBasedHorizontalScaleInConfig" title="oci.bds.models.MetricBasedHorizontalScaleInConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.MetricBasedHorizontalScaleInConfig</span></code></a></td>
+<td>Configration for a metric based horizontal scale-in policy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.MetricBasedHorizontalScaleOutConfig.html#oci.bds.models.MetricBasedHorizontalScaleOutConfig" title="oci.bds.models.MetricBasedHorizontalScaleOutConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.MetricBasedHorizontalScaleOutConfig</span></code></a></td>
+<td>Configration for a metric based horizontal scale-out policy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.MetricBasedHorizontalScalingPolicyDetails.html#oci.bds.models.MetricBasedHorizontalScalingPolicyDetails" title="oci.bds.models.MetricBasedHorizontalScalingPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.MetricBasedHorizontalScalingPolicyDetails</span></code></a></td>
+<td>Details of a metric based horizontal autoscaling policy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.MetricBasedVerticalScaleDownConfig.html#oci.bds.models.MetricBasedVerticalScaleDownConfig" title="oci.bds.models.MetricBasedVerticalScaleDownConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.MetricBasedVerticalScaleDownConfig</span></code></a></td>
+<td>Configration for a metric based vertical scale-down policy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.MetricBasedVerticalScaleUpConfig.html#oci.bds.models.MetricBasedVerticalScaleUpConfig" title="oci.bds.models.MetricBasedVerticalScaleUpConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.MetricBasedVerticalScaleUpConfig</span></code></a></td>
+<td>Configration for a metric based vertical scale-up policy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.MetricBasedVerticalScalingPolicyDetails.html#oci.bds.models.MetricBasedVerticalScalingPolicyDetails" title="oci.bds.models.MetricBasedVerticalScalingPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.MetricBasedVerticalScalingPolicyDetails</span></code></a></td>
+<td>Details of a metric based vertical autoscaling policy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.MetricThresholdRule.html#oci.bds.models.MetricThresholdRule" title="oci.bds.models.MetricThresholdRule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.MetricThresholdRule</span></code></a></td>
+<td>An autoscale action is triggered when a performance metric exceeds a threshold.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.NetworkConfig.html#oci.bds.models.NetworkConfig" title="oci.bds.models.NetworkConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.NetworkConfig</span></code></a></td>
+<td>Additional configuration of the user’s network.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.Node.html#oci.bds.models.Node" title="oci.bds.models.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.Node</span></code></a></td>
+<td>Details about a node.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.NodeBackup.html#oci.bds.models.NodeBackup" title="oci.bds.models.NodeBackup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.NodeBackup</span></code></a></td>
+<td>The information about the Node’s backup.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.NodeBackupConfiguration.html#oci.bds.models.NodeBackupConfiguration" title="oci.bds.models.NodeBackupConfiguration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.NodeBackupConfiguration</span></code></a></td>
+<td>The information about the NodeBackupConfiguration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.NodeBackupConfigurationSummary.html#oci.bds.models.NodeBackupConfigurationSummary" title="oci.bds.models.NodeBackupConfigurationSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.NodeBackupConfigurationSummary</span></code></a></td>
+<td>The information about the NodeBackupConfiguration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.NodeBackupSummary.html#oci.bds.models.NodeBackupSummary" title="oci.bds.models.NodeBackupSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.NodeBackupSummary</span></code></a></td>
+<td>The information about the nodeBackupSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.NodeLevelDetails.html#oci.bds.models.NodeLevelDetails" title="oci.bds.models.NodeLevelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.NodeLevelDetails</span></code></a></td>
+<td>Details of node level used to trigger the creation of a new node backup configuration and node replacement configuration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.NodeReplaceConfiguration.html#oci.bds.models.NodeReplaceConfiguration" title="oci.bds.models.NodeReplaceConfiguration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.NodeReplaceConfiguration</span></code></a></td>
+<td>The information about the NodeReplaceConfiguration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.NodeReplaceConfigurationSummary.html#oci.bds.models.NodeReplaceConfigurationSummary" title="oci.bds.models.NodeReplaceConfigurationSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.NodeReplaceConfigurationSummary</span></code></a></td>
+<td>The information about the NodeReplaceConfigurationSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.NodeTypeLevelDetails.html#oci.bds.models.NodeTypeLevelDetails" title="oci.bds.models.NodeTypeLevelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.NodeTypeLevelDetails</span></code></a></td>
+<td>Details of node type level used to trigger the creation of a new node backup configuration and node replacement configuration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.NodeTypeShapeConfig.html#oci.bds.models.NodeTypeShapeConfig" title="oci.bds.models.NodeTypeShapeConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.NodeTypeShapeConfig</span></code></a></td>
+<td>Shape configuration at node type level.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.OdhPatchingConfig.html#oci.bds.models.OdhPatchingConfig" title="oci.bds.models.OdhPatchingConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.OdhPatchingConfig</span></code></a></td>
+<td>Detailed configurations for defining the behavior when installing ODH patches.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.OsPatchDetails.html#oci.bds.models.OsPatchDetails" title="oci.bds.models.OsPatchDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.OsPatchDetails</span></code></a></td>
+<td>Details of an os patch.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.OsPatchPackageSummary.html#oci.bds.models.OsPatchPackageSummary" title="oci.bds.models.OsPatchPackageSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.OsPatchPackageSummary</span></code></a></td>
+<td>Summary of a package contained in a os patch.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.OsPatchSummary.html#oci.bds.models.OsPatchSummary" title="oci.bds.models.OsPatchSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.OsPatchSummary</span></code></a></td>
+<td>Summary of an available os patch to a cluster.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.PatchHistorySummary.html#oci.bds.models.PatchHistorySummary" title="oci.bds.models.PatchHistorySummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.PatchHistorySummary</span></code></a></td>
+<td>Patch history of this cluster.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.PatchSummary.html#oci.bds.models.PatchSummary" title="oci.bds.models.PatchSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.PatchSummary</span></code></a></td>
+<td>The patch that is currently available for the cluster.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.PatchingConfigs.html#oci.bds.models.PatchingConfigs" title="oci.bds.models.PatchingConfigs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.PatchingConfigs</span></code></a></td>
+<td>Detailed configurations for defining the behavior when installing os patches.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.RefreshConfidentialApplicationDetails.html#oci.bds.models.RefreshConfidentialApplicationDetails" title="oci.bds.models.RefreshConfidentialApplicationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.RefreshConfidentialApplicationDetails</span></code></a></td>
+<td>Details for refreshing confidential application</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.RefreshUpstTokenExchangeKeytabDetails.html#oci.bds.models.RefreshUpstTokenExchangeKeytabDetails" title="oci.bds.models.RefreshUpstTokenExchangeKeytabDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.RefreshUpstTokenExchangeKeytabDetails</span></code></a></td>
+<td>Details for refreshing User Principal Session (UPST) token exchange keytab</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.RemoveAutoScalingConfigurationDetails.html#oci.bds.models.RemoveAutoScalingConfigurationDetails" title="oci.bds.models.RemoveAutoScalingConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.RemoveAutoScalingConfigurationDetails</span></code></a></td>
+<td>The information about the removed autoscale configuration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.RemoveCloudSqlDetails.html#oci.bds.models.RemoveCloudSqlDetails" title="oci.bds.models.RemoveCloudSqlDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.RemoveCloudSqlDetails</span></code></a></td>
+<td>The information about the Cloud SQL installation that was removed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.RemoveKafkaDetails.html#oci.bds.models.RemoveKafkaDetails" title="oci.bds.models.RemoveKafkaDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.RemoveKafkaDetails</span></code></a></td>
+<td>The information about the Kafka installation to be removed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.RemoveNodeDetails.html#oci.bds.models.RemoveNodeDetails" title="oci.bds.models.RemoveNodeDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.RemoveNodeDetails</span></code></a></td>
+<td>The information about node to be removed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.RemoveNodeReplaceConfigurationDetails.html#oci.bds.models.RemoveNodeReplaceConfigurationDetails" title="oci.bds.models.RemoveNodeReplaceConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.RemoveNodeReplaceConfigurationDetails</span></code></a></td>
+<td>The information about the NodeReplaceConfiguration that being removed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.RemoveResourcePrincipalConfigurationDetails.html#oci.bds.models.RemoveResourcePrincipalConfigurationDetails" title="oci.bds.models.RemoveResourcePrincipalConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.RemoveResourcePrincipalConfigurationDetails</span></code></a></td>
+<td>Details of removing a resource principal configuration for the cluster.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.RenewCertificateDetails.html#oci.bds.models.RenewCertificateDetails" title="oci.bds.models.RenewCertificateDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.RenewCertificateDetails</span></code></a></td>
+<td>The request body info about renew certificate service list.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.ReplaceNodeDetails.html#oci.bds.models.ReplaceNodeDetails" title="oci.bds.models.ReplaceNodeDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.ReplaceNodeDetails</span></code></a></td>
+<td>The information about the node to be replaced.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.ResourcePrincipalConfiguration.html#oci.bds.models.ResourcePrincipalConfiguration" title="oci.bds.models.ResourcePrincipalConfiguration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.ResourcePrincipalConfiguration</span></code></a></td>
+<td>Resource Principal Session Token Details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.ResourcePrincipalConfigurationSummary.html#oci.bds.models.ResourcePrincipalConfigurationSummary" title="oci.bds.models.ResourcePrincipalConfigurationSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.ResourcePrincipalConfigurationSummary</span></code></a></td>
+<td>Resource Principal Session Token Details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.RestartNodeDetails.html#oci.bds.models.RestartNodeDetails" title="oci.bds.models.RestartNodeDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.RestartNodeDetails</span></code></a></td>
+<td>The information about restarted node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.ScheduleBasedHorizontalScalingPolicyDetails.html#oci.bds.models.ScheduleBasedHorizontalScalingPolicyDetails" title="oci.bds.models.ScheduleBasedHorizontalScalingPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.ScheduleBasedHorizontalScalingPolicyDetails</span></code></a></td>
+<td>Details of a schedule based horizontal autoscaling policy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.ScheduleBasedVerticalScalingPolicyDetails.html#oci.bds.models.ScheduleBasedVerticalScalingPolicyDetails" title="oci.bds.models.ScheduleBasedVerticalScalingPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.ScheduleBasedVerticalScalingPolicyDetails</span></code></a></td>
+<td>Details of a schedule based vertical autoscaling policy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.ShapeConfigDetails.html#oci.bds.models.ShapeConfigDetails" title="oci.bds.models.ShapeConfigDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.ShapeConfigDetails</span></code></a></td>
+<td>The shape configuration requested for the node.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.StartBdsInstanceDetails.html#oci.bds.models.StartBdsInstanceDetails" title="oci.bds.models.StartBdsInstanceDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.StartBdsInstanceDetails</span></code></a></td>
+<td>The request body for starting a BDS cluster.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.StartClusterShapeConfigs.html#oci.bds.models.StartClusterShapeConfigs" title="oci.bds.models.StartClusterShapeConfigs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.StartClusterShapeConfigs</span></code></a></td>
+<td>The shape configuration to be used to start the cluster.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.StopBdsInstanceDetails.html#oci.bds.models.StopBdsInstanceDetails" title="oci.bds.models.StopBdsInstanceDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.StopBdsInstanceDetails</span></code></a></td>
+<td>The request body for stopping a BDS cluster.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.TestBdsMetastoreConfigurationDetails.html#oci.bds.models.TestBdsMetastoreConfigurationDetails" title="oci.bds.models.TestBdsMetastoreConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.TestBdsMetastoreConfigurationDetails</span></code></a></td>
+<td>The reqeust body when testing a BDS metastore configuration</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.TestBdsObjectStorageConnectionDetails.html#oci.bds.models.TestBdsObjectStorageConnectionDetails" title="oci.bds.models.TestBdsObjectStorageConnectionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.TestBdsObjectStorageConnectionDetails</span></code></a></td>
+<td>Test access to specified Object Storage bucket using the API key.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.TimeAndHorizontalScalingConfig.html#oci.bds.models.TimeAndHorizontalScalingConfig" title="oci.bds.models.TimeAndHorizontalScalingConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.TimeAndHorizontalScalingConfig</span></code></a></td>
+<td>Time of day and horizontal scaling configuration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.TimeAndVerticalScalingConfig.html#oci.bds.models.TimeAndVerticalScalingConfig" title="oci.bds.models.TimeAndVerticalScalingConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.TimeAndVerticalScalingConfig</span></code></a></td>
+<td>Time of day and vertical scaling configuration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.UpdateAutoScalePolicyDetails.html#oci.bds.models.UpdateAutoScalePolicyDetails" title="oci.bds.models.UpdateAutoScalePolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.UpdateAutoScalePolicyDetails</span></code></a></td>
+<td>Update details of an autoscaling policy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.UpdateAutoScalingConfigurationDetails.html#oci.bds.models.UpdateAutoScalingConfigurationDetails" title="oci.bds.models.UpdateAutoScalingConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.UpdateAutoScalingConfigurationDetails</span></code></a></td>
+<td>The information about the autoscale configuration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.UpdateBdsInstanceDetails.html#oci.bds.models.UpdateBdsInstanceDetails" title="oci.bds.models.UpdateBdsInstanceDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.UpdateBdsInstanceDetails</span></code></a></td>
+<td>The information about to-be-updated Big Data Service cluster.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.UpdateBdsMetastoreConfigurationDetails.html#oci.bds.models.UpdateBdsMetastoreConfigurationDetails" title="oci.bds.models.UpdateBdsMetastoreConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.UpdateBdsMetastoreConfigurationDetails</span></code></a></td>
+<td>The request body when updating BDS metastore configuration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.UpdateIdentityConfigurationDetails.html#oci.bds.models.UpdateIdentityConfigurationDetails" title="oci.bds.models.UpdateIdentityConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.UpdateIdentityConfigurationDetails</span></code></a></td>
+<td>Details for updating identity config on the cluster</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.UpdateMetricBasedHorizontalScalingPolicyDetails.html#oci.bds.models.UpdateMetricBasedHorizontalScalingPolicyDetails" title="oci.bds.models.UpdateMetricBasedHorizontalScalingPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.UpdateMetricBasedHorizontalScalingPolicyDetails</span></code></a></td>
+<td>Update details of a metric based horizontal autoscaling policy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.UpdateMetricBasedVerticalScalingPolicyDetails.html#oci.bds.models.UpdateMetricBasedVerticalScalingPolicyDetails" title="oci.bds.models.UpdateMetricBasedVerticalScalingPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.UpdateMetricBasedVerticalScalingPolicyDetails</span></code></a></td>
+<td>Update details of a metric based vertical autoscaling policy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.UpdateNodeBackupConfigurationDetails.html#oci.bds.models.UpdateNodeBackupConfigurationDetails" title="oci.bds.models.UpdateNodeBackupConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.UpdateNodeBackupConfigurationDetails</span></code></a></td>
+<td>The information about the NodeBackupConfiguration that is being updated.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.UpdateNodeReplaceConfigurationDetails.html#oci.bds.models.UpdateNodeReplaceConfigurationDetails" title="oci.bds.models.UpdateNodeReplaceConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.UpdateNodeReplaceConfigurationDetails</span></code></a></td>
+<td>The information about the NodeReplaceConfiguration</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.UpdateResourcePrincipalConfigurationDetails.html#oci.bds.models.UpdateResourcePrincipalConfigurationDetails" title="oci.bds.models.UpdateResourcePrincipalConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.UpdateResourcePrincipalConfigurationDetails</span></code></a></td>
+<td>Details of updating the resource principal configuration for the cluster.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.UpdateScheduleBasedHorizontalScalingPolicyDetails.html#oci.bds.models.UpdateScheduleBasedHorizontalScalingPolicyDetails" title="oci.bds.models.UpdateScheduleBasedHorizontalScalingPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.UpdateScheduleBasedHorizontalScalingPolicyDetails</span></code></a></td>
+<td>Update details of a schedule based horizontal autoscaling policy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.UpdateScheduleBasedVerticalScalingPolicyDetails.html#oci.bds.models.UpdateScheduleBasedVerticalScalingPolicyDetails" title="oci.bds.models.UpdateScheduleBasedVerticalScalingPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.UpdateScheduleBasedVerticalScalingPolicyDetails</span></code></a></td>
+<td>Update details of a schedule based vertical autoscaling policy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.UpstConfiguration.html#oci.bds.models.UpstConfiguration" title="oci.bds.models.UpstConfiguration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.UpstConfiguration</span></code></a></td>
+<td>Information about the UPST configuration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.UpstConfigurationDetails.html#oci.bds.models.UpstConfigurationDetails" title="oci.bds.models.UpstConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.UpstConfigurationDetails</span></code></a></td>
+<td>Details for activating/updating UPST config on the cluster</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.VerticalScalingScheduleDetails.html#oci.bds.models.VerticalScalingScheduleDetails" title="oci.bds.models.VerticalScalingScheduleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.VerticalScalingScheduleDetails</span></code></a></td>
+<td>Details of a vertical scaling schedule.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.VolumeAttachmentDetail.html#oci.bds.models.VolumeAttachmentDetail" title="oci.bds.models.VolumeAttachmentDetail"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.VolumeAttachmentDetail</span></code></a></td>
+<td>A detail of the attached block volume.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.WorkRequest.html#oci.bds.models.WorkRequest" title="oci.bds.models.WorkRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.WorkRequest</span></code></a></td>
+<td>Description of the work request status.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.WorkRequestError.html#oci.bds.models.WorkRequestError" title="oci.bds.models.WorkRequestError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.WorkRequestError</span></code></a></td>
+<td>An error encountered while executing a work request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bds/models/oci.bds.models.WorkRequestLogEntry.html#oci.bds.models.WorkRequestLogEntry" title="oci.bds.models.WorkRequestLogEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.WorkRequestLogEntry</span></code></a></td>
+<td>A log message from the execution of a work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bds/models/oci.bds.models.WorkRequestResource.html#oci.bds.models.WorkRequestResource" title="oci.bds.models.WorkRequestResource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.bds.models.WorkRequestResource</span></code></a></td>
+<td>A resource created or operated on by a work request.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bds/client/oci.bds.BdsClient.html" class="btn btn-neutral float-right" title="BdsClient" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bastion/models/oci.bastion.models.WorkRequestSummary.html" class="btn btn-neutral" title="WorkRequestSummary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

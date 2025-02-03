@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Logging &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Exception handling" href="exceptions.html" />
+    <link rel="prev" title="Known Issues" href="known-issues.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="known-issues.html">Known Issues</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Logging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#request-logging">Request Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#disable-logging">Disable Logging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/landing.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Logging</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/logging.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <script type='text/javascript'>
+    var oldDocsHost = 'oracle-bare-metal-cloud-services-python-sdk';
+    if (window.location.href.indexOf(oldDocsHost) != -1) {
+        window.location.href = 'https://oracle-bare-metal-cloud-services-python-sdk.readthedocs.io/en/latest/deprecation-notice.html';
+    }
+</script><div class="section" id="logging">
+<h1>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h1>
+<p>The Python SDK uses Python’s <a class="reference external" href="https://docs.python.org/3.6/library/logging.html">logging</a> module.</p>
+<p>Loggers for the Python SDK are ordered hierarchically, with the top level being <code class="docutils literal notranslate"><span class="pre">oci</span></code> (or <code class="docutils literal notranslate"><span class="pre">oraclebmc</span></code> if you are using the legacy OracleBMC package).</p>
+<p>Logger names are of the form <code class="docutils literal notranslate"><span class="pre">&lt;hierarchy&gt;.&lt;id&gt;</span></code> where the <code class="docutils literal notranslate"><span class="pre">&lt;hierarchy&gt;</span></code> is similar to <code class="docutils literal notranslate"><span class="pre">oci.base_client</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;id&gt;</span></code> is the result of Python’s built-in <code class="docutils literal notranslate"><span class="pre">id()</span></code> function. The implication of this is that different instances of the same class have different loggers.</p>
+<p>The following code snippet is an example for configuring debug level logging for the oci package:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">oci</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="c1"># Enable debug logging</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;oci&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+
+<span class="c1"># Rest of code ...</span>
+</pre></div>
+</div>
+<div class="section" id="request-logging">
+<h2>Request Logging<a class="headerlink" href="#request-logging" title="Permalink to this headline">¶</a></h2>
+<p>Request logging can be enabled for more detailed debugging information.  Request logging outputs the requests that the Python SDK sends to Oracle Cloud Infrastructure services.  This option can be enabled by setting the configuration attribute <code class="docutils literal notranslate"><span class="pre">log_requests</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code>. Alternatively, request logging can be enabled in your configuration file. For example:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[DEFAULT]
+user = &lt;user OCID&gt;
+fingerprint = &lt;fingerprint&gt;
+key_file = &lt;key file&gt;
+tenancy = &lt;tenancy OCID&gt;
+region = us-ashburn-1
+log_requests = True
+</pre></div>
+</div>
+<p>Or programmatically, for example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="n">user_ocid</span><span class="p">,</span>
+    <span class="s2">&quot;key_file&quot;</span><span class="p">:</span> <span class="n">key_file</span><span class="p">,</span>
+    <span class="s2">&quot;fingerprint&quot;</span><span class="p">:</span> <span class="n">calc_fingerprint</span><span class="p">(</span><span class="n">key_file</span><span class="p">),</span>
+    <span class="s2">&quot;tenancy&quot;</span><span class="p">:</span> <span class="n">testrunner</span><span class="o">.</span><span class="n">tenancy</span><span class="p">,</span>
+    <span class="s2">&quot;region&quot;</span><span class="p">:</span> <span class="n">testrunner</span><span class="o">.</span><span class="n">region</span><span class="p">,</span>
+    <span class="s2">&quot;log_requests&quot;</span><span class="p">:</span> <span class="kc">True</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Request logging enables debugging information in the Python http module.  This debugging information can be quite verbose and the output will go to standard out.  This http module does not use Python’s logging module, but can be enabled separately:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">oci</span>
+<span class="n">oci</span><span class="o">.</span><span class="n">base_client</span><span class="o">.</span><span class="n">is_http_log_enabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">oci</span><span class="o">.</span><span class="n">base_client</span><span class="o">.</span><span class="n">is_http_log_enabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that http module logging is enabled/disabled as Request Logging enabled/disabled:</p>
+<p>Once you have request logging in your config, you can create the appropriate logging handler(s) for your use case. For example to log to an output stream such as <code class="docutils literal notranslate"><span class="pre">stderr</span></code> you could do:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">oci</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">oci</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">from_file</span><span class="p">()</span>
+<span class="n">config</span><span class="p">[</span><span class="s1">&#39;log_requests&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">()</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">oci</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">IdentityClient</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+
+<span class="c1"># This call will emit log information to stderr</span>
+<span class="n">client</span><span class="o">.</span><span class="n">list_regions</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The oci module has logging at the following levels:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">INFO</span></code>: Request method and request URL</li>
+<li><code class="docutils literal notranslate"><span class="pre">DEBUG</span></code>: Request headers and body, and response headers</li>
+</ul>
+<p>The raw response body is not logged.</p>
+</div>
+<div class="section" id="disable-logging">
+<h2>Disable Logging<a class="headerlink" href="#disable-logging" title="Permalink to this headline">¶</a></h2>
+<p>To disable particular client’s logging, just need to disable the corresponding logger</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">oci</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="c1"># Disable particular client logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;oci.base_client.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">base_client</span><span class="p">)))</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="c1"># Need to manually disable http logging</span>
+<span class="n">oci</span><span class="o">.</span><span class="n">base_client</span><span class="o">.</span><span class="n">is_http_log_enabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To disable all Python SDK logging</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">oci</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="c1"># Disable logging</span>
+<span class="n">config</span><span class="p">[</span><span class="s1">&#39;log_requests&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">oci</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">IdentityClient</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+
+<span class="c1"># Rest of code ...</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="exceptions.html" class="btn btn-neutral float-right" title="Exception handling" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="known-issues.html" class="btn btn-neutral" title="Known Issues" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

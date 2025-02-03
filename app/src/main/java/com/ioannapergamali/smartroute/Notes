@@ -1,0 +1,139 @@
+MVVM Αρχιτεκτονική:
+Model: Είναι υπεύθυνο για τα δεδομένα και τη λογική του επιχειρηματικού τομέα (π.χ. αποθήκευση χρηστών, λήψη δεδομένων).
+ViewModel: Συνδέει την επιχείρηση και τα δεδομένα με την UI. Ο ViewModel χειρίζεται τη λογική και το state που σχετίζεται με την εφαρμογή, χωρίς να ασχολείται με την άμεση εμφάνιση.
+View: Είναι υπεύθυνο για την παρουσίαση των δεδομένων στον χρήστη και για την αλληλεπίδραση του χρήστη με την εφαρμογή.
+
+
+
+Για να δημιουργείται μια κλάση χρήστη κατά την διαδικασία του login, μπορείς να ακολουθήσεις τα εξής βήματα:
+
+Κατά τη διάρκεια του Login, όταν το authentication ολοκληρώνεται επιτυχώς, θα δημιουργήσεις την αντίστοιχη κλάση (Passenger, Driver ή Admin) με βάση τα δεδομένα του χρήστη (π.χ. το role).
+
+Ενημέρωση του Session: Θα χρειαστεί να αποθηκεύσεις την κλάση που δημιουργείται στο session, ώστε να έχεις πρόσβαση στα δεδομένα του χρήστη σε όλη την εφαρμογή.
+
+Τροποποιήσεις στον Κώδικα:
+Αναβάθμιση της συνάρτησης loginUser: Όταν ο χρήστης συνδέεται, θα δημιουργείς την αντίστοιχη κλάση (Passenger, Driver, Admin) και θα αποθηκεύεις το αντικείμενο στο UserSession.
+
+Ενημέρωση του UserSession: Το session θα αποθηκεύει το σωστό αντικείμενο χρήστη με βάση τον ρόλο του.
+
+
+src/
+├── main/
+│   ├── java/com/ioannapergamali/movewise/
+│   │   ├── MainActivity.kt
+│   │   ├── navigation/
+│   │   │   └── MoveWiseNavHost.kt
+│   │   ├── ui/
+│   │   │   ├── screens/
+│   │   │   │   ├── LoginScreen.kt
+│   │   │   │   ├── SignUpScreen.kt
+│   │   │   │   ├── SplashScreen.kt
+│   │   │   │   ├── MenuScreen.kt
+│   │   │   │   ├── SettingsScreen.kt
+│   │   │   │   ├── HomeScreen.kt
+│   │   │   │   └── GlideComposeScreen.kt
+│   │   │   ├── components/
+│   │   │   │   └── TopBar.kt
+│   │   │   └── theme/
+│   │   │       ├── Color.kt
+│   │   │       ├── Shape.kt
+│   │   │       ├── Theme.kt
+│   │   │       ├── ThemeSwitcher.kt
+│   │   │       └── Typografy.kt
+│   │   ├── model/
+│   │   │   ├── User.kt
+│   │   │   ├── Admin.kt
+│   │   │   ├── Driver.kt
+│   │   │   ├── Passenger.kt
+│   │   │   └── UserAddress.kt
+│   │   ├── data/
+│   │   │   └── FirestoreHelper.kt
+│   │   ├── utils/
+│   │   │   └── UserSession.kt
+│   │   ├── viewmodel/
+│   │   │   ├── AuthenticationViewModel.kt
+│   │   │   └── AuthenticationViewModelFactory.kt
+│   ├── res/
+│   │   ├── drawable/
+│   │   ├── layout/
+│   │   ├── values/
+│   │   └── ...
+
+Firebase description
+ Να φτιαξουμε μια collection  Users , Vehicles, Pois , Routes
+
+ Στην collection Users  θα εχει  τα εξης sub-collections roles, address , user , contact  .
+ To roles θα εχει τα εξης πεδια "uuid","role","permissions".
+ To address  θα εχει τα εξης πεδια  "uuid","city","street","number","postal_code".
+ To user θα εχει τα εξης πεδια "uuid","username","name","surname"
+ To contact  θα εχει τα εξης πεδια "uuid", "email", "phone_num"
+Για Authentication να χρησιμοποιήσει το Authentication της Firebase σαν κλειδι θα χρησιμοποιήται το "uuid"
+Δες τα αρχεία που σου έχω ανεβάση με την περιγραφη του προτζεκτ ώστε να φτιάξεις  Vehicles, Pois , Routes
+Επίσηςς δες να φτιάξεις κάτι για το session
+
+
+Οι επιλογές για τον Passenger
+
+Login to the system
+Manage preferred (or non-preferred) means of transport
+Declare interest in finding a means of transport for a specific route
+Declare interest in transportation
+Search for a way of transportation
+Book a seat (or announce co-passenger availability or buy a ticket)
+View routes of interest to the passenger
+View the passenger's trips
+Print the passenger's booked seat (e.g., ticket)
+Cancel the passenger's booked seat
+View, rate, and comment on completed trips
+Logout
+
+Οι επιλογές για τον Driver
+
+Declare ownership of a transport vehicle
+Declare service for a specific trip (with vehicle, date, cost, and duration)
+Search for passengers interested in transport
+Print passenger list for a specific trip
+Print passenger list for scheduled trips
+Print passenger list for completed trips
+
+Οι επιλογές για τον Admin
+
+Initialize the system from a file and save the current system state to a file
+Create a user account and assign roles (Passenger, Driver, or Admin)
+Promote or demote a user
+Define a meeting point or point of interest (PoI)
+Set the duration of a walking route
+View list of routes without assigned walking duration and set their duration
+Review user-defined point of interest names and group or update them
+View the top 10 highest/lowest-rated drivers
+View the top 10 happiest/least happy passengers
+View all available vehicles with details about their drivers or owners
+View all points of interest and their information
+View all users by category (Passenger, Driver, Admin)
+Increment the current date by one day
+
+Δομή στη Firestore
+Collection: users
+
+Document: {userId}
+Sub-collection: roles
+Document: role-id
+uuid: {userId}
+role: "Admin"
+permissions: ["passenger_menu", "driver_menu", "admin_menu"]
+menu_references: [
+/menu/passenger-menu,
+/menu/driver-menu,
+/menu/admin-menu
+]
+Collection: menu
+
+Document: passenger-menu
+role: "Passenger"
+actions: [...]
+Document: driver-menu
+role: "Driver"
+actions: [...]
+Document: admin-menu
+role: "Admin"
+actions: [...]

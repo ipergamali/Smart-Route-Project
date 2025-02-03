@@ -1,0 +1,659 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data Flow &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DataFlowClient" href="data_flow/client/oci.data_flow.DataFlowClient.html" />
+    <link rel="prev" title="WorkRequestResource" href="data_catalog/models/oci.data_catalog.models.WorkRequestResource.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data Flow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_flow/client/oci.data_flow.DataFlowClient.html">DataFlowClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_flow/client/oci.data_flow.DataFlowClientCompositeOperations.html">DataFlowClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models">Models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.Application.html">Application</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.ApplicationLogConfig.html">ApplicationLogConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.ApplicationParameter.html">ApplicationParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.ApplicationSummary.html">ApplicationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.ChangeApplicationCompartmentDetails.html">ChangeApplicationCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.ChangePoolCompartmentDetails.html">ChangePoolCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.ChangePrivateEndpointCompartmentDetails.html">ChangePrivateEndpointCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.ChangeRunCompartmentDetails.html">ChangeRunCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.ChangeSqlEndpointCompartmentDetails.html">ChangeSqlEndpointCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.CreateApplicationDetails.html">CreateApplicationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.CreatePoolDetails.html">CreatePoolDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.CreatePrivateEndpointDetails.html">CreatePrivateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.CreateRunDetails.html">CreateRunDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.CreateSqlEndpointDetails.html">CreateSqlEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.CreateStatementDetails.html">CreateStatementDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.ImagePngStatementOutputData.html">ImagePngStatementOutputData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.NodeCount.html">NodeCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.Pool.html">Pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.PoolCollection.html">PoolCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.PoolConfig.html">PoolConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.PoolMetrics.html">PoolMetrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.PoolSchedule.html">PoolSchedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.PoolSummary.html">PoolSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.PrivateEndpoint.html">PrivateEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.PrivateEndpointCollection.html">PrivateEndpointCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.PrivateEndpointSummary.html">PrivateEndpointSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.Run.html">Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.RunLogSummary.html">RunLogSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.RunSummary.html">RunSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.Scan.html">Scan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.SecureAccessControlRule.html">SecureAccessControlRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.ShapeConfig.html">ShapeConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.SqlEndpoint.html">SqlEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.SqlEndpointCollection.html">SqlEndpointCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.SqlEndpointNetworkConfiguration.html">SqlEndpointNetworkConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.SqlEndpointSecureAccessConfig.html">SqlEndpointSecureAccessConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.SqlEndpointSummary.html">SqlEndpointSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.SqlEndpointVcnConfig.html">SqlEndpointVcnConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.Statement.html">Statement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.StatementCollection.html">StatementCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.StatementOutput.html">StatementOutput</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.StatementOutputData.html">StatementOutputData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.StatementSummary.html">StatementSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.TextHtmlStatementOutputData.html">TextHtmlStatementOutputData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.TextPlainStatementOutputData.html">TextPlainStatementOutputData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.UpdateApplicationDetails.html">UpdateApplicationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.UpdatePoolDetails.html">UpdatePoolDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.UpdatePrivateEndpointDetails.html">UpdatePrivateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.UpdateRunDetails.html">UpdateRunDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.UpdateSqlEndpointDetails.html">UpdateSqlEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequestCollection.html">WorkRequestCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequestErrorCollection.html">WorkRequestErrorCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequestLog.html">WorkRequestLog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequestLogCollection.html">WorkRequestLogCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequestResource.html">WorkRequestResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequestSummary.html">WorkRequestSummary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="landing.html">API Reference</a> &raquo;</li>
+        
+      <li>Data Flow</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/data_flow.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-flow">
+<h1>Data Flow<a class="headerlink" href="#data-flow" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/client/oci.data_flow.DataFlowClient.html#oci.data_flow.DataFlowClient" title="oci.data_flow.DataFlowClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.DataFlowClient</span></code></a></td>
+<td>Use the Data Flow APIs to run any Apache Spark application at any scale without deploying or managing any infrastructure.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/client/oci.data_flow.DataFlowClientCompositeOperations.html#oci.data_flow.DataFlowClientCompositeOperations" title="oci.data_flow.DataFlowClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.DataFlowClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="data_flow/client/oci.data_flow.DataFlowClient.html#oci.data_flow.DataFlowClient" title="oci.data_flow.DataFlowClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataFlowClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.Application.html#oci.data_flow.models.Application" title="oci.data_flow.models.Application"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.Application</span></code></a></td>
+<td>A Data Flow application object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.ApplicationLogConfig.html#oci.data_flow.models.ApplicationLogConfig" title="oci.data_flow.models.ApplicationLogConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.ApplicationLogConfig</span></code></a></td>
+<td>Logging details of Application logs for Data Flow Run.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.ApplicationParameter.html#oci.data_flow.models.ApplicationParameter" title="oci.data_flow.models.ApplicationParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.ApplicationParameter</span></code></a></td>
+<td>The parameter of an application.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.ApplicationSummary.html#oci.data_flow.models.ApplicationSummary" title="oci.data_flow.models.ApplicationSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.ApplicationSummary</span></code></a></td>
+<td>A Data Flow application object used in bulk listings.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.ChangeApplicationCompartmentDetails.html#oci.data_flow.models.ChangeApplicationCompartmentDetails" title="oci.data_flow.models.ChangeApplicationCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.ChangeApplicationCompartmentDetails</span></code></a></td>
+<td>The change application compartment details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.ChangePoolCompartmentDetails.html#oci.data_flow.models.ChangePoolCompartmentDetails" title="oci.data_flow.models.ChangePoolCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.ChangePoolCompartmentDetails</span></code></a></td>
+<td>The details required to change a pool compartment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.ChangePrivateEndpointCompartmentDetails.html#oci.data_flow.models.ChangePrivateEndpointCompartmentDetails" title="oci.data_flow.models.ChangePrivateEndpointCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.ChangePrivateEndpointCompartmentDetails</span></code></a></td>
+<td>The details required to change a private endpoint compartment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.ChangeRunCompartmentDetails.html#oci.data_flow.models.ChangeRunCompartmentDetails" title="oci.data_flow.models.ChangeRunCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.ChangeRunCompartmentDetails</span></code></a></td>
+<td>The change run compartment details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.ChangeSqlEndpointCompartmentDetails.html#oci.data_flow.models.ChangeSqlEndpointCompartmentDetails" title="oci.data_flow.models.ChangeSqlEndpointCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.ChangeSqlEndpointCompartmentDetails</span></code></a></td>
+<td>Details for changing the compartment of a SQL Endpoint.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.CreateApplicationDetails.html#oci.data_flow.models.CreateApplicationDetails" title="oci.data_flow.models.CreateApplicationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.CreateApplicationDetails</span></code></a></td>
+<td>The create application details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.CreatePoolDetails.html#oci.data_flow.models.CreatePoolDetails" title="oci.data_flow.models.CreatePoolDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.CreatePoolDetails</span></code></a></td>
+<td>The details required to create a pool.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.CreatePrivateEndpointDetails.html#oci.data_flow.models.CreatePrivateEndpointDetails" title="oci.data_flow.models.CreatePrivateEndpointDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.CreatePrivateEndpointDetails</span></code></a></td>
+<td>The details required to create a private endpoint.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.CreateRunDetails.html#oci.data_flow.models.CreateRunDetails" title="oci.data_flow.models.CreateRunDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.CreateRunDetails</span></code></a></td>
+<td>The create run details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.CreateSqlEndpointDetails.html#oci.data_flow.models.CreateSqlEndpointDetails" title="oci.data_flow.models.CreateSqlEndpointDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.CreateSqlEndpointDetails</span></code></a></td>
+<td>The information about a new SQL Endpoint.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.CreateStatementDetails.html#oci.data_flow.models.CreateStatementDetails" title="oci.data_flow.models.CreateStatementDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.CreateStatementDetails</span></code></a></td>
+<td>The details required to create a statement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.ImagePngStatementOutputData.html#oci.data_flow.models.ImagePngStatementOutputData" title="oci.data_flow.models.ImagePngStatementOutputData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.ImagePngStatementOutputData</span></code></a></td>
+<td>The statement output data in png format.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.NodeCount.html#oci.data_flow.models.NodeCount" title="oci.data_flow.models.NodeCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.NodeCount</span></code></a></td>
+<td>An object with a logical shape and count of the number of nodes with that shape.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.Pool.html#oci.data_flow.models.Pool" title="oci.data_flow.models.Pool"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.Pool</span></code></a></td>
+<td>A Data Flow pool object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.PoolCollection.html#oci.data_flow.models.PoolCollection" title="oci.data_flow.models.PoolCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.PoolCollection</span></code></a></td>
+<td>The results of a query for a list of pools.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.PoolConfig.html#oci.data_flow.models.PoolConfig" title="oci.data_flow.models.PoolConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.PoolConfig</span></code></a></td>
+<td>An object containing the details about the compute shapes and number of compute instances to provison.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.PoolMetrics.html#oci.data_flow.models.PoolMetrics" title="oci.data_flow.models.PoolMetrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.PoolMetrics</span></code></a></td>
+<td>A collection of metrics related to a particular pool.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.PoolSchedule.html#oci.data_flow.models.PoolSchedule" title="oci.data_flow.models.PoolSchedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.PoolSchedule</span></code></a></td>
+<td>Definition of when pool auto start or stop for a given day of a week.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.PoolSummary.html#oci.data_flow.models.PoolSummary" title="oci.data_flow.models.PoolSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.PoolSummary</span></code></a></td>
+<td>A pool object used in bulk listings.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.PrivateEndpoint.html#oci.data_flow.models.PrivateEndpoint" title="oci.data_flow.models.PrivateEndpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.PrivateEndpoint</span></code></a></td>
+<td>A Data Flow private endpoint object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.PrivateEndpointCollection.html#oci.data_flow.models.PrivateEndpointCollection" title="oci.data_flow.models.PrivateEndpointCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.PrivateEndpointCollection</span></code></a></td>
+<td>The results of a query for a list of private endpoints.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.PrivateEndpointSummary.html#oci.data_flow.models.PrivateEndpointSummary" title="oci.data_flow.models.PrivateEndpointSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.PrivateEndpointSummary</span></code></a></td>
+<td>A Data Flow private endpoint object used in bulk listings.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.Run.html#oci.data_flow.models.Run" title="oci.data_flow.models.Run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.Run</span></code></a></td>
+<td>A run object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.RunLogSummary.html#oci.data_flow.models.RunLogSummary" title="oci.data_flow.models.RunLogSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.RunLogSummary</span></code></a></td>
+<td>A summary of a log associated with a particular run.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.RunSummary.html#oci.data_flow.models.RunSummary" title="oci.data_flow.models.RunSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.RunSummary</span></code></a></td>
+<td>A summary of the run.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.Scan.html#oci.data_flow.models.Scan" title="oci.data_flow.models.Scan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.Scan</span></code></a></td>
+<td>Single Client Access Name (SCAN) is the object with a fully-qualified domain name and a port number.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.SecureAccessControlRule.html#oci.data_flow.models.SecureAccessControlRule" title="oci.data_flow.models.SecureAccessControlRule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.SecureAccessControlRule</span></code></a></td>
+<td>The access control rule for SECURE_ACCESS network type selection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.ShapeConfig.html#oci.data_flow.models.ShapeConfig" title="oci.data_flow.models.ShapeConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.ShapeConfig</span></code></a></td>
+<td>This is used to configure the shape of the driver or executor if a flexible shape is used.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.SqlEndpoint.html#oci.data_flow.models.SqlEndpoint" title="oci.data_flow.models.SqlEndpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.SqlEndpoint</span></code></a></td>
+<td>The description of a SQL Endpoint.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.SqlEndpointCollection.html#oci.data_flow.models.SqlEndpointCollection" title="oci.data_flow.models.SqlEndpointCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.SqlEndpointCollection</span></code></a></td>
+<td>The results of a Sql Endpoint search.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.SqlEndpointNetworkConfiguration.html#oci.data_flow.models.SqlEndpointNetworkConfiguration" title="oci.data_flow.models.SqlEndpointNetworkConfiguration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.SqlEndpointNetworkConfiguration</span></code></a></td>
+<td>The network configuration of a SQL Endpoint.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.SqlEndpointSecureAccessConfig.html#oci.data_flow.models.SqlEndpointSecureAccessConfig" title="oci.data_flow.models.SqlEndpointSecureAccessConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.SqlEndpointSecureAccessConfig</span></code></a></td>
+<td>Access control rules for secure access selection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.SqlEndpointSummary.html#oci.data_flow.models.SqlEndpointSummary" title="oci.data_flow.models.SqlEndpointSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.SqlEndpointSummary</span></code></a></td>
+<td>A summary of the Sql Endpoint.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.SqlEndpointVcnConfig.html#oci.data_flow.models.SqlEndpointVcnConfig" title="oci.data_flow.models.SqlEndpointVcnConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.SqlEndpointVcnConfig</span></code></a></td>
+<td>The VCN configuration for VCN network type selection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.Statement.html#oci.data_flow.models.Statement" title="oci.data_flow.models.Statement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.Statement</span></code></a></td>
+<td>A statement object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.StatementCollection.html#oci.data_flow.models.StatementCollection" title="oci.data_flow.models.StatementCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.StatementCollection</span></code></a></td>
+<td>The results of a query for a list of statements of a Session Run.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.StatementOutput.html#oci.data_flow.models.StatementOutput" title="oci.data_flow.models.StatementOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.StatementOutput</span></code></a></td>
+<td>The execution output of a statement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.StatementOutputData.html#oci.data_flow.models.StatementOutputData" title="oci.data_flow.models.StatementOutputData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.StatementOutputData</span></code></a></td>
+<td>An object representing execution output of a statement.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.StatementSummary.html#oci.data_flow.models.StatementSummary" title="oci.data_flow.models.StatementSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.StatementSummary</span></code></a></td>
+<td>Summary of the statement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.TextHtmlStatementOutputData.html#oci.data_flow.models.TextHtmlStatementOutputData" title="oci.data_flow.models.TextHtmlStatementOutputData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.TextHtmlStatementOutputData</span></code></a></td>
+<td>The statement output data in html format.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.TextPlainStatementOutputData.html#oci.data_flow.models.TextPlainStatementOutputData" title="oci.data_flow.models.TextPlainStatementOutputData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.TextPlainStatementOutputData</span></code></a></td>
+<td>The statement output data in text format.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.UpdateApplicationDetails.html#oci.data_flow.models.UpdateApplicationDetails" title="oci.data_flow.models.UpdateApplicationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.UpdateApplicationDetails</span></code></a></td>
+<td>The update application details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.UpdatePoolDetails.html#oci.data_flow.models.UpdatePoolDetails" title="oci.data_flow.models.UpdatePoolDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.UpdatePoolDetails</span></code></a></td>
+<td>The details required to update a given pool with <code class="docutils literal notranslate"><span class="pre">`poolId`</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.UpdatePrivateEndpointDetails.html#oci.data_flow.models.UpdatePrivateEndpointDetails" title="oci.data_flow.models.UpdatePrivateEndpointDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.UpdatePrivateEndpointDetails</span></code></a></td>
+<td>The details required to update a private endpoint.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.UpdateRunDetails.html#oci.data_flow.models.UpdateRunDetails" title="oci.data_flow.models.UpdateRunDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.UpdateRunDetails</span></code></a></td>
+<td>The update run details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.UpdateSqlEndpointDetails.html#oci.data_flow.models.UpdateSqlEndpointDetails" title="oci.data_flow.models.UpdateSqlEndpointDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.UpdateSqlEndpointDetails</span></code></a></td>
+<td>The information about all updatable parameters of a SQL Endpoint.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequest.html#oci.data_flow.models.WorkRequest" title="oci.data_flow.models.WorkRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.WorkRequest</span></code></a></td>
+<td>A Data Flow work request object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequestCollection.html#oci.data_flow.models.WorkRequestCollection" title="oci.data_flow.models.WorkRequestCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.WorkRequestCollection</span></code></a></td>
+<td>Results of a query for a list of work requests.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequestError.html#oci.data_flow.models.WorkRequestError" title="oci.data_flow.models.WorkRequestError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.WorkRequestError</span></code></a></td>
+<td>A Data Flow work request error object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequestErrorCollection.html#oci.data_flow.models.WorkRequestErrorCollection" title="oci.data_flow.models.WorkRequestErrorCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.WorkRequestErrorCollection</span></code></a></td>
+<td>Results of a query for a list of work request errors.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequestLog.html#oci.data_flow.models.WorkRequestLog" title="oci.data_flow.models.WorkRequestLog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.WorkRequestLog</span></code></a></td>
+<td>A Data Flow work request log object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequestLogCollection.html#oci.data_flow.models.WorkRequestLogCollection" title="oci.data_flow.models.WorkRequestLogCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.WorkRequestLogCollection</span></code></a></td>
+<td>Results of a query for a list of work request logs.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequestResource.html#oci.data_flow.models.WorkRequestResource" title="oci.data_flow.models.WorkRequestResource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.WorkRequestResource</span></code></a></td>
+<td>A resource related to a Data Flow work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_flow/models/oci.data_flow.models.WorkRequestSummary.html#oci.data_flow.models.WorkRequestSummary" title="oci.data_flow.models.WorkRequestSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_flow.models.WorkRequestSummary</span></code></a></td>
+<td>A Data Flow work request summary object.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="data_flow/client/oci.data_flow.DataFlowClient.html" class="btn btn-neutral float-right" title="DataFlowClient" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="data_catalog/models/oci.data_catalog.models.WorkRequestResource.html" class="btn btn-neutral" title="WorkRequestResource" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

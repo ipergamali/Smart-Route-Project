@@ -1,0 +1,571 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Nosql &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NosqlClient" href="nosql/client/oci.nosql.NosqlClient.html" />
+    <link rel="prev" title="WorkRequestSummary" href="network_load_balancer/models/oci.network_load_balancer.models.WorkRequestSummary.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Nosql</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nosql/client/oci.nosql.NosqlClient.html">NosqlClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nosql/client/oci.nosql.NosqlClientCompositeOperations.html">NosqlClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models">Models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.ChangeTableCompartmentDetails.html">ChangeTableCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.Column.html">Column</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.CreateIndexDetails.html">CreateIndexDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.CreateReplicaDetails.html">CreateReplicaDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.CreateTableDetails.html">CreateTableDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.DeleteRowResult.html">DeleteRowResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.Identity.html">Identity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.Index.html">Index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.IndexCollection.html">IndexCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.IndexKey.html">IndexKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.IndexSummary.html">IndexSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.PreparedStatement.html">PreparedStatement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.QueryDetails.html">QueryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.QueryResultCollection.html">QueryResultCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.Replica.html">Replica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.RequestUsage.html">RequestUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.Row.html">Row</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.Schema.html">Schema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.StatementSummary.html">StatementSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.Table.html">Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.TableCollection.html">TableCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.TableLimits.html">TableLimits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.TableSummary.html">TableSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.TableUsageCollection.html">TableUsageCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.TableUsageSummary.html">TableUsageSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.UpdateRowDetails.html">UpdateRowDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.UpdateRowResult.html">UpdateRowResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.UpdateTableDetails.html">UpdateTableDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequestCollection.html">WorkRequestCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequestErrorCollection.html">WorkRequestErrorCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequestLogEntryCollection.html">WorkRequestLogEntryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequestResource.html">WorkRequestResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequestSummary.html">WorkRequestSummary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="landing.html">API Reference</a> &raquo;</li>
+        
+      <li>Nosql</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/nosql.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nosql">
+<h1>Nosql<a class="headerlink" href="#nosql" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="nosql/client/oci.nosql.NosqlClient.html#oci.nosql.NosqlClient" title="oci.nosql.NosqlClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.NosqlClient</span></code></a></td>
+<td>The control plane API for NoSQL Database Cloud Service HTTPS provides endpoints to perform NDCS operations, including creation and deletion of tables and indexes; population and access of data in tables; and access of table usage metrics.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/client/oci.nosql.NosqlClientCompositeOperations.html#oci.nosql.NosqlClientCompositeOperations" title="oci.nosql.NosqlClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.NosqlClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="nosql/client/oci.nosql.NosqlClient.html#oci.nosql.NosqlClient" title="oci.nosql.NosqlClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">NosqlClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.ChangeTableCompartmentDetails.html#oci.nosql.models.ChangeTableCompartmentDetails" title="oci.nosql.models.ChangeTableCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.ChangeTableCompartmentDetails</span></code></a></td>
+<td>Specification of both from and to compartments.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.Column.html#oci.nosql.models.Column" title="oci.nosql.models.Column"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.Column</span></code></a></td>
+<td>A column of a table.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.CreateIndexDetails.html#oci.nosql.models.CreateIndexDetails" title="oci.nosql.models.CreateIndexDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.CreateIndexDetails</span></code></a></td>
+<td>Specifications for the new index.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.CreateReplicaDetails.html#oci.nosql.models.CreateReplicaDetails" title="oci.nosql.models.CreateReplicaDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.CreateReplicaDetails</span></code></a></td>
+<td>Specifications for the new replica</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.CreateTableDetails.html#oci.nosql.models.CreateTableDetails" title="oci.nosql.models.CreateTableDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.CreateTableDetails</span></code></a></td>
+<td>Specifications for the new table.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.DeleteRowResult.html#oci.nosql.models.DeleteRowResult" title="oci.nosql.models.DeleteRowResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.DeleteRowResult</span></code></a></td>
+<td>The result of a DeleteRow operation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.Identity.html#oci.nosql.models.Identity" title="oci.nosql.models.Identity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.Identity</span></code></a></td>
+<td>The identity properties of a table, if any.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.Index.html#oci.nosql.models.Index" title="oci.nosql.models.Index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.Index</span></code></a></td>
+<td>Information about an index.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.IndexCollection.html#oci.nosql.models.IndexCollection" title="oci.nosql.models.IndexCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.IndexCollection</span></code></a></td>
+<td>Results of ListIndexes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.IndexKey.html#oci.nosql.models.IndexKey" title="oci.nosql.models.IndexKey"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.IndexKey</span></code></a></td>
+<td>Specifies a single key in a secondary index.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.IndexSummary.html#oci.nosql.models.IndexSummary" title="oci.nosql.models.IndexSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.IndexSummary</span></code></a></td>
+<td>Information about an index.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.PreparedStatement.html#oci.nosql.models.PreparedStatement" title="oci.nosql.models.PreparedStatement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.PreparedStatement</span></code></a></td>
+<td>The result of query preparation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.QueryDetails.html#oci.nosql.models.QueryDetails" title="oci.nosql.models.QueryDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.QueryDetails</span></code></a></td>
+<td>All the information surrounding a query, including the query statement, limits, consistency, and so forth.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.QueryResultCollection.html#oci.nosql.models.QueryResultCollection" title="oci.nosql.models.QueryResultCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.QueryResultCollection</span></code></a></td>
+<td>The result of a query.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.Replica.html#oci.nosql.models.Replica" title="oci.nosql.models.Replica"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.Replica</span></code></a></td>
+<td>Information about a MR table replica</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.RequestUsage.html#oci.nosql.models.RequestUsage" title="oci.nosql.models.RequestUsage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.RequestUsage</span></code></a></td>
+<td>The usage metrics for a request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.Row.html#oci.nosql.models.Row" title="oci.nosql.models.Row"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.Row</span></code></a></td>
+<td>The result of GetRow.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.Schema.html#oci.nosql.models.Schema" title="oci.nosql.models.Schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.Schema</span></code></a></td>
+<td>The table schema information as a JSON object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.StatementSummary.html#oci.nosql.models.StatementSummary" title="oci.nosql.models.StatementSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.StatementSummary</span></code></a></td>
+<td>Information derived from parsing a NoSQL SQL statement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.Table.html#oci.nosql.models.Table" title="oci.nosql.models.Table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.Table</span></code></a></td>
+<td>Complete metadata about a table.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.TableCollection.html#oci.nosql.models.TableCollection" title="oci.nosql.models.TableCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.TableCollection</span></code></a></td>
+<td>Results of ListTables.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.TableLimits.html#oci.nosql.models.TableLimits" title="oci.nosql.models.TableLimits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.TableLimits</span></code></a></td>
+<td>Throughput and storage limits configuration of a table.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.TableSummary.html#oci.nosql.models.TableSummary" title="oci.nosql.models.TableSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.TableSummary</span></code></a></td>
+<td>Summary of the table.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.TableUsageCollection.html#oci.nosql.models.TableUsageCollection" title="oci.nosql.models.TableUsageCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.TableUsageCollection</span></code></a></td>
+<td>Result of GetTableUsage.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.TableUsageSummary.html#oci.nosql.models.TableUsageSummary" title="oci.nosql.models.TableUsageSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.TableUsageSummary</span></code></a></td>
+<td>TableUsageSummary represents a single usage record, or slice, that includes information about read and write throughput consumed during that period as well as the current information regarding storage capacity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.UpdateRowDetails.html#oci.nosql.models.UpdateRowDetails" title="oci.nosql.models.UpdateRowDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.UpdateRowDetails</span></code></a></td>
+<td>Specifications for the putting of a table row.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.UpdateRowResult.html#oci.nosql.models.UpdateRowResult" title="oci.nosql.models.UpdateRowResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.UpdateRowResult</span></code></a></td>
+<td>The result of an UpdateRow operation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.UpdateTableDetails.html#oci.nosql.models.UpdateTableDetails" title="oci.nosql.models.UpdateTableDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.UpdateTableDetails</span></code></a></td>
+<td>The information to be updated.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequest.html#oci.nosql.models.WorkRequest" title="oci.nosql.models.WorkRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.WorkRequest</span></code></a></td>
+<td>A description of workrequest status.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequestCollection.html#oci.nosql.models.WorkRequestCollection" title="oci.nosql.models.WorkRequestCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.WorkRequestCollection</span></code></a></td>
+<td>Results of ListWorkRequests</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequestError.html#oci.nosql.models.WorkRequestError" title="oci.nosql.models.WorkRequestError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.WorkRequestError</span></code></a></td>
+<td>An error encountered while executing a work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequestErrorCollection.html#oci.nosql.models.WorkRequestErrorCollection" title="oci.nosql.models.WorkRequestErrorCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.WorkRequestErrorCollection</span></code></a></td>
+<td>Results of ListWorkRequestErrors</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequestLogEntry.html#oci.nosql.models.WorkRequestLogEntry" title="oci.nosql.models.WorkRequestLogEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.WorkRequestLogEntry</span></code></a></td>
+<td>A log message from the execution of a work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequestLogEntryCollection.html#oci.nosql.models.WorkRequestLogEntryCollection" title="oci.nosql.models.WorkRequestLogEntryCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.WorkRequestLogEntryCollection</span></code></a></td>
+<td>Results of ListWorkRequestLogs</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequestResource.html#oci.nosql.models.WorkRequestResource" title="oci.nosql.models.WorkRequestResource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.WorkRequestResource</span></code></a></td>
+<td>A resource created or operated on by a work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="nosql/models/oci.nosql.models.WorkRequestSummary.html#oci.nosql.models.WorkRequestSummary" title="oci.nosql.models.WorkRequestSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.nosql.models.WorkRequestSummary</span></code></a></td>
+<td>A description of workrequest status.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="nosql/client/oci.nosql.NosqlClient.html" class="btn btn-neutral float-right" title="NosqlClient" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="network_load_balancer/models/oci.network_load_balancer.models.WorkRequestSummary.html" class="btn btn-neutral" title="WorkRequestSummary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "smart-route"
+version = "0.1.0"
+description = "Ανάπτυξη εφαρμογής για μεταφορές"
+authors = ["Joanne P. <youremail@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+firebase-admin = "^6.6.0"  # Εξάρτηση από το firebase-admin για την αρχικοποίηση του Firestore

@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TraceSpanSummary &mdash; oci 2.143.1 documentation</title>
+
+
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css"/>
+    <link rel="index" title="Index" href="../../../genindex.html"/>
+    <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="next" title="Appmgmt Control" href="../../appmgmt_control.html"/>
+    <link rel="prev" title="TraceSnapshot" href="oci.apm_traces.models.TraceSnapshot.html"/>
+
+
+    <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+
+<div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+            <div class="wy-side-nav-search">
+
+
+                <a href="../../../index.html" class="icon icon-home"> oci
+
+
+                </a>
+
+
+                <div class="version">
+                    2.143.1
+                </div>
+
+
+                <div role="search">
+                    <form id="rtd-search-form" class="wy-form" action="../../../search.html"
+                          method="get">
+                        <input type="text" name="q" placeholder="Search docs"/>
+                        <input type="hidden" name="check_keywords" value="yes"/>
+                        <input type="hidden" name="area" value="default"/>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation"
+                 aria-label="main navigation">
+
+
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../configuration.html">Configuration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../fips-libraries.html">Using
+                        FIPS-validated Libraries</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../forward-compatibility.html">Forward
+                        Compatibility</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../new-region-support.html">New Region
+                        Support</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../backward-compatibility.html">Backward
+                        Compatibility</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../quickstart.html">Quickstart</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../known-issues.html">Known Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../logging.html">Logging</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../exceptions.html">Exception handling</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../upload-manager.html">Uploading Large
+                        Objects</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../raw-requests.html">Raw Requests</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../waiters.html">Composite Operations and
+                        Waiters</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../pagination.html">Pagination</a></li>
+                    <li class="toctree-l1 current"><a class="reference internal"
+                                                      href="../../landing.html">API Reference</a>
+                        <ul class="current">
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../access_governance_cp.html">Access
+                                Governance Cp</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../adm.html">Adm</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ai_anomaly_detection.html">Ai
+                                Anomaly Detection</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ai_document.html">Ai Document</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ai_language.html">Ai Language</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ai_speech.html">Ai Speech</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ai_vision.html">Ai Vision</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../analytics.html">Analytics</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../announcements_service.html">Announcements
+                                Service</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../apigateway.html">Apigateway</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../apm_config.html">Apm Config</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../apm_control_plane.html">Apm
+                                Control Plane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../apm_synthetics.html">Apm
+                                Synthetics</a></li>
+                            <li class="toctree-l2 current"><a class="reference internal"
+                                                              href="../../apm_traces.html">Apm
+                                Traces</a>
+                                <ul class="current">
+                                    <li class="toctree-l3"><a class="reference internal"
+                                                              href="../client/oci.apm_traces.AttributesClient.html">AttributesClient</a>
+                                    </li>
+                                    <li class="toctree-l3"><a class="reference internal"
+                                                              href="../client/oci.apm_traces.QueryClient.html">QueryClient</a>
+                                    </li>
+                                    <li class="toctree-l3"><a class="reference internal"
+                                                              href="../client/oci.apm_traces.TraceClient.html">TraceClient</a>
+                                    </li>
+                                    <li class="toctree-l3"><a class="reference internal"
+                                                              href="../client/oci.apm_traces.AttributesClientCompositeOperations.html">AttributesClientCompositeOperations</a>
+                                    </li>
+                                    <li class="toctree-l3"><a class="reference internal"
+                                                              href="../client/oci.apm_traces.QueryClientCompositeOperations.html">QueryClientCompositeOperations</a>
+                                    </li>
+                                    <li class="toctree-l3"><a class="reference internal"
+                                                              href="../client/oci.apm_traces.TraceClientCompositeOperations.html">TraceClientCompositeOperations</a>
+                                    </li>
+                                    <li class="toctree-l3 current"><a class="reference internal"
+                                                                      href="../../apm_traces.html#models">Models</a>
+                                        <ul class="current">
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.AggregatedSnapshot.html">AggregatedSnapshot</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.AggregatedStackTrace.html">AggregatedStackTrace</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.AttributePinResponse.html">AttributePinResponse</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.AttributeResponse.html">AttributeResponse</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.AttributeUnpinResponse.html">AttributeUnpinResponse</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.AttributeUpdateNotesResponse.html">AttributeUpdateNotesResponse</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.AttributeUpdateResponse.html">AttributeUpdateResponse</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.AutoActivateStatus.html">AutoActivateStatus</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.AutoActivateToggleStatus.html">AutoActivateToggleStatus</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkActivateAttributeDetail.html">BulkActivateAttributeDetail</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkActivateAttributeDetails.html">BulkActivateAttributeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkActivationMetadata.html">BulkActivationMetadata</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkActivationStatus.html">BulkActivationStatus</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkDeActivateAttributeDetail.html">BulkDeActivateAttributeDetail</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkDeActivateAttributeDetails.html">BulkDeActivateAttributeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkDeActivationMetadata.html">BulkDeActivationMetadata</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkDeActivationStatus.html">BulkDeActivationStatus</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkPinAttributeDetail.html">BulkPinAttributeDetail</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkPinAttributeDetails.html">BulkPinAttributeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkPinMetadata.html">BulkPinMetadata</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkPinStatus.html">BulkPinStatus</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkUnpinAttributeDetail.html">BulkUnpinAttributeDetail</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkUnpinAttributeDetails.html">BulkUnpinAttributeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkUnpinMetadata.html">BulkUnpinMetadata</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkUnpinStatus.html">BulkUnpinStatus</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkUpdateAttributeDetail.html">BulkUpdateAttributeDetail</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkUpdateAttributeDetails.html">BulkUpdateAttributeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkUpdateAttributeMetadata.html">BulkUpdateAttributeMetadata</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkUpdateAttributeNotesDetail.html">BulkUpdateAttributeNotesDetail</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkUpdateAttributeNotesDetails.html">BulkUpdateAttributeNotesDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkUpdateAttributeStatus.html">BulkUpdateAttributeStatus</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkUpdateNotesMetadata.html">BulkUpdateNotesMetadata</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.BulkUpdateNotesStatus.html">BulkUpdateNotesStatus</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.QueryDetails.html">QueryDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.QueryResultMetadataSummary.html">QueryResultMetadataSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.QueryResultResponse.html">QueryResultResponse</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.QueryResultRow.html">QueryResultRow</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.QueryResultRowTypeSummary.html">QueryResultRowTypeSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.QueryResultWarning.html">QueryResultWarning</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.QueryResultsGroupedBySummary.html">QueryResultsGroupedBySummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.QueryResultsOrderedBySummary.html">QueryResultsOrderedBySummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.QueryResultsTopologyInfo.html">QueryResultsTopologyInfo</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.QueryResultsTopologyNodeInfo.html">QueryResultsTopologyNodeInfo</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.QuickPickSummary.html">QuickPickSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.SnapshotDetail.html">SnapshotDetail</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.Span.html">Span</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.SpanLog.html">SpanLog</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.SpanLogCollection.html">SpanLogCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.SpanSnapshot.html">SpanSnapshot</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.StackTraceElement.html">StackTraceElement</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.Tag.html">Tag</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.TagMetadata.html">TagMetadata</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.ThreadSnapshot.html">ThreadSnapshot</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.Trace.html">Trace</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.TraceServiceSummary.html">TraceServiceSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.apm_traces.models.TraceSnapshot.html">TraceSnapshot</a>
+                                            </li>
+                                            <li class="toctree-l4 current"><a
+                                                    class="current reference internal" href="#">TraceSpanSummary</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../appmgmt_control.html">Appmgmt
+                                Control</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../artifacts.html">Artifacts</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../audit.html">Audit</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../autoscaling.html">Autoscaling</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../bastion.html">Bastion</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../bds.html">Bds</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../blockchain.html">Blockchain</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../budget.html">Budget</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../capacity_management.html">Capacity
+                                Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../certificates.html">Certificates</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../certificates_management.html">Certificates
+                                Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../cims.html">Cims</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../cloud_bridge.html">Cloud
+                                Bridge</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../cloud_guard.html">Cloud Guard</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../cloud_migrations.html">Cloud
+                                Migrations</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../cluster_placement_groups.html">Cluster
+                                Placement Groups</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../compute_cloud_at_customer.html">Compute
+                                Cloud At Customer</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../compute_instance_agent.html">Compute
+                                Instance Agent</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../container_engine.html">Container
+                                Engine</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../container_instances.html">Container
+                                Instances</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../core.html">Core Services</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../dashboard_service.html">Dashboard
+                                Service</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_catalog.html">Data
+                                Catalog</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_flow.html">Data Flow</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_integration.html">Data
+                                Integration</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_labeling_service.html">Data
+                                Labeling Service</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_labeling_service_dataplane.html">Data
+                                Labeling Service Dataplane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_safe.html">Data Safe</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_science.html">Data
+                                Science</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../database.html">Database</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../database_management.html">Database
+                                Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../database_migration.html">Database
+                                Migration</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../database_tools.html">Database
+                                Tools</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../delegate_access_control.html">Delegate
+                                Access Control</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../demand_signal.html">Demand
+                                Signal</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../desktops.html">Desktops</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../devops.html">Devops</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../disaster_recovery.html">Disaster
+                                Recovery</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../dns.html">DNS</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../dts.html">Dts</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../em_warehouse.html">Em
+                                Warehouse</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../email.html">Email</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../email_data_plane.html">Email Data
+                                Plane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../events.html">Events</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../file_storage.html">File
+                                Storage</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../fleet_apps_management.html">Fleet
+                                Apps Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../fleet_software_update.html">Fleet
+                                Software Update</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../functions.html">Functions</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../fusion_apps.html">Fusion Apps</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../generative_ai.html">Generative
+                                Ai</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../generative_ai_agent.html">Generative
+                                Ai Agent</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../generative_ai_agent_runtime.html">Generative
+                                Ai Agent Runtime</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../generative_ai_inference.html">Generative
+                                Ai Inference</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../generic_artifacts_content.html">Generic
+                                Artifacts Content</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../globally_distributed_database.html">Globally
+                                Distributed Database</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../golden_gate.html">Golden Gate</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../governance_rules_control_plane.html">Governance
+                                Rules Control Plane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../healthchecks.html">Healthchecks</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../identity.html">Identity</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../identity_data_plane.html">Identity
+                                Data Plane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../identity_domains.html">Identity
+                                Domains</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../integration.html">Integration</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../jms.html">Jms</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../jms_java_downloads.html">Jms Java
+                                Downloads</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../key_management.html">Key
+                                Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../license_manager.html">License
+                                Manager</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../limits.html">Limits</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../load_balancer.html">Load
+                                Balancer</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../lockbox.html">Lockbox</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../log_analytics.html">Log
+                                Analytics</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../logging.html">Logging</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../loggingingestion.html">Loggingingestion</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../loggingsearch.html">Loggingsearch</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../management_agent.html">Management
+                                Agent</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../management_dashboard.html">Management
+                                Dashboard</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../marketplace.html">Marketplace</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../marketplace_private_offer.html">Marketplace
+                                Private Offer</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../marketplace_publisher.html">Marketplace
+                                Publisher</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../media_services.html">Media
+                                Services</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../monitoring.html">Monitoring</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../mysql.html">Mysql</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../network_firewall.html">Network
+                                Firewall</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../network_load_balancer.html">Network
+                                Load Balancer</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../nosql.html">Nosql</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../object_storage.html">Object
+                                Storage</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../oce.html">Oce</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../oci_control_center.html">Oci
+                                Control Center</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ocvp.html">Ocvp</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../oda.html">Oda</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../onesubscription.html">Onesubscription</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ons.html">Ons</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../opa.html">Opa</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../opensearch.html">Opensearch</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../operator_access_control.html">Operator
+                                Access Control</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../opsi.html">Opsi</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../optimizer.html">Optimizer</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../os_management.html">Os
+                                Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../os_management_hub.html">Os
+                                Management Hub</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../osp_gateway.html">Osp Gateway</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../osub_billing_schedule.html">Osub
+                                Billing Schedule</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../osub_organization_subscription.html">Osub
+                                Organization Subscription</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../osub_subscription.html">Osub
+                                Subscription</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../osub_usage.html">Osub Usage</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../psql.html">Psql</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../queue.html">Queue</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../recovery.html">Recovery</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../redis.html">Redis</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../resource_manager.html">Resource
+                                Manager</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../resource_scheduler.html">Resource
+                                Scheduler</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../resource_search.html">Resource
+                                Search</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../rover.html">Rover</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../sch.html">Sch</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../secrets.html">Secrets</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../security_attribute.html">Security
+                                Attribute</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../service_catalog.html">Service
+                                Catalog</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../service_manager_proxy.html">Service
+                                Manager Proxy</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../service_mesh.html">Service
+                                Mesh</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../stack_monitoring.html">Stack
+                                Monitoring</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../streaming.html">Streaming</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../tenant_manager_control_plane.html">Tenant
+                                Manager Control Plane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../threat_intelligence.html">Threat
+                                Intelligence</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../usage.html">Usage</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../usage_api.html">Usage Api</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../vault.html">Vault</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../vbs_inst.html">Vbs Inst</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../visual_builder.html">Visual
+                                Builder</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../vn_monitoring.html">Vn
+                                Monitoring</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../vulnerability_scanning.html">Vulnerability
+                                Scanning</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../waa.html">Waa</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../waas.html">Waas</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../waf.html">Waf</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../work_requests.html">Work
+                                Requests</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../zpr.html">Zpr</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../config.html">Config</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../circuit_breaker.html">Circuit
+                                Breakers</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../exceptions.html">Exceptions</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../pagination.html">Pagination</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../request_and_response.html">Request
+                                and Response</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../retry.html">Retry</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../signing.html">Signing</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../upload_manager.html">Upload
+                                Manager</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../utilities.html">Utilities</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../waiters.html">Waiters</a></li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../customize_service_client/index.html">Customizing
+                        Service Clients</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../sdk_behaviors/index.html">SDK
+                        Behaviors</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../contributions.html">Contributions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../notifications.html">Notifications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../license.html">License</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../feedback.html">Questions or
+                        Feedback</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+        <nav class="wy-nav-top" aria-label="top navigation">
+
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="../../../index.html">oci</a>
+
+        </nav>
+
+
+        <div class="wy-nav-content">
+
+            <div class="rst-content">
+
+
+                <div role="navigation" aria-label="breadcrumbs navigation">
+
+                    <ul class="wy-breadcrumbs">
+
+                        <li><a href="../../../index.html">Docs</a> &raquo;</li>
+
+                        <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+
+                        <li><a href="../../apm_traces.html">Apm Traces</a> &raquo;</li>
+
+                        <li>TraceSpanSummary</li>
+
+
+                        <li class="wy-breadcrumbs-aside">
+
+
+                            <a href="../../../_sources/api/apm_traces/models/oci.apm_traces.models.TraceSpanSummary.rst.txt"
+                               rel="nofollow"> View page source</a>
+
+
+                        </li>
+
+                    </ul>
+
+
+                    <hr/>
+                </div>
+                <div role="main" class="document" itemscope="itemscope"
+                     itemtype="http://schema.org/Article">
+                    <div itemprop="articleBody">
+
+                        <div class="section" id="tracespansummary">
+                            <h1>TraceSpanSummary<a class="headerlink" href="#tracespansummary"
+                                                   title="Permalink to this headline">¶</a></h1>
+                            <dl class="class">
+                                <dt id="oci.apm_traces.models.TraceSpanSummary">
+                                    <em class="property">class </em><code class="descclassname">oci.apm_traces.models.</code><code
+                                        class="descname">TraceSpanSummary</code><span
+                                        class="sig-paren">(</span><em>**kwargs</em><span
+                                        class="sig-paren">)</span><a class="headerlink"
+                                                                     href="#oci.apm_traces.models.TraceSpanSummary"
+                                                                     title="Permalink to this definition">¶</a>
+                                </dt>
+                                <dd><p>Bases: <code
+                                        class="xref py py-class docutils literal notranslate"><span
+                                        class="pre">object</span></code></p>
+                                    <p>Summary of the information pertaining to the spans in the
+                                        trace window that is being queried.</p>
+                                    <p><strong>Methods</strong></p>
+                                    <table border="1" class="longtable docutils">
+                                        <colgroup>
+                                            <col width="10%"/>
+                                            <col width="90%"/>
+                                        </colgroup>
+                                        <tbody valign="top">
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.__init__"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.__init__"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">__init__</span></code></a>(**kwargs)
+                                            </td>
+                                            <td>Initializes a new TraceSpanSummary object with
+                                                values from keyword arguments.
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <p><strong>Attributes</strong></p>
+                                    <table border="1" class="longtable docutils">
+                                        <colgroup>
+                                            <col width="10%"/>
+                                            <col width="90%"/>
+                                        </colgroup>
+                                        <tbody valign="top">
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.error_span_count"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.error_span_count"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">error_span_count</span></code></a>
+                                            </td>
+                                            <td><strong>[Required]</strong> Gets the
+                                                error_span_count of this TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-even">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.is_fault"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.is_fault"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">is_fault</span></code></a></td>
+                                            <td><strong>[Required]</strong> Gets the is_fault of
+                                                this TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.key"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.key"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">key</span></code></a></td>
+                                            <td><strong>[Required]</strong> Gets the key of this
+                                                TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-even">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.root_span_duration_in_ms"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.root_span_duration_in_ms"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">root_span_duration_in_ms</span></code></a>
+                                            </td>
+                                            <td>Gets the root_span_duration_in_ms of this
+                                                TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.root_span_operation_name"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.root_span_operation_name"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">root_span_operation_name</span></code></a>
+                                            </td>
+                                            <td>Gets the root_span_operation_name of this
+                                                TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-even">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.root_span_service_name"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.root_span_service_name"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">root_span_service_name</span></code></a>
+                                            </td>
+                                            <td>Gets the root_span_service_name of this
+                                                TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.service_summaries"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.service_summaries"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">service_summaries</span></code></a>
+                                            </td>
+                                            <td>Gets the service_summaries of this
+                                                TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-even">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.span_count"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.span_count"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">span_count</span></code></a></td>
+                                            <td><strong>[Required]</strong> Gets the span_count of
+                                                this TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.time_earliest_span_started"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.time_earliest_span_started"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">time_earliest_span_started</span></code></a>
+                                            </td>
+                                            <td><strong>[Required]</strong> Gets the
+                                                time_earliest_span_started of this TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-even">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.time_latest_span_ended"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.time_latest_span_ended"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">time_latest_span_ended</span></code></a>
+                                            </td>
+                                            <td><strong>[Required]</strong> Gets the
+                                                time_latest_span_ended of this TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.time_root_span_ended"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.time_root_span_ended"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">time_root_span_ended</span></code></a>
+                                            </td>
+                                            <td>Gets the time_root_span_ended of this
+                                                TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-even">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.time_root_span_started"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.time_root_span_started"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">time_root_span_started</span></code></a>
+                                            </td>
+                                            <td>Gets the time_root_span_started of this
+                                                TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.trace_duration_in_ms"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.trace_duration_in_ms"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">trace_duration_in_ms</span></code></a>
+                                            </td>
+                                            <td><strong>[Required]</strong> Gets the
+                                                trace_duration_in_ms of this TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-even">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.trace_error_code"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.trace_error_code"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">trace_error_code</span></code></a>
+                                            </td>
+                                            <td><strong>[Required]</strong> Gets the
+                                                trace_error_code of this TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.trace_error_type"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.trace_error_type"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">trace_error_type</span></code></a>
+                                            </td>
+                                            <td><strong>[Required]</strong> Gets the
+                                                trace_error_type of this TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-even">
+                                            <td><a class="reference internal"
+                                                   href="#oci.apm_traces.models.TraceSpanSummary.trace_status"
+                                                   title="oci.apm_traces.models.TraceSpanSummary.trace_status"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">trace_status</span></code></a></td>
+                                            <td><strong>[Required]</strong> Gets the trace_status of
+                                                this TraceSpanSummary.
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <dl class="method">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.__init__">
+                                            <code class="descname">__init__</code><span
+                                                class="sig-paren">(</span><em>**kwargs</em><span
+                                                class="sig-paren">)</span><a class="headerlink"
+                                                                             href="#oci.apm_traces.models.TraceSpanSummary.__init__"
+                                                                             title="Permalink to this definition">¶</a>
+                                        </dt>
+                                        <dd><p>Initializes a new TraceSpanSummary object with values
+                                            from keyword arguments.
+                                            The following keyword arguments are supported
+                                            (corresponding to the getters/setters of this
+                                            class):</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Parameters:</th>
+                                                    <td class="field-body">
+                                                        <ul class="first last simple">
+                                                            <li><strong>key</strong> (<em>str</em>)
+                                                                – The value to assign to the key
+                                                                property of this TraceSpanSummary.
+                                                            </li>
+                                                            <li>
+                                                                <strong>root_span_operation_name</strong>
+                                                                (<em>str</em>) – The value to assign
+                                                                to the root_span_operation_name
+                                                                property of this TraceSpanSummary.
+                                                            </li>
+                                                            <li>
+                                                                <strong>time_earliest_span_started</strong>
+                                                                (<em>datetime</em>) – The value to
+                                                                assign to the
+                                                                time_earliest_span_started property
+                                                                of this TraceSpanSummary.
+                                                            </li>
+                                                            <li>
+                                                                <strong>time_latest_span_ended</strong>
+                                                                (<em>datetime</em>) – The value to
+                                                                assign to the time_latest_span_ended
+                                                                property of this TraceSpanSummary.
+                                                            </li>
+                                                            <li><strong>span_count</strong>
+                                                                (<em>int</em>) – The value to assign
+                                                                to the span_count property of this
+                                                                TraceSpanSummary.
+                                                            </li>
+                                                            <li><strong>error_span_count</strong>
+                                                                (<em>int</em>) – The value to assign
+                                                                to the error_span_count property of
+                                                                this TraceSpanSummary.
+                                                            </li>
+                                                            <li>
+                                                                <strong>root_span_service_name</strong>
+                                                                (<em>str</em>) – The value to assign
+                                                                to the root_span_service_name
+                                                                property of this TraceSpanSummary.
+                                                            </li>
+                                                            <li>
+                                                                <strong>time_root_span_started</strong>
+                                                                (<em>datetime</em>) – The value to
+                                                                assign to the time_root_span_started
+                                                                property of this TraceSpanSummary.
+                                                            </li>
+                                                            <li>
+                                                                <strong>time_root_span_ended</strong>
+                                                                (<em>datetime</em>) – The value to
+                                                                assign to the time_root_span_ended
+                                                                property of this TraceSpanSummary.
+                                                            </li>
+                                                            <li>
+                                                                <strong>root_span_duration_in_ms</strong>
+                                                                (<em>int</em>) – The value to assign
+                                                                to the root_span_duration_in_ms
+                                                                property of this TraceSpanSummary.
+                                                            </li>
+                                                            <li>
+                                                                <strong>trace_duration_in_ms</strong>
+                                                                (<em>int</em>) – The value to assign
+                                                                to the trace_duration_in_ms property
+                                                                of this TraceSpanSummary.
+                                                            </li>
+                                                            <li><strong>is_fault</strong>
+                                                                (<em>bool</em>) – The value to
+                                                                assign to the is_fault property of
+                                                                this TraceSpanSummary.
+                                                            </li>
+                                                            <li><strong>trace_status</strong> (<em>str</em>)
+                                                                – The value to assign to the
+                                                                trace_status property of this
+                                                                TraceSpanSummary.
+                                                            </li>
+                                                            <li><strong>trace_error_type</strong>
+                                                                (<em>str</em>) – The value to assign
+                                                                to the trace_error_type property of
+                                                                this TraceSpanSummary.
+                                                            </li>
+                                                            <li><strong>trace_error_code</strong>
+                                                                (<em>str</em>) – The value to assign
+                                                                to the trace_error_code property of
+                                                                this TraceSpanSummary.
+                                                            </li>
+                                                            <li><strong>service_summaries</strong> (<em>list</em><em>[</em><a
+                                                                    class="reference internal"
+                                                                    href="oci.apm_traces.models.TraceServiceSummary.html#oci.apm_traces.models.TraceServiceSummary"
+                                                                    title="oci.apm_traces.models.TraceServiceSummary"><em>oci.apm_traces.models.TraceServiceSummary</em></a><em>]</em>)
+                                                                – The value to assign to the
+                                                                service_summaries property of this
+                                                                TraceSpanSummary.
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.error_span_count">
+                                            <code class="descname">error_span_count</code><a
+                                                class="headerlink"
+                                                href="#oci.apm_traces.models.TraceSpanSummary.error_span_count"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p><strong>[Required]</strong> Gets the error_span_count
+                                            of this TraceSpanSummary.
+                                            The number of spans with errors that have been processed
+                                            by the system for the trace.
+                                            Note that the number of spans with errors will be less
+                                            than or equal to the total number of spans in the trace.
+                                        </p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The error_span_count of
+                                                        this TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">int</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.is_fault">
+                                            <code class="descname">is_fault</code><a
+                                                class="headerlink"
+                                                href="#oci.apm_traces.models.TraceSpanSummary.is_fault"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p><strong>[Required]</strong> Gets the is_fault of this
+                                            TraceSpanSummary.
+                                            Boolean flag that indicates whether the trace has an
+                                            error.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The is_fault of this
+                                                        TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">bool</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.key">
+                                            <code class="descname">key</code><a class="headerlink"
+                                                                                href="#oci.apm_traces.models.TraceSpanSummary.key"
+                                                                                title="Permalink to this definition">¶</a>
+                                        </dt>
+                                        <dd><p><strong>[Required]</strong> Gets the key of this
+                                            TraceSpanSummary.
+                                            Unique identifier (traceId) for the trace that
+                                            represents the span set. Note that this field is
+                                            defined as traceKey in the API and it maps to the
+                                            traceId in the trace data in Application Performance
+                                            Monitoring.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The key of this
+                                                        TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">str</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.root_span_duration_in_ms">
+                                            <code class="descname">root_span_duration_in_ms</code><a
+                                                class="headerlink"
+                                                href="#oci.apm_traces.models.TraceSpanSummary.root_span_duration_in_ms"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>Gets the root_span_duration_in_ms of this
+                                            TraceSpanSummary.
+                                            Time taken for the root span operation to complete in
+                                            milliseconds.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The
+                                                        root_span_duration_in_ms of this
+                                                        TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">int</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.root_span_operation_name">
+                                            <code class="descname">root_span_operation_name</code><a
+                                                class="headerlink"
+                                                href="#oci.apm_traces.models.TraceSpanSummary.root_span_operation_name"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>Gets the root_span_operation_name of this
+                                            TraceSpanSummary.
+                                            Root span name associated with the trace. This is the
+                                            flow start operation name.
+                                            Null is displayed if the root span is not yet
+                                            completed.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The
+                                                        root_span_operation_name of this
+                                                        TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">str</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.root_span_service_name">
+                                            <code class="descname">root_span_service_name</code><a
+                                                class="headerlink"
+                                                href="#oci.apm_traces.models.TraceSpanSummary.root_span_service_name"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>Gets the root_span_service_name of this
+                                            TraceSpanSummary.
+                                            Service associated with the trace.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The
+                                                        root_span_service_name of this
+                                                        TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">str</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.service_summaries">
+                                            <code class="descname">service_summaries</code><a
+                                                class="headerlink"
+                                                href="#oci.apm_traces.models.TraceSpanSummary.service_summaries"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>Gets the service_summaries of this TraceSpanSummary.
+                                            A summary of the spans by service.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The service_summaries of
+                                                        this TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">list[<a
+                                                            class="reference internal"
+                                                            href="oci.apm_traces.models.TraceServiceSummary.html#oci.apm_traces.models.TraceServiceSummary"
+                                                            title="oci.apm_traces.models.TraceServiceSummary">oci.apm_traces.models.TraceServiceSummary</a>]
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.span_count">
+                                            <code class="descname">span_count</code><a
+                                                class="headerlink"
+                                                href="#oci.apm_traces.models.TraceSpanSummary.span_count"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p><strong>[Required]</strong> Gets the span_count of
+                                            this TraceSpanSummary.
+                                            The number of spans that have been processed by the
+                                            system for the trace. Note that there
+                                            could be additional spans that have not been processed
+                                            or reported yet if the trace is still
+                                            in progress.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The span_count of this
+                                                        TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">int</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.time_earliest_span_started">
+                                            <code class="descname">time_earliest_span_started</code><a
+                                                class="headerlink"
+                                                href="#oci.apm_traces.models.TraceSpanSummary.time_earliest_span_started"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p><strong>[Required]</strong> Gets the
+                                            time_earliest_span_started of this TraceSpanSummary.
+                                            Start time of the earliest span in the span collection.
+                                        </p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The
+                                                        time_earliest_span_started of this
+                                                        TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">datetime</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.time_latest_span_ended">
+                                            <code class="descname">time_latest_span_ended</code><a
+                                                class="headerlink"
+                                                href="#oci.apm_traces.models.TraceSpanSummary.time_latest_span_ended"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p><strong>[Required]</strong> Gets the
+                                            time_latest_span_ended of this TraceSpanSummary.
+                                            End time of the span that most recently ended in the
+                                            span collection.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The
+                                                        time_latest_span_ended of this
+                                                        TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">datetime</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.time_root_span_ended">
+                                            <code class="descname">time_root_span_ended</code><a
+                                                class="headerlink"
+                                                href="#oci.apm_traces.models.TraceSpanSummary.time_root_span_ended"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>Gets the time_root_span_ended of this
+                                            TraceSpanSummary.
+                                            End time of the root span for the span collection.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The time_root_span_ended
+                                                        of this TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">datetime</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.time_root_span_started">
+                                            <code class="descname">time_root_span_started</code><a
+                                                class="headerlink"
+                                                href="#oci.apm_traces.models.TraceSpanSummary.time_root_span_started"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>Gets the time_root_span_started of this
+                                            TraceSpanSummary.
+                                            Start time of the root span for the span collection.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The
+                                                        time_root_span_started of this
+                                                        TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">datetime</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.trace_duration_in_ms">
+                                            <code class="descname">trace_duration_in_ms</code><a
+                                                class="headerlink"
+                                                href="#oci.apm_traces.models.TraceSpanSummary.trace_duration_in_ms"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p><strong>[Required]</strong> Gets the
+                                            trace_duration_in_ms of this TraceSpanSummary.
+                                            Time between the start of the earliest span and the end
+                                            of the most recent span in milliseconds.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The trace_duration_in_ms
+                                                        of this TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">int</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.trace_error_code">
+                                            <code class="descname">trace_error_code</code><a
+                                                class="headerlink"
+                                                href="#oci.apm_traces.models.TraceSpanSummary.trace_error_code"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p><strong>[Required]</strong> Gets the trace_error_code
+                                            of this TraceSpanSummary.
+                                            Error code of the trace.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The trace_error_code of
+                                                        this TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">str</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.trace_error_type">
+                                            <code class="descname">trace_error_type</code><a
+                                                class="headerlink"
+                                                href="#oci.apm_traces.models.TraceSpanSummary.trace_error_type"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p><strong>[Required]</strong> Gets the trace_error_type
+                                            of this TraceSpanSummary.
+                                            Error type of the trace.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The trace_error_type of
+                                                        this TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">str</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.apm_traces.models.TraceSpanSummary.trace_status">
+                                            <code class="descname">trace_status</code><a
+                                                class="headerlink"
+                                                href="#oci.apm_traces.models.TraceSpanSummary.trace_status"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p><strong>[Required]</strong> Gets the trace_status of
+                                            this TraceSpanSummary.
+                                            The status of the trace.
+                                            The trace statuses are defined as follows:
+                                            complete - a root span has been recorded, but there is
+                                            no information on the errors.
+                                            success - a complete root span is recorded there is a
+                                            successful error type and error code - HTTP 200.
+                                            incomplete - the root span has not yet been received.
+                                            error - the root span returned with an error. There may
+                                            or may not be an associated error code or error type.
+                                        </p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The trace_status of this
+                                                        TraceSpanSummary.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">str</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                </dd>
+                            </dl>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <footer>
+
+                    <div class="rst-footer-buttons" role="navigation"
+                         aria-label="footer navigation">
+
+                        <a href="../../appmgmt_control.html" class="btn btn-neutral float-right"
+                           title="Appmgmt Control" accesskey="n" rel="next">Next <span
+                                class="fa fa-arrow-circle-right"></span></a>
+
+
+                        <a href="oci.apm_traces.models.TraceSnapshot.html" class="btn btn-neutral"
+                           title="TraceSnapshot" accesskey="p" rel="prev"><span
+                                class="fa fa-arrow-circle-left"></span> Previous</a>
+
+                    </div>
+
+
+                    <hr/>
+
+                    <div role="contentinfo">
+                        <p>
+                            &copy; Copyright 2016, 2025, Oracle
+
+                        </p>
+                    </div>
+                    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a
+                        href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a
+                        href="https://readthedocs.org">Read the Docs</a>.
+
+                </footer>
+
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+<script type="text/javascript" id="documentation_options" data-url_root="../../../"
+        src="../../../_static/documentation_options.js"></script>
+<script type="text/javascript" src="../../../_static/jquery.js"></script>
+<script type="text/javascript" src="../../../_static/underscore.js"></script>
+<script type="text/javascript" src="../../../_static/doctools.js"></script>
+<script type="text/javascript" src="../../../_static/language_data.js"></script>
+
+
+<script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        SphinxRtdTheme.Navigation.enable(true);
+    });
+</script>
+
+</body>
+</html>

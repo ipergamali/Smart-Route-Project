@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BatchDetectLanguageEntitiesDetails &mdash; oci 2.143.1 documentation</title>
+
+
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css"/>
+    <link rel="index" title="Index" href="../../../genindex.html"/>
+    <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="next" title="BatchDetectLanguageEntitiesResult"
+          href="oci.ai_language.models.BatchDetectLanguageEntitiesResult.html"/>
+    <link rel="prev" title="BatchDetectHealthEntityResult"
+          href="oci.ai_language.models.BatchDetectHealthEntityResult.html"/>
+
+
+    <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+
+<div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+            <div class="wy-side-nav-search">
+
+
+                <a href="../../../index.html" class="icon icon-home"> oci
+
+
+                </a>
+
+
+                <div class="version">
+                    2.143.1
+                </div>
+
+
+                <div role="search">
+                    <form id="rtd-search-form" class="wy-form" action="../../../search.html"
+                          method="get">
+                        <input type="text" name="q" placeholder="Search docs"/>
+                        <input type="hidden" name="check_keywords" value="yes"/>
+                        <input type="hidden" name="area" value="default"/>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation"
+                 aria-label="main navigation">
+
+
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../configuration.html">Configuration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../fips-libraries.html">Using
+                        FIPS-validated Libraries</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../forward-compatibility.html">Forward
+                        Compatibility</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../new-region-support.html">New Region
+                        Support</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../backward-compatibility.html">Backward
+                        Compatibility</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../quickstart.html">Quickstart</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../known-issues.html">Known Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../logging.html">Logging</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../exceptions.html">Exception handling</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../upload-manager.html">Uploading Large
+                        Objects</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../raw-requests.html">Raw Requests</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../waiters.html">Composite Operations and
+                        Waiters</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../pagination.html">Pagination</a></li>
+                    <li class="toctree-l1 current"><a class="reference internal"
+                                                      href="../../landing.html">API Reference</a>
+                        <ul class="current">
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../access_governance_cp.html">Access
+                                Governance Cp</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../adm.html">Adm</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ai_anomaly_detection.html">Ai
+                                Anomaly Detection</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ai_document.html">Ai Document</a>
+                            </li>
+                            <li class="toctree-l2 current"><a class="reference internal"
+                                                              href="../../ai_language.html">Ai
+                                Language</a>
+                                <ul class="current">
+                                    <li class="toctree-l3"><a class="reference internal"
+                                                              href="../client/oci.ai_language.AIServiceLanguageClient.html">AIServiceLanguageClient</a>
+                                    </li>
+                                    <li class="toctree-l3"><a class="reference internal"
+                                                              href="../client/oci.ai_language.AIServiceLanguageClientCompositeOperations.html">AIServiceLanguageClientCompositeOperations</a>
+                                    </li>
+                                    <li class="toctree-l3 current"><a class="reference internal"
+                                                                      href="../../ai_language.html#models">Models</a>
+                                        <ul class="current">
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.AssertionDetails.html">AssertionDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.BatchDetectDominantLanguageDetails.html">BatchDetectDominantLanguageDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.BatchDetectDominantLanguageResult.html">BatchDetectDominantLanguageResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.BatchDetectHealthEntityDetails.html">BatchDetectHealthEntityDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.BatchDetectHealthEntityResult.html">BatchDetectHealthEntityResult</a>
+                                            </li>
+                                            <li class="toctree-l4 current"><a
+                                                    class="current reference internal" href="#">BatchDetectLanguageEntitiesDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.BatchDetectLanguageEntitiesResult.html">BatchDetectLanguageEntitiesResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.BatchDetectLanguageKeyPhrasesDetails.html">BatchDetectLanguageKeyPhrasesDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.BatchDetectLanguageKeyPhrasesResult.html">BatchDetectLanguageKeyPhrasesResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.BatchDetectLanguagePiiEntitiesDetails.html">BatchDetectLanguagePiiEntitiesDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.BatchDetectLanguagePiiEntitiesResult.html">BatchDetectLanguagePiiEntitiesResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.BatchDetectLanguageSentimentsDetails.html">BatchDetectLanguageSentimentsDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.BatchDetectLanguageSentimentsResult.html">BatchDetectLanguageSentimentsResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.BatchDetectLanguageTextClassificationDetails.html">BatchDetectLanguageTextClassificationDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.BatchDetectLanguageTextClassificationResult.html">BatchDetectLanguageTextClassificationResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.BatchLanguageTranslationDetails.html">BatchLanguageTranslationDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.BatchLanguageTranslationResult.html">BatchLanguageTranslationResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.Capabilities.html">Capabilities</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.Capability.html">Capability</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ChangeEndpointCompartmentDetails.html">ChangeEndpointCompartmentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ChangeJobCompartmentDetails.html">ChangeJobCompartmentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ChangeModelCompartmentDetails.html">ChangeModelCompartmentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ChangeProjectCompartmentDetails.html">ChangeProjectCompartmentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ClassMetrics.html">ClassMetrics</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ClassificationMultiClassModeDetails.html">ClassificationMultiClassModeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ClassificationMultiLabelModeDetails.html">ClassificationMultiLabelModeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ClassificationType.html">ClassificationType</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ConfigurationDetails.html">ConfigurationDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ConfusionMatrixDetails.html">ConfusionMatrixDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.CreateEndpointDetails.html">CreateEndpointDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.CreateJobDetails.html">CreateJobDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.CreateModelDetails.html">CreateModelDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.CreateProjectDetails.html">CreateProjectDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DataScienceLabelingDataset.html">DataScienceLabelingDataset</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DatasetDetails.html">DatasetDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DetectDominantLanguageDetails.html">DetectDominantLanguageDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DetectDominantLanguageResult.html">DetectDominantLanguageResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DetectLanguageEntitiesDetails.html">DetectLanguageEntitiesDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DetectLanguageEntitiesResult.html">DetectLanguageEntitiesResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DetectLanguageKeyPhrasesDetails.html">DetectLanguageKeyPhrasesDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DetectLanguageKeyPhrasesResult.html">DetectLanguageKeyPhrasesResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DetectLanguageSentimentsDetails.html">DetectLanguageSentimentsDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DetectLanguageSentimentsResult.html">DetectLanguageSentimentsResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DetectLanguageTextClassificationDetails.html">DetectLanguageTextClassificationDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DetectLanguageTextClassificationResult.html">DetectLanguageTextClassificationResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DetectedLanguage.html">DetectedLanguage</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DocumentError.html">DocumentError</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DocumentsConfiguration.html">DocumentsConfiguration</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DominantLanguageDocument.html">DominantLanguageDocument</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.DominantLanguageDocumentResult.html">DominantLanguageDocumentResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.Endpoint.html">Endpoint</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.EndpointCollection.html">EndpointCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.EndpointSummary.html">EndpointSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.Entity.html">Entity</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.EntityDocumentResult.html">EntityDocumentResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.EntityLabelErrorAnalysis.html">EntityLabelErrorAnalysis</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.EntityMetrics.html">EntityMetrics</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ErrorDetails.html">ErrorDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.EvaluationResultCollection.html">EvaluationResultCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.EvaluationResultSummary.html">EvaluationResultSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.EvaluationResults.html">EvaluationResults</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.HealthEntity.html">HealthEntity</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.HealthEntityDocumentResult.html">HealthEntityDocumentResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.HealthNluModelDetails.html">HealthNluModelDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.HierarchicalEntity.html">HierarchicalEntity</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.InputConfiguration.html">InputConfiguration</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.InputLocation.html">InputLocation</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.Job.html">Job</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.JobCollection.html">JobCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.JobSummary.html">JobSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.KeyPhrase.html">KeyPhrase</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.KeyPhraseDocumentResult.html">KeyPhraseDocumentResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.LocationDetails.html">LocationDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.MelConcept.html">MelConcept</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.MelConceptDetails.html">MelConceptDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.MetaInfo.html">MetaInfo</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.Model.html">Model</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ModelCollection.html">ModelCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ModelDetails.html">ModelDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ModelMetadataDetails.html">ModelMetadataDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ModelSummary.html">ModelSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ModelTypeInfo.html">ModelTypeInfo</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.NamedEntityRecognitionEvaluationResult.html">NamedEntityRecognitionEvaluationResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.NamedEntityRecognitionEvaluationResults.html">NamedEntityRecognitionEvaluationResults</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.NamedEntityRecognitionModelDetails.html">NamedEntityRecognitionModelDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.NamedEntityRecognitionModelMetrics.html">NamedEntityRecognitionModelMetrics</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ObjectListDataset.html">ObjectListDataset</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ObjectPrefixOutputLocation.html">ObjectPrefixOutputLocation</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ObjectStorageDataset.html">ObjectStorageDataset</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ObjectStorageFileNameLocation.html">ObjectStorageFileNameLocation</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ObjectStoragePrefixLocation.html">ObjectStoragePrefixLocation</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PiiEntity.html">PiiEntity</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PiiEntityDocumentResult.html">PiiEntityDocumentResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PiiEntityMask.html">PiiEntityMask</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PiiEntityMasking.html">PiiEntityMasking</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PiiEntityRemove.html">PiiEntityRemove</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PiiEntityReplace.html">PiiEntityReplace</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PiiModelDetails.html">PiiModelDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PreDeployedLanguageModels.html">PreDeployedLanguageModels</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PreTrainedHealthNluModelDetails.html">PreTrainedHealthNluModelDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PreTrainedKeyPhraseExtractionModelDetails.html">PreTrainedKeyPhraseExtractionModelDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PreTrainedLanguageDetectionModelDetails.html">PreTrainedLanguageDetectionModelDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PreTrainedNamedEntityRecognitionModelDetails.html">PreTrainedNamedEntityRecognitionModelDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PreTrainedPiiModelDetails.html">PreTrainedPiiModelDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PreTrainedSentimentAnalysisModelDetails.html">PreTrainedSentimentAnalysisModelDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PreTrainedSummarization.html">PreTrainedSummarization</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PreTrainedTextClassificationModelDetails.html">PreTrainedTextClassificationModelDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PreTrainedTranslationModelDetails.html">PreTrainedTranslationModelDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.PreTrainedUniversalModel.html">PreTrainedUniversalModel</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.Profile.html">Profile</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.Project.html">Project</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ProjectCollection.html">ProjectCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ProjectSummary.html">ProjectSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.RelationEntity.html">RelationEntity</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ResolvedEntities.html">ResolvedEntities</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.ResolvedEntity.html">ResolvedEntity</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.SentimentAspect.html">SentimentAspect</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.SentimentDocumentResult.html">SentimentDocumentResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.SentimentSentence.html">SentimentSentence</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.TestAndValidationDatasetStrategy.html">TestAndValidationDatasetStrategy</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.TestStrategy.html">TestStrategy</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.TextClassification.html">TextClassification</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.TextClassificationDocumentResult.html">TextClassificationDocumentResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.TextClassificationEvaluationResults.html">TextClassificationEvaluationResults</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.TextClassificationModelDetails.html">TextClassificationModelDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.TextClassificationModelEvaluationResult.html">TextClassificationModelEvaluationResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.TextClassificationModelMetrics.html">TextClassificationModelMetrics</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.TextDocument.html">TextDocument</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.TranslationDocumentResult.html">TranslationDocumentResult</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.UpdateEndpointDetails.html">UpdateEndpointDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.UpdateJobDetails.html">UpdateJobDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.UpdateModelDetails.html">UpdateModelDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.UpdateProjectDetails.html">UpdateProjectDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.WorkRequest.html">WorkRequest</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.WorkRequestError.html">WorkRequestError</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.WorkRequestErrorCollection.html">WorkRequestErrorCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.WorkRequestLog.html">WorkRequestLog</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.WorkRequestLogCollection.html">WorkRequestLogCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.WorkRequestResource.html">WorkRequestResource</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.WorkRequestSummary.html">WorkRequestSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.ai_language.models.WorkRequestSummaryCollection.html">WorkRequestSummaryCollection</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ai_speech.html">Ai Speech</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ai_vision.html">Ai Vision</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../analytics.html">Analytics</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../announcements_service.html">Announcements
+                                Service</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../apigateway.html">Apigateway</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../apm_config.html">Apm Config</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../apm_control_plane.html">Apm
+                                Control Plane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../apm_synthetics.html">Apm
+                                Synthetics</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../apm_traces.html">Apm Traces</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../appmgmt_control.html">Appmgmt
+                                Control</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../artifacts.html">Artifacts</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../audit.html">Audit</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../autoscaling.html">Autoscaling</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../bastion.html">Bastion</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../bds.html">Bds</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../blockchain.html">Blockchain</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../budget.html">Budget</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../capacity_management.html">Capacity
+                                Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../certificates.html">Certificates</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../certificates_management.html">Certificates
+                                Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../cims.html">Cims</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../cloud_bridge.html">Cloud
+                                Bridge</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../cloud_guard.html">Cloud Guard</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../cloud_migrations.html">Cloud
+                                Migrations</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../cluster_placement_groups.html">Cluster
+                                Placement Groups</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../compute_cloud_at_customer.html">Compute
+                                Cloud At Customer</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../compute_instance_agent.html">Compute
+                                Instance Agent</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../container_engine.html">Container
+                                Engine</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../container_instances.html">Container
+                                Instances</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../core.html">Core Services</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../dashboard_service.html">Dashboard
+                                Service</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_catalog.html">Data
+                                Catalog</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_flow.html">Data Flow</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_integration.html">Data
+                                Integration</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_labeling_service.html">Data
+                                Labeling Service</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_labeling_service_dataplane.html">Data
+                                Labeling Service Dataplane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_safe.html">Data Safe</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_science.html">Data
+                                Science</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../database.html">Database</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../database_management.html">Database
+                                Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../database_migration.html">Database
+                                Migration</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../database_tools.html">Database
+                                Tools</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../delegate_access_control.html">Delegate
+                                Access Control</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../demand_signal.html">Demand
+                                Signal</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../desktops.html">Desktops</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../devops.html">Devops</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../disaster_recovery.html">Disaster
+                                Recovery</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../dns.html">DNS</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../dts.html">Dts</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../em_warehouse.html">Em
+                                Warehouse</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../email.html">Email</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../email_data_plane.html">Email Data
+                                Plane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../events.html">Events</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../file_storage.html">File
+                                Storage</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../fleet_apps_management.html">Fleet
+                                Apps Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../fleet_software_update.html">Fleet
+                                Software Update</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../functions.html">Functions</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../fusion_apps.html">Fusion Apps</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../generative_ai.html">Generative
+                                Ai</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../generative_ai_agent.html">Generative
+                                Ai Agent</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../generative_ai_agent_runtime.html">Generative
+                                Ai Agent Runtime</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../generative_ai_inference.html">Generative
+                                Ai Inference</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../generic_artifacts_content.html">Generic
+                                Artifacts Content</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../globally_distributed_database.html">Globally
+                                Distributed Database</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../golden_gate.html">Golden Gate</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../governance_rules_control_plane.html">Governance
+                                Rules Control Plane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../healthchecks.html">Healthchecks</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../identity.html">Identity</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../identity_data_plane.html">Identity
+                                Data Plane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../identity_domains.html">Identity
+                                Domains</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../integration.html">Integration</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../jms.html">Jms</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../jms_java_downloads.html">Jms Java
+                                Downloads</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../key_management.html">Key
+                                Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../license_manager.html">License
+                                Manager</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../limits.html">Limits</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../load_balancer.html">Load
+                                Balancer</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../lockbox.html">Lockbox</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../log_analytics.html">Log
+                                Analytics</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../logging.html">Logging</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../loggingingestion.html">Loggingingestion</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../loggingsearch.html">Loggingsearch</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../management_agent.html">Management
+                                Agent</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../management_dashboard.html">Management
+                                Dashboard</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../marketplace.html">Marketplace</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../marketplace_private_offer.html">Marketplace
+                                Private Offer</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../marketplace_publisher.html">Marketplace
+                                Publisher</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../media_services.html">Media
+                                Services</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../monitoring.html">Monitoring</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../mysql.html">Mysql</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../network_firewall.html">Network
+                                Firewall</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../network_load_balancer.html">Network
+                                Load Balancer</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../nosql.html">Nosql</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../object_storage.html">Object
+                                Storage</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../oce.html">Oce</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../oci_control_center.html">Oci
+                                Control Center</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ocvp.html">Ocvp</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../oda.html">Oda</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../onesubscription.html">Onesubscription</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ons.html">Ons</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../opa.html">Opa</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../opensearch.html">Opensearch</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../operator_access_control.html">Operator
+                                Access Control</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../opsi.html">Opsi</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../optimizer.html">Optimizer</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../os_management.html">Os
+                                Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../os_management_hub.html">Os
+                                Management Hub</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../osp_gateway.html">Osp Gateway</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../osub_billing_schedule.html">Osub
+                                Billing Schedule</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../osub_organization_subscription.html">Osub
+                                Organization Subscription</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../osub_subscription.html">Osub
+                                Subscription</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../osub_usage.html">Osub Usage</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../psql.html">Psql</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../queue.html">Queue</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../recovery.html">Recovery</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../redis.html">Redis</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../resource_manager.html">Resource
+                                Manager</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../resource_scheduler.html">Resource
+                                Scheduler</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../resource_search.html">Resource
+                                Search</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../rover.html">Rover</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../sch.html">Sch</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../secrets.html">Secrets</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../security_attribute.html">Security
+                                Attribute</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../service_catalog.html">Service
+                                Catalog</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../service_manager_proxy.html">Service
+                                Manager Proxy</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../service_mesh.html">Service
+                                Mesh</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../stack_monitoring.html">Stack
+                                Monitoring</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../streaming.html">Streaming</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../tenant_manager_control_plane.html">Tenant
+                                Manager Control Plane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../threat_intelligence.html">Threat
+                                Intelligence</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../usage.html">Usage</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../usage_api.html">Usage Api</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../vault.html">Vault</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../vbs_inst.html">Vbs Inst</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../visual_builder.html">Visual
+                                Builder</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../vn_monitoring.html">Vn
+                                Monitoring</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../vulnerability_scanning.html">Vulnerability
+                                Scanning</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../waa.html">Waa</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../waas.html">Waas</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../waf.html">Waf</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../work_requests.html">Work
+                                Requests</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../zpr.html">Zpr</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../config.html">Config</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../circuit_breaker.html">Circuit
+                                Breakers</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../exceptions.html">Exceptions</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../pagination.html">Pagination</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../request_and_response.html">Request
+                                and Response</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../retry.html">Retry</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../signing.html">Signing</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../upload_manager.html">Upload
+                                Manager</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../utilities.html">Utilities</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../waiters.html">Waiters</a></li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../customize_service_client/index.html">Customizing
+                        Service Clients</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../sdk_behaviors/index.html">SDK
+                        Behaviors</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../contributions.html">Contributions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../notifications.html">Notifications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../license.html">License</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../feedback.html">Questions or
+                        Feedback</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+        <nav class="wy-nav-top" aria-label="top navigation">
+
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="../../../index.html">oci</a>
+
+        </nav>
+
+
+        <div class="wy-nav-content">
+
+            <div class="rst-content">
+
+
+                <div role="navigation" aria-label="breadcrumbs navigation">
+
+                    <ul class="wy-breadcrumbs">
+
+                        <li><a href="../../../index.html">Docs</a> &raquo;</li>
+
+                        <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+
+                        <li><a href="../../ai_language.html">Ai Language</a> &raquo;</li>
+
+                        <li>BatchDetectLanguageEntitiesDetails</li>
+
+
+                        <li class="wy-breadcrumbs-aside">
+
+
+                            <a href="../../../_sources/api/ai_language/models/oci.ai_language.models.BatchDetectLanguageEntitiesDetails.rst.txt"
+                               rel="nofollow"> View page source</a>
+
+
+                        </li>
+
+                    </ul>
+
+
+                    <hr/>
+                </div>
+                <div role="main" class="document" itemscope="itemscope"
+                     itemtype="http://schema.org/Article">
+                    <div itemprop="articleBody">
+
+                        <div class="section" id="batchdetectlanguageentitiesdetails">
+                            <h1>BatchDetectLanguageEntitiesDetails<a class="headerlink"
+                                                                     href="#batchdetectlanguageentitiesdetails"
+                                                                     title="Permalink to this headline">¶</a>
+                            </h1>
+                            <dl class="class">
+                                <dt id="oci.ai_language.models.BatchDetectLanguageEntitiesDetails">
+                                    <em class="property">class </em><code class="descclassname">oci.ai_language.models.</code><code
+                                        class="descname">BatchDetectLanguageEntitiesDetails</code><span
+                                        class="sig-paren">(</span><em>**kwargs</em><span
+                                        class="sig-paren">)</span><a class="headerlink"
+                                                                     href="#oci.ai_language.models.BatchDetectLanguageEntitiesDetails"
+                                                                     title="Permalink to this definition">¶</a>
+                                </dt>
+                                <dd><p>Bases: <code
+                                        class="xref py py-class docutils literal notranslate"><span
+                                        class="pre">object</span></code></p>
+                                    <p>The documents details for entities detect call.</p>
+                                    <p><strong>Methods</strong></p>
+                                    <table border="1" class="longtable docutils">
+                                        <colgroup>
+                                            <col width="10%"/>
+                                            <col width="90%"/>
+                                        </colgroup>
+                                        <tbody valign="top">
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.ai_language.models.BatchDetectLanguageEntitiesDetails.__init__"
+                                                   title="oci.ai_language.models.BatchDetectLanguageEntitiesDetails.__init__"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">__init__</span></code></a>(**kwargs)
+                                            </td>
+                                            <td>Initializes a new BatchDetectLanguageEntitiesDetails
+                                                object with values from keyword arguments.
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <p><strong>Attributes</strong></p>
+                                    <table border="1" class="longtable docutils">
+                                        <colgroup>
+                                            <col width="10%"/>
+                                            <col width="90%"/>
+                                        </colgroup>
+                                        <tbody valign="top">
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.ai_language.models.BatchDetectLanguageEntitiesDetails.alias"
+                                                   title="oci.ai_language.models.BatchDetectLanguageEntitiesDetails.alias"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">alias</span></code></a></td>
+                                            <td>Gets the alias of this
+                                                BatchDetectLanguageEntitiesDetails.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-even">
+                                            <td><a class="reference internal"
+                                                   href="#oci.ai_language.models.BatchDetectLanguageEntitiesDetails.compartment_id"
+                                                   title="oci.ai_language.models.BatchDetectLanguageEntitiesDetails.compartment_id"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">compartment_id</span></code></a>
+                                            </td>
+                                            <td>Gets the compartment_id of this
+                                                BatchDetectLanguageEntitiesDetails.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.ai_language.models.BatchDetectLanguageEntitiesDetails.documents"
+                                                   title="oci.ai_language.models.BatchDetectLanguageEntitiesDetails.documents"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">documents</span></code></a></td>
+                                            <td><strong>[Required]</strong> Gets the documents of
+                                                this BatchDetectLanguageEntitiesDetails.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-even">
+                                            <td><a class="reference internal"
+                                                   href="#oci.ai_language.models.BatchDetectLanguageEntitiesDetails.endpoint_id"
+                                                   title="oci.ai_language.models.BatchDetectLanguageEntitiesDetails.endpoint_id"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">endpoint_id</span></code></a></td>
+                                            <td>Gets the endpoint_id of this
+                                                BatchDetectLanguageEntitiesDetails.
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <dl class="method">
+                                        <dt id="oci.ai_language.models.BatchDetectLanguageEntitiesDetails.__init__">
+                                            <code class="descname">__init__</code><span
+                                                class="sig-paren">(</span><em>**kwargs</em><span
+                                                class="sig-paren">)</span><a class="headerlink"
+                                                                             href="#oci.ai_language.models.BatchDetectLanguageEntitiesDetails.__init__"
+                                                                             title="Permalink to this definition">¶</a>
+                                        </dt>
+                                        <dd><p>Initializes a new BatchDetectLanguageEntitiesDetails
+                                            object with values from keyword arguments.
+                                            The following keyword arguments are supported
+                                            (corresponding to the getters/setters of this
+                                            class):</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Parameters:</th>
+                                                    <td class="field-body">
+                                                        <ul class="first last simple">
+                                                            <li><strong>alias</strong> (<em>str</em>)
+                                                                – The value to assign to the alias
+                                                                property of this
+                                                                BatchDetectLanguageEntitiesDetails.
+                                                            </li>
+                                                            <li><strong>compartment_id</strong>
+                                                                (<em>str</em>) – The value to assign
+                                                                to the compartment_id property of
+                                                                this
+                                                                BatchDetectLanguageEntitiesDetails.
+                                                            </li>
+                                                            <li><strong>endpoint_id</strong> (<em>str</em>)
+                                                                – The value to assign to the
+                                                                endpoint_id property of this
+                                                                BatchDetectLanguageEntitiesDetails.
+                                                            </li>
+                                                            <li><strong>documents</strong>
+                                                                (<em>list</em><em>[</em><a
+                                                                        class="reference internal"
+                                                                        href="oci.ai_language.models.TextDocument.html#oci.ai_language.models.TextDocument"
+                                                                        title="oci.ai_language.models.TextDocument"><em>oci.ai_language.models.TextDocument</em></a><em>]</em>)
+                                                                – The value to assign to the
+                                                                documents property of this
+                                                                BatchDetectLanguageEntitiesDetails.
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.ai_language.models.BatchDetectLanguageEntitiesDetails.alias">
+                                            <code class="descname">alias</code><a class="headerlink"
+                                                                                  href="#oci.ai_language.models.BatchDetectLanguageEntitiesDetails.alias"
+                                                                                  title="Permalink to this definition">¶</a>
+                                        </dt>
+                                        <dd><p>Gets the alias of this
+                                            BatchDetectLanguageEntitiesDetails.
+                                            Unique name across user tenancy in a region to identify
+                                            an endpoint to be used for inferencing.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The alias of this
+                                                        BatchDetectLanguageEntitiesDetails.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">str</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.ai_language.models.BatchDetectLanguageEntitiesDetails.compartment_id">
+                                            <code class="descname">compartment_id</code><a
+                                                class="headerlink"
+                                                href="#oci.ai_language.models.BatchDetectLanguageEntitiesDetails.compartment_id"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>Gets the compartment_id of this
+                                            BatchDetectLanguageEntitiesDetails.
+                                            The <a class="reference external"
+                                                   href="https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm">OCID</a>
+                                            of the compartment that calls the API, inference will be
+                                            served from pre trained model</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The compartment_id of
+                                                        this BatchDetectLanguageEntitiesDetails.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">str</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.ai_language.models.BatchDetectLanguageEntitiesDetails.documents">
+                                            <code class="descname">documents</code><a
+                                                class="headerlink"
+                                                href="#oci.ai_language.models.BatchDetectLanguageEntitiesDetails.documents"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p><strong>[Required]</strong> Gets the documents of
+                                            this BatchDetectLanguageEntitiesDetails.
+                                            List of Documents for detect entities.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The documents of this
+                                                        BatchDetectLanguageEntitiesDetails.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">list[<a
+                                                            class="reference internal"
+                                                            href="oci.ai_language.models.TextDocument.html#oci.ai_language.models.TextDocument"
+                                                            title="oci.ai_language.models.TextDocument">oci.ai_language.models.TextDocument</a>]
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.ai_language.models.BatchDetectLanguageEntitiesDetails.endpoint_id">
+                                            <code class="descname">endpoint_id</code><a
+                                                class="headerlink"
+                                                href="#oci.ai_language.models.BatchDetectLanguageEntitiesDetails.endpoint_id"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>Gets the endpoint_id of this
+                                            BatchDetectLanguageEntitiesDetails.
+                                            The endpoint which have to be used for inferencing. If
+                                            endpointId and compartmentId is provided, then inference
+                                            will be served from custom model which is mapped to this
+                                            Endpoint.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The endpoint_id of this
+                                                        BatchDetectLanguageEntitiesDetails.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">str</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                </dd>
+                            </dl>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <footer>
+
+                    <div class="rst-footer-buttons" role="navigation"
+                         aria-label="footer navigation">
+
+                        <a href="oci.ai_language.models.BatchDetectLanguageEntitiesResult.html"
+                           class="btn btn-neutral float-right"
+                           title="BatchDetectLanguageEntitiesResult" accesskey="n" rel="next">Next
+                            <span class="fa fa-arrow-circle-right"></span></a>
+
+
+                        <a href="oci.ai_language.models.BatchDetectHealthEntityResult.html"
+                           class="btn btn-neutral" title="BatchDetectHealthEntityResult"
+                           accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span>
+                            Previous</a>
+
+                    </div>
+
+
+                    <hr/>
+
+                    <div role="contentinfo">
+                        <p>
+                            &copy; Copyright 2016, 2025, Oracle
+
+                        </p>
+                    </div>
+                    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a
+                        href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a
+                        href="https://readthedocs.org">Read the Docs</a>.
+
+                </footer>
+
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+<script type="text/javascript" id="documentation_options" data-url_root="../../../"
+        src="../../../_static/documentation_options.js"></script>
+<script type="text/javascript" src="../../../_static/jquery.js"></script>
+<script type="text/javascript" src="../../../_static/underscore.js"></script>
+<script type="text/javascript" src="../../../_static/doctools.js"></script>
+<script type="text/javascript" src="../../../_static/language_data.js"></script>
+
+
+<script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        SphinxRtdTheme.Navigation.enable(true);
+    });
+</script>
+
+</body>
+</html>

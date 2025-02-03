@@ -1,0 +1,1075 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Fleet Software Update &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FleetSoftwareUpdateClient" href="fleet_software_update/client/oci.fleet_software_update.FleetSoftwareUpdateClient.html" />
+    <link rel="prev" title="WorkflowTaskComponent" href="fleet_apps_management/models/oci.fleet_apps_management.models.WorkflowTaskComponent.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Fleet Software Update</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fleet_software_update/client/oci.fleet_software_update.FleetSoftwareUpdateClient.html">FleetSoftwareUpdateClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fleet_software_update/client/oci.fleet_software_update.FleetSoftwareUpdateClientCompositeOperations.html">FleetSoftwareUpdateClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models">Models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ActiveCycleDetails.html">ActiveCycleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.AddFsuCollectionTargetsDetails.html">AddFsuCollectionTargetsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ApplyAction.html">ApplyAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ApplyActionSummary.html">ApplyActionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ApplyFsuJob.html">ApplyFsuJob</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ApplyFsuJobSummary.html">ApplyFsuJobSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.BatchingStrategyDetails.html">BatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ChangeFsuActionCompartmentDetails.html">ChangeFsuActionCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ChangeFsuCollectionCompartmentDetails.html">ChangeFsuCollectionCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ChangeFsuCycleCompartmentDetails.html">ChangeFsuCycleCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ChangeFsuDiscoveryCompartmentDetails.html">ChangeFsuDiscoveryCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CleanupAction.html">CleanupAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CleanupActionSummary.html">CleanupActionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CleanupFsuJob.html">CleanupFsuJob</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CleanupFsuJobSummary.html">CleanupFsuJobSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CloneFsuCycleDetails.html">CloneFsuCycleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CloudVmClusterTargetSummary.html">CloudVmClusterTargetSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateApplyActionDetails.html">CreateApplyActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateBatchingStrategyDetails.html">CreateBatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateCleanupActionDetails.html">CreateCleanupActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateDbFsuCollectionDetails.html">CreateDbFsuCollectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateFiftyFiftyBatchingStrategyDetails.html">CreateFiftyFiftyBatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateFsuActionDetails.html">CreateFsuActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateFsuCollectionDetails.html">CreateFsuCollectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateFsuCycleDetails.html">CreateFsuCycleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateFsuDiscoveryDetails.html">CreateFsuDiscoveryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateGiFsuCollectionDetails.html">CreateGiFsuCollectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateNonRollingBatchingStrategyDetails.html">CreateNonRollingBatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreatePatchFsuCycle.html">CreatePatchFsuCycle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreatePrecheckActionDetails.html">CreatePrecheckActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateRollbackActionDetails.html">CreateRollbackActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateRollbackCycleApplyActionDetails.html">CreateRollbackCycleApplyActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateScheduleDetails.html">CreateScheduleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateSequentialBatchingStrategyDetails.html">CreateSequentialBatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateServiceAvailabilityFactorBatchingStrategyDetails.html">CreateServiceAvailabilityFactorBatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateStageActionDetails.html">CreateStageActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateStartTimeScheduleDetails.html">CreateStartTimeScheduleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DatabaseTargetSummary.html">DatabaseTargetSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbCollection.html">DbCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbCompartmentIdFilter.html">DbCompartmentIdFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbDefinedTagsFilter.html">DbDefinedTagsFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbDiscoveryDetails.html">DbDiscoveryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbDiscoveryResults.html">DbDiscoveryResults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbFiltersDiscovery.html">DbFiltersDiscovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbFleetDiscoveryDetails.html">DbFleetDiscoveryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbFleetDiscoveryFilter.html">DbFleetDiscoveryFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbFreeformTagsFilter.html">DbFreeformTagsFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbFsuCollectionSummary.html">DbFsuCollectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbHomeNameFilter.html">DbHomeNameFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbNameFilter.html">DbNameFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbResourceIdFilter.html">DbResourceIdFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbSearchQueryDiscovery.html">DbSearchQueryDiscovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbTargetListDiscovery.html">DbTargetListDiscovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbUniqueNameFilter.html">DbUniqueNameFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbVersionFilter.html">DbVersionFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DefinedTagFilterEntry.html">DefinedTagFilterEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DiagnosticsCollectionDetails.html">DiagnosticsCollectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DiscoveryDetails.html">DiscoveryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DiscoveryDetailsSummary.html">DiscoveryDetailsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FailedJobsRollbackDetails.html">FailedJobsRollbackDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FiftyFiftyBatchingStrategyDetails.html">FiftyFiftyBatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FreeformTagFilterEntry.html">FreeformTagFilterEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuAction.html">FsuAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuActionProgressDetails.html">FsuActionProgressDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuActionSummary.html">FsuActionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuActionSummaryCollection.html">FsuActionSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuCollection.html">FsuCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuCollectionSummary.html">FsuCollectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuCollectionSummaryCollection.html">FsuCollectionSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuCollectionTarget.html">FsuCollectionTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuCycle.html">FsuCycle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuCycleSummary.html">FsuCycleSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuCycleSummaryCollection.html">FsuCycleSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuDiscovery.html">FsuDiscovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuDiscoverySummary.html">FsuDiscoverySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuDiscoverySummaryCollection.html">FsuDiscoverySummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuGoalVersionDetails.html">FsuGoalVersionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuJob.html">FsuJob</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuJobCollection.html">FsuJobCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuJobOutputSummary.html">FsuJobOutputSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuJobOutputSummaryCollection.html">FsuJobOutputSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuJobSummary.html">FsuJobSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiCollection.html">GiCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiCompartmentIdFilter.html">GiCompartmentIdFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiDefinedTagsFilter.html">GiDefinedTagsFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiDiscoveryDetails.html">GiDiscoveryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiDiscoveryResults.html">GiDiscoveryResults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiFiltersDiscovery.html">GiFiltersDiscovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiFleetDiscoveryDetails.html">GiFleetDiscoveryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiFleetDiscoveryFilter.html">GiFleetDiscoveryFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiFreeformTagsFilter.html">GiFreeformTagsFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiFsuCollectionSummary.html">GiFsuCollectionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiResourceIdFilter.html">GiResourceIdFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiSearchQueryDiscovery.html">GiSearchQueryDiscovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiTargetListDiscovery.html">GiTargetListDiscovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiVersionFilter.html">GiVersionFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ImageIdFsuTargetDetails.html">ImageIdFsuTargetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.JobProgress.html">JobProgress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.JobProgressDetails.html">JobProgressDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ListOfTargetsRollbackDetails.html">ListOfTargetsRollbackDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.NextActionToExecuteDetails.html">NextActionToExecuteDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.NonRollingBatchingStrategyDetails.html">NonRollingBatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.NoneBatchingStrategyDetails.html">NoneBatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.NoneScheduleDetails.html">NoneScheduleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.PatchFsuCycle.html">PatchFsuCycle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.PrecheckAction.html">PrecheckAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.PrecheckActionSummary.html">PrecheckActionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.PrecheckFsuJob.html">PrecheckFsuJob</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.PrecheckFsuJobSummary.html">PrecheckFsuJobSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RemoveFsuCollectionTargetsDetails.html">RemoveFsuCollectionTargetsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackAction.html">RollbackAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackActionSummary.html">RollbackActionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackCycleAction.html">RollbackCycleAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackCycleActionSummary.html">RollbackCycleActionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackCycleFsuJob.html">RollbackCycleFsuJob</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackCycleFsuJobSummary.html">RollbackCycleFsuJobSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackDetails.html">RollbackDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackFsuJob.html">RollbackFsuJob</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackFsuJobSummary.html">RollbackFsuJobSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ScheduleDetails.html">ScheduleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.SequentialBatchingStrategyDetails.html">SequentialBatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ServiceAvailabilityFactorBatchingStrategyDetails.html">ServiceAvailabilityFactorBatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.StageAction.html">StageAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.StageActionSummary.html">StageActionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.StageFsuJob.html">StageFsuJob</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.StageFsuJobSummary.html">StageFsuJobSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.StartTimeScheduleDetails.html">StartTimeScheduleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.TargetDetails.html">TargetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.TargetEntry.html">TargetEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.TargetIdsRemoveTargetsDetails.html">TargetIdsRemoveTargetsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.TargetProgressSummary.html">TargetProgressSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.TargetSummary.html">TargetSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.TargetSummaryCollection.html">TargetSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateApplyActionDetails.html">UpdateApplyActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateBatchingStrategyDetails.html">UpdateBatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateCleanupActionDetails.html">UpdateCleanupActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateFiftyFiftyBatchingStrategyDetails.html">UpdateFiftyFiftyBatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateFsuActionDetails.html">UpdateFsuActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateFsuCollectionDetails.html">UpdateFsuCollectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateFsuCycleDetails.html">UpdateFsuCycleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateFsuDiscoveryDetails.html">UpdateFsuDiscoveryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateFsuJobDetails.html">UpdateFsuJobDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateNonRollingBatchingStrategyDetails.html">UpdateNonRollingBatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdatePatchFsuCycle.html">UpdatePatchFsuCycle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdatePrecheckActionDetails.html">UpdatePrecheckActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateRollbackActionDetails.html">UpdateRollbackActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateRollbackCycleActionDetails.html">UpdateRollbackCycleActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateScheduleDetails.html">UpdateScheduleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateSequentialBatchingStrategyDetails.html">UpdateSequentialBatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateServiceAvailabilityFactorBatchingStrategyDetails.html">UpdateServiceAvailabilityFactorBatchingStrategyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateStageActionDetails.html">UpdateStageActionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateStartTimeScheduleDetails.html">UpdateStartTimeScheduleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.VersionFsuTargetDetails.html">VersionFsuTargetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.VmClusterTargetSummary.html">VmClusterTargetSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequestErrorCollection.html">WorkRequestErrorCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequestLogEntryCollection.html">WorkRequestLogEntryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequestResource.html">WorkRequestResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequestSummary.html">WorkRequestSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequestSummaryCollection.html">WorkRequestSummaryCollection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="landing.html">API Reference</a> &raquo;</li>
+        
+      <li>Fleet Software Update</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/fleet_software_update.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fleet-software-update">
+<h1>Fleet Software Update<a class="headerlink" href="#fleet-software-update" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/client/oci.fleet_software_update.FleetSoftwareUpdateClient.html#oci.fleet_software_update.FleetSoftwareUpdateClient" title="oci.fleet_software_update.FleetSoftwareUpdateClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.FleetSoftwareUpdateClient</span></code></a></td>
+<td>Use the Exadata Fleet Update service to patch large collections of components directly, as a single entity, orchestrating the maintenance actions to update all chosen components in the stack in a single cycle.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/client/oci.fleet_software_update.FleetSoftwareUpdateClientCompositeOperations.html#oci.fleet_software_update.FleetSoftwareUpdateClientCompositeOperations" title="oci.fleet_software_update.FleetSoftwareUpdateClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.FleetSoftwareUpdateClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="fleet_software_update/client/oci.fleet_software_update.FleetSoftwareUpdateClient.html#oci.fleet_software_update.FleetSoftwareUpdateClient" title="oci.fleet_software_update.FleetSoftwareUpdateClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">FleetSoftwareUpdateClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ActiveCycleDetails.html#oci.fleet_software_update.models.ActiveCycleDetails" title="oci.fleet_software_update.models.ActiveCycleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.ActiveCycleDetails</span></code></a></td>
+<td>Active Exadata Fleet Update Cycle resource for this Collection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.AddFsuCollectionTargetsDetails.html#oci.fleet_software_update.models.AddFsuCollectionTargetsDetails" title="oci.fleet_software_update.models.AddFsuCollectionTargetsDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.AddFsuCollectionTargetsDetails</span></code></a></td>
+<td>Add Targets to a Exadata Fleet Update Collection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ApplyAction.html#oci.fleet_software_update.models.ApplyAction" title="oci.fleet_software_update.models.ApplyAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.ApplyAction</span></code></a></td>
+<td>Apply Exadata Fleet Update Action details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ApplyActionSummary.html#oci.fleet_software_update.models.ApplyActionSummary" title="oci.fleet_software_update.models.ApplyActionSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.ApplyActionSummary</span></code></a></td>
+<td>Apply Exadata Fleet Update Action summary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ApplyFsuJob.html#oci.fleet_software_update.models.ApplyFsuJob" title="oci.fleet_software_update.models.ApplyFsuJob"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.ApplyFsuJob</span></code></a></td>
+<td>Apply Exadata Fleet Update Job resource.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ApplyFsuJobSummary.html#oci.fleet_software_update.models.ApplyFsuJobSummary" title="oci.fleet_software_update.models.ApplyFsuJobSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.ApplyFsuJobSummary</span></code></a></td>
+<td>Summary of Apply Exadata Fleet Update Job resource.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.BatchingStrategyDetails.html#oci.fleet_software_update.models.BatchingStrategyDetails" title="oci.fleet_software_update.models.BatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.BatchingStrategyDetails</span></code></a></td>
+<td>Batching strategy details to use during PRECHECK and APPLY Cycle Actions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ChangeFsuActionCompartmentDetails.html#oci.fleet_software_update.models.ChangeFsuActionCompartmentDetails" title="oci.fleet_software_update.models.ChangeFsuActionCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.ChangeFsuActionCompartmentDetails</span></code></a></td>
+<td>Compartment to move the Exadata Fleet Update Action to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ChangeFsuCollectionCompartmentDetails.html#oci.fleet_software_update.models.ChangeFsuCollectionCompartmentDetails" title="oci.fleet_software_update.models.ChangeFsuCollectionCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.ChangeFsuCollectionCompartmentDetails</span></code></a></td>
+<td>Compartment to move the Exadata Fleet Update Collection to.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ChangeFsuCycleCompartmentDetails.html#oci.fleet_software_update.models.ChangeFsuCycleCompartmentDetails" title="oci.fleet_software_update.models.ChangeFsuCycleCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.ChangeFsuCycleCompartmentDetails</span></code></a></td>
+<td>Compartment to move the Exadata Fleet Update Cycle to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ChangeFsuDiscoveryCompartmentDetails.html#oci.fleet_software_update.models.ChangeFsuDiscoveryCompartmentDetails" title="oci.fleet_software_update.models.ChangeFsuDiscoveryCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.ChangeFsuDiscoveryCompartmentDetails</span></code></a></td>
+<td>Compartment to move the Exadata Fleet Update Discovery to.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CleanupAction.html#oci.fleet_software_update.models.CleanupAction" title="oci.fleet_software_update.models.CleanupAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CleanupAction</span></code></a></td>
+<td>Cleanup Exadata Fleet Update Action details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CleanupActionSummary.html#oci.fleet_software_update.models.CleanupActionSummary" title="oci.fleet_software_update.models.CleanupActionSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CleanupActionSummary</span></code></a></td>
+<td>Cleanup Exadata Fleet Update Action summary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CleanupFsuJob.html#oci.fleet_software_update.models.CleanupFsuJob" title="oci.fleet_software_update.models.CleanupFsuJob"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CleanupFsuJob</span></code></a></td>
+<td>Cleanup Exadata Fleet Update Job resource.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CleanupFsuJobSummary.html#oci.fleet_software_update.models.CleanupFsuJobSummary" title="oci.fleet_software_update.models.CleanupFsuJobSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CleanupFsuJobSummary</span></code></a></td>
+<td>Summary of Cleanup Exadata Fleet Update Job resource.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CloneFsuCycleDetails.html#oci.fleet_software_update.models.CloneFsuCycleDetails" title="oci.fleet_software_update.models.CloneFsuCycleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CloneFsuCycleDetails</span></code></a></td>
+<td>Details for cloning an existing Exadata Fleet Update Cycle resource.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CloudVmClusterTargetSummary.html#oci.fleet_software_update.models.CloudVmClusterTargetSummary" title="oci.fleet_software_update.models.CloudVmClusterTargetSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CloudVmClusterTargetSummary</span></code></a></td>
+<td>Details of a CloudVmCluster target member of a Exadata Fleet Update Collection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateApplyActionDetails.html#oci.fleet_software_update.models.CreateApplyActionDetails" title="oci.fleet_software_update.models.CreateApplyActionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateApplyActionDetails</span></code></a></td>
+<td>Apply Exadata Fleet Update Action creation details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateBatchingStrategyDetails.html#oci.fleet_software_update.models.CreateBatchingStrategyDetails" title="oci.fleet_software_update.models.CreateBatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateBatchingStrategyDetails</span></code></a></td>
+<td>Batching strategy details to use during PRECHECK and APPLY Cycle Actions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateCleanupActionDetails.html#oci.fleet_software_update.models.CreateCleanupActionDetails" title="oci.fleet_software_update.models.CreateCleanupActionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateCleanupActionDetails</span></code></a></td>
+<td>Cleanup Exadata Fleet Update Action creation details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateDbFsuCollectionDetails.html#oci.fleet_software_update.models.CreateDbFsuCollectionDetails" title="oci.fleet_software_update.models.CreateDbFsuCollectionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateDbFsuCollectionDetails</span></code></a></td>
+<td>Details to create a ‘DB’ type Exadata Fleet Update Collection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateFiftyFiftyBatchingStrategyDetails.html#oci.fleet_software_update.models.CreateFiftyFiftyBatchingStrategyDetails" title="oci.fleet_software_update.models.CreateFiftyFiftyBatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateFiftyFiftyBatchingStrategyDetails</span></code></a></td>
+<td>Fifty-Fifty batching strategy details to use during PRECHECK and APPLY Cycle Actions.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateFsuActionDetails.html#oci.fleet_software_update.models.CreateFsuActionDetails" title="oci.fleet_software_update.models.CreateFsuActionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateFsuActionDetails</span></code></a></td>
+<td>Exadata Fleet Update Action resource details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateFsuCollectionDetails.html#oci.fleet_software_update.models.CreateFsuCollectionDetails" title="oci.fleet_software_update.models.CreateFsuCollectionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateFsuCollectionDetails</span></code></a></td>
+<td>The information about new Exadata Fleet Update Collection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateFsuCycleDetails.html#oci.fleet_software_update.models.CreateFsuCycleDetails" title="oci.fleet_software_update.models.CreateFsuCycleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateFsuCycleDetails</span></code></a></td>
+<td>Exadata Fleet Update Cycle resource creation details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateFsuDiscoveryDetails.html#oci.fleet_software_update.models.CreateFsuDiscoveryDetails" title="oci.fleet_software_update.models.CreateFsuDiscoveryDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateFsuDiscoveryDetails</span></code></a></td>
+<td>The information about new Exadata Fleet Update Discovery resource.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateGiFsuCollectionDetails.html#oci.fleet_software_update.models.CreateGiFsuCollectionDetails" title="oci.fleet_software_update.models.CreateGiFsuCollectionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateGiFsuCollectionDetails</span></code></a></td>
+<td>Details to create a ‘GI’ type Exadata Fleet Update Collection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateNonRollingBatchingStrategyDetails.html#oci.fleet_software_update.models.CreateNonRollingBatchingStrategyDetails" title="oci.fleet_software_update.models.CreateNonRollingBatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateNonRollingBatchingStrategyDetails</span></code></a></td>
+<td>Non-rolling batching strategy details to use during PRECHECK and APPLY Cycle Actions.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreatePatchFsuCycle.html#oci.fleet_software_update.models.CreatePatchFsuCycle" title="oci.fleet_software_update.models.CreatePatchFsuCycle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreatePatchFsuCycle</span></code></a></td>
+<td>Patch Exadata Fleet Update Cycle resource creation details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreatePrecheckActionDetails.html#oci.fleet_software_update.models.CreatePrecheckActionDetails" title="oci.fleet_software_update.models.CreatePrecheckActionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreatePrecheckActionDetails</span></code></a></td>
+<td>Precheck Exadata Fleet Update Action creation details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateRollbackActionDetails.html#oci.fleet_software_update.models.CreateRollbackActionDetails" title="oci.fleet_software_update.models.CreateRollbackActionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateRollbackActionDetails</span></code></a></td>
+<td>Rollback Exadata Fleet Update Action creation details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateRollbackCycleApplyActionDetails.html#oci.fleet_software_update.models.CreateRollbackCycleApplyActionDetails" title="oci.fleet_software_update.models.CreateRollbackCycleApplyActionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateRollbackCycleApplyActionDetails</span></code></a></td>
+<td>Exadata Fleet Update Rollback Action creation details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateScheduleDetails.html#oci.fleet_software_update.models.CreateScheduleDetails" title="oci.fleet_software_update.models.CreateScheduleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateScheduleDetails</span></code></a></td>
+<td>Scheduling related details for the Exadata Fleet Update Action during create operations.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateSequentialBatchingStrategyDetails.html#oci.fleet_software_update.models.CreateSequentialBatchingStrategyDetails" title="oci.fleet_software_update.models.CreateSequentialBatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateSequentialBatchingStrategyDetails</span></code></a></td>
+<td>Sequential batching strategy details to use during PRECHECK and APPLY Cycle Actions.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateServiceAvailabilityFactorBatchingStrategyDetails.html#oci.fleet_software_update.models.CreateServiceAvailabilityFactorBatchingStrategyDetails" title="oci.fleet_software_update.models.CreateServiceAvailabilityFactorBatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateServiceAvailabilityFactorBatchingStrategyDetails</span></code></a></td>
+<td>Service Availability Factor batching strategy details to use during PRECHECK and APPLY Cycle Actions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateStageActionDetails.html#oci.fleet_software_update.models.CreateStageActionDetails" title="oci.fleet_software_update.models.CreateStageActionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateStageActionDetails</span></code></a></td>
+<td>Stage Exadata Fleet Update Action creation details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.CreateStartTimeScheduleDetails.html#oci.fleet_software_update.models.CreateStartTimeScheduleDetails" title="oci.fleet_software_update.models.CreateStartTimeScheduleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.CreateStartTimeScheduleDetails</span></code></a></td>
+<td>Start time details for the Exadata Fleet Update Action.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DatabaseTargetSummary.html#oci.fleet_software_update.models.DatabaseTargetSummary" title="oci.fleet_software_update.models.DatabaseTargetSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DatabaseTargetSummary</span></code></a></td>
+<td>Details of a Database target member of a Exadata Fleet Update Collection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbCollection.html#oci.fleet_software_update.models.DbCollection" title="oci.fleet_software_update.models.DbCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbCollection</span></code></a></td>
+<td>‘DB’ type Exadata Fleet Update Collection details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbCompartmentIdFilter.html#oci.fleet_software_update.models.DbCompartmentIdFilter" title="oci.fleet_software_update.models.DbCompartmentIdFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbCompartmentIdFilter</span></code></a></td>
+<td>List of Compartments to include in the discovery.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbDefinedTagsFilter.html#oci.fleet_software_update.models.DbDefinedTagsFilter" title="oci.fleet_software_update.models.DbDefinedTagsFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbDefinedTagsFilter</span></code></a></td>
+<td>Defined tags to include in the discovery.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbDiscoveryDetails.html#oci.fleet_software_update.models.DbDiscoveryDetails" title="oci.fleet_software_update.models.DbDiscoveryDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbDiscoveryDetails</span></code></a></td>
+<td>‘DB’ type Exadata Fleet Update Discovery details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbDiscoveryResults.html#oci.fleet_software_update.models.DbDiscoveryResults" title="oci.fleet_software_update.models.DbDiscoveryResults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbDiscoveryResults</span></code></a></td>
+<td>Collection built from the results of a Succeeded Fleet Software Update Discovery resource.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbFiltersDiscovery.html#oci.fleet_software_update.models.DbFiltersDiscovery" title="oci.fleet_software_update.models.DbFiltersDiscovery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbFiltersDiscovery</span></code></a></td>
+<td>Collection discovery done from the results of the specified filters.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbFleetDiscoveryDetails.html#oci.fleet_software_update.models.DbFleetDiscoveryDetails" title="oci.fleet_software_update.models.DbFleetDiscoveryDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbFleetDiscoveryDetails</span></code></a></td>
+<td>Supported fleet discovery strategies for DB Collections.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbFleetDiscoveryFilter.html#oci.fleet_software_update.models.DbFleetDiscoveryFilter" title="oci.fleet_software_update.models.DbFleetDiscoveryFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbFleetDiscoveryFilter</span></code></a></td>
+<td>Possible Discovery filters for Database targets.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbFreeformTagsFilter.html#oci.fleet_software_update.models.DbFreeformTagsFilter" title="oci.fleet_software_update.models.DbFreeformTagsFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbFreeformTagsFilter</span></code></a></td>
+<td>Freeform tags to include in the discovery.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbFsuCollectionSummary.html#oci.fleet_software_update.models.DbFsuCollectionSummary" title="oci.fleet_software_update.models.DbFsuCollectionSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbFsuCollectionSummary</span></code></a></td>
+<td>‘DB’ type Exadata Fleet Update Collection summary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbHomeNameFilter.html#oci.fleet_software_update.models.DbHomeNameFilter" title="oci.fleet_software_update.models.DbHomeNameFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbHomeNameFilter</span></code></a></td>
+<td>Database home name to include in the discovery.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbNameFilter.html#oci.fleet_software_update.models.DbNameFilter" title="oci.fleet_software_update.models.DbNameFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbNameFilter</span></code></a></td>
+<td>Database name to include in the discovery.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbResourceIdFilter.html#oci.fleet_software_update.models.DbResourceIdFilter" title="oci.fleet_software_update.models.DbResourceIdFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbResourceIdFilter</span></code></a></td>
+<td>Related resource Ids to include in the discovery.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbSearchQueryDiscovery.html#oci.fleet_software_update.models.DbSearchQueryDiscovery" title="oci.fleet_software_update.models.DbSearchQueryDiscovery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbSearchQueryDiscovery</span></code></a></td>
+<td>Collection discovery done from the results of the specified Search Service query string.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbTargetListDiscovery.html#oci.fleet_software_update.models.DbTargetListDiscovery" title="oci.fleet_software_update.models.DbTargetListDiscovery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbTargetListDiscovery</span></code></a></td>
+<td>Collection discovery conformed by the specified list of targets.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbUniqueNameFilter.html#oci.fleet_software_update.models.DbUniqueNameFilter" title="oci.fleet_software_update.models.DbUniqueNameFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbUniqueNameFilter</span></code></a></td>
+<td>Database unique name to include in the discovery.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DbVersionFilter.html#oci.fleet_software_update.models.DbVersionFilter" title="oci.fleet_software_update.models.DbVersionFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DbVersionFilter</span></code></a></td>
+<td>Versions to include in the discovery.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DefinedTagFilterEntry.html#oci.fleet_software_update.models.DefinedTagFilterEntry" title="oci.fleet_software_update.models.DefinedTagFilterEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DefinedTagFilterEntry</span></code></a></td>
+<td>Defined Tag filter entry.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DiagnosticsCollectionDetails.html#oci.fleet_software_update.models.DiagnosticsCollectionDetails" title="oci.fleet_software_update.models.DiagnosticsCollectionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DiagnosticsCollectionDetails</span></code></a></td>
+<td>Details to configure diagnostics collection for targets affected by this Exadata Fleet Update Maintenance Cycle.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DiscoveryDetails.html#oci.fleet_software_update.models.DiscoveryDetails" title="oci.fleet_software_update.models.DiscoveryDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DiscoveryDetails</span></code></a></td>
+<td>Discovery filter details for search.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.DiscoveryDetailsSummary.html#oci.fleet_software_update.models.DiscoveryDetailsSummary" title="oci.fleet_software_update.models.DiscoveryDetailsSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.DiscoveryDetailsSummary</span></code></a></td>
+<td>Summarized Discovery details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FailedJobsRollbackDetails.html#oci.fleet_software_update.models.FailedJobsRollbackDetails" title="oci.fleet_software_update.models.FailedJobsRollbackDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FailedJobsRollbackDetails</span></code></a></td>
+<td>FAILED_JOBS strategy rollback details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FiftyFiftyBatchingStrategyDetails.html#oci.fleet_software_update.models.FiftyFiftyBatchingStrategyDetails" title="oci.fleet_software_update.models.FiftyFiftyBatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FiftyFiftyBatchingStrategyDetails</span></code></a></td>
+<td>Fifty-Fifty batching strategy details to use during PRECHECK and APPLY Cycle Actions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FreeformTagFilterEntry.html#oci.fleet_software_update.models.FreeformTagFilterEntry" title="oci.fleet_software_update.models.FreeformTagFilterEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FreeformTagFilterEntry</span></code></a></td>
+<td>Freeform Tag filter entry.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuAction.html#oci.fleet_software_update.models.FsuAction" title="oci.fleet_software_update.models.FsuAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuAction</span></code></a></td>
+<td>Exadata Fleet Update Action resource details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuActionProgressDetails.html#oci.fleet_software_update.models.FsuActionProgressDetails" title="oci.fleet_software_update.models.FsuActionProgressDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuActionProgressDetails</span></code></a></td>
+<td>Progress of the Action in execution.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuActionSummary.html#oci.fleet_software_update.models.FsuActionSummary" title="oci.fleet_software_update.models.FsuActionSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuActionSummary</span></code></a></td>
+<td>Exadata Fleet Update Action summary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuActionSummaryCollection.html#oci.fleet_software_update.models.FsuActionSummaryCollection" title="oci.fleet_software_update.models.FsuActionSummaryCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuActionSummaryCollection</span></code></a></td>
+<td>List of FsuActionSummary objects.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuCollection.html#oci.fleet_software_update.models.FsuCollection" title="oci.fleet_software_update.models.FsuCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuCollection</span></code></a></td>
+<td>Exadata Fleet Update Collection Resource.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuCollectionSummary.html#oci.fleet_software_update.models.FsuCollectionSummary" title="oci.fleet_software_update.models.FsuCollectionSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuCollectionSummary</span></code></a></td>
+<td>Exadata Fleet Update Collection Resource.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuCollectionSummaryCollection.html#oci.fleet_software_update.models.FsuCollectionSummaryCollection" title="oci.fleet_software_update.models.FsuCollectionSummaryCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuCollectionSummaryCollection</span></code></a></td>
+<td>List of FsuCollectionSummary objects.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuCollectionTarget.html#oci.fleet_software_update.models.FsuCollectionTarget" title="oci.fleet_software_update.models.FsuCollectionTarget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuCollectionTarget</span></code></a></td>
+<td>Details of a target member of a Exadata Fleet Update Collection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuCycle.html#oci.fleet_software_update.models.FsuCycle" title="oci.fleet_software_update.models.FsuCycle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuCycle</span></code></a></td>
+<td>Exadata Fleet Update Cycle resource details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuCycleSummary.html#oci.fleet_software_update.models.FsuCycleSummary" title="oci.fleet_software_update.models.FsuCycleSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuCycleSummary</span></code></a></td>
+<td>Exadata Fleet Update Cycle Summary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuCycleSummaryCollection.html#oci.fleet_software_update.models.FsuCycleSummaryCollection" title="oci.fleet_software_update.models.FsuCycleSummaryCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuCycleSummaryCollection</span></code></a></td>
+<td>List of FsuCycleSummary objects.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuDiscovery.html#oci.fleet_software_update.models.FsuDiscovery" title="oci.fleet_software_update.models.FsuDiscovery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuDiscovery</span></code></a></td>
+<td>Exadata Fleet Update Discovery resource details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuDiscoverySummary.html#oci.fleet_software_update.models.FsuDiscoverySummary" title="oci.fleet_software_update.models.FsuDiscoverySummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuDiscoverySummary</span></code></a></td>
+<td>Exadata Fleet Update Discovery Resource.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuDiscoverySummaryCollection.html#oci.fleet_software_update.models.FsuDiscoverySummaryCollection" title="oci.fleet_software_update.models.FsuDiscoverySummaryCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuDiscoverySummaryCollection</span></code></a></td>
+<td>List of FleetSoftwareUpdateDiscoverySummary objects.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuGoalVersionDetails.html#oci.fleet_software_update.models.FsuGoalVersionDetails" title="oci.fleet_software_update.models.FsuGoalVersionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuGoalVersionDetails</span></code></a></td>
+<td>Goal version or image details for the Exadata Fleet Update Cycle.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuJob.html#oci.fleet_software_update.models.FsuJob" title="oci.fleet_software_update.models.FsuJob"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuJob</span></code></a></td>
+<td>Exadata Fleet Update Job resource.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuJobCollection.html#oci.fleet_software_update.models.FsuJobCollection" title="oci.fleet_software_update.models.FsuJobCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuJobCollection</span></code></a></td>
+<td>Results of a Exadata Fleet Update Job Summary listing.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuJobOutputSummary.html#oci.fleet_software_update.models.FsuJobOutputSummary" title="oci.fleet_software_update.models.FsuJobOutputSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuJobOutputSummary</span></code></a></td>
+<td>Job output summary line.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuJobOutputSummaryCollection.html#oci.fleet_software_update.models.FsuJobOutputSummaryCollection" title="oci.fleet_software_update.models.FsuJobOutputSummaryCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuJobOutputSummaryCollection</span></code></a></td>
+<td>Results of a Exadata Fleet Update Job output listing.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.FsuJobSummary.html#oci.fleet_software_update.models.FsuJobSummary" title="oci.fleet_software_update.models.FsuJobSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.FsuJobSummary</span></code></a></td>
+<td>Exadata Fleet Update Job resource.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiCollection.html#oci.fleet_software_update.models.GiCollection" title="oci.fleet_software_update.models.GiCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.GiCollection</span></code></a></td>
+<td>Details to create a ‘GI’ type Exadata Fleet Update Collection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiCompartmentIdFilter.html#oci.fleet_software_update.models.GiCompartmentIdFilter" title="oci.fleet_software_update.models.GiCompartmentIdFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.GiCompartmentIdFilter</span></code></a></td>
+<td>List of Compartments to include in the discovery.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiDefinedTagsFilter.html#oci.fleet_software_update.models.GiDefinedTagsFilter" title="oci.fleet_software_update.models.GiDefinedTagsFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.GiDefinedTagsFilter</span></code></a></td>
+<td>Defined tags to include in the discovery.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiDiscoveryDetails.html#oci.fleet_software_update.models.GiDiscoveryDetails" title="oci.fleet_software_update.models.GiDiscoveryDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.GiDiscoveryDetails</span></code></a></td>
+<td>Details to create a ‘GI’ type Exadata Fleet Update Discovery.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiDiscoveryResults.html#oci.fleet_software_update.models.GiDiscoveryResults" title="oci.fleet_software_update.models.GiDiscoveryResults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.GiDiscoveryResults</span></code></a></td>
+<td>Collection built from the results of a Succeeded Fleet Software Update Discovery resource.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiFiltersDiscovery.html#oci.fleet_software_update.models.GiFiltersDiscovery" title="oci.fleet_software_update.models.GiFiltersDiscovery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.GiFiltersDiscovery</span></code></a></td>
+<td>Collection discovery done from the results of the specified filters.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiFleetDiscoveryDetails.html#oci.fleet_software_update.models.GiFleetDiscoveryDetails" title="oci.fleet_software_update.models.GiFleetDiscoveryDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.GiFleetDiscoveryDetails</span></code></a></td>
+<td>Supported fleet discovery strategies for GI Collections.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiFleetDiscoveryFilter.html#oci.fleet_software_update.models.GiFleetDiscoveryFilter" title="oci.fleet_software_update.models.GiFleetDiscoveryFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.GiFleetDiscoveryFilter</span></code></a></td>
+<td>Possible Discovery filters.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiFreeformTagsFilter.html#oci.fleet_software_update.models.GiFreeformTagsFilter" title="oci.fleet_software_update.models.GiFreeformTagsFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.GiFreeformTagsFilter</span></code></a></td>
+<td>Freeform tags to include in the discovery.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiFsuCollectionSummary.html#oci.fleet_software_update.models.GiFsuCollectionSummary" title="oci.fleet_software_update.models.GiFsuCollectionSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.GiFsuCollectionSummary</span></code></a></td>
+<td>‘GI’ type Exadata Fleet Update Collection summary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiResourceIdFilter.html#oci.fleet_software_update.models.GiResourceIdFilter" title="oci.fleet_software_update.models.GiResourceIdFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.GiResourceIdFilter</span></code></a></td>
+<td>Related resource Ids to include in the discovery.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiSearchQueryDiscovery.html#oci.fleet_software_update.models.GiSearchQueryDiscovery" title="oci.fleet_software_update.models.GiSearchQueryDiscovery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.GiSearchQueryDiscovery</span></code></a></td>
+<td>Collection discovery done from the results of the specified Search Service query string.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiTargetListDiscovery.html#oci.fleet_software_update.models.GiTargetListDiscovery" title="oci.fleet_software_update.models.GiTargetListDiscovery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.GiTargetListDiscovery</span></code></a></td>
+<td>Collection discovery conformed by the specified list of targets.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.GiVersionFilter.html#oci.fleet_software_update.models.GiVersionFilter" title="oci.fleet_software_update.models.GiVersionFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.GiVersionFilter</span></code></a></td>
+<td>Versions to include in the discovery.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ImageIdFsuTargetDetails.html#oci.fleet_software_update.models.ImageIdFsuTargetDetails" title="oci.fleet_software_update.models.ImageIdFsuTargetDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.ImageIdFsuTargetDetails</span></code></a></td>
+<td>The Database service Database Software Image resource is required as goal version for the Exadata Fleet Update Maintenance Cycle when IMAGE_ID type is selected.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.JobProgress.html#oci.fleet_software_update.models.JobProgress" title="oci.fleet_software_update.models.JobProgress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.JobProgress</span></code></a></td>
+<td>Summary of progress for the Exadata Fleet Update Job.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.JobProgressDetails.html#oci.fleet_software_update.models.JobProgressDetails" title="oci.fleet_software_update.models.JobProgressDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.JobProgressDetails</span></code></a></td>
+<td>Details about the Exadata Fleet Update Job progress.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ListOfTargetsRollbackDetails.html#oci.fleet_software_update.models.ListOfTargetsRollbackDetails" title="oci.fleet_software_update.models.ListOfTargetsRollbackDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.ListOfTargetsRollbackDetails</span></code></a></td>
+<td>LIST_OF_TARGETS strategy rollback details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.NextActionToExecuteDetails.html#oci.fleet_software_update.models.NextActionToExecuteDetails" title="oci.fleet_software_update.models.NextActionToExecuteDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.NextActionToExecuteDetails</span></code></a></td>
+<td>Details of the next Exadata Fleet Update Action to execute in a Maintenance Cycle.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.NonRollingBatchingStrategyDetails.html#oci.fleet_software_update.models.NonRollingBatchingStrategyDetails" title="oci.fleet_software_update.models.NonRollingBatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.NonRollingBatchingStrategyDetails</span></code></a></td>
+<td>Non-rolling batching strategy details to use during PRECHECK and APPLY Cycle Actions.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.NoneBatchingStrategyDetails.html#oci.fleet_software_update.models.NoneBatchingStrategyDetails" title="oci.fleet_software_update.models.NoneBatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.NoneBatchingStrategyDetails</span></code></a></td>
+<td>No batching strategy details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.NoneScheduleDetails.html#oci.fleet_software_update.models.NoneScheduleDetails" title="oci.fleet_software_update.models.NoneScheduleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.NoneScheduleDetails</span></code></a></td>
+<td>Type used to remove previously stored scheduled details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.PatchFsuCycle.html#oci.fleet_software_update.models.PatchFsuCycle" title="oci.fleet_software_update.models.PatchFsuCycle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.PatchFsuCycle</span></code></a></td>
+<td>Patch Exadata Fleet Update Cycle resource details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.PrecheckAction.html#oci.fleet_software_update.models.PrecheckAction" title="oci.fleet_software_update.models.PrecheckAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.PrecheckAction</span></code></a></td>
+<td>Precheck Exadata Fleet Update Action details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.PrecheckActionSummary.html#oci.fleet_software_update.models.PrecheckActionSummary" title="oci.fleet_software_update.models.PrecheckActionSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.PrecheckActionSummary</span></code></a></td>
+<td>Precheck Exadata Fleet Update Action summary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.PrecheckFsuJob.html#oci.fleet_software_update.models.PrecheckFsuJob" title="oci.fleet_software_update.models.PrecheckFsuJob"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.PrecheckFsuJob</span></code></a></td>
+<td>Precheck Exadata Fleet Update Job resource.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.PrecheckFsuJobSummary.html#oci.fleet_software_update.models.PrecheckFsuJobSummary" title="oci.fleet_software_update.models.PrecheckFsuJobSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.PrecheckFsuJobSummary</span></code></a></td>
+<td>Summary of Precheck Exadata Fleet Update Job resource.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RemoveFsuCollectionTargetsDetails.html#oci.fleet_software_update.models.RemoveFsuCollectionTargetsDetails" title="oci.fleet_software_update.models.RemoveFsuCollectionTargetsDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.RemoveFsuCollectionTargetsDetails</span></code></a></td>
+<td>Remove targets from a Exadata Fleet Update Collection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackAction.html#oci.fleet_software_update.models.RollbackAction" title="oci.fleet_software_update.models.RollbackAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.RollbackAction</span></code></a></td>
+<td>Rollback Exadata Fleet Update Action details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackActionSummary.html#oci.fleet_software_update.models.RollbackActionSummary" title="oci.fleet_software_update.models.RollbackActionSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.RollbackActionSummary</span></code></a></td>
+<td>Rollback Exadata Fleet Update Action summary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackCycleAction.html#oci.fleet_software_update.models.RollbackCycleAction" title="oci.fleet_software_update.models.RollbackCycleAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.RollbackCycleAction</span></code></a></td>
+<td>Rollback Cycle Exadata Fleet Update Action details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackCycleActionSummary.html#oci.fleet_software_update.models.RollbackCycleActionSummary" title="oci.fleet_software_update.models.RollbackCycleActionSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.RollbackCycleActionSummary</span></code></a></td>
+<td>Rollback Cycle Exadata Fleet Update Action summary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackCycleFsuJob.html#oci.fleet_software_update.models.RollbackCycleFsuJob" title="oci.fleet_software_update.models.RollbackCycleFsuJob"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.RollbackCycleFsuJob</span></code></a></td>
+<td>Rollback Maintenance Cycle Exadata Fleet Update Job resource.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackCycleFsuJobSummary.html#oci.fleet_software_update.models.RollbackCycleFsuJobSummary" title="oci.fleet_software_update.models.RollbackCycleFsuJobSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.RollbackCycleFsuJobSummary</span></code></a></td>
+<td>Summary of Rollback Cycle Targets Exadata Fleet Update Job resource.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackDetails.html#oci.fleet_software_update.models.RollbackDetails" title="oci.fleet_software_update.models.RollbackDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.RollbackDetails</span></code></a></td>
+<td>Rollback details specified for the action.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackFsuJob.html#oci.fleet_software_update.models.RollbackFsuJob" title="oci.fleet_software_update.models.RollbackFsuJob"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.RollbackFsuJob</span></code></a></td>
+<td>Rolback &amp; Remove Targets Exadata Fleet Update Job resource.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.RollbackFsuJobSummary.html#oci.fleet_software_update.models.RollbackFsuJobSummary" title="oci.fleet_software_update.models.RollbackFsuJobSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.RollbackFsuJobSummary</span></code></a></td>
+<td>Summary of Rolback &amp; Remove Targets Exadata Fleet Update Job resource.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ScheduleDetails.html#oci.fleet_software_update.models.ScheduleDetails" title="oci.fleet_software_update.models.ScheduleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.ScheduleDetails</span></code></a></td>
+<td>Scheduling related details for the Exadata Fleet Update Action.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.SequentialBatchingStrategyDetails.html#oci.fleet_software_update.models.SequentialBatchingStrategyDetails" title="oci.fleet_software_update.models.SequentialBatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.SequentialBatchingStrategyDetails</span></code></a></td>
+<td>Sequential batching strategy details to use during PRECHECK and APPLY Cycle Actions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.ServiceAvailabilityFactorBatchingStrategyDetails.html#oci.fleet_software_update.models.ServiceAvailabilityFactorBatchingStrategyDetails" title="oci.fleet_software_update.models.ServiceAvailabilityFactorBatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.ServiceAvailabilityFactorBatchingStrategyDetails</span></code></a></td>
+<td>Service Availability Factor batching strategy details to use during PRECHECK and APPLY Cycle Actions.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.StageAction.html#oci.fleet_software_update.models.StageAction" title="oci.fleet_software_update.models.StageAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.StageAction</span></code></a></td>
+<td>Stage Exadata Fleet Update Action details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.StageActionSummary.html#oci.fleet_software_update.models.StageActionSummary" title="oci.fleet_software_update.models.StageActionSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.StageActionSummary</span></code></a></td>
+<td>Stage Exadata Fleet Update Action summary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.StageFsuJob.html#oci.fleet_software_update.models.StageFsuJob" title="oci.fleet_software_update.models.StageFsuJob"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.StageFsuJob</span></code></a></td>
+<td>Stage Exadata Fleet Update Job resource.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.StageFsuJobSummary.html#oci.fleet_software_update.models.StageFsuJobSummary" title="oci.fleet_software_update.models.StageFsuJobSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.StageFsuJobSummary</span></code></a></td>
+<td>Summary of Stage Exadata Fleet Update Job resource.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.StartTimeScheduleDetails.html#oci.fleet_software_update.models.StartTimeScheduleDetails" title="oci.fleet_software_update.models.StartTimeScheduleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.StartTimeScheduleDetails</span></code></a></td>
+<td>Start time details for the Exadata Fleet Update Action.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.TargetDetails.html#oci.fleet_software_update.models.TargetDetails" title="oci.fleet_software_update.models.TargetDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.TargetDetails</span></code></a></td>
+<td>Details of target member of a Exadata Fleet Update Collection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.TargetEntry.html#oci.fleet_software_update.models.TargetEntry" title="oci.fleet_software_update.models.TargetEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.TargetEntry</span></code></a></td>
+<td>Details to specify a target to add or remove from a Exadata Fleet Update Collection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.TargetIdsRemoveTargetsDetails.html#oci.fleet_software_update.models.TargetIdsRemoveTargetsDetails" title="oci.fleet_software_update.models.TargetIdsRemoveTargetsDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.TargetIdsRemoveTargetsDetails</span></code></a></td>
+<td>Remove a list of targets from a Exadata Fleet Update Collection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.TargetProgressSummary.html#oci.fleet_software_update.models.TargetProgressSummary" title="oci.fleet_software_update.models.TargetProgressSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.TargetProgressSummary</span></code></a></td>
+<td>Progress details of the executing job for a Database target.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.TargetSummary.html#oci.fleet_software_update.models.TargetSummary" title="oci.fleet_software_update.models.TargetSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.TargetSummary</span></code></a></td>
+<td>Details of a target member of a Exadata Fleet Update Collection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.TargetSummaryCollection.html#oci.fleet_software_update.models.TargetSummaryCollection" title="oci.fleet_software_update.models.TargetSummaryCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.TargetSummaryCollection</span></code></a></td>
+<td>List of TargetSummary objects.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateApplyActionDetails.html#oci.fleet_software_update.models.UpdateApplyActionDetails" title="oci.fleet_software_update.models.UpdateApplyActionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateApplyActionDetails</span></code></a></td>
+<td>Apply Exadata Fleet Update Action update details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateBatchingStrategyDetails.html#oci.fleet_software_update.models.UpdateBatchingStrategyDetails" title="oci.fleet_software_update.models.UpdateBatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateBatchingStrategyDetails</span></code></a></td>
+<td>Batching strategy details to use during PRECHECK and APPLY Cycle Actions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateCleanupActionDetails.html#oci.fleet_software_update.models.UpdateCleanupActionDetails" title="oci.fleet_software_update.models.UpdateCleanupActionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateCleanupActionDetails</span></code></a></td>
+<td>Cleanup Exadata Fleet Update Action update details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateFiftyFiftyBatchingStrategyDetails.html#oci.fleet_software_update.models.UpdateFiftyFiftyBatchingStrategyDetails" title="oci.fleet_software_update.models.UpdateFiftyFiftyBatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateFiftyFiftyBatchingStrategyDetails</span></code></a></td>
+<td>Fifty-Fifty batching strategy details to use during PRECHECK and APPLY Cycle Actions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateFsuActionDetails.html#oci.fleet_software_update.models.UpdateFsuActionDetails" title="oci.fleet_software_update.models.UpdateFsuActionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateFsuActionDetails</span></code></a></td>
+<td>Exadata Fleet Update Action resource details to update.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateFsuCollectionDetails.html#oci.fleet_software_update.models.UpdateFsuCollectionDetails" title="oci.fleet_software_update.models.UpdateFsuCollectionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateFsuCollectionDetails</span></code></a></td>
+<td>The information to Update Exadata Fleet Update Collection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateFsuCycleDetails.html#oci.fleet_software_update.models.UpdateFsuCycleDetails" title="oci.fleet_software_update.models.UpdateFsuCycleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateFsuCycleDetails</span></code></a></td>
+<td>Update Exadata Fleet Update Cycle resource details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateFsuDiscoveryDetails.html#oci.fleet_software_update.models.UpdateFsuDiscoveryDetails" title="oci.fleet_software_update.models.UpdateFsuDiscoveryDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateFsuDiscoveryDetails</span></code></a></td>
+<td>The information to Update Exadata Fleet Update Discovery resource.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateFsuJobDetails.html#oci.fleet_software_update.models.UpdateFsuJobDetails" title="oci.fleet_software_update.models.UpdateFsuJobDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateFsuJobDetails</span></code></a></td>
+<td>Update Exadata Fleet Update Job Details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateNonRollingBatchingStrategyDetails.html#oci.fleet_software_update.models.UpdateNonRollingBatchingStrategyDetails" title="oci.fleet_software_update.models.UpdateNonRollingBatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateNonRollingBatchingStrategyDetails</span></code></a></td>
+<td>Non-rolling batching strategy details to use during PRECHECK and APPLY Cycle Actions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdatePatchFsuCycle.html#oci.fleet_software_update.models.UpdatePatchFsuCycle" title="oci.fleet_software_update.models.UpdatePatchFsuCycle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdatePatchFsuCycle</span></code></a></td>
+<td>Update Patch Exadata Fleet Update Cycle resource details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdatePrecheckActionDetails.html#oci.fleet_software_update.models.UpdatePrecheckActionDetails" title="oci.fleet_software_update.models.UpdatePrecheckActionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdatePrecheckActionDetails</span></code></a></td>
+<td>Precheck Exadata Fleet Update Action update details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateRollbackActionDetails.html#oci.fleet_software_update.models.UpdateRollbackActionDetails" title="oci.fleet_software_update.models.UpdateRollbackActionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateRollbackActionDetails</span></code></a></td>
+<td>Rollback Exadata Fleet Update Action update details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateRollbackCycleActionDetails.html#oci.fleet_software_update.models.UpdateRollbackCycleActionDetails" title="oci.fleet_software_update.models.UpdateRollbackCycleActionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateRollbackCycleActionDetails</span></code></a></td>
+<td>Rollback Cycle Exadata Fleet Update Action update details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateScheduleDetails.html#oci.fleet_software_update.models.UpdateScheduleDetails" title="oci.fleet_software_update.models.UpdateScheduleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateScheduleDetails</span></code></a></td>
+<td>Scheduling related details for the Exadata Fleet Update Action.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateSequentialBatchingStrategyDetails.html#oci.fleet_software_update.models.UpdateSequentialBatchingStrategyDetails" title="oci.fleet_software_update.models.UpdateSequentialBatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateSequentialBatchingStrategyDetails</span></code></a></td>
+<td>Sequential batching strategy details to use during PRECHECK and APPLY Cycle Actions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateServiceAvailabilityFactorBatchingStrategyDetails.html#oci.fleet_software_update.models.UpdateServiceAvailabilityFactorBatchingStrategyDetails" title="oci.fleet_software_update.models.UpdateServiceAvailabilityFactorBatchingStrategyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateServiceAvailabilityFactorBatchingStrategyDetails</span></code></a></td>
+<td>Service Availability Factor batching strategy details to use during PRECHECK and APPLY Cycle Actions.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateStageActionDetails.html#oci.fleet_software_update.models.UpdateStageActionDetails" title="oci.fleet_software_update.models.UpdateStageActionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateStageActionDetails</span></code></a></td>
+<td>Stage Exadata Fleet Update Action update details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.UpdateStartTimeScheduleDetails.html#oci.fleet_software_update.models.UpdateStartTimeScheduleDetails" title="oci.fleet_software_update.models.UpdateStartTimeScheduleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.UpdateStartTimeScheduleDetails</span></code></a></td>
+<td>Start time details for the Exadata Fleet Update Action.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.VersionFsuTargetDetails.html#oci.fleet_software_update.models.VersionFsuTargetDetails" title="oci.fleet_software_update.models.VersionFsuTargetDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.VersionFsuTargetDetails</span></code></a></td>
+<td>Exadata Fleet Update Cycle Target version string details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.VmClusterTargetSummary.html#oci.fleet_software_update.models.VmClusterTargetSummary" title="oci.fleet_software_update.models.VmClusterTargetSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.VmClusterTargetSummary</span></code></a></td>
+<td>Details of a VmCluster target member of a Exadata Fleet Update Collection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequest.html#oci.fleet_software_update.models.WorkRequest" title="oci.fleet_software_update.models.WorkRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.WorkRequest</span></code></a></td>
+<td>A description of workrequest status.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequestError.html#oci.fleet_software_update.models.WorkRequestError" title="oci.fleet_software_update.models.WorkRequestError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.WorkRequestError</span></code></a></td>
+<td>An error encountered while executing a work request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequestErrorCollection.html#oci.fleet_software_update.models.WorkRequestErrorCollection" title="oci.fleet_software_update.models.WorkRequestErrorCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.WorkRequestErrorCollection</span></code></a></td>
+<td>Results of a workRequestError search.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequestLogEntry.html#oci.fleet_software_update.models.WorkRequestLogEntry" title="oci.fleet_software_update.models.WorkRequestLogEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.WorkRequestLogEntry</span></code></a></td>
+<td>A log message from the execution of a work request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequestLogEntryCollection.html#oci.fleet_software_update.models.WorkRequestLogEntryCollection" title="oci.fleet_software_update.models.WorkRequestLogEntryCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.WorkRequestLogEntryCollection</span></code></a></td>
+<td>Results of a workRequestLog search.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequestResource.html#oci.fleet_software_update.models.WorkRequestResource" title="oci.fleet_software_update.models.WorkRequestResource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.WorkRequestResource</span></code></a></td>
+<td>A resource created or operated on by a work request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequestSummary.html#oci.fleet_software_update.models.WorkRequestSummary" title="oci.fleet_software_update.models.WorkRequestSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.WorkRequestSummary</span></code></a></td>
+<td>A summary of the status of a work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fleet_software_update/models/oci.fleet_software_update.models.WorkRequestSummaryCollection.html#oci.fleet_software_update.models.WorkRequestSummaryCollection" title="oci.fleet_software_update.models.WorkRequestSummaryCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.fleet_software_update.models.WorkRequestSummaryCollection</span></code></a></td>
+<td>Results of a workRequest search.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fleet_software_update/client/oci.fleet_software_update.FleetSoftwareUpdateClient.html" class="btn btn-neutral float-right" title="FleetSoftwareUpdateClient" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fleet_apps_management/models/oci.fleet_apps_management.models.WorkflowTaskComponent.html" class="btn btn-neutral" title="WorkflowTaskComponent" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

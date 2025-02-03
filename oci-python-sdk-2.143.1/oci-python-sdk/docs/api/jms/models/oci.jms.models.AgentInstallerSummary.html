@@ -1,0 +1,890 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AgentInstallerSummary &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="AnnouncementCollection" href="oci.jms.models.AnnouncementCollection.html" />
+    <link rel="prev" title="AgentInstallerCollection" href="oci.jms.models.AgentInstallerCollection.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../jms.html">Jms</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.jms.JavaManagementServiceClient.html">JavaManagementServiceClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.jms.JavaManagementServiceClientCompositeOperations.html">JavaManagementServiceClientCompositeOperations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../jms.html#models">Models</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.AddFleetInstallationSitesDetails.html">AddFleetInstallationSitesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.AdvancedUsageTracking.html">AdvancedUsageTracking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.Agent.html">Agent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.AgentInstallerCollection.html">AgentInstallerCollection</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">AgentInstallerSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.AnnouncementCollection.html">AnnouncementCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.AnnouncementSummary.html">AnnouncementSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.ApplicationInstallationUsageSummary.html">ApplicationInstallationUsageSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.ApplicationInstallationUsageSummaryCollection.html">ApplicationInstallationUsageSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.ApplicationUsage.html">ApplicationUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.ApplicationUsageCollection.html">ApplicationUsageCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.ApplicationWorkItemDetails.html">ApplicationWorkItemDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.BasicWorkItemDetails.html">BasicWorkItemDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.Blocklist.html">Blocklist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.BlocklistCollection.html">BlocklistCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.BlocklistEntry.html">BlocklistEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.BlocklistTarget.html">BlocklistTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.ChangeFleetCompartmentDetails.html">ChangeFleetCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.CreateBlocklistDetails.html">CreateBlocklistDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.CreateDrsFileDetails.html">CreateDrsFileDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.CreateFleetDetails.html">CreateFleetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.CreateJmsPluginDetails.html">CreateJmsPluginDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.CryptoAnalysisResult.html">CryptoAnalysisResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.CryptoAnalysisResultCollection.html">CryptoAnalysisResultCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.CryptoAnalysisResultSummary.html">CryptoAnalysisResultSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.CryptoEventAnalysis.html">CryptoEventAnalysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.CustomLog.html">CustomLog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.DeployedApplicationInstallationUsageSummary.html">DeployedApplicationInstallationUsageSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.DeployedApplicationInstallationUsageSummaryCollection.html">DeployedApplicationInstallationUsageSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.DeployedApplicationMigrationAnalysesTarget.html">DeployedApplicationMigrationAnalysesTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.DeployedApplicationUsage.html">DeployedApplicationUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.DeployedApplicationUsageCollection.html">DeployedApplicationUsageCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.DeployedApplicationWorkItemDetails.html">DeployedApplicationWorkItemDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.DisableDrsDetails.html">DisableDrsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.DrsFile.html">DrsFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.DrsFileCollection.html">DrsFileCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.DrsFileSummary.html">DrsFileSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.DrsTarget.html">DrsTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.EnableDrsDetails.html">EnableDrsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.ExistingInstallationSiteId.html">ExistingInstallationSiteId</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.ExportSetting.html">ExportSetting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.ExportStatus.html">ExportStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.Fleet.html">Fleet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.FleetAdvancedFeatureConfiguration.html">FleetAdvancedFeatureConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.FleetAgentConfiguration.html">FleetAgentConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.FleetAgentOsConfiguration.html">FleetAgentOsConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.FleetCollection.html">FleetCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.FleetDiagnosisCollection.html">FleetDiagnosisCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.FleetDiagnosisSummary.html">FleetDiagnosisSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.FleetSummary.html">FleetSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.GenerateAgentDeployScriptDetails.html">GenerateAgentDeployScriptDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.GenerateAgentInstallerConfigurationDetails.html">GenerateAgentInstallerConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.GenerateLoadPipelineScriptDetails.html">GenerateLoadPipelineScriptDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.InstallationSite.html">InstallationSite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.InstallationSiteCollection.html">InstallationSiteCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.InstallationSiteSummary.html">InstallationSiteSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.InstallationUsage.html">InstallationUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.InstallationUsageCollection.html">InstallationUsageCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaArtifact.html">JavaArtifact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaFamily.html">JavaFamily</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaFamilyCollection.html">JavaFamilyCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaFamilySummary.html">JavaFamilySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaLicense.html">JavaLicense</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaMigrationAnalysis.html">JavaMigrationAnalysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaMigrationAnalysisResult.html">JavaMigrationAnalysisResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaMigrationAnalysisResultCollection.html">JavaMigrationAnalysisResultCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaMigrationAnalysisResultSummary.html">JavaMigrationAnalysisResultSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaMigrationAnalysisTarget.html">JavaMigrationAnalysisTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaRelease.html">JavaRelease</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaReleaseCollection.html">JavaReleaseCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaReleaseSummary.html">JavaReleaseSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaRuntimeId.html">JavaRuntimeId</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaServerInstanceUsage.html">JavaServerInstanceUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaServerInstanceUsageCollection.html">JavaServerInstanceUsageCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaServerUsage.html">JavaServerUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JavaServerUsageCollection.html">JavaServerUsageCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JfrAttachmentTarget.html">JfrAttachmentTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JfrRecording.html">JfrRecording</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JmsPlugin.html">JmsPlugin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JmsPluginCollection.html">JmsPluginCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JmsPluginSummary.html">JmsPluginSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JreUsage.html">JreUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.JreUsageCollection.html">JreUsageCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.KeySizeAlgorithm.html">KeySizeAlgorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.Lcm.html">Lcm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.LcmWorkItemDetails.html">LcmWorkItemDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.LibraryUsage.html">LibraryUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.LibraryUsageCollection.html">LibraryUsageCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.ManageDrsDetails.html">ManageDrsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.ManagedInstanceUsage.html">ManagedInstanceUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.ManagedInstanceUsageCollection.html">ManagedInstanceUsageCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.MinimumKeySizeSettings.html">MinimumKeySizeSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.NewInstallationSite.html">NewInstallationSite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.OperatingSystem.html">OperatingSystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.PatchDetail.html">PatchDetail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.PerformanceTuningAnalysis.html">PerformanceTuningAnalysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.PerformanceTuningAnalysisResult.html">PerformanceTuningAnalysisResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.PerformanceTuningAnalysisResultCollection.html">PerformanceTuningAnalysisResultCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.PerformanceTuningAnalysisResultSummary.html">PerformanceTuningAnalysisResultSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.Plugin.html">Plugin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.PostInstallationActionSettings.html">PostInstallationActionSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.Principal.html">Principal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.Proxies.html">Proxies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.RemoveFleetInstallationSitesDetails.html">RemoveFleetInstallationSitesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.RequestCryptoAnalysesDetails.html">RequestCryptoAnalysesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.RequestDeployedApplicationMigrationAnalysesDetails.html">RequestDeployedApplicationMigrationAnalysesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.RequestJavaMigrationAnalysesDetails.html">RequestJavaMigrationAnalysesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.RequestJfrRecordingsDetails.html">RequestJfrRecordingsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.RequestPerformanceTuningAnalysesDetails.html">RequestPerformanceTuningAnalysesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.ResourceInventory.html">ResourceInventory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.ScanJavaServerUsageDetails.html">ScanJavaServerUsageDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.ScanLibraryUsageDetails.html">ScanLibraryUsageDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.SummarizedEventsLog.html">SummarizedEventsLog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.UpdateDrsFileDetails.html">UpdateDrsFileDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.UpdateExportSettingDetails.html">UpdateExportSettingDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.UpdateFleetAdvancedFeatureConfigurationDetails.html">UpdateFleetAdvancedFeatureConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.UpdateFleetAgentConfigurationDetails.html">UpdateFleetAgentConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.UpdateFleetDetails.html">UpdateFleetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.UpdateJmsPluginDetails.html">UpdateJmsPluginDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.WorkItemCollection.html">WorkItemCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.WorkItemDetails.html">WorkItemDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.WorkItemSummary.html">WorkItemSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.WorkRequestCollection.html">WorkRequestCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.WorkRequestErrorCollection.html">WorkRequestErrorCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.WorkRequestLogEntryCollection.html">WorkRequestLogEntryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.jms.models.WorkRequestResource.html">WorkRequestResource</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../jms.html">Jms</a> &raquo;</li>
+        
+      <li>AgentInstallerSummary</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/jms/models/oci.jms.models.AgentInstallerSummary.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="agentinstallersummary">
+<h1>AgentInstallerSummary<a class="headerlink" href="#agentinstallersummary" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.jms.models.AgentInstallerSummary">
+<em class="property">class </em><code class="descclassname">oci.jms.models.</code><code class="descname">AgentInstallerSummary</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Supported agent installer downloads.</p>
+<p><strong>Attributes</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.OS_FAMILY_LINUX" title="oci.jms.models.AgentInstallerSummary.OS_FAMILY_LINUX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OS_FAMILY_LINUX</span></code></a></td>
+<td>A constant which can be used with the os_family property of a AgentInstallerSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.OS_FAMILY_MACOS" title="oci.jms.models.AgentInstallerSummary.OS_FAMILY_MACOS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OS_FAMILY_MACOS</span></code></a></td>
+<td>A constant which can be used with the os_family property of a AgentInstallerSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.OS_FAMILY_UNKNOWN" title="oci.jms.models.AgentInstallerSummary.OS_FAMILY_UNKNOWN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OS_FAMILY_UNKNOWN</span></code></a></td>
+<td>A constant which can be used with the os_family property of a AgentInstallerSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.OS_FAMILY_WINDOWS" title="oci.jms.models.AgentInstallerSummary.OS_FAMILY_WINDOWS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OS_FAMILY_WINDOWS</span></code></a></td>
+<td>A constant which can be used with the os_family property of a AgentInstallerSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.PACKAGE_TYPE_RPM" title="oci.jms.models.AgentInstallerSummary.PACKAGE_TYPE_RPM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PACKAGE_TYPE_RPM</span></code></a></td>
+<td>A constant which can be used with the package_type property of a AgentInstallerSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.PACKAGE_TYPE_ZIP" title="oci.jms.models.AgentInstallerSummary.PACKAGE_TYPE_ZIP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PACKAGE_TYPE_ZIP</span></code></a></td>
+<td>A constant which can be used with the package_type property of a AgentInstallerSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.PLATFORM_ARCHITECTURE_AARCH64" title="oci.jms.models.AgentInstallerSummary.PLATFORM_ARCHITECTURE_AARCH64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PLATFORM_ARCHITECTURE_AARCH64</span></code></a></td>
+<td>A constant which can be used with the platform_architecture property of a AgentInstallerSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.PLATFORM_ARCHITECTURE_X86" title="oci.jms.models.AgentInstallerSummary.PLATFORM_ARCHITECTURE_X86"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PLATFORM_ARCHITECTURE_X86</span></code></a></td>
+<td>A constant which can be used with the platform_architecture property of a AgentInstallerSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.PLATFORM_ARCHITECTURE_X86_64" title="oci.jms.models.AgentInstallerSummary.PLATFORM_ARCHITECTURE_X86_64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PLATFORM_ARCHITECTURE_X86_64</span></code></a></td>
+<td>A constant which can be used with the platform_architecture property of a AgentInstallerSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.agent_installer_description" title="oci.jms.models.AgentInstallerSummary.agent_installer_description"><code class="xref py py-obj docutils literal notranslate"><span class="pre">agent_installer_description</span></code></a></td>
+<td><strong>[Required]</strong> Gets the agent_installer_description of this AgentInstallerSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.agent_installer_id" title="oci.jms.models.AgentInstallerSummary.agent_installer_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">agent_installer_id</span></code></a></td>
+<td><strong>[Required]</strong> Gets the agent_installer_id of this AgentInstallerSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.agent_installer_version" title="oci.jms.models.AgentInstallerSummary.agent_installer_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">agent_installer_version</span></code></a></td>
+<td><strong>[Required]</strong> Gets the agent_installer_version of this AgentInstallerSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.agent_version" title="oci.jms.models.AgentInstallerSummary.agent_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">agent_version</span></code></a></td>
+<td><strong>[Required]</strong> Gets the agent_version of this AgentInstallerSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.approximate_file_size_in_bytes" title="oci.jms.models.AgentInstallerSummary.approximate_file_size_in_bytes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">approximate_file_size_in_bytes</span></code></a></td>
+<td><strong>[Required]</strong> Gets the approximate_file_size_in_bytes of this AgentInstallerSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.java_version" title="oci.jms.models.AgentInstallerSummary.java_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">java_version</span></code></a></td>
+<td><strong>[Required]</strong> Gets the java_version of this AgentInstallerSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.os_family" title="oci.jms.models.AgentInstallerSummary.os_family"><code class="xref py py-obj docutils literal notranslate"><span class="pre">os_family</span></code></a></td>
+<td><strong>[Required]</strong> Gets the os_family of this AgentInstallerSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.package_type" title="oci.jms.models.AgentInstallerSummary.package_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">package_type</span></code></a></td>
+<td><strong>[Required]</strong> Gets the package_type of this AgentInstallerSummary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.platform_architecture" title="oci.jms.models.AgentInstallerSummary.platform_architecture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">platform_architecture</span></code></a></td>
+<td><strong>[Required]</strong> Gets the platform_architecture of this AgentInstallerSummary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.sha256" title="oci.jms.models.AgentInstallerSummary.sha256"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sha256</span></code></a></td>
+<td><strong>[Required]</strong> Gets the sha256 of this AgentInstallerSummary.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.jms.models.AgentInstallerSummary.__init__" title="oci.jms.models.AgentInstallerSummary.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(**kwargs)</td>
+<td>Initializes a new AgentInstallerSummary object with values from keyword arguments.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.OS_FAMILY_LINUX">
+<code class="descname">OS_FAMILY_LINUX</code><em class="property"> = 'LINUX'</em><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.OS_FAMILY_LINUX" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the os_family property of a AgentInstallerSummary.
+This constant has a value of “LINUX”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.OS_FAMILY_MACOS">
+<code class="descname">OS_FAMILY_MACOS</code><em class="property"> = 'MACOS'</em><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.OS_FAMILY_MACOS" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the os_family property of a AgentInstallerSummary.
+This constant has a value of “MACOS”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.OS_FAMILY_UNKNOWN">
+<code class="descname">OS_FAMILY_UNKNOWN</code><em class="property"> = 'UNKNOWN'</em><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.OS_FAMILY_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the os_family property of a AgentInstallerSummary.
+This constant has a value of “UNKNOWN”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.OS_FAMILY_WINDOWS">
+<code class="descname">OS_FAMILY_WINDOWS</code><em class="property"> = 'WINDOWS'</em><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.OS_FAMILY_WINDOWS" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the os_family property of a AgentInstallerSummary.
+This constant has a value of “WINDOWS”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.PACKAGE_TYPE_RPM">
+<code class="descname">PACKAGE_TYPE_RPM</code><em class="property"> = 'RPM'</em><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.PACKAGE_TYPE_RPM" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the package_type property of a AgentInstallerSummary.
+This constant has a value of “RPM”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.PACKAGE_TYPE_ZIP">
+<code class="descname">PACKAGE_TYPE_ZIP</code><em class="property"> = 'ZIP'</em><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.PACKAGE_TYPE_ZIP" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the package_type property of a AgentInstallerSummary.
+This constant has a value of “ZIP”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.PLATFORM_ARCHITECTURE_AARCH64">
+<code class="descname">PLATFORM_ARCHITECTURE_AARCH64</code><em class="property"> = 'AARCH64'</em><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.PLATFORM_ARCHITECTURE_AARCH64" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the platform_architecture property of a AgentInstallerSummary.
+This constant has a value of “AARCH64”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.PLATFORM_ARCHITECTURE_X86">
+<code class="descname">PLATFORM_ARCHITECTURE_X86</code><em class="property"> = 'X86'</em><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.PLATFORM_ARCHITECTURE_X86" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the platform_architecture property of a AgentInstallerSummary.
+This constant has a value of “X86”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.PLATFORM_ARCHITECTURE_X86_64">
+<code class="descname">PLATFORM_ARCHITECTURE_X86_64</code><em class="property"> = 'X86_64'</em><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.PLATFORM_ARCHITECTURE_X86_64" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the platform_architecture property of a AgentInstallerSummary.
+This constant has a value of “X86_64”</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.jms.models.AgentInstallerSummary.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new AgentInstallerSummary object with values from keyword arguments.
+The following keyword arguments are supported (corresponding to the getters/setters of this class):</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>agent_installer_id</strong> (<em>int</em>) – The value to assign to the agent_installer_id property of this AgentInstallerSummary.</li>
+<li><strong>agent_installer_description</strong> (<em>str</em>) – The value to assign to the agent_installer_description property of this AgentInstallerSummary.</li>
+<li><strong>approximate_file_size_in_bytes</strong> (<em>int</em>) – The value to assign to the approximate_file_size_in_bytes property of this AgentInstallerSummary.</li>
+<li><strong>sha256</strong> (<em>str</em>) – The value to assign to the sha256 property of this AgentInstallerSummary.</li>
+<li><strong>os_family</strong> (<em>str</em>) – The value to assign to the os_family property of this AgentInstallerSummary.
+Allowed values for this property are: “LINUX”, “WINDOWS”, “MACOS”, “UNKNOWN”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>platform_architecture</strong> (<em>str</em>) – The value to assign to the platform_architecture property of this AgentInstallerSummary.
+Allowed values for this property are: “X86_64”, “X86”, “AARCH64”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>package_type</strong> (<em>str</em>) – The value to assign to the package_type property of this AgentInstallerSummary.
+Allowed values for this property are: “RPM”, “ZIP”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>agent_version</strong> (<em>str</em>) – The value to assign to the agent_version property of this AgentInstallerSummary.</li>
+<li><strong>java_version</strong> (<em>str</em>) – The value to assign to the java_version property of this AgentInstallerSummary.</li>
+<li><strong>agent_installer_version</strong> (<em>str</em>) – The value to assign to the agent_installer_version property of this AgentInstallerSummary.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.agent_installer_description">
+<code class="descname">agent_installer_description</code><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.agent_installer_description" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the agent_installer_description of this AgentInstallerSummary.
+Description of the agent installer artifact. The description typically includes the OS, architecture, and agent installer type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The agent_installer_description of this AgentInstallerSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.agent_installer_id">
+<code class="descname">agent_installer_id</code><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.agent_installer_id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the agent_installer_id of this AgentInstallerSummary.
+Unique identifier for the agent installer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The agent_installer_id of this AgentInstallerSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.agent_installer_version">
+<code class="descname">agent_installer_version</code><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.agent_installer_version" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the agent_installer_version of this AgentInstallerSummary.
+Agent installer version.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The agent_installer_version of this AgentInstallerSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.agent_version">
+<code class="descname">agent_version</code><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.agent_version" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the agent_version of this AgentInstallerSummary.
+Agent image version.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The agent_version of this AgentInstallerSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.approximate_file_size_in_bytes">
+<code class="descname">approximate_file_size_in_bytes</code><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.approximate_file_size_in_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the approximate_file_size_in_bytes of this AgentInstallerSummary.
+Approximate compressed file size in bytes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The approximate_file_size_in_bytes of this AgentInstallerSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.java_version">
+<code class="descname">java_version</code><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.java_version" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the java_version of this AgentInstallerSummary.
+Java version.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The java_version of this AgentInstallerSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.os_family">
+<code class="descname">os_family</code><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.os_family" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the os_family of this AgentInstallerSummary.
+The target operating system family for the agent installer.</p>
+<p>Allowed values for this property are: “LINUX”, “WINDOWS”, “MACOS”, “UNKNOWN”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The os_family of this AgentInstallerSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.package_type">
+<code class="descname">package_type</code><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.package_type" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the package_type of this AgentInstallerSummary.
+The package type (typically the file extension) of the agent software included in the installer.</p>
+<p>Allowed values for this property are: “RPM”, “ZIP”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The package_type of this AgentInstallerSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.platform_architecture">
+<code class="descname">platform_architecture</code><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.platform_architecture" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the platform_architecture of this AgentInstallerSummary.
+The target operating system architecture for the installer.</p>
+<p>Allowed values for this property are: “X86_64”, “X86”, “AARCH64”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The platform_architecture of this AgentInstallerSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.jms.models.AgentInstallerSummary.sha256">
+<code class="descname">sha256</code><a class="headerlink" href="#oci.jms.models.AgentInstallerSummary.sha256" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the sha256 of this AgentInstallerSummary.
+SHA256 checksum of the agent installer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The sha256 of this AgentInstallerSummary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.jms.models.AnnouncementCollection.html" class="btn btn-neutral float-right" title="AnnouncementCollection" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.jms.models.AgentInstallerCollection.html" class="btn btn-neutral" title="AgentInstallerCollection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
