@@ -1,0 +1,1003 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data Science &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DataScienceClient" href="data_science/client/oci.data_science.DataScienceClient.html" />
+    <link rel="prev" title="WorkRequestSummary" href="data_safe/models/oci.data_safe.models.WorkRequestSummary.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_safe.html">Data Safe</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data Science</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_science/client/oci.data_science.DataScienceClient.html">DataScienceClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_science/client/oci.data_science.DataScienceClientCompositeOperations.html">DataScienceClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models">Models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ArtifactExportDetails.html">ArtifactExportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ArtifactExportDetailsObjectStorage.html">ArtifactExportDetailsObjectStorage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ArtifactImportDetails.html">ArtifactImportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ArtifactImportDetailsObjectStorage.html">ArtifactImportDetailsObjectStorage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.AutoScalingPolicy.html">AutoScalingPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.AutoScalingPolicyDetails.html">AutoScalingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.BackupOperationDetails.html">BackupOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.BackupSetting.html">BackupSetting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.CategoryLogDetails.html">CategoryLogDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeDataSciencePrivateEndpointCompartmentDetails.html">ChangeDataSciencePrivateEndpointCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeJobCompartmentDetails.html">ChangeJobCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeJobRunCompartmentDetails.html">ChangeJobRunCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeModelCompartmentDetails.html">ChangeModelCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeModelDeploymentCompartmentDetails.html">ChangeModelDeploymentCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeModelVersionSetCompartmentDetails.html">ChangeModelVersionSetCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeNotebookSessionCompartmentDetails.html">ChangeNotebookSessionCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ChangePipelineCompartmentDetails.html">ChangePipelineCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ChangePipelineRunCompartmentDetails.html">ChangePipelineRunCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeProjectCompartmentDetails.html">ChangeProjectCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.CreateDataSciencePrivateEndpointDetails.html">CreateDataSciencePrivateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.CreateJobDetails.html">CreateJobDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.CreateJobRunDetails.html">CreateJobRunDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.CreateModelDeploymentDetails.html">CreateModelDeploymentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.CreateModelDetails.html">CreateModelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.CreateModelProvenanceDetails.html">CreateModelProvenanceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.CreateModelVersionSetDetails.html">CreateModelVersionSetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.CreateNotebookSessionDetails.html">CreateNotebookSessionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.CreatePipelineDetails.html">CreatePipelineDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.CreatePipelineRunDetails.html">CreatePipelineRunDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.CreateProjectDetails.html">CreateProjectDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.CustomExpressionQueryScalingConfiguration.html">CustomExpressionQueryScalingConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.CustomMetricExpressionRule.html">CustomMetricExpressionRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.DataSciencePrivateEndpoint.html">DataSciencePrivateEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.DataSciencePrivateEndpointSummary.html">DataSciencePrivateEndpointSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.DefaultJobConfigurationDetails.html">DefaultJobConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.DefaultModelDeploymentEnvironmentConfigurationDetails.html">DefaultModelDeploymentEnvironmentConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ExportModelArtifactDetails.html">ExportModelArtifactDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.FastLaunchJobConfigSummary.html">FastLaunchJobConfigSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.FileStorageMountConfigurationDetails.html">FileStorageMountConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.FixedSizeScalingPolicy.html">FixedSizeScalingPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ImportModelArtifactDetails.html">ImportModelArtifactDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.InstanceConfiguration.html">InstanceConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.InstancePoolModelDeploymentSystemData.html">InstancePoolModelDeploymentSystemData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.Job.html">Job</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.JobConfigurationDetails.html">JobConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.JobEnvironmentConfigurationDetails.html">JobEnvironmentConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.JobInfrastructureConfigurationDetails.html">JobInfrastructureConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.JobLogConfigurationDetails.html">JobLogConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.JobRun.html">JobRun</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.JobRunLogDetails.html">JobRunLogDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.JobRunSummary.html">JobRunSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.JobShapeConfigDetails.html">JobShapeConfigDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.JobShapeSummary.html">JobShapeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.JobSummary.html">JobSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.LogDetails.html">LogDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ManagedEgressStandaloneJobInfrastructureConfigurationDetails.html">ManagedEgressStandaloneJobInfrastructureConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.Metadata.html">Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.MetricExpressionRule.html">MetricExpressionRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.Model.html">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ModelConfigurationDetails.html">ModelConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ModelDeployment.html">ModelDeployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ModelDeploymentConfigurationDetails.html">ModelDeploymentConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ModelDeploymentEnvironmentConfigurationDetails.html">ModelDeploymentEnvironmentConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ModelDeploymentInstanceShapeConfigDetails.html">ModelDeploymentInstanceShapeConfigDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ModelDeploymentShapeSummary.html">ModelDeploymentShapeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ModelDeploymentSummary.html">ModelDeploymentSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ModelDeploymentSystemData.html">ModelDeploymentSystemData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ModelProvenance.html">ModelProvenance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ModelSummary.html">ModelSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ModelVersionSet.html">ModelVersionSet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ModelVersionSetSummary.html">ModelVersionSetSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSession.html">NotebookSession</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionConfigDetails.html">NotebookSessionConfigDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionConfigurationDetails.html">NotebookSessionConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionGitConfigDetails.html">NotebookSessionGitConfigDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionGitRepoConfigDetails.html">NotebookSessionGitRepoConfigDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionRuntimeConfigDetails.html">NotebookSessionRuntimeConfigDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionShapeConfigDetails.html">NotebookSessionShapeConfigDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionShapeSummary.html">NotebookSessionShapeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionSummary.html">NotebookSessionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ObjectStorageMountConfigurationDetails.html">ObjectStorageMountConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.OcirContainerJobEnvironmentConfigurationDetails.html">OcirContainerJobEnvironmentConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.OcirModelDeploymentEnvironmentConfigurationDetails.html">OcirModelDeploymentEnvironmentConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.Pipeline.html">Pipeline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineConfigurationDetails.html">PipelineConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineContainerConfigurationDetails.html">PipelineContainerConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineContainerStepDetails.html">PipelineContainerStepDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineContainerStepRun.html">PipelineContainerStepRun</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineContainerStepUpdateDetails.html">PipelineContainerStepUpdateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineCustomScriptStepDetails.html">PipelineCustomScriptStepDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineCustomScriptStepRun.html">PipelineCustomScriptStepRun</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineCustomScriptStepUpdateDetails.html">PipelineCustomScriptStepUpdateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineDefaultConfigurationDetails.html">PipelineDefaultConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineInfrastructureConfigurationDetails.html">PipelineInfrastructureConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineLogConfigurationDetails.html">PipelineLogConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineMLJobStepDetails.html">PipelineMLJobStepDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineMLJobStepRun.html">PipelineMLJobStepRun</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineMLJobStepUpdateDetails.html">PipelineMLJobStepUpdateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineOcirContainerConfigurationDetails.html">PipelineOcirContainerConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineRun.html">PipelineRun</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineRunLogDetails.html">PipelineRunLogDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineRunSummary.html">PipelineRunSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineShapeConfigDetails.html">PipelineShapeConfigDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineStepConfigurationDetails.html">PipelineStepConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineStepDetails.html">PipelineStepDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineStepOverrideDetails.html">PipelineStepOverrideDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineStepRun.html">PipelineStepRun</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineStepUpdateDetails.html">PipelineStepUpdateDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineSummary.html">PipelineSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PredefinedExpressionThresholdScalingConfiguration.html">PredefinedExpressionThresholdScalingConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.PredefinedMetricExpressionRule.html">PredefinedMetricExpressionRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.Project.html">Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ProjectSummary.html">ProjectSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.RetentionOperationDetails.html">RetentionOperationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.RetentionSetting.html">RetentionSetting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ScalingConfiguration.html">ScalingConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ScalingPolicy.html">ScalingPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.SingleModelDeploymentConfigurationDetails.html">SingleModelDeploymentConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.StandaloneJobInfrastructureConfigurationDetails.html">StandaloneJobInfrastructureConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.StorageMountConfigurationDetails.html">StorageMountConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.ThresholdBasedAutoScalingPolicyDetails.html">ThresholdBasedAutoScalingPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateCategoryLogDetails.html">UpdateCategoryLogDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateDataSciencePrivateEndpointDetails.html">UpdateDataSciencePrivateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateDefaultModelDeploymentEnvironmentConfigurationDetails.html">UpdateDefaultModelDeploymentEnvironmentConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateJobDetails.html">UpdateJobDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateJobRunDetails.html">UpdateJobRunDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateModelConfigurationDetails.html">UpdateModelConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateModelDeploymentConfigurationDetails.html">UpdateModelDeploymentConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateModelDeploymentDetails.html">UpdateModelDeploymentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateModelDeploymentEnvironmentConfigurationDetails.html">UpdateModelDeploymentEnvironmentConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateModelDetails.html">UpdateModelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateModelProvenanceDetails.html">UpdateModelProvenanceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateModelVersionSetDetails.html">UpdateModelVersionSetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateNotebookSessionDetails.html">UpdateNotebookSessionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateOcirModelDeploymentEnvironmentConfigurationDetails.html">UpdateOcirModelDeploymentEnvironmentConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdatePipelineDetails.html">UpdatePipelineDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdatePipelineRunDetails.html">UpdatePipelineRunDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateProjectDetails.html">UpdateProjectDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateSingleModelDeploymentConfigurationDetails.html">UpdateSingleModelDeploymentConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.WorkRequestResource.html">WorkRequestResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data_science/models/oci.data_science.models.WorkRequestSummary.html">WorkRequestSummary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="landing.html">API Reference</a> &raquo;</li>
+        
+      <li>Data Science</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/data_science.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-science">
+<h1>Data Science<a class="headerlink" href="#data-science" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="data_science/client/oci.data_science.DataScienceClient.html#oci.data_science.DataScienceClient" title="oci.data_science.DataScienceClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.DataScienceClient</span></code></a></td>
+<td>Use the Data Science API to organize your data science work, access data and computing resources, and build, train, deploy and manage models and model deployments.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/client/oci.data_science.DataScienceClientCompositeOperations.html#oci.data_science.DataScienceClientCompositeOperations" title="oci.data_science.DataScienceClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.DataScienceClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="data_science/client/oci.data_science.DataScienceClient.html#oci.data_science.DataScienceClient" title="oci.data_science.DataScienceClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataScienceClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ArtifactExportDetails.html#oci.data_science.models.ArtifactExportDetails" title="oci.data_science.models.ArtifactExportDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ArtifactExportDetails</span></code></a></td>
+<td>Details of Artifact source</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ArtifactExportDetailsObjectStorage.html#oci.data_science.models.ArtifactExportDetailsObjectStorage" title="oci.data_science.models.ArtifactExportDetailsObjectStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ArtifactExportDetailsObjectStorage</span></code></a></td>
+<td>Model artifact source details for exporting artifact to service bucket</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ArtifactImportDetails.html#oci.data_science.models.ArtifactImportDetails" title="oci.data_science.models.ArtifactImportDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ArtifactImportDetails</span></code></a></td>
+<td>Details of Artifact source</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ArtifactImportDetailsObjectStorage.html#oci.data_science.models.ArtifactImportDetailsObjectStorage" title="oci.data_science.models.ArtifactImportDetailsObjectStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ArtifactImportDetailsObjectStorage</span></code></a></td>
+<td>Artifact destination details for importing to destination bucket</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.AutoScalingPolicy.html#oci.data_science.models.AutoScalingPolicy" title="oci.data_science.models.AutoScalingPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.AutoScalingPolicy</span></code></a></td>
+<td>The scaling policy to enable autoscaling on the model deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.AutoScalingPolicyDetails.html#oci.data_science.models.AutoScalingPolicyDetails" title="oci.data_science.models.AutoScalingPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.AutoScalingPolicyDetails</span></code></a></td>
+<td>Details for an autoscaling policy to enable on the model deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.BackupOperationDetails.html#oci.data_science.models.BackupOperationDetails" title="oci.data_science.models.BackupOperationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.BackupOperationDetails</span></code></a></td>
+<td>Backup operation details of the model.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.BackupSetting.html#oci.data_science.models.BackupSetting" title="oci.data_science.models.BackupSetting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.BackupSetting</span></code></a></td>
+<td>Back up setting details of the model.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.CategoryLogDetails.html#oci.data_science.models.CategoryLogDetails" title="oci.data_science.models.CategoryLogDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.CategoryLogDetails</span></code></a></td>
+<td>The log details for each category.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeDataSciencePrivateEndpointCompartmentDetails.html#oci.data_science.models.ChangeDataSciencePrivateEndpointCompartmentDetails" title="oci.data_science.models.ChangeDataSciencePrivateEndpointCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ChangeDataSciencePrivateEndpointCompartmentDetails</span></code></a></td>
+<td>The details required to change a private endpoint compartment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeJobCompartmentDetails.html#oci.data_science.models.ChangeJobCompartmentDetails" title="oci.data_science.models.ChangeJobCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ChangeJobCompartmentDetails</span></code></a></td>
+<td>Details for changing the compartment of a job.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeJobRunCompartmentDetails.html#oci.data_science.models.ChangeJobRunCompartmentDetails" title="oci.data_science.models.ChangeJobRunCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ChangeJobRunCompartmentDetails</span></code></a></td>
+<td>Details for changing the compartment of a job run.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeModelCompartmentDetails.html#oci.data_science.models.ChangeModelCompartmentDetails" title="oci.data_science.models.ChangeModelCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ChangeModelCompartmentDetails</span></code></a></td>
+<td>Details for changing the compartment of a model.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeModelDeploymentCompartmentDetails.html#oci.data_science.models.ChangeModelDeploymentCompartmentDetails" title="oci.data_science.models.ChangeModelDeploymentCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ChangeModelDeploymentCompartmentDetails</span></code></a></td>
+<td>Details for changing the compartment of a model deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeModelVersionSetCompartmentDetails.html#oci.data_science.models.ChangeModelVersionSetCompartmentDetails" title="oci.data_science.models.ChangeModelVersionSetCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ChangeModelVersionSetCompartmentDetails</span></code></a></td>
+<td>Details for changing the compartment of a model version set.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeNotebookSessionCompartmentDetails.html#oci.data_science.models.ChangeNotebookSessionCompartmentDetails" title="oci.data_science.models.ChangeNotebookSessionCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ChangeNotebookSessionCompartmentDetails</span></code></a></td>
+<td>Details for changing the compartment of a notebook session.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ChangePipelineCompartmentDetails.html#oci.data_science.models.ChangePipelineCompartmentDetails" title="oci.data_science.models.ChangePipelineCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ChangePipelineCompartmentDetails</span></code></a></td>
+<td>Details for which compartment to move the resource to.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ChangePipelineRunCompartmentDetails.html#oci.data_science.models.ChangePipelineRunCompartmentDetails" title="oci.data_science.models.ChangePipelineRunCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ChangePipelineRunCompartmentDetails</span></code></a></td>
+<td>Details for which compartment to move the resource to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ChangeProjectCompartmentDetails.html#oci.data_science.models.ChangeProjectCompartmentDetails" title="oci.data_science.models.ChangeProjectCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ChangeProjectCompartmentDetails</span></code></a></td>
+<td>Details for changing the compartment of a project.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.CreateDataSciencePrivateEndpointDetails.html#oci.data_science.models.CreateDataSciencePrivateEndpointDetails" title="oci.data_science.models.CreateDataSciencePrivateEndpointDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.CreateDataSciencePrivateEndpointDetails</span></code></a></td>
+<td>The details required to create a Data Science private endpoint.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.CreateJobDetails.html#oci.data_science.models.CreateJobDetails" title="oci.data_science.models.CreateJobDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.CreateJobDetails</span></code></a></td>
+<td>Parameters needed to create a new job.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.CreateJobRunDetails.html#oci.data_science.models.CreateJobRunDetails" title="oci.data_science.models.CreateJobRunDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.CreateJobRunDetails</span></code></a></td>
+<td>Parameters needed to create a new job run.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.CreateModelDeploymentDetails.html#oci.data_science.models.CreateModelDeploymentDetails" title="oci.data_science.models.CreateModelDeploymentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.CreateModelDeploymentDetails</span></code></a></td>
+<td>Parameters needed to create a new model deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.CreateModelDetails.html#oci.data_science.models.CreateModelDetails" title="oci.data_science.models.CreateModelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.CreateModelDetails</span></code></a></td>
+<td>Parameters needed to create a new model.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.CreateModelProvenanceDetails.html#oci.data_science.models.CreateModelProvenanceDetails" title="oci.data_science.models.CreateModelProvenanceDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.CreateModelProvenanceDetails</span></code></a></td>
+<td>Model provenance gives data scientists information about the origin of their model.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.CreateModelVersionSetDetails.html#oci.data_science.models.CreateModelVersionSetDetails" title="oci.data_science.models.CreateModelVersionSetDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.CreateModelVersionSetDetails</span></code></a></td>
+<td>Parameters that are required to create a new model version set.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.CreateNotebookSessionDetails.html#oci.data_science.models.CreateNotebookSessionDetails" title="oci.data_science.models.CreateNotebookSessionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.CreateNotebookSessionDetails</span></code></a></td>
+<td>Parameters needed to create a new notebook session.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.CreatePipelineDetails.html#oci.data_science.models.CreatePipelineDetails" title="oci.data_science.models.CreatePipelineDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.CreatePipelineDetails</span></code></a></td>
+<td>The information about new Pipeline.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.CreatePipelineRunDetails.html#oci.data_science.models.CreatePipelineRunDetails" title="oci.data_science.models.CreatePipelineRunDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.CreatePipelineRunDetails</span></code></a></td>
+<td>The information about new PipelineRun.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.CreateProjectDetails.html#oci.data_science.models.CreateProjectDetails" title="oci.data_science.models.CreateProjectDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.CreateProjectDetails</span></code></a></td>
+<td>Parameters needed to create a new project.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.CustomExpressionQueryScalingConfiguration.html#oci.data_science.models.CustomExpressionQueryScalingConfiguration" title="oci.data_science.models.CustomExpressionQueryScalingConfiguration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.CustomExpressionQueryScalingConfiguration</span></code></a></td>
+<td>The scaling configuration for the custom metric expression rule.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.CustomMetricExpressionRule.html#oci.data_science.models.CustomMetricExpressionRule" title="oci.data_science.models.CustomMetricExpressionRule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.CustomMetricExpressionRule</span></code></a></td>
+<td>A custom Monitoring Query Language (MQL) expression for triggering an autoscaling action on the model deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.DataSciencePrivateEndpoint.html#oci.data_science.models.DataSciencePrivateEndpoint" title="oci.data_science.models.DataSciencePrivateEndpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.DataSciencePrivateEndpoint</span></code></a></td>
+<td>Data Science private endpoint.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.DataSciencePrivateEndpointSummary.html#oci.data_science.models.DataSciencePrivateEndpointSummary" title="oci.data_science.models.DataSciencePrivateEndpointSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.DataSciencePrivateEndpointSummary</span></code></a></td>
+<td>List of Data Science private endpoints.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.DefaultJobConfigurationDetails.html#oci.data_science.models.DefaultJobConfigurationDetails" title="oci.data_science.models.DefaultJobConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.DefaultJobConfigurationDetails</span></code></a></td>
+<td>The default job configuration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.DefaultModelDeploymentEnvironmentConfigurationDetails.html#oci.data_science.models.DefaultModelDeploymentEnvironmentConfigurationDetails" title="oci.data_science.models.DefaultModelDeploymentEnvironmentConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.DefaultModelDeploymentEnvironmentConfigurationDetails</span></code></a></td>
+<td>The environment configuration details object for managed container</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ExportModelArtifactDetails.html#oci.data_science.models.ExportModelArtifactDetails" title="oci.data_science.models.ExportModelArtifactDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ExportModelArtifactDetails</span></code></a></td>
+<td>Details required for exporting the model artifact from source to service bucket</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.FastLaunchJobConfigSummary.html#oci.data_science.models.FastLaunchJobConfigSummary" title="oci.data_science.models.FastLaunchJobConfigSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.FastLaunchJobConfigSummary</span></code></a></td>
+<td>The shape config to launch a fast launch capable job instance</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.FileStorageMountConfigurationDetails.html#oci.data_science.models.FileStorageMountConfigurationDetails" title="oci.data_science.models.FileStorageMountConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.FileStorageMountConfigurationDetails</span></code></a></td>
+<td>The File Storage Mount Configuration Details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.FixedSizeScalingPolicy.html#oci.data_science.models.FixedSizeScalingPolicy" title="oci.data_science.models.FixedSizeScalingPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.FixedSizeScalingPolicy</span></code></a></td>
+<td>The fixed size scaling policy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ImportModelArtifactDetails.html#oci.data_science.models.ImportModelArtifactDetails" title="oci.data_science.models.ImportModelArtifactDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ImportModelArtifactDetails</span></code></a></td>
+<td>Details required for importing the artifact from service bucket</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.InstanceConfiguration.html#oci.data_science.models.InstanceConfiguration" title="oci.data_science.models.InstanceConfiguration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.InstanceConfiguration</span></code></a></td>
+<td>The model deployment instance configuration</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.InstancePoolModelDeploymentSystemData.html#oci.data_science.models.InstancePoolModelDeploymentSystemData" title="oci.data_science.models.InstancePoolModelDeploymentSystemData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.InstancePoolModelDeploymentSystemData</span></code></a></td>
+<td>Instance pool based model deployment system data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.Job.html#oci.data_science.models.Job" title="oci.data_science.models.Job"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.Job</span></code></a></td>
+<td>A job for training models.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.JobConfigurationDetails.html#oci.data_science.models.JobConfigurationDetails" title="oci.data_science.models.JobConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.JobConfigurationDetails</span></code></a></td>
+<td>The job configuration details</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.JobEnvironmentConfigurationDetails.html#oci.data_science.models.JobEnvironmentConfigurationDetails" title="oci.data_science.models.JobEnvironmentConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.JobEnvironmentConfigurationDetails</span></code></a></td>
+<td>Environment configuration to capture job runtime dependencies.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.JobInfrastructureConfigurationDetails.html#oci.data_science.models.JobInfrastructureConfigurationDetails" title="oci.data_science.models.JobInfrastructureConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.JobInfrastructureConfigurationDetails</span></code></a></td>
+<td>The job infrastructure configuration details (shape, block storage, etc.)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.JobLogConfigurationDetails.html#oci.data_science.models.JobLogConfigurationDetails" title="oci.data_science.models.JobLogConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.JobLogConfigurationDetails</span></code></a></td>
+<td>Logging configuration for resource.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.JobRun.html#oci.data_science.models.JobRun" title="oci.data_science.models.JobRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.JobRun</span></code></a></td>
+<td>A job run.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.JobRunLogDetails.html#oci.data_science.models.JobRunLogDetails" title="oci.data_science.models.JobRunLogDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.JobRunLogDetails</span></code></a></td>
+<td>Customer logging details for job run.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.JobRunSummary.html#oci.data_science.models.JobRunSummary" title="oci.data_science.models.JobRunSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.JobRunSummary</span></code></a></td>
+<td>Summary information for a job run.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.JobShapeConfigDetails.html#oci.data_science.models.JobShapeConfigDetails" title="oci.data_science.models.JobShapeConfigDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.JobShapeConfigDetails</span></code></a></td>
+<td>Details for the job run shape configuration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.JobShapeSummary.html#oci.data_science.models.JobShapeSummary" title="oci.data_science.models.JobShapeSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.JobShapeSummary</span></code></a></td>
+<td>The compute shape used to launch a job compute instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.JobSummary.html#oci.data_science.models.JobSummary" title="oci.data_science.models.JobSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.JobSummary</span></code></a></td>
+<td>Summary information for a job.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.LogDetails.html#oci.data_science.models.LogDetails" title="oci.data_science.models.LogDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.LogDetails</span></code></a></td>
+<td>The log details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ManagedEgressStandaloneJobInfrastructureConfigurationDetails.html#oci.data_science.models.ManagedEgressStandaloneJobInfrastructureConfigurationDetails" title="oci.data_science.models.ManagedEgressStandaloneJobInfrastructureConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ManagedEgressStandaloneJobInfrastructureConfigurationDetails</span></code></a></td>
+<td>The standalone job infrastructure configuration with network egress settings preconfigured.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.Metadata.html#oci.data_science.models.Metadata" title="oci.data_science.models.Metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.Metadata</span></code></a></td>
+<td>Defines properties of each model metadata.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.MetricExpressionRule.html#oci.data_science.models.MetricExpressionRule" title="oci.data_science.models.MetricExpressionRule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.MetricExpressionRule</span></code></a></td>
+<td>The metric expression rule base.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.Model.html#oci.data_science.models.Model" title="oci.data_science.models.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.Model</span></code></a></td>
+<td>Models are mathematical representations of the relationships between data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ModelConfigurationDetails.html#oci.data_science.models.ModelConfigurationDetails" title="oci.data_science.models.ModelConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ModelConfigurationDetails</span></code></a></td>
+<td>The model configuration details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ModelDeployment.html#oci.data_science.models.ModelDeployment" title="oci.data_science.models.ModelDeployment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ModelDeployment</span></code></a></td>
+<td>Model deployments are used by data scientists to perform predictions from the model hosted on an HTTP server.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ModelDeploymentConfigurationDetails.html#oci.data_science.models.ModelDeploymentConfigurationDetails" title="oci.data_science.models.ModelDeploymentConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ModelDeploymentConfigurationDetails</span></code></a></td>
+<td>The model deployment configuration details.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ModelDeploymentEnvironmentConfigurationDetails.html#oci.data_science.models.ModelDeploymentEnvironmentConfigurationDetails" title="oci.data_science.models.ModelDeploymentEnvironmentConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ModelDeploymentEnvironmentConfigurationDetails</span></code></a></td>
+<td>The configuration to carry the environment details thats used in Model Deployment creation</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ModelDeploymentInstanceShapeConfigDetails.html#oci.data_science.models.ModelDeploymentInstanceShapeConfigDetails" title="oci.data_science.models.ModelDeploymentInstanceShapeConfigDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ModelDeploymentInstanceShapeConfigDetails</span></code></a></td>
+<td>Details for the model-deployment instance shape configuration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ModelDeploymentShapeSummary.html#oci.data_science.models.ModelDeploymentShapeSummary" title="oci.data_science.models.ModelDeploymentShapeSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ModelDeploymentShapeSummary</span></code></a></td>
+<td>The compute shape used to launch a model deployment compute instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ModelDeploymentSummary.html#oci.data_science.models.ModelDeploymentSummary" title="oci.data_science.models.ModelDeploymentSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ModelDeploymentSummary</span></code></a></td>
+<td>Summary information for a model deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ModelDeploymentSystemData.html#oci.data_science.models.ModelDeploymentSystemData" title="oci.data_science.models.ModelDeploymentSystemData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ModelDeploymentSystemData</span></code></a></td>
+<td>Model deployment system data.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ModelProvenance.html#oci.data_science.models.ModelProvenance" title="oci.data_science.models.ModelProvenance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ModelProvenance</span></code></a></td>
+<td>Model provenance gives data scientists information about the origin of their model.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ModelSummary.html#oci.data_science.models.ModelSummary" title="oci.data_science.models.ModelSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ModelSummary</span></code></a></td>
+<td>Summary information for a model.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ModelVersionSet.html#oci.data_science.models.ModelVersionSet" title="oci.data_science.models.ModelVersionSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ModelVersionSet</span></code></a></td>
+<td>A model version set to associate different versions of machine learning models.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ModelVersionSetSummary.html#oci.data_science.models.ModelVersionSetSummary" title="oci.data_science.models.ModelVersionSetSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ModelVersionSetSummary</span></code></a></td>
+<td>Summary information for a model version set.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSession.html#oci.data_science.models.NotebookSession" title="oci.data_science.models.NotebookSession"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.NotebookSession</span></code></a></td>
+<td>Notebook sessions are interactive coding environments for data scientists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionConfigDetails.html#oci.data_science.models.NotebookSessionConfigDetails" title="oci.data_science.models.NotebookSessionConfigDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.NotebookSessionConfigDetails</span></code></a></td>
+<td>Details for the notebook session configuration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionConfigurationDetails.html#oci.data_science.models.NotebookSessionConfigurationDetails" title="oci.data_science.models.NotebookSessionConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.NotebookSessionConfigurationDetails</span></code></a></td>
+<td>Details for the notebook session configuration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionGitConfigDetails.html#oci.data_science.models.NotebookSessionGitConfigDetails" title="oci.data_science.models.NotebookSessionGitConfigDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.NotebookSessionGitConfigDetails</span></code></a></td>
+<td>Git configuration Details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionGitRepoConfigDetails.html#oci.data_science.models.NotebookSessionGitRepoConfigDetails" title="oci.data_science.models.NotebookSessionGitRepoConfigDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.NotebookSessionGitRepoConfigDetails</span></code></a></td>
+<td>Git repository configurations.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionRuntimeConfigDetails.html#oci.data_science.models.NotebookSessionRuntimeConfigDetails" title="oci.data_science.models.NotebookSessionRuntimeConfigDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.NotebookSessionRuntimeConfigDetails</span></code></a></td>
+<td>Notebook Session runtime configuration details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionShapeConfigDetails.html#oci.data_science.models.NotebookSessionShapeConfigDetails" title="oci.data_science.models.NotebookSessionShapeConfigDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.NotebookSessionShapeConfigDetails</span></code></a></td>
+<td>Details for the notebook session shape configuration.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionShapeSummary.html#oci.data_science.models.NotebookSessionShapeSummary" title="oci.data_science.models.NotebookSessionShapeSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.NotebookSessionShapeSummary</span></code></a></td>
+<td>The compute shape used to launch a notebook session compute instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.NotebookSessionSummary.html#oci.data_science.models.NotebookSessionSummary" title="oci.data_science.models.NotebookSessionSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.NotebookSessionSummary</span></code></a></td>
+<td>Summary information for a notebook session.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ObjectStorageMountConfigurationDetails.html#oci.data_science.models.ObjectStorageMountConfigurationDetails" title="oci.data_science.models.ObjectStorageMountConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ObjectStorageMountConfigurationDetails</span></code></a></td>
+<td>The Object Storage Configuration Details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.OcirContainerJobEnvironmentConfigurationDetails.html#oci.data_science.models.OcirContainerJobEnvironmentConfigurationDetails" title="oci.data_science.models.OcirContainerJobEnvironmentConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.OcirContainerJobEnvironmentConfigurationDetails</span></code></a></td>
+<td>Environment configuration based on container image stored in OCI Container Registry.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.OcirModelDeploymentEnvironmentConfigurationDetails.html#oci.data_science.models.OcirModelDeploymentEnvironmentConfigurationDetails" title="oci.data_science.models.OcirModelDeploymentEnvironmentConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.OcirModelDeploymentEnvironmentConfigurationDetails</span></code></a></td>
+<td>The environment configuration details object for OCI Registry</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.Pipeline.html#oci.data_science.models.Pipeline" title="oci.data_science.models.Pipeline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.Pipeline</span></code></a></td>
+<td>A Pipeline to orchestrate and execute machine learning workflows.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineConfigurationDetails.html#oci.data_science.models.PipelineConfigurationDetails" title="oci.data_science.models.PipelineConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineConfigurationDetails</span></code></a></td>
+<td>The configuration details of a pipeline.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineContainerConfigurationDetails.html#oci.data_science.models.PipelineContainerConfigurationDetails" title="oci.data_science.models.PipelineContainerConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineContainerConfigurationDetails</span></code></a></td>
+<td>Container Details for a step in pipeline.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineContainerStepDetails.html#oci.data_science.models.PipelineContainerStepDetails" title="oci.data_science.models.PipelineContainerStepDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineContainerStepDetails</span></code></a></td>
+<td>The type of step where user provides the container details for an execution engine managed by the pipelines service.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineContainerStepRun.html#oci.data_science.models.PipelineContainerStepRun" title="oci.data_science.models.PipelineContainerStepRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineContainerStepRun</span></code></a></td>
+<td>Detail of each ContainerStepRun.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineContainerStepUpdateDetails.html#oci.data_science.models.PipelineContainerStepUpdateDetails" title="oci.data_science.models.PipelineContainerStepUpdateDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineContainerStepUpdateDetails</span></code></a></td>
+<td>Update the details for a container step type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineCustomScriptStepDetails.html#oci.data_science.models.PipelineCustomScriptStepDetails" title="oci.data_science.models.PipelineCustomScriptStepDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineCustomScriptStepDetails</span></code></a></td>
+<td>The type of step where user provides the step artifact to be executed on an execution engine managed by the pipelines service.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineCustomScriptStepRun.html#oci.data_science.models.PipelineCustomScriptStepRun" title="oci.data_science.models.PipelineCustomScriptStepRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineCustomScriptStepRun</span></code></a></td>
+<td>Detail of each CustomScriptStepRun.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineCustomScriptStepUpdateDetails.html#oci.data_science.models.PipelineCustomScriptStepUpdateDetails" title="oci.data_science.models.PipelineCustomScriptStepUpdateDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineCustomScriptStepUpdateDetails</span></code></a></td>
+<td>The type of step where user provides the step artifact to be executed on an execution engine managed by the pipelines service.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineDefaultConfigurationDetails.html#oci.data_science.models.PipelineDefaultConfigurationDetails" title="oci.data_science.models.PipelineDefaultConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineDefaultConfigurationDetails</span></code></a></td>
+<td>The default pipeline configuration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineInfrastructureConfigurationDetails.html#oci.data_science.models.PipelineInfrastructureConfigurationDetails" title="oci.data_science.models.PipelineInfrastructureConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineInfrastructureConfigurationDetails</span></code></a></td>
+<td>The infrastructure configuration details of a pipeline or a step.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineLogConfigurationDetails.html#oci.data_science.models.PipelineLogConfigurationDetails" title="oci.data_science.models.PipelineLogConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineLogConfigurationDetails</span></code></a></td>
+<td>The pipeline log configuration details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineMLJobStepDetails.html#oci.data_science.models.PipelineMLJobStepDetails" title="oci.data_science.models.PipelineMLJobStepDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineMLJobStepDetails</span></code></a></td>
+<td>The type of step where the job is pre-created by the user.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineMLJobStepRun.html#oci.data_science.models.PipelineMLJobStepRun" title="oci.data_science.models.PipelineMLJobStepRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineMLJobStepRun</span></code></a></td>
+<td>Detail of each MLJobStepRun.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineMLJobStepUpdateDetails.html#oci.data_science.models.PipelineMLJobStepUpdateDetails" title="oci.data_science.models.PipelineMLJobStepUpdateDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineMLJobStepUpdateDetails</span></code></a></td>
+<td>The type of step where the job is pre-created by the user.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineOcirContainerConfigurationDetails.html#oci.data_science.models.PipelineOcirContainerConfigurationDetails" title="oci.data_science.models.PipelineOcirContainerConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineOcirContainerConfigurationDetails</span></code></a></td>
+<td>Container configuration based on image stored in OCI Container Registry.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineRun.html#oci.data_science.models.PipelineRun" title="oci.data_science.models.PipelineRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineRun</span></code></a></td>
+<td>Description of PipelineRun.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineRunLogDetails.html#oci.data_science.models.PipelineRunLogDetails" title="oci.data_science.models.PipelineRunLogDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineRunLogDetails</span></code></a></td>
+<td>Customer logging details for pipeline run.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineRunSummary.html#oci.data_science.models.PipelineRunSummary" title="oci.data_science.models.PipelineRunSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineRunSummary</span></code></a></td>
+<td>Summary of the PipelineRun.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineShapeConfigDetails.html#oci.data_science.models.PipelineShapeConfigDetails" title="oci.data_science.models.PipelineShapeConfigDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineShapeConfigDetails</span></code></a></td>
+<td>Details for the pipeline step run shape configuration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineStepConfigurationDetails.html#oci.data_science.models.PipelineStepConfigurationDetails" title="oci.data_science.models.PipelineStepConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineStepConfigurationDetails</span></code></a></td>
+<td>The configuration details of a step.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineStepDetails.html#oci.data_science.models.PipelineStepDetails" title="oci.data_science.models.PipelineStepDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineStepDetails</span></code></a></td>
+<td>A step in the pipeline.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineStepOverrideDetails.html#oci.data_science.models.PipelineStepOverrideDetails" title="oci.data_science.models.PipelineStepOverrideDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineStepOverrideDetails</span></code></a></td>
+<td>Override details of the step.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineStepRun.html#oci.data_science.models.PipelineStepRun" title="oci.data_science.models.PipelineStepRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineStepRun</span></code></a></td>
+<td>Detail of each StepRun.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineStepUpdateDetails.html#oci.data_science.models.PipelineStepUpdateDetails" title="oci.data_science.models.PipelineStepUpdateDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineStepUpdateDetails</span></code></a></td>
+<td>The details of the step to update.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PipelineSummary.html#oci.data_science.models.PipelineSummary" title="oci.data_science.models.PipelineSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PipelineSummary</span></code></a></td>
+<td>Summary of the Pipeline.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PredefinedExpressionThresholdScalingConfiguration.html#oci.data_science.models.PredefinedExpressionThresholdScalingConfiguration" title="oci.data_science.models.PredefinedExpressionThresholdScalingConfiguration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PredefinedExpressionThresholdScalingConfiguration</span></code></a></td>
+<td>The scaling configuration for the predefined metric expression rule.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.PredefinedMetricExpressionRule.html#oci.data_science.models.PredefinedMetricExpressionRule" title="oci.data_science.models.PredefinedMetricExpressionRule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.PredefinedMetricExpressionRule</span></code></a></td>
+<td>An expression built using CPU or Memory metrics for triggering an autoscaling action on the model deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.Project.html#oci.data_science.models.Project" title="oci.data_science.models.Project"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.Project</span></code></a></td>
+<td>Projects enable users to organize their data science work.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ProjectSummary.html#oci.data_science.models.ProjectSummary" title="oci.data_science.models.ProjectSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ProjectSummary</span></code></a></td>
+<td>Summary information for a project.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.RetentionOperationDetails.html#oci.data_science.models.RetentionOperationDetails" title="oci.data_science.models.RetentionOperationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.RetentionOperationDetails</span></code></a></td>
+<td>Retention operation details for the model.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.RetentionSetting.html#oci.data_science.models.RetentionSetting" title="oci.data_science.models.RetentionSetting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.RetentionSetting</span></code></a></td>
+<td>Retention setting details of the model.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ScalingConfiguration.html#oci.data_science.models.ScalingConfiguration" title="oci.data_science.models.ScalingConfiguration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ScalingConfiguration</span></code></a></td>
+<td>Scaling configuration for the metric expression rule.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ScalingPolicy.html#oci.data_science.models.ScalingPolicy" title="oci.data_science.models.ScalingPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ScalingPolicy</span></code></a></td>
+<td>The scaling policy to apply to each model of the deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.SingleModelDeploymentConfigurationDetails.html#oci.data_science.models.SingleModelDeploymentConfigurationDetails" title="oci.data_science.models.SingleModelDeploymentConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.SingleModelDeploymentConfigurationDetails</span></code></a></td>
+<td>The single model type deployment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.StandaloneJobInfrastructureConfigurationDetails.html#oci.data_science.models.StandaloneJobInfrastructureConfigurationDetails" title="oci.data_science.models.StandaloneJobInfrastructureConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.StandaloneJobInfrastructureConfigurationDetails</span></code></a></td>
+<td>The standalone job infrastructure configuration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.StorageMountConfigurationDetails.html#oci.data_science.models.StorageMountConfigurationDetails" title="oci.data_science.models.StorageMountConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.StorageMountConfigurationDetails</span></code></a></td>
+<td>The storage mount configuration details</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.ThresholdBasedAutoScalingPolicyDetails.html#oci.data_science.models.ThresholdBasedAutoScalingPolicyDetails" title="oci.data_science.models.ThresholdBasedAutoScalingPolicyDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.ThresholdBasedAutoScalingPolicyDetails</span></code></a></td>
+<td>Details for a threshold-based autoscaling policy to enable on the model deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateCategoryLogDetails.html#oci.data_science.models.UpdateCategoryLogDetails" title="oci.data_science.models.UpdateCategoryLogDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateCategoryLogDetails</span></code></a></td>
+<td>The log details for each category for update.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateDataSciencePrivateEndpointDetails.html#oci.data_science.models.UpdateDataSciencePrivateEndpointDetails" title="oci.data_science.models.UpdateDataSciencePrivateEndpointDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateDataSciencePrivateEndpointDetails</span></code></a></td>
+<td>The details required to update a private endpoint.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateDefaultModelDeploymentEnvironmentConfigurationDetails.html#oci.data_science.models.UpdateDefaultModelDeploymentEnvironmentConfigurationDetails" title="oci.data_science.models.UpdateDefaultModelDeploymentEnvironmentConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateDefaultModelDeploymentEnvironmentConfigurationDetails</span></code></a></td>
+<td>The update environment configuration details object for managed container</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateJobDetails.html#oci.data_science.models.UpdateJobDetails" title="oci.data_science.models.UpdateJobDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateJobDetails</span></code></a></td>
+<td>Details for updating a job.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateJobRunDetails.html#oci.data_science.models.UpdateJobRunDetails" title="oci.data_science.models.UpdateJobRunDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateJobRunDetails</span></code></a></td>
+<td>Details for updating a job run.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateModelConfigurationDetails.html#oci.data_science.models.UpdateModelConfigurationDetails" title="oci.data_science.models.UpdateModelConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateModelConfigurationDetails</span></code></a></td>
+<td>The model configuration details for update.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateModelDeploymentConfigurationDetails.html#oci.data_science.models.UpdateModelDeploymentConfigurationDetails" title="oci.data_science.models.UpdateModelDeploymentConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateModelDeploymentConfigurationDetails</span></code></a></td>
+<td>The model deployment configuration details for update.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateModelDeploymentDetails.html#oci.data_science.models.UpdateModelDeploymentDetails" title="oci.data_science.models.UpdateModelDeploymentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateModelDeploymentDetails</span></code></a></td>
+<td>Details for updating a model deployment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateModelDeploymentEnvironmentConfigurationDetails.html#oci.data_science.models.UpdateModelDeploymentEnvironmentConfigurationDetails" title="oci.data_science.models.UpdateModelDeploymentEnvironmentConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateModelDeploymentEnvironmentConfigurationDetails</span></code></a></td>
+<td>The configuration to carry the environment details thats used in Model Deployment update</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateModelDetails.html#oci.data_science.models.UpdateModelDetails" title="oci.data_science.models.UpdateModelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateModelDetails</span></code></a></td>
+<td>Details for updating a model.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateModelProvenanceDetails.html#oci.data_science.models.UpdateModelProvenanceDetails" title="oci.data_science.models.UpdateModelProvenanceDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateModelProvenanceDetails</span></code></a></td>
+<td>Model provenance gives data scientists information about the origin of their model.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateModelVersionSetDetails.html#oci.data_science.models.UpdateModelVersionSetDetails" title="oci.data_science.models.UpdateModelVersionSetDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateModelVersionSetDetails</span></code></a></td>
+<td>Details for updating a model version set.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateNotebookSessionDetails.html#oci.data_science.models.UpdateNotebookSessionDetails" title="oci.data_science.models.UpdateNotebookSessionDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateNotebookSessionDetails</span></code></a></td>
+<td>Details for updating a notebook session.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateOcirModelDeploymentEnvironmentConfigurationDetails.html#oci.data_science.models.UpdateOcirModelDeploymentEnvironmentConfigurationDetails" title="oci.data_science.models.UpdateOcirModelDeploymentEnvironmentConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateOcirModelDeploymentEnvironmentConfigurationDetails</span></code></a></td>
+<td>The update environment configuration details object for OCI Registry</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdatePipelineDetails.html#oci.data_science.models.UpdatePipelineDetails" title="oci.data_science.models.UpdatePipelineDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdatePipelineDetails</span></code></a></td>
+<td>The information of pipeline to be updated.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdatePipelineRunDetails.html#oci.data_science.models.UpdatePipelineRunDetails" title="oci.data_science.models.UpdatePipelineRunDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdatePipelineRunDetails</span></code></a></td>
+<td>The information to be updated.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateProjectDetails.html#oci.data_science.models.UpdateProjectDetails" title="oci.data_science.models.UpdateProjectDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateProjectDetails</span></code></a></td>
+<td>Details for updating a project.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.UpdateSingleModelDeploymentConfigurationDetails.html#oci.data_science.models.UpdateSingleModelDeploymentConfigurationDetails" title="oci.data_science.models.UpdateSingleModelDeploymentConfigurationDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.UpdateSingleModelDeploymentConfigurationDetails</span></code></a></td>
+<td>The single model type deployment for update.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.WorkRequest.html#oci.data_science.models.WorkRequest" title="oci.data_science.models.WorkRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.WorkRequest</span></code></a></td>
+<td>An asynchronous work request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.WorkRequestError.html#oci.data_science.models.WorkRequestError" title="oci.data_science.models.WorkRequestError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.WorkRequestError</span></code></a></td>
+<td>Errors related to a specific work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.WorkRequestLogEntry.html#oci.data_science.models.WorkRequestLogEntry" title="oci.data_science.models.WorkRequestLogEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.WorkRequestLogEntry</span></code></a></td>
+<td>Log entries related to a specific work request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="data_science/models/oci.data_science.models.WorkRequestResource.html#oci.data_science.models.WorkRequestResource" title="oci.data_science.models.WorkRequestResource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.WorkRequestResource</span></code></a></td>
+<td>The properties that define a work request resource.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="data_science/models/oci.data_science.models.WorkRequestSummary.html#oci.data_science.models.WorkRequestSummary" title="oci.data_science.models.WorkRequestSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.data_science.models.WorkRequestSummary</span></code></a></td>
+<td>Summary information for a work request.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="data_science/client/oci.data_science.DataScienceClient.html" class="btn btn-neutral float-right" title="DataScienceClient" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="data_safe/models/oci.data_safe.models.WorkRequestSummary.html" class="btn btn-neutral" title="WorkRequestSummary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

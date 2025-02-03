@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Passing explicit Null/None values &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Retries" href="sdk_behaviors/retries.html" />
+    <link rel="prev" title="Parallel Operations" href="parallel-ops.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/landing.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sdk_behaviors/index.html">SDK Behaviors</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sdk_behaviors/handle_naive_datetime.html">Handling naive datetimes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parallel-ops.html">Parallel Operations</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Passing explicit Null/None values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_behaviors/retries.html">Retries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_behaviors/calculate_content_length.html">Request body content length</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_behaviors/signing_bodies.html">Signing bodies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_behaviors/enable_selective_service_imports.html">Enable Selective Service Imports for Python 3.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_behaviors/circuit_breakers.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_behaviors/allow_control_chars_response.html">Allow control characters in response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_behaviors/realm_specific_endpoint_template.html">Realm Specific Endpoint Template</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sdk_behaviors/index.html">SDK Behaviors</a> &raquo;</li>
+        
+      <li>Passing explicit Null/None values</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/pass-explicit-null.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <script type='text/javascript'>
+    var oldDocsHost = 'oracle-bare-metal-cloud-services-python-sdk';
+    if (window.location.href.indexOf(oldDocsHost) != -1) {
+        window.location.href = 'https://oracle-bare-metal-cloud-services-python-sdk.readthedocs.io/en/latest/deprecation-notice.html';
+    }
+</script><div class="section" id="passing-explicit-null-none-values">
+<h1>Passing explicit Null/None values<a class="headerlink" href="#passing-explicit-null-none-values" title="Permalink to this headline">¶</a></h1>
+<p>The SDK does not send fields with a value of <code class="docutils literal notranslate"><span class="pre">None</span></code> back to the service. In order to send a <code class="docutils literal notranslate"><span class="pre">None</span></code> explicitly back to the service - for example if you are trying to clear metadata on a bucket - you can set a field’s value to <code class="docutils literal notranslate"><span class="pre">oci.util.NONE_SENTINEL</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">oci</span>
+
+<span class="n">update_bucket_details</span> <span class="o">=</span> <span class="n">oci</span><span class="o">.</span><span class="n">object_storage</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">UpdateBucketDetails</span><span class="p">()</span>
+<span class="n">update_bucket_details</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">oci</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">NONE_SENTINEL</span>
+
+<span class="n">object_storage</span><span class="o">.</span><span class="n">update_bucket</span><span class="p">(</span><span class="s1">&#39;my_namespace&#39;</span><span class="p">,</span> <span class="s1">&#39;my_bucket&#39;</span><span class="p">,</span> <span class="n">update_bucket_details</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sdk_behaviors/retries.html" class="btn btn-neutral float-right" title="Retries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="parallel-ops.html" class="btn btn-neutral" title="Parallel Operations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

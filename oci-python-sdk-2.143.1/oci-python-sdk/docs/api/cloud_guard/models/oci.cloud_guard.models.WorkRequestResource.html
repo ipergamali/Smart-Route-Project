@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WorkRequestResource &mdash; oci 2.143.1 documentation</title>
+
+
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css"/>
+    <link rel="index" title="Index" href="../../../genindex.html"/>
+    <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="next" title="WorkRequestSummary"
+          href="oci.cloud_guard.models.WorkRequestSummary.html"/>
+    <link rel="prev" title="WorkRequestLogEntryCollection"
+          href="oci.cloud_guard.models.WorkRequestLogEntryCollection.html"/>
+
+
+    <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+
+<div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+            <div class="wy-side-nav-search">
+
+
+                <a href="../../../index.html" class="icon icon-home"> oci
+
+
+                </a>
+
+
+                <div class="version">
+                    2.143.1
+                </div>
+
+
+                <div role="search">
+                    <form id="rtd-search-form" class="wy-form" action="../../../search.html"
+                          method="get">
+                        <input type="text" name="q" placeholder="Search docs"/>
+                        <input type="hidden" name="check_keywords" value="yes"/>
+                        <input type="hidden" name="area" value="default"/>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation"
+                 aria-label="main navigation">
+
+
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../configuration.html">Configuration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../fips-libraries.html">Using
+                        FIPS-validated Libraries</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../forward-compatibility.html">Forward
+                        Compatibility</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../new-region-support.html">New Region
+                        Support</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../backward-compatibility.html">Backward
+                        Compatibility</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../quickstart.html">Quickstart</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../known-issues.html">Known Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../logging.html">Logging</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../exceptions.html">Exception handling</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../upload-manager.html">Uploading Large
+                        Objects</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../raw-requests.html">Raw Requests</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../waiters.html">Composite Operations and
+                        Waiters</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../pagination.html">Pagination</a></li>
+                    <li class="toctree-l1 current"><a class="reference internal"
+                                                      href="../../landing.html">API Reference</a>
+                        <ul class="current">
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../access_governance_cp.html">Access
+                                Governance Cp</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../adm.html">Adm</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ai_anomaly_detection.html">Ai
+                                Anomaly Detection</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ai_document.html">Ai Document</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ai_language.html">Ai Language</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ai_speech.html">Ai Speech</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ai_vision.html">Ai Vision</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../analytics.html">Analytics</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../announcements_service.html">Announcements
+                                Service</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../apigateway.html">Apigateway</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../apm_config.html">Apm Config</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../apm_control_plane.html">Apm
+                                Control Plane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../apm_synthetics.html">Apm
+                                Synthetics</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../apm_traces.html">Apm Traces</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../appmgmt_control.html">Appmgmt
+                                Control</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../artifacts.html">Artifacts</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../audit.html">Audit</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../autoscaling.html">Autoscaling</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../bastion.html">Bastion</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../bds.html">Bds</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../blockchain.html">Blockchain</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../budget.html">Budget</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../capacity_management.html">Capacity
+                                Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../certificates.html">Certificates</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../certificates_management.html">Certificates
+                                Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../cims.html">Cims</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../cloud_bridge.html">Cloud
+                                Bridge</a></li>
+                            <li class="toctree-l2 current"><a class="reference internal"
+                                                              href="../../cloud_guard.html">Cloud
+                                Guard</a>
+                                <ul class="current">
+                                    <li class="toctree-l3"><a class="reference internal"
+                                                              href="../client/oci.cloud_guard.CloudGuardClient.html">CloudGuardClient</a>
+                                    </li>
+                                    <li class="toctree-l3"><a class="reference internal"
+                                                              href="../client/oci.cloud_guard.CloudGuardClientCompositeOperations.html">CloudGuardClientCompositeOperations</a>
+                                    </li>
+                                    <li class="toctree-l3 current"><a class="reference internal"
+                                                                      href="../../cloud_guard.html#models">Models</a>
+                                        <ul class="current">
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.AbsoluteTimeStartPolicy.html">AbsoluteTimeStartPolicy</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ActivityProblemAggregation.html">ActivityProblemAggregation</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ActivityProblemAggregationCollection.html">ActivityProblemAggregationCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.AddCompartmentDetails.html">AddCompartmentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.AdhocQuery.html">AdhocQuery</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.AdhocQueryCollection.html">AdhocQueryCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.AdhocQueryDetails.html">AdhocQueryDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.AdhocQueryRegionalDetails.html">AdhocQueryRegionalDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.AdhocQueryResource.html">AdhocQueryResource</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.AdhocQueryResultCollection.html">AdhocQueryResultCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.AdhocQueryResultSummary.html">AdhocQueryResultSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.AdhocQuerySummary.html">AdhocQuerySummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.AllTargetsSelected.html">AllTargetsSelected</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.AttachTargetDetectorRecipeDetails.html">AttachTargetDetectorRecipeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.AttachTargetResponderRecipeDetails.html">AttachTargetResponderRecipeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CandidateResponderRule.html">CandidateResponderRule</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ChangeDataSourceCompartmentDetails.html">ChangeDataSourceCompartmentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ChangeDetectorRecipeCompartmentDetails.html">ChangeDetectorRecipeCompartmentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ChangeManagedListCompartmentDetails.html">ChangeManagedListCompartmentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ChangeResponderRecipeCompartmentDetails.html">ChangeResponderRecipeCompartmentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ChangeSavedQueryCompartmentDetails.html">ChangeSavedQueryCompartmentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ChangeSecurityPolicyCompartmentDetails.html">ChangeSecurityPolicyCompartmentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ChangeSecurityRecipeCompartmentDetails.html">ChangeSecurityRecipeCompartmentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ChangeSecurityZoneCompartmentDetails.html">ChangeSecurityZoneCompartmentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CompositeCondition.html">CompositeCondition</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.Condition.html">Condition</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ConditionGroup.html">ConditionGroup</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ConditionMetadataType.html">ConditionMetadataType</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ConditionMetadataTypeCollection.html">ConditionMetadataTypeCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ConditionMetadataTypeSummary.html">ConditionMetadataTypeSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ConditionOperator.html">ConditionOperator</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ConfigValue.html">ConfigValue</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.Configuration.html">Configuration</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ContinuousQueryStartPolicy.html">ContinuousQueryStartPolicy</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateAdhocQueryDetails.html">CreateAdhocQueryDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateDataMaskRuleDetails.html">CreateDataMaskRuleDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateDataSourceDetails.html">CreateDataSourceDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateDetectorRecipeDetails.html">CreateDetectorRecipeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateDetectorRecipeDetectorRuleDetails.html">CreateDetectorRecipeDetectorRuleDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateDetectorRuleDetails.html">CreateDetectorRuleDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateManagedListDetails.html">CreateManagedListDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateResponderRecipeDetails.html">CreateResponderRecipeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateSavedQueryDetails.html">CreateSavedQueryDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateSecurityPolicyDetails.html">CreateSecurityPolicyDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateSecurityRecipeDetails.html">CreateSecurityRecipeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateSecurityZoneDetails.html">CreateSecurityZoneDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateTargetDetails.html">CreateTargetDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateTargetDetectorRecipeDetails.html">CreateTargetDetectorRecipeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateTargetResponderRecipeDetails.html">CreateTargetResponderRecipeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.CreateWlpAgentDetails.html">CreateWlpAgentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DataMaskRule.html">DataMaskRule</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DataMaskRuleCollection.html">DataMaskRuleCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DataMaskRuleSummary.html">DataMaskRuleSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DataSource.html">DataSource</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DataSourceCollection.html">DataSourceCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DataSourceDetails.html">DataSourceDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DataSourceEventCollection.html">DataSourceEventCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DataSourceEventInfo.html">DataSourceEventInfo</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DataSourceEventSummary.html">DataSourceEventSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DataSourceMappingInfo.html">DataSourceMappingInfo</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DataSourceSummary.html">DataSourceSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DataSourceSummaryDetails.html">DataSourceSummaryDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.Detector.html">Detector</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DetectorCollection.html">DetectorCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DetectorConfiguration.html">DetectorConfiguration</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DetectorDetails.html">DetectorDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DetectorRecipe.html">DetectorRecipe</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DetectorRecipeCollection.html">DetectorRecipeCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DetectorRecipeDetectorRule.html">DetectorRecipeDetectorRule</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DetectorRecipeDetectorRuleCollection.html">DetectorRecipeDetectorRuleCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DetectorRecipeDetectorRuleSummary.html">DetectorRecipeDetectorRuleSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DetectorRecipeSummary.html">DetectorRecipeSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DetectorRule.html">DetectorRule</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DetectorRuleCollection.html">DetectorRuleCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DetectorRuleSummary.html">DetectorRuleSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.DetectorSummary.html">DetectorSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.EntitiesMapping.html">EntitiesMapping</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.EntityDetails.html">EntityDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ExecuteResponderExecutionDetails.html">ExecuteResponderExecutionDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.GeographicalLocation.html">GeographicalLocation</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ImpactedResourceCollection.html">ImpactedResourceCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ImpactedResourceSummary.html">ImpactedResourceSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.InsightTypeLoggingQueryDetails.html">InsightTypeLoggingQueryDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.InstanceSecurityServiceConfiguration.html">InstanceSecurityServiceConfiguration</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.LoggingEventInfo.html">LoggingEventInfo</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.LoggingQueryDataSourceDetails.html">LoggingQueryDataSourceDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.LoggingQueryDataSourceSummaryDetails.html">LoggingQueryDataSourceSummaryDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.LoggingQueryDetails.html">LoggingQueryDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ManagedList.html">ManagedList</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ManagedListCollection.html">ManagedListCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ManagedListSummary.html">ManagedListSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ManagedListTypeCollection.html">ManagedListTypeCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ManagedListTypeSummary.html">ManagedListTypeSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.NoDelayStartPolicy.html">NoDelayStartPolicy</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.OperatorSummary.html">OperatorSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.PackageDetail.html">PackageDetail</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.PolicyCollection.html">PolicyCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.PolicySummary.html">PolicySummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.PoliticalLocation.html">PoliticalLocation</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.Problem.html">Problem</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ProblemAggregation.html">ProblemAggregation</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ProblemAggregationCollection.html">ProblemAggregationCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ProblemCollection.html">ProblemCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ProblemEndpointCollection.html">ProblemEndpointCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ProblemEndpointSummary.html">ProblemEndpointSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ProblemEntityCollection.html">ProblemEntityCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ProblemEntitySummary.html">ProblemEntitySummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ProblemHistoryCollection.html">ProblemHistoryCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ProblemHistorySummary.html">ProblemHistorySummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ProblemSummary.html">ProblemSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ProblemTrendAggregation.html">ProblemTrendAggregation</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ProblemTrendAggregationCollection.html">ProblemTrendAggregationCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.PropertyTuple.html">PropertyTuple</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.RecommendationSummary.html">RecommendationSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.RecommendationSummaryCollection.html">RecommendationSummaryCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.RegionStatusDetail.html">RegionStatusDetail</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.RemoveCompartmentDetails.html">RemoveCompartmentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.RequestSummarizedTrendResourceRiskScoresDetails.html">RequestSummarizedTrendResourceRiskScoresDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.Resource.html">Resource</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceAdditionalDetails.html">ResourceAdditionalDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceCollection.html">ResourceCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceLock.html">ResourceLock</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourcePortCollection.html">ResourcePortCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourcePortSummary.html">ResourcePortSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceProfile.html">ResourceProfile</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceProfileCollection.html">ResourceProfileCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceProfileEndpointCollection.html">ResourceProfileEndpointCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceProfileEndpointSummary.html">ResourceProfileEndpointSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceProfileImpactedResourceCollection.html">ResourceProfileImpactedResourceCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceProfileImpactedResourceSummary.html">ResourceProfileImpactedResourceSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceProfileRiskScoreAggregationSummary.html">ResourceProfileRiskScoreAggregationSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceProfileRiskScoreAggregationSummaryCollection.html">ResourceProfileRiskScoreAggregationSummaryCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceProfileSummary.html">ResourceProfileSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceRiskScoreAggregation.html">ResourceRiskScoreAggregation</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceRiskScoreAggregationCollection.html">ResourceRiskScoreAggregationCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceSummary.html">ResourceSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceTypeCollection.html">ResourceTypeCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceTypeSummary.html">ResourceTypeSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceVulnerability.html">ResourceVulnerability</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceVulnerabilityCollection.html">ResourceVulnerabilityCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResourceVulnerabilitySummary.html">ResourceVulnerabilitySummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderActivityCollection.html">ResponderActivityCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderActivitySummary.html">ResponderActivitySummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderConfiguration.html">ResponderConfiguration</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderExecution.html">ResponderExecution</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderExecutionAggregation.html">ResponderExecutionAggregation</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderExecutionAggregationCollection.html">ResponderExecutionAggregationCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderExecutionCollection.html">ResponderExecutionCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderExecutionSummary.html">ResponderExecutionSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderExecutionTrendAggregation.html">ResponderExecutionTrendAggregation</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderExecutionTrendAggregationCollection.html">ResponderExecutionTrendAggregationCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderRecipe.html">ResponderRecipe</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderRecipeCollection.html">ResponderRecipeCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderRecipeResponderRule.html">ResponderRecipeResponderRule</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderRecipeResponderRuleCollection.html">ResponderRecipeResponderRuleCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderRecipeResponderRuleSummary.html">ResponderRecipeResponderRuleSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderRecipeSummary.html">ResponderRecipeSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderRule.html">ResponderRule</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderRuleCollection.html">ResponderRuleCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderRuleDetails.html">ResponderRuleDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderRuleExecutionDetails.html">ResponderRuleExecutionDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ResponderRuleSummary.html">ResponderRuleSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.RiskScoreAggregation.html">RiskScoreAggregation</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.RiskScoreAggregationCollection.html">RiskScoreAggregationCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.RuleSummary.html">RuleSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SavedQuery.html">SavedQuery</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SavedQueryCollection.html">SavedQueryCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SavedQuerySummary.html">SavedQuerySummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ScheduledQueryDataSourceObjDetails.html">ScheduledQueryDataSourceObjDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ScheduledQueryDataSourceSummaryObjDetails.html">ScheduledQueryDataSourceSummaryObjDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ScheduledQueryScopeDetail.html">ScheduledQueryScopeDetail</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SecurityPolicy.html">SecurityPolicy</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SecurityPolicyCollection.html">SecurityPolicyCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SecurityPolicySummary.html">SecurityPolicySummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SecurityRecipe.html">SecurityRecipe</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SecurityRecipeCollection.html">SecurityRecipeCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SecurityRecipeSummary.html">SecurityRecipeSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SecurityScoreAggregation.html">SecurityScoreAggregation</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SecurityScoreAggregationCollection.html">SecurityScoreAggregationCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SecurityScoreTrendAggregation.html">SecurityScoreTrendAggregation</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SecurityScoreTrendAggregationCollection.html">SecurityScoreTrendAggregationCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SecurityZone.html">SecurityZone</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SecurityZoneCollection.html">SecurityZoneCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SecurityZoneSummary.html">SecurityZoneSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SecurityZoneTargetDetails.html">SecurityZoneTargetDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ServiceConfiguration.html">ServiceConfiguration</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.ServiceTypeSummary.html">ServiceTypeSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.Sighting.html">Sighting</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SightingCollection.html">SightingCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SightingEndpointCollection.html">SightingEndpointCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SightingEndpointSummary.html">SightingEndpointSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SightingImpactedResourceCollection.html">SightingImpactedResourceCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SightingImpactedResourceSummary.html">SightingImpactedResourceSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SightingSummary.html">SightingSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SightingType.html">SightingType</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SimpleCondition.html">SimpleCondition</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.SkipBulkResponderExecutionDetails.html">SkipBulkResponderExecutionDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TacticCollection.html">TacticCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TacticSummary.html">TacticSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.Target.html">Target</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetCollection.html">TargetCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetDetails.html">TargetDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetDetectorDetails.html">TargetDetectorDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetDetectorRecipe.html">TargetDetectorRecipe</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetDetectorRecipeCollection.html">TargetDetectorRecipeCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetDetectorRecipeDetectorRule.html">TargetDetectorRecipeDetectorRule</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetDetectorRecipeDetectorRuleCollection.html">TargetDetectorRecipeDetectorRuleCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetDetectorRecipeDetectorRuleSummary.html">TargetDetectorRecipeDetectorRuleSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetDetectorRecipeSummary.html">TargetDetectorRecipeSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetIdsSelected.html">TargetIdsSelected</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetResourceTypesSelected.html">TargetResourceTypesSelected</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetResponderRecipe.html">TargetResponderRecipe</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetResponderRecipeCollection.html">TargetResponderRecipeCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetResponderRecipeResponderRule.html">TargetResponderRecipeResponderRule</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetResponderRecipeResponderRuleCollection.html">TargetResponderRecipeResponderRuleCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetResponderRecipeResponderRuleSummary.html">TargetResponderRecipeResponderRuleSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetResponderRecipeSummary.html">TargetResponderRecipeSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetSelected.html">TargetSelected</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TargetSummary.html">TargetSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TechniqueCollection.html">TechniqueCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TechniqueSummary.html">TechniqueSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.TriggerResponderDetails.html">TriggerResponderDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateBulkProblemStatusDetails.html">UpdateBulkProblemStatusDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateConfigurationDetails.html">UpdateConfigurationDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateDataMaskRuleDetails.html">UpdateDataMaskRuleDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateDataSourceDetails.html">UpdateDataSourceDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateDetectorRecipeDetails.html">UpdateDetectorRecipeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateDetectorRecipeDetectorRule.html">UpdateDetectorRecipeDetectorRule</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateDetectorRecipeDetectorRuleDetails.html">UpdateDetectorRecipeDetectorRuleDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateDetectorRuleDetails.html">UpdateDetectorRuleDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateManagedListDetails.html">UpdateManagedListDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateProblemStatusDetails.html">UpdateProblemStatusDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateResponderRecipeDetails.html">UpdateResponderRecipeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateResponderRecipeResponderRule.html">UpdateResponderRecipeResponderRule</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateResponderRecipeResponderRuleDetails.html">UpdateResponderRecipeResponderRuleDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateResponderRuleDetails.html">UpdateResponderRuleDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateSavedQueryDetails.html">UpdateSavedQueryDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateSecurityPolicyDetails.html">UpdateSecurityPolicyDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateSecurityRecipeDetails.html">UpdateSecurityRecipeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateSecurityZoneDetails.html">UpdateSecurityZoneDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateTargetDetails.html">UpdateTargetDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateTargetDetectorRecipe.html">UpdateTargetDetectorRecipe</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateTargetDetectorRecipeDetails.html">UpdateTargetDetectorRecipeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateTargetDetectorRecipeDetectorRuleDetails.html">UpdateTargetDetectorRecipeDetectorRuleDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateTargetDetectorRuleDetails.html">UpdateTargetDetectorRuleDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateTargetRecipeDetectorRuleDetails.html">UpdateTargetRecipeDetectorRuleDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateTargetRecipeResponderRuleDetails.html">UpdateTargetRecipeResponderRuleDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateTargetResponderRecipe.html">UpdateTargetResponderRecipe</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateTargetResponderRecipeDetails.html">UpdateTargetResponderRecipeDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateTargetResponderRecipeResponderRuleDetails.html">UpdateTargetResponderRecipeResponderRuleDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateTargetResponderRuleDetails.html">UpdateTargetResponderRuleDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.UpdateWlpAgentDetails.html">UpdateWlpAgentDetails</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.WlpAgent.html">WlpAgent</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.WlpAgentCollection.html">WlpAgentCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.WlpAgentSummary.html">WlpAgentSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.WorkRequest.html">WorkRequest</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.WorkRequestError.html">WorkRequestError</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.WorkRequestErrorCollection.html">WorkRequestErrorCollection</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.WorkRequestLogEntryCollection.html">WorkRequestLogEntryCollection</a>
+                                            </li>
+                                            <li class="toctree-l4 current"><a
+                                                    class="current reference internal" href="#">WorkRequestResource</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.WorkRequestSummary.html">WorkRequestSummary</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="oci.cloud_guard.models.WorkRequestSummaryCollection.html">WorkRequestSummaryCollection</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../cloud_migrations.html">Cloud
+                                Migrations</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../cluster_placement_groups.html">Cluster
+                                Placement Groups</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../compute_cloud_at_customer.html">Compute
+                                Cloud At Customer</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../compute_instance_agent.html">Compute
+                                Instance Agent</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../container_engine.html">Container
+                                Engine</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../container_instances.html">Container
+                                Instances</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../core.html">Core Services</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../dashboard_service.html">Dashboard
+                                Service</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_catalog.html">Data
+                                Catalog</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_flow.html">Data Flow</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_integration.html">Data
+                                Integration</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_labeling_service.html">Data
+                                Labeling Service</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_labeling_service_dataplane.html">Data
+                                Labeling Service Dataplane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_safe.html">Data Safe</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../data_science.html">Data
+                                Science</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../database.html">Database</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../database_management.html">Database
+                                Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../database_migration.html">Database
+                                Migration</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../database_tools.html">Database
+                                Tools</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../delegate_access_control.html">Delegate
+                                Access Control</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../demand_signal.html">Demand
+                                Signal</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../desktops.html">Desktops</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../devops.html">Devops</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../disaster_recovery.html">Disaster
+                                Recovery</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../dns.html">DNS</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../dts.html">Dts</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../em_warehouse.html">Em
+                                Warehouse</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../email.html">Email</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../email_data_plane.html">Email Data
+                                Plane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../events.html">Events</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../file_storage.html">File
+                                Storage</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../fleet_apps_management.html">Fleet
+                                Apps Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../fleet_software_update.html">Fleet
+                                Software Update</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../functions.html">Functions</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../fusion_apps.html">Fusion Apps</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../generative_ai.html">Generative
+                                Ai</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../generative_ai_agent.html">Generative
+                                Ai Agent</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../generative_ai_agent_runtime.html">Generative
+                                Ai Agent Runtime</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../generative_ai_inference.html">Generative
+                                Ai Inference</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../generic_artifacts_content.html">Generic
+                                Artifacts Content</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../globally_distributed_database.html">Globally
+                                Distributed Database</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../golden_gate.html">Golden Gate</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../governance_rules_control_plane.html">Governance
+                                Rules Control Plane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../healthchecks.html">Healthchecks</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../identity.html">Identity</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../identity_data_plane.html">Identity
+                                Data Plane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../identity_domains.html">Identity
+                                Domains</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../integration.html">Integration</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../jms.html">Jms</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../jms_java_downloads.html">Jms Java
+                                Downloads</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../key_management.html">Key
+                                Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../license_manager.html">License
+                                Manager</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../limits.html">Limits</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../load_balancer.html">Load
+                                Balancer</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../lockbox.html">Lockbox</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../log_analytics.html">Log
+                                Analytics</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../logging.html">Logging</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../loggingingestion.html">Loggingingestion</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../loggingsearch.html">Loggingsearch</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../management_agent.html">Management
+                                Agent</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../management_dashboard.html">Management
+                                Dashboard</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../marketplace.html">Marketplace</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../marketplace_private_offer.html">Marketplace
+                                Private Offer</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../marketplace_publisher.html">Marketplace
+                                Publisher</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../media_services.html">Media
+                                Services</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../monitoring.html">Monitoring</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../mysql.html">Mysql</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../network_firewall.html">Network
+                                Firewall</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../network_load_balancer.html">Network
+                                Load Balancer</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../nosql.html">Nosql</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../object_storage.html">Object
+                                Storage</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../oce.html">Oce</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../oci_control_center.html">Oci
+                                Control Center</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ocvp.html">Ocvp</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../oda.html">Oda</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../onesubscription.html">Onesubscription</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../ons.html">Ons</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../opa.html">Opa</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../opensearch.html">Opensearch</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../operator_access_control.html">Operator
+                                Access Control</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../opsi.html">Opsi</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../optimizer.html">Optimizer</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../os_management.html">Os
+                                Management</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../os_management_hub.html">Os
+                                Management Hub</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../osp_gateway.html">Osp Gateway</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../osub_billing_schedule.html">Osub
+                                Billing Schedule</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../osub_organization_subscription.html">Osub
+                                Organization Subscription</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../osub_subscription.html">Osub
+                                Subscription</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../osub_usage.html">Osub Usage</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../psql.html">Psql</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../queue.html">Queue</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../recovery.html">Recovery</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../redis.html">Redis</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../resource_manager.html">Resource
+                                Manager</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../resource_scheduler.html">Resource
+                                Scheduler</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../resource_search.html">Resource
+                                Search</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../rover.html">Rover</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../sch.html">Sch</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../secrets.html">Secrets</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../security_attribute.html">Security
+                                Attribute</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../service_catalog.html">Service
+                                Catalog</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../service_manager_proxy.html">Service
+                                Manager Proxy</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../service_mesh.html">Service
+                                Mesh</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../stack_monitoring.html">Stack
+                                Monitoring</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../streaming.html">Streaming</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../tenant_manager_control_plane.html">Tenant
+                                Manager Control Plane</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../threat_intelligence.html">Threat
+                                Intelligence</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../usage.html">Usage</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../usage_api.html">Usage Api</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../vault.html">Vault</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../vbs_inst.html">Vbs Inst</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../visual_builder.html">Visual
+                                Builder</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../vn_monitoring.html">Vn
+                                Monitoring</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../vulnerability_scanning.html">Vulnerability
+                                Scanning</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../waa.html">Waa</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../waas.html">Waas</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../waf.html">Waf</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../work_requests.html">Work
+                                Requests</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../zpr.html">Zpr</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../config.html">Config</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../circuit_breaker.html">Circuit
+                                Breakers</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../exceptions.html">Exceptions</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../pagination.html">Pagination</a>
+                            </li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../request_and_response.html">Request
+                                and Response</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../retry.html">Retry</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../signing.html">Signing</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../upload_manager.html">Upload
+                                Manager</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../utilities.html">Utilities</a></li>
+                            <li class="toctree-l2"><a class="reference internal"
+                                                      href="../../waiters.html">Waiters</a></li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../customize_service_client/index.html">Customizing
+                        Service Clients</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../sdk_behaviors/index.html">SDK
+                        Behaviors</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../contributions.html">Contributions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../notifications.html">Notifications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../license.html">License</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../../feedback.html">Questions or
+                        Feedback</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+        <nav class="wy-nav-top" aria-label="top navigation">
+
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="../../../index.html">oci</a>
+
+        </nav>
+
+
+        <div class="wy-nav-content">
+
+            <div class="rst-content">
+
+
+                <div role="navigation" aria-label="breadcrumbs navigation">
+
+                    <ul class="wy-breadcrumbs">
+
+                        <li><a href="../../../index.html">Docs</a> &raquo;</li>
+
+                        <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+
+                        <li><a href="../../cloud_guard.html">Cloud Guard</a> &raquo;</li>
+
+                        <li>WorkRequestResource</li>
+
+
+                        <li class="wy-breadcrumbs-aside">
+
+
+                            <a href="../../../_sources/api/cloud_guard/models/oci.cloud_guard.models.WorkRequestResource.rst.txt"
+                               rel="nofollow"> View page source</a>
+
+
+                        </li>
+
+                    </ul>
+
+
+                    <hr/>
+                </div>
+                <div role="main" class="document" itemscope="itemscope"
+                     itemtype="http://schema.org/Article">
+                    <div itemprop="articleBody">
+
+                        <div class="section" id="workrequestresource">
+                            <h1>WorkRequestResource<a class="headerlink" href="#workrequestresource"
+                                                      title="Permalink to this headline">¶</a></h1>
+                            <dl class="class">
+                                <dt id="oci.cloud_guard.models.WorkRequestResource">
+                                    <em class="property">class </em><code class="descclassname">oci.cloud_guard.models.</code><code
+                                        class="descname">WorkRequestResource</code><span
+                                        class="sig-paren">(</span><em>**kwargs</em><span
+                                        class="sig-paren">)</span><a class="headerlink"
+                                                                     href="#oci.cloud_guard.models.WorkRequestResource"
+                                                                     title="Permalink to this definition">¶</a>
+                                </dt>
+                                <dd><p>Bases: <code
+                                        class="xref py py-class docutils literal notranslate"><span
+                                        class="pre">object</span></code></p>
+                                    <p>Parameters of a work request resource, which is created or
+                                        operated on by a work request.</p>
+                                    <p><strong>Attributes</strong></p>
+                                    <table border="1" class="longtable docutils">
+                                        <colgroup>
+                                            <col width="10%"/>
+                                            <col width="90%"/>
+                                        </colgroup>
+                                        <tbody valign="top">
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_CREATED"
+                                                   title="oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_CREATED"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">ACTION_TYPE_CREATED</span></code></a>
+                                            </td>
+                                            <td>A constant which can be used with the action_type
+                                                property of a WorkRequestResource.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-even">
+                                            <td><a class="reference internal"
+                                                   href="#oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_DELETED"
+                                                   title="oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_DELETED"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">ACTION_TYPE_DELETED</span></code></a>
+                                            </td>
+                                            <td>A constant which can be used with the action_type
+                                                property of a WorkRequestResource.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_FAILED"
+                                                   title="oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_FAILED"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">ACTION_TYPE_FAILED</span></code></a>
+                                            </td>
+                                            <td>A constant which can be used with the action_type
+                                                property of a WorkRequestResource.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-even">
+                                            <td><a class="reference internal"
+                                                   href="#oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_IN_PROGRESS"
+                                                   title="oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_IN_PROGRESS"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">ACTION_TYPE_IN_PROGRESS</span></code></a>
+                                            </td>
+                                            <td>A constant which can be used with the action_type
+                                                property of a WorkRequestResource.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_RELATED"
+                                                   title="oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_RELATED"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">ACTION_TYPE_RELATED</span></code></a>
+                                            </td>
+                                            <td>A constant which can be used with the action_type
+                                                property of a WorkRequestResource.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-even">
+                                            <td><a class="reference internal"
+                                                   href="#oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_UPDATED"
+                                                   title="oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_UPDATED"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">ACTION_TYPE_UPDATED</span></code></a>
+                                            </td>
+                                            <td>A constant which can be used with the action_type
+                                                property of a WorkRequestResource.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.cloud_guard.models.WorkRequestResource.action_type"
+                                                   title="oci.cloud_guard.models.WorkRequestResource.action_type"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">action_type</span></code></a></td>
+                                            <td><strong>[Required]</strong> Gets the action_type of
+                                                this WorkRequestResource.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-even">
+                                            <td><a class="reference internal"
+                                                   href="#oci.cloud_guard.models.WorkRequestResource.entity_type"
+                                                   title="oci.cloud_guard.models.WorkRequestResource.entity_type"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">entity_type</span></code></a></td>
+                                            <td><strong>[Required]</strong> Gets the entity_type of
+                                                this WorkRequestResource.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.cloud_guard.models.WorkRequestResource.entity_uri"
+                                                   title="oci.cloud_guard.models.WorkRequestResource.entity_uri"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">entity_uri</span></code></a></td>
+                                            <td>Gets the entity_uri of this WorkRequestResource.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-even">
+                                            <td><a class="reference internal"
+                                                   href="#oci.cloud_guard.models.WorkRequestResource.identifier"
+                                                   title="oci.cloud_guard.models.WorkRequestResource.identifier"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">identifier</span></code></a></td>
+                                            <td><strong>[Required]</strong> Gets the identifier of
+                                                this WorkRequestResource.
+                                            </td>
+                                        </tr>
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.cloud_guard.models.WorkRequestResource.metadata"
+                                                   title="oci.cloud_guard.models.WorkRequestResource.metadata"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">metadata</span></code></a></td>
+                                            <td>Gets the metadata of this WorkRequestResource.</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <p><strong>Methods</strong></p>
+                                    <table border="1" class="longtable docutils">
+                                        <colgroup>
+                                            <col width="10%"/>
+                                            <col width="90%"/>
+                                        </colgroup>
+                                        <tbody valign="top">
+                                        <tr class="row-odd">
+                                            <td><a class="reference internal"
+                                                   href="#oci.cloud_guard.models.WorkRequestResource.__init__"
+                                                   title="oci.cloud_guard.models.WorkRequestResource.__init__"><code
+                                                    class="xref py py-obj docutils literal notranslate"><span
+                                                    class="pre">__init__</span></code></a>(**kwargs)
+                                            </td>
+                                            <td>Initializes a new WorkRequestResource object with
+                                                values from keyword arguments.
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <dl class="attribute">
+                                        <dt id="oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_CREATED">
+                                            <code class="descname">ACTION_TYPE_CREATED</code><em
+                                                class="property"> = 'CREATED'</em><a
+                                                class="headerlink"
+                                                href="#oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_CREATED"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>A constant which can be used with the action_type
+                                            property of a WorkRequestResource.
+                                            This constant has a value of “CREATED”</p>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_DELETED">
+                                            <code class="descname">ACTION_TYPE_DELETED</code><em
+                                                class="property"> = 'DELETED'</em><a
+                                                class="headerlink"
+                                                href="#oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_DELETED"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>A constant which can be used with the action_type
+                                            property of a WorkRequestResource.
+                                            This constant has a value of “DELETED”</p>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_FAILED">
+                                            <code class="descname">ACTION_TYPE_FAILED</code><em
+                                                class="property"> = 'FAILED'</em><a
+                                                class="headerlink"
+                                                href="#oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_FAILED"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>A constant which can be used with the action_type
+                                            property of a WorkRequestResource.
+                                            This constant has a value of “FAILED”</p>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_IN_PROGRESS">
+                                            <code class="descname">ACTION_TYPE_IN_PROGRESS</code><em
+                                                class="property"> = 'IN_PROGRESS'</em><a
+                                                class="headerlink"
+                                                href="#oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_IN_PROGRESS"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>A constant which can be used with the action_type
+                                            property of a WorkRequestResource.
+                                            This constant has a value of “IN_PROGRESS”</p>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_RELATED">
+                                            <code class="descname">ACTION_TYPE_RELATED</code><em
+                                                class="property"> = 'RELATED'</em><a
+                                                class="headerlink"
+                                                href="#oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_RELATED"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>A constant which can be used with the action_type
+                                            property of a WorkRequestResource.
+                                            This constant has a value of “RELATED”</p>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_UPDATED">
+                                            <code class="descname">ACTION_TYPE_UPDATED</code><em
+                                                class="property"> = 'UPDATED'</em><a
+                                                class="headerlink"
+                                                href="#oci.cloud_guard.models.WorkRequestResource.ACTION_TYPE_UPDATED"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>A constant which can be used with the action_type
+                                            property of a WorkRequestResource.
+                                            This constant has a value of “UPDATED”</p>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="method">
+                                        <dt id="oci.cloud_guard.models.WorkRequestResource.__init__">
+                                            <code class="descname">__init__</code><span
+                                                class="sig-paren">(</span><em>**kwargs</em><span
+                                                class="sig-paren">)</span><a class="headerlink"
+                                                                             href="#oci.cloud_guard.models.WorkRequestResource.__init__"
+                                                                             title="Permalink to this definition">¶</a>
+                                        </dt>
+                                        <dd><p>Initializes a new WorkRequestResource object with
+                                            values from keyword arguments.
+                                            The following keyword arguments are supported
+                                            (corresponding to the getters/setters of this
+                                            class):</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Parameters:</th>
+                                                    <td class="field-body">
+                                                        <ul class="first last simple">
+                                                            <li><strong>entity_type</strong> (<em>str</em>)
+                                                                – The value to assign to the
+                                                                entity_type property of this
+                                                                WorkRequestResource.
+                                                            </li>
+                                                            <li><strong>action_type</strong> (<em>str</em>)
+                                                                – The value to assign to the
+                                                                action_type property of this
+                                                                WorkRequestResource.
+                                                                Allowed values for this property
+                                                                are: “CREATED”, “UPDATED”,
+                                                                “DELETED”, “IN_PROGRESS”, “RELATED”,
+                                                                “FAILED”, ‘UNKNOWN_ENUM_VALUE’.
+                                                                Any unrecognized values returned by
+                                                                a service will be mapped to
+                                                                ‘UNKNOWN_ENUM_VALUE’.
+                                                            </li>
+                                                            <li><strong>identifier</strong>
+                                                                (<em>str</em>) – The value to assign
+                                                                to the identifier property of this
+                                                                WorkRequestResource.
+                                                            </li>
+                                                            <li><strong>entity_uri</strong>
+                                                                (<em>str</em>) – The value to assign
+                                                                to the entity_uri property of this
+                                                                WorkRequestResource.
+                                                            </li>
+                                                            <li><strong>metadata</strong>
+                                                                (<em>dict</em><em>(</em><em>str</em><em>, </em><em>str</em><em>)</em>)
+                                                                – The value to assign to the
+                                                                metadata property of this
+                                                                WorkRequestResource.
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.cloud_guard.models.WorkRequestResource.action_type">
+                                            <code class="descname">action_type</code><a
+                                                class="headerlink"
+                                                href="#oci.cloud_guard.models.WorkRequestResource.action_type"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p><strong>[Required]</strong> Gets the action_type of
+                                            this WorkRequestResource.
+                                            The way in which this resource is affected by the work
+                                            tracked in the work request.
+                                            A resource being created, updated, or deleted will
+                                            remain in the IN_PROGRESS state until
+                                            work is complete for that resource at which point it
+                                            will transition to CREATED, UPDATED,
+                                            or DELETED, respectively.</p>
+                                            <p>Allowed values for this property are: “CREATED”,
+                                                “UPDATED”, “DELETED”, “IN_PROGRESS”, “RELATED”,
+                                                “FAILED”, ‘UNKNOWN_ENUM_VALUE’.
+                                                Any unrecognized values returned by a service will
+                                                be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The action_type of this
+                                                        WorkRequestResource.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">str</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.cloud_guard.models.WorkRequestResource.entity_type">
+                                            <code class="descname">entity_type</code><a
+                                                class="headerlink"
+                                                href="#oci.cloud_guard.models.WorkRequestResource.entity_type"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p><strong>[Required]</strong> Gets the entity_type of
+                                            this WorkRequestResource.
+                                            The resource type the work request affects</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The entity_type of this
+                                                        WorkRequestResource.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">str</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.cloud_guard.models.WorkRequestResource.entity_uri">
+                                            <code class="descname">entity_uri</code><a
+                                                class="headerlink"
+                                                href="#oci.cloud_guard.models.WorkRequestResource.entity_uri"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>Gets the entity_uri of this WorkRequestResource.
+                                            The URI path that the user can do a GET on to access the
+                                            resource metadata</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The entity_uri of this
+                                                        WorkRequestResource.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">str</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.cloud_guard.models.WorkRequestResource.identifier">
+                                            <code class="descname">identifier</code><a
+                                                class="headerlink"
+                                                href="#oci.cloud_guard.models.WorkRequestResource.identifier"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p><strong>[Required]</strong> Gets the identifier of
+                                            this WorkRequestResource.
+                                            The identifier of the resource that the work request
+                                            affects</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The identifier of this
+                                                        WorkRequestResource.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">str</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="attribute">
+                                        <dt id="oci.cloud_guard.models.WorkRequestResource.metadata">
+                                            <code class="descname">metadata</code><a
+                                                class="headerlink"
+                                                href="#oci.cloud_guard.models.WorkRequestResource.metadata"
+                                                title="Permalink to this definition">¶</a></dt>
+                                        <dd><p>Gets the metadata of this WorkRequestResource.
+                                            Additional information that helps to explain the
+                                            resource</p>
+                                            <table class="docutils field-list" frame="void"
+                                                   rules="none">
+                                                <col class="field-name"/>
+                                                <col class="field-body"/>
+                                                <tbody valign="top">
+                                                <tr class="field-odd field">
+                                                    <th class="field-name">Returns:</th>
+                                                    <td class="field-body">The metadata of this
+                                                        WorkRequestResource.
+                                                    </td>
+                                                </tr>
+                                                <tr class="field-even field">
+                                                    <th class="field-name">Return type:</th>
+                                                    <td class="field-body">dict(str, str)</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+
+                                </dd>
+                            </dl>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <footer>
+
+                    <div class="rst-footer-buttons" role="navigation"
+                         aria-label="footer navigation">
+
+                        <a href="oci.cloud_guard.models.WorkRequestSummary.html"
+                           class="btn btn-neutral float-right" title="WorkRequestSummary"
+                           accesskey="n" rel="next">Next <span
+                                class="fa fa-arrow-circle-right"></span></a>
+
+
+                        <a href="oci.cloud_guard.models.WorkRequestLogEntryCollection.html"
+                           class="btn btn-neutral" title="WorkRequestLogEntryCollection"
+                           accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span>
+                            Previous</a>
+
+                    </div>
+
+
+                    <hr/>
+
+                    <div role="contentinfo">
+                        <p>
+                            &copy; Copyright 2016, 2025, Oracle
+
+                        </p>
+                    </div>
+                    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a
+                        href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a
+                        href="https://readthedocs.org">Read the Docs</a>.
+
+                </footer>
+
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+<script type="text/javascript" id="documentation_options" data-url_root="../../../"
+        src="../../../_static/documentation_options.js"></script>
+<script type="text/javascript" src="../../../_static/jquery.js"></script>
+<script type="text/javascript" src="../../../_static/underscore.js"></script>
+<script type="text/javascript" src="../../../_static/doctools.js"></script>
+<script type="text/javascript" src="../../../_static/language_data.js"></script>
+
+
+<script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        SphinxRtdTheme.Navigation.enable(true);
+    });
+</script>
+
+</body>
+</html>

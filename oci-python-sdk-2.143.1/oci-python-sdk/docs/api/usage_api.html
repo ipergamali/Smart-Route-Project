@@ -1,0 +1,647 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Usage Api &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="UsageapiClient" href="usage_api/client/oci.usage_api.UsageapiClient.html" />
+    <link rel="prev" title="UsageLimitSummary" href="usage/models/oci.usage.models.UsageLimitSummary.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Usage Api</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage_api/client/oci.usage_api.UsageapiClient.html">UsageapiClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage_api/client/oci.usage_api.UsageapiClientCompositeOperations.html">UsageapiClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models">Models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.AverageCarbonEmission.html">AverageCarbonEmission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.CleanEnergyUsage.html">CleanEnergyUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.Configuration.html">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.ConfigurationAggregation.html">ConfigurationAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.CostAnalysisUI.html">CostAnalysisUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.CreateCustomTableDetails.html">CreateCustomTableDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.CreateEmailRecipientsGroupDetails.html">CreateEmailRecipientsGroupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.CreateQueryDetails.html">CreateQueryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.CreateScheduleDetails.html">CreateScheduleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.CreateUsageCarbonEmissionsQueryDetails.html">CreateUsageCarbonEmissionsQueryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.CustomTable.html">CustomTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.CustomTableCollection.html">CustomTableCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.CustomTableSummary.html">CustomTableSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.DateRange.html">DateRange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.Dimension.html">Dimension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.DynamicDateRange.html">DynamicDateRange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.EmailRecipient.html">EmailRecipient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.EmailRecipientsGroup.html">EmailRecipientsGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.EmailRecipientsGroupCollection.html">EmailRecipientsGroupCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.EmailRecipientsGroupSummary.html">EmailRecipientsGroupSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.Filter.html">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.Forecast.html">Forecast</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.ObjectStorageLocation.html">ObjectStorageLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.Query.html">Query</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.QueryCollection.html">QueryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.QueryDefinition.html">QueryDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.QueryProperties.html">QueryProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.QuerySummary.html">QuerySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.ReportQuery.html">ReportQuery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.RequestSummarizedUsagesDetails.html">RequestSummarizedUsagesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.RequestUsageCarbonEmissionsDetails.html">RequestUsageCarbonEmissionsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.ResultLocation.html">ResultLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.SavedCustomTable.html">SavedCustomTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.Schedule.html">Schedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.ScheduleCollection.html">ScheduleCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.ScheduleSummary.html">ScheduleSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.ScheduledRun.html">ScheduledRun</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.ScheduledRunCollection.html">ScheduledRunCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.ScheduledRunSummary.html">ScheduledRunSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.StaticDateRange.html">StaticDateRange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.Tag.html">Tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.UpdateCustomTableDetails.html">UpdateCustomTableDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.UpdateEmailRecipientsGroupDetails.html">UpdateEmailRecipientsGroupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.UpdateQueryDetails.html">UpdateQueryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.UpdateScheduleDetails.html">UpdateScheduleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.UpdateUsageCarbonEmissionsQueryDetails.html">UpdateUsageCarbonEmissionsQueryDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageAggregation.html">UsageAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageCarbonEmissionAggregation.html">UsageCarbonEmissionAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageCarbonEmissionSummary.html">UsageCarbonEmissionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageCarbonEmissionsQuery.html">UsageCarbonEmissionsQuery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageCarbonEmissionsQueryCollection.html">UsageCarbonEmissionsQueryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageCarbonEmissionsQueryDefinition.html">UsageCarbonEmissionsQueryDefinition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageCarbonEmissionsQuerySummary.html">UsageCarbonEmissionsQuerySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageCarbonEmissionsReportQuery.html">UsageCarbonEmissionsReportQuery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageSummary.html">UsageSummary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="landing.html">API Reference</a> &raquo;</li>
+        
+      <li>Usage Api</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/usage_api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="usage-api">
+<h1>Usage Api<a class="headerlink" href="#usage-api" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/client/oci.usage_api.UsageapiClient.html#oci.usage_api.UsageapiClient" title="oci.usage_api.UsageapiClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.UsageapiClient</span></code></a></td>
+<td>Use the Usage API to view your Oracle Cloud usage and costs.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/client/oci.usage_api.UsageapiClientCompositeOperations.html#oci.usage_api.UsageapiClientCompositeOperations" title="oci.usage_api.UsageapiClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.UsageapiClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="usage_api/client/oci.usage_api.UsageapiClient.html#oci.usage_api.UsageapiClient" title="oci.usage_api.UsageapiClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">UsageapiClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.AverageCarbonEmission.html#oci.usage_api.models.AverageCarbonEmission" title="oci.usage_api.models.AverageCarbonEmission"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.AverageCarbonEmission</span></code></a></td>
+<td>Average carbon emission.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.CleanEnergyUsage.html#oci.usage_api.models.CleanEnergyUsage" title="oci.usage_api.models.CleanEnergyUsage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.CleanEnergyUsage</span></code></a></td>
+<td>Clean energy usage.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.Configuration.html#oci.usage_api.models.Configuration" title="oci.usage_api.models.Configuration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.Configuration</span></code></a></td>
+<td>A configuration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.ConfigurationAggregation.html#oci.usage_api.models.ConfigurationAggregation" title="oci.usage_api.models.ConfigurationAggregation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.ConfigurationAggregation</span></code></a></td>
+<td>The available configurations.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.CostAnalysisUI.html#oci.usage_api.models.CostAnalysisUI" title="oci.usage_api.models.CostAnalysisUI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.CostAnalysisUI</span></code></a></td>
+<td>The common fields for Cost Analysis UI rendering.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.CreateCustomTableDetails.html#oci.usage_api.models.CreateCustomTableDetails" title="oci.usage_api.models.CreateCustomTableDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.CreateCustomTableDetails</span></code></a></td>
+<td>New custom table detail.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.CreateEmailRecipientsGroupDetails.html#oci.usage_api.models.CreateEmailRecipientsGroupDetails" title="oci.usage_api.models.CreateEmailRecipientsGroupDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.CreateEmailRecipientsGroupDetails</span></code></a></td>
+<td>The saved email recipient group to receive usage statement email.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.CreateQueryDetails.html#oci.usage_api.models.CreateQueryDetails" title="oci.usage_api.models.CreateQueryDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.CreateQueryDetails</span></code></a></td>
+<td>New query detail with savedRequestSummarizedUsagesDetails, savedCostAnalysisUI, and displayName.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.CreateScheduleDetails.html#oci.usage_api.models.CreateScheduleDetails" title="oci.usage_api.models.CreateScheduleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.CreateScheduleDetails</span></code></a></td>
+<td>The saved schedule.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.CreateUsageCarbonEmissionsQueryDetails.html#oci.usage_api.models.CreateUsageCarbonEmissionsQueryDetails" title="oci.usage_api.models.CreateUsageCarbonEmissionsQueryDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.CreateUsageCarbonEmissionsQueryDetails</span></code></a></td>
+<td>New query detail with savedRequestUsageCarbonEmissionsDetails, savedCostAnalysisUI, and displayName.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.CustomTable.html#oci.usage_api.models.CustomTable" title="oci.usage_api.models.CustomTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.CustomTable</span></code></a></td>
+<td>The saved custom table.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.CustomTableCollection.html#oci.usage_api.models.CustomTableCollection" title="oci.usage_api.models.CustomTableCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.CustomTableCollection</span></code></a></td>
+<td>A custom table list.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.CustomTableSummary.html#oci.usage_api.models.CustomTableSummary" title="oci.usage_api.models.CustomTableSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.CustomTableSummary</span></code></a></td>
+<td>Custom table in the list request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.DateRange.html#oci.usage_api.models.DateRange" title="oci.usage_api.models.DateRange"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.DateRange</span></code></a></td>
+<td>Static or dynamic date range <cite>dateRangeType</cite>, which corresponds with type-specific characteristics.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.Dimension.html#oci.usage_api.models.Dimension" title="oci.usage_api.models.Dimension"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.Dimension</span></code></a></td>
+<td>The dimension used for filtering.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.DynamicDateRange.html#oci.usage_api.models.DynamicDateRange" title="oci.usage_api.models.DynamicDateRange"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.DynamicDateRange</span></code></a></td>
+<td>The saved dynamic date range (required when the static date range is missing).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.EmailRecipient.html#oci.usage_api.models.EmailRecipient" title="oci.usage_api.models.EmailRecipient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.EmailRecipient</span></code></a></td>
+<td>The email recipient to receive usage statements for the subscription.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.EmailRecipientsGroup.html#oci.usage_api.models.EmailRecipientsGroup" title="oci.usage_api.models.EmailRecipientsGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.EmailRecipientsGroup</span></code></a></td>
+<td>The recipients group to receive usage statement email.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.EmailRecipientsGroupCollection.html#oci.usage_api.models.EmailRecipientsGroupCollection" title="oci.usage_api.models.EmailRecipientsGroupCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.EmailRecipientsGroupCollection</span></code></a></td>
+<td>An email recipients groups collection</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.EmailRecipientsGroupSummary.html#oci.usage_api.models.EmailRecipientsGroupSummary" title="oci.usage_api.models.EmailRecipientsGroupSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.EmailRecipientsGroupSummary</span></code></a></td>
+<td>Email recipients group summary for the list recipients groups.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.Filter.html#oci.usage_api.models.Filter" title="oci.usage_api.models.Filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.Filter</span></code></a></td>
+<td>The filter object for query usage.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.Forecast.html#oci.usage_api.models.Forecast" title="oci.usage_api.models.Forecast"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.Forecast</span></code></a></td>
+<td>Forecast configuration of usage/cost.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.ObjectStorageLocation.html#oci.usage_api.models.ObjectStorageLocation" title="oci.usage_api.models.ObjectStorageLocation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.ObjectStorageLocation</span></code></a></td>
+<td>The object storage location where usage or cost CSVs will be uploaded.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.Query.html#oci.usage_api.models.Query" title="oci.usage_api.models.Query"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.Query</span></code></a></td>
+<td>The query to filter and aggregate.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.QueryCollection.html#oci.usage_api.models.QueryCollection" title="oci.usage_api.models.QueryCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.QueryCollection</span></code></a></td>
+<td>A query list.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.QueryDefinition.html#oci.usage_api.models.QueryDefinition" title="oci.usage_api.models.QueryDefinition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.QueryDefinition</span></code></a></td>
+<td>The common fields for queries.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.QueryProperties.html#oci.usage_api.models.QueryProperties" title="oci.usage_api.models.QueryProperties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.QueryProperties</span></code></a></td>
+<td>The query properties.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.QuerySummary.html#oci.usage_api.models.QuerySummary" title="oci.usage_api.models.QuerySummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.QuerySummary</span></code></a></td>
+<td>Query summery in the list request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.ReportQuery.html#oci.usage_api.models.ReportQuery" title="oci.usage_api.models.ReportQuery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.ReportQuery</span></code></a></td>
+<td>The request of the generated Cost Analysis report.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.RequestSummarizedUsagesDetails.html#oci.usage_api.models.RequestSummarizedUsagesDetails" title="oci.usage_api.models.RequestSummarizedUsagesDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.RequestSummarizedUsagesDetails</span></code></a></td>
+<td>Details for the ‘/usage’ query.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.RequestUsageCarbonEmissionsDetails.html#oci.usage_api.models.RequestUsageCarbonEmissionsDetails" title="oci.usage_api.models.RequestUsageCarbonEmissionsDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.RequestUsageCarbonEmissionsDetails</span></code></a></td>
+<td>Details for the ‘/usageCarbonEmissions’ query.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.ResultLocation.html#oci.usage_api.models.ResultLocation" title="oci.usage_api.models.ResultLocation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.ResultLocation</span></code></a></td>
+<td>The location where usage or cost CSVs will be uploaded defined by <cite>locationType</cite>, which corresponds with type-specific characteristics.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.SavedCustomTable.html#oci.usage_api.models.SavedCustomTable" title="oci.usage_api.models.SavedCustomTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.SavedCustomTable</span></code></a></td>
+<td>The custom table for Cost Analysis UI rendering.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.Schedule.html#oci.usage_api.models.Schedule" title="oci.usage_api.models.Schedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.Schedule</span></code></a></td>
+<td>The schedule.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.ScheduleCollection.html#oci.usage_api.models.ScheduleCollection" title="oci.usage_api.models.ScheduleCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.ScheduleCollection</span></code></a></td>
+<td>A schedule collection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.ScheduleSummary.html#oci.usage_api.models.ScheduleSummary" title="oci.usage_api.models.ScheduleSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.ScheduleSummary</span></code></a></td>
+<td>Schedule summary for the list schedule.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.ScheduledRun.html#oci.usage_api.models.ScheduledRun" title="oci.usage_api.models.ScheduledRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.ScheduledRun</span></code></a></td>
+<td>The saved schedule run.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.ScheduledRunCollection.html#oci.usage_api.models.ScheduledRunCollection" title="oci.usage_api.models.ScheduledRunCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.ScheduledRunCollection</span></code></a></td>
+<td>The schedule past run list.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.ScheduledRunSummary.html#oci.usage_api.models.ScheduledRunSummary" title="oci.usage_api.models.ScheduledRunSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.ScheduledRunSummary</span></code></a></td>
+<td>The saved history past run.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.StaticDateRange.html#oci.usage_api.models.StaticDateRange" title="oci.usage_api.models.StaticDateRange"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.StaticDateRange</span></code></a></td>
+<td>The saved static date range (required when the dynamic date range is missing).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.Tag.html#oci.usage_api.models.Tag" title="oci.usage_api.models.Tag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.Tag</span></code></a></td>
+<td>The tag used for filtering.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.UpdateCustomTableDetails.html#oci.usage_api.models.UpdateCustomTableDetails" title="oci.usage_api.models.UpdateCustomTableDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.UpdateCustomTableDetails</span></code></a></td>
+<td>Details for updating the custom table.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.UpdateEmailRecipientsGroupDetails.html#oci.usage_api.models.UpdateEmailRecipientsGroupDetails" title="oci.usage_api.models.UpdateEmailRecipientsGroupDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.UpdateEmailRecipientsGroupDetails</span></code></a></td>
+<td>The saved email recipient group to receive usage statement email.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.UpdateQueryDetails.html#oci.usage_api.models.UpdateQueryDetails" title="oci.usage_api.models.UpdateQueryDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.UpdateQueryDetails</span></code></a></td>
+<td>Details for the query to update reportQuery, costAnalysisUI, and displayName.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.UpdateScheduleDetails.html#oci.usage_api.models.UpdateScheduleDetails" title="oci.usage_api.models.UpdateScheduleDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.UpdateScheduleDetails</span></code></a></td>
+<td>Details for updating the custom table.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.UpdateUsageCarbonEmissionsQueryDetails.html#oci.usage_api.models.UpdateUsageCarbonEmissionsQueryDetails" title="oci.usage_api.models.UpdateUsageCarbonEmissionsQueryDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.UpdateUsageCarbonEmissionsQueryDetails</span></code></a></td>
+<td>Details for the query to update usageCarbonEmissionsQuery, costAnalysisUI, and displayName.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageAggregation.html#oci.usage_api.models.UsageAggregation" title="oci.usage_api.models.UsageAggregation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.UsageAggregation</span></code></a></td>
+<td>The account (tenant) usage.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageCarbonEmissionAggregation.html#oci.usage_api.models.UsageCarbonEmissionAggregation" title="oci.usage_api.models.UsageCarbonEmissionAggregation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.UsageCarbonEmissionAggregation</span></code></a></td>
+<td>The account (tenant) usage carbon emissions.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageCarbonEmissionSummary.html#oci.usage_api.models.UsageCarbonEmissionSummary" title="oci.usage_api.models.UsageCarbonEmissionSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.UsageCarbonEmissionSummary</span></code></a></td>
+<td>The usage carbon emission store result.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageCarbonEmissionsQuery.html#oci.usage_api.models.UsageCarbonEmissionsQuery" title="oci.usage_api.models.UsageCarbonEmissionsQuery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.UsageCarbonEmissionsQuery</span></code></a></td>
+<td>The usage carbon emissions saved query to filter and aggregate.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageCarbonEmissionsQueryCollection.html#oci.usage_api.models.UsageCarbonEmissionsQueryCollection" title="oci.usage_api.models.UsageCarbonEmissionsQueryCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.UsageCarbonEmissionsQueryCollection</span></code></a></td>
+<td>A usage carbon emissions query list.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageCarbonEmissionsQueryDefinition.html#oci.usage_api.models.UsageCarbonEmissionsQueryDefinition" title="oci.usage_api.models.UsageCarbonEmissionsQueryDefinition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.UsageCarbonEmissionsQueryDefinition</span></code></a></td>
+<td>The common fields for queries.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageCarbonEmissionsQuerySummary.html#oci.usage_api.models.UsageCarbonEmissionsQuerySummary" title="oci.usage_api.models.UsageCarbonEmissionsQuerySummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.UsageCarbonEmissionsQuerySummary</span></code></a></td>
+<td>Usage carbon emissions query summary in the list request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageCarbonEmissionsReportQuery.html#oci.usage_api.models.UsageCarbonEmissionsReportQuery" title="oci.usage_api.models.UsageCarbonEmissionsReportQuery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.UsageCarbonEmissionsReportQuery</span></code></a></td>
+<td>The request of the generated usage carbon emissions report.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="usage_api/models/oci.usage_api.models.UsageSummary.html#oci.usage_api.models.UsageSummary" title="oci.usage_api.models.UsageSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.usage_api.models.UsageSummary</span></code></a></td>
+<td>The usage store result.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="usage_api/client/oci.usage_api.UsageapiClient.html" class="btn btn-neutral float-right" title="UsageapiClient" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="usage/models/oci.usage.models.UsageLimitSummary.html" class="btn btn-neutral" title="UsageLimitSummary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

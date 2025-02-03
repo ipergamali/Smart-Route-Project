@@ -3,12 +3,32 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services") // Firebase plugin
     id("com.chaquo.python") // Chaquopy plugin
+   // id("com.intellij.modules.python")
 }
 chaquopy {
     defaultConfig {
         buildPython("C:/Users/joann/AppData/Local/Programs/Python/Python38/python.exe")
+
+       // buildPython("C:/Users/joann/AppData/Local/Programs/Python/Python38/python.exe", "-3.8")
+
+        // Διαδρομή για Python Executable
+        //  pythonExecutable="C:/Users/YourUsername/AppData/Local/Programs/Python/Python38/python.exe"
+        pip {
+            install("firebase_admin") // Not firebase-admin
+
+            install( "google-auth")
+            install ("google-auth-oauthlib")
+            install ("google-api-python-client")
+            install("msgpack==0.5.6")
+
+        }
     }
-}
+    }
+//intellij {
+//    plugins.set(listOf("com.intellij.modules.pyth"))
+//}
+
+
 android {
     namespace = "com.ioannapergamali.smartroute"
     compileSdk = 34
@@ -25,7 +45,7 @@ android {
 
         // NDK Configuration (αν χρησιμοποιείς Native Libraries)
         ndk {
-            abiFilters += listOf("armeabi-v7a" , "arm64-v8a")
+            abiFilters += listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64") // or other ABIs
         }
 
 
@@ -42,8 +62,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_22
+        targetCompatibility =JavaVersion.VERSION_22
     }
 
     kotlinOptions {
@@ -61,6 +81,12 @@ android {
     packaging {
         resources.excludes += "/META-INF/{AL2.0,LGPL2.1}"
     }
+    dependenciesInfo {
+        includeInApk = true
+        includeInBundle = true
+    }
+    buildToolsVersion = "34.0.0"
+    ndkVersion = "28.0.12916984 rc3"
 }
 
 dependencies {
@@ -112,5 +138,11 @@ dependencies {
     // Debugging Tools
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    // **Προσθήκη της εξάρτησης Grid Impl**
+   // runtimeOnly("com.jetbrains.intellij.grid:grid-impl:233.14808.21")
+    implementation(files("libs/android-gradle-dsl-toml-233.14808.21-sources.jar"))
+    releaseImplementation(files("libs/ae-database-community-233.14808.21-sources.jar"))
+
 
 }

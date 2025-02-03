@@ -1,0 +1,2058 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>EmailClient &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="EmailClientCompositeOperations" href="oci.email.EmailClientCompositeOperations.html" />
+    <link rel="prev" title="Email" href="../../email.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../email.html">Email</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">EmailClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oci.email.EmailClientCompositeOperations.html">EmailClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../email.html#models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../email.html">Email</a> &raquo;</li>
+        
+      <li>EmailClient</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/email/client/oci.email.EmailClient.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="emailclient">
+<h1>EmailClient<a class="headerlink" href="#emailclient" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.email.EmailClient">
+<em class="property">class </em><code class="descclassname">oci.email.</code><code class="descname">EmailClient</code><span class="sig-paren">(</span><em>config</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the Email Delivery API to do the necessary set up to send high-volume and application-generated emails through the OCI Email Delivery service.
+For more information, see [Overview of the Email Delivery Service](/iaas/Content/Email/Concepts/overview.htm).</p>
+<blockquote>
+<div><strong>Note:</strong> Write actions (POST, UPDATE, DELETE) may take several minutes to propagate and be reflected by the API.
+If a subsequent read request fails to reflect your changes, wait a few minutes and try again.</div></blockquote>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.__init__" title="oci.email.EmailClient.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(config,&nbsp;**kwargs)</td>
+<td>Creates a new service client</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.change_email_domain_compartment" title="oci.email.EmailClient.change_email_domain_compartment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">change_email_domain_compartment</span></code></a>(…)</td>
+<td>Moves an email domain into a different compartment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.change_sender_compartment" title="oci.email.EmailClient.change_sender_compartment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">change_sender_compartment</span></code></a>(sender_id,&nbsp;…)</td>
+<td>Moves a sender into a different compartment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.create_dkim" title="oci.email.EmailClient.create_dkim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_dkim</span></code></a>(create_dkim_details,&nbsp;**kwargs)</td>
+<td>Creates a new DKIM for an email domain.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.create_email_domain" title="oci.email.EmailClient.create_email_domain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_email_domain</span></code></a>(…)</td>
+<td>Creates a new email domain.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.create_email_return_path" title="oci.email.EmailClient.create_email_return_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_email_return_path</span></code></a>(…)</td>
+<td>Creates a new email return path.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.create_sender" title="oci.email.EmailClient.create_sender"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_sender</span></code></a>(create_sender_details,&nbsp;**kwargs)</td>
+<td>Creates a sender for a tenancy in a given compartment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.create_suppression" title="oci.email.EmailClient.create_suppression"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_suppression</span></code></a>(…)</td>
+<td>Adds recipient email addresses to the suppression list for a tenancy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.delete_dkim" title="oci.email.EmailClient.delete_dkim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_dkim</span></code></a>(dkim_id,&nbsp;**kwargs)</td>
+<td>Deletes a DKIM.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.delete_email_domain" title="oci.email.EmailClient.delete_email_domain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_email_domain</span></code></a>(email_domain_id,&nbsp;**kwargs)</td>
+<td>Deletes an email domain.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.delete_email_return_path" title="oci.email.EmailClient.delete_email_return_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_email_return_path</span></code></a>(…)</td>
+<td>Deletes an email return path.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.delete_sender" title="oci.email.EmailClient.delete_sender"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_sender</span></code></a>(sender_id,&nbsp;**kwargs)</td>
+<td>Deletes an approved sender for a tenancy in a given compartment for a provided <cite>senderId</cite>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.delete_suppression" title="oci.email.EmailClient.delete_suppression"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_suppression</span></code></a>(suppression_id,&nbsp;**kwargs)</td>
+<td>Removes a suppressed recipient email address from the suppression list for a tenancy in a given compartment for a provided <cite>suppressionId</cite>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.get_dkim" title="oci.email.EmailClient.get_dkim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dkim</span></code></a>(dkim_id,&nbsp;**kwargs)</td>
+<td>Retrieves the specified DKIM.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.get_email_configuration" title="oci.email.EmailClient.get_email_configuration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_email_configuration</span></code></a>(compartment_id,&nbsp;**kwargs)</td>
+<td>Returns  email configuration associated with the specified compartment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.get_email_domain" title="oci.email.EmailClient.get_email_domain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_email_domain</span></code></a>(email_domain_id,&nbsp;**kwargs)</td>
+<td>Retrieves the specified email domain.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.get_email_return_path" title="oci.email.EmailClient.get_email_return_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_email_return_path</span></code></a>(email_return_path_id,&nbsp;…)</td>
+<td>Retrieves the specified email return path.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.get_sender" title="oci.email.EmailClient.get_sender"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_sender</span></code></a>(sender_id,&nbsp;**kwargs)</td>
+<td>Gets an approved sender for a given <cite>senderId</cite>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.get_suppression" title="oci.email.EmailClient.get_suppression"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_suppression</span></code></a>(suppression_id,&nbsp;**kwargs)</td>
+<td>Gets the details of a suppressed recipient email address for a given <cite>suppressionId</cite>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.get_work_request" title="oci.email.EmailClient.get_work_request"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_work_request</span></code></a>(work_request_id,&nbsp;**kwargs)</td>
+<td>Gets the status of the work request with the given ID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.list_dkims" title="oci.email.EmailClient.list_dkims"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_dkims</span></code></a>(email_domain_id,&nbsp;**kwargs)</td>
+<td>Lists DKIMs for an email domain.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.list_email_domains" title="oci.email.EmailClient.list_email_domains"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_email_domains</span></code></a>(compartment_id,&nbsp;**kwargs)</td>
+<td>Lists email domains in the specified compartment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.list_email_return_paths" title="oci.email.EmailClient.list_email_return_paths"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_email_return_paths</span></code></a>(**kwargs)</td>
+<td>Lists email return paths in the specified compartment or emaildomain.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.list_senders" title="oci.email.EmailClient.list_senders"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_senders</span></code></a>(compartment_id,&nbsp;**kwargs)</td>
+<td>Gets a collection of approved sender email addresses and sender IDs.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.list_suppressions" title="oci.email.EmailClient.list_suppressions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_suppressions</span></code></a>(compartment_id,&nbsp;**kwargs)</td>
+<td>Gets a list of suppressed recipient email addresses for a user.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.list_work_request_errors" title="oci.email.EmailClient.list_work_request_errors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_request_errors</span></code></a>(work_request_id,&nbsp;…)</td>
+<td>Return a (paginated) list of errors for a given work request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.list_work_request_logs" title="oci.email.EmailClient.list_work_request_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_request_logs</span></code></a>(work_request_id,&nbsp;**kwargs)</td>
+<td>Return a (paginated) list of logs for a given work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.list_work_requests" title="oci.email.EmailClient.list_work_requests"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_requests</span></code></a>(compartment_id,&nbsp;**kwargs)</td>
+<td>Lists the work requests in a compartment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.update_dkim" title="oci.email.EmailClient.update_dkim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_dkim</span></code></a>(dkim_id,&nbsp;update_dkim_details,&nbsp;…)</td>
+<td>Modifies a DKIM.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.update_email_domain" title="oci.email.EmailClient.update_email_domain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_email_domain</span></code></a>(email_domain_id,&nbsp;…)</td>
+<td>Modifies an email domain.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.email.EmailClient.update_email_return_path" title="oci.email.EmailClient.update_email_return_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_email_return_path</span></code></a>(…)</td>
+<td>Modifies an email return path.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.email.EmailClient.update_sender" title="oci.email.EmailClient.update_sender"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_sender</span></code></a>(sender_id,&nbsp;…)</td>
+<td>Replaces the set of tags for a sender with the tags provided.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="oci.email.EmailClient.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>config</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new service client</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>config</strong> (<em>dict</em>) – Configuration keys and values as per <a class="reference external" href="https://docs.cloud.oracle.com/Content/API/Concepts/sdkconfig.htm">SDK and Tool Configuration</a>.
+The <a class="reference internal" href="../../config.html#oci.config.from_file" title="oci.config.from_file"><code class="xref py py-meth docutils literal notranslate"><span class="pre">from_file()</span></code></a> method can be used to load configuration from a file. Alternatively, a <code class="docutils literal notranslate"><span class="pre">dict</span></code> can be passed. You can validate_config
+the dict using <a class="reference internal" href="../../config.html#oci.config.validate_config" title="oci.config.validate_config"><code class="xref py py-meth docutils literal notranslate"><span class="pre">validate_config()</span></code></a></li>
+<li><strong>service_endpoint</strong> (<em>str</em>) – (optional)
+The endpoint of the service to call using this client. For example <code class="docutils literal notranslate"><span class="pre">https://iaas.us-ashburn-1.oraclecloud.com</span></code>. If this keyword argument is
+not provided then it will be derived using the region in the config parameter. You should only provide this keyword argument if you have an explicit
+need to specify a service endpoint.</li>
+<li><strong>timeout</strong> (<em>float</em><em> or </em><em>tuple</em><em>(</em><em>float</em><em>, </em><em>float</em><em>)</em>) – (optional)
+The connection and read timeouts for the client. The default values are connection timeout 10 seconds and read timeout 60 seconds. This keyword argument can be provided
+as a single float, in which case the value provided is used for both the read and connection timeouts, or as a tuple of two floats. If
+a tuple is provided then the first value is used as the connection timeout and the second value as the read timeout.</li>
+<li><strong>signer</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractBaseSigner</span></code>) – <p>(optional)
+The signer to use when signing requests made by the service client. The default is to use a <a class="reference internal" href="../../signing.html#oci.signer.Signer" title="oci.signer.Signer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Signer</span></code></a> based on the values
+provided in the config parameter.</p>
+<p>One use case for this parameter is for <a class="reference external" href="https://docs.cloud.oracle.com/Content/Identity/Tasks/callingservicesfrominstances.htm">Instance Principals authentication</a>
+by passing an instance of <a class="reference internal" href="../../signing.html#oci.auth.signers.InstancePrincipalsSecurityTokenSigner" title="oci.auth.signers.InstancePrincipalsSecurityTokenSigner"><code class="xref py py-class docutils literal notranslate"><span class="pre">InstancePrincipalsSecurityTokenSigner</span></code></a> as the value for this keyword argument</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to all calls made by this service client (i.e. at the client level). There is no retry strategy applied by default.
+Retry strategies can also be applied at the operation level by passing a <code class="docutils literal notranslate"><span class="pre">retry_strategy</span></code> keyword argument as part of calling the operation.
+Any value provided at the operation level will override whatever is specified at the client level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. A convenience <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a>
+is also available. The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+</li>
+<li><strong>circuit_breaker_strategy</strong> (<em>obj</em>) – (optional)
+A circuit breaker strategy to apply to all calls made by this service client (i.e. at the client level).
+This client uses <a class="reference internal" href="../../circuit_breaker.html#oci.circuit_breaker.DEFAULT_CIRCUIT_BREAKER_STRATEGY" title="oci.circuit_breaker.DEFAULT_CIRCUIT_BREAKER_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_CIRCUIT_BREAKER_STRATEGY</span></code></a> as default if no circuit breaker strategy is provided.
+The specifics of circuit breaker strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/circuit_breakers.html">here</a>.</li>
+<li><strong>circuit_breaker_callback</strong> (<em>function</em>) – (optional)
+Callback function to receive any exceptions triggerred by the circuit breaker.</li>
+<li><strong>client_level_realm_specific_endpoint_template_enabled</strong> (<em>bool</em>) – (optional)
+A boolean flag to indicate whether or not this client should be created with realm specific endpoint template enabled or disable. By default, this will be set as None.</li>
+<li><strong>allow_control_chars</strong> – (optional)
+allow_control_chars is a boolean to indicate whether or not this client should allow control characters in the response object. By default, the client will not
+allow control characters to be in the response object.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.change_email_domain_compartment">
+<code class="descname">change_email_domain_compartment</code><span class="sig-paren">(</span><em>email_domain_id</em>, <em>change_email_domain_compartment_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.change_email_domain_compartment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves an email domain into a different compartment.
+When provided, If-Match is checked against ETag value of the resource.
+For information about moving resources between compartments, see
+<a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#moveRes">Moving Resources to a Different Compartment</a>.</p>
+<p><strong>Note:</strong> All DKIM objects associated with this email domain will also be moved into the provided compartment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>email_domain_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm">OCID</a> of this email domain.</p>
+</li>
+<li><strong>change_email_domain_compartment_details</strong> (<a class="reference internal" href="../models/oci.email.models.ChangeEmailDomainCompartmentDetails.html#oci.email.models.ChangeEmailDomainCompartmentDetails" title="oci.email.models.ChangeEmailDomainCompartmentDetails"><em>oci.email.models.ChangeEmailDomainCompartmentDetails</em></a>) – (required)
+The configuration details for the move operation.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+Used for optimistic concurrency control. In the update or delete call for a resource, set the <cite>if-match</cite>
+parameter to the value of the etag from a previous get, create, or update response for that resource.  The resource
+will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request
+might be rejected.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/change_email_domain_compartment.py.html">here</a> to see an example of how to use change_email_domain_compartment API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.change_sender_compartment">
+<code class="descname">change_sender_compartment</code><span class="sig-paren">(</span><em>sender_id</em>, <em>change_sender_compartment_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.change_sender_compartment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves a sender into a different compartment. When provided, If-Match is checked against ETag values of the resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sender_id</strong> (<em>str</em>) – (required)
+The unique OCID of the sender.</li>
+<li><strong>change_sender_compartment_details</strong> (<a class="reference internal" href="../models/oci.email.models.ChangeSenderCompartmentDetails.html#oci.email.models.ChangeSenderCompartmentDetails" title="oci.email.models.ChangeSenderCompartmentDetails"><em>oci.email.models.ChangeSenderCompartmentDetails</em></a>) – (required)
+Details for moving a sender into a different compartment.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+Used for optimistic concurrency control. In the update or delete call for a resource, set the <cite>if-match</cite>
+parameter to the value of the etag from a previous get, create, or update response for that resource.  The resource
+will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/change_sender_compartment.py.html">here</a> to see an example of how to use change_sender_compartment API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.create_dkim">
+<code class="descname">create_dkim</code><span class="sig-paren">(</span><em>create_dkim_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.create_dkim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new DKIM for an email domain.
+This DKIM signs all approved senders in the tenancy that are in this email domain.
+Best security practices indicate to periodically rotate the DKIM that is doing the signing.
+When a second DKIM is applied, all senders seamlessly pick up the new key
+without interruption in signing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>create_dkim_details</strong> (<a class="reference internal" href="../models/oci.email.models.CreateDkimDetails.html#oci.email.models.CreateDkimDetails" title="oci.email.models.CreateDkimDetails"><em>oci.email.models.CreateDkimDetails</em></a>) – (required)
+The DKIM details.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request
+might be rejected.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.Dkim.html#oci.email.models.Dkim" title="oci.email.models.Dkim"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dkim</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/create_dkim.py.html">here</a> to see an example of how to use create_dkim API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.create_email_domain">
+<code class="descname">create_email_domain</code><span class="sig-paren">(</span><em>create_email_domain_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.create_email_domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new email domain. Avoid entering confidential information.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>create_email_domain_details</strong> (<a class="reference internal" href="../models/oci.email.models.CreateEmailDomainDetails.html#oci.email.models.CreateEmailDomainDetails" title="oci.email.models.CreateEmailDomainDetails"><em>oci.email.models.CreateEmailDomainDetails</em></a>) – (required)
+The email domain to create.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request
+might be rejected.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.EmailDomain.html#oci.email.models.EmailDomain" title="oci.email.models.EmailDomain"><code class="xref py py-class docutils literal notranslate"><span class="pre">EmailDomain</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/create_email_domain.py.html">here</a> to see an example of how to use create_email_domain API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.create_email_return_path">
+<code class="descname">create_email_return_path</code><span class="sig-paren">(</span><em>create_email_return_path_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.create_email_return_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new email return path. Avoid entering confidential information.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>create_email_return_path_details</strong> (<a class="reference internal" href="../models/oci.email.models.CreateEmailReturnPathDetails.html#oci.email.models.CreateEmailReturnPathDetails" title="oci.email.models.CreateEmailReturnPathDetails"><em>oci.email.models.CreateEmailReturnPathDetails</em></a>) – (required)
+The email return path to create.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request
+might be rejected.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.EmailReturnPath.html#oci.email.models.EmailReturnPath" title="oci.email.models.EmailReturnPath"><code class="xref py py-class docutils literal notranslate"><span class="pre">EmailReturnPath</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/create_email_return_path.py.html">here</a> to see an example of how to use create_email_return_path API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.create_sender">
+<code class="descname">create_sender</code><span class="sig-paren">(</span><em>create_sender_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.create_sender" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a sender for a tenancy in a given compartment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>create_sender_details</strong> (<a class="reference internal" href="../models/oci.email.models.CreateSenderDetails.html#oci.email.models.CreateSenderDetails" title="oci.email.models.CreateSenderDetails"><em>oci.email.models.CreateSenderDetails</em></a>) – (required)
+Create a sender.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.Sender.html#oci.email.models.Sender" title="oci.email.models.Sender"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sender</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/create_sender.py.html">here</a> to see an example of how to use create_sender API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.create_suppression">
+<code class="descname">create_suppression</code><span class="sig-paren">(</span><em>create_suppression_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.create_suppression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds recipient email addresses to the suppression list for a tenancy.
+Addresses added to the suppression list via the API are denoted as
+“MANUAL” in the <cite>reason</cite> field. <em>Note:</em> All email addresses added to the
+suppression list are normalized to include only lowercase letters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>create_suppression_details</strong> (<a class="reference internal" href="../models/oci.email.models.CreateSuppressionDetails.html#oci.email.models.CreateSuppressionDetails" title="oci.email.models.CreateSuppressionDetails"><em>oci.email.models.CreateSuppressionDetails</em></a>) – (required)
+Adds a single email address to the suppression list for a compartment’s tenancy.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.Suppression.html#oci.email.models.Suppression" title="oci.email.models.Suppression"><code class="xref py py-class docutils literal notranslate"><span class="pre">Suppression</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/create_suppression.py.html">here</a> to see an example of how to use create_suppression API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.delete_dkim">
+<code class="descname">delete_dkim</code><span class="sig-paren">(</span><em>dkim_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.delete_dkim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a DKIM.
+If this key is currently the active key for the email domain, deleting the key
+will stop signing the domain’s outgoing mail.
+DKIM keys are left in DELETING state for about a day to allow DKIM signatures on
+in-transit mail to be validated.
+Consider creating a new DKIM for this domain so the signing can be rotated to it instead of deletion.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dkim_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm">OCID</a> of this DKIM.</p>
+</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+Used for optimistic concurrency control. In the update or delete call for a resource, set the <cite>if-match</cite>
+parameter to the value of the etag from a previous get, create, or update response for that resource.  The resource
+will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/delete_dkim.py.html">here</a> to see an example of how to use delete_dkim API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.delete_email_domain">
+<code class="descname">delete_email_domain</code><span class="sig-paren">(</span><em>email_domain_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.delete_email_domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an email domain.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>email_domain_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm">OCID</a> of this email domain.</p>
+</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+Used for optimistic concurrency control. In the update or delete call for a resource, set the <cite>if-match</cite>
+parameter to the value of the etag from a previous get, create, or update response for that resource.  The resource
+will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/delete_email_domain.py.html">here</a> to see an example of how to use delete_email_domain API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.delete_email_return_path">
+<code class="descname">delete_email_return_path</code><span class="sig-paren">(</span><em>email_return_path_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.delete_email_return_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an email return path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>email_return_path_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm">OCID</a> of this email return path.</p>
+</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+Used for optimistic concurrency control. In the update or delete call for a resource, set the <cite>if-match</cite>
+parameter to the value of the etag from a previous get, create, or update response for that resource.  The resource
+will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/delete_email_return_path.py.html">here</a> to see an example of how to use delete_email_return_path API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.delete_sender">
+<code class="descname">delete_sender</code><span class="sig-paren">(</span><em>sender_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.delete_sender" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an approved sender for a tenancy in a given compartment for a
+provided <cite>senderId</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sender_id</strong> (<em>str</em>) – (required)
+The unique OCID of the sender.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+Used for optimistic concurrency control. In the update or delete call for a resource, set the <cite>if-match</cite>
+parameter to the value of the etag from a previous get, create, or update response for that resource.  The resource
+will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/delete_sender.py.html">here</a> to see an example of how to use delete_sender API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.delete_suppression">
+<code class="descname">delete_suppression</code><span class="sig-paren">(</span><em>suppression_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.delete_suppression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes a suppressed recipient email address from the suppression list
+for a tenancy in a given compartment for a provided <cite>suppressionId</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>suppression_id</strong> (<em>str</em>) – (required)
+The unique OCID of the suppression.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/delete_suppression.py.html">here</a> to see an example of how to use delete_suppression API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.get_dkim">
+<code class="descname">get_dkim</code><span class="sig-paren">(</span><em>dkim_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.get_dkim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the specified DKIM.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dkim_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm">OCID</a> of this DKIM.</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.Dkim.html#oci.email.models.Dkim" title="oci.email.models.Dkim"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dkim</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/get_dkim.py.html">here</a> to see an example of how to use get_dkim API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.get_email_configuration">
+<code class="descname">get_email_configuration</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.get_email_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns  email configuration associated with the specified compartment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID for the compartment.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.Configuration.html#oci.email.models.Configuration" title="oci.email.models.Configuration"><code class="xref py py-class docutils literal notranslate"><span class="pre">Configuration</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/get_email_configuration.py.html">here</a> to see an example of how to use get_email_configuration API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.get_email_domain">
+<code class="descname">get_email_domain</code><span class="sig-paren">(</span><em>email_domain_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.get_email_domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the specified email domain.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>email_domain_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm">OCID</a> of this email domain.</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.EmailDomain.html#oci.email.models.EmailDomain" title="oci.email.models.EmailDomain"><code class="xref py py-class docutils literal notranslate"><span class="pre">EmailDomain</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/get_email_domain.py.html">here</a> to see an example of how to use get_email_domain API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.get_email_return_path">
+<code class="descname">get_email_return_path</code><span class="sig-paren">(</span><em>email_return_path_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.get_email_return_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the specified email return path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>email_return_path_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm">OCID</a> of this email return path.</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.EmailReturnPath.html#oci.email.models.EmailReturnPath" title="oci.email.models.EmailReturnPath"><code class="xref py py-class docutils literal notranslate"><span class="pre">EmailReturnPath</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/get_email_return_path.py.html">here</a> to see an example of how to use get_email_return_path API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.get_sender">
+<code class="descname">get_sender</code><span class="sig-paren">(</span><em>sender_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.get_sender" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets an approved sender for a given <cite>senderId</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sender_id</strong> (<em>str</em>) – (required)
+The unique OCID of the sender.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.Sender.html#oci.email.models.Sender" title="oci.email.models.Sender"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sender</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/get_sender.py.html">here</a> to see an example of how to use get_sender API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.get_suppression">
+<code class="descname">get_suppression</code><span class="sig-paren">(</span><em>suppression_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.get_suppression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the details of a suppressed recipient email address for a given
+<cite>suppressionId</cite>. Each suppression is given a unique OCID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>suppression_id</strong> (<em>str</em>) – (required)
+The unique OCID of the suppression.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.Suppression.html#oci.email.models.Suppression" title="oci.email.models.Suppression"><code class="xref py py-class docutils literal notranslate"><span class="pre">Suppression</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/get_suppression.py.html">here</a> to see an example of how to use get_suppression API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.get_work_request">
+<code class="descname">get_work_request</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.get_work_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the status of the work request with the given ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The ID of the asynchronous request.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.WorkRequest.html#oci.email.models.WorkRequest" title="oci.email.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/get_work_request.py.html">here</a> to see an example of how to use get_work_request API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.list_dkims">
+<code class="descname">list_dkims</code><span class="sig-paren">(</span><em>email_domain_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.list_dkims" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists DKIMs for an email domain.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>email_domain_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm">OCID</a> of the email domain to which this DKIM belongs.</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>id</strong> (<em>str</em>) – (optional)
+A filter to only return resources that match the given id exactly.</li>
+<li><strong>name</strong> (<em>str</em>) – (optional)
+A filter to only return resources that match the given name exactly.</li>
+<li><strong>limit</strong> (<em>int</em>) – <p>(optional)
+For list pagination. The maximum number of results per page, or items to return in a
+paginated “List” call. <cite>1</cite> is the minimum, <cite>1000</cite> is the maximum. For important details about
+how pagination works, see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>page</strong> (<em>str</em>) – <p>(optional)
+For list pagination. The value of the opc-next-page response header from the previous “List” call.
+For important details about how pagination works,
+see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ascending or descending order.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+Filter returned list by specified lifecycle state. This parameter is case-insensitive.</p>
+<p>Allowed values are: “ACTIVE”, “CREATING”, “DELETING”, “DELETED”, “FAILED”, “INACTIVE”, “NEEDS_ATTENTION”, “UPDATING”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+Specifies the attribute with which to sort the DKIMs.</p>
+<p>Default: <cite>TIMECREATED</cite></p>
+<ul>
+<li><strong>TIMECREATED:</strong> Sorts by timeCreated.</li>
+<li><strong>NAME:</strong> Sorts by name.</li>
+<li><strong>ID:</strong> Sorts by id.</li>
+</ul>
+<p>Allowed values are: “TIMECREATED”, “ID”, “NAME”</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.DkimCollection.html#oci.email.models.DkimCollection" title="oci.email.models.DkimCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">DkimCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/list_dkims.py.html">here</a> to see an example of how to use list_dkims API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.list_email_domains">
+<code class="descname">list_email_domains</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.list_email_domains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists email domains in the specified compartment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID for the compartment.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>id</strong> (<em>str</em>) – (optional)
+A filter to only return resources that match the given id exactly.</li>
+<li><strong>name</strong> (<em>str</em>) – (optional)
+A filter to only return resources that match the given name exactly.</li>
+<li><strong>limit</strong> (<em>int</em>) – <p>(optional)
+For list pagination. The maximum number of results per page, or items to return in a
+paginated “List” call. <cite>1</cite> is the minimum, <cite>1000</cite> is the maximum. For important details about
+how pagination works, see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>page</strong> (<em>str</em>) – <p>(optional)
+For list pagination. The value of the opc-next-page response header from the previous “List” call.
+For important details about how pagination works,
+see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ascending or descending order.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+Filter returned list by specified lifecycle state. This parameter is case-insensitive.</p>
+<p>Allowed values are: “ACTIVE”, “CREATING”, “DELETING”, “DELETED”, “FAILED”, “UPDATING”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+Specifies the attribute with which to sort the email domains.</p>
+<p>Default: <cite>TIMECREATED</cite></p>
+<ul>
+<li><strong>TIMECREATED:</strong> Sorts by timeCreated.</li>
+<li><strong>NAME:</strong> Sorts by name.</li>
+<li><strong>ID:</strong> Sorts by id.</li>
+</ul>
+<p>Allowed values are: “TIMECREATED”, “ID”, “NAME”</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.EmailDomainCollection.html#oci.email.models.EmailDomainCollection" title="oci.email.models.EmailDomainCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">EmailDomainCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/list_email_domains.py.html">here</a> to see an example of how to use list_email_domains API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.list_email_return_paths">
+<code class="descname">list_email_return_paths</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.list_email_return_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists email return paths in the specified compartment or emaildomain.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>compartment_id</strong> (<em>str</em>) – (optional)
+The OCID for the compartment.</li>
+<li><strong>parent_resource_id</strong> (<em>str</em>) – <p>(optional)
+The <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm">OCID</a> of the Email Domain to which this Email Return Path belongs.</p>
+</li>
+<li><strong>id</strong> (<em>str</em>) – (optional)
+A filter to only return resources that match the given id exactly.</li>
+<li><strong>name</strong> (<em>str</em>) – (optional)
+A filter to only return resources that match the given name exactly.</li>
+<li><strong>limit</strong> (<em>int</em>) – <p>(optional)
+For list pagination. The maximum number of results per page, or items to return in a
+paginated “List” call. <cite>1</cite> is the minimum, <cite>1000</cite> is the maximum. For important details about
+how pagination works, see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>page</strong> (<em>str</em>) – <p>(optional)
+For list pagination. The value of the opc-next-page response header from the previous “List” call.
+For important details about how pagination works,
+see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ascending or descending order.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+Filter returned list by specified lifecycle state. This parameter is case-insensitive.</p>
+<p>Allowed values are: “ACTIVE”, “CREATING”, “DELETING”, “DELETED”, “FAILED”, “NEEDS_ATTENTION”, “UPDATING”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+Specifies the attribute with which to sort the return paths.</p>
+<p>Default: <cite>TIMECREATED</cite></p>
+<ul>
+<li><strong>TIMECREATED:</strong> Sorts by timeCreated.</li>
+<li><strong>NAME:</strong> Sorts by name.</li>
+<li><strong>ID:</strong> Sorts by id.</li>
+</ul>
+<p>Allowed values are: “TIMECREATED”, “ID”, “NAME”</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.EmailReturnPathCollection.html#oci.email.models.EmailReturnPathCollection" title="oci.email.models.EmailReturnPathCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">EmailReturnPathCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/list_email_return_paths.py.html">here</a> to see an example of how to use list_email_return_paths API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.list_senders">
+<code class="descname">list_senders</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.list_senders" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a collection of approved sender email addresses and sender IDs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID for the compartment.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+The current state of a sender.</p>
+<p>Allowed values are: “CREATING”, “ACTIVE”, “NEEDS_ATTENTION”, “INACTIVE”, “FAILED”, “DELETING”, “DELETED”</p>
+</li>
+<li><strong>domain</strong> (<em>str</em>) – (optional)
+A filter to only return resources that match the given domain exactly.</li>
+<li><strong>email_address</strong> (<em>str</em>) – (optional)
+The email address of the approved sender.</li>
+<li><strong>page</strong> (<em>str</em>) – <p>(optional)
+For list pagination. The value of the opc-next-page response header from the previous “List” call.
+For important details about how pagination works,
+see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>limit</strong> (<em>int</em>) – <p>(optional)
+For list pagination. The maximum number of results per page, or items to return in a
+paginated “List” call. <cite>1</cite> is the minimum, <cite>1000</cite> is the maximum. For important details about
+how pagination works, see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. The <cite>TIMECREATED</cite> value returns the list in in
+descending order by default. The <cite>EMAILADDRESS</cite> value returns the list in
+ascending order by default. Use the <cite>SortOrderQueryParam</cite> to change the
+direction of the returned list of items.</p>
+<p>Allowed values are: “TIMECREATED”, “EMAILADDRESS”</p>
+</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ascending or descending order.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.email.models.SenderSummary.html#oci.email.models.SenderSummary" title="oci.email.models.SenderSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">SenderSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/list_senders.py.html">here</a> to see an example of how to use list_senders API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.list_suppressions">
+<code class="descname">list_suppressions</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.list_suppressions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a list of suppressed recipient email addresses for a user. The
+<cite>compartmentId</cite> for suppressions must be a tenancy OCID. The returned list
+is sorted by creation time in descending order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID for the compartment.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>email_address</strong> (<em>str</em>) – (optional)
+The email address of the suppression.</li>
+<li><strong>time_created_greater_than_or_equal_to</strong> (<em>datetime</em>) – <p>(optional)
+Search for suppressions that were created within a specific date range,
+using this parameter to specify the earliest creation date for the
+returned list (inclusive). Specifying this parameter without the
+corresponding <cite>timeCreatedLessThan</cite> parameter will retrieve suppressions created from the
+given <cite>timeCreatedGreaterThanOrEqualTo</cite> to the current time, in “YYYY-MM-ddThh:mmZ” format with a
+Z offset, as defined by <a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC 3339</a>.</p>
+<p><strong>Example:</strong> 2016-12-19T16:39:57.600Z</p>
+</li>
+<li><strong>time_created_less_than</strong> (<em>datetime</em>) – <p>(optional)
+Search for suppressions that were created within a specific date range,
+using this parameter to specify the latest creation date for the returned
+list (exclusive). Specifying this parameter without the corresponding
+<cite>timeCreatedGreaterThanOrEqualTo</cite> parameter will retrieve all suppressions created before the
+specified end date, in “YYYY-MM-ddThh:mmZ” format with a Z offset, as
+defined by <a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC 3339</a>.</p>
+<p><strong>Example:</strong> 2016-12-19T16:39:57.600Z</p>
+</li>
+<li><strong>page</strong> (<em>str</em>) – <p>(optional)
+For list pagination. The value of the opc-next-page response header from the previous “List” call.
+For important details about how pagination works,
+see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>limit</strong> (<em>int</em>) – <p>(optional)
+For list pagination. The maximum number of results per page, or items to return in a
+paginated “List” call. <cite>1</cite> is the minimum, <cite>1000</cite> is the maximum. For important details about
+how pagination works, see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. The <cite>TIMECREATED</cite> value returns the list in in
+descending order by default. The <cite>EMAILADDRESS</cite> value returns the list in
+ascending order by default. Use the <cite>SortOrderQueryParam</cite> to change the
+direction of the returned list of items.</p>
+<p>Allowed values are: “TIMECREATED”, “EMAILADDRESS”</p>
+</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ascending or descending order.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.email.models.SuppressionSummary.html#oci.email.models.SuppressionSummary" title="oci.email.models.SuppressionSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">SuppressionSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/list_suppressions.py.html">here</a> to see an example of how to use list_suppressions API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.list_work_request_errors">
+<code class="descname">list_work_request_errors</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.list_work_request_errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a (paginated) list of errors for a given work request.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The ID of the asynchronous request.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>page</strong> (<em>str</em>) – <p>(optional)
+For list pagination. The value of the opc-next-page response header from the previous “List” call.
+For important details about how pagination works,
+see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>limit</strong> (<em>int</em>) – <p>(optional)
+For list pagination. The maximum number of results per page, or items to return in a
+paginated “List” call. <cite>1</cite> is the minimum, <cite>1000</cite> is the maximum. For important details about
+how pagination works, see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.WorkRequestErrorCollection.html#oci.email.models.WorkRequestErrorCollection" title="oci.email.models.WorkRequestErrorCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestErrorCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/list_work_request_errors.py.html">here</a> to see an example of how to use list_work_request_errors API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.list_work_request_logs">
+<code class="descname">list_work_request_logs</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.list_work_request_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a (paginated) list of logs for a given work request.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The ID of the asynchronous request.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>page</strong> (<em>str</em>) – <p>(optional)
+For list pagination. The value of the opc-next-page response header from the previous “List” call.
+For important details about how pagination works,
+see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>limit</strong> (<em>int</em>) – <p>(optional)
+For list pagination. The maximum number of results per page, or items to return in a
+paginated “List” call. <cite>1</cite> is the minimum, <cite>1000</cite> is the maximum. For important details about
+how pagination works, see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.WorkRequestLogEntryCollection.html#oci.email.models.WorkRequestLogEntryCollection" title="oci.email.models.WorkRequestLogEntryCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestLogEntryCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/list_work_request_logs.py.html">here</a> to see an example of how to use list_work_request_logs API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.list_work_requests">
+<code class="descname">list_work_requests</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.list_work_requests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the work requests in a compartment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID for the compartment.</li>
+<li><strong>work_request_id</strong> (<em>str</em>) – (optional)
+The ID of the asynchronous work request.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>page</strong> (<em>str</em>) – <p>(optional)
+For list pagination. The value of the opc-next-page response header from the previous “List” call.
+For important details about how pagination works,
+see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>limit</strong> (<em>int</em>) – <p>(optional)
+For list pagination. The maximum number of results per page, or items to return in a
+paginated “List” call. <cite>1</cite> is the minimum, <cite>1000</cite> is the maximum. For important details about
+how pagination works, see <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine">List Pagination</a>.</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.WorkRequestSummaryCollection.html#oci.email.models.WorkRequestSummaryCollection" title="oci.email.models.WorkRequestSummaryCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestSummaryCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/list_work_requests.py.html">here</a> to see an example of how to use list_work_requests API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.update_dkim">
+<code class="descname">update_dkim</code><span class="sig-paren">(</span><em>dkim_id</em>, <em>update_dkim_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.update_dkim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies a DKIM.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dkim_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm">OCID</a> of this DKIM.</p>
+</li>
+<li><strong>update_dkim_details</strong> (<a class="reference internal" href="../models/oci.email.models.UpdateDkimDetails.html#oci.email.models.UpdateDkimDetails" title="oci.email.models.UpdateDkimDetails"><em>oci.email.models.UpdateDkimDetails</em></a>) – (required)
+The new DKIM attributes to apply.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+Used for optimistic concurrency control. In the update or delete call for a resource, set the <cite>if-match</cite>
+parameter to the value of the etag from a previous get, create, or update response for that resource.  The resource
+will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/update_dkim.py.html">here</a> to see an example of how to use update_dkim API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.update_email_domain">
+<code class="descname">update_email_domain</code><span class="sig-paren">(</span><em>email_domain_id</em>, <em>update_email_domain_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.update_email_domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies an email domain.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>email_domain_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm">OCID</a> of this email domain.</p>
+</li>
+<li><strong>update_email_domain_details</strong> (<a class="reference internal" href="../models/oci.email.models.UpdateEmailDomainDetails.html#oci.email.models.UpdateEmailDomainDetails" title="oci.email.models.UpdateEmailDomainDetails"><em>oci.email.models.UpdateEmailDomainDetails</em></a>) – (required)
+The new email domain attributes to apply.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+Used for optimistic concurrency control. In the update or delete call for a resource, set the <cite>if-match</cite>
+parameter to the value of the etag from a previous get, create, or update response for that resource.  The resource
+will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/update_email_domain.py.html">here</a> to see an example of how to use update_email_domain API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.update_email_return_path">
+<code class="descname">update_email_return_path</code><span class="sig-paren">(</span><em>email_return_path_id</em>, <em>update_email_return_path_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.update_email_return_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies an email return path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>email_return_path_id</strong> (<em>str</em>) – <p>(required)
+The <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm">OCID</a> of this email return path.</p>
+</li>
+<li><strong>update_email_return_path_details</strong> (<a class="reference internal" href="../models/oci.email.models.UpdateEmailReturnPathDetails.html#oci.email.models.UpdateEmailReturnPathDetails" title="oci.email.models.UpdateEmailReturnPathDetails"><em>oci.email.models.UpdateEmailReturnPathDetails</em></a>) – (required)
+The new email return path attributes to apply.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+Used for optimistic concurrency control. In the update or delete call for a resource, set the <cite>if-match</cite>
+parameter to the value of the etag from a previous get, create, or update response for that resource.  The resource
+will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/update_email_return_path.py.html">here</a> to see an example of how to use update_email_return_path API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.email.EmailClient.update_sender">
+<code class="descname">update_sender</code><span class="sig-paren">(</span><em>sender_id</em>, <em>update_sender_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.email.EmailClient.update_sender" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces the set of tags for a sender with the tags provided. If either freeform
+or defined tags are omitted, the tags for that set remain the same. Each set must
+include the full set of tags for the sender, partial updates are not permitted.
+For more information about tagging, see <a class="reference external" href="https://docs.cloud.oracle.com/Content/General/Concepts/resourcetags.htm">Resource Tags</a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sender_id</strong> (<em>str</em>) – (required)
+The unique OCID of the sender.</li>
+<li><strong>update_sender_details</strong> (<a class="reference internal" href="../models/oci.email.models.UpdateSenderDetails.html#oci.email.models.UpdateSenderDetails" title="oci.email.models.UpdateSenderDetails"><em>oci.email.models.UpdateSenderDetails</em></a>) – (required)
+update details for sender.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+Used for optimistic concurrency control. In the update or delete call for a resource, set the <cite>if-match</cite>
+parameter to the value of the etag from a previous get, create, or update response for that resource.  The resource
+will be updated or deleted only if the etag you provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The request ID for tracing from the system</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.email.models.Sender.html#oci.email.models.Sender" title="oci.email.models.Sender"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sender</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/email/update_sender.py.html">here</a> to see an example of how to use update_sender API.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.email.EmailClientCompositeOperations.html" class="btn btn-neutral float-right" title="EmailClientCompositeOperations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../email.html" class="btn btn-neutral" title="Email" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

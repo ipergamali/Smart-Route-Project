@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Raw Requests &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Composite Operations and Waiters" href="waiters.html" />
+    <link rel="prev" title="Uploading Large Objects" href="upload-manager.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Raw Requests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-signer">Creating a Signer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#signer-with-user-ocid-and-private-key">Signer with user OCID and private key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instance-principals-based-signer">Instance Principals-based Signer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-signer">Using the Signer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-an-instance-principals-based-signer">Using an Instance Principals-based Signer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/landing.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Raw Requests</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/raw-requests.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <script type='text/javascript'>
+    var oldDocsHost = 'oracle-bare-metal-cloud-services-python-sdk';
+    if (window.location.href.indexOf(oldDocsHost) != -1) {
+        window.location.href = 'https://oracle-bare-metal-cloud-services-python-sdk.readthedocs.io/en/latest/deprecation-notice.html';
+    }
+</script><div class="section" id="raw-requests">
+<h1>Raw Requests<a class="headerlink" href="#raw-requests" title="Permalink to this headline">¶</a></h1>
+<p>The Python SDK exposes a custom <code class="xref py py-class docutils literal notranslate"><span class="pre">requests.auth.AuthBase</span></code> which you can use to sign non-standard calls.
+This can be helpful if you need to make an authenticated request to an alternate endpoint or to an
+Oracle Cloud Infrastructure API not yet supported in the SDK.</p>
+<div class="section" id="creating-a-signer">
+<h2>Creating a Signer<a class="headerlink" href="#creating-a-signer" title="Permalink to this headline">¶</a></h2>
+<p>The Signer used as part of making raw requests can be either an <a class="reference external" href="https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/callingservicesfrominstances.htm">Instance Principals-based</a> signer or one that uses a user OCID and private key.</p>
+<div class="section" id="signer-with-user-ocid-and-private-key">
+<h3>Signer with user OCID and private key<a class="headerlink" href="#signer-with-user-ocid-and-private-key" title="Permalink to this headline">¶</a></h3>
+<p>Constructing a Signer instance requires a few pieces of information.  By default, the SDK uses the values in
+the config file at <code class="docutils literal notranslate"><span class="pre">~/.oci/config</span></code>.  You can manually specify the required fields, or use a config loader
+to pull in the values from a file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">oci.signer</span> <span class="kn">import</span> <span class="n">Signer</span>
+<span class="n">auth</span> <span class="o">=</span> <span class="n">Signer</span><span class="p">(</span>
+    <span class="n">tenancy</span><span class="o">=</span><span class="s1">&#39;ocid1.tenancy.oc1..aaaaaaaa[...]&#39;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s1">&#39;ocid1.user.oc1..aaaaaaaa[...]&#39;</span><span class="p">,</span>
+    <span class="n">fingerprint</span><span class="o">=</span><span class="s1">&#39;20:3b:97:13:55:1c:[...]&#39;</span><span class="p">,</span>
+    <span class="n">private_key_file_location</span><span class="o">=</span><span class="s1">&#39;~/.oci/oci_api_key.pem&#39;</span><span class="p">,</span>
+    <span class="n">pass_phrase</span><span class="o">=</span><span class="s1">&#39;hunter2&#39;</span>  <span class="c1"># optional</span>
+<span class="p">)</span>
+
+
+<span class="c1"># Or load directly from a file</span>
+<span class="kn">from</span> <span class="nn">oci.config</span> <span class="kn">import</span> <span class="n">from_file</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">from_file</span><span class="p">(</span><span class="s1">&#39;~/.oci/config&#39;</span><span class="p">)</span>
+<span class="n">auth</span> <span class="o">=</span> <span class="n">Signer</span><span class="p">(</span>
+    <span class="n">tenancy</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;tenancy&#39;</span><span class="p">],</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">],</span>
+    <span class="n">fingerprint</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;fingerprint&#39;</span><span class="p">],</span>
+    <span class="n">private_key_file_location</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;key_file&#39;</span><span class="p">],</span>
+    <span class="n">pass_phrase</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;pass_phrase&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="instance-principals-based-signer">
+<h3>Instance Principals-based Signer<a class="headerlink" href="#instance-principals-based-signer" title="Permalink to this headline">¶</a></h3>
+<p>An Instance Principals-based signer can be created as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">oci</span>
+<span class="n">signer</span> <span class="o">=</span> <span class="n">oci</span><span class="o">.</span><span class="n">auth</span><span class="o">.</span><span class="n">signers</span><span class="o">.</span><span class="n">InstancePrincipalsSecurityTokenSigner</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>To customize timeouts while retrieving certificates from identity, you can now provide a custom retry strategy while creating the signer:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">oci</span>
+
+<span class="n">custom_strategy</span> <span class="o">=</span> <span class="n">oci</span><span class="o">.</span><span class="n">retry</span><span class="o">.</span><span class="n">RetryStrategyBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">add_max_attempts</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">get_retry_strategy</span><span class="p">()</span>
+<span class="n">signer_kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;retry_strategy&#39;</span><span class="p">:</span> <span class="n">custom_strategy</span><span class="p">}</span>
+<span class="n">signer</span> <span class="o">=</span> <span class="n">oci</span><span class="o">.</span><span class="n">auth</span><span class="o">.</span><span class="n">signers</span><span class="o">.</span><span class="n">InstancePrincipalsSecurityTokenSigner</span><span class="p">(</span><span class="o">**</span><span class="n">signer_kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="using-the-signer">
+<h2>Using the Signer<a class="headerlink" href="#using-the-signer" title="Permalink to this headline">¶</a></h2>
+<p>Once you have an instance of the auth handler, simply include it as the <code class="docutils literal notranslate"><span class="pre">auth=</span></code> param when using Requests.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://iaas.us-phoenix-1.oraclecloud.com/20160918/instances[...]&#39;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Remember that the result will come back in its raw form and is not unpacked into a model instance.
+You will need to handle the (de)serialization yourself.</p>
+<p>The following creates a new user by talking to the identity endpoint:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">endpoint</span> <span class="o">=</span> <span class="s1">&#39;https://identity.us-phoenix-1.oci.oraclecloud.com/20160918/users/&#39;</span>
+<span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;compartmentId&#39;</span><span class="p">:</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;tenancy&#39;</span><span class="p">],</span>  <span class="c1"># root compartment</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;TestUser&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Created with a raw request&#39;</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">)</span>
+
+<span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="section" id="using-an-instance-principals-based-signer">
+<h3>Using an Instance Principals-based Signer<a class="headerlink" href="#using-an-instance-principals-based-signer" title="Permalink to this headline">¶</a></h3>
+<p>The Instance Principals-based Signer uses a security token to authenticate calls against Oracle Cloud Infrastructure services. This token has an expiration time and the Signer will automatically handle refreshing the token when it is near expiry. However, it is possible that the security token held by the signer is valid (from an expiration time perspective) but the request fails with a 401 (NotAuthenticated) error because of, for example, changes in the dynamic group that an instance is a part of or the policies applied to that dynamic group.</p>
+<p>You can account for this by retrying on a 401. If the request fails with a 401 on a subsequent retry, this may point to other issues and you should not keep retrying in this circumstance. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">oci</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">signer</span> <span class="o">=</span> <span class="n">oci</span><span class="o">.</span><span class="n">auth</span><span class="o">.</span><span class="n">signers</span><span class="o">.</span><span class="n">InstancePrincipalsSecurityTokenSigner</span><span class="p">()</span>
+<span class="n">call_attempts</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">call_attempts</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="c1"># This call is just an example. Provide your own appropriate method (e.g. get() instead of post()), endpoint and body</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="n">signer</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">ok</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">response</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">call_attempts</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">401</span> <span class="ow">and</span> <span class="n">call_attempts</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">signer</span><span class="o">.</span><span class="n">refresh_security_token</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="waiters.html" class="btn btn-neutral float-right" title="Composite Operations and Waiters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="upload-manager.html" class="btn btn-neutral" title="Uploading Large Objects" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Composite Operations and Waiters &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Pagination" href="pagination.html" />
+    <link rel="prev" title="Raw Requests" href="raw-requests.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Composite Operations and Waiters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#composite-operations">Composite Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#waiters">Waiters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#passing-a-function-reference">Passing a Function Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#optional-attributes">Optional Attributes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/landing.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Composite Operations and Waiters</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/waiters.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <script type='text/javascript'>
+    var oldDocsHost = 'oracle-bare-metal-cloud-services-python-sdk';
+    if (window.location.href.indexOf(oldDocsHost) != -1) {
+        window.location.href = 'https://oracle-bare-metal-cloud-services-python-sdk.readthedocs.io/en/latest/deprecation-notice.html';
+    }
+</script><div class="section" id="composite-operations-and-waiters">
+<h1>Composite Operations and Waiters<a class="headerlink" href="#composite-operations-and-waiters" title="Permalink to this headline">¶</a></h1>
+<p>To wait until an attribute of a resource reaches a certain state, you can use composite operations or waiters.</p>
+<div class="section" id="composite-operations">
+<h2>Composite Operations<a class="headerlink" href="#composite-operations" title="Permalink to this headline">¶</a></h2>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">CompositeOperation</span></code> classes in the SDK (e.g. <a class="reference internal" href="api/core/client/oci.core.ComputeClientCompositeOperations.html#oci.core.ComputeClientCompositeOperations" title="oci.core.ComputeClientCompositeOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ComputeClientCompositeOperations</span></code></a>)
+to perform an action on a resource and wait for it to enter a particular state (or states). The <code class="docutils literal notranslate"><span class="pre">CompositeOperation</span></code> classes provide
+convenience methods so that you do not have to invoke an operation and then separately invoke a waiter.</p>
+<p>An example of using <code class="docutils literal notranslate"><span class="pre">CompositeOperation</span></code> classes can be found on <a class="reference external" href="https://github.com/oracle/oci-python-sdk/blob/master/examples/composite_operations_example.py">GitHub</a>.</p>
+</div>
+<div class="section" id="waiters">
+<h2>Waiters<a class="headerlink" href="#waiters" title="Permalink to this headline">¶</a></h2>
+<p>You can also use the <a class="reference internal" href="api/waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">wait_until()</span></code></a> function to wait for a resource to enter a particular state. As an example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">oci</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">oci</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">from_file</span><span class="p">()</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">oci</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ComputeClient</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">launch_instance</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">instance_ocid</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">id</span>
+
+<span class="c1"># We will get returned the result of the last get_instance call (in this case the one where the lifecycle state has moved to available).</span>
+<span class="c1"># We can inspect the .data attribute of this (i.e. get_instance_response.data) to get information about the instance</span>
+<span class="c1">#</span>
+<span class="c1"># Some items to note about the parameters provided:</span>
+<span class="c1">#</span>
+<span class="c1">#   - The first parameter is the client we&#39;ll use to call the service to retrieve data</span>
+<span class="c1">#   - The second parameter is the result of a service call. The wait_until function uses this to determine what service operation needs to be called. In the case below</span>
+<span class="c1">#     it will keep calling client.get_instance(instance_ocid) until the instance reaches the desired state</span>
+<span class="c1">#   - The third parameter is the name of the attribute we will check. The object we will check against is the result of calling .data on the result of the service call.</span>
+<span class="c1">#     Please consult the API reference for available attribute names you can use</span>
+<span class="c1">#   - The fourth parameter is the desired value. An equality (==) comparison is done</span>
+<span class="n">get_instance_response</span> <span class="o">=</span> <span class="n">oci</span><span class="o">.</span><span class="n">wait_until</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">client</span><span class="o">.</span><span class="n">get_instance</span><span class="p">(</span><span class="n">instance_ocid</span><span class="p">),</span> <span class="s1">&#39;lifecycle_state&#39;</span><span class="p">,</span> <span class="s1">&#39;RUNNING&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="passing-a-function-reference">
+<h3>Passing a Function Reference<a class="headerlink" href="#passing-a-function-reference" title="Permalink to this headline">¶</a></h3>
+<p>Instead of waiting for a single attribute to reach a given value, you can use a function reference, such as a Lambda expression or a reference to a defined function, to evaluate the response received from the service call. If this function returns a truthy value, the waiter stops waiting.</p>
+<p>For example, to wait until a volume backup reaches either the AVAILABLE or FAULTY state :</p>
+<ul>
+<li><p class="first">Using a Lambda expression:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">oci</span><span class="o">.</span><span class="n">wait_until</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">client</span><span class="o">.</span><span class="n">get_volume_backup</span><span class="p">(</span><span class="n">vol_backup_id</span><span class="p">),</span> <span class="n">evaluate_response</span><span class="o">=</span><span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">lifecycle_state</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;AVAILABLE&#39;</span><span class="p">,</span> <span class="s1">&#39;FAULTY&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Using a defined function:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">should_stop_waiting_volume_backup</span><span class="p">(</span><span class="n">response</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">lifecycle_state</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;AVAILABLE&#39;</span><span class="p">,</span> <span class="s1">&#39;FAULTY&#39;</span><span class="p">]</span>
+
+<span class="n">oci</span><span class="o">.</span><span class="n">wait_until</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">client</span><span class="o">.</span><span class="n">get_volume_backup</span><span class="p">(</span><span class="n">vol_backup_id</span><span class="p">),</span> <span class="n">evaluate_response</span><span class="o">=</span><span class="n">should_stop_waiting_volume_backup</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p>Be aware that if the inner function raises an exception, <code class="docutils literal notranslate"><span class="pre">oci.wait_until()</span></code> will not be called. In the preceding example, if <code class="docutils literal notranslate"><span class="pre">client.get_volume_backup(volume_backup_id)</span></code> raises an exception, <code class="docutils literal notranslate"><span class="pre">oci.wait_until()</span></code> will not be called. This happens even if the inner function raises a Not Found exception and <code class="docutils literal notranslate"><span class="pre">succeed_on_not_found=True</span></code> is passed to <code class="docutils literal notranslate"><span class="pre">oci.wait_until()</span></code>.</p>
+</div>
+<div class="section" id="optional-attributes">
+<h3>Optional Attributes<a class="headerlink" href="#optional-attributes" title="Permalink to this headline">¶</a></h3>
+<p>In addition to these base parameters, <code class="docutils literal notranslate"><span class="pre">wait_until()</span></code> can accept optional attributes to control the maximum amount of time it will wait  and the time between calls to the service. For more information on the optional parameters, see the documentation on the <a class="reference internal" href="api/waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">wait_until()</span></code></a> function.</p>
+<p>For a more comprehensive sample, please see our <a class="reference external" href="https://github.com/oracle/oci-python-sdk/blob/master/examples/wait_for_resource_in_state.py">examples</a> on GitHub.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pagination.html" class="btn btn-neutral float-right" title="Pagination" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="raw-requests.html" class="btn btn-neutral" title="Raw Requests" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

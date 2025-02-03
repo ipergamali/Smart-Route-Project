@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using FIPS-validated Libraries &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Forward Compatibility" href="forward-compatibility.html" />
+    <link rel="prev" title="Configuration" href="configuration.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using FIPS-validated Libraries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#enabling-fips-mode-programmatically">Enabling FIPS Mode Programmatically</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-the-environment-variables">Setting the Environment Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#verifying-the-configuration">Verifying the Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/landing.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Using FIPS-validated Libraries</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/fips-libraries.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <script type='text/javascript'>
+    var oldDocsHost = 'oracle-bare-metal-cloud-services-python-sdk';
+    if (window.location.href.indexOf(oldDocsHost) != -1) {
+        window.location.href = 'https://oracle-bare-metal-cloud-services-python-sdk.readthedocs.io/en/latest/deprecation-notice.html';
+    }
+</script><div class="section" id="using-fips-validated-libraries">
+<h1>Using FIPS-validated Libraries<a class="headerlink" href="#using-fips-validated-libraries" title="Permalink to this headline">¶</a></h1>
+<p>The SDK can be configured to use FIPS-validated libcrypto library. You can set it programmatically on a per session basis or persistently across the environment. Both approaches require the path to the libcrypto library on your system.</p>
+<div class="section" id="enabling-fips-mode-programmatically">
+<h2>Enabling FIPS Mode Programmatically<a class="headerlink" href="#enabling-fips-mode-programmatically" title="Permalink to this headline">¶</a></h2>
+<p>To configure the SDK to use a FIPS-validated libcrypto library, execute the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">oci</span><span class="o">.</span><span class="n">fips</span><span class="o">.</span><span class="n">enable_fips_mode</span><span class="p">(</span><span class="s1">&#39;&lt;/path/to/libcrypto.x.x.x&gt;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="setting-the-environment-variables">
+<h2>Setting the Environment Variables<a class="headerlink" href="#setting-the-environment-variables" title="Permalink to this headline">¶</a></h2>
+<p>If you do not want to run <code class="docutils literal notranslate"><span class="pre">enable_fips_mode()</span></code> for every session, you can set an environment variable so that the SDK uses the library every time.</p>
+<p>Set the one of the following environment variables to the path to the libcrypto library, listed according to priority:</p>
+<ul class="simple">
+<li>FIPS_LIBCRYPTO_PATH</li>
+<li>OCI_PYTHON_SDK_FIPS_LIBCRYPTO_PATH</li>
+</ul>
+</div>
+<div class="section" id="verifying-the-configuration">
+<h2>Verifying the Configuration<a class="headerlink" href="#verifying-the-configuration" title="Permalink to this headline">¶</a></h2>
+<p>To verify that the SDK is using the libcrypto library that you specified, execute the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">oci</span><span class="o">.</span><span class="n">fips</span><span class="o">.</span><span class="n">is_fips_mode</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This should return True, indicating that the SDK is using the library specified by the environment variable.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="forward-compatibility.html" class="btn btn-neutral float-right" title="Forward Compatibility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="configuration.html" class="btn btn-neutral" title="Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

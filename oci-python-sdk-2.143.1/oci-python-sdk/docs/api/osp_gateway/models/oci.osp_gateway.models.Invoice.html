@@ -1,0 +1,1145 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Invoice &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="InvoiceCollection" href="oci.osp_gateway.models.InvoiceCollection.html" />
+    <link rel="prev" title="Format" href="oci.osp_gateway.models.Format.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.osp_gateway.AddressRuleServiceClient.html">AddressRuleServiceClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.osp_gateway.AddressServiceClient.html">AddressServiceClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.osp_gateway.InvoiceServiceClient.html">InvoiceServiceClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.osp_gateway.SubscriptionServiceClient.html">SubscriptionServiceClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.osp_gateway.AddressRuleServiceClientCompositeOperations.html">AddressRuleServiceClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.osp_gateway.AddressServiceClientCompositeOperations.html">AddressServiceClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.osp_gateway.InvoiceServiceClientCompositeOperations.html">InvoiceServiceClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.osp_gateway.SubscriptionServiceClientCompositeOperations.html">SubscriptionServiceClientCompositeOperations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../osp_gateway.html#models">Models</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.Address.html">Address</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.AddressRule.html">AddressRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.AddressTypeRule.html">AddressTypeRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.AuthorizeSubscriptionPaymentDetails.html">AuthorizeSubscriptionPaymentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.AuthorizeSubscriptionPaymentReceipt.html">AuthorizeSubscriptionPaymentReceipt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.BillToAddress.html">BillToAddress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.ContactTypeRule.html">ContactTypeRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.Country.html">Country</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.CreditCardPaymentDetail.html">CreditCardPaymentDetail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.CreditCardPaymentOption.html">CreditCardPaymentOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.Currency.html">Currency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.EcheckPaymentDetail.html">EcheckPaymentDetail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.Field.html">Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.Format.html">Format</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Invoice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.InvoiceCollection.html">InvoiceCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.InvoiceLineCollection.html">InvoiceLineCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.InvoiceLineSummary.html">InvoiceLineSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.InvoiceSummary.html">InvoiceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.Label.html">Label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.MerchantDefinedData.html">MerchantDefinedData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.OtherPaymentDetail.html">OtherPaymentDetail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.PayInvoiceDetails.html">PayInvoiceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.PayInvoiceReceipt.html">PayInvoiceReceipt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.PaySubscriptionDetails.html">PaySubscriptionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.PaySubscriptionReceipt.html">PaySubscriptionReceipt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.PaymentDetail.html">PaymentDetail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.PaymentGateway.html">PaymentGateway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.PaymentOption.html">PaymentOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.PaypalPaymentDetail.html">PaypalPaymentDetail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.PaypalPaymentOption.html">PaypalPaymentOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.Subscription.html">Subscription</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.SubscriptionCollection.html">SubscriptionCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.SubscriptionSummary.html">SubscriptionSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.TaxInfo.html">TaxInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.TaxTypeRule.html">TaxTypeRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.UpdateSubscriptionDetails.html">UpdateSubscriptionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.ValueSetEntity.html">ValueSetEntity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.VerifyAddressDetails.html">VerifyAddressDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.osp_gateway.models.VerifyAddressReceipt.html">VerifyAddressReceipt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../osp_gateway.html">Osp Gateway</a> &raquo;</li>
+        
+      <li>Invoice</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/osp_gateway/models/oci.osp_gateway.models.Invoice.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="invoice">
+<h1>Invoice<a class="headerlink" href="#invoice" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.osp_gateway.models.Invoice">
+<em class="property">class </em><code class="descclassname">oci.osp_gateway.models.</code><code class="descname">Invoice</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.osp_gateway.models.Invoice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Invoice details</p>
+<p><strong>Attributes</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.INVOICE_STATUS_CLOSED" title="oci.osp_gateway.models.Invoice.INVOICE_STATUS_CLOSED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INVOICE_STATUS_CLOSED</span></code></a></td>
+<td>A constant which can be used with the invoice_status property of a Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.INVOICE_STATUS_OPEN" title="oci.osp_gateway.models.Invoice.INVOICE_STATUS_OPEN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INVOICE_STATUS_OPEN</span></code></a></td>
+<td>A constant which can be used with the invoice_status property of a Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.INVOICE_STATUS_PAST_DUE" title="oci.osp_gateway.models.Invoice.INVOICE_STATUS_PAST_DUE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INVOICE_STATUS_PAST_DUE</span></code></a></td>
+<td>A constant which can be used with the invoice_status property of a Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.INVOICE_STATUS_PAYMENT_SUBMITTED" title="oci.osp_gateway.models.Invoice.INVOICE_STATUS_PAYMENT_SUBMITTED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INVOICE_STATUS_PAYMENT_SUBMITTED</span></code></a></td>
+<td>A constant which can be used with the invoice_status property of a Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_CONSULTING" title="oci.osp_gateway.models.Invoice.INVOICE_TYPE_CONSULTING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INVOICE_TYPE_CONSULTING</span></code></a></td>
+<td>A constant which can be used with the invoice_type property of a Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_EDUCATION" title="oci.osp_gateway.models.Invoice.INVOICE_TYPE_EDUCATION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INVOICE_TYPE_EDUCATION</span></code></a></td>
+<td>A constant which can be used with the invoice_type property of a Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_HARDWARE" title="oci.osp_gateway.models.Invoice.INVOICE_TYPE_HARDWARE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INVOICE_TYPE_HARDWARE</span></code></a></td>
+<td>A constant which can be used with the invoice_type property of a Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_LICENSE" title="oci.osp_gateway.models.Invoice.INVOICE_TYPE_LICENSE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INVOICE_TYPE_LICENSE</span></code></a></td>
+<td>A constant which can be used with the invoice_type property of a Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_SERVICE" title="oci.osp_gateway.models.Invoice.INVOICE_TYPE_SERVICE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INVOICE_TYPE_SERVICE</span></code></a></td>
+<td>A constant which can be used with the invoice_type property of a Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_SUBSCRIPTION" title="oci.osp_gateway.models.Invoice.INVOICE_TYPE_SUBSCRIPTION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INVOICE_TYPE_SUBSCRIPTION</span></code></a></td>
+<td>A constant which can be used with the invoice_type property of a Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_SUPPORT" title="oci.osp_gateway.models.Invoice.INVOICE_TYPE_SUPPORT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INVOICE_TYPE_SUPPORT</span></code></a></td>
+<td>A constant which can be used with the invoice_type property of a Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_USAGE" title="oci.osp_gateway.models.Invoice.INVOICE_TYPE_USAGE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INVOICE_TYPE_USAGE</span></code></a></td>
+<td>A constant which can be used with the invoice_type property of a Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.bill_to_address" title="oci.osp_gateway.models.Invoice.bill_to_address"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bill_to_address</span></code></a></td>
+<td>Gets the bill_to_address of this Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.currency" title="oci.osp_gateway.models.Invoice.currency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">currency</span></code></a></td>
+<td>Gets the currency of this Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.internal_invoice_id" title="oci.osp_gateway.models.Invoice.internal_invoice_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">internal_invoice_id</span></code></a></td>
+<td>Gets the internal_invoice_id of this Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.invoice_amount" title="oci.osp_gateway.models.Invoice.invoice_amount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invoice_amount</span></code></a></td>
+<td>Gets the invoice_amount of this Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.invoice_amount_adjusted" title="oci.osp_gateway.models.Invoice.invoice_amount_adjusted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invoice_amount_adjusted</span></code></a></td>
+<td>Gets the invoice_amount_adjusted of this Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.invoice_amount_applied" title="oci.osp_gateway.models.Invoice.invoice_amount_applied"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invoice_amount_applied</span></code></a></td>
+<td>Gets the invoice_amount_applied of this Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.invoice_amount_credited" title="oci.osp_gateway.models.Invoice.invoice_amount_credited"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invoice_amount_credited</span></code></a></td>
+<td>Gets the invoice_amount_credited of this Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.invoice_amount_due" title="oci.osp_gateway.models.Invoice.invoice_amount_due"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invoice_amount_due</span></code></a></td>
+<td>Gets the invoice_amount_due of this Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.invoice_id" title="oci.osp_gateway.models.Invoice.invoice_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invoice_id</span></code></a></td>
+<td><strong>[Required]</strong> Gets the invoice_id of this Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.invoice_number" title="oci.osp_gateway.models.Invoice.invoice_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invoice_number</span></code></a></td>
+<td>Gets the invoice_number of this Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.invoice_po_number" title="oci.osp_gateway.models.Invoice.invoice_po_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invoice_po_number</span></code></a></td>
+<td>Gets the invoice_po_number of this Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.invoice_ref_number" title="oci.osp_gateway.models.Invoice.invoice_ref_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invoice_ref_number</span></code></a></td>
+<td>Gets the invoice_ref_number of this Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.invoice_status" title="oci.osp_gateway.models.Invoice.invoice_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invoice_status</span></code></a></td>
+<td>Gets the invoice_status of this Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.invoice_type" title="oci.osp_gateway.models.Invoice.invoice_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">invoice_type</span></code></a></td>
+<td>Gets the invoice_type of this Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.is_credit_card_payable" title="oci.osp_gateway.models.Invoice.is_credit_card_payable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_credit_card_payable</span></code></a></td>
+<td>Gets the is_credit_card_payable of this Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.is_display_download_pdf" title="oci.osp_gateway.models.Invoice.is_display_download_pdf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_display_download_pdf</span></code></a></td>
+<td>Gets the is_display_download_pdf of this Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.is_payable" title="oci.osp_gateway.models.Invoice.is_payable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_payable</span></code></a></td>
+<td>Gets the is_payable of this Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.is_pdf_email_available" title="oci.osp_gateway.models.Invoice.is_pdf_email_available"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_pdf_email_available</span></code></a></td>
+<td>Gets the is_pdf_email_available of this Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.last_payment_detail" title="oci.osp_gateway.models.Invoice.last_payment_detail"><code class="xref py py-obj docutils literal notranslate"><span class="pre">last_payment_detail</span></code></a></td>
+<td>Gets the last_payment_detail of this Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.payment_terms" title="oci.osp_gateway.models.Invoice.payment_terms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">payment_terms</span></code></a></td>
+<td>Gets the payment_terms of this Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.preferred_email" title="oci.osp_gateway.models.Invoice.preferred_email"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preferred_email</span></code></a></td>
+<td>Gets the preferred_email of this Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.subscription_ids" title="oci.osp_gateway.models.Invoice.subscription_ids"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subscription_ids</span></code></a></td>
+<td>Gets the subscription_ids of this Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.tax" title="oci.osp_gateway.models.Invoice.tax"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tax</span></code></a></td>
+<td>Gets the tax of this Invoice.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.time_invoice" title="oci.osp_gateway.models.Invoice.time_invoice"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_invoice</span></code></a></td>
+<td>Gets the time_invoice of this Invoice.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.time_invoice_due" title="oci.osp_gateway.models.Invoice.time_invoice_due"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_invoice_due</span></code></a></td>
+<td>Gets the time_invoice_due of this Invoice.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.osp_gateway.models.Invoice.__init__" title="oci.osp_gateway.models.Invoice.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(**kwargs)</td>
+<td>Initializes a new Invoice object with values from keyword arguments.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.INVOICE_STATUS_CLOSED">
+<code class="descname">INVOICE_STATUS_CLOSED</code><em class="property"> = 'CLOSED'</em><a class="headerlink" href="#oci.osp_gateway.models.Invoice.INVOICE_STATUS_CLOSED" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the invoice_status property of a Invoice.
+This constant has a value of “CLOSED”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.INVOICE_STATUS_OPEN">
+<code class="descname">INVOICE_STATUS_OPEN</code><em class="property"> = 'OPEN'</em><a class="headerlink" href="#oci.osp_gateway.models.Invoice.INVOICE_STATUS_OPEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the invoice_status property of a Invoice.
+This constant has a value of “OPEN”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.INVOICE_STATUS_PAST_DUE">
+<code class="descname">INVOICE_STATUS_PAST_DUE</code><em class="property"> = 'PAST_DUE'</em><a class="headerlink" href="#oci.osp_gateway.models.Invoice.INVOICE_STATUS_PAST_DUE" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the invoice_status property of a Invoice.
+This constant has a value of “PAST_DUE”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.INVOICE_STATUS_PAYMENT_SUBMITTED">
+<code class="descname">INVOICE_STATUS_PAYMENT_SUBMITTED</code><em class="property"> = 'PAYMENT_SUBMITTED'</em><a class="headerlink" href="#oci.osp_gateway.models.Invoice.INVOICE_STATUS_PAYMENT_SUBMITTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the invoice_status property of a Invoice.
+This constant has a value of “PAYMENT_SUBMITTED”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.INVOICE_TYPE_CONSULTING">
+<code class="descname">INVOICE_TYPE_CONSULTING</code><em class="property"> = 'CONSULTING'</em><a class="headerlink" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_CONSULTING" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the invoice_type property of a Invoice.
+This constant has a value of “CONSULTING”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.INVOICE_TYPE_EDUCATION">
+<code class="descname">INVOICE_TYPE_EDUCATION</code><em class="property"> = 'EDUCATION'</em><a class="headerlink" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_EDUCATION" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the invoice_type property of a Invoice.
+This constant has a value of “EDUCATION”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.INVOICE_TYPE_HARDWARE">
+<code class="descname">INVOICE_TYPE_HARDWARE</code><em class="property"> = 'HARDWARE'</em><a class="headerlink" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_HARDWARE" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the invoice_type property of a Invoice.
+This constant has a value of “HARDWARE”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.INVOICE_TYPE_LICENSE">
+<code class="descname">INVOICE_TYPE_LICENSE</code><em class="property"> = 'LICENSE'</em><a class="headerlink" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_LICENSE" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the invoice_type property of a Invoice.
+This constant has a value of “LICENSE”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.INVOICE_TYPE_SERVICE">
+<code class="descname">INVOICE_TYPE_SERVICE</code><em class="property"> = 'SERVICE'</em><a class="headerlink" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_SERVICE" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the invoice_type property of a Invoice.
+This constant has a value of “SERVICE”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.INVOICE_TYPE_SUBSCRIPTION">
+<code class="descname">INVOICE_TYPE_SUBSCRIPTION</code><em class="property"> = 'SUBSCRIPTION'</em><a class="headerlink" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_SUBSCRIPTION" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the invoice_type property of a Invoice.
+This constant has a value of “SUBSCRIPTION”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.INVOICE_TYPE_SUPPORT">
+<code class="descname">INVOICE_TYPE_SUPPORT</code><em class="property"> = 'SUPPORT'</em><a class="headerlink" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_SUPPORT" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the invoice_type property of a Invoice.
+This constant has a value of “SUPPORT”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.INVOICE_TYPE_USAGE">
+<code class="descname">INVOICE_TYPE_USAGE</code><em class="property"> = 'USAGE'</em><a class="headerlink" href="#oci.osp_gateway.models.Invoice.INVOICE_TYPE_USAGE" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the invoice_type property of a Invoice.
+This constant has a value of “USAGE”</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.osp_gateway.models.Invoice.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.osp_gateway.models.Invoice.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new Invoice object with values from keyword arguments.
+The following keyword arguments are supported (corresponding to the getters/setters of this class):</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>invoice_id</strong> (<em>str</em>) – The value to assign to the invoice_id property of this Invoice.</li>
+<li><strong>invoice_number</strong> (<em>str</em>) – The value to assign to the invoice_number property of this Invoice.</li>
+<li><strong>internal_invoice_id</strong> (<em>str</em>) – The value to assign to the internal_invoice_id property of this Invoice.</li>
+<li><strong>is_credit_card_payable</strong> (<em>bool</em>) – The value to assign to the is_credit_card_payable property of this Invoice.</li>
+<li><strong>time_invoice</strong> (<em>datetime</em>) – The value to assign to the time_invoice property of this Invoice.</li>
+<li><strong>tax</strong> (<em>float</em>) – The value to assign to the tax property of this Invoice.</li>
+<li><strong>invoice_amount</strong> (<em>float</em>) – The value to assign to the invoice_amount property of this Invoice.</li>
+<li><strong>invoice_amount_due</strong> (<em>float</em>) – The value to assign to the invoice_amount_due property of this Invoice.</li>
+<li><strong>invoice_amount_credited</strong> (<em>float</em>) – The value to assign to the invoice_amount_credited property of this Invoice.</li>
+<li><strong>invoice_amount_adjusted</strong> (<em>float</em>) – The value to assign to the invoice_amount_adjusted property of this Invoice.</li>
+<li><strong>invoice_amount_applied</strong> (<em>float</em>) – The value to assign to the invoice_amount_applied property of this Invoice.</li>
+<li><strong>currency</strong> (<a class="reference internal" href="oci.osp_gateway.models.Currency.html#oci.osp_gateway.models.Currency" title="oci.osp_gateway.models.Currency"><em>oci.osp_gateway.models.Currency</em></a>) – The value to assign to the currency property of this Invoice.</li>
+<li><strong>invoice_type</strong> (<em>str</em>) – The value to assign to the invoice_type property of this Invoice.
+Allowed values for this property are: “HARDWARE”, “SUBSCRIPTION”, “SUPPORT”, “LICENSE”, “EDUCATION”, “CONSULTING”, “SERVICE”, “USAGE”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>time_invoice_due</strong> (<em>datetime</em>) – The value to assign to the time_invoice_due property of this Invoice.</li>
+<li><strong>invoice_ref_number</strong> (<em>str</em>) – The value to assign to the invoice_ref_number property of this Invoice.</li>
+<li><strong>invoice_po_number</strong> (<em>str</em>) – The value to assign to the invoice_po_number property of this Invoice.</li>
+<li><strong>invoice_status</strong> (<em>str</em>) – The value to assign to the invoice_status property of this Invoice.
+Allowed values for this property are: “OPEN”, “PAST_DUE”, “PAYMENT_SUBMITTED”, “CLOSED”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>preferred_email</strong> (<em>str</em>) – The value to assign to the preferred_email property of this Invoice.</li>
+<li><strong>is_pdf_email_available</strong> (<em>bool</em>) – The value to assign to the is_pdf_email_available property of this Invoice.</li>
+<li><strong>is_display_download_pdf</strong> (<em>bool</em>) – The value to assign to the is_display_download_pdf property of this Invoice.</li>
+<li><strong>is_payable</strong> (<em>bool</em>) – The value to assign to the is_payable property of this Invoice.</li>
+<li><strong>payment_terms</strong> (<em>str</em>) – The value to assign to the payment_terms property of this Invoice.</li>
+<li><strong>last_payment_detail</strong> (<a class="reference internal" href="oci.osp_gateway.models.PaymentDetail.html#oci.osp_gateway.models.PaymentDetail" title="oci.osp_gateway.models.PaymentDetail"><em>oci.osp_gateway.models.PaymentDetail</em></a>) – The value to assign to the last_payment_detail property of this Invoice.</li>
+<li><strong>bill_to_address</strong> (<a class="reference internal" href="oci.osp_gateway.models.BillToAddress.html#oci.osp_gateway.models.BillToAddress" title="oci.osp_gateway.models.BillToAddress"><em>oci.osp_gateway.models.BillToAddress</em></a>) – The value to assign to the bill_to_address property of this Invoice.</li>
+<li><strong>subscription_ids</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – The value to assign to the subscription_ids property of this Invoice.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.bill_to_address">
+<code class="descname">bill_to_address</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.bill_to_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the bill_to_address of this Invoice.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The bill_to_address of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.osp_gateway.models.BillToAddress.html#oci.osp_gateway.models.BillToAddress" title="oci.osp_gateway.models.BillToAddress">oci.osp_gateway.models.BillToAddress</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.currency">
+<code class="descname">currency</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.currency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the currency of this Invoice.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The currency of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.osp_gateway.models.Currency.html#oci.osp_gateway.models.Currency" title="oci.osp_gateway.models.Currency">oci.osp_gateway.models.Currency</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.internal_invoice_id">
+<code class="descname">internal_invoice_id</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.internal_invoice_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the internal_invoice_id of this Invoice.
+Transaction identifier</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The internal_invoice_id of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.invoice_amount">
+<code class="descname">invoice_amount</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.invoice_amount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the invoice_amount of this Invoice.
+Total amount of invoice</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The invoice_amount of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.invoice_amount_adjusted">
+<code class="descname">invoice_amount_adjusted</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.invoice_amount_adjusted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the invoice_amount_adjusted of this Invoice.
+Invoice amount adjust</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The invoice_amount_adjusted of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.invoice_amount_applied">
+<code class="descname">invoice_amount_applied</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.invoice_amount_applied" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the invoice_amount_applied of this Invoice.
+Invoice amount applied</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The invoice_amount_applied of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.invoice_amount_credited">
+<code class="descname">invoice_amount_credited</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.invoice_amount_credited" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the invoice_amount_credited of this Invoice.
+Invoice amount credit</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The invoice_amount_credited of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.invoice_amount_due">
+<code class="descname">invoice_amount_due</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.invoice_amount_due" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the invoice_amount_due of this Invoice.
+Balance of invoice</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The invoice_amount_due of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.invoice_id">
+<code class="descname">invoice_id</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.invoice_id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the invoice_id of this Invoice.
+Invoice identifier which is generated on the on-premise sie. Pls note this is not an OCID</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The invoice_id of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.invoice_number">
+<code class="descname">invoice_number</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.invoice_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the invoice_number of this Invoice.
+Invoice external reference</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The invoice_number of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.invoice_po_number">
+<code class="descname">invoice_po_number</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.invoice_po_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the invoice_po_number of this Invoice.
+Invoice PO number</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The invoice_po_number of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.invoice_ref_number">
+<code class="descname">invoice_ref_number</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.invoice_ref_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the invoice_ref_number of this Invoice.
+Invoice reference number</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The invoice_ref_number of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.invoice_status">
+<code class="descname">invoice_status</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.invoice_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the invoice_status of this Invoice.
+Invoice status</p>
+<p>Allowed values for this property are: “OPEN”, “PAST_DUE”, “PAYMENT_SUBMITTED”, “CLOSED”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The invoice_status of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.invoice_type">
+<code class="descname">invoice_type</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.invoice_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the invoice_type of this Invoice.
+Type of invoice</p>
+<p>Allowed values for this property are: “HARDWARE”, “SUBSCRIPTION”, “SUPPORT”, “LICENSE”, “EDUCATION”, “CONSULTING”, “SERVICE”, “USAGE”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The invoice_type of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.is_credit_card_payable">
+<code class="descname">is_credit_card_payable</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.is_credit_card_payable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_credit_card_payable of this Invoice.
+Is credit card payment eligible</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_credit_card_payable of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.is_display_download_pdf">
+<code class="descname">is_display_download_pdf</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.is_display_download_pdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_display_download_pdf of this Invoice.
+Is pdf download access allowed</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_display_download_pdf of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.is_payable">
+<code class="descname">is_payable</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.is_payable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_payable of this Invoice.
+Whether invoice can be payed</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_payable of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.is_pdf_email_available">
+<code class="descname">is_pdf_email_available</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.is_pdf_email_available" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_pdf_email_available of this Invoice.
+Is emailing pdf allowed</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The is_pdf_email_available of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.last_payment_detail">
+<code class="descname">last_payment_detail</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.last_payment_detail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the last_payment_detail of this Invoice.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The last_payment_detail of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="oci.osp_gateway.models.PaymentDetail.html#oci.osp_gateway.models.PaymentDetail" title="oci.osp_gateway.models.PaymentDetail">oci.osp_gateway.models.PaymentDetail</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.payment_terms">
+<code class="descname">payment_terms</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.payment_terms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the payment_terms of this Invoice.
+Payment terms</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The payment_terms of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.preferred_email">
+<code class="descname">preferred_email</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.preferred_email" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the preferred_email of this Invoice.
+Preferred Email on the invoice</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The preferred_email of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.subscription_ids">
+<code class="descname">subscription_ids</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.subscription_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the subscription_ids of this Invoice.
+List of subscription identifiers</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The subscription_ids of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.tax">
+<code class="descname">tax</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.tax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the tax of this Invoice.
+Tax of invoice amount</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The tax of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.time_invoice">
+<code class="descname">time_invoice</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.time_invoice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_invoice of this Invoice.
+Date of invoice</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_invoice of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.osp_gateway.models.Invoice.time_invoice_due">
+<code class="descname">time_invoice_due</code><a class="headerlink" href="#oci.osp_gateway.models.Invoice.time_invoice_due" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_invoice_due of this Invoice.
+Due date of invoice</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_invoice_due of this Invoice.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.osp_gateway.models.InvoiceCollection.html" class="btn btn-neutral float-right" title="InvoiceCollection" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.osp_gateway.models.Format.html" class="btn btn-neutral" title="Format" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

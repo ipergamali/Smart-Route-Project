@@ -1,0 +1,583 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Generative Ai &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GenerativeAiClient" href="generative_ai/client/oci.generative_ai.GenerativeAiClient.html" />
+    <link rel="prev" title="WorkRequestSummaryCollection" href="fusion_apps/models/oci.fusion_apps.models.WorkRequestSummaryCollection.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Generative Ai</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generative_ai/client/oci.generative_ai.GenerativeAiClient.html">GenerativeAiClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generative_ai/client/oci.generative_ai.GenerativeAiClientCompositeOperations.html">GenerativeAiClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models">Models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ChangeDedicatedAiClusterCompartmentDetails.html">ChangeDedicatedAiClusterCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ChangeEndpointCompartmentDetails.html">ChangeEndpointCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ChangeModelCompartmentDetails.html">ChangeModelCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ChatModelMetrics.html">ChatModelMetrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ContentModerationConfig.html">ContentModerationConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.CreateDedicatedAiClusterDetails.html">CreateDedicatedAiClusterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.CreateEndpointDetails.html">CreateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.CreateModelDetails.html">CreateModelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.Dataset.html">Dataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.DedicatedAiCluster.html">DedicatedAiCluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.DedicatedAiClusterCapacity.html">DedicatedAiClusterCapacity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.DedicatedAiClusterCollection.html">DedicatedAiClusterCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.DedicatedAiClusterHostingCapacity.html">DedicatedAiClusterHostingCapacity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.DedicatedAiClusterSummary.html">DedicatedAiClusterSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.Endpoint.html">Endpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.EndpointCollection.html">EndpointCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.EndpointSummary.html">EndpointSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.FineTuneDetails.html">FineTuneDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.LoraTrainingConfig.html">LoraTrainingConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.Model.html">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ModelCollection.html">ModelCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ModelMetrics.html">ModelMetrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ModelSummary.html">ModelSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ObjectStorageDataset.html">ObjectStorageDataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.TFewTrainingConfig.html">TFewTrainingConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.TextGenerationModelMetrics.html">TextGenerationModelMetrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.TrainingConfig.html">TrainingConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.UpdateDedicatedAiClusterDetails.html">UpdateDedicatedAiClusterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.UpdateEndpointDetails.html">UpdateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.UpdateModelDetails.html">UpdateModelDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.VanillaTrainingConfig.html">VanillaTrainingConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequestErrorCollection.html">WorkRequestErrorCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequestLogEntryCollection.html">WorkRequestLogEntryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequestResource.html">WorkRequestResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequestSummary.html">WorkRequestSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequestSummaryCollection.html">WorkRequestSummaryCollection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="landing.html">API Reference</a> &raquo;</li>
+        
+      <li>Generative Ai</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/generative_ai.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="generative-ai">
+<h1>Generative Ai<a class="headerlink" href="#generative-ai" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/client/oci.generative_ai.GenerativeAiClient.html#oci.generative_ai.GenerativeAiClient" title="oci.generative_ai.GenerativeAiClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.GenerativeAiClient</span></code></a></td>
+<td>OCI Generative AI is a fully managed service that provides a set of state-of-the-art, customizable large language models (LLMs) that cover a wide range of use cases for text generation, summarization, and text embeddings.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/client/oci.generative_ai.GenerativeAiClientCompositeOperations.html#oci.generative_ai.GenerativeAiClientCompositeOperations" title="oci.generative_ai.GenerativeAiClientCompositeOperations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.GenerativeAiClientCompositeOperations</span></code></a></td>
+<td>This class provides a wrapper around <a class="reference internal" href="generative_ai/client/oci.generative_ai.GenerativeAiClient.html#oci.generative_ai.GenerativeAiClient" title="oci.generative_ai.GenerativeAiClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">GenerativeAiClient</span></code></a> and offers convenience methods for operations that would otherwise need to be chained together.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ChangeDedicatedAiClusterCompartmentDetails.html#oci.generative_ai.models.ChangeDedicatedAiClusterCompartmentDetails" title="oci.generative_ai.models.ChangeDedicatedAiClusterCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.ChangeDedicatedAiClusterCompartmentDetails</span></code></a></td>
+<td>The details to move a dedicated AI cluster to another compartment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ChangeEndpointCompartmentDetails.html#oci.generative_ai.models.ChangeEndpointCompartmentDetails" title="oci.generative_ai.models.ChangeEndpointCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.ChangeEndpointCompartmentDetails</span></code></a></td>
+<td>The details to move an endpoint to another compartment.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ChangeModelCompartmentDetails.html#oci.generative_ai.models.ChangeModelCompartmentDetails" title="oci.generative_ai.models.ChangeModelCompartmentDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.ChangeModelCompartmentDetails</span></code></a></td>
+<td>The details to move a custom model to another compartment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ChatModelMetrics.html#oci.generative_ai.models.ChatModelMetrics" title="oci.generative_ai.models.ChatModelMetrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.ChatModelMetrics</span></code></a></td>
+<td>The chat model metrics of the fine-tuning process.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ContentModerationConfig.html#oci.generative_ai.models.ContentModerationConfig" title="oci.generative_ai.models.ContentModerationConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.ContentModerationConfig</span></code></a></td>
+<td>The configuration details, whether to add the content moderation feature to the model.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.CreateDedicatedAiClusterDetails.html#oci.generative_ai.models.CreateDedicatedAiClusterDetails" title="oci.generative_ai.models.CreateDedicatedAiClusterDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.CreateDedicatedAiClusterDetails</span></code></a></td>
+<td>The data to create a dedicated AI cluster.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.CreateEndpointDetails.html#oci.generative_ai.models.CreateEndpointDetails" title="oci.generative_ai.models.CreateEndpointDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.CreateEndpointDetails</span></code></a></td>
+<td>The data to create an endpoint.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.CreateModelDetails.html#oci.generative_ai.models.CreateModelDetails" title="oci.generative_ai.models.CreateModelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.CreateModelDetails</span></code></a></td>
+<td>The data to create a custom model.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.Dataset.html#oci.generative_ai.models.Dataset" title="oci.generative_ai.models.Dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.Dataset</span></code></a></td>
+<td>The dataset used to fine-tune the model.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.DedicatedAiCluster.html#oci.generative_ai.models.DedicatedAiCluster" title="oci.generative_ai.models.DedicatedAiCluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.DedicatedAiCluster</span></code></a></td>
+<td>Dedicated AI clusters are compute resources that you can use for fine-tuning custom models or for hosting endpoints for custom models.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.DedicatedAiClusterCapacity.html#oci.generative_ai.models.DedicatedAiClusterCapacity" title="oci.generative_ai.models.DedicatedAiClusterCapacity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.DedicatedAiClusterCapacity</span></code></a></td>
+<td>The total capacity for a dedicated AI cluster.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.DedicatedAiClusterCollection.html#oci.generative_ai.models.DedicatedAiClusterCollection" title="oci.generative_ai.models.DedicatedAiClusterCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.DedicatedAiClusterCollection</span></code></a></td>
+<td>Results of a dedicate AI cluster search.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.DedicatedAiClusterHostingCapacity.html#oci.generative_ai.models.DedicatedAiClusterHostingCapacity" title="oci.generative_ai.models.DedicatedAiClusterHostingCapacity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.DedicatedAiClusterHostingCapacity</span></code></a></td>
+<td>The capacity of a hosting type dedicated AI cluster.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.DedicatedAiClusterSummary.html#oci.generative_ai.models.DedicatedAiClusterSummary" title="oci.generative_ai.models.DedicatedAiClusterSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.DedicatedAiClusterSummary</span></code></a></td>
+<td>Summary information about a dedicated AI cluster.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.Endpoint.html#oci.generative_ai.models.Endpoint" title="oci.generative_ai.models.Endpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.Endpoint</span></code></a></td>
+<td>To host a custom model for inference, create an endpoint for that model on a dedicated AI cluster of type HOSTING.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.EndpointCollection.html#oci.generative_ai.models.EndpointCollection" title="oci.generative_ai.models.EndpointCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.EndpointCollection</span></code></a></td>
+<td>Results of an endpoint search.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.EndpointSummary.html#oci.generative_ai.models.EndpointSummary" title="oci.generative_ai.models.EndpointSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.EndpointSummary</span></code></a></td>
+<td>Summary information for an endpoint resource.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.FineTuneDetails.html#oci.generative_ai.models.FineTuneDetails" title="oci.generative_ai.models.FineTuneDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.FineTuneDetails</span></code></a></td>
+<td>Details about fine-tuning a custom model.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.LoraTrainingConfig.html#oci.generative_ai.models.LoraTrainingConfig" title="oci.generative_ai.models.LoraTrainingConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.LoraTrainingConfig</span></code></a></td>
+<td>The Lora training method hyperparameters.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.Model.html#oci.generative_ai.models.Model" title="oci.generative_ai.models.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.Model</span></code></a></td>
+<td>You can create a custom model by using your dataset to fine-tune an out-of-the-box text generation base model.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ModelCollection.html#oci.generative_ai.models.ModelCollection" title="oci.generative_ai.models.ModelCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.ModelCollection</span></code></a></td>
+<td>Results of a model search.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ModelMetrics.html#oci.generative_ai.models.ModelMetrics" title="oci.generative_ai.models.ModelMetrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.ModelMetrics</span></code></a></td>
+<td>Model metrics during the creation of a new model.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ModelSummary.html#oci.generative_ai.models.ModelSummary" title="oci.generative_ai.models.ModelSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.ModelSummary</span></code></a></td>
+<td>Summary of the model.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.ObjectStorageDataset.html#oci.generative_ai.models.ObjectStorageDataset" title="oci.generative_ai.models.ObjectStorageDataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.ObjectStorageDataset</span></code></a></td>
+<td>The dataset is stored in an OCI Object Storage bucket.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.TFewTrainingConfig.html#oci.generative_ai.models.TFewTrainingConfig" title="oci.generative_ai.models.TFewTrainingConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.TFewTrainingConfig</span></code></a></td>
+<td>The TFEW training method hyperparameters.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.TextGenerationModelMetrics.html#oci.generative_ai.models.TextGenerationModelMetrics" title="oci.generative_ai.models.TextGenerationModelMetrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.TextGenerationModelMetrics</span></code></a></td>
+<td>The text generation model metrics of the fine-tuning process.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.TrainingConfig.html#oci.generative_ai.models.TrainingConfig" title="oci.generative_ai.models.TrainingConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.TrainingConfig</span></code></a></td>
+<td>The fine-tuning method and hyperparameters used for fine-tuning a custom model.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.UpdateDedicatedAiClusterDetails.html#oci.generative_ai.models.UpdateDedicatedAiClusterDetails" title="oci.generative_ai.models.UpdateDedicatedAiClusterDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.UpdateDedicatedAiClusterDetails</span></code></a></td>
+<td>The data to update a dedicated AI cluster.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.UpdateEndpointDetails.html#oci.generative_ai.models.UpdateEndpointDetails" title="oci.generative_ai.models.UpdateEndpointDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.UpdateEndpointDetails</span></code></a></td>
+<td>The data to update an endpoint.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.UpdateModelDetails.html#oci.generative_ai.models.UpdateModelDetails" title="oci.generative_ai.models.UpdateModelDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.UpdateModelDetails</span></code></a></td>
+<td>The data to update a custom model.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.VanillaTrainingConfig.html#oci.generative_ai.models.VanillaTrainingConfig" title="oci.generative_ai.models.VanillaTrainingConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.VanillaTrainingConfig</span></code></a></td>
+<td>The Vanilla training method hyperparameters.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequest.html#oci.generative_ai.models.WorkRequest" title="oci.generative_ai.models.WorkRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.WorkRequest</span></code></a></td>
+<td>An asynchronous work request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequestError.html#oci.generative_ai.models.WorkRequestError" title="oci.generative_ai.models.WorkRequestError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.WorkRequestError</span></code></a></td>
+<td>An error encountered while performing an operation that is tracked by this work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequestErrorCollection.html#oci.generative_ai.models.WorkRequestErrorCollection" title="oci.generative_ai.models.WorkRequestErrorCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.WorkRequestErrorCollection</span></code></a></td>
+<td>A list of work request errors.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequestLogEntry.html#oci.generative_ai.models.WorkRequestLogEntry" title="oci.generative_ai.models.WorkRequestLogEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.WorkRequestLogEntry</span></code></a></td>
+<td>The log message from performing an operation that is tracked by this work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequestLogEntryCollection.html#oci.generative_ai.models.WorkRequestLogEntryCollection" title="oci.generative_ai.models.WorkRequestLogEntryCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.WorkRequestLogEntryCollection</span></code></a></td>
+<td>A list of work request logs.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequestResource.html#oci.generative_ai.models.WorkRequestResource" title="oci.generative_ai.models.WorkRequestResource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.WorkRequestResource</span></code></a></td>
+<td>The resource created or operated on by a work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequestSummary.html#oci.generative_ai.models.WorkRequestSummary" title="oci.generative_ai.models.WorkRequestSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.WorkRequestSummary</span></code></a></td>
+<td>Summary information about an asynchronous work request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generative_ai/models/oci.generative_ai.models.WorkRequestSummaryCollection.html#oci.generative_ai.models.WorkRequestSummaryCollection" title="oci.generative_ai.models.WorkRequestSummaryCollection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oci.generative_ai.models.WorkRequestSummaryCollection</span></code></a></td>
+<td>A list of work requests.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="generative_ai/client/oci.generative_ai.GenerativeAiClient.html" class="btn btn-neutral float-right" title="GenerativeAiClient" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fusion_apps/models/oci.fusion_apps.models.WorkRequestSummaryCollection.html" class="btn btn-neutral" title="WorkRequestSummaryCollection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

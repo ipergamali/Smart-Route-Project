@@ -1,0 +1,862 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>KskDnssecKeyVersion &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="MigrationReplacement" href="oci.dns.models.MigrationReplacement.html" />
+    <link rel="prev" title="ExternalMaster" href="oci.dns.models.ExternalMaster.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../dns.html">DNS</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.dns.DnsClient.html">DnsClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.dns.DnsClientCompositeOperations.html">DnsClientCompositeOperations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../dns.html#models">Models</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.AttachedView.html">AttachedView</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.AttachedViewDetails.html">AttachedViewDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ChangeResolverCompartmentDetails.html">ChangeResolverCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ChangeSteeringPolicyCompartmentDetails.html">ChangeSteeringPolicyCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ChangeTsigKeyCompartmentDetails.html">ChangeTsigKeyCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ChangeViewCompartmentDetails.html">ChangeViewCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ChangeZoneCompartmentDetails.html">ChangeZoneCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.CreateMigratedDynectZoneDetails.html">CreateMigratedDynectZoneDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.CreateResolverEndpointDetails.html">CreateResolverEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.CreateResolverVnicEndpointDetails.html">CreateResolverVnicEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.CreateSteeringPolicyAttachmentDetails.html">CreateSteeringPolicyAttachmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.CreateSteeringPolicyDetails.html">CreateSteeringPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.CreateTsigKeyDetails.html">CreateTsigKeyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.CreateViewDetails.html">CreateViewDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.CreateZoneBaseDetails.html">CreateZoneBaseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.CreateZoneDetails.html">CreateZoneDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.DnssecConfig.html">DnssecConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.DnssecKeyVersionDsData.html">DnssecKeyVersionDsData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.DynectMigrationDetails.html">DynectMigrationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ExternalDownstream.html">ExternalDownstream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ExternalMaster.html">ExternalMaster</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">KskDnssecKeyVersion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.MigrationReplacement.html">MigrationReplacement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.Nameserver.html">Nameserver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.PatchDomainRecordsDetails.html">PatchDomainRecordsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.PatchRRSetDetails.html">PatchRRSetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.PatchZoneRecordsDetails.html">PatchZoneRecordsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.PromoteZoneDnssecKeyVersionDetails.html">PromoteZoneDnssecKeyVersionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.RRSet.html">RRSet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.Record.html">Record</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.RecordCollection.html">RecordCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.RecordDetails.html">RecordDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.RecordOperation.html">RecordOperation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.Resolver.html">Resolver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ResolverEndpoint.html">ResolverEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ResolverEndpointSummary.html">ResolverEndpointSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ResolverForwardRule.html">ResolverForwardRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ResolverForwardRuleDetails.html">ResolverForwardRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ResolverRule.html">ResolverRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ResolverRuleDetails.html">ResolverRuleDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ResolverSummary.html">ResolverSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ResolverVnicEndpoint.html">ResolverVnicEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ResolverVnicEndpointSummary.html">ResolverVnicEndpointSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.StageZoneDnssecKeyVersionDetails.html">StageZoneDnssecKeyVersionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicy.html">SteeringPolicy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyAnswer.html">SteeringPolicyAnswer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyAttachment.html">SteeringPolicyAttachment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyAttachmentSummary.html">SteeringPolicyAttachmentSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyFilterAnswerData.html">SteeringPolicyFilterAnswerData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyFilterRule.html">SteeringPolicyFilterRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyFilterRuleCase.html">SteeringPolicyFilterRuleCase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyHealthRule.html">SteeringPolicyHealthRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyHealthRuleCase.html">SteeringPolicyHealthRuleCase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyLimitRule.html">SteeringPolicyLimitRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyLimitRuleCase.html">SteeringPolicyLimitRuleCase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyPriorityAnswerData.html">SteeringPolicyPriorityAnswerData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyPriorityRule.html">SteeringPolicyPriorityRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyPriorityRuleCase.html">SteeringPolicyPriorityRuleCase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyRule.html">SteeringPolicyRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicySummary.html">SteeringPolicySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyWeightedAnswerData.html">SteeringPolicyWeightedAnswerData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyWeightedRule.html">SteeringPolicyWeightedRule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.SteeringPolicyWeightedRuleCase.html">SteeringPolicyWeightedRuleCase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.TsigKey.html">TsigKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.TsigKeySummary.html">TsigKeySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.UpdateDomainRecordsDetails.html">UpdateDomainRecordsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.UpdateRRSetDetails.html">UpdateRRSetDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.UpdateResolverDetails.html">UpdateResolverDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.UpdateResolverEndpointDetails.html">UpdateResolverEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.UpdateResolverVnicEndpointDetails.html">UpdateResolverVnicEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.UpdateSteeringPolicyAttachmentDetails.html">UpdateSteeringPolicyAttachmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.UpdateSteeringPolicyDetails.html">UpdateSteeringPolicyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.UpdateTsigKeyDetails.html">UpdateTsigKeyDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.UpdateViewDetails.html">UpdateViewDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.UpdateZoneDetails.html">UpdateZoneDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.UpdateZoneRecordsDetails.html">UpdateZoneRecordsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.View.html">View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ViewSummary.html">ViewSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.Zone.html">Zone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ZoneSummary.html">ZoneSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ZoneTransferServer.html">ZoneTransferServer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.dns.models.ZskDnssecKeyVersion.html">ZskDnssecKeyVersion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../dns.html">DNS</a> &raquo;</li>
+        
+      <li>KskDnssecKeyVersion</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/dns/models/oci.dns.models.KskDnssecKeyVersion.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="kskdnsseckeyversion">
+<h1>KskDnssecKeyVersion<a class="headerlink" href="#kskdnsseckeyversion" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.dns.models.KskDnssecKeyVersion">
+<em class="property">class </em><code class="descclassname">oci.dns.models.</code><code class="descname">KskDnssecKeyVersion</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A key signing key (KSK) version. The version information contains timing and configuration data corresponding to the KSK that is used to
+apply DNSSEC on the zone.</p>
+<p><strong>Attributes</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.ALGORITHM_RSASHA256" title="oci.dns.models.KskDnssecKeyVersion.ALGORITHM_RSASHA256"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ALGORITHM_RSASHA256</span></code></a></td>
+<td>A constant which can be used with the algorithm property of a KskDnssecKeyVersion.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.algorithm" title="oci.dns.models.KskDnssecKeyVersion.algorithm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithm</span></code></a></td>
+<td>Gets the algorithm of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.ds_data" title="oci.dns.models.KskDnssecKeyVersion.ds_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ds_data</span></code></a></td>
+<td>Gets the ds_data of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.key_tag" title="oci.dns.models.KskDnssecKeyVersion.key_tag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">key_tag</span></code></a></td>
+<td>Gets the key_tag of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.length_in_bytes" title="oci.dns.models.KskDnssecKeyVersion.length_in_bytes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length_in_bytes</span></code></a></td>
+<td>Gets the length_in_bytes of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.predecessor_dnssec_key_version_uuid" title="oci.dns.models.KskDnssecKeyVersion.predecessor_dnssec_key_version_uuid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predecessor_dnssec_key_version_uuid</span></code></a></td>
+<td>Gets the predecessor_dnssec_key_version_uuid of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.successor_dnssec_key_version_uuid" title="oci.dns.models.KskDnssecKeyVersion.successor_dnssec_key_version_uuid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">successor_dnssec_key_version_uuid</span></code></a></td>
+<td>Gets the successor_dnssec_key_version_uuid of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.time_activated" title="oci.dns.models.KskDnssecKeyVersion.time_activated"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_activated</span></code></a></td>
+<td>Gets the time_activated of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.time_created" title="oci.dns.models.KskDnssecKeyVersion.time_created"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_created</span></code></a></td>
+<td>Gets the time_created of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.time_expired" title="oci.dns.models.KskDnssecKeyVersion.time_expired"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_expired</span></code></a></td>
+<td>Gets the time_expired of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.time_inactivated" title="oci.dns.models.KskDnssecKeyVersion.time_inactivated"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_inactivated</span></code></a></td>
+<td>Gets the time_inactivated of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.time_promoted" title="oci.dns.models.KskDnssecKeyVersion.time_promoted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_promoted</span></code></a></td>
+<td>Gets the time_promoted of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.time_published" title="oci.dns.models.KskDnssecKeyVersion.time_published"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_published</span></code></a></td>
+<td>Gets the time_published of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.time_unpublished" title="oci.dns.models.KskDnssecKeyVersion.time_unpublished"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_unpublished</span></code></a></td>
+<td>Gets the time_unpublished of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.uuid" title="oci.dns.models.KskDnssecKeyVersion.uuid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uuid</span></code></a></td>
+<td>Gets the uuid of this KskDnssecKeyVersion.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.dns.models.KskDnssecKeyVersion.__init__" title="oci.dns.models.KskDnssecKeyVersion.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(**kwargs)</td>
+<td>Initializes a new KskDnssecKeyVersion object with values from keyword arguments.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="oci.dns.models.KskDnssecKeyVersion.ALGORITHM_RSASHA256">
+<code class="descname">ALGORITHM_RSASHA256</code><em class="property"> = 'RSASHA256'</em><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.ALGORITHM_RSASHA256" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constant which can be used with the algorithm property of a KskDnssecKeyVersion.
+This constant has a value of “RSASHA256”</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.dns.models.KskDnssecKeyVersion.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new KskDnssecKeyVersion object with values from keyword arguments.
+The following keyword arguments are supported (corresponding to the getters/setters of this class):</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>uuid</strong> (<em>str</em>) – The value to assign to the uuid property of this KskDnssecKeyVersion.</li>
+<li><strong>algorithm</strong> (<em>str</em>) – The value to assign to the algorithm property of this KskDnssecKeyVersion.
+Allowed values for this property are: “RSASHA256”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</li>
+<li><strong>length_in_bytes</strong> (<em>int</em>) – The value to assign to the length_in_bytes property of this KskDnssecKeyVersion.</li>
+<li><strong>time_created</strong> (<em>datetime</em>) – The value to assign to the time_created property of this KskDnssecKeyVersion.</li>
+<li><strong>time_published</strong> (<em>datetime</em>) – The value to assign to the time_published property of this KskDnssecKeyVersion.</li>
+<li><strong>time_activated</strong> (<em>datetime</em>) – The value to assign to the time_activated property of this KskDnssecKeyVersion.</li>
+<li><strong>time_inactivated</strong> (<em>datetime</em>) – The value to assign to the time_inactivated property of this KskDnssecKeyVersion.</li>
+<li><strong>time_unpublished</strong> (<em>datetime</em>) – The value to assign to the time_unpublished property of this KskDnssecKeyVersion.</li>
+<li><strong>time_expired</strong> (<em>datetime</em>) – The value to assign to the time_expired property of this KskDnssecKeyVersion.</li>
+<li><strong>time_promoted</strong> (<em>datetime</em>) – The value to assign to the time_promoted property of this KskDnssecKeyVersion.</li>
+<li><strong>predecessor_dnssec_key_version_uuid</strong> (<em>str</em>) – The value to assign to the predecessor_dnssec_key_version_uuid property of this KskDnssecKeyVersion.</li>
+<li><strong>successor_dnssec_key_version_uuid</strong> (<em>str</em>) – The value to assign to the successor_dnssec_key_version_uuid property of this KskDnssecKeyVersion.</li>
+<li><strong>key_tag</strong> (<em>int</em>) – The value to assign to the key_tag property of this KskDnssecKeyVersion.</li>
+<li><strong>ds_data</strong> (<em>list</em><em>[</em><a class="reference internal" href="oci.dns.models.DnssecKeyVersionDsData.html#oci.dns.models.DnssecKeyVersionDsData" title="oci.dns.models.DnssecKeyVersionDsData"><em>oci.dns.models.DnssecKeyVersionDsData</em></a><em>]</em>) – The value to assign to the ds_data property of this KskDnssecKeyVersion.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.dns.models.KskDnssecKeyVersion.algorithm">
+<code class="descname">algorithm</code><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.algorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the algorithm of this KskDnssecKeyVersion.
+The signing algorithm used for the key.</p>
+<p>Allowed values for this property are: “RSASHA256”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The algorithm of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.dns.models.KskDnssecKeyVersion.ds_data">
+<code class="descname">ds_data</code><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.ds_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the ds_data of this KskDnssecKeyVersion.
+An array of data for DS records corresponding with this key version. An entry will exist for each
+supported DS digest algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The ds_data of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[<a class="reference internal" href="oci.dns.models.DnssecKeyVersionDsData.html#oci.dns.models.DnssecKeyVersionDsData" title="oci.dns.models.DnssecKeyVersionDsData">oci.dns.models.DnssecKeyVersionDsData</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.dns.models.KskDnssecKeyVersion.key_tag">
+<code class="descname">key_tag</code><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.key_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the key_tag of this KskDnssecKeyVersion.
+The key tag associated with the <cite>DnssecKeyVersion</cite>. This key tag will be present in the RRSIG and DS records
+associated with the key material for this <cite>DnssecKeyVersion</cite>. For more information about key tags, see
+<a class="reference external" href="https://tools.ietf.org/html/rfc4034">RFC 4034</a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The key_tag of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.dns.models.KskDnssecKeyVersion.length_in_bytes">
+<code class="descname">length_in_bytes</code><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.length_in_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the length_in_bytes of this KskDnssecKeyVersion.
+The length of the corresponding private key in bytes, expressed as an integer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The length_in_bytes of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.dns.models.KskDnssecKeyVersion.predecessor_dnssec_key_version_uuid">
+<code class="descname">predecessor_dnssec_key_version_uuid</code><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.predecessor_dnssec_key_version_uuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the predecessor_dnssec_key_version_uuid of this KskDnssecKeyVersion.
+When populated, this is the UUID of the <cite>DnssecKeyVersion</cite> that this <cite>DnssecKeyVersion</cite> will replace or has
+replaced.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The predecessor_dnssec_key_version_uuid of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.dns.models.KskDnssecKeyVersion.successor_dnssec_key_version_uuid">
+<code class="descname">successor_dnssec_key_version_uuid</code><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.successor_dnssec_key_version_uuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the successor_dnssec_key_version_uuid of this KskDnssecKeyVersion.
+When populated, this is the UUID of the <cite>DnssecKeyVersion</cite> that will replace, or has replaced, this
+<cite>DnssecKeyVersion</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The successor_dnssec_key_version_uuid of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.dns.models.KskDnssecKeyVersion.time_activated">
+<code class="descname">time_activated</code><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.time_activated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_activated of this KskDnssecKeyVersion.
+The date and time the key version went, or will go, active, expressed in RFC 3339 timestamp format. This is
+when the key material will be used to generate RRSIGs.</p>
+<p><strong>Example:</strong> <cite>2016-07-22T17:23:59:00Z</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_activated of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.dns.models.KskDnssecKeyVersion.time_created">
+<code class="descname">time_created</code><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.time_created" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_created of this KskDnssecKeyVersion.
+The date and time the key version was created, expressed in RFC 3339 timestamp format.</p>
+<p><strong>Example:</strong> <cite>2016-07-22T17:23:59:00Z</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_created of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.dns.models.KskDnssecKeyVersion.time_expired">
+<code class="descname">time_expired</code><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.time_expired" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_expired of this KskDnssecKeyVersion.
+The date and time at which the recommended key version publication/activation lifetime ends, expressed in RFC
+3339 timestamp format. This is when the corresponding DNSKEY should no longer exist in zone contents and no
+longer be used to generate RRSIGs. For a key sigining key (KSK), if <cite>PromoteZoneDnssecKeyVersion</cite> has not been called on this
+<cite>DnssecKeyVersion</cite>’s successor then it will remain active for arbitrarily long past its recommended lifetime.
+This prevents service disruption at the potential increased risk of key compromise.</p>
+<p><strong>Example:</strong> <cite>2016-07-22T17:23:59:00Z</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_expired of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.dns.models.KskDnssecKeyVersion.time_inactivated">
+<code class="descname">time_inactivated</code><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.time_inactivated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_inactivated of this KskDnssecKeyVersion.
+The date and time the key version went, or will go, inactive, expressed in RFC 3339 timestamp format. This
+is when the key material will no longer be used to generate RRSIGs. For a key signing key (KSK) <cite>DnssecKeyVersion</cite>, this is
+populated after <cite>PromoteZoneDnssecKeyVersion</cite> has been called on its successor <cite>DnssecKeyVersion</cite>.</p>
+<p><strong>Example:</strong> <cite>2016-07-22T17:23:59:00Z</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_inactivated of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.dns.models.KskDnssecKeyVersion.time_promoted">
+<code class="descname">time_promoted</code><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.time_promoted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_promoted of this KskDnssecKeyVersion.
+The date and time the key version was promoted expressed in RFC 3339 timestamp format.</p>
+<p><strong>Example:</strong> <cite>2016-07-22T17:23:59:00Z</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_promoted of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.dns.models.KskDnssecKeyVersion.time_published">
+<code class="descname">time_published</code><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.time_published" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_published of this KskDnssecKeyVersion.
+The date and time the key version was, or will be, published, expressed in RFC 3339 timestamp format. This is
+when the zone contents will include a DNSKEY record corresponding to the key material.</p>
+<p><strong>Example:</strong> <cite>2016-07-22T17:23:59:00Z</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_published of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.dns.models.KskDnssecKeyVersion.time_unpublished">
+<code class="descname">time_unpublished</code><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.time_unpublished" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time_unpublished of this KskDnssecKeyVersion.
+The date and time the key version was, or will be, unpublished, expressed in RFC 3339 timestamp format. This
+is when the corresponding DNSKEY will be removed from zone contents. For a key signing key (KSK) <cite>DnssecKeyVersion</cite>, this is
+populated after <cite>PromoteZoneDnssecKeyVersion</cite> has been called on its successor <cite>DnssecKeyVersion</cite>.</p>
+<p><strong>Example:</strong> <cite>2016-07-22T17:23:59:00Z</cite></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The time_unpublished of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.dns.models.KskDnssecKeyVersion.uuid">
+<code class="descname">uuid</code><a class="headerlink" href="#oci.dns.models.KskDnssecKeyVersion.uuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the uuid of this KskDnssecKeyVersion.
+The UUID of the <cite>DnssecKeyVersion</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The uuid of this KskDnssecKeyVersion.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.dns.models.MigrationReplacement.html" class="btn btn-neutral float-right" title="MigrationReplacement" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.dns.models.ExternalMaster.html" class="btn btn-neutral" title="ExternalMaster" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

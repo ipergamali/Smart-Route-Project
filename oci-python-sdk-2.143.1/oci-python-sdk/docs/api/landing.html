@@ -1,0 +1,662 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API Reference &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Access Governance Cp" href="access_governance_cp.html" />
+    <link rel="prev" title="Pagination" href="../pagination.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>API Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/landing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">Service Clients</p>
+<ul class="simple">
+<li><a class="reference internal" href="access_governance_cp/client/oci.access_governance_cp.AccessGovernanceCPClient.html"><span class="doc">Access Governance Cp</span></a></li>
+<li><a class="reference internal" href="operator_access_control/client/oci.operator_access_control.AccessRequestsClient.html"><span class="doc">Access Requests</span></a></li>
+<li><a class="reference internal" href="marketplace/client/oci.marketplace.AccountClient.html"><span class="doc">Account</span></a></li>
+<li><a class="reference internal" href="osp_gateway/client/oci.osp_gateway.AddressRuleServiceClient.html"><span class="doc">Address Rule Service</span></a></li>
+<li><a class="reference internal" href="osp_gateway/client/oci.osp_gateway.AddressServiceClient.html"><span class="doc">Address Service</span></a></li>
+<li><a class="reference internal" href="ai_document/client/oci.ai_document.AIServiceDocumentClient.html"><span class="doc">Ai Service Document</span></a></li>
+<li><a class="reference internal" href="ai_language/client/oci.ai_language.AIServiceLanguageClient.html"><span class="doc">Ai Service Language</span></a></li>
+<li><a class="reference internal" href="ai_speech/client/oci.ai_speech.AIServiceSpeechClient.html"><span class="doc">Ai Service Speech</span></a></li>
+<li><a class="reference internal" href="ai_vision/client/oci.ai_vision.AIServiceVisionClient.html"><span class="doc">Ai Service Vision</span></a></li>
+<li><a class="reference internal" href="analytics/client/oci.analytics.AnalyticsClient.html"><span class="doc">Analytics</span></a></li>
+<li><a class="reference internal" href="announcements_service/client/oci.announcements_service.AnnouncementClient.html"><span class="doc">Announcement</span></a></li>
+<li><a class="reference internal" href="announcements_service/client/oci.announcements_service.AnnouncementSubscriptionClient.html"><span class="doc">Announcement Subscription</span></a></li>
+<li><a class="reference internal" href="announcements_service/client/oci.announcements_service.AnnouncementsPreferencesClient.html"><span class="doc">Announcements Preferences</span></a></li>
+<li><a class="reference internal" href="ai_anomaly_detection/client/oci.ai_anomaly_detection.AnomalyDetectionClient.html"><span class="doc">Anomaly Detection</span></a></li>
+<li><a class="reference internal" href="apigateway/client/oci.apigateway.ApiGatewayClient.html"><span class="doc">Api Gateway</span></a></li>
+<li><a class="reference internal" href="apm_control_plane/client/oci.apm_control_plane.ApmDomainClient.html"><span class="doc">Apm Domain</span></a></li>
+<li><a class="reference internal" href="apm_synthetics/client/oci.apm_synthetics.ApmSyntheticClient.html"><span class="doc">Apm Synthetic</span></a></li>
+<li><a class="reference internal" href="dts/client/oci.dts.ApplianceExportJobClient.html"><span class="doc">Appliance Export Job</span></a></li>
+<li><a class="reference internal" href="adm/client/oci.adm.ApplicationDependencyManagementClient.html"><span class="doc">Application Dependency Management</span></a></li>
+<li><a class="reference internal" href="appmgmt_control/client/oci.appmgmt_control.AppmgmtControlClient.html"><span class="doc">Appmgmt Control</span></a></li>
+<li><a class="reference internal" href="artifacts/client/oci.artifacts.ArtifactsClient.html"><span class="doc">Artifacts</span></a></li>
+<li><a class="reference internal" href="marketplace_publisher/client/oci.marketplace_publisher.AttachmentClient.html"><span class="doc">Attachment</span></a></li>
+<li><a class="reference internal" href="marketplace_publisher/client/oci.marketplace_publisher.AttachmentClient.html"><span class="doc">Attachment</span></a></li>
+<li><a class="reference internal" href="apm_traces/client/oci.apm_traces.AttributesClient.html"><span class="doc">Attributes</span></a></li>
+<li><a class="reference internal" href="audit/client/oci.audit.AuditClient.html"><span class="doc">Audit</span></a></li>
+<li><a class="reference internal" href="autoscaling/client/oci.autoscaling.AutoScalingClient.html"><span class="doc">Auto Scaling</span></a></li>
+<li><a class="reference internal" href="bastion/client/oci.bastion.BastionClient.html"><span class="doc">Bastion</span></a></li>
+<li><a class="reference internal" href="bds/client/oci.bds.BdsClient.html"><span class="doc">Bds</span></a></li>
+<li><a class="reference internal" href="osub_billing_schedule/client/oci.osub_billing_schedule.BillingScheduleClient.html"><span class="doc">Billing Schedule</span></a></li>
+<li><a class="reference internal" href="osub_billing_schedule/client/oci.osub_billing_schedule.BillingScheduleClient.html"><span class="doc">Billing Schedule</span></a></li>
+<li><a class="reference internal" href="core/client/oci.core.BlockstorageClient.html"><span class="doc">Block Storage</span></a></li>
+<li><a class="reference internal" href="blockchain/client/oci.blockchain.BlockchainPlatformClient.html"><span class="doc">Blockchain Platform</span></a></li>
+<li><a class="reference internal" href="budget/client/oci.budget.BudgetClient.html"><span class="doc">Budget</span></a></li>
+<li><a class="reference internal" href="capacity_management/client/oci.capacity_management.CapacityManagementClient.html"><span class="doc">Capacity Management</span></a></li>
+<li><a class="reference internal" href="certificates/client/oci.certificates.CertificatesClient.html"><span class="doc">Certificates</span></a></li>
+<li><a class="reference internal" href="certificates_management/client/oci.certificates_management.CertificatesManagementClient.html"><span class="doc">Certificates Management</span></a></li>
+<li><a class="reference internal" href="mysql/client/oci.mysql.ChannelsClient.html"><span class="doc">Channels</span></a></li>
+<li><a class="reference internal" href="cloud_guard/client/oci.cloud_guard.CloudGuardClient.html"><span class="doc">Cloud Guard</span></a></li>
+<li><a class="reference internal" href="ocvp/client/oci.ocvp.ClusterClient.html"><span class="doc">Cluster</span></a></li>
+<li><a class="reference internal" href="cluster_placement_groups/client/oci.cluster_placement_groups.ClusterPlacementGroupsCPClient.html"><span class="doc">Cluster Placement Groups Cp</span></a></li>
+<li><a class="reference internal" href="osub_subscription/client/oci.osub_subscription.CommitmentClient.html"><span class="doc">Commitment</span></a></li>
+<li><a class="reference internal" href="osub_subscription/client/oci.osub_subscription.CommitmentClient.html"><span class="doc">Commitment</span></a></li>
+<li><a class="reference internal" href="cloud_bridge/client/oci.cloud_bridge.CommonClient.html"><span class="doc">Common</span></a></li>
+<li><a class="reference internal" href="core/client/oci.core.ComputeClient.html"><span class="doc">Compute</span></a></li>
+<li><a class="reference internal" href="compute_cloud_at_customer/client/oci.compute_cloud_at_customer.ComputeCloudAtCustomerClient.html"><span class="doc">Compute Cloud At Customer</span></a></li>
+<li><a class="reference internal" href="compute_instance_agent/client/oci.compute_instance_agent.ComputeInstanceAgentClient.html"><span class="doc">Compute Instance Agent</span></a></li>
+<li><a class="reference internal" href="core/client/oci.core.ComputeManagementClient.html"><span class="doc">Compute Management</span></a></li>
+<li><a class="reference internal" href="osub_usage/client/oci.osub_usage.ComputedUsageClient.html"><span class="doc">Computed Usage</span></a></li>
+<li><a class="reference internal" href="osub_usage/client/oci.osub_usage.ComputedUsageClient.html"><span class="doc">Computed Usage</span></a></li>
+<li><a class="reference internal" href="apm_config/client/oci.apm_config.ConfigClient.html"><span class="doc">Config</span></a></li>
+<li><a class="reference internal" href="sch/client/oci.sch.ConnectorPluginsClient.html"><span class="doc">Connector Plugins</span></a></li>
+<li><a class="reference internal" href="container_engine/client/oci.container_engine.ContainerEngineClient.html"><span class="doc">Container Engine</span></a></li>
+<li><a class="reference internal" href="container_instances/client/oci.container_instances.ContainerInstanceClient.html"><span class="doc">Container Instance</span></a></li>
+<li><a class="reference internal" href="dns/client/oci.dns.DnsClient.html"><span class="doc">DNS</span></a></li>
+<li><a class="reference internal" href="dashboard_service/client/oci.dashboard_service.DashboardClient.html"><span class="doc">Dashboard</span></a></li>
+<li><a class="reference internal" href="dashboard_service/client/oci.dashboard_service.DashboardGroupClient.html"><span class="doc">Dashboard Group</span></a></li>
+<li><a class="reference internal" href="management_dashboard/client/oci.management_dashboard.DashxApisClient.html"><span class="doc">Dashx Apis</span></a></li>
+<li><a class="reference internal" href="data_catalog/client/oci.data_catalog.DataCatalogClient.html"><span class="doc">Data Catalog</span></a></li>
+<li><a class="reference internal" href="data_flow/client/oci.data_flow.DataFlowClient.html"><span class="doc">Data Flow</span></a></li>
+<li><a class="reference internal" href="data_integration/client/oci.data_integration.DataIntegrationClient.html"><span class="doc">Data Integration</span></a></li>
+<li><a class="reference internal" href="data_labeling_service_dataplane/client/oci.data_labeling_service_dataplane.DataLabelingClient.html"><span class="doc">Data Labeling</span></a></li>
+<li><a class="reference internal" href="data_labeling_service/client/oci.data_labeling_service.DataLabelingManagementClient.html"><span class="doc">Data Labeling Management</span></a></li>
+<li><a class="reference internal" href="data_safe/client/oci.data_safe.DataSafeClient.html"><span class="doc">Data Safe</span></a></li>
+<li><a class="reference internal" href="data_science/client/oci.data_science.DataScienceClient.html"><span class="doc">Data Science</span></a></li>
+<li><a class="reference internal" href="database/client/oci.database.DatabaseClient.html"><span class="doc">Database</span></a></li>
+<li><a class="reference internal" href="database_migration/client/oci.database_migration.DatabaseMigrationClient.html"><span class="doc">Database Migration</span></a></li>
+<li><a class="reference internal" href="recovery/client/oci.recovery.DatabaseRecoveryClient.html"><span class="doc">Database Recovery</span></a></li>
+<li><a class="reference internal" href="database_tools/client/oci.database_tools.DatabaseToolsClient.html"><span class="doc">Database Tools</span></a></li>
+<li><a class="reference internal" href="identity_data_plane/client/oci.identity_data_plane.DataplaneClient.html"><span class="doc">Dataplane</span></a></li>
+<li><a class="reference internal" href="mysql/client/oci.mysql.DbBackupsClient.html"><span class="doc">Db Backups</span></a></li>
+<li><a class="reference internal" href="database_management/client/oci.database_management.DbManagementClient.html"><span class="doc">Db Management</span></a></li>
+<li><a class="reference internal" href="mysql/client/oci.mysql.DbSystemClient.html"><span class="doc">Db System</span></a></li>
+<li><a class="reference internal" href="delegate_access_control/client/oci.delegate_access_control.DelegateAccessControlClient.html"><span class="doc">Delegate Access Control</span></a></li>
+<li><a class="reference internal" href="apigateway/client/oci.apigateway.DeploymentClient.html"><span class="doc">Deployment</span></a></li>
+<li><a class="reference internal" href="desktops/client/oci.desktops.DesktopServiceClient.html"><span class="doc">Desktop Service</span></a></li>
+<li><a class="reference internal" href="devops/client/oci.devops.DevopsClient.html"><span class="doc">Devops</span></a></li>
+<li><a class="reference internal" href="database_management/client/oci.database_management.DiagnosabilityClient.html"><span class="doc">Diagnosability</span></a></li>
+<li><a class="reference internal" href="disaster_recovery/client/oci.disaster_recovery.DisasterRecoveryClient.html"><span class="doc">Disaster Recovery</span></a></li>
+<li><a class="reference internal" href="cloud_bridge/client/oci.cloud_bridge.DiscoveryClient.html"><span class="doc">Discovery</span></a></li>
+<li><a class="reference internal" href="tenant_manager_control_plane/client/oci.tenant_manager_control_plane.DomainClient.html"><span class="doc">Domain</span></a></li>
+<li><a class="reference internal" href="tenant_manager_control_plane/client/oci.tenant_manager_control_plane.DomainGovernanceClient.html"><span class="doc">Domain Governance</span></a></li>
+<li><a class="reference internal" href="key_management/client/oci.key_management.EkmClient.html"><span class="doc">Ekm</span></a></li>
+<li><a class="reference internal" href="em_warehouse/client/oci.em_warehouse.EmWarehouseClient.html"><span class="doc">Em Warehouse</span></a></li>
+<li><a class="reference internal" href="email/client/oci.email.EmailClient.html"><span class="doc">Email</span></a></li>
+<li><a class="reference internal" href="email_data_plane/client/oci.email_data_plane.EmailDPClient.html"><span class="doc">Email Dp</span></a></li>
+<li><a class="reference internal" href="ocvp/client/oci.ocvp.EsxiHostClient.html"><span class="doc">Esxi Host</span></a></li>
+<li><a class="reference internal" href="os_management_hub/client/oci.os_management_hub.EventClient.html"><span class="doc">Event</span></a></li>
+<li><a class="reference internal" href="os_management_hub/client/oci.os_management_hub.EventClient.html"><span class="doc">Event</span></a></li>
+<li><a class="reference internal" href="events/client/oci.events.EventsClient.html"><span class="doc">Events</span></a></li>
+<li><a class="reference internal" href="file_storage/client/oci.file_storage.FileStorageClient.html"><span class="doc">File Storage</span></a></li>
+<li><a class="reference internal" href="fleet_apps_management/client/oci.fleet_apps_management.FleetAppsManagementClient.html"><span class="doc">Fleet Apps Management</span></a></li>
+<li><a class="reference internal" href="fleet_apps_management/client/oci.fleet_apps_management.FleetAppsManagementAdminClient.html"><span class="doc">Fleet Apps Management Admin</span></a></li>
+<li><a class="reference internal" href="fleet_apps_management/client/oci.fleet_apps_management.FleetAppsManagementMaintenanceWindowClient.html"><span class="doc">Fleet Apps Management Maintenance Window</span></a></li>
+<li><a class="reference internal" href="fleet_apps_management/client/oci.fleet_apps_management.FleetAppsManagementOperationsClient.html"><span class="doc">Fleet Apps Management Operations</span></a></li>
+<li><a class="reference internal" href="fleet_apps_management/client/oci.fleet_apps_management.FleetAppsManagementRunbooksClient.html"><span class="doc">Fleet Apps Management Runbooks</span></a></li>
+<li><a class="reference internal" href="fleet_software_update/client/oci.fleet_software_update.FleetSoftwareUpdateClient.html"><span class="doc">Fleet Software Update</span></a></li>
+<li><a class="reference internal" href="functions/client/oci.functions.FunctionsInvokeClient.html"><span class="doc">Functions Invoke</span></a></li>
+<li><a class="reference internal" href="functions/client/oci.functions.FunctionsManagementClient.html"><span class="doc">Functions Management</span></a></li>
+<li><a class="reference internal" href="fusion_apps/client/oci.fusion_apps.FusionApplicationsClient.html"><span class="doc">Fusion Applications</span></a></li>
+<li><a class="reference internal" href="apigateway/client/oci.apigateway.GatewayClient.html"><span class="doc">Gateway</span></a></li>
+<li><a class="reference internal" href="generative_ai/client/oci.generative_ai.GenerativeAiClient.html"><span class="doc">Generative Ai</span></a></li>
+<li><a class="reference internal" href="generative_ai_agent/client/oci.generative_ai_agent.GenerativeAiAgentClient.html"><span class="doc">Generative Ai Agent</span></a></li>
+<li><a class="reference internal" href="generative_ai_agent_runtime/client/oci.generative_ai_agent_runtime.GenerativeAiAgentRuntimeClient.html"><span class="doc">Generative Ai Agent Runtime</span></a></li>
+<li><a class="reference internal" href="generative_ai_inference/client/oci.generative_ai_inference.GenerativeAiInferenceClient.html"><span class="doc">Generative Ai Inference</span></a></li>
+<li><a class="reference internal" href="generic_artifacts_content/client/oci.generic_artifacts_content.GenericArtifactsContentClient.html"><span class="doc">Generic Artifacts Content</span></a></li>
+<li><a class="reference internal" href="golden_gate/client/oci.golden_gate.GoldenGateClient.html"><span class="doc">Golden Gate</span></a></li>
+<li><a class="reference internal" href="tenant_manager_control_plane/client/oci.tenant_manager_control_plane.GovernanceClient.html"><span class="doc">Governance</span></a></li>
+<li><a class="reference internal" href="governance_rules_control_plane/client/oci.governance_rules_control_plane.GovernanceRuleClient.html"><span class="doc">Governance Rule</span></a></li>
+<li><a class="reference internal" href="healthchecks/client/oci.healthchecks.HealthChecksClient.html"><span class="doc">Health Checks</span></a></li>
+<li><a class="reference internal" href="identity/client/oci.identity.IdentityClient.html"><span class="doc">Identity</span></a></li>
+<li><a class="reference internal" href="identity_domains/client/oci.identity_domains.IdentityDomainsClient.html"><span class="doc">Identity Domains</span></a></li>
+<li><a class="reference internal" href="cims/client/oci.cims.IncidentClient.html"><span class="doc">Incident</span></a></li>
+<li><a class="reference internal" href="integration/client/oci.integration.IntegrationInstanceClient.html"><span class="doc">Integration Instance</span></a></li>
+<li><a class="reference internal" href="cloud_bridge/client/oci.cloud_bridge.InventoryClient.html"><span class="doc">Inventory</span></a></li>
+<li><a class="reference internal" href="osp_gateway/client/oci.osp_gateway.InvoiceServiceClient.html"><span class="doc">Invoice Service</span></a></li>
+<li><a class="reference internal" href="onesubscription/client/oci.onesubscription.InvoiceSummaryClient.html"><span class="doc">Invoice Summary</span></a></li>
+<li><a class="reference internal" href="jms_java_downloads/client/oci.jms_java_downloads.JavaDownloadClient.html"><span class="doc">Java Download</span></a></li>
+<li><a class="reference internal" href="jms/client/oci.jms.JavaManagementServiceClient.html"><span class="doc">Java Management Service</span></a></li>
+<li><a class="reference internal" href="key_management/client/oci.key_management.KmsCryptoClient.html"><span class="doc">Kms Crypto</span></a></li>
+<li><a class="reference internal" href="key_management/client/oci.key_management.KmsHsmClusterClient.html"><span class="doc">Kms Hsm Cluster</span></a></li>
+<li><a class="reference internal" href="key_management/client/oci.key_management.KmsManagementClient.html"><span class="doc">Kms Management</span></a></li>
+<li><a class="reference internal" href="key_management/client/oci.key_management.KmsVaultClient.html"><span class="doc">Kms Vault</span></a></li>
+<li><a class="reference internal" href="license_manager/client/oci.license_manager.LicenseManagerClient.html"><span class="doc">License Manager</span></a></li>
+<li><a class="reference internal" href="os_management_hub/client/oci.os_management_hub.LifecycleEnvironmentClient.html"><span class="doc">Lifecycle Environment</span></a></li>
+<li><a class="reference internal" href="limits/client/oci.limits.LimitsClient.html"><span class="doc">Limits</span></a></li>
+<li><a class="reference internal" href="tenant_manager_control_plane/client/oci.tenant_manager_control_plane.LinkClient.html"><span class="doc">Link</span></a></li>
+<li><a class="reference internal" href="load_balancer/client/oci.load_balancer.LoadBalancerClient.html"><span class="doc">Load Balancer</span></a></li>
+<li><a class="reference internal" href="lockbox/client/oci.lockbox.LockboxClient.html"><span class="doc">Lockbox</span></a></li>
+<li><a class="reference internal" href="log_analytics/client/oci.log_analytics.LogAnalyticsClient.html"><span class="doc">Log Analytics</span></a></li>
+<li><a class="reference internal" href="loggingsearch/client/oci.loggingsearch.LogSearchClient.html"><span class="doc">Log Search</span></a></li>
+<li><a class="reference internal" href="loggingingestion/client/oci.loggingingestion.LoggingClient.html"><span class="doc">Logging</span></a></li>
+<li><a class="reference internal" href="logging/client/oci.logging.LoggingManagementClient.html"><span class="doc">Logging Management</span></a></li>
+<li><a class="reference internal" href="os_management_hub/client/oci.os_management_hub.ManagedInstanceClient.html"><span class="doc">Managed Instance</span></a></li>
+<li><a class="reference internal" href="os_management_hub/client/oci.os_management_hub.ManagedInstanceGroupClient.html"><span class="doc">Managed Instance Group</span></a></li>
+<li><a class="reference internal" href="database_management/client/oci.database_management.ManagedMySqlDatabasesClient.html"><span class="doc">Managed My Sql Databases</span></a></li>
+<li><a class="reference internal" href="oda/client/oci.oda.ManagementClient.html"><span class="doc">Management</span></a></li>
+<li><a class="reference internal" href="management_agent/client/oci.management_agent.ManagementAgentClient.html"><span class="doc">Management Agent</span></a></li>
+<li><a class="reference internal" href="os_management_hub/client/oci.os_management_hub.ManagementStationClient.html"><span class="doc">Management Station</span></a></li>
+<li><a class="reference internal" href="marketplace/client/oci.marketplace.MarketplaceClient.html"><span class="doc">Marketplace</span></a></li>
+<li><a class="reference internal" href="marketplace_publisher/client/oci.marketplace_publisher.MarketplacePublisherClient.html"><span class="doc">Marketplace Publisher</span></a></li>
+<li><a class="reference internal" href="media_services/client/oci.media_services.MediaServicesClient.html"><span class="doc">Media Services</span></a></li>
+<li><a class="reference internal" href="media_services/client/oci.media_services.MediaStreamClient.html"><span class="doc">Media Stream</span></a></li>
+<li><a class="reference internal" href="cloud_migrations/client/oci.cloud_migrations.MigrationClient.html"><span class="doc">Migration</span></a></li>
+<li><a class="reference internal" href="monitoring/client/oci.monitoring.MonitoringClient.html"><span class="doc">Monitoring</span></a></li>
+<li><a class="reference internal" href="mysql/client/oci.mysql.MysqlaasClient.html"><span class="doc">Mysqlaas</span></a></li>
+<li><a class="reference internal" href="network_firewall/client/oci.network_firewall.NetworkFirewallClient.html"><span class="doc">Network Firewall</span></a></li>
+<li><a class="reference internal" href="network_load_balancer/client/oci.network_load_balancer.NetworkLoadBalancerClient.html"><span class="doc">Network Load Balancer</span></a></li>
+<li><a class="reference internal" href="nosql/client/oci.nosql.NosqlClient.html"><span class="doc">Nosql</span></a></li>
+<li><a class="reference internal" href="ons/client/oci.ons.NotificationControlPlaneClient.html"><span class="doc">Notification Control Plane</span></a></li>
+<li><a class="reference internal" href="ons/client/oci.ons.NotificationDataPlaneClient.html"><span class="doc">Notification Data Plane</span></a></li>
+<li><a class="reference internal" href="object_storage/client/oci.object_storage.ObjectStorageClient.html"><span class="doc">Object Storage</span></a></li>
+<li><a class="reference internal" href="cloud_bridge/client/oci.cloud_bridge.OcbAgentSvcClient.html"><span class="doc">Ocb Agent Svc</span></a></li>
+<li><a class="reference internal" href="demand_signal/client/oci.demand_signal.OccDemandSignalClient.html"><span class="doc">Occ Demand Signal</span></a></li>
+<li><a class="reference internal" href="oci_control_center/client/oci.oci_control_center.OccMetricsClient.html"><span class="doc">Occ Metrics</span></a></li>
+<li><a class="reference internal" href="oce/client/oci.oce.OceInstanceClient.html"><span class="doc">Oce Instance</span></a></li>
+<li><a class="reference internal" href="oda/client/oci.oda.OdaClient.html"><span class="doc">Oda</span></a></li>
+<li><a class="reference internal" href="oda/client/oci.oda.OdapackageClient.html"><span class="doc">Odapackage</span></a></li>
+<li><a class="reference internal" href="marketplace_publisher/client/oci.marketplace_publisher.OfferClient.html"><span class="doc">Offer</span></a></li>
+<li><a class="reference internal" href="marketplace_publisher/client/oci.marketplace_publisher.OfferClient.html"><span class="doc">Offer</span></a></li>
+<li><a class="reference internal" href="os_management_hub/client/oci.os_management_hub.OnboardingClient.html"><span class="doc">Onboarding</span></a></li>
+<li><a class="reference internal" href="opa/client/oci.opa.OpaInstanceClient.html"><span class="doc">Opa Instance</span></a></li>
+<li><a class="reference internal" href="opensearch/client/oci.opensearch.OpensearchClusterClient.html"><span class="doc">Opensearch Cluster</span></a></li>
+<li><a class="reference internal" href="opensearch/client/oci.opensearch.OpensearchClusterBackupClient.html"><span class="doc">Opensearch Cluster Backup</span></a></li>
+<li><a class="reference internal" href="opsi/client/oci.opsi.OperationsInsightsClient.html"><span class="doc">Operations Insights</span></a></li>
+<li><a class="reference internal" href="operator_access_control/client/oci.operator_access_control.OperatorActionsClient.html"><span class="doc">Operator Actions</span></a></li>
+<li><a class="reference internal" href="operator_access_control/client/oci.operator_access_control.OperatorControlClient.html"><span class="doc">Operator Control</span></a></li>
+<li><a class="reference internal" href="operator_access_control/client/oci.operator_access_control.OperatorControlAssignmentClient.html"><span class="doc">Operator Control Assignment</span></a></li>
+<li><a class="reference internal" href="optimizer/client/oci.optimizer.OptimizerClient.html"><span class="doc">Optimizer</span></a></li>
+<li><a class="reference internal" href="tenant_manager_control_plane/client/oci.tenant_manager_control_plane.OrdersClient.html"><span class="doc">Orders</span></a></li>
+<li><a class="reference internal" href="tenant_manager_control_plane/client/oci.tenant_manager_control_plane.OrganizationClient.html"><span class="doc">Organization</span></a></li>
+<li><a class="reference internal" href="osub_organization_subscription/client/oci.osub_organization_subscription.OrganizationSubscriptionClient.html"><span class="doc">Organization Subscription</span></a></li>
+<li><a class="reference internal" href="osub_organization_subscription/client/oci.osub_organization_subscription.OrganizationSubscriptionClient.html"><span class="doc">Organization Subscription</span></a></li>
+<li><a class="reference internal" href="os_management/client/oci.os_management.OsManagementClient.html"><span class="doc">Os Management</span></a></li>
+<li><a class="reference internal" href="database_management/client/oci.database_management.PerfhubClient.html"><span class="doc">Perfhub</span></a></li>
+<li><a class="reference internal" href="compute_instance_agent/client/oci.compute_instance_agent.PluginClient.html"><span class="doc">Plugin</span></a></li>
+<li><a class="reference internal" href="compute_instance_agent/client/oci.compute_instance_agent.PluginconfigClient.html"><span class="doc">Pluginconfig</span></a></li>
+<li><a class="reference internal" href="psql/client/oci.psql.PostgresqlClient.html"><span class="doc">Postgresql</span></a></li>
+<li><a class="reference internal" href="apm_traces/client/oci.apm_traces.QueryClient.html"><span class="doc">Query</span></a></li>
+<li><a class="reference internal" href="queue/client/oci.queue.QueueClient.html"><span class="doc">Queue</span></a></li>
+<li><a class="reference internal" href="queue/client/oci.queue.QueueAdminClient.html"><span class="doc">Queue Admin</span></a></li>
+<li><a class="reference internal" href="limits/client/oci.limits.QuotasClient.html"><span class="doc">Quotas</span></a></li>
+<li><a class="reference internal" href="osub_subscription/client/oci.osub_subscription.RatecardClient.html"><span class="doc">Ratecard</span></a></li>
+<li><a class="reference internal" href="osub_subscription/client/oci.osub_subscription.RatecardClient.html"><span class="doc">Ratecard</span></a></li>
+<li><a class="reference internal" href="tenant_manager_control_plane/client/oci.tenant_manager_control_plane.RecipientInvitationClient.html"><span class="doc">Recipient Invitation</span></a></li>
+<li><a class="reference internal" href="waas/client/oci.waas.RedirectClient.html"><span class="doc">Redirect</span></a></li>
+<li><a class="reference internal" href="redis/client/oci.redis.RedisClusterClient.html"><span class="doc">Redis Cluster</span></a></li>
+<li><a class="reference internal" href="mysql/client/oci.mysql.ReplicasClient.html"><span class="doc">Replicas</span></a></li>
+<li><a class="reference internal" href="os_management_hub/client/oci.os_management_hub.ReportingManagedInstanceClient.html"><span class="doc">Reporting Managed Instance</span></a></li>
+<li><a class="reference internal" href="resource_manager/client/oci.resource_manager.ResourceManagerClient.html"><span class="doc">Resource Manager</span></a></li>
+<li><a class="reference internal" href="resource_search/client/oci.resource_search.ResourceSearchClient.html"><span class="doc">Resource Search</span></a></li>
+<li><a class="reference internal" href="usage/client/oci.usage.ResourcesClient.html"><span class="doc">Resources</span></a></li>
+<li><a class="reference internal" href="usage/client/oci.usage.RewardsClient.html"><span class="doc">Rewards</span></a></li>
+<li><a class="reference internal" href="rover/client/oci.rover.RoverBundleClient.html"><span class="doc">Rover Bundle</span></a></li>
+<li><a class="reference internal" href="rover/client/oci.rover.RoverClusterClient.html"><span class="doc">Rover Cluster</span></a></li>
+<li><a class="reference internal" href="rover/client/oci.rover.RoverEntitlementClient.html"><span class="doc">Rover Entitlement</span></a></li>
+<li><a class="reference internal" href="rover/client/oci.rover.RoverNodeClient.html"><span class="doc">Rover Node</span></a></li>
+<li><a class="reference internal" href="resource_scheduler/client/oci.resource_scheduler.ScheduleClient.html"><span class="doc">Schedule</span></a></li>
+<li><a class="reference internal" href="os_management_hub/client/oci.os_management_hub.ScheduledJobClient.html"><span class="doc">Scheduled Job</span></a></li>
+<li><a class="reference internal" href="ocvp/client/oci.ocvp.SddcClient.html"><span class="doc">Sddc</span></a></li>
+<li><a class="reference internal" href="secrets/client/oci.secrets.SecretsClient.html"><span class="doc">Secrets</span></a></li>
+<li><a class="reference internal" href="security_attribute/client/oci.security_attribute.SecurityAttributeClient.html"><span class="doc">Security Attribute</span></a></li>
+<li><a class="reference internal" href="tenant_manager_control_plane/client/oci.tenant_manager_control_plane.SenderInvitationClient.html"><span class="doc">Sender Invitation</span></a></li>
+<li><a class="reference internal" href="announcements_service/client/oci.announcements_service.ServiceClient.html"><span class="doc">Service</span></a></li>
+<li><a class="reference internal" href="service_catalog/client/oci.service_catalog.ServiceCatalogClient.html"><span class="doc">Service Catalog</span></a></li>
+<li><a class="reference internal" href="sch/client/oci.sch.ServiceConnectorClient.html"><span class="doc">Service Connector</span></a></li>
+<li><a class="reference internal" href="service_manager_proxy/client/oci.service_manager_proxy.ServiceManagerProxyClient.html"><span class="doc">Service Manager Proxy</span></a></li>
+<li><a class="reference internal" href="service_mesh/client/oci.service_mesh.ServiceMeshClient.html"><span class="doc">Service Mesh</span></a></li>
+<li><a class="reference internal" href="rover/client/oci.rover.ShapeClient.html"><span class="doc">Shape</span></a></li>
+<li><a class="reference internal" href="globally_distributed_database/client/oci.globally_distributed_database.ShardedDatabaseServiceClient.html"><span class="doc">Sharded Database Service</span></a></li>
+<li><a class="reference internal" href="dts/client/oci.dts.ShippingVendorsClient.html"><span class="doc">Shipping Vendors</span></a></li>
+<li><a class="reference internal" href="os_management_hub/client/oci.os_management_hub.SoftwareSourceClient.html"><span class="doc">Software Source</span></a></li>
+<li><a class="reference internal" href="database_management/client/oci.database_management.SqlTuningClient.html"><span class="doc">Sql Tuning</span></a></li>
+<li><a class="reference internal" href="stack_monitoring/client/oci.stack_monitoring.StackMonitoringClient.html"><span class="doc">Stack Monitoring</span></a></li>
+<li><a class="reference internal" href="streaming/client/oci.streaming.StreamClient.html"><span class="doc">Stream</span></a></li>
+<li><a class="reference internal" href="streaming/client/oci.streaming.StreamAdminClient.html"><span class="doc">Stream Admin</span></a></li>
+<li><a class="reference internal" href="onesubscription/client/oci.onesubscription.SubscribedServiceClient.html"><span class="doc">Subscribed Service</span></a></li>
+<li><a class="reference internal" href="apigateway/client/oci.apigateway.SubscribersClient.html"><span class="doc">Subscribers</span></a></li>
+<li><a class="reference internal" href="tenant_manager_control_plane/client/oci.tenant_manager_control_plane.SubscriptionClient.html"><span class="doc">Subscription</span></a></li>
+<li><a class="reference internal" href="tenant_manager_control_plane/client/oci.tenant_manager_control_plane.SubscriptionClient.html"><span class="doc">Subscription</span></a></li>
+<li><a class="reference internal" href="tenant_manager_control_plane/client/oci.tenant_manager_control_plane.SubscriptionClient.html"><span class="doc">Subscription</span></a></li>
+<li><a class="reference internal" href="osp_gateway/client/oci.osp_gateway.SubscriptionServiceClient.html"><span class="doc">Subscription Service</span></a></li>
+<li><a class="reference internal" href="threat_intelligence/client/oci.threat_intelligence.ThreatintelClient.html"><span class="doc">Threatintel</span></a></li>
+<li><a class="reference internal" href="apm_traces/client/oci.apm_traces.TraceClient.html"><span class="doc">Trace</span></a></li>
+<li><a class="reference internal" href="dts/client/oci.dts.TransferApplianceClient.html"><span class="doc">Transfer Appliance</span></a></li>
+<li><a class="reference internal" href="dts/client/oci.dts.TransferApplianceEntitlementClient.html"><span class="doc">Transfer Appliance Entitlement</span></a></li>
+<li><a class="reference internal" href="dts/client/oci.dts.TransferDeviceClient.html"><span class="doc">Transfer Device</span></a></li>
+<li><a class="reference internal" href="dts/client/oci.dts.TransferJobClient.html"><span class="doc">Transfer Job</span></a></li>
+<li><a class="reference internal" href="dts/client/oci.dts.TransferPackageClient.html"><span class="doc">Transfer Package</span></a></li>
+<li><a class="reference internal" href="apigateway/client/oci.apigateway.UsagePlansClient.html"><span class="doc">Usage Plans</span></a></li>
+<li><a class="reference internal" href="usage_api/client/oci.usage_api.UsageapiClient.html"><span class="doc">Usageapi</span></a></li>
+<li><a class="reference internal" href="usage/client/oci.usage.UsagelimitsClient.html"><span class="doc">Usagelimits</span></a></li>
+<li><a class="reference internal" href="vault/client/oci.vault.VaultsClient.html"><span class="doc">Vaults</span></a></li>
+<li><a class="reference internal" href="visual_builder/client/oci.visual_builder.VbInstanceClient.html"><span class="doc">Vb Instance</span></a></li>
+<li><a class="reference internal" href="vbs_inst/client/oci.vbs_inst.VbsInstanceClient.html"><span class="doc">Vbs Instance</span></a></li>
+<li><a class="reference internal" href="core/client/oci.core.VirtualNetworkClient.html"><span class="doc">Virtual Network</span></a></li>
+<li><a class="reference internal" href="vn_monitoring/client/oci.vn_monitoring.VnMonitoringClient.html"><span class="doc">Vn Monitoring</span></a></li>
+<li><a class="reference internal" href="vulnerability_scanning/client/oci.vulnerability_scanning.VulnerabilityScanningClient.html"><span class="doc">Vulnerability Scanning</span></a></li>
+<li><a class="reference internal" href="waa/client/oci.waa.WaaClient.html"><span class="doc">Waa</span></a></li>
+<li><a class="reference internal" href="waas/client/oci.waas.WaasClient.html"><span class="doc">Waas</span></a></li>
+<li><a class="reference internal" href="waf/client/oci.waf.WafClient.html"><span class="doc">Waf</span></a></li>
+<li><a class="reference internal" href="work_requests/client/oci.work_requests.WorkRequestClient.html"><span class="doc">Work Request</span></a></li>
+<li><a class="reference internal" href="work_requests/client/oci.work_requests.WorkRequestClient.html"><span class="doc">Work Request</span></a></li>
+<li><a class="reference internal" href="work_requests/client/oci.work_requests.WorkRequestClient.html"><span class="doc">Work Request</span></a></li>
+<li><a class="reference internal" href="work_requests/client/oci.work_requests.WorkRequestClient.html"><span class="doc">Work Request</span></a></li>
+<li><a class="reference internal" href="work_requests/client/oci.work_requests.WorkRequestClient.html"><span class="doc">Work Request</span></a></li>
+<li><a class="reference internal" href="work_requests/client/oci.work_requests.WorkRequestClient.html"><span class="doc">Work Request</span></a></li>
+<li><a class="reference internal" href="work_requests/client/oci.work_requests.WorkRequestClient.html"><span class="doc">Work Request</span></a></li>
+<li><a class="reference internal" href="rover/client/oci.rover.WorkRequestsClient.html"><span class="doc">Work Requests</span></a></li>
+<li><a class="reference internal" href="rover/client/oci.rover.WorkRequestsClient.html"><span class="doc">Work Requests</span></a></li>
+<li><a class="reference internal" href="rover/client/oci.rover.WorkRequestsClient.html"><span class="doc">Work Requests</span></a></li>
+<li><a class="reference internal" href="zpr/client/oci.zpr.ZprClient.html"><span class="doc">Zpr</span></a></li>
+</ul>
+<p class="rubric">Other Modules</p>
+<ul class="simple">
+<li><a class="reference internal" href="config.html"><span class="doc">Config</span></a></li>
+<li><a class="reference internal" href="exceptions.html"><span class="doc">Exceptions</span></a></li>
+<li><a class="reference internal" href="pagination.html"><span class="doc">Pagination</span></a></li>
+<li><a class="reference internal" href="request_and_response.html"><span class="doc">Request and Response</span></a></li>
+<li><a class="reference internal" href="retry.html"><span class="doc">Retry</span></a></li>
+<li><a class="reference internal" href="circuit_breaker.html"><span class="doc">Circuit Breaker</span></a></li>
+<li><a class="reference internal" href="signing.html"><span class="doc">Signing</span></a></li>
+<li><a class="reference internal" href="upload_manager.html"><span class="doc">Upload Manager</span></a></li>
+<li><a class="reference internal" href="utilities.html"><span class="doc">Utilities</span></a></li>
+<li><a class="reference internal" href="waiters.html"><span class="doc">Waiters</span></a></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="access_governance_cp.html" class="btn btn-neutral float-right" title="Access Governance Cp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../pagination.html" class="btn btn-neutral" title="Pagination" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1968 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ManagementAgentClient &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="ManagementAgentClientCompositeOperations" href="oci.management_agent.ManagementAgentClientCompositeOperations.html" />
+    <link rel="prev" title="Management Agent" href="../../management_agent.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../management_agent.html">Management Agent</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ManagementAgentClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oci.management_agent.ManagementAgentClientCompositeOperations.html">ManagementAgentClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../management_agent.html#models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../management_agent.html">Management Agent</a> &raquo;</li>
+        
+      <li>ManagementAgentClient</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/management_agent/client/oci.management_agent.ManagementAgentClient.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="managementagentclient">
+<h1>ManagementAgentClient<a class="headerlink" href="#managementagentclient" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.management_agent.ManagementAgentClient">
+<em class="property">class </em><code class="descclassname">oci.management_agent.</code><code class="descname">ManagementAgentClient</code><span class="sig-paren">(</span><em>config</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the Management Agent API to manage your infrastructure’s management agents, including their plugins and install keys.
+For more information, see [Management Agent](<a class="reference external" href="https://docs.cloud.oracle.com/iaas/management-agents/index.html">https://docs.cloud.oracle.com/iaas/management-agents/index.html</a>).</p>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.__init__" title="oci.management_agent.ManagementAgentClient.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(config,&nbsp;**kwargs)</td>
+<td>Creates a new service client</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.create_data_source" title="oci.management_agent.ManagementAgentClient.create_data_source"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_data_source</span></code></a>(management_agent_id,&nbsp;…)</td>
+<td>Datasource creation request to given Management Agent.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.create_management_agent_install_key" title="oci.management_agent.ManagementAgentClient.create_management_agent_install_key"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_management_agent_install_key</span></code></a>(…)</td>
+<td>User creates a new install key as part of this API.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.delete_data_source" title="oci.management_agent.ManagementAgentClient.delete_data_source"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_data_source</span></code></a>(management_agent_id,&nbsp;…)</td>
+<td>Datasource delete request to given Management Agent.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.delete_management_agent" title="oci.management_agent.ManagementAgentClient.delete_management_agent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_management_agent</span></code></a>(management_agent_id,&nbsp;…)</td>
+<td>Deletes a Management Agent resource by identifier</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.delete_management_agent_install_key" title="oci.management_agent.ManagementAgentClient.delete_management_agent_install_key"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_management_agent_install_key</span></code></a>(…)</td>
+<td>Deletes a Management Agent install Key resource by identifier</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.delete_work_request" title="oci.management_agent.ManagementAgentClient.delete_work_request"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_work_request</span></code></a>(work_request_id,&nbsp;**kwargs)</td>
+<td>Cancel the work request with the given ID.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.deploy_plugins" title="oci.management_agent.ManagementAgentClient.deploy_plugins"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deploy_plugins</span></code></a>(deploy_plugins_details,&nbsp;**kwargs)</td>
+<td>Deploys Plugins to a given list of agentIds.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.get_auto_upgradable_config" title="oci.management_agent.ManagementAgentClient.get_auto_upgradable_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_auto_upgradable_config</span></code></a>(compartment_id,&nbsp;…)</td>
+<td>Get the AutoUpgradable configuration for all agents in a tenancy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.get_data_source" title="oci.management_agent.ManagementAgentClient.get_data_source"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_source</span></code></a>(management_agent_id,&nbsp;…)</td>
+<td>Get Datasource details for given Id and given Management Agent.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.get_management_agent" title="oci.management_agent.ManagementAgentClient.get_management_agent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_management_agent</span></code></a>(management_agent_id,&nbsp;…)</td>
+<td>Gets complete details of the inventory of a given agent id</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.get_management_agent_install_key" title="oci.management_agent.ManagementAgentClient.get_management_agent_install_key"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_management_agent_install_key</span></code></a>(…)</td>
+<td>Gets complete details of the Agent install Key for a given key id</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.get_management_agent_install_key_content" title="oci.management_agent.ManagementAgentClient.get_management_agent_install_key_content"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_management_agent_install_key_content</span></code></a>(…)</td>
+<td>Returns a file with Management Agent install Key in it</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.get_work_request" title="oci.management_agent.ManagementAgentClient.get_work_request"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_work_request</span></code></a>(work_request_id,&nbsp;**kwargs)</td>
+<td>Gets the status of the work request with the given ID.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.list_availability_histories" title="oci.management_agent.ManagementAgentClient.list_availability_histories"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_availability_histories</span></code></a>(…)</td>
+<td>Lists the availability history records of Management Agent</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.list_data_sources" title="oci.management_agent.ManagementAgentClient.list_data_sources"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_data_sources</span></code></a>(management_agent_id,&nbsp;**kwargs)</td>
+<td>A list of Management Agent Data Sources for the given Management Agent Id.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.list_management_agent_images" title="oci.management_agent.ManagementAgentClient.list_management_agent_images"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_management_agent_images</span></code></a>(compartment_id,&nbsp;…)</td>
+<td>Get supported agent image information</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.list_management_agent_install_keys" title="oci.management_agent.ManagementAgentClient.list_management_agent_install_keys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_management_agent_install_keys</span></code></a>(…)</td>
+<td>Returns a list of Management Agent installed Keys.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.list_management_agent_plugins" title="oci.management_agent.ManagementAgentClient.list_management_agent_plugins"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_management_agent_plugins</span></code></a>(…)</td>
+<td>Returns a list of managementAgentPlugins.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.list_management_agents" title="oci.management_agent.ManagementAgentClient.list_management_agents"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_management_agents</span></code></a>(compartment_id,&nbsp;**kwargs)</td>
+<td>Returns a list of Management Agents.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.list_work_request_errors" title="oci.management_agent.ManagementAgentClient.list_work_request_errors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_request_errors</span></code></a>(work_request_id,&nbsp;…)</td>
+<td>Return a (paginated) list of errors for a given work request.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.list_work_request_logs" title="oci.management_agent.ManagementAgentClient.list_work_request_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_request_logs</span></code></a>(work_request_id,&nbsp;**kwargs)</td>
+<td>Return a (paginated) list of logs for a given work request.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.list_work_requests" title="oci.management_agent.ManagementAgentClient.list_work_requests"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_work_requests</span></code></a>(compartment_id,&nbsp;**kwargs)</td>
+<td>Lists the work requests in a compartment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.set_auto_upgradable_config" title="oci.management_agent.ManagementAgentClient.set_auto_upgradable_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_auto_upgradable_config</span></code></a>(…)</td>
+<td>Sets the AutoUpgradable configuration for all agents in a tenancy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.summarize_management_agent_counts" title="oci.management_agent.ManagementAgentClient.summarize_management_agent_counts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">summarize_management_agent_counts</span></code></a>(…)</td>
+<td>Gets count of the inventory of agents for a given compartment id, group by, and isPluginDeployed parameters.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.summarize_management_agent_plugin_counts" title="oci.management_agent.ManagementAgentClient.summarize_management_agent_plugin_counts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">summarize_management_agent_plugin_counts</span></code></a>(…)</td>
+<td>Gets count of the inventory of management agent plugins for a given compartment id and group by parameter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.update_data_source" title="oci.management_agent.ManagementAgentClient.update_data_source"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_data_source</span></code></a>(management_agent_id,&nbsp;…)</td>
+<td>Datasource update request to given Management Agent.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.update_management_agent" title="oci.management_agent.ManagementAgentClient.update_management_agent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_management_agent</span></code></a>(management_agent_id,&nbsp;…)</td>
+<td>API to update the console managed properties of the Management Agent.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.management_agent.ManagementAgentClient.update_management_agent_install_key" title="oci.management_agent.ManagementAgentClient.update_management_agent_install_key"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_management_agent_install_key</span></code></a>(…)</td>
+<td>API to update the modifiable properties of the Management Agent install key.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>config</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new service client</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>config</strong> (<em>dict</em>) – Configuration keys and values as per <a class="reference external" href="https://docs.cloud.oracle.com/Content/API/Concepts/sdkconfig.htm">SDK and Tool Configuration</a>.
+The <a class="reference internal" href="../../config.html#oci.config.from_file" title="oci.config.from_file"><code class="xref py py-meth docutils literal notranslate"><span class="pre">from_file()</span></code></a> method can be used to load configuration from a file. Alternatively, a <code class="docutils literal notranslate"><span class="pre">dict</span></code> can be passed. You can validate_config
+the dict using <a class="reference internal" href="../../config.html#oci.config.validate_config" title="oci.config.validate_config"><code class="xref py py-meth docutils literal notranslate"><span class="pre">validate_config()</span></code></a></li>
+<li><strong>service_endpoint</strong> (<em>str</em>) – (optional)
+The endpoint of the service to call using this client. For example <code class="docutils literal notranslate"><span class="pre">https://iaas.us-ashburn-1.oraclecloud.com</span></code>. If this keyword argument is
+not provided then it will be derived using the region in the config parameter. You should only provide this keyword argument if you have an explicit
+need to specify a service endpoint.</li>
+<li><strong>timeout</strong> (<em>float</em><em> or </em><em>tuple</em><em>(</em><em>float</em><em>, </em><em>float</em><em>)</em>) – (optional)
+The connection and read timeouts for the client. The default values are connection timeout 10 seconds and read timeout 60 seconds. This keyword argument can be provided
+as a single float, in which case the value provided is used for both the read and connection timeouts, or as a tuple of two floats. If
+a tuple is provided then the first value is used as the connection timeout and the second value as the read timeout.</li>
+<li><strong>signer</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractBaseSigner</span></code>) – <p>(optional)
+The signer to use when signing requests made by the service client. The default is to use a <a class="reference internal" href="../../signing.html#oci.signer.Signer" title="oci.signer.Signer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Signer</span></code></a> based on the values
+provided in the config parameter.</p>
+<p>One use case for this parameter is for <a class="reference external" href="https://docs.cloud.oracle.com/Content/Identity/Tasks/callingservicesfrominstances.htm">Instance Principals authentication</a>
+by passing an instance of <a class="reference internal" href="../../signing.html#oci.auth.signers.InstancePrincipalsSecurityTokenSigner" title="oci.auth.signers.InstancePrincipalsSecurityTokenSigner"><code class="xref py py-class docutils literal notranslate"><span class="pre">InstancePrincipalsSecurityTokenSigner</span></code></a> as the value for this keyword argument</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to all calls made by this service client (i.e. at the client level). There is no retry strategy applied by default.
+Retry strategies can also be applied at the operation level by passing a <code class="docutils literal notranslate"><span class="pre">retry_strategy</span></code> keyword argument as part of calling the operation.
+Any value provided at the operation level will override whatever is specified at the client level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. A convenience <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a>
+is also available. The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+</li>
+<li><strong>circuit_breaker_strategy</strong> (<em>obj</em>) – (optional)
+A circuit breaker strategy to apply to all calls made by this service client (i.e. at the client level).
+This client uses <a class="reference internal" href="../../circuit_breaker.html#oci.circuit_breaker.DEFAULT_CIRCUIT_BREAKER_STRATEGY" title="oci.circuit_breaker.DEFAULT_CIRCUIT_BREAKER_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_CIRCUIT_BREAKER_STRATEGY</span></code></a> as default if no circuit breaker strategy is provided.
+The specifics of circuit breaker strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/circuit_breakers.html">here</a>.</li>
+<li><strong>circuit_breaker_callback</strong> (<em>function</em>) – (optional)
+Callback function to receive any exceptions triggerred by the circuit breaker.</li>
+<li><strong>client_level_realm_specific_endpoint_template_enabled</strong> (<em>bool</em>) – (optional)
+A boolean flag to indicate whether or not this client should be created with realm specific endpoint template enabled or disable. By default, this will be set as None.</li>
+<li><strong>allow_control_chars</strong> – (optional)
+allow_control_chars is a boolean to indicate whether or not this client should allow control characters in the response object. By default, the client will not
+allow control characters to be in the response object.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.create_data_source">
+<code class="descname">create_data_source</code><span class="sig-paren">(</span><em>management_agent_id</em>, <em>create_data_source_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.create_data_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Datasource creation request to given Management Agent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>management_agent_id</strong> (<em>str</em>) – (required)
+Unique Management Agent identifier</li>
+<li><strong>create_data_source_details</strong> (<a class="reference internal" href="../models/oci.management_agent.models.CreateDataSourceDetails.html#oci.management_agent.models.CreateDataSourceDetails" title="oci.management_agent.models.CreateDataSourceDetails"><em>oci.management_agent.models.CreateDataSourceDetails</em></a>) – (required)
+Details of DataSource to be created for the given Management Agent.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request
+might be rejected.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/create_data_source.py.html">here</a> to see an example of how to use create_data_source API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.create_management_agent_install_key">
+<code class="descname">create_management_agent_install_key</code><span class="sig-paren">(</span><em>create_management_agent_install_key_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.create_management_agent_install_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>User creates a new install key as part of this API.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>create_management_agent_install_key_details</strong> (<a class="reference internal" href="../models/oci.management_agent.models.CreateManagementAgentInstallKeyDetails.html#oci.management_agent.models.CreateManagementAgentInstallKeyDetails" title="oci.management_agent.models.CreateManagementAgentInstallKeyDetails"><em>oci.management_agent.models.CreateManagementAgentInstallKeyDetails</em></a>) – (required)
+Details of the Agent install Key</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request
+might be rejected.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.management_agent.models.ManagementAgentInstallKey.html#oci.management_agent.models.ManagementAgentInstallKey" title="oci.management_agent.models.ManagementAgentInstallKey"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagementAgentInstallKey</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/create_management_agent_install_key.py.html">here</a> to see an example of how to use create_management_agent_install_key API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.delete_data_source">
+<code class="descname">delete_data_source</code><span class="sig-paren">(</span><em>management_agent_id</em>, <em>data_source_key</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.delete_data_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Datasource delete request to given Management Agent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>management_agent_id</strong> (<em>str</em>) – (required)
+Unique Management Agent identifier</li>
+<li><strong>data_source_key</strong> (<em>str</em>) – (required)
+Data source type and name identifier.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/delete_data_source.py.html">here</a> to see an example of how to use delete_data_source API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.delete_management_agent">
+<code class="descname">delete_management_agent</code><span class="sig-paren">(</span><em>management_agent_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.delete_management_agent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a Management Agent resource by identifier</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>management_agent_id</strong> (<em>str</em>) – (required)
+Unique Management Agent identifier</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/delete_management_agent.py.html">here</a> to see an example of how to use delete_management_agent API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.delete_management_agent_install_key">
+<code class="descname">delete_management_agent_install_key</code><span class="sig-paren">(</span><em>management_agent_install_key_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.delete_management_agent_install_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a Management Agent install Key resource by identifier</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>management_agent_install_key_id</strong> (<em>str</em>) – (required)
+Unique Management Agent Install Key identifier</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/delete_management_agent_install_key.py.html">here</a> to see an example of how to use delete_management_agent_install_key API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.delete_work_request">
+<code class="descname">delete_work_request</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.delete_work_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cancel the work request with the given ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The ID of the asynchronous request.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/delete_work_request.py.html">here</a> to see an example of how to use delete_work_request API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.deploy_plugins">
+<code class="descname">deploy_plugins</code><span class="sig-paren">(</span><em>deploy_plugins_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.deploy_plugins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deploys Plugins to a given list of agentIds.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>deploy_plugins_details</strong> (<a class="reference internal" href="../models/oci.management_agent.models.DeployPluginsDetails.html#oci.management_agent.models.DeployPluginsDetails" title="oci.management_agent.models.DeployPluginsDetails"><em>oci.management_agent.models.DeployPluginsDetails</em></a>) – (required)
+Details of Plugins to be deployed for a given list of Management Agents.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request
+might be rejected.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/deploy_plugins.py.html">here</a> to see an example of how to use deploy_plugins API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.get_auto_upgradable_config">
+<code class="descname">get_auto_upgradable_config</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.get_auto_upgradable_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the AutoUpgradable configuration for all agents in a tenancy.
+The supplied compartmentId must be a tenancy root.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment to which a request will be scoped.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.management_agent.models.AutoUpgradableConfig.html#oci.management_agent.models.AutoUpgradableConfig" title="oci.management_agent.models.AutoUpgradableConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">AutoUpgradableConfig</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/get_auto_upgradable_config.py.html">here</a> to see an example of how to use get_auto_upgradable_config API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.get_data_source">
+<code class="descname">get_data_source</code><span class="sig-paren">(</span><em>management_agent_id</em>, <em>data_source_key</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.get_data_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Datasource details for given Id and given Management Agent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>management_agent_id</strong> (<em>str</em>) – (required)
+Unique Management Agent identifier</li>
+<li><strong>data_source_key</strong> (<em>str</em>) – (required)
+Data source type and name identifier.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request
+might be rejected.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.management_agent.models.DataSource.html#oci.management_agent.models.DataSource" title="oci.management_agent.models.DataSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataSource</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/get_data_source.py.html">here</a> to see an example of how to use get_data_source API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.get_management_agent">
+<code class="descname">get_management_agent</code><span class="sig-paren">(</span><em>management_agent_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.get_management_agent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets complete details of the inventory of a given agent id</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>management_agent_id</strong> (<em>str</em>) – (required)
+Unique Management Agent identifier</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.management_agent.models.ManagementAgent.html#oci.management_agent.models.ManagementAgent" title="oci.management_agent.models.ManagementAgent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagementAgent</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/get_management_agent.py.html">here</a> to see an example of how to use get_management_agent API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.get_management_agent_install_key">
+<code class="descname">get_management_agent_install_key</code><span class="sig-paren">(</span><em>management_agent_install_key_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.get_management_agent_install_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets complete details of the Agent install Key for a given key id</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>management_agent_install_key_id</strong> (<em>str</em>) – (required)
+Unique Management Agent Install Key identifier</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.management_agent.models.ManagementAgentInstallKey.html#oci.management_agent.models.ManagementAgentInstallKey" title="oci.management_agent.models.ManagementAgentInstallKey"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagementAgentInstallKey</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/get_management_agent_install_key.py.html">here</a> to see an example of how to use get_management_agent_install_key API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.get_management_agent_install_key_content">
+<code class="descname">get_management_agent_install_key_content</code><span class="sig-paren">(</span><em>management_agent_install_key_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.get_management_agent_install_key_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a file with Management Agent install Key in it</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>management_agent_install_key_id</strong> (<em>str</em>) – (required)
+Unique Management Agent Install Key identifier</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>plugin_name</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – (optional)
+Filter to return input plugin names uncommented in the output.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type stream</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/get_management_agent_install_key_content.py.html">here</a> to see an example of how to use get_management_agent_install_key_content API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.get_work_request">
+<code class="descname">get_work_request</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.get_work_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the status of the work request with the given ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The ID of the asynchronous request.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.management_agent.models.WorkRequest.html#oci.management_agent.models.WorkRequest" title="oci.management_agent.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/get_work_request.py.html">here</a> to see an example of how to use get_work_request API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.list_availability_histories">
+<code class="descname">list_availability_histories</code><span class="sig-paren">(</span><em>management_agent_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.list_availability_histories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the availability history records of Management Agent</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>management_agent_id</strong> (<em>str</em>) – (required)
+Unique Management Agent identifier</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>time_availability_status_ended_greater_than</strong> (<em>datetime</em>) – <p>(optional)
+Filter to limit the availability history results to that of time after the input time including the boundary record.
+Defaulted to current date minus one year.
+The date and time to be given as described in <a class="reference external" href="https://tools.ietf.org/rfc/rfc3339">RFC 3339</a>, section 5.6.</p>
+</li>
+<li><strong>time_availability_status_started_less_than</strong> (<em>datetime</em>) – <p>(optional)
+Filter to limit the availability history results to that of time before the input time including the boundary record
+Defaulted to current date.
+The date and time to be given as described in <a class="reference external" href="https://tools.ietf.org/rfc/rfc3339">RFC 3339</a>, section 5.6.</p>
+</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ‘ASC’ or ‘DESC’.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Default order for timeAvailabilityStatusStarted is descending.</p>
+<p>Allowed values are: “timeAvailabilityStatusStarted”</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.management_agent.models.AvailabilityHistorySummary.html#oci.management_agent.models.AvailabilityHistorySummary" title="oci.management_agent.models.AvailabilityHistorySummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">AvailabilityHistorySummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/list_availability_histories.py.html">here</a> to see an example of how to use list_availability_histories API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.list_data_sources">
+<code class="descname">list_data_sources</code><span class="sig-paren">(</span><em>management_agent_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.list_data_sources" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Management Agent Data Sources for the given Management Agent Id.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>management_agent_id</strong> (<em>str</em>) – (required)
+Unique Management Agent identifier</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ‘asc’ or ‘desc’.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Only one sort order may be provided. If no value is specified dataSourceName is default.</p>
+<p>Allowed values are: “dataSourceName”, “dataSourceType”</p>
+</li>
+<li><strong>name</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – (optional)
+Unique name of the dataSource.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.management_agent.models.DataSourceSummary.html#oci.management_agent.models.DataSourceSummary" title="oci.management_agent.models.DataSourceSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataSourceSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/list_data_sources.py.html">here</a> to see an example of how to use list_data_sources API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.list_management_agent_images">
+<code class="descname">list_management_agent_images</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.list_management_agent_images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get supported agent image information</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment to which a request will be scoped.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request
+might be rejected.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ‘asc’ or ‘desc’.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Only one sort order may be provided. Default order for platformType is descending. Default order for version is descending. If no value is specified platformType is default.</p>
+<p>Allowed values are: “platformType”, “version”</p>
+</li>
+<li><strong>name</strong> (<em>str</em>) – (optional)
+A filter to return only resources that match the entire platform name given.</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+Filter to return only Management Agents in the particular lifecycle state.</p>
+<p>Allowed values are: “CREATING”, “UPDATING”, “ACTIVE”, “INACTIVE”, “TERMINATED”, “DELETING”, “DELETED”, “FAILED”</p>
+</li>
+<li><strong>install_type</strong> (<em>str</em>) – <p>(optional)
+A filter to return either agents or gateway types depending upon install type selected by user. By default both install type will be returned.</p>
+<p>Allowed values are: “AGENT”, “GATEWAY”</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.management_agent.models.ManagementAgentImageSummary.html#oci.management_agent.models.ManagementAgentImageSummary" title="oci.management_agent.models.ManagementAgentImageSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagementAgentImageSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/list_management_agent_images.py.html">here</a> to see an example of how to use list_management_agent_images API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.list_management_agent_install_keys">
+<code class="descname">list_management_agent_install_keys</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.list_management_agent_install_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of Management Agent installed Keys.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment to which a request will be scoped.</li>
+<li><strong>compartment_id_in_subtree</strong> (<em>bool</em>) – (optional)
+if set to true then it fetches resources for all compartments where user has access to else only on the compartment specified.</li>
+<li><strong>access_level</strong> (<em>str</em>) – (optional)
+Value of this is always “ACCESSIBLE” and any other value is not supported.</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+Filter to return only Management Agents in the particular lifecycle state.</p>
+<p>Allowed values are: “CREATING”, “UPDATING”, “ACTIVE”, “INACTIVE”, “TERMINATED”, “DELETING”, “DELETED”, “FAILED”</p>
+</li>
+<li><strong>display_name</strong> (<em>str</em>) – (optional)
+The display name for which the Key needs to be listed.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ‘asc’ or ‘desc’.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending. If no value is specified timeCreated is default.</p>
+<p>Allowed values are: “timeCreated”, “displayName”</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.management_agent.models.ManagementAgentInstallKeySummary.html#oci.management_agent.models.ManagementAgentInstallKeySummary" title="oci.management_agent.models.ManagementAgentInstallKeySummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagementAgentInstallKeySummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/list_management_agent_install_keys.py.html">here</a> to see an example of how to use list_management_agent_install_keys API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.list_management_agent_plugins">
+<code class="descname">list_management_agent_plugins</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.list_management_agent_plugins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of managementAgentPlugins.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment to which a request will be scoped.</li>
+<li><strong>display_name</strong> (<em>str</em>) – (optional)
+Filter to return only Management Agent Plugins having the particular display name.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ‘asc’ or ‘desc’.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Default order for displayName is ascending. If no value is specified displayName is default.</p>
+<p>Allowed values are: “displayName”</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+Filter to return only Management Agents in the particular lifecycle state.</p>
+<p>Allowed values are: “CREATING”, “UPDATING”, “ACTIVE”, “INACTIVE”, “TERMINATED”, “DELETING”, “DELETED”, “FAILED”</p>
+</li>
+<li><strong>platform_type</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – <p>(optional)
+Filter to return only results having the particular platform type.</p>
+<p>Allowed values are: “LINUX”, “WINDOWS”, “SOLARIS”, “MACOSX”</p>
+</li>
+<li><strong>agent_id</strong> (<em>str</em>) – (optional)
+The ManagementAgentID of the agent from which the Management Agents to be filtered.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.management_agent.models.ManagementAgentPluginSummary.html#oci.management_agent.models.ManagementAgentPluginSummary" title="oci.management_agent.models.ManagementAgentPluginSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagementAgentPluginSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/list_management_agent_plugins.py.html">here</a> to see an example of how to use list_management_agent_plugins API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.list_management_agents">
+<code class="descname">list_management_agents</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.list_management_agents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of Management Agents.
+If no explicit page size limit is specified, it will default to 1000 when compartmentIdInSubtree is true and 5000 otherwise.
+The response is limited to maximum 1000 records when compartmentIdInSubtree is true.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment to which a request will be scoped.</li>
+<li><strong>plugin_name</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – (optional)
+Filter to return only Management Agents having the particular Plugin installed. A special pluginName of ‘None’ can be provided and this will return only Management Agents having no plugin installed.</li>
+<li><strong>version</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – (optional)
+Filter to return only Management Agents having the particular agent version.</li>
+<li><strong>display_name</strong> (<em>str</em>) – (optional)
+Filter to return only Management Agents having the particular display name.</li>
+<li><strong>lifecycle_state</strong> (<em>str</em>) – <p>(optional)
+Filter to return only Management Agents in the particular lifecycle state.</p>
+<p>Allowed values are: “CREATING”, “UPDATING”, “ACTIVE”, “INACTIVE”, “TERMINATED”, “DELETING”, “DELETED”, “FAILED”</p>
+</li>
+<li><strong>availability_status</strong> (<em>str</em>) – <p>(optional)
+Filter to return only Management Agents in the particular availability status.</p>
+<p>Allowed values are: “ACTIVE”, “SILENT”, “NOT_AVAILABLE”</p>
+</li>
+<li><strong>host_id</strong> (<em>str</em>) – (optional)
+Filter to return only Management Agents having the particular agent host id.</li>
+<li><strong>platform_type</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – <p>(optional)
+Filter to return only results having the particular platform type.</p>
+<p>Allowed values are: “LINUX”, “WINDOWS”, “SOLARIS”, “MACOSX”</p>
+</li>
+<li><strong>is_customer_deployed</strong> (<em>bool</em>) – (optional)
+true, if the agent image is manually downloaded and installed. false, if the agent is deployed as a plugin in Oracle Cloud Agent.</li>
+<li><strong>install_type</strong> (<em>str</em>) – <p>(optional)
+A filter to return either agents or gateway types depending upon install type selected by user. By default both install type will be returned.</p>
+<p>Allowed values are: “AGENT”, “GATEWAY”</p>
+</li>
+<li><strong>gateway_id</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – (optional)
+Filter to return only results having the particular gatewayId.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ‘asc’ or ‘desc’.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Only one sort order may be provided. Default order for timeCreated is descending. Default order for displayName is ascending. If no value is specified timeCreated is default.</p>
+<p>Allowed values are: “timeCreated”, “displayName”, “host”, “availabilityStatus”, “platformType”, “pluginDisplayNames”, “version”</p>
+</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>compartment_id_in_subtree</strong> (<em>bool</em>) – (optional)
+if set to true then it fetches resources for all compartments where user has access to else only on the compartment specified.</li>
+<li><strong>access_level</strong> (<em>str</em>) – (optional)
+When the value is “ACCESSIBLE”, insufficient permissions for a compartment will filter out resources in that compartment without rejecting the request.</li>
+<li><strong>data_source_type</strong> (<em>str</em>) – <p>(optional)
+The type of the dataSource.</p>
+<p>Allowed values are: “KUBERNETES_CLUSTER”, “PROMETHEUS_EMITTER”</p>
+</li>
+<li><strong>data_source_name</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – (optional)
+Unique name of the dataSource.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.management_agent.models.ManagementAgentSummary.html#oci.management_agent.models.ManagementAgentSummary" title="oci.management_agent.models.ManagementAgentSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagementAgentSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/list_management_agents.py.html">here</a> to see an example of how to use list_management_agents API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.list_work_request_errors">
+<code class="descname">list_work_request_errors</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.list_work_request_errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a (paginated) list of errors for a given work request.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The ID of the asynchronous request.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ‘asc’ or ‘desc’.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Only one sort order may</p>
+<p>Allowed values are: “timestamp”</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.management_agent.models.WorkRequestError.html#oci.management_agent.models.WorkRequestError" title="oci.management_agent.models.WorkRequestError"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestError</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/list_work_request_errors.py.html">here</a> to see an example of how to use list_work_request_errors API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.list_work_request_logs">
+<code class="descname">list_work_request_logs</code><span class="sig-paren">(</span><em>work_request_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.list_work_request_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a (paginated) list of logs for a given work request.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>work_request_id</strong> (<em>str</em>) – (required)
+The ID of the asynchronous request.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ‘asc’ or ‘desc’.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Only one sort order may</p>
+<p>Allowed values are: “timestamp”</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.management_agent.models.WorkRequestLogEntry.html#oci.management_agent.models.WorkRequestLogEntry" title="oci.management_agent.models.WorkRequestLogEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestLogEntry</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/list_work_request_logs.py.html">here</a> to see an example of how to use list_work_request_logs API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.list_work_requests">
+<code class="descname">list_work_requests</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.list_work_requests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the work requests in a compartment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment to which a request will be scoped.</li>
+<li><strong>agent_id</strong> (<em>str</em>) – (optional)
+The ManagementAgentID of the agent from which the Management Agents to be filtered.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.</li>
+<li><strong>limit</strong> (<em>int</em>) – (optional)
+The maximum number of items to return.</li>
+<li><strong>status</strong> (<em>str</em>) – <p>(optional)
+The OperationStatus of the workRequest</p>
+<p>Allowed values are: “CREATED”, “ACCEPTED”, “IN_PROGRESS”, “FAILED”, “SUCCEEDED”, “CANCELING”, “CANCELED”</p>
+</li>
+<li><strong>type</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – <p>(optional)
+The OperationType of the workRequest</p>
+<p>Allowed values are: “DEPLOY_PLUGIN”, “UPGRADE_PLUGIN”, “CREATE_UPGRADE_PLUGINS”, “AGENTIMAGE_UPGRADE”, “CREATE_DATA_SOURCE”, “UPDATE_DATA_SOURCE”, “DELETE_DATA_SOURCE”</p>
+</li>
+<li><strong>time_created_greater_than_or_equal_to</strong> (<em>datetime</em>) – (optional)
+Filter for items with timeCreated greater or equal to provided value.
+given <cite>timeCreatedGreaterThanOrEqualTo</cite> to the current time, in “YYYY-MM-ddThh:mmZ” format with a
+Z offset, as defined by RFC 3339.</li>
+<li><strong>sort_order</strong> (<em>str</em>) – <p>(optional)
+The sort order to use, either ‘asc’ or ‘desc’.</p>
+<p>Allowed values are: “ASC”, “DESC”</p>
+</li>
+<li><strong>sort_by</strong> (<em>str</em>) – <p>(optional)
+The field to sort by. Only one sort order may be provided. Default order for timeAccepted is descending. If no value is specified timeAccepted is default.</p>
+<p>Allowed values are: “timeAccepted”</p>
+</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type list of <a class="reference internal" href="../models/oci.management_agent.models.WorkRequestSummary.html#oci.management_agent.models.WorkRequestSummary" title="oci.management_agent.models.WorkRequestSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequestSummary</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/list_work_requests.py.html">here</a> to see an example of how to use list_work_requests API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.set_auto_upgradable_config">
+<code class="descname">set_auto_upgradable_config</code><span class="sig-paren">(</span><em>set_auto_upgradable_config_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.set_auto_upgradable_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the AutoUpgradable configuration for all agents in a tenancy.
+The supplied compartmentId must be a tenancy root.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>set_auto_upgradable_config_details</strong> (<a class="reference internal" href="../models/oci.management_agent.models.SetAutoUpgradableConfigDetails.html#oci.management_agent.models.SetAutoUpgradableConfigDetails" title="oci.management_agent.models.SetAutoUpgradableConfigDetails"><em>oci.management_agent.models.SetAutoUpgradableConfigDetails</em></a>) – (required)
+Details of the AutoUpgradable configuration for agents of the tenancy.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request
+might be rejected.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.management_agent.models.AutoUpgradableConfig.html#oci.management_agent.models.AutoUpgradableConfig" title="oci.management_agent.models.AutoUpgradableConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">AutoUpgradableConfig</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/set_auto_upgradable_config.py.html">here</a> to see an example of how to use set_auto_upgradable_config API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.summarize_management_agent_counts">
+<code class="descname">summarize_management_agent_counts</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>group_by</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.summarize_management_agent_counts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets count of the inventory of agents for a given compartment id, group by, and isPluginDeployed parameters.
+Supported groupBy parameters: availabilityStatus, platformType, version</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment to which a request will be scoped.</li>
+<li><strong>group_by</strong> (<em>oci.management_agent.models.list</em><em>[</em><em>str</em><em>]</em>) – <p>(required)
+The field by which to group Management Agents. Currently, only one groupBy dimension is supported at a time.</p>
+<p>Allowed values are: “availabilityStatus”, “platformType”, “version”</p>
+</li>
+<li><strong>has_plugins</strong> (<em>bool</em>) – (optional)
+When set to true then agents that have at least one plugin deployed will be returned. When set to false only agents that have no plugins deployed will be returned.</li>
+<li><strong>install_type</strong> (<em>str</em>) – <p>(optional)
+A filter to return either agents or gateway types depending upon install type selected by user. By default both install type will be returned.</p>
+<p>Allowed values are: “AGENT”, “GATEWAY”</p>
+</li>
+<li><strong>compartment_id_in_subtree</strong> (<em>bool</em>) – (optional)
+if set to true then it fetches resources for all compartments where user has access to else only on the compartment specified.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.management_agent.models.ManagementAgentAggregationCollection.html#oci.management_agent.models.ManagementAgentAggregationCollection" title="oci.management_agent.models.ManagementAgentAggregationCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagementAgentAggregationCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/summarize_management_agent_counts.py.html">here</a> to see an example of how to use summarize_management_agent_counts API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.summarize_management_agent_plugin_counts">
+<code class="descname">summarize_management_agent_plugin_counts</code><span class="sig-paren">(</span><em>compartment_id</em>, <em>group_by</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.summarize_management_agent_plugin_counts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets count of the inventory of management agent plugins for a given compartment id and group by parameter.
+Supported groupBy parameter: pluginName</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compartment_id</strong> (<em>str</em>) – (required)
+The OCID of the compartment to which a request will be scoped.</li>
+<li><strong>group_by</strong> (<em>str</em>) – <p>(required)
+The field by which to group Management Agent Plugins</p>
+<p>Allowed values are: “pluginName”</p>
+</li>
+<li><strong>compartment_id_in_subtree</strong> (<em>bool</em>) – (optional)
+if set to true then it fetches resources for all compartments where user has access to else only on the compartment specified.</li>
+<li><strong>page</strong> (<em>str</em>) – (optional)
+The page token representing the page at which to start retrieving results. This is usually retrieved from a previous list call.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.management_agent.models.ManagementAgentPluginAggregationCollection.html#oci.management_agent.models.ManagementAgentPluginAggregationCollection" title="oci.management_agent.models.ManagementAgentPluginAggregationCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagementAgentPluginAggregationCollection</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/summarize_management_agent_plugin_counts.py.html">here</a> to see an example of how to use summarize_management_agent_plugin_counts API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.update_data_source">
+<code class="descname">update_data_source</code><span class="sig-paren">(</span><em>management_agent_id</em>, <em>data_source_key</em>, <em>update_data_source_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.update_data_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Datasource update request to given Management Agent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>management_agent_id</strong> (<em>str</em>) – (required)
+Unique Management Agent identifier</li>
+<li><strong>data_source_key</strong> (<em>str</em>) – (required)
+Data source type and name identifier.</li>
+<li><strong>update_data_source_details</strong> (<a class="reference internal" href="../models/oci.management_agent.models.UpdateDataSourceDetails.html#oci.management_agent.models.UpdateDataSourceDetails" title="oci.management_agent.models.UpdateDataSourceDetails"><em>oci.management_agent.models.UpdateDataSourceDetails</em></a>) – (required)
+Details of DataSource to be update for the given Management Agent.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request
+might be rejected.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/update_data_source.py.html">here</a> to see an example of how to use update_data_source API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.update_management_agent">
+<code class="descname">update_management_agent</code><span class="sig-paren">(</span><em>management_agent_id</em>, <em>update_management_agent_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.update_management_agent" title="Permalink to this definition">¶</a></dt>
+<dd><p>API to update the console managed properties of the Management Agent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>management_agent_id</strong> (<em>str</em>) – (required)
+Unique Management Agent identifier</li>
+<li><strong>update_management_agent_details</strong> (<a class="reference internal" href="../models/oci.management_agent.models.UpdateManagementAgentDetails.html#oci.management_agent.models.UpdateManagementAgentDetails" title="oci.management_agent.models.UpdateManagementAgentDetails"><em>oci.management_agent.models.UpdateManagementAgentDetails</em></a>) – (required)
+Details required for changing the console managed properties of the Management Agent.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request
+might be rejected.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.management_agent.models.ManagementAgent.html#oci.management_agent.models.ManagementAgent" title="oci.management_agent.models.ManagementAgent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagementAgent</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/update_management_agent.py.html">here</a> to see an example of how to use update_management_agent API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.management_agent.ManagementAgentClient.update_management_agent_install_key">
+<code class="descname">update_management_agent_install_key</code><span class="sig-paren">(</span><em>management_agent_install_key_id</em>, <em>update_management_agent_install_key_details</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.management_agent.ManagementAgentClient.update_management_agent_install_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>API to update the modifiable properties of the Management Agent install key.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>management_agent_install_key_id</strong> (<em>str</em>) – (required)
+Unique Management Agent Install Key identifier</li>
+<li><strong>update_management_agent_install_key_details</strong> (<a class="reference internal" href="../models/oci.management_agent.models.UpdateManagementAgentInstallKeyDetails.html#oci.management_agent.models.UpdateManagementAgentInstallKeyDetails" title="oci.management_agent.models.UpdateManagementAgentInstallKeyDetails"><em>oci.management_agent.models.UpdateManagementAgentInstallKeyDetails</em></a>) – (required)
+Details required for changing the modifiable properties of the Management Agent install key.</li>
+<li><strong>opc_retry_token</strong> (<em>str</em>) – (optional)
+A token that uniquely identifies a request so it can be retried in case of a timeout or
+server error without risk of executing that same action again. Retry tokens expire after 24
+hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+has been deleted and purged from the system, then a retry of the original creation request
+might be rejected.</li>
+<li><strong>opc_request_id</strong> (<em>str</em>) – (optional)
+The client request ID for tracing.</li>
+<li><strong>if_match</strong> (<em>str</em>) – (optional)
+For optimistic concurrency control. In the PUT or DELETE call
+for a resource, set the <cite>if-match</cite> parameter to the value of the
+etag from a previous GET or POST response for that resource.
+The resource will be updated or deleted only if the etag you
+provide matches the resource’s current etag value.</li>
+<li><strong>retry_strategy</strong> (<em>obj</em>) – <p>(optional)
+A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.</p>
+<p>This should be one of the strategies available in the <a class="reference internal" href="../../retry.html#module-oci.retry" title="oci.retry"><code class="xref py py-mod docutils literal notranslate"><span class="pre">retry</span></code></a> module. This operation will not retry by default, users can also use the convenient <a class="reference internal" href="../../retry.html#oci.retry.DEFAULT_RETRY_STRATEGY" title="oci.retry.DEFAULT_RETRY_STRATEGY"><code class="xref py py-data docutils literal notranslate"><span class="pre">DEFAULT_RETRY_STRATEGY</span></code></a> provided by the SDK to enable retries for it.
+The specifics of the default retry strategy are described <a class="reference external" href="https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html">here</a>.</p>
+<p>To have this operation explicitly not perform any retries, pass an instance of <a class="reference internal" href="../../retry.html#oci.retry.NoneRetryStrategy" title="oci.retry.NoneRetryStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoneRetryStrategy</span></code></a>.</p>
+</li>
+<li><strong>allow_control_chars</strong> (<em>bool</em>) – (optional)
+allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+By default, the response will not allow control characters in strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A <a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object with data of type <a class="reference internal" href="../models/oci.management_agent.models.ManagementAgentInstallKey.html#oci.management_agent.models.ManagementAgentInstallKey" title="oci.management_agent.models.ManagementAgentInstallKey"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagementAgentInstallKey</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="../../request_and_response.html#oci.response.Response" title="oci.response.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Click <a class="reference external" href="https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.143.1/managementagent/update_management_agent_install_key.py.html">here</a> to see an example of how to use update_management_agent_install_key API.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.management_agent.ManagementAgentClientCompositeOperations.html" class="btn btn-neutral float-right" title="ManagementAgentClientCompositeOperations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../management_agent.html" class="btn btn-neutral" title="Management Agent" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

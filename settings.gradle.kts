@@ -27,3 +27,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "SmartRoute"
 include(":app")
+include(":SmartRoute")

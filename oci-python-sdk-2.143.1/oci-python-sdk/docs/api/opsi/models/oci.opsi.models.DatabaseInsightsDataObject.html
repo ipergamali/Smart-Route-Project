@@ -1,0 +1,1175 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DatabaseInsightsDataObject &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="DatabaseInsightsDataObjectSummary" href="oci.opsi.models.DatabaseInsightsDataObjectSummary.html" />
+    <link rel="prev" title="DatabaseInsightsCollection" href="oci.opsi.models.DatabaseInsightsCollection.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../opsi.html">Opsi</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.opsi.OperationsInsightsClient.html">OperationsInsightsClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../client/oci.opsi.OperationsInsightsClientCompositeOperations.html">OperationsInsightsClientCompositeOperations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../opsi.html#models">Models</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddEmManagedExternalExadataInsightMembersDetails.html">AddEmManagedExternalExadataInsightMembersDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddExadataInsightMembersDetails.html">AddExadataInsightMembersDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddMacsManagedCloudExadataInsightMembersDetails.html">AddMacsManagedCloudExadataInsightMembersDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddPeComanagedExadataInsightMembersDetails.html">AddPeComanagedExadataInsightMembersDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbCollection.html">AddmDbCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbFindingAggregation.html">AddmDbFindingAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbFindingAggregationCollection.html">AddmDbFindingAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbFindingCategoryCollection.html">AddmDbFindingCategoryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbFindingCategorySummary.html">AddmDbFindingCategorySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbFindingsTimeSeriesCollection.html">AddmDbFindingsTimeSeriesCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbFindingsTimeSeriesSummary.html">AddmDbFindingsTimeSeriesSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbParameterAggregation.html">AddmDbParameterAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbParameterAggregationCollection.html">AddmDbParameterAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbParameterCategoryCollection.html">AddmDbParameterCategoryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbParameterCategorySummary.html">AddmDbParameterCategorySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbParameterChangeAggregation.html">AddmDbParameterChangeAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbParameterChangeAggregationCollection.html">AddmDbParameterChangeAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbRecommendationAggregation.html">AddmDbRecommendationAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbRecommendationAggregationCollection.html">AddmDbRecommendationAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbRecommendationCategoryCollection.html">AddmDbRecommendationCategoryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbRecommendationCategorySummary.html">AddmDbRecommendationCategorySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbRecommendationsTimeSeriesCollection.html">AddmDbRecommendationsTimeSeriesCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbRecommendationsTimeSeriesSummary.html">AddmDbRecommendationsTimeSeriesSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbSchemaObjectCollection.html">AddmDbSchemaObjectCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbSchemaObjectSummary.html">AddmDbSchemaObjectSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbSqlStatementCollection.html">AddmDbSqlStatementCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbSqlStatementSummary.html">AddmDbSqlStatementSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmDbSummary.html">AddmDbSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AddmReport.html">AddmReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AutonomousDatabaseConfigurationSummary.html">AutonomousDatabaseConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AutonomousDatabaseInsight.html">AutonomousDatabaseInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AutonomousDatabaseInsightSummary.html">AutonomousDatabaseInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseCollection.html">AwrDatabaseCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseCpuUsageCollection.html">AwrDatabaseCpuUsageCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseCpuUsageSummary.html">AwrDatabaseCpuUsageSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseMetricCollection.html">AwrDatabaseMetricCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseMetricSummary.html">AwrDatabaseMetricSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseParameterChangeCollection.html">AwrDatabaseParameterChangeCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseParameterChangeSummary.html">AwrDatabaseParameterChangeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseParameterCollection.html">AwrDatabaseParameterCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseParameterSummary.html">AwrDatabaseParameterSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseReport.html">AwrDatabaseReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseSnapshotCollection.html">AwrDatabaseSnapshotCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseSnapshotRangeCollection.html">AwrDatabaseSnapshotRangeCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseSnapshotRangeSummary.html">AwrDatabaseSnapshotRangeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseSnapshotSummary.html">AwrDatabaseSnapshotSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseSqlReport.html">AwrDatabaseSqlReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseSummary.html">AwrDatabaseSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseSysstatCollection.html">AwrDatabaseSysstatCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseSysstatSummary.html">AwrDatabaseSysstatSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseTopWaitEventCollection.html">AwrDatabaseTopWaitEventCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseTopWaitEventSummary.html">AwrDatabaseTopWaitEventSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseWaitEventBucketCollection.html">AwrDatabaseWaitEventBucketCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseWaitEventBucketSummary.html">AwrDatabaseWaitEventBucketSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseWaitEventCollection.html">AwrDatabaseWaitEventCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrDatabaseWaitEventSummary.html">AwrDatabaseWaitEventSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrHub.html">AwrHub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrHubObjects.html">AwrHubObjects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrHubSource.html">AwrHubSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrHubSourceSummary.html">AwrHubSourceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrHubSourceSummaryCollection.html">AwrHubSourceSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrHubSources.html">AwrHubSources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrHubSummary.html">AwrHubSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrHubSummaryCollection.html">AwrHubSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrHubs.html">AwrHubs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrQueryResult.html">AwrQueryResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrReport.html">AwrReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrSnapshotCollection.html">AwrSnapshotCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrSnapshotSummary.html">AwrSnapshotSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.AwrSourceSummary.html">AwrSourceSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.BasicConfigurationItemMetadata.html">BasicConfigurationItemMetadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.BasicConfigurationItemSummary.html">BasicConfigurationItemSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ChangeAutonomousDatabaseInsightAdvancedFeaturesDetails.html">ChangeAutonomousDatabaseInsightAdvancedFeaturesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ChangeAwrHubSourceCompartmentDetails.html">ChangeAwrHubSourceCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ChangeDatabaseInsightCompartmentDetails.html">ChangeDatabaseInsightCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ChangeEnterpriseManagerBridgeCompartmentDetails.html">ChangeEnterpriseManagerBridgeCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ChangeExadataInsightCompartmentDetails.html">ChangeExadataInsightCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ChangeExternalMysqlDatabaseInsightConnectionDetails.html">ChangeExternalMysqlDatabaseInsightConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ChangeHostInsightCompartmentDetails.html">ChangeHostInsightCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ChangeMacsManagedCloudDatabaseInsightConnectionDetails.html">ChangeMacsManagedCloudDatabaseInsightConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ChangeNewsReportCompartmentDetails.html">ChangeNewsReportCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ChangeOperationsInsightsPrivateEndpointCompartmentDetails.html">ChangeOperationsInsightsPrivateEndpointCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ChangeOperationsInsightsWarehouseCompartmentDetails.html">ChangeOperationsInsightsWarehouseCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ChangeOpsiConfigurationCompartmentDetails.html">ChangeOpsiConfigurationCompartmentDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ChangePeComanagedDatabaseInsightDetails.html">ChangePeComanagedDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CloudImportableComputeEntitySummary.html">CloudImportableComputeEntitySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ConfigurationItemAllowedValueDetails.html">ConfigurationItemAllowedValueDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ConfigurationItemFreeTextAllowedValueDetails.html">ConfigurationItemFreeTextAllowedValueDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ConfigurationItemLimitAllowedValueDetails.html">ConfigurationItemLimitAllowedValueDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ConfigurationItemMetadata.html">ConfigurationItemMetadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ConfigurationItemPickAllowedValueDetails.html">ConfigurationItemPickAllowedValueDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ConfigurationItemSummary.html">ConfigurationItemSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ConfigurationItemUnitDetails.html">ConfigurationItemUnitDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ConfigurationItemsCollection.html">ConfigurationItemsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ConnectionDetails.html">ConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateAutonomousDatabaseInsightDetails.html">CreateAutonomousDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateAwrHubDetails.html">CreateAwrHubDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateAwrHubSourceDetails.html">CreateAwrHubSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateBasicConfigurationItemDetails.html">CreateBasicConfigurationItemDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateConfigurationItemDetails.html">CreateConfigurationItemDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateDatabaseInsightDetails.html">CreateDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateEmManagedExternalDatabaseInsightDetails.html">CreateEmManagedExternalDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateEmManagedExternalExadataInsightDetails.html">CreateEmManagedExternalExadataInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateEmManagedExternalExadataMemberEntityDetails.html">CreateEmManagedExternalExadataMemberEntityDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateEmManagedExternalHostInsightDetails.html">CreateEmManagedExternalHostInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateEnterpriseManagerBridgeDetails.html">CreateEnterpriseManagerBridgeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateExadataInsightDetails.html">CreateExadataInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateExternalMysqlDatabaseInsightDetails.html">CreateExternalMysqlDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateHostInsightDetails.html">CreateHostInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateMacsManagedCloudDatabaseInsightDetails.html">CreateMacsManagedCloudDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateMacsManagedCloudExadataClusterDetails.html">CreateMacsManagedCloudExadataClusterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateMacsManagedCloudExadataInsightDetails.html">CreateMacsManagedCloudExadataInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateMacsManagedCloudExadataVmclusterDetails.html">CreateMacsManagedCloudExadataVmclusterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateMacsManagedCloudHostInsightDetails.html">CreateMacsManagedCloudHostInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateMacsManagedExternalHostInsightDetails.html">CreateMacsManagedExternalHostInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateMdsMySqlDatabaseInsightDetails.html">CreateMdsMySqlDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateNewsReportDetails.html">CreateNewsReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateOperationsInsightsPrivateEndpointDetails.html">CreateOperationsInsightsPrivateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateOperationsInsightsWarehouseDetails.html">CreateOperationsInsightsWarehouseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateOperationsInsightsWarehouseUserDetails.html">CreateOperationsInsightsWarehouseUserDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateOpsiConfigurationDetails.html">CreateOpsiConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreateOpsiUxConfigurationDetails.html">CreateOpsiUxConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreatePeComanagedDatabaseInsightDetails.html">CreatePeComanagedDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreatePeComanagedExadataInsightDetails.html">CreatePeComanagedExadataInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CreatePeComanagedExadataVmclusterDetails.html">CreatePeComanagedExadataVmclusterDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CredentialByIam.html">CredentialByIam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CredentialByVault.html">CredentialByVault</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CredentialDetails.html">CredentialDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.CredentialsBySource.html">CredentialsBySource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DBConnectionStatus.html">DBConnectionStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DBExternalInstance.html">DBExternalInstance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DBExternalProperties.html">DBExternalProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DBOSConfigInstance.html">DBOSConfigInstance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DBParameters.html">DBParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectBindParameter.html">DataObjectBindParameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectColumnMetadata.html">DataObjectColumnMetadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectColumnUnit.html">DataObjectColumnUnit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectCoreColumnUnit.html">DataObjectCoreColumnUnit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectCustomColumnUnit.html">DataObjectCustomColumnUnit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectDataSizeColumnUnit.html">DataObjectDataSizeColumnUnit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectFrequencyColumnUnit.html">DataObjectFrequencyColumnUnit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectOtherStandardColumnUnit.html">DataObjectOtherStandardColumnUnit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectPowerColumnUnit.html">DataObjectPowerColumnUnit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectQuery.html">DataObjectQuery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectQueryTimeFilters.html">DataObjectQueryTimeFilters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectRateColumnUnit.html">DataObjectRateColumnUnit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectStandardQuery.html">DataObjectStandardQuery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectTemperatureColumnUnit.html">DataObjectTemperatureColumnUnit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectTemplatizedQuery.html">DataObjectTemplatizedQuery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DataObjectTimeColumnUnit.html">DataObjectTimeColumnUnit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DatabaseConfigurationCollection.html">DatabaseConfigurationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DatabaseConfigurationMetricGroup.html">DatabaseConfigurationMetricGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DatabaseConfigurationSummary.html">DatabaseConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DatabaseDetails.html">DatabaseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DatabaseInsight.html">DatabaseInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DatabaseInsightSummary.html">DatabaseInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DatabaseInsights.html">DatabaseInsights</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DatabaseInsightsCollection.html">DatabaseInsightsCollection</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">DatabaseInsightsDataObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DatabaseInsightsDataObjectSummary.html">DatabaseInsightsDataObjectSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DatabaseParameterTypeDetails.html">DatabaseParameterTypeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DiskGroupDetails.html">DiskGroupDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DiskStatistics.html">DiskStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.DownloadOperationsInsightsWarehouseWalletDetails.html">DownloadOperationsInsightsWarehouseWalletDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EmManagedExternalDatabaseConfigurationSummary.html">EmManagedExternalDatabaseConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EmManagedExternalDatabaseInsight.html">EmManagedExternalDatabaseInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EmManagedExternalDatabaseInsightSummary.html">EmManagedExternalDatabaseInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EmManagedExternalExadataInsight.html">EmManagedExternalExadataInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EmManagedExternalExadataInsightSummary.html">EmManagedExternalExadataInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EmManagedExternalHostConfigurationSummary.html">EmManagedExternalHostConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EmManagedExternalHostInsight.html">EmManagedExternalHostInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EmManagedExternalHostInsightSummary.html">EmManagedExternalHostInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnableAutonomousDatabaseInsightAdvancedFeaturesDetails.html">EnableAutonomousDatabaseInsightAdvancedFeaturesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnableAutonomousDatabaseInsightDetails.html">EnableAutonomousDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnableDatabaseInsightDetails.html">EnableDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnableEmManagedExternalDatabaseInsightDetails.html">EnableEmManagedExternalDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnableEmManagedExternalExadataInsightDetails.html">EnableEmManagedExternalExadataInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnableEmManagedExternalHostInsightDetails.html">EnableEmManagedExternalHostInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnableExadataInsightDetails.html">EnableExadataInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnableExternalMysqlDatabaseInsightDetails.html">EnableExternalMysqlDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnableHostInsightDetails.html">EnableHostInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnableMacsManagedCloudDatabaseInsightDetails.html">EnableMacsManagedCloudDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnableMacsManagedCloudExadataInsightDetails.html">EnableMacsManagedCloudExadataInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnableMacsManagedCloudHostInsightDetails.html">EnableMacsManagedCloudHostInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnableMacsManagedExternalHostInsightDetails.html">EnableMacsManagedExternalHostInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnableMdsMySqlDatabaseInsightDetails.html">EnableMdsMySqlDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnablePeComanagedDatabaseInsightDetails.html">EnablePeComanagedDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnablePeComanagedExadataInsightDetails.html">EnablePeComanagedExadataInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnterpriseManagerBridge.html">EnterpriseManagerBridge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnterpriseManagerBridgeCollection.html">EnterpriseManagerBridgeCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnterpriseManagerBridgeSummary.html">EnterpriseManagerBridgeSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.EnterpriseManagerBridges.html">EnterpriseManagerBridges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataAsmEntity.html">ExadataAsmEntity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataCellConfig.html">ExadataCellConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataConfigurationCollection.html">ExadataConfigurationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataConfigurationSummary.html">ExadataConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataDatabaseMachineConfigurationSummary.html">ExadataDatabaseMachineConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataDatabaseStatisticsSummary.html">ExadataDatabaseStatisticsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataDetails.html">ExadataDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataDiskgroupStatisticsSummary.html">ExadataDiskgroupStatisticsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataExaccConfigurationSummary.html">ExadataExaccConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataExacsConfigurationSummary.html">ExadataExacsConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataHostStatisticsSummary.html">ExadataHostStatisticsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataInsight.html">ExadataInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataInsightResourceCapacityTrendAggregation.html">ExadataInsightResourceCapacityTrendAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataInsightResourceCapacityTrendSummary.html">ExadataInsightResourceCapacityTrendSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataInsightResourceForecastTrendSummary.html">ExadataInsightResourceForecastTrendSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataInsightResourceInsightUtilizationItem.html">ExadataInsightResourceInsightUtilizationItem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataInsightResourceStatistics.html">ExadataInsightResourceStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataInsightResourceStatisticsAggregation.html">ExadataInsightResourceStatisticsAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataInsightSummary.html">ExadataInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataInsightSummaryCollection.html">ExadataInsightSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataInsights.html">ExadataInsights</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataInsightsDataObject.html">ExadataInsightsDataObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataInsightsDataObjectSummary.html">ExadataInsightsDataObjectSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataMemberCollection.html">ExadataMemberCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataMemberSummary.html">ExadataMemberSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExadataStorageServerStatisticsSummary.html">ExadataStorageServerStatisticsSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExternalMysqlDatabaseConfigurationSummary.html">ExternalMysqlDatabaseConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExternalMysqlDatabaseInsight.html">ExternalMysqlDatabaseInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ExternalMysqlDatabaseInsightSummary.html">ExternalMysqlDatabaseInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HistoricalDataItem.html">HistoricalDataItem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostAllocation.html">HostAllocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostConfigurationCollection.html">HostConfigurationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostConfigurationMetricGroup.html">HostConfigurationMetricGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostConfigurationSummary.html">HostConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostContainers.html">HostContainers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostCpuHardwareConfiguration.html">HostCpuHardwareConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostCpuRecommendations.html">HostCpuRecommendations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostCpuStatistics.html">HostCpuStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostCpuUsage.html">HostCpuUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostDetails.html">HostDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostEntities.html">HostEntities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostFilesystemConfiguration.html">HostFilesystemConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostFilesystemUsage.html">HostFilesystemUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostGpuConfiguration.html">HostGpuConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostGpuProcesses.html">HostGpuProcesses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostGpuUsage.html">HostGpuUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostHardwareConfiguration.html">HostHardwareConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostImportableAgentEntitySummary.html">HostImportableAgentEntitySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostInsight.html">HostInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostInsightHostRecommendations.html">HostInsightHostRecommendations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostInsightResourceStatisticsAggregation.html">HostInsightResourceStatisticsAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostInsightSummary.html">HostInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostInsightSummaryCollection.html">HostInsightSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostInsights.html">HostInsights</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostInsightsDataObject.html">HostInsightsDataObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostInsightsDataObjectSummary.html">HostInsightsDataObjectSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostInstanceMap.html">HostInstanceMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostIoStatistics.html">HostIoStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostIoUsage.html">HostIoUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostMemoryConfiguration.html">HostMemoryConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostMemoryRecommendations.html">HostMemoryRecommendations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostMemoryStatistics.html">HostMemoryStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostMemoryUsage.html">HostMemoryUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostNetworkActivitySummary.html">HostNetworkActivitySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostNetworkConfiguration.html">HostNetworkConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostNetworkRecommendations.html">HostNetworkRecommendations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostNetworkStatistics.html">HostNetworkStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostPerformanceMetricGroup.html">HostPerformanceMetricGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostProduct.html">HostProduct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostResourceAllocation.html">HostResourceAllocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostResourceCapacityTrendAggregation.html">HostResourceCapacityTrendAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostResourceStatistics.html">HostResourceStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostStorageRecommendations.html">HostStorageRecommendations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostStorageStatistics.html">HostStorageStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostTopProcesses.html">HostTopProcesses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostedEntityCollection.html">HostedEntityCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.HostedEntitySummary.html">HostedEntitySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ImportableAgentEntitySummary.html">ImportableAgentEntitySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ImportableAgentEntitySummaryCollection.html">ImportableAgentEntitySummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ImportableComputeEntitySummary.html">ImportableComputeEntitySummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ImportableComputeEntitySummaryCollection.html">ImportableComputeEntitySummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ImportableEnterpriseManagerEntity.html">ImportableEnterpriseManagerEntity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ImportableEnterpriseManagerEntityCollection.html">ImportableEnterpriseManagerEntityCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IndividualOpsiDataObjectDetailsInQuery.html">IndividualOpsiDataObjectDetailsInQuery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestAddmReportsDetails.html">IngestAddmReportsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestAddmReportsResponseDetails.html">IngestAddmReportsResponseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestDatabaseConfigurationDetails.html">IngestDatabaseConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestDatabaseConfigurationResponseDetails.html">IngestDatabaseConfigurationResponseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestHostConfigurationDetails.html">IngestHostConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestHostConfigurationResponseDetails.html">IngestHostConfigurationResponseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestHostMetricsDetails.html">IngestHostMetricsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestHostMetricsResponseDetails.html">IngestHostMetricsResponseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestMySqlSqlStatsDetails.html">IngestMySqlSqlStatsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestMySqlSqlStatsResponseDetails.html">IngestMySqlSqlStatsResponseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestMySqlSqlTextDetails.html">IngestMySqlSqlTextDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestMySqlSqlTextResponseDetails.html">IngestMySqlSqlTextResponseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestSqlBucketDetails.html">IngestSqlBucketDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestSqlBucketResponseDetails.html">IngestSqlBucketResponseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestSqlPlanLinesDetails.html">IngestSqlPlanLinesDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestSqlPlanLinesResponseDetails.html">IngestSqlPlanLinesResponseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestSqlStatsDetails.html">IngestSqlStatsDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestSqlStatsResponseDetails.html">IngestSqlStatsResponseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestSqlTextDetails.html">IngestSqlTextDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IngestSqlTextResponseDetails.html">IngestSqlTextResponseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.InstanceMetrics.html">InstanceMetrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IoUsageTrend.html">IoUsageTrend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.IoUsageTrendAggregation.html">IoUsageTrendAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ListObjects.html">ListObjects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedCloudDatabaseConfigurationSummary.html">MacsManagedCloudDatabaseConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedCloudDatabaseHostInsight.html">MacsManagedCloudDatabaseHostInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedCloudDatabaseHostInsightSummary.html">MacsManagedCloudDatabaseHostInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedCloudDatabaseInsight.html">MacsManagedCloudDatabaseInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedCloudDatabaseInsightSummary.html">MacsManagedCloudDatabaseInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedCloudDbHostConfigurationSummary.html">MacsManagedCloudDbHostConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedCloudExadataInsight.html">MacsManagedCloudExadataInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedCloudExadataInsightSummary.html">MacsManagedCloudExadataInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedCloudHostConfigurationSummary.html">MacsManagedCloudHostConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedCloudHostInsight.html">MacsManagedCloudHostInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedCloudHostInsightSummary.html">MacsManagedCloudHostInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedExternalDatabaseConfigurationSummary.html">MacsManagedExternalDatabaseConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedExternalDatabaseInsight.html">MacsManagedExternalDatabaseInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedExternalDatabaseInsightSummary.html">MacsManagedExternalDatabaseInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedExternalHostConfigurationSummary.html">MacsManagedExternalHostConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedExternalHostInsight.html">MacsManagedExternalHostInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MacsManagedExternalHostInsightSummary.html">MacsManagedExternalHostInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MdsMySqlDatabaseInsight.html">MdsMySqlDatabaseInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MdsMySqlDatabaseInsightSummary.html">MdsMySqlDatabaseInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MdsMysqlDatabaseConfigurationSummary.html">MdsMysqlDatabaseConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MySqlSqlStats.html">MySqlSqlStats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.MySqlSqlText.html">MySqlSqlText</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.NetworkUsageTrend.html">NetworkUsageTrend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.NetworkUsageTrendAggregation.html">NetworkUsageTrendAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.NewsContentTypes.html">NewsContentTypes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.NewsReport.html">NewsReport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.NewsReportCollection.html">NewsReportCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.NewsReportSummary.html">NewsReportSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.NewsReports.html">NewsReports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ObjectSummary.html">ObjectSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OperationsInsightsPrivateEndpoint.html">OperationsInsightsPrivateEndpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OperationsInsightsPrivateEndpointCollection.html">OperationsInsightsPrivateEndpointCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OperationsInsightsPrivateEndpointSummary.html">OperationsInsightsPrivateEndpointSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OperationsInsightsWarehouse.html">OperationsInsightsWarehouse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OperationsInsightsWarehouseSummary.html">OperationsInsightsWarehouseSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OperationsInsightsWarehouseSummaryCollection.html">OperationsInsightsWarehouseSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OperationsInsightsWarehouseUser.html">OperationsInsightsWarehouseUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OperationsInsightsWarehouseUserSummary.html">OperationsInsightsWarehouseUserSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OperationsInsightsWarehouseUserSummaryCollection.html">OperationsInsightsWarehouseUserSummaryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OperationsInsightsWarehouseUsers.html">OperationsInsightsWarehouseUsers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OperationsInsightsWarehouses.html">OperationsInsightsWarehouses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiConfiguration.html">OpsiConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiConfigurationBasicConfigurationItemSummary.html">OpsiConfigurationBasicConfigurationItemSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiConfigurationConfigurationItemSummary.html">OpsiConfigurationConfigurationItemSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiConfigurationSummary.html">OpsiConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiConfigurations.html">OpsiConfigurations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiConfigurationsCollection.html">OpsiConfigurationsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiDataObject.html">OpsiDataObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiDataObjectDetailsInQuery.html">OpsiDataObjectDetailsInQuery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiDataObjectQueryParam.html">OpsiDataObjectQueryParam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiDataObjectSummary.html">OpsiDataObjectSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiDataObjectSupportedQueryParam.html">OpsiDataObjectSupportedQueryParam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiDataObjectTypeOpsiDataObjectDetailsInQuery.html">OpsiDataObjectTypeOpsiDataObjectDetailsInQuery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiDataObjects.html">OpsiDataObjects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiDataObjectsCollection.html">OpsiDataObjectsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiUxConfiguration.html">OpsiUxConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiUxConfigurationSummary.html">OpsiUxConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.OpsiWarehouseDataObjects.html">OpsiWarehouseDataObjects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.PeComanagedDatabaseConnectionDetails.html">PeComanagedDatabaseConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.PeComanagedDatabaseHostDetails.html">PeComanagedDatabaseHostDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.PeComanagedDatabaseInsight.html">PeComanagedDatabaseInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.PeComanagedDatabaseInsightSummary.html">PeComanagedDatabaseInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.PeComanagedExadataInsight.html">PeComanagedExadataInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.PeComanagedExadataInsightSummary.html">PeComanagedExadataInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.PeComanagedHostConfigurationSummary.html">PeComanagedHostConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.PeComanagedHostInsight.html">PeComanagedHostInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.PeComanagedHostInsightSummary.html">PeComanagedHostInsightSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.PeComanagedManagedExternalDatabaseConfigurationSummary.html">PeComanagedManagedExternalDatabaseConfigurationSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ProjectedDataItem.html">ProjectedDataItem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.QueryDataObjectJsonResultSetRowsCollection.html">QueryDataObjectJsonResultSetRowsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.QueryDataObjectResultSetColumnMetadata.html">QueryDataObjectResultSetColumnMetadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.QueryDataObjectResultSetRowsCollection.html">QueryDataObjectResultSetRowsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.QueryOpsiDataObjectDataDetails.html">QueryOpsiDataObjectDataDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.QueryWarehouseDataObjectDataDetails.html">QueryWarehouseDataObjectDataDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.RelatedObjectTypeDetails.html">RelatedObjectTypeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ResourceCapacityTrendAggregation.html">ResourceCapacityTrendAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ResourceFilters.html">ResourceFilters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ResourceInsightCurrentUtilization.html">ResourceInsightCurrentUtilization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ResourceInsightProjectedUtilization.html">ResourceInsightProjectedUtilization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ResourceInsightProjectedUtilizationItem.html">ResourceInsightProjectedUtilizationItem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ResourceStatistics.html">ResourceStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ResourceStatisticsAggregation.html">ResourceStatisticsAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ResourceUsageSummary.html">ResourceUsageSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.ResourceUsageTrendAggregation.html">ResourceUsageTrendAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SchemaObjectTypeDetails.html">SchemaObjectTypeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlBucket.html">SqlBucket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlInsightAggregation.html">SqlInsightAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlInsightAggregationCollection.html">SqlInsightAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlInsightThresholds.html">SqlInsightThresholds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlInventory.html">SqlInventory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlPlanCollection.html">SqlPlanCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlPlanInsightAggregation.html">SqlPlanInsightAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlPlanInsightAggregationCollection.html">SqlPlanInsightAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlPlanInsights.html">SqlPlanInsights</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlPlanLine.html">SqlPlanLine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlPlanSummary.html">SqlPlanSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlResponseTimeDistributionAggregation.html">SqlResponseTimeDistributionAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlResponseTimeDistributionAggregationCollection.html">SqlResponseTimeDistributionAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlSearchCollection.html">SqlSearchCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlSearchSummary.html">SqlSearchSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlStatisticAggregation.html">SqlStatisticAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlStatisticAggregationCollection.html">SqlStatisticAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlStatistics.html">SqlStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlStatisticsTimeSeries.html">SqlStatisticsTimeSeries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlStatisticsTimeSeriesAggregation.html">SqlStatisticsTimeSeriesAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlStatisticsTimeSeriesAggregationCollection.html">SqlStatisticsTimeSeriesAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlStatisticsTimeSeriesByPlanAggregation.html">SqlStatisticsTimeSeriesByPlanAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlStatisticsTimeSeriesByPlanAggregationCollection.html">SqlStatisticsTimeSeriesByPlanAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlStats.html">SqlStats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlText.html">SqlText</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlTextCollection.html">SqlTextCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlTextSummary.html">SqlTextSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SqlTypeDetails.html">SqlTypeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.StorageServerDetails.html">StorageServerDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.StorageUsageTrend.html">StorageUsageTrend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.StorageUsageTrendAggregation.html">StorageUsageTrendAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeAwrSourcesSummariesCollection.html">SummarizeAwrSourcesSummariesCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeDatabaseInsightResourceCapacityTrendAggregationCollection.html">SummarizeDatabaseInsightResourceCapacityTrendAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeDatabaseInsightResourceForecastTrendAggregation.html">SummarizeDatabaseInsightResourceForecastTrendAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeDatabaseInsightResourceStatisticsAggregationCollection.html">SummarizeDatabaseInsightResourceStatisticsAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeDatabaseInsightResourceUsageAggregation.html">SummarizeDatabaseInsightResourceUsageAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeDatabaseInsightResourceUsageTrendAggregationCollection.html">SummarizeDatabaseInsightResourceUsageTrendAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeDatabaseInsightResourceUtilizationInsightAggregation.html">SummarizeDatabaseInsightResourceUtilizationInsightAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeDatabaseInsightTablespaceUsageTrendAggregationCollection.html">SummarizeDatabaseInsightTablespaceUsageTrendAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeExadataInsightResourceCapacityTrendAggregation.html">SummarizeExadataInsightResourceCapacityTrendAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeExadataInsightResourceCapacityTrendCollection.html">SummarizeExadataInsightResourceCapacityTrendCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeExadataInsightResourceForecastTrendAggregation.html">SummarizeExadataInsightResourceForecastTrendAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeExadataInsightResourceForecastTrendCollection.html">SummarizeExadataInsightResourceForecastTrendCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeExadataInsightResourceStatisticsAggregationCollection.html">SummarizeExadataInsightResourceStatisticsAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeExadataInsightResourceUsageAggregation.html">SummarizeExadataInsightResourceUsageAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeExadataInsightResourceUsageCollection.html">SummarizeExadataInsightResourceUsageCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeExadataInsightResourceUtilizationInsightAggregation.html">SummarizeExadataInsightResourceUtilizationInsightAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeHostInsightHostRecommendationAggregation.html">SummarizeHostInsightHostRecommendationAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeHostInsightIoUsageTrendAggregationCollection.html">SummarizeHostInsightIoUsageTrendAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeHostInsightNetworkUsageTrendAggregationCollection.html">SummarizeHostInsightNetworkUsageTrendAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeHostInsightResourceCapacityTrendAggregationCollection.html">SummarizeHostInsightResourceCapacityTrendAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeHostInsightResourceForecastTrendAggregation.html">SummarizeHostInsightResourceForecastTrendAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeHostInsightResourceStatisticsAggregationCollection.html">SummarizeHostInsightResourceStatisticsAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeHostInsightResourceUsageAggregation.html">SummarizeHostInsightResourceUsageAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeHostInsightResourceUsageTrendAggregationCollection.html">SummarizeHostInsightResourceUsageTrendAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeHostInsightResourceUtilizationInsightAggregation.html">SummarizeHostInsightResourceUtilizationInsightAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeHostInsightStorageUsageTrendAggregationCollection.html">SummarizeHostInsightStorageUsageTrendAggregationCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeHostInsightsDiskStatisticsCollection.html">SummarizeHostInsightsDiskStatisticsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeHostInsightsTopProcessesUsageCollection.html">SummarizeHostInsightsTopProcessesUsageCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeHostInsightsTopProcessesUsageTrendCollection.html">SummarizeHostInsightsTopProcessesUsageTrendCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummarizeOperationsInsightsWarehouseResourceUsageAggregation.html">SummarizeOperationsInsightsWarehouseResourceUsageAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.SummaryStatistics.html">SummaryStatistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.TablespaceUsageTrend.html">TablespaceUsageTrend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.TablespaceUsageTrendAggregation.html">TablespaceUsageTrendAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.TestMacsManagedCloudDatabaseInsightConnectionDetails.html">TestMacsManagedCloudDatabaseInsightConnectionDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.TopProcessesUsage.html">TopProcessesUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.TopProcessesUsageTrend.html">TopProcessesUsageTrend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.TopProcessesUsageTrendAggregation.html">TopProcessesUsageTrendAggregation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateAutonomousDatabaseInsightDetails.html">UpdateAutonomousDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateAwrHubDetails.html">UpdateAwrHubDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateAwrHubSourceDetails.html">UpdateAwrHubSourceDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateBasicConfigurationItemDetails.html">UpdateBasicConfigurationItemDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateConfigurationItemDetails.html">UpdateConfigurationItemDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateDatabaseInsightDetails.html">UpdateDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateEmManagedExternalDatabaseInsightDetails.html">UpdateEmManagedExternalDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateEmManagedExternalExadataInsightDetails.html">UpdateEmManagedExternalExadataInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateEmManagedExternalHostInsightDetails.html">UpdateEmManagedExternalHostInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateEnterpriseManagerBridgeDetails.html">UpdateEnterpriseManagerBridgeDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateExadataInsightDetails.html">UpdateExadataInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateExternalMysqlDatabaseInsightDetails.html">UpdateExternalMysqlDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateHostInsightDetails.html">UpdateHostInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateMacsManagedCloudDatabaseHostInsightDetails.html">UpdateMacsManagedCloudDatabaseHostInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateMacsManagedCloudDatabaseInsightDetails.html">UpdateMacsManagedCloudDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateMacsManagedCloudExadataInsightDetails.html">UpdateMacsManagedCloudExadataInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateMacsManagedCloudHostInsightDetails.html">UpdateMacsManagedCloudHostInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateMacsManagedExternalDatabaseInsightDetails.html">UpdateMacsManagedExternalDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateMacsManagedExternalHostInsightDetails.html">UpdateMacsManagedExternalHostInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateMdsMySqlDatabaseInsight.html">UpdateMdsMySqlDatabaseInsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateNewsReportDetails.html">UpdateNewsReportDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateOperationsInsightsPrivateEndpointDetails.html">UpdateOperationsInsightsPrivateEndpointDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateOperationsInsightsWarehouseDetails.html">UpdateOperationsInsightsWarehouseDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateOperationsInsightsWarehouseUserDetails.html">UpdateOperationsInsightsWarehouseUserDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateOpsiConfigurationDetails.html">UpdateOpsiConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdateOpsiUxConfigurationDetails.html">UpdateOpsiUxConfigurationDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdatePeComanagedDatabaseInsightDetails.html">UpdatePeComanagedDatabaseInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdatePeComanagedExadataInsightDetails.html">UpdatePeComanagedExadataInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UpdatePeComanagedHostInsightDetails.html">UpdatePeComanagedHostInsightDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.UxConfigurationItemsCollection.html">UxConfigurationItemsCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.VmClusterSummary.html">VmClusterSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.WarehouseDataObjectCollection.html">WarehouseDataObjectCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.WarehouseDataObjectDetails.html">WarehouseDataObjectDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.WarehouseDataObjectSummary.html">WarehouseDataObjectSummary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.WarehouseTableDataObjectDetails.html">WarehouseTableDataObjectDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.WarehouseViewDataObjectDetails.html">WarehouseViewDataObjectDetails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.WorkRequest.html">WorkRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.WorkRequestCollection.html">WorkRequestCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.WorkRequestError.html">WorkRequestError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.WorkRequestErrorCollection.html">WorkRequestErrorCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.WorkRequestLogEntry.html">WorkRequestLogEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.WorkRequestLogEntryCollection.html">WorkRequestLogEntryCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.WorkRequestResource.html">WorkRequestResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oci.opsi.models.WorkRequests.html">WorkRequests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management.html">Os Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../opsi.html">Opsi</a> &raquo;</li>
+        
+      <li>DatabaseInsightsDataObject</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/opsi/models/oci.opsi.models.DatabaseInsightsDataObject.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="databaseinsightsdataobject">
+<h1>DatabaseInsightsDataObject<a class="headerlink" href="#databaseinsightsdataobject" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.opsi.models.DatabaseInsightsDataObject">
+<em class="property">class </em><code class="descclassname">oci.opsi.models.</code><code class="descname">DatabaseInsightsDataObject</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.opsi.models.DatabaseInsightsDataObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">oci.opsi.models.opsi_data_object.OpsiDataObject</span></code></p>
+<p>Database insights data object.</p>
+<p><strong>Attributes</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.opsi.models.DatabaseInsightsDataObject.DATA_OBJECT_TYPE_DATABASE_INSIGHTS_DATA_OBJECT" title="oci.opsi.models.DatabaseInsightsDataObject.DATA_OBJECT_TYPE_DATABASE_INSIGHTS_DATA_OBJECT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DATA_OBJECT_TYPE_DATABASE_INSIGHTS_DATA_OBJECT</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.opsi.models.DatabaseInsightsDataObject.DATA_OBJECT_TYPE_EXADATA_INSIGHTS_DATA_OBJECT" title="oci.opsi.models.DatabaseInsightsDataObject.DATA_OBJECT_TYPE_EXADATA_INSIGHTS_DATA_OBJECT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DATA_OBJECT_TYPE_EXADATA_INSIGHTS_DATA_OBJECT</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.opsi.models.DatabaseInsightsDataObject.DATA_OBJECT_TYPE_HOST_INSIGHTS_DATA_OBJECT" title="oci.opsi.models.DatabaseInsightsDataObject.DATA_OBJECT_TYPE_HOST_INSIGHTS_DATA_OBJECT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DATA_OBJECT_TYPE_HOST_INSIGHTS_DATA_OBJECT</span></code></a></td>
+<td>str(object=’’) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.opsi.models.DatabaseInsightsDataObject.columns_metadata" title="oci.opsi.models.DatabaseInsightsDataObject.columns_metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">columns_metadata</span></code></a></td>
+<td><strong>[Required]</strong> Gets the columns_metadata of this OpsiDataObject.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.opsi.models.DatabaseInsightsDataObject.data_object_type" title="oci.opsi.models.DatabaseInsightsDataObject.data_object_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data_object_type</span></code></a></td>
+<td><strong>[Required]</strong> Gets the data_object_type of this OpsiDataObject.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.opsi.models.DatabaseInsightsDataObject.description" title="oci.opsi.models.DatabaseInsightsDataObject.description"><code class="xref py py-obj docutils literal notranslate"><span class="pre">description</span></code></a></td>
+<td>Gets the description of this OpsiDataObject.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.opsi.models.DatabaseInsightsDataObject.display_name" title="oci.opsi.models.DatabaseInsightsDataObject.display_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">display_name</span></code></a></td>
+<td><strong>[Required]</strong> Gets the display_name of this OpsiDataObject.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.opsi.models.DatabaseInsightsDataObject.group_names" title="oci.opsi.models.DatabaseInsightsDataObject.group_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">group_names</span></code></a></td>
+<td>Gets the group_names of this OpsiDataObject.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.opsi.models.DatabaseInsightsDataObject.identifier" title="oci.opsi.models.DatabaseInsightsDataObject.identifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">identifier</span></code></a></td>
+<td><strong>[Required]</strong> Gets the identifier of this OpsiDataObject.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.opsi.models.DatabaseInsightsDataObject.name" title="oci.opsi.models.DatabaseInsightsDataObject.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></td>
+<td>Gets the name of this OpsiDataObject.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.opsi.models.DatabaseInsightsDataObject.supported_query_params" title="oci.opsi.models.DatabaseInsightsDataObject.supported_query_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">supported_query_params</span></code></a></td>
+<td>Gets the supported_query_params of this OpsiDataObject.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.opsi.models.DatabaseInsightsDataObject.supported_query_time_period" title="oci.opsi.models.DatabaseInsightsDataObject.supported_query_time_period"><code class="xref py py-obj docutils literal notranslate"><span class="pre">supported_query_time_period</span></code></a></td>
+<td>Gets the supported_query_time_period of this OpsiDataObject.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.opsi.models.DatabaseInsightsDataObject.__init__" title="oci.opsi.models.DatabaseInsightsDataObject.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(**kwargs)</td>
+<td>Initializes a new DatabaseInsightsDataObject object with values from keyword arguments.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.opsi.models.DatabaseInsightsDataObject.get_subtype" title="oci.opsi.models.DatabaseInsightsDataObject.get_subtype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_subtype</span></code></a>(object_dictionary)</td>
+<td>Given the hash representation of a subtype of this class, use the info in the hash to return the class of the subtype.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="oci.opsi.models.DatabaseInsightsDataObject.DATA_OBJECT_TYPE_DATABASE_INSIGHTS_DATA_OBJECT">
+<code class="descname">DATA_OBJECT_TYPE_DATABASE_INSIGHTS_DATA_OBJECT</code><em class="property"> = 'DATABASE_INSIGHTS_DATA_OBJECT'</em><a class="headerlink" href="#oci.opsi.models.DatabaseInsightsDataObject.DATA_OBJECT_TYPE_DATABASE_INSIGHTS_DATA_OBJECT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.opsi.models.DatabaseInsightsDataObject.DATA_OBJECT_TYPE_EXADATA_INSIGHTS_DATA_OBJECT">
+<code class="descname">DATA_OBJECT_TYPE_EXADATA_INSIGHTS_DATA_OBJECT</code><em class="property"> = 'EXADATA_INSIGHTS_DATA_OBJECT'</em><a class="headerlink" href="#oci.opsi.models.DatabaseInsightsDataObject.DATA_OBJECT_TYPE_EXADATA_INSIGHTS_DATA_OBJECT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="oci.opsi.models.DatabaseInsightsDataObject.DATA_OBJECT_TYPE_HOST_INSIGHTS_DATA_OBJECT">
+<code class="descname">DATA_OBJECT_TYPE_HOST_INSIGHTS_DATA_OBJECT</code><em class="property"> = 'HOST_INSIGHTS_DATA_OBJECT'</em><a class="headerlink" href="#oci.opsi.models.DatabaseInsightsDataObject.DATA_OBJECT_TYPE_HOST_INSIGHTS_DATA_OBJECT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="oci.opsi.models.DatabaseInsightsDataObject.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.opsi.models.DatabaseInsightsDataObject.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a new DatabaseInsightsDataObject object with values from keyword arguments. The default value of the <a class="reference internal" href="#oci.opsi.models.DatabaseInsightsDataObject.data_object_type" title="oci.opsi.models.DatabaseInsightsDataObject.data_object_type"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data_object_type</span></code></a> attribute
+of this class is <code class="docutils literal notranslate"><span class="pre">DATABASE_INSIGHTS_DATA_OBJECT</span></code> and it should not be changed.
+The following keyword arguments are supported (corresponding to the getters/setters of this class):</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>identifier</strong> (<em>str</em>) – The value to assign to the identifier property of this DatabaseInsightsDataObject.</li>
+<li><strong>data_object_type</strong> (<em>str</em>) – The value to assign to the data_object_type property of this DatabaseInsightsDataObject.
+Allowed values for this property are: “DATABASE_INSIGHTS_DATA_OBJECT”, “HOST_INSIGHTS_DATA_OBJECT”, “EXADATA_INSIGHTS_DATA_OBJECT”</li>
+<li><strong>display_name</strong> (<em>str</em>) – The value to assign to the display_name property of this DatabaseInsightsDataObject.</li>
+<li><strong>description</strong> (<em>str</em>) – The value to assign to the description property of this DatabaseInsightsDataObject.</li>
+<li><strong>name</strong> (<em>str</em>) – The value to assign to the name property of this DatabaseInsightsDataObject.</li>
+<li><strong>group_names</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – The value to assign to the group_names property of this DatabaseInsightsDataObject.</li>
+<li><strong>supported_query_time_period</strong> (<em>str</em>) – The value to assign to the supported_query_time_period property of this DatabaseInsightsDataObject.</li>
+<li><strong>columns_metadata</strong> (<em>list</em><em>[</em><a class="reference internal" href="oci.opsi.models.DataObjectColumnMetadata.html#oci.opsi.models.DataObjectColumnMetadata" title="oci.opsi.models.DataObjectColumnMetadata"><em>oci.opsi.models.DataObjectColumnMetadata</em></a><em>]</em>) – The value to assign to the columns_metadata property of this DatabaseInsightsDataObject.</li>
+<li><strong>supported_query_params</strong> (<em>list</em><em>[</em><a class="reference internal" href="oci.opsi.models.OpsiDataObjectSupportedQueryParam.html#oci.opsi.models.OpsiDataObjectSupportedQueryParam" title="oci.opsi.models.OpsiDataObjectSupportedQueryParam"><em>oci.opsi.models.OpsiDataObjectSupportedQueryParam</em></a><em>]</em>) – The value to assign to the supported_query_params property of this DatabaseInsightsDataObject.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.opsi.models.DatabaseInsightsDataObject.columns_metadata">
+<code class="descname">columns_metadata</code><a class="headerlink" href="#oci.opsi.models.DatabaseInsightsDataObject.columns_metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the columns_metadata of this OpsiDataObject.
+Metadata of columns in a data object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The columns_metadata of this OpsiDataObject.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[<a class="reference internal" href="oci.opsi.models.DataObjectColumnMetadata.html#oci.opsi.models.DataObjectColumnMetadata" title="oci.opsi.models.DataObjectColumnMetadata">oci.opsi.models.DataObjectColumnMetadata</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.opsi.models.DatabaseInsightsDataObject.data_object_type">
+<code class="descname">data_object_type</code><a class="headerlink" href="#oci.opsi.models.DatabaseInsightsDataObject.data_object_type" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the data_object_type of this OpsiDataObject.
+Type of OPSI data object.</p>
+<p>Allowed values for this property are: “DATABASE_INSIGHTS_DATA_OBJECT”, “HOST_INSIGHTS_DATA_OBJECT”, “EXADATA_INSIGHTS_DATA_OBJECT”, ‘UNKNOWN_ENUM_VALUE’.
+Any unrecognized values returned by a service will be mapped to ‘UNKNOWN_ENUM_VALUE’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The data_object_type of this OpsiDataObject.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.opsi.models.DatabaseInsightsDataObject.description">
+<code class="descname">description</code><a class="headerlink" href="#oci.opsi.models.DatabaseInsightsDataObject.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the description of this OpsiDataObject.
+Description of OPSI data object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The description of this OpsiDataObject.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.opsi.models.DatabaseInsightsDataObject.display_name">
+<code class="descname">display_name</code><a class="headerlink" href="#oci.opsi.models.DatabaseInsightsDataObject.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the display_name of this OpsiDataObject.
+User-friendly name of OPSI data object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The display_name of this OpsiDataObject.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="oci.opsi.models.DatabaseInsightsDataObject.get_subtype">
+<em class="property">static </em><code class="descname">get_subtype</code><span class="sig-paren">(</span><em>object_dictionary</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.opsi.models.DatabaseInsightsDataObject.get_subtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the hash representation of a subtype of this class,
+use the info in the hash to return the class of the subtype.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.opsi.models.DatabaseInsightsDataObject.group_names">
+<code class="descname">group_names</code><a class="headerlink" href="#oci.opsi.models.DatabaseInsightsDataObject.group_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the group_names of this OpsiDataObject.
+Names of all the groups to which the data object belongs to.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The group_names of this OpsiDataObject.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.opsi.models.DatabaseInsightsDataObject.identifier">
+<code class="descname">identifier</code><a class="headerlink" href="#oci.opsi.models.DatabaseInsightsDataObject.identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>[Required]</strong> Gets the identifier of this OpsiDataObject.
+Unique identifier of OPSI data object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The identifier of this OpsiDataObject.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.opsi.models.DatabaseInsightsDataObject.name">
+<code class="descname">name</code><a class="headerlink" href="#oci.opsi.models.DatabaseInsightsDataObject.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the name of this OpsiDataObject.
+Name of the data object, which can be used in data object queries just like how view names are used in a query.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The name of this OpsiDataObject.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.opsi.models.DatabaseInsightsDataObject.supported_query_params">
+<code class="descname">supported_query_params</code><a class="headerlink" href="#oci.opsi.models.DatabaseInsightsDataObject.supported_query_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the supported_query_params of this OpsiDataObject.
+Supported query parameters by this OPSI data object that can be configured while a data object query involving this data object is executed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The supported_query_params of this OpsiDataObject.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list[<a class="reference internal" href="oci.opsi.models.OpsiDataObjectSupportedQueryParam.html#oci.opsi.models.OpsiDataObjectSupportedQueryParam" title="oci.opsi.models.OpsiDataObjectSupportedQueryParam">oci.opsi.models.OpsiDataObjectSupportedQueryParam</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="oci.opsi.models.DatabaseInsightsDataObject.supported_query_time_period">
+<code class="descname">supported_query_time_period</code><a class="headerlink" href="#oci.opsi.models.DatabaseInsightsDataObject.supported_query_time_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the supported_query_time_period of this OpsiDataObject.
+Time period supported by the data object for quering data.
+Time period is in ISO 8601 format with respect to current time. Default is last 30 days represented by P30D.
+Examples: P90D (last 90 days), P4W (last 4 weeks), P2M (last 2 months), P1Y (last 12 months).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The supported_query_time_period of this OpsiDataObject.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oci.opsi.models.DatabaseInsightsDataObjectSummary.html" class="btn btn-neutral float-right" title="DatabaseInsightsDataObjectSummary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.opsi.models.DatabaseInsightsCollection.html" class="btn btn-neutral" title="DatabaseInsightsCollection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

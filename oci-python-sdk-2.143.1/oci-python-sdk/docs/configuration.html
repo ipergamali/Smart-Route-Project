@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Configuration &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Using FIPS-validated Libraries" href="fips-libraries.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/landing.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Configuration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/configuration.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <script type='text/javascript'>
+    var oldDocsHost = 'oracle-bare-metal-cloud-services-python-sdk';
+    if (window.location.href.indexOf(oldDocsHost) != -1) {
+        window.location.href = 'https://oracle-bare-metal-cloud-services-python-sdk.readthedocs.io/en/latest/deprecation-notice.html';
+    }
+</script><div class="section" id="id1">
+<h1>Configuration<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>oci uses a simple dict to build clients and other components.  You can build these manually, or oci can
+parse and validate a config file.</p>
+<p>Using the default configuration location <code class="docutils literal notranslate"><span class="pre">~/.oci/config</span></code> you can use
+<a class="reference internal" href="api/config.html#oci.config.from_file" title="oci.config.from_file"><code class="xref py py-func docutils literal notranslate"><span class="pre">config.from_file()</span></code></a> to load any profile.  By default, the <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> profile
+is used:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">oci.config</span> <span class="kn">import</span> <span class="n">from_file</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">config</span> <span class="o">=</span> <span class="n">from_file</span><span class="p">()</span>
+
+<span class="go"># Using a different profile from the default location</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">config</span> <span class="o">=</span> <span class="n">from_file</span><span class="p">(</span><span class="n">profile_name</span><span class="o">=</span><span class="s2">&quot;integ-beta&quot;</span><span class="p">)</span>
+
+<span class="go"># Using the default profile from a different file</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">config</span> <span class="o">=</span> <span class="n">from_file</span><span class="p">(</span><span class="n">file_location</span><span class="o">=</span><span class="s2">&quot;~/.oci/config.prod&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Since <code class="docutils literal notranslate"><span class="pre">config</span></code> is a dict, you can also build it manually and check it with
+<a class="reference internal" href="api/config.html#oci.config.validate_config" title="oci.config.validate_config"><code class="xref py py-func docutils literal notranslate"><span class="pre">config.validate_config()</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Please check https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm</span>
+<span class="c1"># for help on how to generate a key-pair and calculate the key fingerprint.</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;your_user_ocid&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;key_file&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;full_path_to_your_private_key&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fingerprint&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;fingerprint_of_your_public_key&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tenancy&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;your_tenancy_ocid&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;your_oci_region&gt;&quot;</span>
+<span class="p">}</span>
+
+<span class="kn">from</span> <span class="nn">oci.config</span> <span class="kn">import</span> <span class="n">validate_config</span>
+<span class="n">validate_config</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you want to use the private key which is not in the key file, key_content can be the backup of key_file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Please check https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm</span>
+<span class="c1"># for help on how to generate a key-pair and calculate the key fingerprint.</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;your_user_ocid&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;key_content&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;content_of_the_private_key_not_in_key_file&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fingerprint&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;fingerprint_of_your_public_key&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tenancy&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;your_tenancy_ocid&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;your_oci_region&gt;&quot;</span>
+<span class="p">}</span>
+
+<span class="kn">from</span> <span class="nn">oci.config</span> <span class="kn">import</span> <span class="n">validate_config</span>
+<span class="n">validate_config</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">The <a class="reference external" href="https://docs.cloud.oracle.com/Content/API/Concepts/sdkconfig.htm">SDK and Tool Configuration</a> page has a full description of the required and supported options.
+These are supported across the OCI SDKs, so if you’ve already set this file up for any of the SDKs,
+you’re all set.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fips-libraries.html" class="btn btn-neutral float-right" title="Using FIPS-validated Libraries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

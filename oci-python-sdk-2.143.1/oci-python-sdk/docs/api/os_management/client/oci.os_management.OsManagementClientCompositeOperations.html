@@ -1,0 +1,1205 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>OsManagementClientCompositeOperations &mdash; oci 2.143.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="AddPackagesToSoftwareSourceDetails" href="../models/oci.os_management.models.AddPackagesToSoftwareSourceDetails.html" />
+    <link rel="prev" title="EventClientCompositeOperations" href="oci.os_management.EventClientCompositeOperations.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> oci
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.143.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../fips-libraries.html">Using FIPS-validated Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forward-compatibility.html">Forward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../new-region-support.html">New Region Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../backward-compatibility.html">Backward Compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../logging.html">Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upload-manager.html">Uploading Large Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../raw-requests.html">Raw Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiters.html">Composite Operations and Waiters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pagination.html">Pagination</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../landing.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../access_governance_cp.html">Access Governance Cp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adm.html">Adm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_anomaly_detection.html">Ai Anomaly Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_document.html">Ai Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_language.html">Ai Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_speech.html">Ai Speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai_vision.html">Ai Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analytics.html">Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../announcements_service.html">Announcements Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apigateway.html">Apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_config.html">Apm Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_control_plane.html">Apm Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_synthetics.html">Apm Synthetics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../apm_traces.html">Apm Traces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appmgmt_control.html">Appmgmt Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../artifacts.html">Artifacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audit.html">Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoscaling.html">Autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bastion.html">Bastion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bds.html">Bds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blockchain.html">Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../budget.html">Budget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../capacity_management.html">Capacity Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates.html">Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certificates_management.html">Certificates Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cims.html">Cims</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_bridge.html">Cloud Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_guard.html">Cloud Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloud_migrations.html">Cloud Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cluster_placement_groups.html">Cluster Placement Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_cloud_at_customer.html">Compute Cloud At Customer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compute_instance_agent.html">Compute Instance Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_engine.html">Container Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../container_instances.html">Container Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core.html">Core Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dashboard_service.html">Dashboard Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_catalog.html">Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_flow.html">Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_integration.html">Data Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service.html">Data Labeling Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_labeling_service_dataplane.html">Data Labeling Service Dataplane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_safe.html">Data Safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_science.html">Data Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_management.html">Database Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_migration.html">Database Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../database_tools.html">Database Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate_access_control.html">Delegate Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../demand_signal.html">Demand Signal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../desktops.html">Desktops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devops.html">Devops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../disaster_recovery.html">Disaster Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dns.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dts.html">Dts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../em_warehouse.html">Em Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email.html">Email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../email_data_plane.html">Email Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../events.html">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_storage.html">File Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_apps_management.html">Fleet Apps Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fleet_software_update.html">Fleet Software Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fusion_apps.html">Fusion Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai.html">Generative Ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent.html">Generative Ai Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_agent_runtime.html">Generative Ai Agent Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generative_ai_inference.html">Generative Ai Inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generic_artifacts_content.html">Generic Artifacts Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../globally_distributed_database.html">Globally Distributed Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../golden_gate.html">Golden Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance_rules_control_plane.html">Governance Rules Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../healthchecks.html">Healthchecks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity.html">Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_data_plane.html">Identity Data Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../identity_domains.html">Identity Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms.html">Jms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jms_java_downloads.html">Jms Java Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../key_management.html">Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../limits.html">Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../load_balancer.html">Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lockbox.html">Lockbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../log_analytics.html">Log Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingingestion.html">Loggingingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loggingsearch.html">Loggingsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_agent.html">Management Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../management_dashboard.html">Management Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace.html">Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_private_offer.html">Marketplace Private Offer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketplace_publisher.html">Marketplace Publisher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../media_services.html">Media Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mysql.html">Mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_firewall.html">Network Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../network_load_balancer.html">Network Load Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nosql.html">Nosql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object_storage.html">Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oce.html">Oce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oci_control_center.html">Oci Control Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocvp.html">Ocvp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oda.html">Oda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onesubscription.html">Onesubscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ons.html">Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opa.html">Opa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opensearch.html">Opensearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operator_access_control.html">Operator Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opsi.html">Opsi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../optimizer.html">Optimizer</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../os_management.html">Os Management</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="oci.os_management.EventClient.html">EventClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oci.os_management.OsManagementClient.html">OsManagementClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oci.os_management.EventClientCompositeOperations.html">EventClientCompositeOperations</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">OsManagementClientCompositeOperations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os_management.html#models">Models</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os_management_hub.html">Os Management Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osp_gateway.html">Osp Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_billing_schedule.html">Osub Billing Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_organization_subscription.html">Osub Organization Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_subscription.html">Osub Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../osub_usage.html">Osub Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../psql.html">Psql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../queue.html">Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../recovery.html">Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../redis.html">Redis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_manager.html">Resource Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_scheduler.html">Resource Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resource_search.html">Resource Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rover.html">Rover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sch.html">Sch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../secrets.html">Secrets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security_attribute.html">Security Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_catalog.html">Service Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_manager_proxy.html">Service Manager Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../service_mesh.html">Service Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../stack_monitoring.html">Stack Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tenant_manager_control_plane.html">Tenant Manager Control Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../threat_intelligence.html">Threat Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage_api.html">Usage Api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vault.html">Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vbs_inst.html">Vbs Inst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_builder.html">Visual Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vn_monitoring.html">Vn Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vulnerability_scanning.html">Vulnerability Scanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waa.html">Waa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waas.html">Waas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waf.html">Waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../work_requests.html">Work Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../zpr.html">Zpr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../circuit_breaker.html">Circuit Breakers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pagination.html">Pagination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../request_and_response.html">Request and Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../retry.html">Retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signing.html">Signing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../upload_manager.html">Upload Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../waiters.html">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../customize_service_client/index.html">Customizing Service Clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdk_behaviors/index.html">SDK Behaviors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributions.html">Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notifications.html">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feedback.html">Questions or Feedback</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">oci</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../landing.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../os_management.html">Os Management</a> &raquo;</li>
+        
+      <li>OsManagementClientCompositeOperations</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/os_management/client/oci.os_management.OsManagementClientCompositeOperations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="osmanagementclientcompositeoperations">
+<h1>OsManagementClientCompositeOperations<a class="headerlink" href="#osmanagementclientcompositeoperations" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oci.os_management.OsManagementClientCompositeOperations">
+<em class="property">class </em><code class="descclassname">oci.os_management.</code><code class="descname">OsManagementClientCompositeOperations</code><span class="sig-paren">(</span><em>client</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides a wrapper around <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient" title="oci.os_management.OsManagementClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">OsManagementClient</span></code></a> and offers convenience methods
+for operations that would otherwise need to be chained together. For example, instead of performing an action
+on a resource (e.g. launching an instance, creating a load balancer) and then using a waiter to wait for the resource
+to enter a given state, you can call a single method in this class to accomplish the same functionality</p>
+<p><strong>Methods</strong></p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.__init__" title="oci.os_management.OsManagementClientCompositeOperations.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(client,&nbsp;**kwargs)</td>
+<td>Creates a new OsManagementClientCompositeOperations object</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.create_managed_instance_group_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.create_managed_instance_group_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_managed_instance_group_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.create_managed_instance_group" title="oci.os_management.OsManagementClient.create_managed_instance_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_managed_instance_group()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.ManagedInstanceGroup.html#oci.os_management.models.ManagedInstanceGroup" title="oci.os_management.models.ManagedInstanceGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagedInstanceGroup</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.create_scheduled_job_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.create_scheduled_job_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_scheduled_job_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.create_scheduled_job" title="oci.os_management.OsManagementClient.create_scheduled_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_scheduled_job()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.ScheduledJob.html#oci.os_management.models.ScheduledJob" title="oci.os_management.models.ScheduledJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduledJob</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.create_software_source_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.create_software_source_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_software_source_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.create_software_source" title="oci.os_management.OsManagementClient.create_software_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_software_source()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.SoftwareSource.html#oci.os_management.models.SoftwareSource" title="oci.os_management.models.SoftwareSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">SoftwareSource</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.delete_managed_instance_group_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.delete_managed_instance_group_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_managed_instance_group_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.delete_managed_instance_group" title="oci.os_management.OsManagementClient.delete_managed_instance_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_managed_instance_group()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.ManagedInstanceGroup.html#oci.os_management.models.ManagedInstanceGroup" title="oci.os_management.models.ManagedInstanceGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagedInstanceGroup</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.delete_scheduled_job_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.delete_scheduled_job_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_scheduled_job_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.delete_scheduled_job" title="oci.os_management.OsManagementClient.delete_scheduled_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_scheduled_job()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.ScheduledJob.html#oci.os_management.models.ScheduledJob" title="oci.os_management.models.ScheduledJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduledJob</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.delete_software_source_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.delete_software_source_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_software_source_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.delete_software_source" title="oci.os_management.OsManagementClient.delete_software_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_software_source()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.SoftwareSource.html#oci.os_management.models.SoftwareSource" title="oci.os_management.models.SoftwareSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">SoftwareSource</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.disable_module_stream_on_managed_instance_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.disable_module_stream_on_managed_instance_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable_module_stream_on_managed_instance_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.disable_module_stream_on_managed_instance" title="oci.os_management.OsManagementClient.disable_module_stream_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">disable_module_stream_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.enable_module_stream_on_managed_instance_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.enable_module_stream_on_managed_instance_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_module_stream_on_managed_instance_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.enable_module_stream_on_managed_instance" title="oci.os_management.OsManagementClient.enable_module_stream_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">enable_module_stream_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.get_module_stream_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.get_module_stream_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_module_stream_and_wait_for_state</span></code></a>(…[,&nbsp;…])</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.get_module_stream" title="oci.os_management.OsManagementClient.get_module_stream"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_module_stream()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.get_module_stream_profile_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.get_module_stream_profile_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_module_stream_profile_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.get_module_stream_profile" title="oci.os_management.OsManagementClient.get_module_stream_profile"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_module_stream_profile()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.install_all_package_updates_on_managed_instance_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.install_all_package_updates_on_managed_instance_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">install_all_package_updates_on_managed_instance_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_all_package_updates_on_managed_instance" title="oci.os_management.OsManagementClient.install_all_package_updates_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_all_package_updates_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.install_all_updates_on_managed_instance_group_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.install_all_updates_on_managed_instance_group_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">install_all_updates_on_managed_instance_group_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_all_updates_on_managed_instance_group" title="oci.os_management.OsManagementClient.install_all_updates_on_managed_instance_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_all_updates_on_managed_instance_group()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.install_all_windows_updates_on_managed_instance_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.install_all_windows_updates_on_managed_instance_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">install_all_windows_updates_on_managed_instance_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_all_windows_updates_on_managed_instance" title="oci.os_management.OsManagementClient.install_all_windows_updates_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_all_windows_updates_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.install_module_stream_profile_on_managed_instance_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.install_module_stream_profile_on_managed_instance_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">install_module_stream_profile_on_managed_instance_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_module_stream_profile_on_managed_instance" title="oci.os_management.OsManagementClient.install_module_stream_profile_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_module_stream_profile_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.install_package_on_managed_instance_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.install_package_on_managed_instance_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">install_package_on_managed_instance_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_package_on_managed_instance" title="oci.os_management.OsManagementClient.install_package_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_package_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.install_package_update_on_managed_instance_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.install_package_update_on_managed_instance_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">install_package_update_on_managed_instance_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_package_update_on_managed_instance" title="oci.os_management.OsManagementClient.install_package_update_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_package_update_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.install_windows_update_on_managed_instance_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.install_windows_update_on_managed_instance_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">install_windows_update_on_managed_instance_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_windows_update_on_managed_instance" title="oci.os_management.OsManagementClient.install_windows_update_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_windows_update_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.list_module_stream_profiles_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.list_module_stream_profiles_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_module_stream_profiles_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.list_module_stream_profiles" title="oci.os_management.OsManagementClient.list_module_stream_profiles"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_module_stream_profiles()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.list_module_stream_profiles_on_managed_instance_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.list_module_stream_profiles_on_managed_instance_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_module_stream_profiles_on_managed_instance_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.list_module_stream_profiles_on_managed_instance" title="oci.os_management.OsManagementClient.list_module_stream_profiles_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_module_stream_profiles_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.list_module_streams_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.list_module_streams_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_module_streams_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.list_module_streams" title="oci.os_management.OsManagementClient.list_module_streams"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_module_streams()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.list_module_streams_on_managed_instance_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.list_module_streams_on_managed_instance_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_module_streams_on_managed_instance_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.list_module_streams_on_managed_instance" title="oci.os_management.OsManagementClient.list_module_streams_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_module_streams_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.manage_module_streams_on_managed_instance_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.manage_module_streams_on_managed_instance_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">manage_module_streams_on_managed_instance_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.manage_module_streams_on_managed_instance" title="oci.os_management.OsManagementClient.manage_module_streams_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">manage_module_streams_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.remove_module_stream_profile_from_managed_instance_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.remove_module_stream_profile_from_managed_instance_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_module_stream_profile_from_managed_instance_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.remove_module_stream_profile_from_managed_instance" title="oci.os_management.OsManagementClient.remove_module_stream_profile_from_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_module_stream_profile_from_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.remove_package_from_managed_instance_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.remove_package_from_managed_instance_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_package_from_managed_instance_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.remove_package_from_managed_instance" title="oci.os_management.OsManagementClient.remove_package_from_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_package_from_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.switch_module_stream_on_managed_instance_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.switch_module_stream_on_managed_instance_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">switch_module_stream_on_managed_instance_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.switch_module_stream_on_managed_instance" title="oci.os_management.OsManagementClient.switch_module_stream_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">switch_module_stream_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a> to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.update_managed_instance_group_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.update_managed_instance_group_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_managed_instance_group_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.update_managed_instance_group" title="oci.os_management.OsManagementClient.update_managed_instance_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_managed_instance_group()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.ManagedInstanceGroup.html#oci.os_management.models.ManagedInstanceGroup" title="oci.os_management.models.ManagedInstanceGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagedInstanceGroup</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.update_scheduled_job_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.update_scheduled_job_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_scheduled_job_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.update_scheduled_job" title="oci.os_management.OsManagementClient.update_scheduled_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_scheduled_job()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.ScheduledJob.html#oci.os_management.models.ScheduledJob" title="oci.os_management.models.ScheduledJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduledJob</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#oci.os_management.OsManagementClientCompositeOperations.update_software_source_and_wait_for_state" title="oci.os_management.OsManagementClientCompositeOperations.update_software_source_and_wait_for_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_software_source_and_wait_for_state</span></code></a>(…)</td>
+<td>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.update_software_source" title="oci.os_management.OsManagementClient.update_software_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_software_source()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.SoftwareSource.html#oci.os_management.models.SoftwareSource" title="oci.os_management.models.SoftwareSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">SoftwareSource</span></code></a> acted upon to enter the given state(s).</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>client</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new OsManagementClientCompositeOperations object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>client</strong> (<a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient" title="oci.os_management.OsManagementClient"><em>OsManagementClient</em></a>) – The service client which will be wrapped by this object</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.create_managed_instance_group_and_wait_for_state">
+<code class="descname">create_managed_instance_group_and_wait_for_state</code><span class="sig-paren">(</span><em>create_managed_instance_group_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.create_managed_instance_group_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.create_managed_instance_group" title="oci.os_management.OsManagementClient.create_managed_instance_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_managed_instance_group()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.ManagedInstanceGroup.html#oci.os_management.models.ManagedInstanceGroup" title="oci.os_management.models.ManagedInstanceGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagedInstanceGroup</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>create_managed_instance_group_details</strong> (<a class="reference internal" href="../models/oci.os_management.models.CreateManagedInstanceGroupDetails.html#oci.os_management.models.CreateManagedInstanceGroupDetails" title="oci.os_management.models.CreateManagedInstanceGroupDetails"><em>oci.os_management.models.CreateManagedInstanceGroupDetails</em></a>) – (required)
+Details about a Managed Instance Group to create</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.ManagedInstanceGroup.html#oci.os_management.models.ManagedInstanceGroup.lifecycle_state" title="oci.os_management.models.ManagedInstanceGroup.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.create_managed_instance_group" title="oci.os_management.OsManagementClient.create_managed_instance_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_managed_instance_group()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.create_scheduled_job_and_wait_for_state">
+<code class="descname">create_scheduled_job_and_wait_for_state</code><span class="sig-paren">(</span><em>create_scheduled_job_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.create_scheduled_job_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.create_scheduled_job" title="oci.os_management.OsManagementClient.create_scheduled_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_scheduled_job()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.ScheduledJob.html#oci.os_management.models.ScheduledJob" title="oci.os_management.models.ScheduledJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduledJob</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>create_scheduled_job_details</strong> (<a class="reference internal" href="../models/oci.os_management.models.CreateScheduledJobDetails.html#oci.os_management.models.CreateScheduledJobDetails" title="oci.os_management.models.CreateScheduledJobDetails"><em>oci.os_management.models.CreateScheduledJobDetails</em></a>) – (required)
+Details about a Scheduled Job to create</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.ScheduledJob.html#oci.os_management.models.ScheduledJob.lifecycle_state" title="oci.os_management.models.ScheduledJob.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.create_scheduled_job" title="oci.os_management.OsManagementClient.create_scheduled_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_scheduled_job()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.create_software_source_and_wait_for_state">
+<code class="descname">create_software_source_and_wait_for_state</code><span class="sig-paren">(</span><em>create_software_source_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.create_software_source_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.create_software_source" title="oci.os_management.OsManagementClient.create_software_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_software_source()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.SoftwareSource.html#oci.os_management.models.SoftwareSource" title="oci.os_management.models.SoftwareSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">SoftwareSource</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>create_software_source_details</strong> (<a class="reference internal" href="../models/oci.os_management.models.CreateSoftwareSourceDetails.html#oci.os_management.models.CreateSoftwareSourceDetails" title="oci.os_management.models.CreateSoftwareSourceDetails"><em>oci.os_management.models.CreateSoftwareSourceDetails</em></a>) – (required)
+Details about a Sofware Source to create</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.SoftwareSource.html#oci.os_management.models.SoftwareSource.lifecycle_state" title="oci.os_management.models.SoftwareSource.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.create_software_source" title="oci.os_management.OsManagementClient.create_software_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_software_source()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.delete_managed_instance_group_and_wait_for_state">
+<code class="descname">delete_managed_instance_group_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_group_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.delete_managed_instance_group_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.delete_managed_instance_group" title="oci.os_management.OsManagementClient.delete_managed_instance_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_managed_instance_group()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.ManagedInstanceGroup.html#oci.os_management.models.ManagedInstanceGroup" title="oci.os_management.models.ManagedInstanceGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagedInstanceGroup</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_group_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance group</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.ManagedInstanceGroup.html#oci.os_management.models.ManagedInstanceGroup.lifecycle_state" title="oci.os_management.models.ManagedInstanceGroup.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.delete_managed_instance_group" title="oci.os_management.OsManagementClient.delete_managed_instance_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_managed_instance_group()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.delete_scheduled_job_and_wait_for_state">
+<code class="descname">delete_scheduled_job_and_wait_for_state</code><span class="sig-paren">(</span><em>scheduled_job_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.delete_scheduled_job_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.delete_scheduled_job" title="oci.os_management.OsManagementClient.delete_scheduled_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_scheduled_job()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.ScheduledJob.html#oci.os_management.models.ScheduledJob" title="oci.os_management.models.ScheduledJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduledJob</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>scheduled_job_id</strong> (<em>str</em>) – (required)
+The ID of the scheduled job.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.ScheduledJob.html#oci.os_management.models.ScheduledJob.lifecycle_state" title="oci.os_management.models.ScheduledJob.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.delete_scheduled_job" title="oci.os_management.OsManagementClient.delete_scheduled_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_scheduled_job()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.delete_software_source_and_wait_for_state">
+<code class="descname">delete_software_source_and_wait_for_state</code><span class="sig-paren">(</span><em>software_source_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.delete_software_source_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.delete_software_source" title="oci.os_management.OsManagementClient.delete_software_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_software_source()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.SoftwareSource.html#oci.os_management.models.SoftwareSource" title="oci.os_management.models.SoftwareSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">SoftwareSource</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>software_source_id</strong> (<em>str</em>) – (required)
+The OCID of the software source.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.SoftwareSource.html#oci.os_management.models.SoftwareSource.lifecycle_state" title="oci.os_management.models.SoftwareSource.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.delete_software_source" title="oci.os_management.OsManagementClient.delete_software_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">delete_software_source()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.disable_module_stream_on_managed_instance_and_wait_for_state">
+<code class="descname">disable_module_stream_on_managed_instance_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_id</em>, <em>module_name</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.disable_module_stream_on_managed_instance_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.disable_module_stream_on_managed_instance" title="oci.os_management.OsManagementClient.disable_module_stream_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">disable_module_stream_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance</li>
+<li><strong>module_name</strong> (<em>str</em>) – (required)
+The name of a module.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.disable_module_stream_on_managed_instance" title="oci.os_management.OsManagementClient.disable_module_stream_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">disable_module_stream_on_managed_instance()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.enable_module_stream_on_managed_instance_and_wait_for_state">
+<code class="descname">enable_module_stream_on_managed_instance_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_id</em>, <em>module_name</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.enable_module_stream_on_managed_instance_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.enable_module_stream_on_managed_instance" title="oci.os_management.OsManagementClient.enable_module_stream_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">enable_module_stream_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance</li>
+<li><strong>module_name</strong> (<em>str</em>) – (required)
+The name of a module.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.enable_module_stream_on_managed_instance" title="oci.os_management.OsManagementClient.enable_module_stream_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">enable_module_stream_on_managed_instance()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.get_module_stream_and_wait_for_state">
+<code class="descname">get_module_stream_and_wait_for_state</code><span class="sig-paren">(</span><em>software_source_id</em>, <em>module_name</em>, <em>stream_name</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.get_module_stream_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.get_module_stream" title="oci.os_management.OsManagementClient.get_module_stream"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_module_stream()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>software_source_id</strong> (<em>str</em>) – (required)
+The OCID of the software source.</li>
+<li><strong>module_name</strong> (<em>str</em>) – (required)
+The name of the module</li>
+<li><strong>stream_name</strong> (<em>str</em>) – (required)
+The name of the stream of the containing module</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.get_module_stream" title="oci.os_management.OsManagementClient.get_module_stream"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_module_stream()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.get_module_stream_profile_and_wait_for_state">
+<code class="descname">get_module_stream_profile_and_wait_for_state</code><span class="sig-paren">(</span><em>software_source_id</em>, <em>module_name</em>, <em>stream_name</em>, <em>profile_name</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.get_module_stream_profile_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.get_module_stream_profile" title="oci.os_management.OsManagementClient.get_module_stream_profile"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_module_stream_profile()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>software_source_id</strong> (<em>str</em>) – (required)
+The OCID of the software source.</li>
+<li><strong>module_name</strong> (<em>str</em>) – (required)
+The name of the module</li>
+<li><strong>stream_name</strong> (<em>str</em>) – (required)
+The name of the stream of the containing module</li>
+<li><strong>profile_name</strong> (<em>str</em>) – (required)
+The name of the profile of the containing module stream</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.get_module_stream_profile" title="oci.os_management.OsManagementClient.get_module_stream_profile"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_module_stream_profile()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.install_all_package_updates_on_managed_instance_and_wait_for_state">
+<code class="descname">install_all_package_updates_on_managed_instance_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.install_all_package_updates_on_managed_instance_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_all_package_updates_on_managed_instance" title="oci.os_management.OsManagementClient.install_all_package_updates_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_all_package_updates_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_all_package_updates_on_managed_instance" title="oci.os_management.OsManagementClient.install_all_package_updates_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_all_package_updates_on_managed_instance()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.install_all_updates_on_managed_instance_group_and_wait_for_state">
+<code class="descname">install_all_updates_on_managed_instance_group_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_group_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.install_all_updates_on_managed_instance_group_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_all_updates_on_managed_instance_group" title="oci.os_management.OsManagementClient.install_all_updates_on_managed_instance_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_all_updates_on_managed_instance_group()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_group_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance group</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_all_updates_on_managed_instance_group" title="oci.os_management.OsManagementClient.install_all_updates_on_managed_instance_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_all_updates_on_managed_instance_group()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.install_all_windows_updates_on_managed_instance_and_wait_for_state">
+<code class="descname">install_all_windows_updates_on_managed_instance_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.install_all_windows_updates_on_managed_instance_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_all_windows_updates_on_managed_instance" title="oci.os_management.OsManagementClient.install_all_windows_updates_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_all_windows_updates_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_all_windows_updates_on_managed_instance" title="oci.os_management.OsManagementClient.install_all_windows_updates_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_all_windows_updates_on_managed_instance()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.install_module_stream_profile_on_managed_instance_and_wait_for_state">
+<code class="descname">install_module_stream_profile_on_managed_instance_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_id</em>, <em>module_name</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.install_module_stream_profile_on_managed_instance_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_module_stream_profile_on_managed_instance" title="oci.os_management.OsManagementClient.install_module_stream_profile_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_module_stream_profile_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance</li>
+<li><strong>module_name</strong> (<em>str</em>) – (required)
+The name of a module.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_module_stream_profile_on_managed_instance" title="oci.os_management.OsManagementClient.install_module_stream_profile_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_module_stream_profile_on_managed_instance()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.install_package_on_managed_instance_and_wait_for_state">
+<code class="descname">install_package_on_managed_instance_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_id</em>, <em>software_package_name</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.install_package_on_managed_instance_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_package_on_managed_instance" title="oci.os_management.OsManagementClient.install_package_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_package_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance</li>
+<li><strong>software_package_name</strong> (<em>str</em>) – (required)
+Package name</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_package_on_managed_instance" title="oci.os_management.OsManagementClient.install_package_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_package_on_managed_instance()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.install_package_update_on_managed_instance_and_wait_for_state">
+<code class="descname">install_package_update_on_managed_instance_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_id</em>, <em>software_package_name</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.install_package_update_on_managed_instance_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_package_update_on_managed_instance" title="oci.os_management.OsManagementClient.install_package_update_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_package_update_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance</li>
+<li><strong>software_package_name</strong> (<em>str</em>) – (required)
+Package name</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_package_update_on_managed_instance" title="oci.os_management.OsManagementClient.install_package_update_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_package_update_on_managed_instance()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.install_windows_update_on_managed_instance_and_wait_for_state">
+<code class="descname">install_windows_update_on_managed_instance_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_id</em>, <em>windows_update_name</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.install_windows_update_on_managed_instance_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_windows_update_on_managed_instance" title="oci.os_management.OsManagementClient.install_windows_update_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_windows_update_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance</li>
+<li><strong>windows_update_name</strong> (<em>str</em>) – (required)
+Unique identifier for the Windows update. NOTE - This is not an OCID,
+but is a unique identifier assigned by Microsoft.
+Example: <cite>6981d463-cd91-4a26-b7c4-ea4ded9183ed</cite></li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.install_windows_update_on_managed_instance" title="oci.os_management.OsManagementClient.install_windows_update_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">install_windows_update_on_managed_instance()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.list_module_stream_profiles_and_wait_for_state">
+<code class="descname">list_module_stream_profiles_and_wait_for_state</code><span class="sig-paren">(</span><em>software_source_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.list_module_stream_profiles_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.list_module_stream_profiles" title="oci.os_management.OsManagementClient.list_module_stream_profiles"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_module_stream_profiles()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>software_source_id</strong> (<em>str</em>) – (required)
+The OCID of the software source.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.list_module_stream_profiles" title="oci.os_management.OsManagementClient.list_module_stream_profiles"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_module_stream_profiles()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.list_module_stream_profiles_on_managed_instance_and_wait_for_state">
+<code class="descname">list_module_stream_profiles_on_managed_instance_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.list_module_stream_profiles_on_managed_instance_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.list_module_stream_profiles_on_managed_instance" title="oci.os_management.OsManagementClient.list_module_stream_profiles_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_module_stream_profiles_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.list_module_stream_profiles_on_managed_instance" title="oci.os_management.OsManagementClient.list_module_stream_profiles_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_module_stream_profiles_on_managed_instance()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.list_module_streams_and_wait_for_state">
+<code class="descname">list_module_streams_and_wait_for_state</code><span class="sig-paren">(</span><em>software_source_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.list_module_streams_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.list_module_streams" title="oci.os_management.OsManagementClient.list_module_streams"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_module_streams()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>software_source_id</strong> (<em>str</em>) – (required)
+The OCID of the software source.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.list_module_streams" title="oci.os_management.OsManagementClient.list_module_streams"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_module_streams()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.list_module_streams_on_managed_instance_and_wait_for_state">
+<code class="descname">list_module_streams_on_managed_instance_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_id</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.list_module_streams_on_managed_instance_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.list_module_streams_on_managed_instance" title="oci.os_management.OsManagementClient.list_module_streams_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_module_streams_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.list_module_streams_on_managed_instance" title="oci.os_management.OsManagementClient.list_module_streams_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_module_streams_on_managed_instance()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.manage_module_streams_on_managed_instance_and_wait_for_state">
+<code class="descname">manage_module_streams_on_managed_instance_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_id</em>, <em>manage_module_streams_on_managed_instance_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.manage_module_streams_on_managed_instance_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.manage_module_streams_on_managed_instance" title="oci.os_management.OsManagementClient.manage_module_streams_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">manage_module_streams_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance</li>
+<li><strong>manage_module_streams_on_managed_instance_details</strong> (<a class="reference internal" href="../models/oci.os_management.models.ManageModuleStreamsOnManagedInstanceDetails.html#oci.os_management.models.ManageModuleStreamsOnManagedInstanceDetails" title="oci.os_management.models.ManageModuleStreamsOnManagedInstanceDetails"><em>oci.os_management.models.ManageModuleStreamsOnManagedInstanceDetails</em></a>) – (required)
+A description of an operation to perform against the modules, streams, and profiles of a managed instance</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.manage_module_streams_on_managed_instance" title="oci.os_management.OsManagementClient.manage_module_streams_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">manage_module_streams_on_managed_instance()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.remove_module_stream_profile_from_managed_instance_and_wait_for_state">
+<code class="descname">remove_module_stream_profile_from_managed_instance_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_id</em>, <em>module_name</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.remove_module_stream_profile_from_managed_instance_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.remove_module_stream_profile_from_managed_instance" title="oci.os_management.OsManagementClient.remove_module_stream_profile_from_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_module_stream_profile_from_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance</li>
+<li><strong>module_name</strong> (<em>str</em>) – (required)
+The name of a module.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.remove_module_stream_profile_from_managed_instance" title="oci.os_management.OsManagementClient.remove_module_stream_profile_from_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_module_stream_profile_from_managed_instance()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.remove_package_from_managed_instance_and_wait_for_state">
+<code class="descname">remove_package_from_managed_instance_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_id</em>, <em>software_package_name</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.remove_package_from_managed_instance_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.remove_package_from_managed_instance" title="oci.os_management.OsManagementClient.remove_package_from_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_package_from_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance</li>
+<li><strong>software_package_name</strong> (<em>str</em>) – (required)
+Package name</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.remove_package_from_managed_instance" title="oci.os_management.OsManagementClient.remove_package_from_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_package_from_managed_instance()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.switch_module_stream_on_managed_instance_and_wait_for_state">
+<code class="descname">switch_module_stream_on_managed_instance_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_id</em>, <em>module_name</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.switch_module_stream_on_managed_instance_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.switch_module_stream_on_managed_instance" title="oci.os_management.OsManagementClient.switch_module_stream_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">switch_module_stream_on_managed_instance()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest" title="oci.os_management.models.WorkRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkRequest</span></code></a>
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance</li>
+<li><strong>module_name</strong> (<em>str</em>) – (required)
+The name of a module.</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.WorkRequest.html#oci.os_management.models.WorkRequest.status" title="oci.os_management.models.WorkRequest.status"><code class="xref py py-attr docutils literal notranslate"><span class="pre">status</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.switch_module_stream_on_managed_instance" title="oci.os_management.OsManagementClient.switch_module_stream_on_managed_instance"><code class="xref py py-func docutils literal notranslate"><span class="pre">switch_module_stream_on_managed_instance()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.update_managed_instance_group_and_wait_for_state">
+<code class="descname">update_managed_instance_group_and_wait_for_state</code><span class="sig-paren">(</span><em>managed_instance_group_id</em>, <em>update_managed_instance_group_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.update_managed_instance_group_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.update_managed_instance_group" title="oci.os_management.OsManagementClient.update_managed_instance_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_managed_instance_group()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.ManagedInstanceGroup.html#oci.os_management.models.ManagedInstanceGroup" title="oci.os_management.models.ManagedInstanceGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagedInstanceGroup</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>managed_instance_group_id</strong> (<em>str</em>) – (required)
+OCID for the managed instance group</li>
+<li><strong>update_managed_instance_group_details</strong> (<a class="reference internal" href="../models/oci.os_management.models.UpdateManagedInstanceGroupDetails.html#oci.os_management.models.UpdateManagedInstanceGroupDetails" title="oci.os_management.models.UpdateManagedInstanceGroupDetails"><em>oci.os_management.models.UpdateManagedInstanceGroupDetails</em></a>) – (required)
+Details about a Managed Instance Group to update</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.ManagedInstanceGroup.html#oci.os_management.models.ManagedInstanceGroup.lifecycle_state" title="oci.os_management.models.ManagedInstanceGroup.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.update_managed_instance_group" title="oci.os_management.OsManagementClient.update_managed_instance_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_managed_instance_group()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.update_scheduled_job_and_wait_for_state">
+<code class="descname">update_scheduled_job_and_wait_for_state</code><span class="sig-paren">(</span><em>scheduled_job_id</em>, <em>update_scheduled_job_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.update_scheduled_job_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.update_scheduled_job" title="oci.os_management.OsManagementClient.update_scheduled_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_scheduled_job()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.ScheduledJob.html#oci.os_management.models.ScheduledJob" title="oci.os_management.models.ScheduledJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduledJob</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>scheduled_job_id</strong> (<em>str</em>) – (required)
+The ID of the scheduled job.</li>
+<li><strong>update_scheduled_job_details</strong> (<a class="reference internal" href="../models/oci.os_management.models.UpdateScheduledJobDetails.html#oci.os_management.models.UpdateScheduledJobDetails" title="oci.os_management.models.UpdateScheduledJobDetails"><em>oci.os_management.models.UpdateScheduledJobDetails</em></a>) – (required)
+Details about a Scheduled Job to update</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.ScheduledJob.html#oci.os_management.models.ScheduledJob.lifecycle_state" title="oci.os_management.models.ScheduledJob.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.update_scheduled_job" title="oci.os_management.OsManagementClient.update_scheduled_job"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_scheduled_job()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="oci.os_management.OsManagementClientCompositeOperations.update_software_source_and_wait_for_state">
+<code class="descname">update_software_source_and_wait_for_state</code><span class="sig-paren">(</span><em>software_source_id</em>, <em>update_software_source_details</em>, <em>wait_for_states=[]</em>, <em>operation_kwargs={}</em>, <em>waiter_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#oci.os_management.OsManagementClientCompositeOperations.update_software_source_and_wait_for_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.update_software_source" title="oci.os_management.OsManagementClient.update_software_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_software_source()</span></code></a> and waits for the <a class="reference internal" href="../models/oci.os_management.models.SoftwareSource.html#oci.os_management.models.SoftwareSource" title="oci.os_management.models.SoftwareSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">SoftwareSource</span></code></a> acted upon
+to enter the given state(s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>software_source_id</strong> (<em>str</em>) – (required)
+The OCID of the software source.</li>
+<li><strong>update_software_source_details</strong> (<a class="reference internal" href="../models/oci.os_management.models.UpdateSoftwareSourceDetails.html#oci.os_management.models.UpdateSoftwareSourceDetails" title="oci.os_management.models.UpdateSoftwareSourceDetails"><em>oci.os_management.models.UpdateSoftwareSourceDetails</em></a>) – (required)
+Details about a Sofware Source to update</li>
+<li><strong>wait_for_states</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – An array of states to wait on. These should be valid values for <a class="reference internal" href="../models/oci.os_management.models.SoftwareSource.html#oci.os_management.models.SoftwareSource.lifecycle_state" title="oci.os_management.models.SoftwareSource.lifecycle_state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lifecycle_state</span></code></a></li>
+<li><strong>operation_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to <a class="reference internal" href="oci.os_management.OsManagementClient.html#oci.os_management.OsManagementClient.update_software_source" title="oci.os_management.OsManagementClient.update_software_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_software_source()</span></code></a></li>
+<li><strong>waiter_kwargs</strong> (<em>dict</em>) – A dictionary of keyword arguments to pass to the <a class="reference internal" href="../../waiters.html#oci.wait_until" title="oci.wait_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">oci.wait_until()</span></code></a> function. For example, you could pass <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code> or <code class="docutils literal notranslate"><span class="pre">max_interval_seconds</span></code>
+as dictionary keys to modify how long the waiter function will wait between retries and the maximum amount of time it will wait</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../models/oci.os_management.models.AddPackagesToSoftwareSourceDetails.html" class="btn btn-neutral float-right" title="AddPackagesToSoftwareSourceDetails" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="oci.os_management.EventClientCompositeOperations.html" class="btn btn-neutral" title="EventClientCompositeOperations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, 2025, Oracle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
