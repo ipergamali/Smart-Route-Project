@@ -1,4 +1,4 @@
-package com.ioannapergamali.movewise.ui.theme
+package com.ioannapergamali.smartroute.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -29,7 +29,7 @@ private val DarkColors = darkColorScheme(
 )
 
 @Composable
-fun MoveWiseTheme(
+fun SmartRouteTheme(
         darkTheme : Boolean = isSystemInDarkTheme() ,
         content : @Composable () -> Unit
 )

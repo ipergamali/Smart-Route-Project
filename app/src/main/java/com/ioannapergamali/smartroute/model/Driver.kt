@@ -1,21 +1,18 @@
-package com.ioannapergamali.movewise.model
+package com.ioannapergamali.smartroute.model
 
 class Driver(
-        id : String = "" ,
-        name : String = "" ,
-        email : String = "" ,
-        surname : String = "" ,
-        address : UserAddress = UserAddress() ,
-        phoneNum : String = "" ,
-        username : String = "" ,
-        password: String = "",
-        role: String = "Driver"
-) : User(id, name, email, surname, address, phoneNum, username, password, role)
-{
+    id: String = "",
+    name: String = "",
+    email: String = "",
+    surname: String = "",
+    address: UserAddress = UserAddress(),
+    phoneNum: String = "",
+    username: String = "",
+    password: String = ""
+) : User(id, name, email, surname, address, phoneNum, username, password, Role.DRIVER) {
 
-    override fun display()
-    {
-        println("Driver Info:")
+    override fun display() {
+        println("🚗 Driver Info 🚗")
         super.display()
     }
 }

@@ -17,6 +17,7 @@ dependencyResolutionManagement {
         mavenCentral()
         maven { url = uri("https://chaquo.com/maven/") } // Αποθετήριο Chaquopy
     }
+
 //
 //    versionCatalogs {
 //        create("libs") {

@@ -1,4 +1,4 @@
-package com.ioannapergamali.movewise.ui.screens
+package com.ioannapergamali.smartroute.ui.screens
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -20,7 +20,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
-import com.ioannapergamali.movewise.viewmodel.AuthenticationViewModel
+import com.ioannapergamali.smartroute.viewmodel.AuthenticationViewModel
 
 @Composable
 fun SignUpScreen(

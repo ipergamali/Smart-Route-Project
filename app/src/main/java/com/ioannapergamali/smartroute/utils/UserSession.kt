@@ -1,9 +1,9 @@
-package com.ioannapergamali.movewise.utils
+package com.ioannapergamali.smartroute.utils
 
 import android.content.Context
 import android.content.SharedPreferences
 import com.google.gson.Gson
-import com.ioannapergamali.movewise.model.User
+import com.ioannapergamali.smartroute.model.User
 
 object UserSession
 {

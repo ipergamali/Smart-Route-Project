@@ -1,4 +1,4 @@
-package com.ioannapergamali.movewise.ui.screens
+package com.ioannapergamali.smartroute.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -16,23 +16,22 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.ioannapergamali.movewise.R
-import com.ioannapergamali.movewise.ui.components.TopBar
+import com.ioannapergamali.smartroute.R
+import com.ioannapergamali.smartroute.ui.components.TopBar
 
 @Composable
 fun SplashScreen(
-    navController: NavController, // Προσθήκη του navController
-        onNavigateToLogin : () -> Unit ,
-    onNavigateToSettings: () -> Unit
-)
-{
+    navController: NavController,
+    onNavigateToLogin: () -> Unit,
+    onNavigateToSignUp: () -> Unit // Σωστό όνομα!
+) {
     Scaffold(
         topBar = {
             TopBar(
                 title = "Splash Screen",
                 navController = navController
             )
-        }, // Περνάμε το navController
+        },
         content = { paddingValues ->
             Column(
                 modifier = Modifier
@@ -42,28 +41,25 @@ fun SplashScreen(
                 verticalArrangement = Arrangement.SpaceBetween,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                // Κείμενο καλωσορίσματος
                 Text(
                     text = "Welcome to MoveWise",
                     style = MaterialTheme.typography.headlineLarge,
                     modifier = Modifier.padding(vertical = 8.dp)
                 )
 
-                // Προσθήκη GIF
                 GlideComposeScreen(
                     imageResId = R.drawable.mw,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(250.dp) // Περιορισμός ύψους του GIF
+                        .height(250.dp)
                 )
 
-                // Κουμπιά
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Button(onClick = { onNavigateToLogin() }) {
                         Text("Login")
                     }
                     Spacer(modifier = Modifier.height(16.dp))
-                    Button(onClick = { onNavigateToSettings() }) {
+                    Button(onClick = { onNavigateToSignUp() }) { // Εδώ αλλάζουμε το όνομα
                         Text("Sign Up")
                     }
                 }

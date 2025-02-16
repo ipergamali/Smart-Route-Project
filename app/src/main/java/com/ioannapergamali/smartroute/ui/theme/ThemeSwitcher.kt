@@ -1,4 +1,4 @@
-package com.ioannapergamali.movewise.ui.theme
+package com.ioannapergamali.smartroute.ui.theme
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -34,7 +34,7 @@ fun ThemeSwitcher()
                     onCheckedChange = { darkTheme.value = it }
                 )
                 // Χρήση του MoveWiseTheme με την επιλογή θέματος
-                MoveWiseTheme(darkTheme = darkTheme.value) {
+                SmartRouteTheme(darkTheme = darkTheme.value) {
                     Text(
                         text = if (darkTheme.value) "Dark Theme Enabled" else "Light Theme Enabled",
                         style = MaterialTheme.typography.bodyLarge
@@ -48,7 +48,7 @@ fun ThemeSwitcher()
 @Preview
 @Composable
 fun ThemePreview() {
-    MoveWiseTheme {
+    SmartRouteTheme {
         ThemeSwitcher()
     }
 }

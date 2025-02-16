@@ -1,21 +1,18 @@
-package com.ioannapergamali.movewise.model
+package com.ioannapergamali.smartroute.model
 
 class Admin(
-        id : String = "" ,
-        name : String = "" ,
-        email : String = "" ,
-        surname : String = "" ,
-        address : UserAddress = UserAddress() ,
-        phoneNum : String = "" ,
-        username : String = "" ,
-        password: String = "",
-        role: String = "Admin"
-) : User(id, name, email, surname, address, phoneNum, username, password, role)
-{
+    id: String = "",
+    name: String = "",
+    email: String = "",
+    surname: String = "",
+    address: UserAddress = UserAddress(),
+    phoneNum: String = "",
+    username: String = "",
+    password: String = ""
+) : User(id, name, email, surname, address, phoneNum, username, password, Role.ADMIN) {
 
-    override fun display()
-    {
-        println("Admin Info:")
+    override fun display() {
+        println("🔹 Admin Info 🔹")
         super.display()
     }
 }

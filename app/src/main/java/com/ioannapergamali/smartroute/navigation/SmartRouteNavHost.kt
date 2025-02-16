@@ -120,26 +120,24 @@ fun SmartRouteNavHost(navController: NavHostController) {
 
         composable("menu") {
             val user = UserSession.currentUser
-            val userRole = user?.getRole() ?: Role.PASSENGER
+            val userRole = user?.getRole()?.name ?: Role.PASSENGER.name  // ✅ Μετατροπή σε String
 
-            if (user == null)
-            {
+            if (user == null) {
                 navController.navigate("login") {
                     popUpTo("menu") { inclusive = true }
                 }
-            }
-            else
-            {
+            } else {
                 MenuScreen(
-                        user = user ,
-                        userRole = userRole ,
-                        navController = navController ,
-                        onNavigateToSettings = {
-                            navController.navigate("settings/${user.getEmail()}")
-                        }
+                    user = user,
+                    userRole = userRole,  // ✅ Τώρα είναι τύπου String
+                    navController = navController,
+                    onNavigateToSettings = {
+                        navController.navigate("settings/${user.getEmail()}")
+                    }
                 )
             }
         }
+
         composable("debug") {
             DebugScreen()
         }

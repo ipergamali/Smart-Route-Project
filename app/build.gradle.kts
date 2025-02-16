@@ -1,29 +1,22 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.google.gms.google-services") // Firebase plugin
+
     id("com.chaquo.python") // Chaquopy plugin
+    id("com.google.gms.google-services") // Firebase plugin
    // id("com.intellij.modules.python")
 }
 chaquopy {
     defaultConfig {
         buildPython("C:/Users/joann/AppData/Local/Programs/Python/Python38/python.exe")
 
-       // buildPython("C:/Users/joann/AppData/Local/Programs/Python/Python38/python.exe", "-3.8")
-
-        // Διαδρομή για Python Executable
-        //  pythonExecutable="C:/Users/YourUsername/AppData/Local/Programs/Python/Python38/python.exe"
         pip {
-            install("firebase_admin") // Not firebase-admin
-
-            install( "google-auth")
-            install ("google-auth-oauthlib")
-            install ("google-api-python-client")
-            install("msgpack==0.5.6")
+            install("-r", "requirements.txt")
 
         }
     }
-    }
+}
+
 //intellij {
 //    plugins.set(listOf("com.intellij.modules.pyth"))
 //}
@@ -62,12 +55,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_22
-        targetCompatibility =JavaVersion.VERSION_22
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 
     buildFeatures {
@@ -141,8 +134,12 @@ dependencies {
 
     // **Προσθήκη της εξάρτησης Grid Impl**
    // runtimeOnly("com.jetbrains.intellij.grid:grid-impl:233.14808.21")
-    implementation(files("libs/android-gradle-dsl-toml-233.14808.21-sources.jar"))
-    releaseImplementation(files("libs/ae-database-community-233.14808.21-sources.jar"))
+    //  implementation(files("libs/android-gradle-dsl-toml-233.14808.21-sources.jar"))
+    //releaseImplementation(files("libs/ae-database-community-233.14808.21-sources.jar"))
+
+    implementation("androidx.compose.compiler:compiler:1.5.1")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.0")
+
 
 
 }
