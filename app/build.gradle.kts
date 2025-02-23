@@ -139,6 +139,8 @@ dependencies {
 
     implementation("androidx.compose.compiler:compiler:1.5.1")
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.0")
+    implementation("org.jetbrains.kotlin:kotlin-serialization:1.9.0") // Εάν χρειάζεσαι και άλλες βιβλιοθήκες για Serializable
+
 
 
 
